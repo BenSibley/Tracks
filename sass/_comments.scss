@@ -1,0 +1,212 @@
+.comments {
+  @extend %half-column-padding;
+  background: white;
+  padding-bottom: $baseline-height * 2;
+}
+.comments-number {
+  padding: $baseline-height 0;
+
+  h3 {
+    @extend %thirteen-pixels;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+}
+.comment-list {
+  list-style: none;
+  margin: 0;
+
+  ul {
+    list-style: none;
+    margin-right: 0;
+  }
+  article ul {
+    list-style: disc;
+  }
+}
+li.comment,
+li.pingback {
+  margin: $baseline-height * 2 0;
+
+  &:first-child {
+    margin-top: $baseline-height;
+  }
+  &:after {
+    @include clearfix;
+  }
+}
+.comment-author {
+
+  /* contains everything but the avatar */
+  div {
+    @extend %thirteen-pixels;
+  }
+  img {
+    width: $baseline-height * 3;
+    height: auto;
+    @include border-radius(50%);
+    float: left;
+    margin-right: $baseline-height / 2;
+  }
+  .author-name {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+
+    a {
+      text-decoration: none;
+      color: $primary-gray;
+
+      &:link,
+      &:visited {
+        color: $primary-gray;
+      }
+      &:hover,
+      &:active {
+        color: $gray-dark;
+      }
+    }
+  }
+  &:after {
+    @include clearfix;
+  }
+}
+.comment-reply-link,
+.comment-edit-link {
+  color: $primary-gray;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: $primary-gray;
+  }
+  &:hover,
+  &:active {
+    color: black;
+  }
+}
+.comment-edit-link {
+
+  &:before {
+    content: ' / '
+  }
+}
+.comment-content {
+  margin: $baseline-height 0;
+}
+.bypostauthor {
+
+  .author-name {
+
+    &:after {
+      content: ' (author)';
+      text-transform: none;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+  }
+}
+
+/* 600px */
+@media all and (min-width: 37.5em) {
+
+  .comments {
+    padding: 0 5.55% $baseline-height * 2;
+    width: 89.89%;
+    margin: 0 auto;
+  }
+  .comment-pagination {
+
+    p {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+    }
+    .next-comment {
+      text-align: right;
+    }
+  }
+}
+
+/* 700px */
+@media all and (min-width: 43.75em) {
+
+  .comments {
+    padding: 0 11.11% $baseline-height * 2;
+  }
+}
+
+/* 900px */
+@media all and (min-width: 56.25em) {
+
+  .comments {
+    padding: 0 16.66% $baseline-height * 2;
+  }
+}
+
+/* 1000px */
+@media all and (min-width: 62.5em) {
+
+  li.comment,
+  li.pingback {
+
+    article {
+      line-height: 0; /* this is messing up the vertical rhythm */
+
+      &:after {
+        @include clearfix;
+      }
+    }
+  }
+  .comment-author {
+    display: inline-block;
+    min-height: $baseline-height * 3;
+
+    img {
+      float: none;
+    }
+    div {
+      display: inline-block;
+      vertical-align: top;
+
+      div {
+        display: block;
+      }
+    }
+  }
+  .comment-content {
+    float: right;
+    width: 50%;
+    margin: 0;
+    line-height: 1.5; /* after turning it off on article */
+
+    p {
+      line-height: 1.5;
+    }
+    p:first-child {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* 1100px */
+@media all and (min-width: 68.75em) {
+
+  .comments {
+    padding: 0 19.435% $baseline-height * 2;
+  }
+}
+
+/* 1200px */
+@media all and (min-width: 75em) {
+
+  .comments {
+    padding: 0 22.22% $baseline-height * 2;
+  }
+
+}

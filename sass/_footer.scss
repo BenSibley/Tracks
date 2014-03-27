@@ -1,0 +1,64 @@
+.site-footer {
+  color: $gray-medium;
+  text-align: center;
+  padding-top: $baseline-height * 2;
+  overflow: hidden;
+
+  a {
+    color: $gray-medium;
+  }
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    opacity: 0.4;
+    @include transition(opacity 0.2s ease);
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  p {
+    margin: 0 0 $baseline-height * 2;
+    opacity: 0.4;
+  }
+}
+.design-credit {
+  background: $gray-very-dark;
+  color: $gray-dark-medium;
+  @extend %thirteen-pixels;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  padding: $baseline-height / 2 0;
+
+  a {
+    color: $gray-dark-medium;
+    opacity: 1;
+
+    &:link,
+    &:visited {
+      color: $gray-dark-medium;
+    }
+    &:hover,
+    &:active {
+      color: $gray-medium;
+    }
+  }
+  p {
+    margin: 0;
+    opacity: 1;
+  }
+}
+
+/* 900px */
+@media all and (min-width: 56.25em) {
+
+  .site-footer {
+
+    h3 {
+      font-size: 2.625em;
+      line-height: 1.143;
+    }
+  }
+}

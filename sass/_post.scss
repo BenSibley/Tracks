@@ -1,0 +1,278 @@
+.entry {
+  background: white;
+  padding-bottom: $baseline-height;
+}
+.entry-container {
+  @extend %half-column-padding;
+}
+.entry-meta {
+  @extend .excerpt-meta;
+  text-align: center;
+}
+.entry-title {
+  @extend .excerpt-title;
+}
+.entry-header {
+  @extend .excerpt-header;
+  text-align: center;
+}
+.entry-meta,
+.entry-header {
+  padding-left: 5.55%;
+  padding-right: 5.55%;
+}
+.entry-content {
+  margin: $baseline-height * 2 0;
+}
+.further-reading,
+.entry-categories,
+.entry-tags {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  span,
+  a {
+    @extend %thirteen-pixels;
+  }
+  span {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: block;
+  }
+  a {
+    color: $gray-medium;
+
+    &:link,
+    &:visited {
+      color: $gray-medium;
+    }
+    &:hover,
+    &:active {
+      color: black;
+    }
+  }
+}
+.entry-categories,
+.entry-tags {
+
+  a {
+    margin-right: $baseline-height / 4;
+  }
+}
+.entry-meta-bottom {
+  margin-bottom: $baseline-height * 2;
+}
+.author-meta {
+  background: $gray-dark;
+  color: white;
+  padding: $baseline-height;
+  margin: $baseline-height * 2 0 0;
+
+  a {
+    color: $gray-medium;
+
+    &:link,
+    &:visited {
+      color: $gray-medium;
+    }
+    &:hover,
+    &:active {
+      color: white;
+    }
+  }
+  p {
+    clear: both;
+  }
+  .author {
+
+    img {
+      float: left;
+      margin: 0 $baseline-height / 2 $baseline-height 0;
+      width: $baseline-height * 3;
+      height: auto;
+      @include border-radius(50%);
+    }
+    span {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      @extend %thirteen-pixels;
+    }
+    a {
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      display: block;
+    }
+  }
+  .bio {
+
+    a {
+      margin-right: $baseline-height / 4;
+      display: inline-block;
+    }
+  }
+}
+
+/* 600px */
+@media all and (min-width: 37.5em) {
+
+  .entry {
+    width: 89.89%;
+    margin: 0 auto;
+  }
+  .entry-container {
+    padding: 0 5.55%;
+  }
+  .further-reading {
+
+    p {
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+      padding-right: $baseline-height * 2;
+    }
+    .next {
+      text-align: right;
+      padding: 0 0 0 $baseline-height * 2;
+    }
+  }
+  .author-meta {
+
+    .author {
+      display: inline-block;
+
+      img {
+        margin-bottom: 0;
+      }
+    }
+    &:after {
+      @include clearfix;
+    }
+  }
+  .bio {
+    float: right;
+    width: 50%;
+
+    p {
+      margin-top: 0;
+    }
+  }
+}
+
+/* 700px */
+@media all and (min-width: 43.75em) {
+
+  .entry-container {
+    padding: 0 11.11%;
+  }
+  .entry-meta,
+  .entry-header {
+    padding-left: 5.55%;
+    padding-right: 5.55%;
+  }
+}
+
+/* 900px */
+@media all and (min-width: 56.25em) {
+
+  .entry {
+
+    .featured-image {
+      height: $baseline-height * 18;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        background: $gray-dark;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0.2;
+        @include transition(opacity 0.2s ease);
+      }
+      &:hover {
+
+        &:after {
+        opacity: 0;
+        }
+      }
+    }
+  }
+  .entry-container {
+    padding: 0 16.66%;
+  }
+  .entry-header {
+
+    h1 {
+      font-size: 4.25em;
+      line-height: 1.06;
+    }
+  }
+  .entry-meta {
+    font-size: 1em;
+    line-height: 1.5;
+    padding-top: $baseline-height * 2;
+    letter-spacing: 0.08em;
+  }
+  .entry-content {
+    margin-top: $baseline-height * 3;
+  }
+}
+
+/* 1100px */
+@media all and (min-width: 68.75em) {
+
+  .entry {
+
+    .featured-image {
+      height: $baseline-height * 21;
+    }
+  }
+  .entry-meta,
+  .entry-header {
+    padding-left: 11.11%;
+    padding-right: 11.11%;
+  }
+  .entry-container {
+    padding: 0 19.435%;
+    position: relative;
+  }
+  .entry-meta-bottom.float {
+
+    .entry-tags,
+    .entry-categories {
+      position: absolute;
+      width: 16.66%;
+      left: 0;
+      top: $baseline-height * 3;
+      text-align: right;
+      padding-left: 5.55%;
+
+      a {
+        font-weight: 700;
+        text-transform: none;
+        letter-spacing: 0;
+        display: block;
+        margin-right: 0;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+/* 1200px */
+@media all and (min-width: 75em) {
+
+
+  .entry {
+
+    .featured-image {
+      height: $baseline-height * 23;
+    }
+  }
+  .entry-container {
+    padding: 0 22.22%;
+  }
+}

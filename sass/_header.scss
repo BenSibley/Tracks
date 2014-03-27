@@ -1,0 +1,259 @@
+.site-header {
+  padding: $baseline-height / 2 5.55%;
+  color: black;
+}
+.title-info {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.site-title {
+  @extend %twenty-six-pixels;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.6;
+  @include transition(opacity 0.2s ease);
+
+  span {
+    opacity: 0;
+    position: absolute;
+    top: -99em;
+  }
+  a {
+    color: white;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: white;
+    }
+  }
+  img {
+    max-width: 5em;
+    max-height: $baseline-height;
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+}
+.toggle-navigation {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  width: $baseline-height * 3;
+  text-align: right;
+  padding: $baseline-height / 2 5.55% 0 0;
+  height: $baseline-height * 4;
+  top: 0;
+  color: white;
+  opacity: 0.6;
+  @include transition(opacity 0.2s ease);
+
+  i {
+    @extend %twenty-six-pixels;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}
+.menu-primary {
+  @include transform(translateZ(0));
+  @include backface-visibility(hidden);
+  position: absolute;
+  top: 0;
+  padding-top: $baseline-height * 4;
+  left: 100%;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-image: linear-gradient($gray-dark 24px, transparent 24px, transparent 48px);
+  background-size: 1px 48px; /* this is a 24px baseline grid */
+  text-align: center;
+  @include transition(all 0.3s ease-in-out);
+}
+.menu-primary-tracks {
+  @extend .menu-primary;
+  top: $baseline-height;
+  left: -100%;
+}
+.site-description {
+  opacity: 0;
+  color: white;
+}
+.menu-primary-items {
+  list-style: none;
+  opacity: 0;
+
+  li {
+
+    a {
+      display: block;
+      color: white;
+      opacity: 0.6;
+      margin: $baseline-height 0 $baseline-height / 2 0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      @include backface-visibility(hidden);
+
+      &:only-child {
+        margin: $baseline-height 0;
+      }
+      &:link,
+      &:visited {
+        color: white;
+      }
+      &:hover,
+      &:active {
+        opacity: 0.9;
+      }
+    }
+    .sub-menu {
+    list-style: none;
+
+      li a {
+        margin: $baseline-height / 2 0;
+        opacity: 0.3;
+
+        &:hover,
+        &:active {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+.site-header.toggled {
+
+  .menu-primary-items,
+  .site-description {
+    @include transition(opacity 0.3s 0.3s);
+  }
+  .menu-primary-items {
+    opacity: 1;
+  }
+  .site-description {
+    opacity: 0.9;
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .site-header {
+    position: relative;
+    z-index: 2;
+    padding: $baseline-height / 2 5.55% $baseline-height;
+    border-top: solid $baseline-height / 2 #111;
+  }
+  .site-title {
+
+    img {
+      max-width: 8em;
+      max-height: $baseline-height * 2;
+    }
+  }
+  .toggle-navigation {
+    display: none;
+  }
+  .menu-primary {
+    background: none;
+    position: static;
+    width: auto;
+    float: right;
+    padding-top: $baseline-height / 2;
+
+    .site-description {
+      display: none;
+    }
+  }
+  .menu-primary-tracks {
+    display: none;
+  }
+  .menu-primary-items {
+    margin: 0 0 0 $baseline-height * 2;
+    opacity: 1;
+
+    /* added class to override the :only-child selector previously used */
+    li.menu-item {
+      float: left;
+      position: relative;
+
+      a {
+        margin: 0 0 $baseline-height 0;
+        opacity: 0.5;
+        font-size: 0.813em;
+        line-height: 1.85;
+        letter-spacing: 0.1em;
+
+        &:hover {
+          opacity: 0.9;
+        }
+        &:after {
+          content: ' /';
+          margin-right: 6px;
+          opacity: 0.5;
+        }
+      }
+      &:last-child {
+
+        a {
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+      &:hover {
+
+        > ul {
+          top: $baseline-height;
+          opacity: 1;
+
+          > li:hover {
+
+            > ul {
+              top: -0.6em;
+              left: auto;
+              right: 100%;
+            }
+          }
+        }
+      }
+    }
+    &:after {
+      @include clearfix;
+    }
+    ul {
+      position: absolute;
+      top: -999em;
+      width: auto;
+      min-width: 100%;
+      background: $gray-dark;
+      margin: 0;
+      opacity: 0;
+      left: -$baseline-height / 2;
+      @include transition(opacity 0.2s ease);
+
+      li.menu-item {
+        float: none;
+
+        a {
+          padding: $baseline-height / 2;
+          white-space: nowrap;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+      &:after {
+        @include clearfix;
+      }
+    }
+  }
+}
