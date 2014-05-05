@@ -6,12 +6,7 @@ function ct_tracks_load_javascript_files() {
     wp_register_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700');
 
     if(! is_admin() ) {
-        wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.js', array('jquery'),'', true);
-        wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'),'', true);
-        wp_enqueue_script('placeholders', get_template_directory_uri() . '/js/placeholders.min.js', array('jquery'),'', true);
-        wp_enqueue_script('media-query-polyfill', get_template_directory_uri() . '/js/respond.min.js', array('jquery'),'', true);
-        wp_enqueue_script('tappy', get_template_directory_uri() . '/js/tappy.min.js', array('jquery'),'', true);
-
+        wp_enqueue_script('production', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'),'', true);
         wp_enqueue_style('google-fonts');
         wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
     }
@@ -133,7 +128,7 @@ function ct_tracks_customize_comments( $comment, $args, $depth ) {
     ?>
     <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
         <article id="comment-<?php comment_ID(); ?>" class="comment">
-            <div class="comment-author"><?php echo get_avatar( get_comment_author_email() ); ?>
+            <div class="comment-author"><?php echo get_avatar( get_comment_author_email(), 72 ); ?>
                 <div>
                     <div class="author-name"><?php comment_author_link(); ?></div>
                     <div class="comment-date"><?php comment_date('n/j/Y'); ?></div>
@@ -271,67 +266,19 @@ function ct_tracks_author_social_icons() {
     }
 }
 
-// adds the url from the image credit box to the post and makes it clickable
-function ct_tracks_add_image_credit_link() {
-    
-    global $post;
-    $link = get_post_meta( $post->ID, 'ct-image-credit-link', true );
-    if(!empty($link)) {
-        echo "<p id='image-credit' class='image-credit'>image credit: ".make_clickable($link)."</p>";    
-    }
-}
-
-// outputs all images from gallery post
-function ct_tracks_gallery_display() {
-
-	global $post;
-			
-	$galleries = get_post_galleries_images($post);	
-	
-	$html = "<div class='featured-image-gallery'>";
-		
-	$image_count = 0;
-		
-	// Loop through all galleries found
-	foreach( $galleries as $gallery ) {
-
-		// Loop through each image in each gallery
-		foreach( $gallery as $image ) {
-
-			$html .= "<img src='".$image."' />";
-
-			if(++$image_count > 6) {
-				break;
-			}
-		}
-	}
-	$html .= "</div>";
-	
-	return $html;
-}
-
 // for displaying featured images including mobile versions and default versions
 function ct_tracks_featured_image() {
-	
-	global $post;
-	$gallery = ct_tracks_gallery_display();
-	$has_image = false;
-	$post_type = get_post_format($post);
-			
-	if($post_type == 'gallery') {
-		$image = $gallery;
-		$has_image = true;
-	} elseif (has_post_thumbnail( $post->ID ) ) {
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-		$image = $image[0];
-		$has_image = true;
-	}  
-	if ($has_image == true) {
-		if($post_type == 'gallery') {
-			echo $image;
-		} else {
-	        echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
-	    }
+
+    global $post;
+    $has_image = false;
+
+    if (has_post_thumbnail( $post->ID ) ) {
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+        $image = $image[0];
+        $has_image = true;
+    }
+    if ($has_image == true) {
+        echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
     }
 }
 

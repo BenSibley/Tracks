@@ -51,6 +51,16 @@ jQuery(document).ready(function($){
     }
     positionPostMeta();
 
+    /* allow keyboard access/visibility for dropdown menu items */
+    $('.menu-item a, .page_item a').focus(function(){
+        $(this).parent('li').addClass('focused');
+        $(this).parents('ul').addClass('focused');
+    });
+    $('.menu-item a, .page_item a').focusout(function(){
+        $(this).parent('li').removeClass('focused');
+        $(this).parents('ul').removeClass('focused');
+    });
+
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */

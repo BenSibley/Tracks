@@ -220,6 +220,10 @@
   }
   .entry-content {
     margin-top: $baseline-height * 3;
+
+    &:after {
+      @include clearfix;
+    }
   }
 }
 

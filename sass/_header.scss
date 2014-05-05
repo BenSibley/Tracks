@@ -228,7 +228,8 @@
       }
       &:hover,
       &:active,
-      &:focus  {
+      &:focus,
+      &.focused {
 
         > ul {
           top: $baseline-height;
@@ -241,6 +242,20 @@
               left: auto;
               right: 100%;
             }
+          }
+        }
+      }
+      .focused.children,
+      .focused.sub-menu {
+        top: $baseline-height;
+        opacity: 1;
+
+        > li:hover {
+
+          > ul {
+            top: -0.6em;
+            left: auto;
+            right: 100%;
           }
         }
       }

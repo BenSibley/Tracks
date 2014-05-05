@@ -54,7 +54,6 @@ if( is_home() ) { ?>
                 <article>
                     <?php the_content(); ?>
                     <?php wp_link_pages(array('before' => '<p class="singular-pagination">' . __('Pages:','tracks'), 'after' => '</p>', ) ); ?>
-                    <?php ct_tracks_add_image_credit_link(); ?>
                 </article>
             </div>
             <div class='entry-meta-bottom'>
@@ -64,7 +63,7 @@ if( is_home() ) { ?>
             </div>
             <div class="author-meta">
                 <div class="author">
-                    <?php echo get_avatar( get_the_author_meta('email'), '120' ); ?>
+                    <?php echo get_avatar( get_the_author_meta('email'), '72' ); ?>
                     <span>Written by: <?php the_author_posts_link(); ?></span>
                 </div>
                 <div class="bio">
