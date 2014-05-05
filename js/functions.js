@@ -1,7 +1,6 @@
 jQuery(document).ready(function($){
 
     $(".entry-content").fitVids();
-    $(".excerpt-content").fitVids();
 
     // bind the tap event (from 'tappy.min.js') on the menu icon
     $('#toggle-navigation').bind('tap', onTap)
@@ -53,3 +52,19 @@ jQuery(document).ready(function($){
     positionPostMeta();
 
 });
+
+/* fix for skip-to-content link bug in Chrome & IE9 */
+window.addEventListener("hashchange", function(event) {
+
+    var element = document.getElementById(location.hash.substring(1));
+
+    if (element) {
+
+        if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+            element.tabIndex = -1;
+        }
+
+        element.focus();
+    }
+
+}, false);

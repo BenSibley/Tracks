@@ -26,7 +26,8 @@
     &:link,
     &:visited,
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       color: white;
     }
   }
@@ -34,7 +35,9 @@
     max-width: 5em;
     max-height: $baseline-height;
   }
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     opacity: 0.9;
   }
 }
@@ -42,10 +45,13 @@
   position: absolute;
   right: 0;
   z-index: 2;
+  border: none;
+  background: none;
+  font-size: 1em;
+  margin: 0;
   width: $baseline-height * 3;
   text-align: right;
   padding: $baseline-height / 2 5.55% 0 0;
-  height: $baseline-height * 4;
   top: 0;
   color: white;
   opacity: 0.6;
@@ -54,14 +60,16 @@
   i {
     @extend %twenty-six-pixels;
   }
-
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     opacity: 0.9;
     cursor: pointer;
+    outline: none;
   }
 }
 .menu-primary {
-  @include transform(translateZ(0));
+  transform: translateZ(0);
   @include backface-visibility(hidden);
   position: absolute;
   top: 0;
@@ -84,6 +92,7 @@
   opacity: 0;
   color: white;
 }
+.menu-unset > ul,
 .menu-primary-items {
   list-style: none;
   opacity: 0;
@@ -108,11 +117,13 @@
         color: white;
       }
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         opacity: 0.9;
       }
     }
-    .sub-menu {
+    .sub-menu,
+    .children {
     list-style: none;
 
       li a {
@@ -120,7 +131,8 @@
         opacity: 0.3;
 
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
           opacity: 0.9;
         }
       }
@@ -129,10 +141,12 @@
 }
 .site-header.toggled {
 
+  .menu-unset > ul,
   .menu-primary-items,
   .site-description {
     @include transition(opacity 0.3s 0.3s);
   }
+  .menu-unset > ul,
   .menu-primary-items {
     opacity: 1;
   }
@@ -174,12 +188,14 @@
   .menu-primary-tracks {
     display: none;
   }
+  .menu-unset > ul,
   .menu-primary-items {
     margin: 0 0 0 $baseline-height * 2;
     opacity: 1;
 
     /* added class to override the :only-child selector previously used */
-    li.menu-item {
+    li.menu-item,
+    li.page_item {
       float: left;
       position: relative;
 
@@ -190,7 +206,9 @@
         line-height: 1.85;
         letter-spacing: 0.1em;
 
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus  {
           opacity: 0.9;
         }
         &:after {
@@ -208,7 +226,9 @@
           }
         }
       }
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus  {
 
         > ul {
           top: $baseline-height;
@@ -239,7 +259,8 @@
       left: -$baseline-height / 2;
       @include transition(opacity 0.2s ease);
 
-      li.menu-item {
+      li.menu-item,
+      li.page_item {
         float: none;
 
         a {

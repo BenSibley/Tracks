@@ -28,7 +28,8 @@
       color: $gray-light;
     }
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       color: $gray-dark;
     }
   }
@@ -37,7 +38,6 @@
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.04em;
-  word-wrap: break-word;
   font-size: 1.875em; /* 30px */
   line-height: 1.6;
 
@@ -49,7 +49,8 @@
       color: $primary-gray;
     }
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       color: $gray-dark;
     }
   }
@@ -84,11 +85,12 @@
     color: $primary-gray;
   }
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     color: $gray-dark;
 
     &:after {
-      @include transform(scaleX(1));
+      transform: scaleX(1);
     }
   }
   &:after {
@@ -100,7 +102,7 @@
     bottom: -$baseline-height / 2;
     left: calc(50% - 12px);
     @include transition(all 0.2s ease);
-    @include transform(scaleX(0));
+    transform: scaleX(0);
     @include backface-visibility(hidden);
 
   }
@@ -124,7 +126,8 @@
     color: $gray-medium;
   }
   a:hover,
-  a:active {
+  &:active,
+  &:focus {
     color: $gray-light;
   }
 }
@@ -176,7 +179,7 @@
     padding: 0 5.55%;
   }
   .excerpt {
-    @include transform(translateZ(0)); /* fix weird chrome wiggle glitch */
+    transform: translateZ(0);/* fix weird chrome wiggle glitch */
     position: relative;
     clear: both;
     padding: 0;

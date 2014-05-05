@@ -6,7 +6,7 @@
     </div>
     <div class='excerpt-content'>
         <article>
-            <?php ct_excerpt(); ?>
+            <?php ct_tracks_excerpt(); ?>
         </article>
     </div>
 </div>

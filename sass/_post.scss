@@ -47,7 +47,8 @@
       color: $gray-medium;
     }
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       color: black;
     }
   }
@@ -76,7 +77,8 @@
       color: $gray-medium;
     }
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       color: white;
     }
   }
@@ -195,7 +197,7 @@
       &:hover {
 
         &:after {
-        opacity: 0;
+          opacity: 0;
         }
       }
     }
@@ -256,7 +258,6 @@
         letter-spacing: 0;
         display: block;
         margin-right: 0;
-        word-wrap: break-word;
       }
     }
   }

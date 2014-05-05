@@ -14,6 +14,8 @@ body {
   color: $primary-gray;
   background: $gray-dark;
   -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
 }
 .overflow-container {
   overflow: hidden;
@@ -35,7 +37,8 @@ a {
   }
   &:visited,
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     color: black;
   }
 }
@@ -96,6 +99,8 @@ li li {
 
 pre {
   word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  word-break: break-all;
   padding: $baseline-height / 2;
   background: #f5f5f5;
 }
@@ -194,10 +199,13 @@ input[type="submit"] {
   background: $gray-dark;
   color: white;
   max-width: $baseline-height * 5 * 1.85;
-}
-input[type="submit"]:hover {
-  cursor: pointer;
-  background: black;
+
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    background: black;
+  }
 }
 input[type="search"] {
   margin-right: $baseline-height;
@@ -220,7 +228,7 @@ input[type="search"] {
 .excerpt.sticky {
 
   .excerpt-container {
-    background: #333;
+    background: wheat;
   }
 }
 
@@ -228,6 +236,36 @@ input[type="search"] {
 
 a img {
   border: none;
+}
+
+// hiding screen reader text
+.screen-reader-text {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+.skip-content {
+  position: absolute;
+  width: 100%;
+  background: $gray-very-dark;
+  color: $gray-light;
+  text-align: center;
+  padding: $baseline-height / 4;
+  top: -$baseline-height * 3;
+  z-index: 19;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  &:active,
+  &:focus {
+    top: 0;
+    color: #ffffff;
+  }
 }
 
 /* 600px */

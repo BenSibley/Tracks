@@ -14,7 +14,9 @@
     opacity: 0.4;
     @include transition(opacity 0.2s ease);
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus  {
       opacity: 0.9;
     }
   }
@@ -41,7 +43,8 @@
       color: $gray-dark-medium;
     }
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       color: $gray-medium;
     }
   }

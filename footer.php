@@ -1,7 +1,7 @@
 </div> <!-- .main -->
 
-<footer class="site-footer">
-    <h3><a href="<?php echo home_url(); ?>"><?php bloginfo('title'); ?></a></h3>
+<footer class="site-footer" role="contentinfo">
+    <h3><a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('title'); ?></a></h3>
     <p><?php bloginfo('description'); ?></p>
     <div class="design-credit">
         <p>Designed by <a href="http://www.competethemes.com">Compete Themes</a></p>

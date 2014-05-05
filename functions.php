@@ -1,35 +1,34 @@
 <?php
 
 // register and enqueue all of the scripts used by Aside
-function ct_load_javascript_files() {
+function ct_tracks_load_javascript_files() {
 
     wp_register_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700');
-    wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
     if(! is_admin() ) {
-        wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.min.js', array('jquery'),'', true);
+        wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.js', array('jquery'),'', true);
         wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/fitvids.min.js', array('jquery'),'', true);
         wp_enqueue_script('placeholders', get_template_directory_uri() . '/js/placeholders.min.js', array('jquery'),'', true);
         wp_enqueue_script('media-query-polyfill', get_template_directory_uri() . '/js/respond.min.js', array('jquery'),'', true);
         wp_enqueue_script('tappy', get_template_directory_uri() . '/js/tappy.min.js', array('jquery'),'', true);
 
         wp_enqueue_style('google-fonts');
-        wp_enqueue_style('font-awesome');
+        wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
     }
     // enqueues the comment-reply script on posts & pages.  This script is included in WP by default
     if( is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' ); 
 }
 
-add_action('wp_enqueue_scripts', 'ct_load_javascript_files' );
+add_action('wp_enqueue_scripts', 'ct_tracks_load_javascript_files' );
 
 /* Load the core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 new Hybrid();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'ct_theme_setup', 10 );
+add_action( 'after_setup_theme', 'ct_tracks_theme_setup', 10 );
 
-function ct_theme_setup() {
+function ct_tracks_theme_setup() {
 	
     /* Get action/filter hook prefix. */
 	$prefix = hybrid_get_prefix();
@@ -45,13 +44,10 @@ function ct_theme_setup() {
     
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
-    
-    // adds cmb meta box functionality
-    if ( is_admin() && ! class_exists( 'cmb_Meta_Box' ) ) require_once( trailingslashit( get_template_directory() ) . 'assets/meta-boxes/init.php' );
 }
 
 // Creates the next/previous post section below every post
-function ct_further_reading() {
+function ct_tracks_further_reading() {
 
     global $post;
 
@@ -99,7 +95,7 @@ function ct_further_reading() {
 
 // Outputs the categories the post was included in with their names hyperlinked to their permalink
 // separator removed so links site tightly against each other
-function ct_category_display() {
+function ct_tracks_category_display() {
        
     $categories = get_the_category();
     $separator = ' ';
@@ -115,7 +111,7 @@ function ct_category_display() {
 }
 
 // Outputs the tags the post used with their names hyperlinked to their permalink
-function ct_tags_display() {
+function ct_tracks_tags_display() {
        
     $tags = get_the_tags();
     $separator = ' ';
@@ -131,7 +127,7 @@ function ct_tags_display() {
 }
 
 /* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
-function ct_customize_comments( $comment, $args, $depth ) {
+function ct_tracks_customize_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
  
     ?>
@@ -157,48 +153,52 @@ function ct_customize_comments( $comment, $args, $depth ) {
     <?php
 }
 
-/* added HTML5 placeholders for each default field */
-function ct_update_fields($fields) {
+/* added HTML5 placeholders for each default field and aria-required to required */
+function ct_tracks_update_fields($fields) {
 
     $commenter = wp_get_current_commenter();
     $req = get_option( 'require_name_email' );
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
-	$fields['author'] = 
-		'<p class="comment-form-author">
-			<input required placeholder="Your Name*" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-    '" size="30"' . $aria_req . ' />
+    $fields['author'] =
+        '<p class="comment-form-author">
+            <label class="screen-reader-text">Your Name</label>
+            <input required placeholder="Your Name*" id="author" name="author" type="text" aria-required="true" value="' . esc_attr( $commenter['comment_author'] ) .
+        '" size="30"' . $aria_req . ' />
     	</p>';
-    
-    $fields['email'] = 
-    	'<p class="comment-form-email">
-    		<input required placeholder="Your Email*" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-    '" size="30"' . $aria_req . ' />
-    	</p>';
-	
-	$fields['url'] = 
-		'<p class="comment-form-url">
-			<input placeholder="Your URL" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
-    '" size="30" />
-    	</p>';
-    
-	return $fields;
-}
-add_filter('comment_form_default_fields','ct_update_fields');
 
-function ct_update_comment_field($comment_field) {
+    $fields['email'] =
+        '<p class="comment-form-email">
+            <label class="screen-reader-text">Your Email</label>
+            <input required placeholder="Your Email*" id="email" name="email" type="email" aria-required="true" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+        '" size="30"' . $aria_req . ' />
+    	</p>';
+
+    $fields['url'] =
+        '<p class="comment-form-url">
+            <label class="screen-reader-text">Your Website URL</label>
+            <input placeholder="Your URL" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+        '" size="30" />
+            </p>';
+
+    return $fields;
+}
+add_filter('comment_form_default_fields','ct_tracks_update_fields');
+
+function ct_tracks_update_comment_field($comment_field) {
 	
-	$comment_field = 
-		'<p class="comment-form-comment">
-			<textarea required placeholder="Enter Your Comment&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
-		</p>';
+	$comment_field =
+        '<p class="comment-form-comment">
+            <label class="screen-reader-text">Your Comment</label>
+            <textarea required placeholder="Enter Your Comment&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+        </p>';
 	
 	return $comment_field;
 }
-add_filter('comment_form_field_comment','ct_update_comment_field');
+add_filter('comment_form_field_comment','ct_tracks_update_comment_field');
 
 // for 'read more' tag excerpts
-function ct_excerpt() {
+function ct_tracks_excerpt() {
 	
 	global $post;
 	// check for the more tag
@@ -208,7 +208,7 @@ function ct_excerpt() {
 	*  works for both manual excerpts and read more tags
 	*/
     if($ismore) {
-        the_content("Read the Post");        
+        the_content("Read the Post <span class='screen-reader-text'>" . get_the_title() . "</span>");
     }
     // otherwise the excerpt is automatic, so output it
     else {
@@ -217,64 +217,62 @@ function ct_excerpt() {
 }
 
 // for custom & automatic excerpts
-function ct_excerpt_read_more_link($output) {
+function ct_tracks_excerpt_read_more_link($output) {
 	global $post;
-	return $output . "<p><a class='more-link' href='". get_permalink() ."'>Read the Post</a></p>";
+	return $output . "<p><a class='more-link' href='". get_permalink() ."'>Read the Post <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
 }
 
-add_filter('the_excerpt', 'ct_excerpt_read_more_link');
+add_filter('the_excerpt', 'ct_tracks_excerpt_read_more_link');
 
 // change the length of the excerpts
-function ct_custom_excerpt_length( $length ) {
+function ct_tracks_custom_excerpt_length( $length ) {
     return 15;
 }
-add_filter( 'excerpt_length', 'ct_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'ct_tracks_custom_excerpt_length', 999 );
 
 // switch [...] to ellipsis on automatic excerpt
-function ct_new_excerpt_more( $more ) {
+function ct_tracks_new_excerpt_more( $more ) {
 	return '&#8230;';
 }
-add_filter('excerpt_more', 'ct_new_excerpt_more');
+add_filter('excerpt_more', 'ct_tracks_new_excerpt_more');
 
 // turns of the automatic scrolling to the read more link 
-function ct_remove_more_link_scroll( $link ) {
+function ct_tracks_remove_more_link_scroll( $link ) {
 	$link = preg_replace( '|#more-[0-9]+|', '', $link );
 	return $link;
 }
 
-add_filter( 'the_content_more_link', 'ct_remove_more_link_scroll' );
+add_filter( 'the_content_more_link', 'ct_tracks_remove_more_link_scroll' );
 
 // Adds navigation through pages in the loop
-function ct_post_navigation() { ?>
-    <div class="loop-pagination-container">
-        <?php if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination(); ?>
-    </div><?php
+function ct_tracks_post_navigation() {
+    if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination();
 }
 
 // displays the social icons in the .entry-author div
-function ct_author_social_icons() {
+function ct_tracks_author_social_icons() {
 
-	$social_sites = ct_create_social_array();
+	$social_sites = ct_tracks_create_social_array();
     
     foreach($social_sites as $key => $social_site) {
-    	if(get_the_author_meta( $social_site, $user->ID )) {
+    	if(get_the_author_meta( $social_site)) {
     		if($key == 'googleplus') {
-				echo "<a href='".esc_attr(get_the_author_meta( $social_site, $user->ID ))."'><i class=\"fa fa-google-plus-square\"></i></a>";
+				echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-google-plus-square\"></i></a>";
 			} elseif($key == 'flickr') {
-				echo "<a href='".esc_attr(get_the_author_meta( $social_site, $user->ID ))."'><i class=\"fa fa-flickr\"></i></a>";
+				echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-flickr\"></i></a>";
 			} elseif($key == 'dribbble') {
-                echo "<a href='".esc_attr(get_the_author_meta( $social_site, $user->ID ))."'><i class=\"fa fa-dribbble\"></i></a>";
+                echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-dribbble\"></i></a>";
             } elseif($key == 'instagram') {
-                echo "<a href='".esc_attr(get_the_author_meta( $social_site, $user->ID ))."'><i class=\"fa fa-instagram\"></i></a>";
+                echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-instagram\"></i></a>";
             } else {
-	    		echo "<a href='".esc_attr(get_the_author_meta( $social_site, $user->ID ))."'><i class=\"fa fa-$key-square\"></i></a>";
+	    		echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-$key-square\"></i></a>";
 	    	}
     	}
     }
 }
 
 // adds the url from the image credit box to the post and makes it clickable
-function ct_add_image_credit_link() {
+function ct_tracks_add_image_credit_link() {
     
     global $post;
     $link = get_post_meta( $post->ID, 'ct-image-credit-link', true );
@@ -284,7 +282,7 @@ function ct_add_image_credit_link() {
 }
 
 // outputs all images from gallery post
-function ct_gallery_display() {
+function ct_tracks_gallery_display() {
 
 	global $post;
 			
@@ -313,10 +311,10 @@ function ct_gallery_display() {
 }
 
 // for displaying featured images including mobile versions and default versions
-function ct_featured_image() {
+function ct_tracks_featured_image() {
 	
 	global $post;
-	$gallery = ct_gallery_display();	
+	$gallery = ct_tracks_gallery_display();
 	$has_image = false;
 	$post_type = get_post_format($post);
 			
@@ -338,7 +336,7 @@ function ct_featured_image() {
 }
 
 // does it contain a featured image?
-function ct_contains_featured() {
+function ct_tracks_contains_featured() {
 
     global $post;
 	
@@ -350,13 +348,30 @@ function ct_contains_featured() {
 }
 
 // puts site title & description in the title tag on front page
-add_filter( 'wp_title', 'ct_add_homepage_title' );
-function ct_add_homepage_title( $title )
+add_filter( 'wp_title', 'ct_tracks_add_homepage_title' );
+function ct_tracks_add_homepage_title( $title )
 {
     if( empty( $title ) && ( is_home() || is_front_page() ) ) {
         return __( get_bloginfo( 'title' ), 'theme_domain' ) . ' | ' . get_bloginfo( 'description' );
     }
     return $title;
+}
+
+/* add a class of 'not-front' to all pages that aren't the front page */
+function ct_tracks_body_class( $classes ) {
+    if ( ! is_front_page() ) {
+        $classes[] = 'not-front';
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'ct_tracks_body_class' );
+
+// calls pages for menu if menu not set
+function ct_tracks_wp_page_menu() {
+    wp_page_menu(array(
+            "menu_class" => "menu-unset"
+        )
+    );
 }
 
 ?>

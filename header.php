@@ -22,18 +22,11 @@
 
 </head>
 
-<?php 
-//adds class to body of 'not-front' if other than the front page
-if (is_front_page() ) {
-    ?><body id="<?php print get_stylesheet(); ?>" <?php body_class('ct-body'); ?>><?php
-} else {
-    ?><body id="<?php print get_stylesheet(); ?>" <?php body_class(array('ct-body', 'not-front')); ?>><?php
-}
-?>
+<body id="<?php print get_stylesheet(); ?>" <?php body_class('ct-body'); ?>>
 
 <div class="overflow-container">
-
-<header id="site-header" class="site-header">
+    <a class="skip-content" href="#main">Skip to content</a>
+<header id="site-header" class="site-header" role="banner">
 
 	<div class="title-info">
 		<?php get_template_part('logo')  ?>    
@@ -42,4 +35,4 @@ if (is_front_page() ) {
 	<?php get_template_part( 'menu', 'primary' ); // adds the primary menu ?>
 
 </header>
-<div class="main">
+<div id="main" class="main" role="main">
