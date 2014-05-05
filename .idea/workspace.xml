@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenshot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/build/production.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style-prefixed.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_header.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_header.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_post.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_post.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_header.scss" afterPath="$PROJECT_DIR$/sass/_header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_post.scss" afterPath="$PROJECT_DIR$/sass/_post.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content.php" afterPath="$PROJECT_DIR$/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/searchform.php" afterPath="$PROJECT_DIR$/searchform.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_info.scss" afterPath="$PROJECT_DIR$/sass/_info.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style-prefixed.css" afterPath="$PROJECT_DIR$/style-prefixed.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -46,21 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/functions.php">
+      <file leaf-file-name="_info.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_info.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="274" column="24" selection-start="10433" selection-end="10433" vertical-scroll-proportion="4.607623" vertical-offset="0" max-vertical-offset="4935">
-              <folding>
-                <marker date="1399317261000" expanded="true" signature="7266:7497" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="76" selection-start="2953" selection-end="2953" vertical-scroll-proportion="-13.75" vertical-offset="645" max-vertical-offset="1710">
+            <state line="12" column="2" selection-start="419" selection-end="419" vertical-scroll-proportion="0.19889502" vertical-offset="0" max-vertical-offset="905">
               <folding />
             </state>
           </provider>
@@ -94,7 +66,6 @@
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/sass/_variables.scss" />
         <option value="$PROJECT_DIR$/sass/_pages.scss" />
-        <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
         <option value="$PROJECT_DIR$/sass/_comments.scss" />
@@ -118,6 +89,7 @@
         <option value="$PROJECT_DIR$/searchform.php" />
         <option value="$PROJECT_DIR$/content.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/sass/_info.scss" />
       </list>
     </option>
   </component>
@@ -259,7 +231,11 @@
       <created>1399316302021</created>
       <updated>1399316302021</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="performance updates, screenshot.png, added missing files to repo, bundled font awesome, enqueued only minified production js file">
+      <created>1399317414380</created>
+      <updated>1399317414380</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -300,7 +276,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="lots of updates including styles, accessibility, and error fixing." />
-    <option name="LAST_COMMIT_MESSAGE" value="lots of updates including styles, accessibility, and error fixing." />
+    <MESSAGE value="performance updates, screenshot.png, added missing files to repo, bundled font awesome, enqueued only minified production js file" />
+    <option name="LAST_COMMIT_MESSAGE" value="performance updates, screenshot.png, added missing files to repo, bundled font awesome, enqueued only minified production js file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -310,7 +287,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="220" column="0" selection-start="8371" selection-end="8371" vertical-scroll-proportion="0.0" vertical-offset="2985" max-vertical-offset="5460">
           <folding>
-            <marker date="1399317261000" expanded="true" signature="7266:7497" placeholder="..." />
+            <marker date="1399317261000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -430,11 +407,6 @@
     <entry file="file://$PROJECT_DIR$/js/fitvids.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="579" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="52" selection-start="416" selection-end="416" vertical-scroll-proportion="0.27918783" vertical-offset="0" max-vertical-offset="591" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_base.scss">
@@ -610,19 +582,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="56" selection-start="910" selection-end="910" vertical-scroll-proportion="0.31950673" vertical-offset="0" max-vertical-offset="4935">
+          <folding>
+            <marker date="1399317261000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="76" selection-start="2953" selection-end="2953" vertical-scroll-proportion="-13.75" vertical-offset="645" max-vertical-offset="1710">
+        <state line="65" column="76" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.36995515" vertical-offset="645" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
+    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="24" selection-start="10433" selection-end="10433" vertical-scroll-proportion="4.607623" vertical-offset="0" max-vertical-offset="4935">
-          <folding>
-            <marker date="1399317261000" expanded="true" signature="7266:7497" placeholder="..." />
-          </folding>
+        <state line="12" column="2" selection-start="419" selection-end="419" vertical-scroll-proportion="0.19889502" vertical-offset="0" max-vertical-offset="905">
+          <folding />
         </state>
       </provider>
     </entry>
