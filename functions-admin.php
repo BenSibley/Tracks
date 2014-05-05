@@ -140,8 +140,11 @@ add_action( 'wp_dashboard_setup', 'ct_tracks_add_dashboard_widget' );
 // outputs contents for widget created by aside_add_dashboard_widget
 function ct_tracks_widget_contents() { ?>
 
-    <p>If you need support <a target='_blank' href='http://competethemes.com/documentation'>visit the documentation</a> or contact support at support@competethemes.com for assistance.</p>
-    <p>Please contact us before leaving a review - we can help you!</p>
+    <ol>
+        <li>For self-help, <a target="_blank" href="http://competethemes.com/documentation">visit the knowledgebase</a></li>
+        <li>For support, <a target="_blank" href="http://wordpress.org/support/theme/tracks">visit the support forum</a></li>
+        <li>If you like Tracks, <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/tracks">take 1 minute to leave a review</a></li>
+    </ol>
 	
 	<?php
 }
