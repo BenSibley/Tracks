@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
     $(".entry-content").fitVids();
 
     // bind the tap event (from 'tappy.min.js') on the menu icon
-    $('#toggle-navigation').bind('tap', onTap)
+    $('#toggle-navigation').bind('tap', onTap);
 
     function onTap() {
         // do work
