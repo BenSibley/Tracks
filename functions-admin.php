@@ -27,7 +27,7 @@ function ct_tracks_customize_register_logo( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url',
+			'sanitize_callback' => 'esc_url_raw',
 			//'transport'         => 'postMessage'
 		)
 	);

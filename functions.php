@@ -252,15 +252,15 @@ function ct_tracks_author_social_icons() {
     foreach($social_sites as $key => $social_site) {
     	if(get_the_author_meta( $social_site)) {
     		if($key == 'googleplus') {
-				echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-google-plus-square\"></i></a>";
+				echo "<a href='".esc_url(get_the_author_meta( $social_site))."'><i class=\"fa fa-google-plus-square\"></i></a>";
 			} elseif($key == 'flickr') {
-				echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-flickr\"></i></a>";
+				echo "<a href='".esc_url(get_the_author_meta( $social_site))."'><i class=\"fa fa-flickr\"></i></a>";
 			} elseif($key == 'dribbble') {
-                echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-dribbble\"></i></a>";
+                echo "<a href='".esc_url(get_the_author_meta( $social_site))."'><i class=\"fa fa-dribbble\"></i></a>";
             } elseif($key == 'instagram') {
-                echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-instagram\"></i></a>";
+                echo "<a href='".esc_url(get_the_author_meta( $social_site))."'><i class=\"fa fa-instagram\"></i></a>";
             } else {
-	    		echo "<a href='".esc_attr(get_the_author_meta( $social_site))."'><i class=\"fa fa-$key-square\"></i></a>";
+	    		echo "<a href='".esc_url(get_the_author_meta( $social_site))."'><i class=\"fa fa-$key-square\"></i></a>";
 	    	}
     	}
     }
