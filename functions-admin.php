@@ -61,7 +61,6 @@ function ct_tracks_create_social_array() {
 		'dribbble' => 'dribbble_profile',
         'RSS' => 'rss_profile'
 	);
-	
 	return $social_sites;
 }
 
@@ -83,7 +82,7 @@ function ct_tracks_add_social_profile_settings($user) {
 						<label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> Profile:</label>
 					</td>
 					<td>
-						<input type='url' id='<?php echo $key; ?>-profile' class='regular-text' name='<?php echo $key; ?>-profile' value='<?php echo esc_attr(get_the_author_meta($social_site, $user->ID )); ?>' />
+						<input type='url' id='<?php echo $key; ?>-profile' class='regular-text' name='<?php echo $key; ?>-profile' value='<?php echo esc_url_raw(get_the_author_meta($social_site, $user->ID )); ?>' />
 					</td>
 					</td>
 				</tr>
@@ -96,6 +95,8 @@ add_action( 'show_user_profile', 'ct_tracks_add_social_profile_settings' );
 add_action( 'edit_user_profile', 'ct_tracks_add_social_profile_settings' );
 
 function ct_tracks_save_social_profiles($user_id) {
+
+    if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
 
 	$social_sites = ct_tracks_create_social_array();
    	

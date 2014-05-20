@@ -42,7 +42,8 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'style.css': 'sass/style.scss'
+                    'style.css': 'sass/style.scss',
+                    'custom-editor-styles.css': 'sass/_custom_editor_styles.scss'
                 }
             }
         },

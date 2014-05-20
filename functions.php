@@ -321,4 +321,9 @@ function ct_tracks_wp_page_menu() {
     );
 }
 
+function ct_tracks_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'init', 'ct_tracks_add_editor_styles' );
+
 ?>
