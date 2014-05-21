@@ -110,44 +110,4 @@ function ct_tracks_save_social_profiles($user_id) {
 add_action( 'personal_options_update', 'ct_tracks_save_social_profiles' );
 add_action( 'edit_user_profile_update', 'ct_tracks_save_social_profiles' );
 
-// adds widget that aside uses to give people access to support
-function ct_tracks_add_dashboard_widget() {
-
-	wp_add_dashboard_widget(
-                 'ct_tracks_dashboard_widget',    // Widget slug.
-                 'Support Dashboard',   // Title.
-                 'ct_tracks_widget_contents' 	  // Display function.
-        );	
-        
-    // Globalize the metaboxes array, this holds all the widgets for wp-admin
- 	global $wp_meta_boxes;
- 	
- 	// Get the regular dashboard widgets array 
- 	// (which has our new widget already but at the end)
- 	$normal_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
- 	
- 	// Backup and delete our new dashboard widget from the end of the array
- 	$example_widget_backup = array( 'ct_tracks_dashboard_widget' => $normal_dashboard['ct_tracks_dashboard_widget'] );
- 	unset( $normal_dashboard['ct_tracks_dashboard_widget'] );
- 
- 	// Merge the two arrays together so our widget is at the beginning
- 	$sorted_dashboard = array_merge( $example_widget_backup, $normal_dashboard );
- 
- 	// Save the sorted array back into the original metaboxes 
- 	$wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
-}
-add_action( 'wp_dashboard_setup', 'ct_tracks_add_dashboard_widget' );
-
-// outputs contents for widget created by aside_add_dashboard_widget
-function ct_tracks_widget_contents() { ?>
-
-    <ol>
-        <li>For self-help, <a target="_blank" href="http://competethemes.com/documentation">visit the knowledgebase</a></li>
-        <li>For support, <a target="_blank" href="http://wordpress.org/support/theme/tracks">visit the support forum</a></li>
-        <li>If you like Tracks, <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/tracks">take 1 minute to leave a review</a></li>
-    </ol>
-	
-	<?php
-}
-
 ?>
