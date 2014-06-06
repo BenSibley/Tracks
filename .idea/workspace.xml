@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/hybrid.php" afterPath="$PROJECT_DIR$/library/hybrid.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/library/functions/sidebars.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -49,7 +47,7 @@
       <file leaf-file-name="hybrid.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/hybrid.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="0" selection-start="8229" selection-end="8229" vertical-scroll-proportion="0.41028708" vertical-offset="2102" max-vertical-offset="6090">
+            <state line="190" column="0" selection-start="8119" selection-end="8119" vertical-scroll-proportion="0.42450142" vertical-offset="2102" max-vertical-offset="6090">
               <folding />
             </state>
           </provider>
@@ -382,7 +380,11 @@
       <created>1402071147212</created>
       <updated>1402071147212</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="* added compression to grunt &#10;* commented out tag to sidebars.php in hybrid to pass wordpress theme check">
+      <created>1402071883339</created>
+      <updated>1402071883339</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -390,7 +392,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14455232" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14455232" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3257821" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -446,7 +448,8 @@
     <MESSAGE value="* removed htmlshiv.js from production.js" />
     <MESSAGE value="* changed footer link to point to tracks homepage" />
     <MESSAGE value="* tagging as v1.04" />
-    <option name="LAST_COMMIT_MESSAGE" value="* tagging as v1.04" />
+    <MESSAGE value="* added compression to grunt &#10;* commented out tag to sidebars.php in hybrid to pass wordpress theme check" />
+    <option name="LAST_COMMIT_MESSAGE" value="* added compression to grunt &#10;* commented out tag to sidebars.php in hybrid to pass wordpress theme check" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -723,7 +726,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/hybrid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="0" selection-start="8229" selection-end="8229" vertical-scroll-proportion="0.41028708" vertical-offset="2102" max-vertical-offset="6090">
+        <state line="190" column="0" selection-start="8119" selection-end="8119" vertical-scroll-proportion="0.42450142" vertical-offset="2102" max-vertical-offset="6090">
           <folding />
         </state>
       </provider>
