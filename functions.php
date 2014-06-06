@@ -282,7 +282,14 @@ function ct_tracks_featured_image() {
     global $post;
     $has_image = false;
 
-    if (has_post_thumbnail( $post->ID ) ) {
+    // load smaller version on archive pages and larger version on post pages
+    if(is_archive() || is_home()) {
+        if (has_post_thumbnail( $post->ID ) ) {
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog' );
+            $image = $image[0];
+            $has_image = true;
+        }
+    } elseif (has_post_thumbnail( $post->ID ) ) {
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
         $image = $image[0];
         $has_image = true;
@@ -346,6 +353,11 @@ add_filter( 'post_class', 'ct_tracks_post_class_update' );
 if ( function_exists( 'dsq_options' ) ) {
     remove_filter( 'comments_template', 'dsq_comments_template' );
     add_filter( 'comments_template', 'dsq_comments_template', 99 ); // You can use any priority higher than '10'
+}
+
+/* add a smaller size for the portfolio page */
+if( function_exists('add_image_size')){
+    add_image_size('blog', 600, 460);
 }
 
 ?>
