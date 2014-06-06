@@ -1,16 +1,16 @@
 /* page */
 
-.page,
-.error404,
-.search-results {
+.singular-page,
+.error-404,
+.search {
 
   .entry {
     padding-top: $baseline-height * 2;
   }
 }
 
-.error404,
-.search-results {
+.error-404,
+.search {
 
   input {
     margin: $baseline-height / 2 0;
@@ -50,7 +50,7 @@
 /* 600px */
 @media all and (min-width: 37.5em) {
 
-  .search-results {
+  .search {
 
     .excerpt {
       background: white;

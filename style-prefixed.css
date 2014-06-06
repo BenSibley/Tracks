@@ -1436,18 +1436,18 @@ li.pingback:after {
   }
 }
 /* page */
-.page .entry,
-.error404 .entry,
-.search-results .entry {
+.singular-page .entry,
+.error-404 .entry,
+.search .entry {
   padding-top: 3em;
 }
 
-.error404 input,
-.search-results input {
+.error-404 input,
+.search input {
   margin: 0.75em 0;
 }
-.error404 input[type="search"],
-.search-results input[type="search"] {
+.error-404 input[type="search"],
+.search input[type="search"] {
   margin-right: 0.75em;
 }
 
@@ -1479,7 +1479,7 @@ li.pingback:after {
 
 /* 600px */
 @media all and (min-width: 37.5em) {
-  .search-results .excerpt {
+  .search .excerpt {
     background: white;
   }
 
