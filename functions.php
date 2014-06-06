@@ -282,18 +282,6 @@ function ct_tracks_featured_image() {
     }
 }
 
-// does it contain a featured image?
-function ct_tracks_contains_featured() {
-
-    global $post;
-	
-	if(has_post_thumbnail( $post->ID ) ) {
-		echo " has-featured-image";
-	} else {
-		echo " no-featured-image";
-	}
-}
-
 // puts site title & description in the title tag on front page
 add_filter( 'wp_title', 'ct_tracks_add_homepage_title' );
 function ct_tracks_add_homepage_title( $title )
