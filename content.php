@@ -1,7 +1,7 @@
 <?php 
 
 if( is_home() ) { ?>
-    <div class='excerpt <?php hybrid_post_class(); ct_tracks_contains_featured(); ?>'>
+    <div <?php post_class(); ?>>
     	<?php ct_tracks_featured_image(); ?>
         <div class="excerpt-container">
             <div class="excerpt-meta">
@@ -31,7 +31,7 @@ if( is_home() ) { ?>
 	</div>
 <?php     
 } elseif( is_single() ) { ?>
-    <div class='entry <?php hybrid_post_class(); ct_tracks_contains_featured(); ?>'>
+    <div <?php post_class(); ?>>
         <?php ct_tracks_featured_image(); ?>
         <div class="entry-meta">
             <span class="date"><?php echo get_the_date('F j'); ?> / </span>
@@ -75,7 +75,7 @@ if( is_home() ) { ?>
     </div>
 <?php 
 } else { ?>
-    <div class='excerpt <?php hybrid_post_class(); ct_tracks_contains_featured(); ?>'>
+    <div <?php post_class(); ?>>
         <?php ct_tracks_featured_image(); ?>
         <div class="excerpt-container">
             <div class="excerpt-meta">
