@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="* updated conditional IE logic in head">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -35,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="279" column="36" selection-start="10595" selection-end="10595" vertical-scroll-proportion="0.3449048" vertical-offset="3877" max-vertical-offset="5520">
+            <state line="274" column="9" selection-start="10468" selection-end="10468" vertical-scroll-proportion="-9.708333" vertical-offset="3877" max-vertical-offset="5520">
               <folding>
                 <marker date="1402065807000" expanded="true" signature="7251:7482" placeholder="..." />
               </folding>
@@ -55,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gruntfile.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="gruntfile.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="22" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+            <state line="14" column="17" selection-start="348" selection-end="348" vertical-scroll-proportion="0.22900763" vertical-offset="0" max-vertical-offset="1245">
               <folding />
             </state>
           </provider>
@@ -115,7 +115,6 @@
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/custom-editor-style.css" />
         <option value="$PROJECT_DIR$/sass/style.scss" />
-        <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/sass/_custom_editor_styles.scss" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/content.php" />
@@ -125,6 +124,7 @@
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/gruntfile.js" />
       </list>
     </option>
   </component>
@@ -342,7 +342,11 @@
       <created>1402064948640</created>
       <updated>1402064948640</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="* added smaller image size for homepage to increase performance">
+      <created>1402065844442</created>
+      <updated>1402065844442</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -402,7 +406,8 @@
     <MESSAGE value="* removed uneccessary comment" />
     <MESSAGE value="* added disqus fix" />
     <MESSAGE value="* updated conditional IE logic in head" />
-    <option name="LAST_COMMIT_MESSAGE" value="* updated conditional IE logic in head" />
+    <MESSAGE value="* added smaller image size for homepage to increase performance" />
+    <option name="LAST_COMMIT_MESSAGE" value="* added smaller image size for homepage to increase performance" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -684,19 +689,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="22" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="36" selection-start="10595" selection-end="10595" vertical-scroll-proportion="0.3449048" vertical-offset="3877" max-vertical-offset="5520">
+        <state line="274" column="9" selection-start="10468" selection-end="10468" vertical-scroll-proportion="-9.708333" vertical-offset="3877" max-vertical-offset="5520">
           <folding>
             <marker date="1402065807000" expanded="true" signature="7251:7482" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="348" selection-end="348" vertical-scroll-proportion="0.22900763" vertical-offset="0" max-vertical-offset="1245">
+          <folding />
         </state>
       </provider>
     </entry>
