@@ -29,13 +29,14 @@ function ct_tracks_theme_setup() {
 	$prefix = hybrid_get_prefix();
     
 	/* Theme-supported features go here. */
-    add_theme_support( 'hybrid-core-menus', array( 'primary' ));
     add_theme_support( 'hybrid-core-template-hierarchy' );
     add_theme_support( 'hybrid-core-styles', array( 'style', 'reset', 'gallery' ) );
     add_theme_support( 'loop-pagination' );
     add_theme_support( 'featured-header' );
     add_theme_support( 'cleaner-gallery' );
     add_theme_support( 'automatic-feed-links' ); //from WordPress core not theme hybrid
+
+    register_nav_menu('primary', __('Primary'));
     
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
@@ -192,6 +193,15 @@ function ct_tracks_update_comment_field($comment_field) {
 }
 add_filter('comment_form_field_comment','ct_tracks_update_comment_field');
 
+// remove allowed tags text after comment form
+function ct_tracks_remove_comments_notes_after($defaults){
+
+    $defaults['comment_notes_after']='';
+    return $defaults;
+}
+
+add_action('comment_form_defaults', 'ct_tracks_remove_comments_notes_after');
+
 // for 'read more' tag excerpts
 function ct_tracks_excerpt() {
 	
@@ -313,5 +323,24 @@ function ct_tracks_add_editor_styles() {
     add_editor_style( 'custom-editor-style.css' );
 }
 add_action( 'init', 'ct_tracks_add_editor_styles' );
+
+
+function ct_tracks_post_class_update($classes){
+
+    $remove = array();
+    $remove[] = 'entry';
+
+    if ( ! is_singular() ) {
+        foreach ( $classes as $key => $class ) {
+
+            if ( in_array( $class, $remove ) ){
+                unset( $classes[ $key ] );
+                $classes[] = 'excerpt';
+            }
+        }
+    }
+    return $classes;
+}
+add_filter( 'post_class', 'ct_tracks_post_class_update' );
 
 ?>
