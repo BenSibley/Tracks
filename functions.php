@@ -324,7 +324,6 @@ function ct_tracks_add_editor_styles() {
 }
 add_action( 'init', 'ct_tracks_add_editor_styles' );
 
-
 function ct_tracks_post_class_update($classes){
 
     $remove = array();
@@ -342,5 +341,11 @@ function ct_tracks_post_class_update($classes){
     return $classes;
 }
 add_filter( 'post_class', 'ct_tracks_post_class_update' );
+
+// fix for bug with Disqus saying comments are closed
+if ( function_exists( 'dsq_options' ) ) {
+    remove_filter( 'comments_template', 'dsq_comments_template' );
+    add_filter( 'comments_template', 'dsq_comments_template', 99 ); // You can use any priority higher than '10'
+}
 
 ?>
