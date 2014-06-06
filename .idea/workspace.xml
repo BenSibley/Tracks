@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_pages.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_pages.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_pages.scss" afterPath="$PROJECT_DIR$/sass/_pages.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style-prefixed.css" afterPath="$PROJECT_DIR$/style-prefixed.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -30,7 +25,17 @@
     <favorites_list name="compete core" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="functions-admin.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions-admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="49" selection-start="705" selection-end="705" vertical-scroll-proportion="0.3617021" vertical-offset="112" max-vertical-offset="1755">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -85,12 +90,12 @@
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/sass/_custom_editor_styles.scss" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
-        <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/content.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/sass/_pages.scss" />
+        <option value="$PROJECT_DIR$/functions-admin.php" />
       </list>
     </option>
   </component>
@@ -278,12 +283,16 @@
       <created>1402063490625</created>
       <updated>1402063490625</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="* added internationalization and conditional logic to search page. &#10;* updated to new classes for pages and search results">
+      <created>1402064692629</created>
+      <updated>1402064692629</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="601" y="-1056" width="973" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14509395" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -296,7 +305,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26745436" sideWeight="0.7839248" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26745436" sideWeight="0.7839248" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26745436" sideWeight="0.21503131" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -334,7 +343,8 @@
     <MESSAGE value="* changed hybrid_post_class to post_class" />
     <MESSAGE value="* removed function to add class if has featured image" />
     <MESSAGE value="* changed menu registration method to work with hybrid 2.0&#10;* added filter to add .excerpt class to posts on homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="* changed menu registration method to work with hybrid 2.0&#10;* added filter to add .excerpt class to posts on homepage" />
+    <MESSAGE value="* added internationalization and conditional logic to search page. &#10;* updated to new classes for pages and search results" />
+    <option name="LAST_COMMIT_MESSAGE" value="* added internationalization and conditional logic to search page. &#10;* updated to new classes for pages and search results" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -544,13 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="65" selection-start="2813" selection-end="2813" vertical-scroll-proportion="0.7586207" vertical-offset="900" max-vertical-offset="1770">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="191" column="26" selection-start="7511" selection-end="7511" vertical-scroll-proportion="-5.64" vertical-offset="2583" max-vertical-offset="5265">
@@ -626,6 +629,13 @@
     <entry file="file://$PROJECT_DIR$/sass/_pages.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="17" selection-start="347" selection-end="347" vertical-scroll-proportion="0.397351" vertical-offset="0" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="49" selection-start="705" selection-end="705" vertical-scroll-proportion="0.3617021" vertical-offset="112" max-vertical-offset="1755">
           <folding />
         </state>
       </provider>
