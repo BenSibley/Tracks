@@ -178,7 +178,7 @@ img,
 
 /* Form styles */
 
-input,
+input:not([type="checkbox"]):not([type="radio"]),
 textarea {
   padding: 0.8em;
   width: 100%;

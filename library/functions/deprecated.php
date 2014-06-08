@@ -825,10 +825,6 @@ function hybrid_settings_page_load_scripts() {
 	hybrid_function_removed( __FUNCTION__ );
 }
 
-function hybrid_register_sidebars() {
-	hybrid_function_removed( __FUNCTION__ );
-}
-
 function hybrid_get_sidebars() {
 	hybrid_function_removed( __FUNCTION__ );
 }
