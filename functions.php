@@ -362,14 +362,14 @@ if( function_exists('add_image_size')){
 
 function compete_themes_oddeven_post_class( $classes ) {
 
-   global $current_class;
-   $classes[] = $current_class;
-   $current_class = ($current_class == 'odd') ? 'even' : 'odd';
+   global $compete_themes_current_class;
+   $classes[] = $compete_themes_current_class;
+    $compete_themes_current_class = ($compete_themes_current_class == 'odd') ? 'even' : 'odd';
    return $classes;
 }
 
 add_filter ( 'post_class' , 'compete_themes_oddeven_post_class' );
-global $current_class;
-$current_class = 'odd';
+global $compete_themes_current_class;
+$compete_themes_current_class = 'odd';
 
 ?>
