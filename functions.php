@@ -372,6 +372,4 @@ add_filter ( 'post_class' , 'compete_themes_oddeven_post_class' );
 global $current_class;
 $current_class = 'odd';
 
-
-
 ?>
