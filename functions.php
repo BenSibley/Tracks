@@ -360,4 +360,18 @@ if( function_exists('add_image_size')){
     add_image_size('blog', 600, 460);
 }
 
+function compete_themes_oddeven_post_class( $classes ) {
+
+   global $current_class;
+   $classes[] = $current_class;
+   $current_class = ($current_class == 'odd') ? 'even' : 'odd';
+   return $classes;
+}
+
+add_filter ( 'post_class' , 'compete_themes_oddeven_post_class' );
+global $current_class;
+$current_class = 'odd';
+
+
+
 ?>
