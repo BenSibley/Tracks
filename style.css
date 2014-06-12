@@ -4,7 +4,7 @@ Theme URI: http://competethemes.com/tracks/
 Author: Compete Themes
 Author URI: http://competethemes.com/
 Description: A bold & beautiful blog theme. Great for personal blogs, magazines, and photography websites.
-Version: 1.07
+Version: 1.08
 Tags: black, gray, white, dark, one-column, responsive-layout, custom-menu, featured-images, sticky-post
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -276,7 +276,7 @@ textarea {
 input[type="submit"] {
   background: #222222;
   color: white;
-  max-width: 13.875em;
+  max-width: 13.875em !important;
 }
 input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
   cursor: pointer;

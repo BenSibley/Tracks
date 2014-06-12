@@ -198,7 +198,7 @@ textarea {
 input[type="submit"] {
   background: $gray-dark;
   color: white;
-  max-width: $baseline-height * 5 * 1.85;
+  max-width: $baseline-height * 5 * 1.85 !important;
 
   &:hover,
   &:active,
