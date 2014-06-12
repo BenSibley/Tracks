@@ -3,7 +3,7 @@ Theme Name: Tracks
 Theme URI: http://competethemes.com/tracks/
 Author: Compete Themes
 Author URI: http://competethemes.com/
-Description: A bold & beautiful blog theme. Great for personal blogs, magazines, and photography websites.
+Description: A bold & beautiful blog theme. Great for personal blogs, magazines, and photography websites. See our fully-setup live demo here: http://www.competethemes.com/tracks-live-demo/
 Version: 1.08
 Tags: black, gray, white, dark, one-column, responsive-layout, custom-menu, featured-images, sticky-post
 License: GNU General Public License v2 or later
@@ -84,8 +84,6 @@ a {
   text-decoration: none;
   color: #222222;
   -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 a:link {
@@ -259,13 +257,9 @@ textarea {
   font-family: "raleway", sans-serif;
   font-size: 0.813em;
   line-height: 1.85;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   -webkit-appearance: none;
   -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -352,8 +346,6 @@ a img {
   font-weight: 700;
   opacity: 0.6;
   -webkit-transition: opacity 0.2s ease;
-  -moz-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 .site-title span {
@@ -390,8 +382,6 @@ a img {
   color: white;
   opacity: 0.6;
   -webkit-transition: opacity 0.2s ease;
-  -moz-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 .toggle-navigation:hover, .toggle-navigation:active, .toggle-navigation:focus {
@@ -401,9 +391,10 @@ a img {
 }
 
 .menu-primary, .menu-primary-tracks {
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -414,13 +405,14 @@ a img {
   height: 100%;
   width: 100%;
   z-index: 1;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24px, #222222), color-stop(24px, transparent), color-stop(48px, transparent));
+  background-image: -webkit-linear-gradient(#222222 24px, transparent 24px, transparent 48px);
   background-image: linear-gradient(#222222 24px, transparent 24px, transparent 48px);
+  -webkit-background-size: 1px 48px;
   background-size: 1px 48px;
   /* this is a 24px baseline grid */
   text-align: center;
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -449,7 +441,6 @@ a img {
   letter-spacing: 0.08em;
   font-weight: 700;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -499,8 +490,6 @@ a img {
 .site-header.toggled .menu-primary-items,
 .site-header.toggled .site-description {
   -webkit-transition: opacity 0.3s 0.3s;
-  -moz-transition: opacity 0.3s 0.3s;
-  -o-transition: opacity 0.3s 0.3s;
   transition: opacity 0.3s 0.3s;
 }
 .site-header.toggled .menu-unset > ul,
@@ -669,8 +658,6 @@ a img {
     opacity: 0;
     left: -0.75em;
     -webkit-transition: opacity 0.2s ease;
-    -moz-transition: opacity 0.2s ease;
-    -o-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
   }
   .menu-unset > ul ul li.menu-item,
@@ -710,7 +697,6 @@ a img {
   text-align: center;
   background: white;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -719,9 +705,9 @@ a img {
 .featured-image {
   height: 13.5em;
   background-position: 50%;
+  -webkit-background-size: cover;
   background-size: cover;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -794,6 +780,8 @@ a img {
   color: #222222;
 }
 .more-link:hover:after, .more-link:active:after, .more-link:focus:after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
   transform: scaleX(1);
 }
 .more-link:after {
@@ -805,12 +793,11 @@ a img {
   bottom: -0.75em;
   left: calc(50% - 12px);
   -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -880,6 +867,8 @@ a img {
   }
 
   .excerpt {
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
     transform: translateZ(0);
     /* fix weird chrome wiggle glitch */
     position: relative;
@@ -888,11 +877,8 @@ a img {
     margin-bottom: 1.5em;
     opacity: 0.8;
     -webkit-transition: opacity 0.2s ease;
-    -moz-transition: opacity 0.2s ease;
-    -o-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -903,7 +889,6 @@ a img {
     position: absolute;
     right: 0;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -1025,8 +1010,6 @@ a img {
   margin: 0 0.75em 1.5em 0;
   width: 4.5em;
   height: auto;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 .author-meta .author span {
@@ -1117,8 +1100,6 @@ a img {
     width: 100%;
     opacity: 0.2;
     -webkit-transition: opacity 0.2s ease;
-    -moz-transition: opacity 0.2s ease;
-    -o-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
   }
   .entry .featured-image:hover:after {
@@ -1248,8 +1229,6 @@ li.pingback:after {
 .comment-author img {
   width: 4.5em;
   height: auto;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   float: left;
   margin-right: 0.75em;
@@ -1416,8 +1395,6 @@ li.pingback:after {
   font-weight: 700;
   opacity: 0.4;
   -webkit-transition: opacity 0.2s ease;
-  -moz-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 .site-footer h3:hover, .site-footer h3:active, .site-footer h3:focus {
@@ -1473,11 +1450,13 @@ li.pingback:after {
     top: 3.75em;
     display: block;
     line-height: 3.75em;
+    -webkit-transition: top 0.5s ease;
     transition: top 0.5s ease;
   }
   .return-top i {
     position: relative;
     top: 0;
+    -webkit-transition: top 0.2s ease;
     transition: top 0.2s ease;
   }
 

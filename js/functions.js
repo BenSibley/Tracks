@@ -61,7 +61,7 @@ jQuery(document).ready(function($){
         $(this).parents('ul').removeClass('focused');
     });
 
-    // ===== Scroll to Top ====
+    // ===== Scroll to Top ==== //
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 400) {        // If page is scrolled more than 50px
             $('#return-top').addClass('visible');    // Fade in the arrow
