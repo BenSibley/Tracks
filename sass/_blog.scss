@@ -1,9 +1,12 @@
 .excerpt-container {
   padding: 0 5.55%;
+  position: relative;
+  z-index: 9;
 }
 .excerpt {
   text-align: center;
   background: white;
+  overflow: hidden;
   @include backface-visibility(hidden);
 }
 .featured-image {
@@ -11,6 +14,18 @@
   background-position: 50%;
   background-size: cover;
   @include backface-visibility(hidden);
+  transition: transform 0.3s ease;
+}
+.featured-image-link {
+
+  &:hover,
+  &:active,
+  &:focus {
+
+    .featured-image {
+      transform: scale(1.05);
+    }
+  }
 }
 .excerpt-meta {
   color: $gray-light;

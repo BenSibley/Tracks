@@ -691,11 +691,14 @@ a img {
 }
 .excerpt-container {
   padding: 0 5.55%;
+  position: relative;
+  z-index: 9;
 }
 
 .excerpt {
   text-align: center;
   background: white;
+  overflow: hidden;
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -711,6 +714,14 @@ a img {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.featured-image-link:hover .featured-image, .featured-image-link:active .featured-image, .featured-image-link:focus .featured-image {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .excerpt-meta, .entry-meta {
