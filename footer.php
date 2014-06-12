@@ -8,7 +8,9 @@
     </div>
 </footer>
 <div id="return-top" class="return-top">
-    <i class="fa fa-arrow-up"></i>
+    <a href="#">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 </div>
 
 </div><!-- .overflow-container -->

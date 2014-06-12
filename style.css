@@ -1451,6 +1451,46 @@ li.pingback:after {
   opacity: 1;
 }
 
+.return-top {
+  display: none;
+}
+
+/* 600px */
+@media all and (min-width: 37.5em) {
+  .return-top {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 5.055%;
+    height: 3.75em;
+    text-align: center;
+  }
+  .return-top a {
+    position: relative;
+    background: white;
+    opacity: 0.8;
+    top: 3.75em;
+    display: block;
+    line-height: 3.75em;
+    transition: top 0.5s ease;
+  }
+  .return-top i {
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease;
+  }
+
+  .return-top.visible a {
+    top: 0;
+  }
+  .return-top.visible a:hover, .return-top.visible a:active, .return-top.visible a:focus {
+    opacity: 1;
+  }
+  .return-top.visible a:hover i, .return-top.visible a:active i, .return-top.visible a:focus i {
+    top: -6px;
+  }
+}
 /* 900px */
 @media all and (min-width: 56.25em) {
   .site-footer h3 {
