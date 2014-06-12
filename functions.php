@@ -6,7 +6,7 @@ function ct_tracks_load_javascript_files() {
     wp_register_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700');
 
     if(! is_admin() ) {
-        wp_enqueue_script('production', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'),'', true);
+        wp_enqueue_script('production', get_template_directory_uri() . '/js/build/production.min.js#ct_tracks_asyncload', array('jquery'),'', true);
         wp_enqueue_style('google-fonts');
         wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
     }
@@ -19,6 +19,18 @@ add_action('wp_enqueue_scripts', 'ct_tracks_load_javascript_files' );
 /* Load the core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 new Hybrid();
+
+// load all scripts enqueued by theme asynchronously
+function ct_tracks_add_async_script($url) {
+
+    // if async parameter not present, do nothing
+    if (strpos($url, '#ct_tracks_asyncload')===false){
+        return $url;
+    }
+    // if async parameter present, add async attribute
+    return str_replace('#ct_tracks_asyncload', '', $url)."' async='async";
+}
+add_filter('clean_url', 'ct_tracks_add_async_script', 11, 1);
 
 /* Do theme setup on the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'ct_tracks_theme_setup', 10 );
@@ -360,16 +372,12 @@ if( function_exists('add_image_size')){
     add_image_size('blog', 600, 460);
 }
 
-function compete_themes_oddeven_post_class( $classes ) {
+function ct_tracks_odd_even_post_class( $classes ) {
 
-   global $compete_themes_current_class;
-   $classes[] = $compete_themes_current_class;
-    $compete_themes_current_class = ($compete_themes_current_class == 'odd') ? 'even' : 'odd';
-   return $classes;
+    global $wp_query;
+    $classes[] = ($wp_query->current_post % 2 == 0) ? 'odd' : 'even';
+    return $classes;
 }
-
-add_filter ( 'post_class' , 'compete_themes_oddeven_post_class' );
-global $compete_themes_current_class;
-$compete_themes_current_class = 'odd';
+add_filter ( 'post_class' , 'ct_tracks_odd_even_post_class' );
 
 ?>

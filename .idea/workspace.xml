@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/style-prefixed.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_info.scss" afterPath="$PROJECT_DIR$/sass/_info.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content-attachment.php" afterPath="$PROJECT_DIR$/content-attachment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="fixed content-attachment.php">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -51,11 +44,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content-attachment.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="content-attachment.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content-attachment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="4" selection-start="699" selection-end="699" vertical-scroll-proportion="0.39473686" vertical-offset="0" max-vertical-offset="684">
-              <folding />
+            <state line="21" column="0" selection-start="714" selection-end="714" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="405">
+              <folding>
+                <marker date="1402606704000" expanded="true" signature="18:711" placeholder="..." />
+                <marker date="1402606704000" expanded="true" signature="47:200" placeholder="..." />
+                <marker date="1402606704000" expanded="true" signature="231:301" placeholder="..." />
+                <marker date="1402606704000" expanded="true" signature="335:704" placeholder="..." />
+                <marker date="1402606704000" expanded="true" signature="371:693" placeholder="..." />
+                <marker date="1402606704000" expanded="true" signature="393:678" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="373" column="0" selection-start="13540" selection-end="13540" vertical-scroll-proportion="0.67105263" vertical-offset="5136" max-vertical-offset="5820">
+              <folding>
+                <marker date="1402608122000" expanded="true" signature="7696:7927" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,7 +163,6 @@
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/library/hybrid.php" />
         <option value="$PROJECT_DIR$/library/functions/deprecated.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/sass/_footer.scss" />
         <option value="$PROJECT_DIR$/js/functions.js" />
@@ -160,6 +170,7 @@
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/content-attachment.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -437,7 +448,11 @@
       <created>1402605289209</created>
       <updated>1402605289209</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fixed content-attachment.php">
+      <created>1402606745581</created>
+      <updated>1402606745581</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -477,7 +492,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="v1.03" />
     <MESSAGE value="* updated esc_attr to esc_url_raw when saving author social icons" />
     <MESSAGE value="* updated hybrid core to v2.0" />
     <MESSAGE value="* changed hybrid_post_class to post_class" />
@@ -502,7 +516,8 @@
     <MESSAGE value="added back to top arrow" />
     <MESSAGE value="add scroll to top link functionality" />
     <MESSAGE value="styled return-top link and increased distance to 400px before appearing." />
-    <option name="LAST_COMMIT_MESSAGE" value="styled return-top link and increased distance to 400px before appearing." />
+    <MESSAGE value="fixed content-attachment.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed content-attachment.php" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -683,7 +698,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="14" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="675" />
+        <state line="32" column="14" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="675">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -698,11 +715,6 @@
         <state line="252" column="10" selection-start="4349" selection-end="4349" vertical-scroll-proportion="0.0" vertical-offset="3585" max-vertical-offset="22860">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="356" column="0" selection-start="12966" selection-end="12966" vertical-scroll-proportion="0.0" vertical-offset="5016" max-vertical-offset="5700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/functions.js">
@@ -796,8 +808,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content-attachment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="699" selection-end="699" vertical-scroll-proportion="0.39473686" vertical-offset="0" max-vertical-offset="684">
-          <folding />
+        <state line="21" column="0" selection-start="714" selection-end="714" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="405">
+          <folding>
+            <marker date="1402606704000" expanded="true" signature="18:711" placeholder="..." />
+            <marker date="1402606704000" expanded="true" signature="47:200" placeholder="..." />
+            <marker date="1402606704000" expanded="true" signature="231:301" placeholder="..." />
+            <marker date="1402606704000" expanded="true" signature="335:704" placeholder="..." />
+            <marker date="1402606704000" expanded="true" signature="371:693" placeholder="..." />
+            <marker date="1402606704000" expanded="true" signature="393:678" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="373" column="0" selection-start="13540" selection-end="13540" vertical-scroll-proportion="0.67105263" vertical-offset="5136" max-vertical-offset="5820">
+          <folding>
+            <marker date="1402608122000" expanded="true" signature="7696:7927" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
