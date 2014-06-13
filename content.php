@@ -58,6 +58,7 @@ if( is_home() ) { ?>
                     <?php wp_link_pages(array('before' => '<p class="singular-pagination">' . __('Pages:','tracks'), 'after' => '</p>', ) ); ?>
                 </article>
             </div>
+            <?php echo get_template_part('sidebar','after-post-content'); ?>
             <div class='entry-meta-bottom'>
                 <?php ct_tracks_further_reading(); ?>
                 <div class="entry-categories"><?php ct_tracks_category_display(); ?></div>

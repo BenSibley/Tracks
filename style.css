@@ -1456,7 +1456,7 @@ li.pingback:after {
     border: none;
     opacity: 0.8;
     text-align: center;
-    line-height: 3.75em;
+    line-height: 4em;
     outline: none;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -1544,3 +1544,17 @@ li.pingback:after {
     margin: 1.5em 0 3em;
   }
 }
+/* Widget Area Styles */
+.sidebar-after-post-content {
+  padding: 1.5em 0;
+  border-top: solid 1px #ededed;
+  border-bottom: solid 1px #ededed;
+}
+.sidebar-after-post-content > ul {
+  margin: 0;
+}
+.sidebar-after-post-content ul {
+  list-style: none;
+}
+
+/* Widget Styles */
