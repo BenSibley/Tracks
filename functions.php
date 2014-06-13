@@ -381,17 +381,35 @@ function ct_tracks_odd_even_post_class( $classes ) {
 add_filter ( 'post_class' , 'ct_tracks_odd_even_post_class' );
 
 /* css output for hiding the scroll to top link */
-function ct_tracks_return_top_hide(){
+function ct_tracks_return_top_settings_output(){
 
-    $show_hide = get_theme_mod('additional_options_return_top_settings');
+    $setting = get_theme_mod('additional_options_return_top_settings');
 
     /* if 'hide' is selected, hide it */
-    if($show_hide == 'hide') {
+    if($setting == 'hide') {
         $css = "#return-top { display: none; }";
         wp_add_inline_style('style', $css);
     }
 }
-add_action('wp_enqueue_scripts','ct_tracks_return_top_hide');
+add_action('wp_enqueue_scripts','ct_tracks_return_top_settings_output');
+
+
+/* css output for hiding the scroll to top link */
+function ct_tracks_image_zoom_settings_output(){
+
+    $setting = get_theme_mod('additional_options_image_zoom_settings');
+
+    /* if 'hide' is selected, hide it */
+    if($setting == 'no-zoom') {
+        $css = "
+            .featured-image-link:hover .featured-image { -ms-transform: none; -moz-transform: none; -o-transform: none; -webkit-transform: none; transform: none;}
+            .featured-image-link:active .featured-image { -ms-transform: none; -moz-transform: none; -o-transform: none; -webkit-transform: none; transform: none;}
+            .featured-image-link:focus .featured-image { -ms-transform: none; -moz-transform: none; -o-transform: none; -webkit-transform: none; transform: none;}
+        ";
+        wp_add_inline_style('style', $css);
+    }
+}
+add_action('wp_enqueue_scripts','ct_tracks_image_zoom_settings_output');
 
 
 ?>

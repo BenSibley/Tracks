@@ -64,13 +64,36 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
             'type' => 'radio',
             'label' => 'Show scroll-to-top arrow?',
             'section' => 'ct_tracks_additional_options',
+            'setting' => 'additional_options_return_top_settings',
             'choices' => array(
                 'show' => 'Show',
                 'hide' => 'Hide'
             ),
         )
     );
-
+    /* setting */
+    $wp_customize->add_setting(
+        'additional_options_image_zoom_settings',
+        array(
+            'default'           => 'zoom',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_image_zoom_settings',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'additional_options_image_zoom_settings',
+        array(
+            'type' => 'radio',
+            'label' => 'Zoom-in blog images on hover',
+            'section' => 'ct_tracks_additional_options',
+            'choices' => array(
+                'zoom' => 'Zoom in',
+                'no-zoom' => 'Do not zoom in'
+            ),
+        )
+    );
 }
 add_action( 'customize_register', 'ct_tracks_customizer_additional_options' );
 
@@ -79,6 +102,20 @@ function ct_tracks_sanitize_return_top_settings($input){
     $valid = array(
         'show' => 'Show',
         'hide' => 'Hide'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/* sanitize radio button input */
+function ct_tracks_sanitize_image_zoom_settings($input){
+    $valid = array(
+        'zoom' => 'Zoom',
+        'no-zoom' => 'Do not Zoom'
     );
 
     if ( array_key_exists( $input, $valid ) ) {

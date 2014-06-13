@@ -48,7 +48,7 @@
       <file leaf-file-name="_blog.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="30" selection-start="107" selection-end="107" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="3615">
+            <state line="19" column="20" selection-start="398" selection-end="418" vertical-scroll-proportion="-5.7" vertical-offset="0" max-vertical-offset="3615">
               <folding />
             </state>
           </provider>
@@ -66,9 +66,9 @@
       <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="372" column="1" selection-start="13539" selection-end="13539" vertical-scroll-proportion="0.34210527" vertical-offset="5346" max-vertical-offset="6030">
+            <state line="389" column="41" selection-start="14059" selection-end="14059" vertical-scroll-proportion="0.3640351" vertical-offset="5586" max-vertical-offset="6300">
               <folding>
-                <marker date="1402618122000" expanded="true" signature="7696:7927" placeholder="..." />
+                <marker date="1402619213000" expanded="true" signature="7696:7927" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -86,7 +86,7 @@
       <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="47" selection-start="1676" selection-end="1676" vertical-scroll-proportion="-20.375" vertical-offset="426" max-vertical-offset="2430">
+            <state line="85" column="9" selection-start="2448" selection-end="2486" vertical-scroll-proportion="-12.25" vertical-offset="981" max-vertical-offset="2985">
               <folding />
             </state>
           </provider>
@@ -476,7 +476,11 @@
       <created>1402617783647</created>
       <updated>1402617783647</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added output for hiding scroll-to-top link">
+      <created>1402618158363</created>
+      <updated>1402618158363</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -516,7 +520,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* removed function to add class if has featured image" />
     <MESSAGE value="* changed menu registration method to work with hybrid 2.0&#10;* added filter to add .excerpt class to posts on homepage" />
     <MESSAGE value="* added internationalization and conditional logic to search page. &#10;* updated to new classes for pages and search results" />
     <MESSAGE value="* removed uneccessary comment" />
@@ -541,7 +544,8 @@
     <MESSAGE value="cleaner method for adding even/odd post classes" />
     <MESSAGE value="linked featured-images on archive pages. added image zoom effect on featured-image hover. Cleaned up comments and added control for showing/hiding return-to-top link" />
     <MESSAGE value="added return-to-top setting sanitization function" />
-    <option name="LAST_COMMIT_MESSAGE" value="added return-to-top setting sanitization function" />
+    <MESSAGE value="added output for hiding scroll-to-top link" />
+    <option name="LAST_COMMIT_MESSAGE" value="added output for hiding scroll-to-top link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -792,9 +796,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="9" selection-start="2448" selection-end="2486" vertical-scroll-proportion="-12.25" vertical-offset="981" max-vertical-offset="2985">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="12" selection-start="176" selection-end="180" vertical-scroll-proportion="15.291667" vertical-offset="532" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="20" selection-start="398" selection-end="418" vertical-scroll-proportion="-5.7" vertical-offset="0" max-vertical-offset="3615">
           <folding />
         </state>
       </provider>
@@ -806,25 +824,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="107" selection-end="107" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="3615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="47" selection-start="1676" selection-end="1676" vertical-scroll-proportion="-20.375" vertical-offset="426" max-vertical-offset="2430">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="372" column="1" selection-start="13539" selection-end="13539" vertical-scroll-proportion="0.34210527" vertical-offset="5346" max-vertical-offset="6030">
+        <state line="389" column="41" selection-start="14059" selection-end="14059" vertical-scroll-proportion="0.3640351" vertical-offset="5586" max-vertical-offset="6300">
           <folding>
-            <marker date="1402618122000" expanded="true" signature="7696:7927" placeholder="..." />
+            <marker date="1402619213000" expanded="true" signature="7696:7927" placeholder="..." />
           </folding>
         </state>
       </provider>
