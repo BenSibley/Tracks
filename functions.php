@@ -52,6 +52,12 @@ function ct_tracks_theme_setup() {
     add_theme_support( 'automatic-feed-links' );
 
     register_nav_menu('primary', __('Primary', 'tracks'));
+    
+    // adds the file with the customizer functionality
+    require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
+}
+
+function ct_tracks_register_widget_areas(){
 
     /* register after post widget area */
     hybrid_register_sidebar( array(
@@ -59,10 +65,8 @@ function ct_tracks_theme_setup() {
         'id'           => 'after-post-content',
         'description'  => __( 'Widgets in this area will be shown after post content before the prev/next post links', 'tracks' )
     ) );
-    
-    // adds the file with the customizer functionality
-    require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
 }
+add_action('widgets_init','ct_tracks_register_widget_areas');
 
 // Creates the next/previous post section below every post
 function ct_tracks_further_reading() {
