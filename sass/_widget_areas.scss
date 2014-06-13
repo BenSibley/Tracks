@@ -4,13 +4,4 @@
   padding: $baseline-height 0;
   border-top: solid 1px $off-white;
   border-bottom: solid 1px $off-white;
-
-  // remove margin from widgets
-  > ul {
-    margin: 0;
-  }
-  // remove disc from widgets and any lists in them
-  ul {
-    list-style: none;
-  }
 }

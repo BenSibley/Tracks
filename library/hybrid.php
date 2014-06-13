@@ -186,8 +186,8 @@ if ( !class_exists( 'Hybrid' ) ) {
 			/* Load the metadata functions. */
 			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'meta.php' );
 
-			/* Load the sidebar functions.
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'sidebars.php' );*/
+			/* Load the sidebar functions. */
+			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'sidebars.php' );
 
 			/* Load the scripts functions. */
 			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'scripts.php' );
