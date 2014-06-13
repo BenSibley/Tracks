@@ -24,7 +24,7 @@ new Hybrid();
 function ct_tracks_add_async_script($url) {
 
     // if async parameter not present, do nothing
-    if (strpos($url, '#ct_tracks_asyncload')===false){
+    if (strpos($url, '#ct_tracks_asyncload') === false){
         return $url;
     }
     // if async parameter present, add async attribute

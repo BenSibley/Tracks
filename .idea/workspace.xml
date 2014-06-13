@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_info.scss" afterPath="$PROJECT_DIR$/sass/_info.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/tappy.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -31,9 +34,9 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="35" selection-start="2433" selection-end="2433" vertical-scroll-proportion="-14.958333" vertical-offset="571" max-vertical-offset="6615">
+            <state line="8" column="99" selection-start="327" selection-end="327" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="6615">
               <folding>
-                <marker date="1402666676000" expanded="true" signature="8513:8744" placeholder="..." />
+                <marker date="1402672174000" expanded="true" signature="8515:8746" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -93,10 +96,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_info.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_info.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_info.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="0.2850877" vertical-offset="0" max-vertical-offset="684">
+            <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/functions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="49" selection-start="999" selection-end="999" vertical-scroll-proportion="0.5058651" vertical-offset="0" max-vertical-offset="1500">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.txt">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="43" selection-start="258" selection-end="258" vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="525">
               <folding />
             </state>
           </provider>
@@ -115,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/style.min.css" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/archive.php" />
         <option value="$PROJECT_DIR$/comments.php" />
@@ -126,7 +149,6 @@
         <option value="$PROJECT_DIR$/taxonomy-post_tag.php" />
         <option value="$PROJECT_DIR$/user.php" />
         <option value="$PROJECT_DIR$/menu-primary.php" />
-        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/searchform.php" />
         <option value="$PROJECT_DIR$/page.php" />
         <option value="$PROJECT_DIR$/library/functions/sidebars.php" />
@@ -148,7 +170,6 @@
         <option value="$PROJECT_DIR$/content-attachment.php" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/content.php" />
         <option value="$PROJECT_DIR$/sass/style.scss" />
         <option value="$PROJECT_DIR$/library/hybrid.php" />
@@ -161,11 +182,14 @@
         <option value="$PROJECT_DIR$/sass/_post.scss" />
         <option value="$PROJECT_DIR$/sass/_widgets.scss" />
         <option value="$PROJECT_DIR$/changelog.txt" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/sidebar-after-page-content.php" />
         <option value="$PROJECT_DIR$/content-page.php" />
         <option value="$PROJECT_DIR$/sass/_widget_areas.scss" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/js/tappy.js" />
+        <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/js/functions.js" />
       </list>
     </option>
   </component>
@@ -516,7 +540,11 @@
       <created>1402666914941</created>
       <updated>1402666914941</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="updated tags">
+      <created>1402667249328</created>
+      <updated>1402667249328</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -556,7 +584,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* tagging as v1.06" />
     <MESSAGE value="* fix for layout due to missing 'odd' 'even' classes" />
     <MESSAGE value="tagged as v1.07" />
     <MESSAGE value="* namespaced the global current class function" />
@@ -581,7 +608,8 @@
     <MESSAGE value="moved widget registering to widgets_init" />
     <MESSAGE value="added after-page-content widget" />
     <MESSAGE value="added styling for after-post-content to after-page-content" />
-    <option name="LAST_COMMIT_MESSAGE" value="added styling for after-post-content to after-page-content" />
+    <MESSAGE value="updated tags" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated tags" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -652,11 +680,6 @@
         <state line="30" column="5" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6960" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/tappy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="675" selection-end="675" vertical-scroll-proportion="0.17487046" vertical-offset="150" max-vertical-offset="1710" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/respond.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="13" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5370" />
@@ -680,14 +703,6 @@
     <entry file="file://$PROJECT_DIR$/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="22" selection-start="236" selection-end="236" vertical-scroll-proportion="0.23178808" vertical-offset="0" max-vertical-offset="906" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.53699285" vertical-offset="0" max-vertical-offset="838" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
@@ -720,11 +735,6 @@
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="10" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="1455" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="28" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.18028168" vertical-offset="547" max-vertical-offset="1485" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_base.scss">
@@ -840,15 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="35" selection-start="2433" selection-end="2433" vertical-scroll-proportion="-14.958333" vertical-offset="571" max-vertical-offset="6615">
-          <folding>
-            <marker date="1402666676000" expanded="true" signature="8513:8744" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sidebar-after-post-content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="15" selection-start="0" selection-end="273" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
@@ -886,7 +887,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_info.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="0.2850877" vertical-offset="0" max-vertical-offset="684">
+        <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="99" selection-start="327" selection-end="327" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="6615">
+          <folding>
+            <marker date="1402672174000" expanded="true" signature="8515:8746" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="43" selection-start="258" selection-end="258" vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="49" selection-start="999" selection-end="999" vertical-scroll-proportion="0.5058651" vertical-offset="0" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>
