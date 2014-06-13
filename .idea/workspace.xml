@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/changelog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sidebar-after-page-content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content-page.php" afterPath="$PROJECT_DIR$/content-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_widget_areas.scss" afterPath="$PROJECT_DIR$/sass/_widget_areas.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -76,10 +75,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content-page.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="content-page.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="522" selection-end="522" vertical-scroll-proportion="0.2850877" vertical-offset="0" max-vertical-offset="684">
+            <state line="13" column="6" selection-start="522" selection-end="522" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_widget_areas.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_widget_areas.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="1" selection-start="248" selection-end="248" vertical-scroll-proportion="0.17216642" vertical-offset="0" max-vertical-offset="697">
               <folding />
             </state>
           </provider>
@@ -144,11 +152,11 @@
         <option value="$PROJECT_DIR$/sass/_header.scss" />
         <option value="$PROJECT_DIR$/sass/_post.scss" />
         <option value="$PROJECT_DIR$/sass/_widgets.scss" />
-        <option value="$PROJECT_DIR$/sass/_widget_areas.scss" />
         <option value="$PROJECT_DIR$/changelog.txt" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/sidebar-after-page-content.php" />
         <option value="$PROJECT_DIR$/content-page.php" />
+        <option value="$PROJECT_DIR$/sass/_widget_areas.scss" />
       </list>
     </option>
   </component>
@@ -491,7 +499,11 @@
       <created>1402666351565</created>
       <updated>1402666351566</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="added after-page-content widget">
+      <created>1402666864610</created>
+      <updated>1402666864610</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -508,7 +520,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.260788" sideWeight="0.2150259" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.260788" sideWeight="0.2150259" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -531,7 +543,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* had to delete sidebars.php to pass theme check even though it's not being used" />
     <MESSAGE value="* fixed bad checkbox and radio button styling" />
     <MESSAGE value="* tagging as v1.06" />
     <MESSAGE value="* fix for layout due to missing 'odd' 'even' classes" />
@@ -556,7 +567,8 @@
     <MESSAGE value="using hybrid for registering widgets for better HTML5 markup" />
     <MESSAGE value="styled widgets and widget area" />
     <MESSAGE value="moved widget registering to widgets_init" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved widget registering to widgets_init" />
+    <MESSAGE value="added after-page-content widget" />
+    <option name="LAST_COMMIT_MESSAGE" value="added after-page-content widget" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -773,13 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_widget_areas.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="219" selection-end="219" vertical-scroll-proportion="0.15064563" vertical-offset="0" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_comments.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="23" selection-start="827" selection-end="827" vertical-scroll-proportion="0.45156482" vertical-offset="447" max-vertical-offset="3225">
@@ -861,7 +866,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="522" selection-end="522" vertical-scroll-proportion="0.2850877" vertical-offset="0" max-vertical-offset="684">
+        <state line="13" column="6" selection-start="522" selection-end="522" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_widget_areas.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="1" selection-start="248" selection-end="248" vertical-scroll-proportion="0.17216642" vertical-offset="0" max-vertical-offset="697">
           <folding />
         </state>
       </provider>

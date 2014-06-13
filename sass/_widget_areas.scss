@@ -1,6 +1,7 @@
 /* Widget Area Styles */
 
-.sidebar-after-post-content {
+.sidebar-after-post-content,
+.sidebar-after-page-content {
   padding: $baseline-height * 2 0 $baseline-height;
   border-top: solid 1px $off-white;
   border-bottom: solid 1px $off-white;

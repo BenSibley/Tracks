@@ -1508,7 +1508,8 @@ li.pingback:after {
   }
 }
 /* Widget Area Styles */
-.sidebar-after-post-content {
+.sidebar-after-post-content,
+.sidebar-after-page-content {
   padding: 3em 0 1.5em;
   border-top: solid 1px #ededed;
   border-bottom: solid 1px #ededed;
