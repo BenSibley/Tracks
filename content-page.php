@@ -9,5 +9,6 @@
                 <?php wp_link_pages(array('before' => '<p class="singular-pagination">' . __('Pages:','tracks'), 'after' => '</p>', ) ); ?>
             </article>
         </div>
+        <?php echo get_template_part('sidebar','after-page-content'); ?>
     </div>
 </div>

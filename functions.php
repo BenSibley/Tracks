@@ -59,11 +59,18 @@ function ct_tracks_theme_setup() {
 
 function ct_tracks_register_widget_areas(){
 
-    /* register after post widget area */
+    /* register after post content widget area */
     hybrid_register_sidebar( array(
         'name'         => __( 'After Post Content', 'tracks' ),
         'id'           => 'after-post-content',
         'description'  => __( 'Widgets in this area will be shown after post content before the prev/next post links', 'tracks' )
+    ) );
+
+    /* register after page content widget area */
+    hybrid_register_sidebar( array(
+        'name'         => __( 'After Page Content', 'tracks' ),
+        'id'           => 'after-page-content',
+        'description'  => __( 'Widgets in this area will be shown after page content', 'tracks' )
     ) );
 }
 add_action('widgets_init','ct_tracks_register_widget_areas');

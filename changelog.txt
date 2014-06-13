@@ -1,0 +1,15 @@
+Changelog Legend:
+----
+
+[+] = Added
+[*] = Changed
+[^] = Moved
+[=] = No Changes
+[x] = Deleted
+[!] = Bugs
+
+(06/11/14) - Improvements - Version 1.9.6.3
+
+[*] Fix minified js
+
+----
