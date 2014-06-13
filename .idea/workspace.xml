@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/tappy.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_header.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_header.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_header.scss" afterPath="$PROJECT_DIR$/sass/_header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -38,15 +36,6 @@
               <folding>
                 <marker date="1402672174000" expanded="true" signature="8515:8746" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changelog.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changelog.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -105,10 +94,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="49" selection-start="999" selection-end="999" vertical-scroll-proportion="0.5058651" vertical-offset="0" max-vertical-offset="1500">
+            <state line="24" column="39" selection-start="1080" selection-end="1080" vertical-scroll-proportion="-13.846154" vertical-offset="0" max-vertical-offset="1500">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_header.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_header.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="13" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.40889525" vertical-offset="840" max-vertical-offset="4470">
               <folding />
             </state>
           </provider>
@@ -178,7 +176,6 @@
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
         <option value="$PROJECT_DIR$/sass/_comments.scss" />
         <option value="$PROJECT_DIR$/sass/_footer.scss" />
-        <option value="$PROJECT_DIR$/sass/_header.scss" />
         <option value="$PROJECT_DIR$/sass/_post.scss" />
         <option value="$PROJECT_DIR$/sass/_widgets.scss" />
         <option value="$PROJECT_DIR$/changelog.txt" />
@@ -190,6 +187,7 @@
         <option value="$PROJECT_DIR$/js/tappy.js" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/js/functions.js" />
+        <option value="$PROJECT_DIR$/sass/_header.scss" />
       </list>
     </option>
   </component>
@@ -544,7 +542,11 @@
       <created>1402667249328</created>
       <updated>1402667249328</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="removed tappy which wasn't working when loaded asynchronously. Now using 'click' event on menu toggle.">
+      <created>1402672499443</created>
+      <updated>1402672499444</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -584,7 +586,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* fix for layout due to missing 'odd' 'even' classes" />
     <MESSAGE value="tagged as v1.07" />
     <MESSAGE value="* namespaced the global current class function" />
     <MESSAGE value="fixed input submit styling" />
@@ -609,7 +610,8 @@
     <MESSAGE value="added after-page-content widget" />
     <MESSAGE value="added styling for after-post-content to after-page-content" />
     <MESSAGE value="updated tags" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated tags" />
+    <MESSAGE value="removed tappy which wasn't working when loaded asynchronously. Now using 'click' event on menu toggle." />
+    <option name="LAST_COMMIT_MESSAGE" value="removed tappy which wasn't working when loaded asynchronously. Now using 'click' event on menu toggle." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -794,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="56" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.43659943" vertical-offset="1272" max-vertical-offset="4455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_comments.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="23" selection-start="827" selection-end="827" vertical-scroll-proportion="0.45156482" vertical-offset="447" max-vertical-offset="3225">
@@ -913,7 +908,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="49" selection-start="999" selection-end="999" vertical-scroll-proportion="0.5058651" vertical-offset="0" max-vertical-offset="1500">
+        <state line="24" column="39" selection-start="1080" selection-end="1080" vertical-scroll-proportion="-13.846154" vertical-offset="0" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="13" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.40889525" vertical-offset="840" max-vertical-offset="4470">
           <folding />
         </state>
       </provider>
