@@ -1461,14 +1461,14 @@ li.pingback:after {
     top: 3.75em;
     display: block;
     line-height: 3.75em;
-    -webkit-transition: top 0.5s ease;
-    transition: top 0.5s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   .return-top i {
     position: relative;
     top: 0;
-    -webkit-transition: top 0.2s ease;
-    transition: top 0.2s ease;
+    -webkit-transition: top 0.3s ease;
+    transition: top 0.3s ease;
   }
 
   .return-top.visible a {
