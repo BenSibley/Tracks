@@ -1448,19 +1448,16 @@ li.pingback:after {
   .return-top {
     display: block;
     position: fixed;
-    bottom: 0;
+    bottom: -4em;
     right: 0;
     width: 5.055%;
-    height: 3.75em;
-    text-align: center;
-  }
-  .return-top a {
-    position: relative;
+    height: 4em;
     background: white;
+    border: none;
     opacity: 0.8;
-    top: 3.75em;
-    display: block;
+    text-align: center;
     line-height: 3.75em;
+    outline: none;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
@@ -1471,13 +1468,14 @@ li.pingback:after {
     transition: top 0.3s ease;
   }
 
-  .return-top.visible a {
-    top: 0;
+  .return-top.visible {
+    bottom: 0;
   }
-  .return-top.visible a:hover, .return-top.visible a:active, .return-top.visible a:focus {
+  .return-top.visible:hover, .return-top.visible:active, .return-top.visible:focus {
     opacity: 1;
+    cursor: pointer;
   }
-  .return-top.visible a:hover i, .return-top.visible a:active i, .return-top.visible a:focus i {
+  .return-top.visible:hover i, .return-top.visible:active i, .return-top.visible:focus i {
     top: -6px;
   }
 }

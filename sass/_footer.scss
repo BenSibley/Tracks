@@ -63,21 +63,18 @@
   .return-top {
     display: block;
     position: fixed;
-    bottom: 0;
+    bottom: -4em;
     right: 0;
     width: 5.055%;
-    height: $baseline-height * 2.5;
+    height: 4em;
+    background: white;
+    border: none;
+    opacity: 0.8;
     text-align: center;
+    line-height: 4em;
+    outline: none;
+    transition: all 0.3s ease;
 
-    a {
-      position: relative;
-      background: white;
-      opacity: 0.8;
-      top: $baseline-height * 2.5;
-      display: block;
-      line-height: $baseline-height * 2.5;
-      transition: all 0.3s ease;
-    }
     i {
       position: relative;
       top: 0;
@@ -85,21 +82,19 @@
     }
   }
   .return-top.visible {
+    bottom: 0;
 
-    a {
-      top: 0;
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
+      cursor: pointer;
 
-      &:hover,
-      &:active,
-      &:focus {
-        opacity: 1;
 
-        i {
-          top: -6px;
-        }
+      i {
+        top: -6px;
       }
     }
-
   }
 }
 

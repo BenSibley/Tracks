@@ -4,6 +4,10 @@
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_footer.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_footer.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_footer.scss" afterPath="$PROJECT_DIR$/sass/_footer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -41,7 +45,7 @@
       <file leaf-file-name="_footer.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_footer.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="32" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-10.25" vertical-offset="924" max-vertical-offset="1830">
+            <state line="83" column="23" selection-start="1376" selection-end="1376" vertical-scroll-proportion="-12.75" vertical-offset="939" max-vertical-offset="1755">
               <folding />
             </state>
           </provider>
@@ -50,7 +54,16 @@
       <file leaf-file-name="functions.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="7" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.4138418" vertical-offset="622" max-vertical-offset="1485">
+            <state line="63" column="34" selection-start="2478" selection-end="2478" vertical-scroll-proportion="0.47740114" vertical-offset="607" max-vertical-offset="1485">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="34" selection-start="444" selection-end="444" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="345">
               <folding />
             </state>
           </provider>
@@ -110,15 +123,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="38" selection-start="3371" selection-end="3371" vertical-scroll-proportion="-9.375" vertical-offset="975" max-vertical-offset="1770">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -172,8 +176,6 @@
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/library/hybrid.php" />
         <option value="$PROJECT_DIR$/library/functions/deprecated.php" />
-        <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
@@ -182,7 +184,9 @@
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/sass/_footer.scss" />
+        <option value="$PROJECT_DIR$/js/functions.js" />
       </list>
     </option>
   </component>
@@ -484,7 +488,11 @@
       <created>1402619313987</created>
       <updated>1402619313987</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fixed transition styling on scroll-to-top link">
+      <created>1402619444533</created>
+      <updated>1402619444533</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -524,7 +532,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* added internationalization and conditional logic to search page. &#10;* updated to new classes for pages and search results" />
     <MESSAGE value="* removed uneccessary comment" />
     <MESSAGE value="* added disqus fix" />
     <MESSAGE value="* updated conditional IE logic in head" />
@@ -549,7 +556,8 @@
     <MESSAGE value="added return-to-top setting sanitization function" />
     <MESSAGE value="added output for hiding scroll-to-top link" />
     <MESSAGE value="added customizer setting for turning off the image zoom on hover and added output." />
-    <option name="LAST_COMMIT_MESSAGE" value="added customizer setting for turning off the image zoom on hover and added output." />
+    <MESSAGE value="fixed transition styling on scroll-to-top link" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed transition styling on scroll-to-top link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -745,11 +753,6 @@
         <state line="92" column="6" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.67836255" vertical-offset="916" max-vertical-offset="4500" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="9" selection-start="365" selection-end="365" vertical-scroll-proportion="0.1754386" vertical-offset="0" max-vertical-offset="684" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_custom_editor_styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="41" selection-start="505" selection-end="505" vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="720" />
@@ -827,16 +830,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="34" selection-start="444" selection-end="444" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_footer.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="32" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-10.25" vertical-offset="924" max-vertical-offset="1830">
+        <state line="83" column="23" selection-start="1376" selection-end="1376" vertical-scroll-proportion="-12.75" vertical-offset="939" max-vertical-offset="1755">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="7" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.4138418" vertical-offset="622" max-vertical-offset="1485">
+        <state line="63" column="34" selection-start="2478" selection-end="2478" vertical-scroll-proportion="0.47740114" vertical-offset="607" max-vertical-offset="1485">
           <folding />
         </state>
       </provider>

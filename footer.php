@@ -7,11 +7,9 @@
         <p><a href="http://www.competethemes.com/tracks/">Tracks WordPress Theme</a> by Compete Themes</p>
     </div>
 </footer>
-<div id="return-top" class="return-top">
-    <a href="#">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
+<button id="return-top" class="return-top">
+    <i class="fa fa-arrow-up"></i>
+</button>
 
 </div><!-- .overflow-container -->
 
