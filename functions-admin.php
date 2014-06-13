@@ -49,7 +49,7 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
     );
     /* setting */
     $wp_customize->add_setting(
-        'additional_options_settings',
+        'additional_options_return_top_settings',
         array(
             'default'           => 'show',
             'type'              => 'theme_mod',
@@ -59,10 +59,10 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
     );
     /* control */
     $wp_customize->add_control(
-        'additional_options_settings',
+        'additional_options_return_top_settings',
         array(
             'type' => 'radio',
-            'label' => 'Show "Return-to-Top" arrow?',
+            'label' => 'Show scroll-to-top arrow?',
             'section' => 'ct_tracks_additional_options',
             'choices' => array(
                 'show' => 'Show',
@@ -70,10 +70,11 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
             ),
         )
     );
+
 }
 add_action( 'customize_register', 'ct_tracks_customizer_additional_options' );
 
-/* sanitize the radio button input */
+/* sanitize radio button input */
 function ct_tracks_sanitize_return_top_settings($input){
     $valid = array(
         'show' => 'Show',

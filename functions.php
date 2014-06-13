@@ -380,4 +380,18 @@ function ct_tracks_odd_even_post_class( $classes ) {
 }
 add_filter ( 'post_class' , 'ct_tracks_odd_even_post_class' );
 
+/* css output for hiding the scroll to top link */
+function ct_tracks_return_top_hide(){
+
+    $show_hide = get_theme_mod('additional_options_return_top_settings');
+
+    /* if 'hide' is selected, hide it */
+    if($show_hide == 'hide') {
+        $css = "#return-top { display: none; }";
+        wp_add_inline_style('style', $css);
+    }
+}
+add_action('wp_enqueue_scripts','ct_tracks_return_top_hide');
+
+
 ?>
