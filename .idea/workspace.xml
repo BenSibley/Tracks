@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_widget_areas.scss" afterPath="$PROJECT_DIR$/sass/_widget_areas.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_info.scss" afterPath="$PROJECT_DIR$/sass/_info.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -84,10 +84,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_widget_areas.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_widget_areas.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_widget_areas.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="1" selection-start="248" selection-end="248" vertical-scroll-proportion="0.17216642" vertical-offset="0" max-vertical-offset="697">
+            <state line="8" column="1" selection-start="248" selection-end="248" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_info.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_info.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="0.2850877" vertical-offset="0" max-vertical-offset="684">
               <folding />
             </state>
           </provider>
@@ -134,7 +143,6 @@
         <option value="$PROJECT_DIR$/sass/_pages.scss" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/library/functions/deprecated.php" />
-        <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/content-attachment.php" />
@@ -157,6 +165,7 @@
         <option value="$PROJECT_DIR$/sidebar-after-page-content.php" />
         <option value="$PROJECT_DIR$/content-page.php" />
         <option value="$PROJECT_DIR$/sass/_widget_areas.scss" />
+        <option value="$PROJECT_DIR$/sass/_info.scss" />
       </list>
     </option>
   </component>
@@ -503,7 +512,11 @@
       <created>1402666864610</created>
       <updated>1402666864610</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="added styling for after-post-content to after-page-content">
+      <created>1402666914941</created>
+      <updated>1402666914941</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -543,7 +556,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="* fixed bad checkbox and radio button styling" />
     <MESSAGE value="* tagging as v1.06" />
     <MESSAGE value="* fix for layout due to missing 'odd' 'even' classes" />
     <MESSAGE value="tagged as v1.07" />
@@ -568,7 +580,8 @@
     <MESSAGE value="styled widgets and widget area" />
     <MESSAGE value="moved widget registering to widgets_init" />
     <MESSAGE value="added after-page-content widget" />
-    <option name="LAST_COMMIT_MESSAGE" value="added after-page-content widget" />
+    <MESSAGE value="added styling for after-post-content to after-page-content" />
+    <option name="LAST_COMMIT_MESSAGE" value="added styling for after-post-content to after-page-content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -778,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="648" selection-end="648" vertical-scroll-proportion="0.27581328" vertical-offset="0" max-vertical-offset="707">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_comments.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="23" selection-start="827" selection-end="827" vertical-scroll-proportion="0.45156482" vertical-offset="447" max-vertical-offset="3225">
@@ -873,7 +879,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_widget_areas.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="248" selection-end="248" vertical-scroll-proportion="0.17216642" vertical-offset="0" max-vertical-offset="697">
+        <state line="8" column="1" selection-start="248" selection-end="248" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="0.2850877" vertical-offset="0" max-vertical-offset="684">
           <folding />
         </state>
       </provider>
