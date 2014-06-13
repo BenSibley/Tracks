@@ -29,10 +29,8 @@
   }
 }
 .excerpt-meta {
+  @extend %uppercase;
   color: $gray-light;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
   padding-top: $baseline-height / 0.813;
   @extend %thirteen-pixels;
 
@@ -51,8 +49,7 @@
   }
 }
 .excerpt-title {
-  text-transform: uppercase;
-  font-weight: 700;
+  @extend %uppercase;
   letter-spacing: 0.04em;
   font-size: 1.875em; /* 30px */
   line-height: 1.6;
@@ -88,12 +85,10 @@
   padding: $baseline-height 0;
 }
 .more-link {
+  @extend %uppercase;
   position: relative;
   text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
   color: $primary-gray;
-  letter-spacing: 0.1em;
   @extend %thirteen-pixels;
 
   &:link,
@@ -124,11 +119,9 @@
   }
 }
 .loop-pagination {
-  text-align: center;
-  text-transform: uppercase;
+  @extend %uppercase;
   @extend %thirteen-pixels;
-  letter-spacing: 0.1em;
-  font-weight: 700;
+  text-align: center;
   padding: $baseline-height;
   margin-bottom: -$baseline-height;
 

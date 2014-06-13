@@ -27,19 +27,17 @@
 .further-reading,
 .entry-categories,
 .entry-tags {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  @extend %uppercase;
 
   span,
   a {
     @extend %thirteen-pixels;
   }
   span {
-    font-weight: 700;
-    letter-spacing: 0.1em;
     display: block;
   }
   a {
+    font-weight: 400;
     color: $gray-medium;
 
     &:link,
@@ -95,9 +93,7 @@
       @include border-radius(50%);
     }
     span {
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 700;
+      @extend %uppercase;
       @extend %thirteen-pixels;
     }
     a {

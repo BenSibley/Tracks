@@ -8,10 +8,9 @@
   z-index: 2;
 }
 .site-title {
+  @extend %uppercase;
   @extend %twenty-six-pixels;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-weight: 700;
   opacity: 0.6;
   @include transition(opacity 0.2s ease);
 
@@ -100,13 +99,11 @@
   li {
 
     a {
+      @extend %uppercase;
       display: block;
       color: white;
       opacity: 0.6;
       margin: $baseline-height 0 $baseline-height / 2 0;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 700;
       @include backface-visibility(hidden);
 
       &:only-child {

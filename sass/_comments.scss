@@ -7,10 +7,8 @@
   padding: $baseline-height 0;
 
   h3 {
+    @extend %uppercase;
     @extend %thirteen-pixels;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.1em;
   }
 }
 .comment-list {
@@ -50,9 +48,7 @@ li.pingback {
     margin-right: $baseline-height / 2;
   }
   .author-name {
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+    @extend %uppercase;
 
     a {
       text-decoration: none;

@@ -1,1 +1,33 @@
 /* Widget Styles */
+
+.widget-title {
+  @extend %uppercase;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.widget {
+
+  ul {
+    margin: $baseline-height 0;
+    list-style: none;
+  }
+  li {
+    @extend %thirteen-pixels;
+    @extend %uppercase;
+    font-weight: 400;
+
+    a {
+      color: $gray-medium;
+
+      &:link,
+      &:visited {
+        color: $gray-medium;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: black;
+      }
+    }
+  }
+}

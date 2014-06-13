@@ -14,26 +14,32 @@ Tracks is distributed under the terms of the GNU GPL
 */
 /*===== Variables =====*/
 /* Theme Colors */
-/* 26px font */
 .site-title, .toggle-navigation i {
   font-size: 1.625em;
   line-height: 1.85;
 }
 
-/* 13px font */
 .wp-caption-text, .excerpt-meta, .entry-meta, .more-link, .loop-pagination, .further-reading span,
 .further-reading a,
 .entry-categories span,
 .entry-categories a,
 .entry-tags span,
-.entry-tags a, .author-meta .author span, .comments-number h3, .comment-author div, .design-credit {
+.entry-tags a, .author-meta .author span, .comments-number h3, .comment-author div, .design-credit, .widget li {
   font-size: 0.813em;
   line-height: 1.85;
 }
 
-/* padding */
 .entry-container, .comments {
   padding: 0 5.55%;
+}
+
+.site-title, .menu-unset > ul li a,
+.menu-primary-items li a, .excerpt-meta, .entry-meta, .excerpt-title, .entry-title, .more-link, .loop-pagination, .further-reading,
+.entry-categories,
+.entry-tags, .author-meta .author span, .comments-number h3, .comment-author .author-name, .site-footer h3, .design-credit, .widget-title, .widget li {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
 }
 
 /* Social Media Brand Colors */
@@ -342,8 +348,6 @@ a img {
 
 .site-title {
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-weight: 700;
   opacity: 0.6;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
@@ -437,9 +441,6 @@ a img {
   color: white;
   opacity: 0.6;
   margin: 1.5em 0 0.75em 0;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -726,9 +727,6 @@ a img {
 
 .excerpt-meta, .entry-meta {
   color: #aaaaaa;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
   padding-top: 1.84502em;
 }
 .excerpt-meta a, .entry-meta a {
@@ -742,8 +740,6 @@ a img {
 }
 
 .excerpt-title, .entry-title {
-  text-transform: uppercase;
-  font-weight: 700;
   letter-spacing: 0.04em;
   font-size: 1.875em;
   /* 30px */
@@ -779,10 +775,7 @@ a img {
 .more-link {
   position: relative;
   text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
   color: #4d4d4d;
-  letter-spacing: 0.1em;
 }
 .more-link:link, .more-link:visited {
   color: #4d4d4d;
@@ -816,9 +809,6 @@ a img {
 
 .loop-pagination {
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
   padding: 1.5em;
   margin-bottom: -1.5em;
 }
@@ -954,22 +944,15 @@ a img {
   margin: 3em 0;
 }
 
-.further-reading,
-.entry-categories,
-.entry-tags {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
 .further-reading span,
 .entry-categories span,
 .entry-tags span {
-  font-weight: 700;
-  letter-spacing: 0.1em;
   display: block;
 }
 .further-reading a,
 .entry-categories a,
 .entry-tags a {
+  font-weight: 400;
   color: #8c8c8c;
 }
 .further-reading a:link, .further-reading a:visited,
@@ -1022,11 +1005,6 @@ a img {
   width: 4.5em;
   height: auto;
   border-radius: 50%;
-}
-.author-meta .author span {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
 }
 .author-meta .author a {
   font-weight: 400;
@@ -1198,11 +1176,6 @@ a img {
 .comments-number {
   padding: 1.5em 0;
 }
-.comments-number h3 {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
 
 .comment-list {
   list-style: none;
@@ -1243,11 +1216,6 @@ li.pingback:after {
   border-radius: 50%;
   float: left;
   margin-right: 0.75em;
-}
-.comment-author .author-name {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.1em;
 }
 .comment-author .author-name a {
   text-decoration: none;
@@ -1401,9 +1369,7 @@ li.pingback:after {
   color: #8c8c8c;
 }
 .site-footer h3 {
-  text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-weight: 700;
   opacity: 0.4;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
@@ -1419,9 +1385,6 @@ li.pingback:after {
 .design-credit {
   background: #111111;
   color: #4d4d4d;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
   padding: 0.75em 0;
 }
 .design-credit a {
@@ -1546,15 +1509,31 @@ li.pingback:after {
 }
 /* Widget Area Styles */
 .sidebar-after-post-content {
-  padding: 1.5em 0;
+  padding: 3em 0 1.5em;
   border-top: solid 1px #ededed;
   border-bottom: solid 1px #ededed;
-}
-.sidebar-after-post-content > ul {
-  margin: 0;
-}
-.sidebar-after-post-content ul {
-  list-style: none;
+  margin-bottom: 1.5em;
 }
 
 /* Widget Styles */
+.widget-title {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.widget ul {
+  margin: 1.5em 0;
+  list-style: none;
+}
+.widget li {
+  font-weight: 400;
+}
+.widget li a {
+  color: #8c8c8c;
+}
+.widget li a:link, .widget li a:visited {
+  color: #8c8c8c;
+}
+.widget li a:hover, .widget li a:active, .widget li a:focus {
+  color: black;
+}

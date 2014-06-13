@@ -8,9 +8,8 @@
     color: $gray-medium;
   }
   h3 {
-    text-transform: uppercase;
+    @extend %uppercase;
     letter-spacing: 0.06em;
-    font-weight: 700;
     opacity: 0.4;
     @include transition(opacity 0.2s ease);
 
@@ -26,12 +25,10 @@
   }
 }
 .design-credit {
+  @extend %uppercase;
+  @extend %thirteen-pixels;
   background: $gray-very-dark;
   color: $gray-dark-medium;
-  @extend %thirteen-pixels;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
   padding: $baseline-height / 2 0;
 
   a {

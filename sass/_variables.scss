@@ -17,23 +17,25 @@ $gray-dark-medium: #4d4d4d;
 
 $primary-gray: $gray-dark-medium;
 
-/* 26px font */
-
+// 26px font
 %twenty-six-pixels {
   font-size: 1.625em;
   line-height: 1.85;
 }
-/* 13px font */
-
+// 13px font
 %thirteen-pixels {
   font-size: 0.813em;
   line-height: 1.85;
 }
-
-/* padding */
-
+// padding
 %half-column-padding {
   padding: 0 5.55%;
+}
+// uppercase
+%uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
 }
 
 /* Social Media Brand Colors */
