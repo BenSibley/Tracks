@@ -693,6 +693,8 @@ a img {
   padding: 0 5.55%;
   position: relative;
   z-index: 9;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .excerpt {
@@ -711,8 +713,6 @@ a img {
   -webkit-background-size: cover;
   background-size: cover;
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;

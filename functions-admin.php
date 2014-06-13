@@ -8,7 +8,7 @@ function ct_tracks_customize_register_logo( $wp_customize ) {
 		'ct-upload',
 		array(
 			'title'      => esc_html__( 'Logo', 'tracks' ),
-			'priority'   => 60,
+			'priority'   => 30,
 			'capability' => 'edit_theme_options'
 		)
 	);
@@ -54,7 +54,7 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
             'default'           => 'show',
             'type'              => 'theme_mod',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_url_raw',
+            'sanitize_callback' => 'ct_tracks_sanitize_return_top_settings',
         )
     );
     /* control */
@@ -72,6 +72,21 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
     );
 }
 add_action( 'customize_register', 'ct_tracks_customizer_additional_options' );
+
+/* sanitize the radio button input */
+function ct_tracks_sanitize_return_top_settings($input){
+    $valid = array(
+        'show' => 'Show',
+        'hide' => 'Hide'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
 
 function ct_tracks_create_social_array() {
 
