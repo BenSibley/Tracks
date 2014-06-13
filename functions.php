@@ -48,7 +48,14 @@ function ct_tracks_theme_setup() {
     add_theme_support( 'cleaner-gallery' );
     add_theme_support( 'automatic-feed-links' ); //from WordPress core not theme hybrid
 
-    register_nav_menu('primary', __('Primary'));
+    register_nav_menu('primary', __('Primary', 'tracks'));
+
+    // register after post widget area
+    register_sidebar( array(
+        'name'         => __( 'After Post Content', 'tracks' ),
+        'id'           => 'after-post-content',
+        'description'  => __( 'Widgets in this area will be shown after post content before the author info box' )
+    ) );
     
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
