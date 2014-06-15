@@ -765,7 +765,9 @@ a img {
   background: #4d4d4d;
   width: 4.5em;
   height: 0.375em;
-  left: calc(50% - 36px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   bottom: -1.5em;
 }
 
@@ -796,7 +798,9 @@ a img {
   height: 3px;
   background: #4d4d4d;
   bottom: -0.75em;
-  left: calc(50% - 12px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-transform: scaleX(0);
@@ -1538,4 +1542,14 @@ li.pingback:after {
 }
 .widget li a:hover, .widget li a:active, .widget li a:focus {
   color: black;
+}
+
+/* 900px */
+@media all and (min-width: 56.25em) {
+  .ie9 .excerpt {
+    opacity: 1;
+  }
+  .ie9 .excerpt:hover {
+    opacity: 1;
+  }
 }

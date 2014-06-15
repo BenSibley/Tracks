@@ -1,0 +1,14 @@
+/* 900px */
+@media all and (min-width: 56.25em) {
+
+  .ie9 {
+
+    .excerpt {
+      opacity: 1;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
