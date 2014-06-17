@@ -51,7 +51,11 @@ function ct_tracks_theme_setup() {
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'automatic-feed-links' );
 
-    register_nav_menu('primary', __('Primary', 'tracks'));
+    register_nav_menus(array(
+        'primary' => __('Primary', 'tracks'),
+        'secondary' => __('Secondary', 'tracks'),
+        'footer' => __('Footer', 'tracks')
+    ));
     
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
