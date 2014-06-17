@@ -1,0 +1,38 @@
+/* Footer menu styles */
+
+.menu-footer-items {
+  list-style: none;
+  margin: -$baseline-height 0 $baseline-height * 2;
+
+  a {
+    color: $gray-medium;
+    opacity: 0.4;
+
+    &:link,
+    &:visited {
+      color: $gray-medium;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $gray-medium;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* 700px */
+@media all and (min-width: 43.75em){
+
+  .menu-footer-items {
+    margin-bottom: $baseline-height * 3;
+
+    li,
+    a {
+      display: inline-block;
+    }
+    a {
+      margin: 0 8px; // subtracted 4px to account for inline-block spacing
+    }
+  }
+}
