@@ -1,6 +1,7 @@
 .site-header {
   padding: $baseline-height / 2 5.55%;
   color: black;
+  background: $gray-dark;
 }
 .title-info {
   display: inline-block;
@@ -97,42 +98,39 @@
   list-style: none;
   opacity: 0;
 
-  li {
+  a {
+    @extend %uppercase;
+    display: block;
+    color: white;
+    opacity: 0.6;
+    margin: $baseline-height 0 $baseline-height / 2 0;
+    @include backface-visibility(hidden);
 
-    a {
-      @extend %uppercase;
-      display: block;
+    &:only-child {
+      margin: $baseline-height 0;
+    }
+    &:link,
+    &:visited {
       color: white;
-      opacity: 0.6;
-      margin: $baseline-height 0 $baseline-height / 2 0;
-      @include backface-visibility(hidden);
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.9;
+    }
+  }
+  .sub-menu,
+  .children {
+  list-style: none;
 
-      &:only-child {
-        margin: $baseline-height 0;
-      }
-      &:link,
-      &:visited {
-        color: white;
-      }
+    li a {
+      margin: $baseline-height / 2 0;
+      opacity: 0.3;
+
       &:hover,
       &:active,
       &:focus {
         opacity: 0.9;
-      }
-    }
-    .sub-menu,
-    .children {
-    list-style: none;
-
-      li a {
-        margin: $baseline-height / 2 0;
-        opacity: 0.3;
-
-        &:hover,
-        &:active,
-        &:focus {
-          opacity: 0.9;
-        }
       }
     }
   }
@@ -177,7 +175,8 @@
     position: static;
     width: auto;
     float: right;
-    padding-top: $baseline-height / 2;
+    padding: 0;
+    margin-top: $baseline-height / 2;
 
     .site-description {
       display: none;
@@ -191,7 +190,104 @@
     margin: 0 0 0 $baseline-height * 2;
     opacity: 1;
 
+    li,
+    a {
+      display: inline-block;
+    }
+    li {
+      position: relative;
+    }
+    > li {
+      font-size: 0.813em;
+      line-height: 1.85;
+
+      &:after {
+        content: '/';
+        position: absolute;
+        right: -6px;
+        top: 0;
+        color: white;
+        opacity: 0.6;
+      }
+      &:last-child {
+
+        &:after {
+          display: none;
+        }
+        a {
+          margin-right: 0;
+        }
+      }
+    }
+    a {
+      opacity: 0.4;
+      margin: 0 $baseline-height / 2;
+
+      &:only-child {
+        margin: 0 $baseline-height / 2;
+      }
+    }
+    /* Tier 2 */
+    ul {
+      position: absolute;
+      top: -9999px;
+      opacity: 0;
+      left: -70%;
+      right: -70%;
+      min-width: 100%;
+      max-width: 220px;
+      margin: 0 auto;
+      background: $gray-dark;
+
+      // stay open while hovering
+      &:hover {
+        top: 16px;
+        opacity: 1;
+      }
+      a {
+        padding: 0 $baseline-height;
+      }
+      li:first-child > a {
+          padding-top: $baseline-height;
+      }
+      li:last-child > a {
+        padding-bottom: $baseline-height;
+      }
+    }
+    a {
+
+      &:hover,
+      &:active,
+      &:focus {
+
+        + ul {
+          top: 16px;
+          opacity: 1;
+        }
+      }
+    }
+    /* Tier 3 */
+    ul ul {
+      left: auto;
+      right: 100%;
+
+      &:hover {
+        top: 0;
+      }
+    }
+    ul a {
+
+      &:hover,
+      &:active,
+      &:focus {
+
+        + ul {
+          top: 0;
+        }
+      }
+    }
     /* added class to override the :only-child selector previously used */
+    /*
     li.menu-item,
     li.page_item {
       float: left;
@@ -267,9 +363,10 @@
       width: auto;
       min-width: 100%;
       background: $gray-dark;
-      margin: 0;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
       opacity: 0;
-      left: -$baseline-height / 2;
       @include transition(opacity 0.2s ease);
 
       li.menu-item,
@@ -288,6 +385,6 @@
       &:after {
         @include clearfix;
       }
-    }
+    }*/
   }
 }

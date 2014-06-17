@@ -22,7 +22,9 @@
     <a class="skip-content" href="#main">Skip to content</a>
 <header id="site-header" class="site-header" role="banner">
 
-	<div class="title-info">
+    <?php get_template_part( 'menu', 'secondary' ); // adds the secondary menu ?>
+
+	<div id="title-info" class="title-info">
 		<?php get_template_part('logo')  ?>    
 	</div>
 	

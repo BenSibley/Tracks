@@ -75,6 +75,23 @@ jQuery(document).ready(function($){
             scrollTop : 0                       // Scroll to top of body
         }, 800);
     });
+
+    // bind the click event on the secondary menu icon
+    $('#toggle-secondary-navigation').bind('click', openSecondaryMenu);
+
+    function openSecondaryMenu() {
+
+        var body = $('body');
+
+        if (body.hasClass('secondary-toggle')) {
+            body.removeClass('secondary-toggle');
+            $('#main, #title-info, #toggle-navigation').css('transform','translateY(0)');
+        } else {
+            body.addClass('secondary-toggle');
+            var menuHeight = $('#menu-secondary-items').height() + 48;
+            $('#main, #title-info, #toggle-navigation').css('transform','translateY(' + menuHeight + 'px)');
+        }
+    }
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */

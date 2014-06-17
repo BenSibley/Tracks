@@ -1,0 +1,112 @@
+/* secondary menu styles */
+
+.menu-secondary {
+  position: relative;
+  left: -6%;
+  width: 112%;
+  background: $gray-very-dark;
+  padding: $baseline-height / 4 5.55%;
+  margin: -$baseline-height / 2 0 0;
+  line-height: 0; // remove additional height (3px)
+
+  // reposition primary toggle button if secondary menu is present
+  ~ button {
+    top: $baseline-height;
+  }
+}
+.toggle-secondary-navigation {
+  background: none;
+  border: none;
+  color: white;
+  opacity: 0.4;
+  font-size: 1.313em; /* 21px / 16px */
+  line-height: 1.143;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.menu-secondary-items {
+  list-style: none;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  padding: $baseline-height;
+  margin: 0;
+  background: $gray-very-dark;
+
+  a {
+    @extend %uppercase;
+    @extend %thirteen-pixels;
+    color: $gray-medium;
+    opacity: 0.6;
+    margin-right: $baseline-height / 2; // account for inline-block 4px spacing
+
+    &:link,
+    &:visited {
+      color: $gray-medium;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $gray-medium;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* when secondary menu is open */
+
+#main, #title-info, #toggle-navigation {
+  transition: transform 0.3s ease;
+}
+.secondary-toggle {
+
+  .toggle-secondary-navigation {
+    opacity: 0.9;
+    transform: rotate(315deg)
+  }
+  .menu-secondary-items {
+    z-index: 0;
+  }
+}
+
+/* 600px */
+@media all and (min-width: 37.5em){
+
+  .menu-secondary-items {
+    position: relative;
+    z-index: 1;
+    padding: $baseline-height / 3 0;
+
+    &:before {
+      content: '//';
+      margin-right: 16px;
+      color: $gray-medium;
+      opacity: 0.6;
+    }
+    li,
+    a {
+      display: inline-block;
+    }
+  }
+  .toggle-secondary-navigation {
+    display: none;
+  }
+  .menu-secondary {
+    margin-top: -$baseline-height; // to acount for the site-header's border-top and padding-top
+    margin-bottom: $baseline-height;
+    left: -6.2%;
+    width: 112.4%;
+
+    // reposition primary toggle button if secondary menu is present
+    ~ button {
+      top: 2.5em;
+    }
+  }
+}
