@@ -544,106 +544,6 @@ a img {
     opacity: 1;
     /* Tier 2 */
     /* Tier 3 */
-    /* added class to override the :only-child selector previously used */
-    /*
-    li.menu-item,
-    li.page_item {
-      float: left;
-      position: relative;
-
-      a {
-        margin: 0 0 $baseline-height 0;
-        opacity: 0.5;
-        font-size: 0.813em;
-        line-height: 1.85;
-        letter-spacing: 0.1em;
-
-        &:hover,
-        &:active,
-        &:focus  {
-          opacity: 0.9;
-        }
-        &:after {
-          content: ' /';
-          margin-right: 6px;
-          opacity: 0.5;
-        }
-      }
-      &:last-child {
-
-        a {
-
-          &:after {
-            display: none;
-          }
-        }
-      }
-      &:hover,
-      &:active,
-      &:focus,
-      &.focused {
-
-        > ul {
-          top: $baseline-height;
-          opacity: 1;
-
-          > li:hover {
-
-            > ul {
-              top: -0.6em;
-              left: auto;
-              right: 100%;
-            }
-          }
-        }
-      }
-      .focused.children,
-      .focused.sub-menu {
-        top: $baseline-height;
-        opacity: 1;
-
-        > li:hover {
-
-          > ul {
-            top: -0.6em;
-            left: auto;
-            right: 100%;
-          }
-        }
-      }
-    }
-    &:after {
-      @include clearfix;
-    }
-    ul {
-      position: absolute;
-      top: -999em;
-      width: auto;
-      min-width: 100%;
-      background: $gray-dark;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      @include transition(opacity 0.2s ease);
-
-      li.menu-item,
-      li.page_item {
-        float: none;
-
-        a {
-          padding: $baseline-height / 2;
-          white-space: nowrap;
-
-          &:after {
-            display: none;
-          }
-        }
-      }
-      &:after {
-        @include clearfix;
-      }
-    }*/
   }
   .menu-unset > ul li,
   .menu-unset > ul a,
@@ -697,6 +597,8 @@ a img {
     max-width: 220px;
     margin: 0 auto;
     background: #222222;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
   }
   .menu-unset > ul ul:hover,
   .menu-primary-items ul:hover {
