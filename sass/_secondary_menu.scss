@@ -85,6 +85,7 @@
   .menu-secondary-items {
     position: relative;
     z-index: 1;
+    opacity: 1;
     padding: $baseline-height / 3 0;
 
     &:before {
@@ -102,8 +103,7 @@
     display: none;
   }
   .menu-secondary {
-    margin-top: -$baseline-height; // to acount for the site-header's border-top and padding-top
-    margin-bottom: $baseline-height;
+    margin-top: -$baseline-height / 2; // to acount for the site-header's border-top and padding-top
     left: -6.2%;
     width: 112.4%;
 
@@ -111,5 +111,13 @@
     ~ button {
       top: 2.5em;
     }
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em){
+
+  .menu-secondary {
+    margin: -$baseline-height * 1.5 0 $baseline-height 0;
   }
 }
