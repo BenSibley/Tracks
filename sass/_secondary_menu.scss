@@ -106,10 +106,57 @@
     margin-top: -$baseline-height / 2; // to acount for the site-header's border-top and padding-top
     left: -6.2%;
     width: 112.4%;
+    z-index: 39;
 
     // reposition primary toggle button if secondary menu is present
     ~ button {
       top: 2.5em;
+    }
+    // nesting to overwrite borrowed styles from _header.scss
+    .menu-secondary-items {
+
+      > li {
+        font-size: 1em;
+        line-height: 1.5;
+
+        &:after {
+          content: none;
+        }
+      }
+      a {
+        margin: 0 $baseline-height / 3;
+      }
+      /* Tier 2 */
+      ul {
+        background: $gray-very-dark;
+
+        &:hover {
+          top: $baseline-height;
+        }
+      }
+      a:hover,
+      a:active,
+      a:focus {
+
+        + ul {
+          top: $baseline-height;
+        }
+      }
+      /* Tier 3 */
+      ul {
+
+        ul:hover {
+          top: 0;
+        }
+        a:hover,
+        a:active,
+        a:focus {
+
+          + ul {
+            top: 0;
+          }
+        }
+      }
     }
   }
 }

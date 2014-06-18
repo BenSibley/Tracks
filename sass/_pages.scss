@@ -8,7 +8,13 @@
     padding-top: $baseline-height * 2;
   }
 }
+.singular-page {
 
+  .featured-image {
+    margin-top: -$baseline-height * 2;
+    margin-bottom: $baseline-height * 2;
+  }
+}
 .error-404,
 .search {
 

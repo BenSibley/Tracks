@@ -42,7 +42,8 @@ function ct_tracks_theme_setup() {
     
 	/* Theme-supported features go here. */
     add_theme_support( 'hybrid-core-template-hierarchy' );
-    add_theme_support( 'hybrid-core-styles', array( 'style', 'reset', 'gallery' ) );
+    //add_theme_support( 'hybrid-core-styles', array( 'style', 'reset', 'gallery' ) );
+    add_theme_support( 'hybrid-core-styles',array('style'));
     add_theme_support( 'loop-pagination' );
     add_theme_support( 'cleaner-gallery' );
     add_theme_support( 'hybrid-core-widgets' );
@@ -394,7 +395,7 @@ if ( function_exists( 'dsq_options' ) ) {
 
 /* add a smaller size for the portfolio page */
 if( function_exists('add_image_size')){
-    add_image_size('blog', 600, 460);
+    add_image_size('blog', 700, 350);
 }
 
 function ct_tracks_odd_even_post_class( $classes ) {
