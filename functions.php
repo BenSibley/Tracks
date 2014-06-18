@@ -419,7 +419,6 @@ function ct_tracks_return_top_settings_output(){
 }
 add_action('wp_enqueue_scripts','ct_tracks_return_top_settings_output');
 
-
 /* css output for hiding the scroll to top link */
 function ct_tracks_image_zoom_settings_output(){
 

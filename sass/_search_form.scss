@@ -1,0 +1,93 @@
+/* search form styles */
+
+.search-form-container {
+  display: none;
+}
+
+/* 600px */
+@media all and (min-width: 37.5em){
+
+  .search-form-container {
+    display: block;
+    position: absolute;
+    right: 5.55%;
+    left: 5.55%;
+    top: 0;
+    height: 100%;
+    margin: 0;
+
+    button {
+      position: relative;
+      left: 0;
+      float: right;
+      border: none;
+      background: none;
+      font-size: 1em;
+      padding: $baseline-height / 2;
+      margin: 0 -12px 0 0; // to right align with padding on
+      outline: none;
+      transition: all 0.3s ease;
+
+      &:hover,
+      &:active,
+      &:focus {
+
+        i {
+          opacity: 0.9;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    i {
+      position: relative;
+      z-index: 9;
+      color: white;
+      opacity: 0.4;
+      line-height: 1.5;
+      transition: opacity 0.2s ease;
+    }
+    input {
+      margin: 0;
+      height: 100%;
+      position: absolute;
+    }
+    .search-form {
+      position: absolute;
+      top: 0;
+      z-index: 19;
+      left: 107%;
+      width: 20em;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    input.search-field {
+      width: 80%;
+      left: 0;
+    }
+    input.search-submit {
+      width: 20%;
+      right: 0;
+    }
+    /*
+    input.search-field {
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 20em;
+    }
+    input.search-submit {
+      top: 0;
+      left: 100%;
+      height: 100%;
+      width: 6em;
+    }*/
+  }
+  .search-open {
+
+    .search-form {
+      transform: translateX(-100%);
+    }
+  }
+}

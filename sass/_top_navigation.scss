@@ -1,0 +1,40 @@
+/* top navigation styles */
+
+.top-navigation {
+  position: relative;
+  left: -6%;
+  width: 112%;
+  background: $gray-very-dark;
+  padding: $baseline-height / 4 5.55%;
+  margin: -$baseline-height / 2 0 0;
+  line-height: 0; // remove additional height (3px)
+
+  // reposition primary toggle button if top navigation is present
+  ~ button {
+    top: $baseline-height;
+  }
+}
+
+/* 600px */
+@media all and (min-width: 37.5em) {
+
+  .top-navigation {
+    margin-top: -$baseline-height / 2; // to acount for the site-header's border-top and padding-top
+    left: -6.2%;
+    width: 112.4%;
+    z-index: 39;
+
+    // reposition primary toggle button if secondary menu is present
+    ~ button {
+      top: 2.5em;
+    }
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em){
+
+  .top-navigation {
+    margin: -$baseline-height * 1.5 0 $baseline-height 0;
+  }
+}

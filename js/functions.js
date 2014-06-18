@@ -92,6 +92,31 @@ jQuery(document).ready(function($){
             $('#main, #title-info, #toggle-navigation').css('transform','translateY(' + menuHeight + 'px)');
         }
     }
+
+    // bind the click event on the search icon
+    $('#search-icon').bind('click', openSearchBar);
+
+    function openSearchBar() {
+
+        var body = $('body');
+
+        if (body.hasClass('search-open')) {
+            body.removeClass('search-open');
+            $('#search-icon').css('left', 0);
+        } else {
+            body.addClass('search-open');
+
+            // get the width of the search bar
+            var sitePadding = $('body').width() * 0.0555;
+
+            // get width of site padding-right
+            var searchFormWidth = $('#site-header').find('.search-form').width();
+
+            /* transform on a button makes it disappear in webkit, so using left.
+            *  Move search-form width left minus site padding plus extra 12px space */
+            $('#search-icon').css('left', -searchFormWidth + sitePadding - 12);
+        }
+    }
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */

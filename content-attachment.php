@@ -12,7 +12,7 @@
                 <?php
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
                 $image = $image[0];
-                echo "<img class='featured-image' src='$image' />";
+                echo "<img src='$image' />";
                 ?>
             </article>
         </div>
