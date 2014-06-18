@@ -36,9 +36,11 @@
   z-index: -1;
   width: 100%;
   left: 0;
+  opacity: 0;
   padding: $baseline-height;
   margin: 0;
   background: $gray-very-dark;
+  transition: all 0.3s ease;
 
   a {
     @extend %uppercase;
@@ -62,7 +64,7 @@
 
 /* when secondary menu is open */
 
-#main, #title-info, #toggle-navigation {
+#main, #title-info, #toggle-navigation, #site-header {
   transition: transform 0.3s ease;
 }
 .secondary-toggle {
@@ -72,7 +74,8 @@
     transform: rotate(315deg)
   }
   .menu-secondary-items {
-    z-index: 0;
+    z-index: 1;
+    opacity: 1;
   }
 }
 

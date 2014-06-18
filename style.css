@@ -659,7 +659,9 @@ a img {
 }
 
 .featured-image {
-  height: 13.5em;
+  position: relative;
+  height: 0;
+  padding-bottom: 50%;
   background-position: 50%;
   -webkit-background-size: cover;
   background-size: cover;
@@ -779,12 +781,6 @@ a img {
   color: #aaaaaa;
 }
 
-/* 500 */
-@media all and (min-width: 31.25em) {
-  .featured-image {
-    height: 16.5em;
-  }
-}
 /* 600 */
 @media all and (min-width: 37.5em) {
   .excerpt {
@@ -800,18 +796,8 @@ a img {
     padding: 0 6.2%;
   }
 
-  .featured-image {
-    height: 19.5em;
-  }
-
   .loop-pagination {
     padding: 0.75em 1.5em 3em;
-  }
-}
-/* 800 */
-@media all and (min-width: 50em) {
-  .featured-image {
-    height: 22.5em;
   }
 }
 /* 900px */
@@ -841,6 +827,7 @@ a img {
   .excerpt .featured-image {
     width: 50%;
     height: 100%;
+    padding-bottom: 0;
     position: absolute;
     right: 0;
     -webkit-backface-visibility: hidden;
@@ -1030,7 +1017,8 @@ a img {
 /* 900px */
 @media all and (min-width: 56.25em) {
   .entry .featured-image {
-    height: 27em;
+    height: 0;
+    padding-bottom: 50%;
     position: relative;
   }
   .entry .featured-image:after {
@@ -1079,10 +1067,6 @@ a img {
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
-  .entry .featured-image {
-    height: 31.5em;
-  }
-
   .entry-meta,
   .entry-header {
     padding-left: 11.11%;
@@ -1114,10 +1098,6 @@ a img {
 }
 /* 1200px */
 @media all and (min-width: 75em) {
-  .entry .featured-image {
-    height: 34.5em;
-  }
-
   .entry-container {
     padding: 0 22.22%;
   }
@@ -1561,9 +1541,12 @@ li.pingback:after {
   z-index: -1;
   width: 100%;
   left: 0;
+  opacity: 0;
   padding: 1.5em;
   margin: 0;
   background: #111111;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .menu-secondary-items a {
   color: #8c8c8c;
@@ -1579,7 +1562,7 @@ li.pingback:after {
 }
 
 /* when secondary menu is open */
-#main, #title-info, #toggle-navigation {
+#main, #title-info, #toggle-navigation, #site-header {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
 }
@@ -1591,7 +1574,8 @@ li.pingback:after {
   transform: rotate(315deg);
 }
 .secondary-toggle .menu-secondary-items {
-  z-index: 0;
+  z-index: 1;
+  opacity: 1;
 }
 
 /* 600px */

@@ -176,7 +176,8 @@
   .entry {
 
     .featured-image {
-      height: $baseline-height * 18;
+      height: 0;
+      padding-bottom: 50%;
       position: relative;
 
       &:after {
@@ -226,12 +227,6 @@
 /* 1100px */
 @media all and (min-width: 68.75em) {
 
-  .entry {
-
-    .featured-image {
-      height: $baseline-height * 21;
-    }
-  }
   .entry-meta,
   .entry-header {
     padding-left: 11.11%;
@@ -266,13 +261,6 @@
 /* 1200px */
 @media all and (min-width: 75em) {
 
-
-  .entry {
-
-    .featured-image {
-      height: $baseline-height * 23;
-    }
-  }
   .entry-container {
     padding: 0 22.22%;
   }
