@@ -82,6 +82,11 @@
       width: 20%;
       right: 0;
     }
+
+    // move over the social icons if present
+    + ul {
+      margin-right: $baseline-height * 2.5;
+    }
   }
   .search-open {
 

@@ -1,7 +1,7 @@
 .site-header {
   padding: $baseline-height / 2 5.55%;
   color: black;
-  background: $gray-dark;
+  background-color: $gray-dark;
 }
 .title-info {
   display: inline-block;
@@ -44,7 +44,7 @@
 .toggle-navigation {
   position: absolute;
   right: 0;
-  z-index: 39;
+  z-index: 29;
   border: none;
   background: none;
   font-size: 1em;

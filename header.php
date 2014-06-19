@@ -44,9 +44,9 @@
     } ?>
 
 	<div id="title-info" class="title-info">
-		<?php get_template_part('logo')  ?>    
+		<?php get_template_part('logo')  ?>
 	</div>
-	
+
 	<?php get_template_part( 'menu', 'primary' ); // adds the primary menu ?>
 
 </header>

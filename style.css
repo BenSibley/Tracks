@@ -339,7 +339,7 @@ a img {
 .site-header {
   padding: 0.75em 5.55%;
   color: black;
-  background: #222222;
+  background-color: #222222;
 }
 
 .title-info {
@@ -376,7 +376,7 @@ a img {
 .toggle-navigation {
   position: absolute;
   right: 0;
-  z-index: 39;
+  z-index: 29;
   border: none;
   background: none;
   font-size: 1em;
@@ -1569,6 +1569,10 @@ li.pingback:after {
   }
 }
 /* secondary menu styles */
+.menu-secondary {
+  float: left;
+}
+
 .toggle-secondary-navigation {
   background: none;
   border: none;
@@ -1576,7 +1580,7 @@ li.pingback:after {
   opacity: 0.4;
   font-size: 1.313em;
   /* 21px / 16px */
-  line-height: 1.143;
+  line-height: 1.714;
   margin: 0;
   padding: 0;
   outline: none;
@@ -1591,9 +1595,9 @@ li.pingback:after {
   list-style: none;
   position: absolute;
   z-index: -1;
+  visibility: hidden;
   width: 100%;
   left: 0;
-  opacity: 0;
   padding: 1.5em;
   margin: 0;
   background: #111111;
@@ -1612,6 +1616,9 @@ li.pingback:after {
   color: #8c8c8c;
   opacity: 0.9;
 }
+.menu-secondary-items ul {
+  list-style: none;
+}
 
 /* when secondary menu is open */
 #main, #title-info, #toggle-navigation, #site-header {
@@ -1627,7 +1634,7 @@ li.pingback:after {
 }
 .secondary-toggle .menu-secondary-items {
   z-index: 1;
-  opacity: 1;
+  visibility: visible;
 }
 
 /* 600px */
@@ -1635,7 +1642,7 @@ li.pingback:after {
   .menu-secondary-items {
     position: relative;
     z-index: 1;
-    opacity: 1;
+    visibility: visible;
     padding: 0.5em 0;
   }
   .menu-secondary-items:before {
@@ -1788,6 +1795,9 @@ li.pingback:after {
   .site-header .search-form-container input.search-submit {
     width: 20%;
     right: 0;
+  }
+  .site-header .search-form-container + ul {
+    margin-right: 3.75em;
   }
 
   .search-open .site-header .search-form {
