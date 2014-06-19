@@ -36,6 +36,59 @@ function ct_tracks_customize_register_logo( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_tracks_customize_register_logo' );
 
+function ct_tracks_customize_social_icons($wp_customize) {
+
+    /* create custom control for url input so http:// is automatically added */
+    class ct_tracks_url_input_control extends WP_Customize_Control {
+        public $type = 'url';
+
+        public function render_content() {
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <input type="url" <?php $this->link(); ?> value="<?php echo esc_url_raw( $this->value() ); ?>" />
+            </label>
+        <?php
+        }
+    }
+    /* section */
+    $wp_customize->add_section(
+        'ct_tracks_social_icons',
+        array(
+        'title'          => 'Social Media Icons',
+        'priority'       => 35,
+    ) );
+
+    // array of social media site names
+    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam');
+    $priority = 5;
+
+    foreach($social_sites as $social_site) {
+
+        /* setting */
+        $wp_customize->add_setting(
+            "$social_site",
+            array(
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'esc_url_raw'
+        ) );
+
+        /* control */
+        $wp_customize->add_control(
+            new ct_tracks_url_input_control(
+                $wp_customize, $social_site, array(
+                    'label'   => $social_site, // brand name so no internationalization required
+                    'section' => 'ct_tracks_social_icons',
+                    'priority'=> $priority,
+                )
+            )
+        );
+        $priority = $priority + 5;
+    }
+}
+add_action('customize_register', 'ct_tracks_customize_social_icons');
+
 // add search input option to customizer
 function ct_tracks_customize_search_input( $wp_customize ) {
 
