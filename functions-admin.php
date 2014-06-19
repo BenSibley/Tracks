@@ -59,6 +59,8 @@ function ct_tracks_customize_social_icons($wp_customize) {
         'priority'       => 35,
     ) );
 
+
+
     // array of social media site names
     $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam');
     $priority = 5;

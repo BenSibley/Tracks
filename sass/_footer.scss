@@ -23,6 +23,13 @@
     margin: 0 0 $baseline-height * 2;
     opacity: 0.4;
   }
+  .social-media-icons {
+    margin: -$baseline-height / 2 0 $baseline-height;
+
+    a {
+      opacity: 0.4;
+    }
+  }
 }
 .design-credit {
   @extend %uppercase;
@@ -57,6 +64,12 @@
 /* 600px */
 @media all and (min-width: 37.5em){
 
+  .site-footer {
+
+    .social-media-icons {
+      margin: -$baseline-height * 1.5 0 $baseline-height * 2;
+    }
+  }
   .return-top {
     display: block;
     position: fixed;

@@ -5,6 +5,8 @@
   margin: -$baseline-height 0 $baseline-height * 2;
 
   a {
+    @extend %uppercase;
+    @extend %thirteen-pixels;
     color: $gray-medium;
     opacity: 0.4;
 

@@ -196,8 +196,8 @@ jQuery(document).ready(function($){
             var searchFormWidth = $('#site-header').find('.search-form').width();
 
             /* transform on a button makes it disappear in webkit, so using left.
-            *  Move search-form width left minus site padding plus extra 8px space */
-            $('#search-icon').css('left', -searchFormWidth + sitePadding - 8);
+            *  Move search-form width left minus site padding plus extra 7px space */
+            $('#search-icon').css('left', -searchFormWidth + sitePadding - 7);
         }
     }
 });

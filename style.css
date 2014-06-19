@@ -24,7 +24,7 @@ Tracks is distributed under the terms of the GNU GPL
 .entry-categories span,
 .entry-categories a,
 .entry-tags span,
-.entry-tags a, .author-meta .author span, .comments-number h3, .comment-author div, .design-credit, .widget li, .menu-secondary-items a {
+.entry-tags a, .author-meta .author span, .comments-number h3, .comment-author div, .design-credit, .widget li, .menu-footer-items a, .menu-secondary-items a {
   font-size: 0.813em;
   line-height: 1.85;
 }
@@ -36,7 +36,7 @@ Tracks is distributed under the terms of the GNU GPL
 .site-title, .menu-unset > ul a,
 .menu-primary-items a, .excerpt-meta, .entry-meta, .excerpt-title, .entry-title, .more-link, .loop-pagination, .further-reading,
 .entry-categories,
-.entry-tags, .author-meta .author span, .comments-number h3, .comment-author .author-name, .site-footer h3, .design-credit, .widget-title, .widget li, .menu-secondary-items a {
+.entry-tags, .author-meta .author span, .comments-number h3, .comment-author .author-name, .site-footer h3, .design-credit, .widget-title, .widget li, .menu-footer-items a, .menu-secondary-items a {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -1341,6 +1341,12 @@ li.pingback:after {
   margin: 0 0 3em;
   opacity: 0.4;
 }
+.site-footer .social-media-icons {
+  margin: -0.75em 0 1.5em;
+}
+.site-footer .social-media-icons a {
+  opacity: 0.4;
+}
 
 .design-credit {
   background: #111111;
@@ -1368,6 +1374,10 @@ li.pingback:after {
 
 /* 600px */
 @media all and (min-width: 37.5em) {
+  .site-footer .social-media-icons {
+    margin: -2.25em 0 3em;
+  }
+
   .return-top {
     display: block;
     position: fixed;
