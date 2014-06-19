@@ -1543,6 +1543,7 @@ li.pingback:after {
   position: relative;
   left: -6%;
   width: 112%;
+  min-height: 3em;
   background: #111111;
   padding: 0.375em 5.55%;
   margin: -0.75em 0 0;

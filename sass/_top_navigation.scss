@@ -4,6 +4,7 @@
   position: relative;
   left: -6%;
   width: 112%;
+  min-height: $baseline-height * 2;
   background: $gray-very-dark;
   padding: $baseline-height / 4 5.55%;
   margin: -$baseline-height / 2 0 0;

@@ -22,11 +22,21 @@
     <a class="skip-content" href="#main">Skip to content</a>
 <header id="site-header" class="site-header" role="banner">
 
-    <div class="top-navigation">
-        <?php get_template_part( 'menu', 'secondary' ); // adds the secondary menu ?>
+    <?php
 
-        <?php get_search_form(); ?>
-    </div>
+    // if secondary menu is set, or search bar is on, display top-navigation
+    if( (has_nav_menu( 'secondary' )) || (get_theme_mod('search_input_setting') == 'show') ) {
+        echo "<div class='top-navigation'>";
+
+            // add secondary menu if set
+            get_template_part( 'menu', 'secondary' );
+
+            // add search input if set
+            if(get_theme_mod('search_input_setting') == 'show'){
+                get_search_form();
+            }
+        echo "</div>";
+    } ?>
 
 	<div id="title-info" class="title-info">
 		<?php get_template_part('logo')  ?>    
