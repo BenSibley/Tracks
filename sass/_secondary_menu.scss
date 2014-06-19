@@ -88,55 +88,77 @@
   .toggle-secondary-navigation {
     display: none;
   }
-  .menu-secondary {
+  .menu-secondary-items {
 
-    // nesting to overwrite borrowed styles from _header.scss
-    .menu-secondary-items {
+    li {
+      position: relative;
+    }
+    /* Tier 2 */
+    ul {
+      position: absolute;
+      top: -9999px;
+      margin: 0 auto;
+      left: -70%;
+      right: -70%;
+      max-width: 200px;
+      opacity: 0;
+      background: $gray-very-dark;
+      text-align: center;
+      transform: scale(0.95);
+      transition: opacity 0.3s ease, transform 0.3s ease;
 
-      > li {
-        font-size: 1em;
-        line-height: 1.5;
-
-        &:after {
-          content: none;
-        }
+      li,
+      a {
+        display: block;
       }
       a {
-        margin: 0 $baseline-height / 3;
+        padding: 0 $baseline-height;
+        margin: $baseline-height / 2 0;
       }
-      /* Tier 2 */
-      ul {
-        background: $gray-very-dark;
+      li:first-child > a {
+        padding-top: $baseline-height / 2;
+      }
+      li:last-child > a {
+        padding-bottom: $baseline-height / 2;
+      }
+      &:hover {
+        top: $baseline-height;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    a {
 
-        &:hover {
-          top: $baseline-height;
-        }
-      }
-      a:hover,
-      a:active,
-      a:focus {
+      &:hover,
+      &:active,
+      &:focus {
 
         + ul {
           top: $baseline-height;
+          opacity: 1;
+          transform: scale(1);
         }
       }
-      /* Tier 3 */
-      ul {
+    }
+    /* Tier 3 */
+    ul ul {
 
-        ul:hover {
-          top: 0;
-          right: auto;
+      &:hover {
+        left: 100%;
+        right: -100%;
+        top: -$baseline-height / 2;
+      }
+    }
+    ul a {
+
+      &:hover,
+      &:active,
+      &:focus {
+
+        + ul {
           left: 100%;
-        }
-        a:hover,
-        a:active,
-        a:focus {
-
-          + ul {
-            top: 0;
-            right: auto;
-            left: 100%;
-          }
+          right: -100%;
+          top: -$baseline-height / 2;
         }
       }
     }
