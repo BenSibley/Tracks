@@ -1469,7 +1469,11 @@ li.pingback:after {
 /* 900px */
 @media all and (min-width: 56.25em) {
   .search-form-container {
-    margin: 1.5em 0 3em;
+    margin: 1.5em 0 4.5em;
+  }
+
+  .search .excerpt-content {
+    padding-bottom: 1.5em;
   }
 }
 /* Widget Area Styles */
@@ -1738,6 +1742,7 @@ li.pingback:after {
     z-index: 9;
     display: block;
     left: 0;
+    height: 100%;
     float: right;
     border: none;
     background: #111111;

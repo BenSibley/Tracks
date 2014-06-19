@@ -71,6 +71,12 @@
 @media all and (min-width: 56.25em) {
 
   .search-form-container {
-    margin: $baseline-height 0 $baseline-height * 2;
+    margin: $baseline-height 0 $baseline-height * 3;
+  }
+  .search {
+
+    .excerpt-content {
+      padding-bottom: $baseline-height;
+    }
   }
 }
