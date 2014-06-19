@@ -1,13 +1,22 @@
 /* search form styles */
 
-.search-form-container {
+.site-header .search-form-container {
   display: none;
+}
+
+// hide icon in default search form
+.search-form-container {
+
+  button {
+    display: none;
+  }
 }
 
 /* 600px */
 @media all and (min-width: 37.5em){
 
-  .search-form-container {
+
+  .site-header .search-form-container {
     display: block;
     position: absolute;
     right: 5.55%;
@@ -18,10 +27,12 @@
 
     button {
       position: relative;
+      z-index: 9;
+      display: block;
       left: 0;
       float: right;
       border: none;
-      background: none;
+      background: $gray-very-dark;
       font-size: 1em;
       padding: $baseline-height / 2;
       margin: 0 -12px 0 0; // to right align with padding on
@@ -70,29 +81,19 @@
       width: 20%;
       right: 0;
     }
-    /*
-    input.search-field {
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 20em;
-    }
-    input.search-submit {
-      top: 0;
-      left: 100%;
-      height: 100%;
-      width: 6em;
-    }*/
   }
   .search-open {
 
-    .search-form {
-      transform: translateX(-100%);
-    }
-    .search-form-container {
+    .site-header {
 
-      i {
-        opacity: 0.9;
+      .search-form {
+        transform: translateX(-100%);
+      }
+      .search-form-container {
+
+        i {
+          opacity: 0.9;
+        }
       }
     }
   }
