@@ -4,9 +4,9 @@
     <h3>
         <a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('title'); ?></a>
     </h3>
-    <p>
-        <?php bloginfo('description'); ?>
-    </p>
+    <?php if(get_bloginfo('description') && ( get_theme_mod('tagline_display_setting') == 'header-footer' ) || ( get_theme_mod('tagline_display_setting') == 'footer' )){ ?>
+        <p class="site-description"><?php bloginfo('description'); ?></p>
+    <?php } ?>
     <?php
         // add footer menu if set
         get_template_part( 'menu', 'footer' );

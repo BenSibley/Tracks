@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu-primary.php" afterPath="$PROJECT_DIR$/menu-primary.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -40,7 +41,16 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="12" selection-start="1416" selection-end="1614" vertical-scroll-proportion="-20.625" vertical-offset="60" max-vertical-offset="840">
+            <state line="37" column="12" selection-start="1416" selection-end="1614" vertical-scroll-proportion="-19.583334" vertical-offset="85" max-vertical-offset="840">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu-primary.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/menu-primary.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="4" selection-start="242" selection-end="499" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
@@ -49,7 +59,7 @@
       <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="9" selection-start="575" selection-end="575" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="555">
+            <state line="3" column="8" selection-start="79" selection-end="79" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
@@ -108,7 +118,6 @@
         <option value="$PROJECT_DIR$/menu-secondary.php" />
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
         <option value="$PROJECT_DIR$/sass/_post.scss" />
-        <option value="$PROJECT_DIR$/menu-primary.php" />
         <option value="$PROJECT_DIR$/content-page.php" />
         <option value="$PROJECT_DIR$/content-attachment.php" />
         <option value="$PROJECT_DIR$/searchform.php" />
@@ -126,8 +135,9 @@
         <option value="$PROJECT_DIR$/sass/_footer.scss" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
+        <option value="$PROJECT_DIR$/menu-primary.php" />
+        <option value="$PROJECT_DIR$/footer.php" />
       </list>
     </option>
   </component>
@@ -596,7 +606,11 @@
       <created>1403200735225</created>
       <updated>1403200735226</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="added tagline display option">
+      <created>1403201748914</created>
+      <updated>1403201748915</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -638,7 +652,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="removed tappy which wasn't working when loaded asynchronously. Now using 'click' event on menu toggle." />
     <MESSAGE value="mobile nav bug fixes" />
     <MESSAGE value="fixed html validation errors in head and fixed title underline style issue" />
     <MESSAGE value="tagging as v1.09" />
@@ -663,7 +676,8 @@
     <MESSAGE value="added styling so secondary-menu, search, and social icons all play nice together" />
     <MESSAGE value="added social media icons to the footer" />
     <MESSAGE value="added social icon display options" />
-    <option name="LAST_COMMIT_MESSAGE" value="added social icon display options" />
+    <MESSAGE value="added tagline display option" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tagline display option" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -812,11 +826,6 @@
         <state line="185" column="5" selection-start="3203" selection-end="3203" vertical-scroll-proportion="-1.6666666" vertical-offset="2735" max-vertical-offset="3315" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu-primary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="703" selection-end="703" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="12" selection-start="144" selection-end="180" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1785" />
@@ -949,14 +958,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="12" selection-start="1416" selection-end="1614" vertical-scroll-proportion="-20.625" vertical-offset="60" max-vertical-offset="840">
+        <state line="37" column="12" selection-start="1416" selection-end="1614" vertical-scroll-proportion="-19.583334" vertical-offset="85" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu-primary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="242" selection-end="499" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="270">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="9" selection-start="575" selection-end="575" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="555">
+        <state line="3" column="8" selection-start="79" selection-end="79" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="555">
           <folding />
         </state>
       </provider>
