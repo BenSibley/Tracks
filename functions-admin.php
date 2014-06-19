@@ -36,6 +36,45 @@ function ct_tracks_customize_register_logo( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_tracks_customize_register_logo' );
 
+// add search input option to customizer
+function ct_tracks_customize_search_input( $wp_customize ) {
+
+    /* section */
+    $wp_customize->add_section(
+        'ct_tracks_search_input',
+        array(
+            'title'      => esc_html__( 'Search Bar', 'tracks' ),
+            'priority'   => 60,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'search_input_setting',
+        array(
+            'default'           => 'hide',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_return_top_settings' // reusing b/c same values
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'search_input_setting',
+        array(
+            'type' => 'radio',
+            'label' => 'Show search bar at top of site?',
+            'section' => 'ct_tracks_search_input',
+            'setting' => 'search_input_setting',
+            'choices' => array(
+                'show' => 'Show',
+                'hide' => 'Hide'
+            ),
+        )
+    );
+}
+add_action( 'customize_register', 'ct_tracks_customize_search_input' );
+
 function ct_tracks_customizer_additional_options( $wp_customize ) {
 
     /* section */
@@ -43,7 +82,7 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
         'ct_tracks_additional_options',
         array(
             'title'      => esc_html__( 'Additional Options', 'tracks' ),
-            'priority'   => 50,
+            'priority'   => 80,
             'capability' => 'edit_theme_options'
         )
     );
