@@ -58,8 +58,32 @@ function ct_tracks_customize_social_icons($wp_customize) {
         'title'          => 'Social Media Icons',
         'priority'       => 35,
     ) );
-
-
+    /* setting */
+    $wp_customize->add_setting(
+        'social_icons_display_setting',
+        array(
+            'type'              => 'theme_mod',
+            'default'           => 'no',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_social_icons_display'
+        ) );
+    /* control */
+    $wp_customize->add_control(
+        'social_icons_display_setting',
+        array(
+            'type' => 'radio',
+            'label' => 'Where should the icons display?',
+            'priority' => 1,
+            'section' => 'ct_tracks_social_icons',
+            'setting' => 'social_icons_display_setting',
+            'choices' => array(
+                'header-footer' => 'Header & Footer',
+                'header' => 'Header',
+                'footer' => 'Footer',
+                'no' => 'Do not display'
+            ),
+        )
+    );
 
     // array of social media site names
     $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam');
@@ -90,6 +114,22 @@ function ct_tracks_customize_social_icons($wp_customize) {
     }
 }
 add_action('customize_register', 'ct_tracks_customize_social_icons');
+
+/* sanitize radio button input */
+function ct_tracks_sanitize_social_icons_display($input){
+    $valid = array(
+        'header-footer' => 'Header & Footer',
+        'header' => 'Header',
+        'footer' => 'Footer',
+        'no' => 'Do not display'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
 
 // add search input option to customizer
 function ct_tracks_customize_search_input( $wp_customize ) {

@@ -24,11 +24,8 @@
 
     <?php
 
-    // check if any social icons are being used
-    $social_sites = ct_tracks_check_social_icons();
-
     // if secondary menu is set, search bar is on, or any social icons are being used, display top-navigation
-    if( (has_nav_menu( 'secondary' )) || (get_theme_mod('search_input_setting') == 'show') || ( $social_sites != false ) ) {
+    if( (has_nav_menu( 'secondary' )) || (get_theme_mod('search_input_setting') == 'show') || (get_theme_mod('social_icons_display_setting') != 'no') ) {
         echo "<div class='top-navigation'>";
 
             // add secondary menu if set
@@ -38,8 +35,9 @@
             if(get_theme_mod('search_input_setting') == 'show'){
                 get_search_form();
             }
-            ct_tracks_social_icons_output($social_sites);
-
+            if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'header')){
+                ct_tracks_social_icons_output();
+            }
         echo "</div>";
     } ?>
 

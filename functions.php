@@ -436,8 +436,8 @@ function ct_tracks_image_zoom_settings_output(){
 }
 add_action('wp_enqueue_scripts','ct_tracks_image_zoom_settings_output');
 
-// check if any social icon inputs are being used
-function ct_tracks_check_social_icons(){
+// outputs linked social media icons from customizer
+function ct_tracks_social_icons_output() {
 
     // array of social media site names
     $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam');
@@ -448,16 +448,6 @@ function ct_tracks_check_social_icons(){
             $active_sites[] = $social_site;
         }
     }
-    // check if any active
-    if(!empty($active_sites)) {
-        return $active_sites;
-    } else {
-        return false;
-    }
-}
-
-// outputs linked social media icons from customizer
-function ct_tracks_social_icons_output($active_sites) {
 
     // for each active social site, add it as a list item
     if(!empty($active_sites)) {

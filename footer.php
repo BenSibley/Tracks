@@ -13,7 +13,9 @@
     ?>
     <?php
         // add social icons if set
-        ct_tracks_social_icons_output(ct_tracks_check_social_icons());
+        if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'footer')){
+            ct_tracks_social_icons_output();
+        }
     ?>
     <div class="design-credit">
         <p><a href="http://www.competethemes.com/tracks/">Tracks WordPress Theme</a> by Compete Themes</p>
