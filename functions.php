@@ -436,5 +436,46 @@ function ct_tracks_image_zoom_settings_output(){
 }
 add_action('wp_enqueue_scripts','ct_tracks_image_zoom_settings_output');
 
+// check if any social icon inputs are being used
+function ct_tracks_check_social_icons(){
+
+    // array of social media site names
+    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam');
+
+    // any inputs that aren't empty are stored in $active_sites array
+    foreach($social_sites as $social_site) {
+        if( strlen( get_theme_mod( $social_site ) ) > 0 ) {
+            $active_sites[] = $social_site;
+        }
+    }
+    // check if any active
+    if(!empty($active_sites)) {
+        return $active_sites;
+    } else {
+        return false;
+    }
+}
+
+// outputs linked social media icons from customizer
+function ct_tracks_social_icons_output($active_sites) {
+
+    // for each active social site, add it as a list item
+    if(!empty($active_sites)) {
+        echo "<ul class='social-media-icons'>";
+        foreach ($active_sites as $active_site) {?>
+            <li>
+            <a href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
+                <?php if( $active_site ==  "flickr" || $active_site ==  "dribbble" || $active_site ==  "instagram") { ?>
+                    <i class="fa fa-<?php echo $active_site; ?>"></i> <?php
+                } else { ?>
+                <i class="fa fa-<?php echo $active_site; ?>-square"></i><?php
+                } ?>
+            </a>
+            </li><?php
+        }
+        echo "</ul>";
+    }
+}
+
 
 ?>
