@@ -170,6 +170,62 @@ function ct_tracks_customize_search_input( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_tracks_customize_search_input' );
 
+// add tagline display options to existing 'site title & tagline' section
+function ct_tracks_customize_tagline_display( $wp_customize ) {
+
+    /* section */
+    $wp_customize->add_section(
+        'ct_tracks_tagline_display',
+        array(
+            'title'      => esc_html__( 'Tagline Display', 'tracks' ),
+            'priority'   => 25,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'tagline_display_setting',
+        array(
+            'default'           => 'header-footer',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'tagline_display_setting',
+        array(
+            'type' => 'radio',
+            'label' => 'Where should the tagline display?',
+            'default' => 'header-footer',
+            'section' => 'ct_tracks_tagline_display',
+            'setting' => 'tagline_display_setting',
+            'choices' => array(
+                'header-footer' => 'Header & Footer',
+                'header' => 'Header',
+                'footer' => 'Footer'
+            ),
+        )
+    );
+}
+add_action( 'customize_register', 'ct_tracks_customize_tagline_display' );
+
+/* sanitize radio button input */
+function ct_tracks_sanitize_tagline_display($input){
+    $valid = array(
+        'header-footer' => 'Header & Footer',
+        'header' => 'Header',
+        'footer' => 'Footer'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
 function ct_tracks_customizer_additional_options( $wp_customize ) {
 
     /* section */

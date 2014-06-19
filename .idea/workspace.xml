@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -49,19 +46,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="7" selection-start="906" selection-end="906" vertical-scroll-proportion="0.615894" vertical-offset="0" max-vertical-offset="755">
+            <state line="17" column="9" selection-start="575" selection-end="575" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions-admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="14" selection-start="2095" selection-end="2095" vertical-scroll-proportion="-10.625" vertical-offset="825" max-vertical-offset="4995">
+            <state line="184" column="17" selection-start="5786" selection-end="5786" vertical-scroll-proportion="0.3245033" vertical-offset="2515" max-vertical-offset="5835">
               <folding />
             </state>
           </provider>
@@ -127,10 +124,10 @@
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/sass/_footer_menu.scss" />
         <option value="$PROJECT_DIR$/sass/_footer.scss" />
-        <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/functions-admin.php" />
       </list>
     </option>
   </component>
@@ -595,7 +592,11 @@
       <created>1403199668952</created>
       <updated>1403199668953</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="added social icon display options">
+      <created>1403200735225</created>
+      <updated>1403200735226</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -637,7 +638,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="updated tags" />
     <MESSAGE value="removed tappy which wasn't working when loaded asynchronously. Now using 'click' event on menu toggle." />
     <MESSAGE value="mobile nav bug fixes" />
     <MESSAGE value="fixed html validation errors in head and fixed title underline style issue" />
@@ -662,7 +662,8 @@
     <MESSAGE value="add social media icon styling and updated to font awesome v4.1.0" />
     <MESSAGE value="added styling so secondary-menu, search, and social icons all play nice together" />
     <MESSAGE value="added social media icons to the footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added social media icons to the footer" />
+    <MESSAGE value="added social icon display options" />
+    <option name="LAST_COMMIT_MESSAGE" value="added social icon display options" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -946,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="14" selection-start="2095" selection-end="2095" vertical-scroll-proportion="-10.625" vertical-offset="825" max-vertical-offset="4995">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="12" selection-start="1416" selection-end="1614" vertical-scroll-proportion="-20.625" vertical-offset="60" max-vertical-offset="840">
@@ -962,7 +956,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="7" selection-start="906" selection-end="906" vertical-scroll-proportion="0.615894" vertical-offset="0" max-vertical-offset="755">
+        <state line="17" column="9" selection-start="575" selection-end="575" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="17" selection-start="5786" selection-end="5786" vertical-scroll-proportion="0.3245033" vertical-offset="2515" max-vertical-offset="5835">
           <folding />
         </state>
       </provider>
