@@ -12,7 +12,7 @@
 
   // reposition primary toggle button if top navigation is present
   ~ button {
-    top: $baseline-height;
+    top: 2.5em;
   }
 }
 
@@ -24,11 +24,6 @@
     left: -6.2%;
     width: 112.4%;
     z-index: 39;
-
-    // reposition primary toggle button if secondary menu is present
-    ~ button {
-      top: 2.5em;
-    }
   }
 }
 

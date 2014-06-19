@@ -17,6 +17,11 @@ $gray-dark-medium: #4d4d4d;
 
 $primary-gray: $gray-dark-medium;
 
+// 21px font
+%twenty-one-pixels {
+  font-size: 1.313em; /* 21px / 16px */
+  line-height: 1.143;
+}
 // 26px font
 %twenty-six-pixels {
   font-size: 1.625em;

@@ -1,0 +1,35 @@
+/* social icon styling */
+
+.social-media-icons {
+  list-style: none;
+  margin: 0;
+
+  li,
+  a {
+    display: inline-block;
+  }
+  a {
+    font-size: 1.313em; /* 21px / 16px */
+    line-height: 1.714; // needs 36px to fit perfectly
+    margin: 0 $baseline-height / 4;
+    color: $gray-medium;
+    opacity: 0.6;
+
+    &:link,
+    &:visited {
+      color: $gray-medium;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $gray-medium;
+      opacity: 0.9;
+    }
+  }
+}
+
+// specific to header social icons
+.site-header .social-media-icons {
+  float: right;
+  height:  100%;
+}
