@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/changelog.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -55,10 +55,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_header.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_header.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="13" selection-start="480" selection-end="480" vertical-scroll-proportion="0.35684648" vertical-offset="162" max-vertical-offset="4770">
+            <state line="48" column="19" selection-start="755" selection-end="755" vertical-scroll-proportion="-23.25" vertical-offset="162" max-vertical-offset="4770">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="6" selection-start="785" selection-end="785" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="555">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="13" selection-start="486" selection-end="486" vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="700">
               <folding />
             </state>
           </provider>
@@ -97,7 +115,6 @@
         <option value="$PROJECT_DIR$/custom-editor-style.css" />
         <option value="$PROJECT_DIR$/sass/_custom_editor_styles.scss" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/library/functions/deprecated.php" />
         <option value="$PROJECT_DIR$/content.php" />
         <option value="$PROJECT_DIR$/library/hybrid.php" />
@@ -137,6 +154,7 @@
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/sass/_header.scss" />
+        <option value="$PROJECT_DIR$/search.php" />
       </list>
     </option>
   </component>
@@ -582,7 +600,11 @@
       <created>1403544859881</created>
       <updated>1403544859882</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="deleted changelog">
+      <created>1403544888291</created>
+      <updated>1403544888292</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -624,7 +646,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="updated changelog. taggings as v1.10" />
     <MESSAGE value="registered secondary and footer menus" />
     <MESSAGE value="added additional menu template parts and added footer menu call to footer.php" />
     <MESSAGE value="styled footer menu" />
@@ -649,7 +670,8 @@
     <MESSAGE value="added conditional statements for blog tagline output" />
     <MESSAGE value="updates for cross-browser compatability" />
     <MESSAGE value="style update for ie9" />
-    <option name="LAST_COMMIT_MESSAGE" value="style update for ie9" />
+    <MESSAGE value="deleted changelog" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted changelog" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -678,11 +700,6 @@
     <entry file="file://$PROJECT_DIR$/library/functions/deprecated.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="811" column="15" selection-start="20404" selection-end="20404" vertical-scroll-proportion="0.104166664" vertical-offset="11880" max-vertical-offset="12765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="14" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="675" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -887,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="6" selection-start="785" selection-end="785" vertical-scroll-proportion="0.373444" vertical-offset="0" max-vertical-offset="723">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="10" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1455">
@@ -926,7 +936,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="480" selection-end="480" vertical-scroll-proportion="0.35684648" vertical-offset="162" max-vertical-offset="4770">
+        <state line="48" column="19" selection-start="755" selection-end="755" vertical-scroll-proportion="-23.25" vertical-offset="162" max-vertical-offset="4770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="6" selection-start="785" selection-end="785" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="486" selection-end="486" vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="700">
           <folding />
         </state>
       </provider>

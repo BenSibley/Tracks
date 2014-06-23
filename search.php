@@ -10,7 +10,7 @@
             if($total_results) {
                 printf(__('%d search results for','tracks'),$total_results);
             } else {
-                _e("No search results for ");
+                _e("No search results for ", 'tracks');
             }
             ?>
             <span>"<?php echo $s ?>"</span>
