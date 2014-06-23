@@ -17,6 +17,16 @@ function ct_tracks_load_javascript_files() {
 
 add_action('wp_enqueue_scripts', 'ct_tracks_load_javascript_files' );
 
+/* enqueue styles used on theme options page */
+function ct_ignite_enqueue_admin_styles($hook){
+
+    // enqueue dashboard page styles
+    if ( 'appearance_page_tracks-options' == $hook) {
+        wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
+    }
+}
+add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
+
 /* Load the core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 new Hybrid();

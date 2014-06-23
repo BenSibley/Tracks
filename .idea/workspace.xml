@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theme-options.php" afterPath="$PROJECT_DIR$/theme-options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style-admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -29,17 +30,19 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="385" column="36" selection-start="14664" selection-end="14677" vertical-scroll-proportion="1.66" vertical-offset="5858" max-vertical-offset="7470">
+            <state line="23" column="32" selection-start="1126" selection-end="1126" vertical-scroll-proportion="-6.9" vertical-offset="0" max-vertical-offset="7620">
               <folding>
-                <marker date="1403559139000" expanded="true" signature="6290:7277" placeholder="..." />
-                <marker date="1403559139000" expanded="true" signature="6360:7267" placeholder="..." />
-                <marker date="1403559139000" expanded="true" signature="6401:6930" placeholder="..." />
-                <marker date="1403559139000" expanded="true" signature="6482:6907" placeholder="..." />
-                <marker date="1403559139000" expanded="true" signature="6972:7248" placeholder="..." />
-                <marker date="1403559139000" expanded="true" signature="8790:9021" placeholder="..." />
-                <marker date="1403559139000" expanded="true" signature="17750:18494" placeholder="..." />
-                <marker date="1403559139000" expanded="true" signature="17827:18476" placeholder="..." />
+                <marker date="1403561135000" expanded="true" signature="9151:9382" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style-admin.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style-admin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme-options.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="theme-options.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theme-options.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="38" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.5394191" vertical-offset="15" max-vertical-offset="885">
+            <state line="27" column="38" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-15.625" vertical-offset="30" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -82,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/library/functions/sidebars.php" />
         <option value="$PROJECT_DIR$/js/html5shiv/html5shiv-printshiv.js" />
         <option value="$PROJECT_DIR$/js/html5shiv/html5shiv.js" />
         <option value="$PROJECT_DIR$/js/fitvids.min.js" />
@@ -131,8 +133,9 @@
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/theme-options.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/style-admin.css" />
       </list>
     </option>
   </component>
@@ -616,7 +619,11 @@
       <created>1403559208826</created>
       <updated>1403559208826</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="added tab functionality and 'general' page content">
+      <created>1403561073281</created>
+      <updated>1403561073281</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -658,7 +665,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="switch featured-image to padding-bottom % based" />
     <MESSAGE value="added description at wide screen sizes and updated secondary nav styling" />
     <MESSAGE value="added featured-image display to pages" />
     <MESSAGE value="added search bar to top-navigation" />
@@ -683,19 +689,13 @@
     <MESSAGE value="added basic theme options page." />
     <MESSAGE value="moved theme options page to theme-options.php&#10;" />
     <MESSAGE value="required theme-options.php and added tabs (only visually)" />
-    <option name="LAST_COMMIT_MESSAGE" value="required theme-options.php and added tabs (only visually)" />
+    <MESSAGE value="added tab functionality and 'general' page content" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tab functionality and 'general' page content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_ie9.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="1" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
@@ -988,25 +988,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/theme-options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="38" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-15.625" vertical-offset="30" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="385" column="36" selection-start="14664" selection-end="14677" vertical-scroll-proportion="1.66" vertical-offset="5858" max-vertical-offset="7470">
+        <state line="23" column="32" selection-start="1126" selection-end="1126" vertical-scroll-proportion="-6.9" vertical-offset="0" max-vertical-offset="7620">
           <folding>
-            <marker date="1403559139000" expanded="true" signature="6290:7277" placeholder="..." />
-            <marker date="1403559139000" expanded="true" signature="6360:7267" placeholder="..." />
-            <marker date="1403559139000" expanded="true" signature="6401:6930" placeholder="..." />
-            <marker date="1403559139000" expanded="true" signature="6482:6907" placeholder="..." />
-            <marker date="1403559139000" expanded="true" signature="6972:7248" placeholder="..." />
-            <marker date="1403559139000" expanded="true" signature="8790:9021" placeholder="..." />
-            <marker date="1403559139000" expanded="true" signature="17750:18494" placeholder="..." />
-            <marker date="1403559139000" expanded="true" signature="17827:18476" placeholder="..." />
+            <marker date="1403561135000" expanded="true" signature="9151:9382" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theme-options.php">
+    <entry file="file://$PROJECT_DIR$/style-admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="38" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.5394191" vertical-offset="15" max-vertical-offset="885">
+        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
           <folding />
         </state>
       </provider>
