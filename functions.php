@@ -59,6 +59,9 @@ function ct_tracks_theme_setup() {
     
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
+
+    // adds theme options page
+    require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
 }
 
 function ct_tracks_register_widget_areas(){

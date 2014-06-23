@@ -11,6 +11,12 @@ function ct_tracks_options_content(){ ?>
 
 <div id="tracks-dashboard-wrap" class="wrap">
     <h2>Tracks Dashboard</h2>
+    <h2 class="nav-tab-wrapper">
+        <a href="#" class="nav-tab">General</a>
+        <a href="#" class="nav-tab">Support</a>
+        <a href="#" class="nav-tab">Premium Layouts</a>
+        <a href="#" class="nav-tab">Licenses</a>
+    </h2>
     <p>Thanks for downloading Tracks!</p>
     <hr />
     <div>
@@ -28,4 +34,4 @@ function ct_tracks_options_content(){ ?>
         <p>I (Ben) visit the support forum everyday, so any questions you have will be answered there.</p>
     </div>
 </div>
-<?php } ?>
+<?php }
