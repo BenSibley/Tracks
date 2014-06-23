@@ -8,7 +8,7 @@
   text-align: center;
   background: white;
   overflow: hidden;
-  @include backface-visibility(hidden);
+  backface-visibility: hidden;
 }
 .featured-image {
   position: relative;
@@ -20,6 +20,7 @@
   transition: transform 0.3s ease;
 }
 .featured-image-link {
+  backface-visibility: hidden;
 
   &:hover,
   &:active,
@@ -27,6 +28,7 @@
 
     .featured-image {
       transform: scale(1.05);
+      -moz-transform: scale(1.05) rotate(0.02deg);
     }
   }
 }

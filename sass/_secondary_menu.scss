@@ -23,7 +23,7 @@
   list-style: none;
   position: absolute;
   z-index: -1;
-  visibility: hidden;
+  opacity: 0;
   width: 100%;
   left: 0;
   padding: $baseline-height;
@@ -61,13 +61,16 @@
 }
 .secondary-toggle {
 
+  .site-header {
+    background: transparent;
+  }
   .toggle-secondary-navigation {
     opacity: 0.9;
     transform: rotate(315deg)
   }
   .menu-secondary-items {
     z-index: 1;
-    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -77,7 +80,7 @@
   .menu-secondary-items {
     position: relative;
     z-index: 1;
-    visibility: visible;
+    opacity: 1;
     padding: $baseline-height / 3 0;
 
     &:before {

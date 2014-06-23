@@ -2,7 +2,7 @@
 
 .menu-footer-items {
   list-style: none;
-  margin: -$baseline-height 0 $baseline-height * 2;
+  margin: $baseline-height / 2 0 $baseline-height;
 
   a {
     @extend %uppercase;
@@ -27,7 +27,6 @@
 @media all and (min-width: 43.75em){
 
   .menu-footer-items {
-    margin-bottom: $baseline-height * 3;
 
     li,
     a {

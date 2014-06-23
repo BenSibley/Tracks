@@ -86,7 +86,7 @@ function ct_tracks_customize_social_icons($wp_customize) {
     );
 
     // array of social media site names
-    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam');
+    $social_sites = ct_tracks_social_site_list();
     $priority = 5;
 
     foreach($social_sites as $social_site) {
@@ -315,31 +315,44 @@ function ct_tracks_sanitize_image_zoom_settings($input){
     }
 }
 
+function ct_tracks_social_array(){
 
-function ct_tracks_create_social_array() {
-
-	$social_sites = array(
-		'twitter' => 'twitter_profile',
-		'facebook' => 'facebook_profile',
-		'googleplus' => 'googleplus_profile',
-		'pinterest' => 'pinterest_profile',
-		'linkedin' => 'linkedin_profile',
-		'youtube' => 'youtube_profile',
-		'vimeo' => 'vimeo_profile',
-		'tumblr' => 'tumblr_profile',
-		'instagram' => 'instagram_profile',
-		'flickr' => 'flickr_profile',
-		'dribbble' => 'dribbble_profile',
-        'RSS' => 'rss_profile'
-	);
-	return $social_sites;
+    $social_sites = array(
+        'twitter' => 'twitter_profile',
+        'facebook' => 'facebook_profile',
+        'googleplus' => 'googleplus_profile',
+        'pinterest' => 'pinterest_profile',
+        'linkedin' => 'linkedin_profile',
+        'youtube' => 'youtube_profile',
+        'vimeo' => 'vimeo_profile',
+        'tumblr' => 'tumblr_profile',
+        'instagram' => 'instagram_profile',
+        'flickr' => 'flickr_profile',
+        'dribbble' => 'dribbble_profile',
+        'rss' => 'rss_profile',
+        'reddit' => 'reddit_profile',
+        'soundcloud' => 'soundcloud_profile',
+        'spotify' => 'spotify_profile',
+        'vine' => 'vine_profile',
+        'yahoo' => 'yahoo_profile',
+        'behance' => 'behance_profile',
+        'codepen' => 'codepen_profile',
+        'delicious' => 'delicious_profile',
+        'stumbleupon' => 'stumbleupon_profile',
+        'deviantart' => 'deviantart_profile',
+        'digg' => 'digg_profile',
+        'git' => 'git_profile',
+        'hacker-news' => 'hacker-news_profile',
+        'steam' => 'steam_profile'
+    );
+    return $social_sites;
 }
 
 // add the social profile boxes to the user screen.  NEEDS sanitize callback?
 function ct_tracks_add_social_profile_settings($user) {
-	
-	$social_sites = ct_tracks_create_social_array();
-	
+
+    $social_sites = ct_tracks_social_array();
+
 	?>	
     <table class="form-table">
         <tr>
@@ -369,7 +382,7 @@ function ct_tracks_save_social_profiles($user_id) {
 
     if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
 
-	$social_sites = ct_tracks_create_social_array();
+	$social_sites = ct_tracks_social_array();
    	
    	foreach ($social_sites as $key => $social_site) {
 		if( isset( $_POST["$key-profile"] ) ){
