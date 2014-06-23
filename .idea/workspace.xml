@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theme-options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theme-options.php" afterPath="$PROJECT_DIR$/theme-options.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -27,11 +26,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="385" column="36" selection-start="14664" selection-end="14677" vertical-scroll-proportion="1.66" vertical-offset="5858" max-vertical-offset="7470">
+              <folding>
+                <marker date="1403559139000" expanded="true" signature="6290:7277" placeholder="..." />
+                <marker date="1403559139000" expanded="true" signature="6360:7267" placeholder="..." />
+                <marker date="1403559139000" expanded="true" signature="6401:6930" placeholder="..." />
+                <marker date="1403559139000" expanded="true" signature="6482:6907" placeholder="..." />
+                <marker date="1403559139000" expanded="true" signature="6972:7248" placeholder="..." />
+                <marker date="1403559139000" expanded="true" signature="8790:9021" placeholder="..." />
+                <marker date="1403559139000" expanded="true" signature="17750:18494" placeholder="..." />
+                <marker date="1403559139000" expanded="true" signature="17827:18476" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="394" column="75" selection-start="11972" selection-end="11972" vertical-scroll-proportion="-27.708334" vertical-offset="5245" max-vertical-offset="6000">
-              <folding />
+              <folding>
+                <marker date="1403557850000" expanded="true" signature="1192:1428" placeholder="..." />
+                <marker date="1403557850000" expanded="true" signature="10725:11288" placeholder="..." />
+                <marker date="1403557850000" expanded="true" signature="10738:10798" placeholder="..." />
+                <marker date="1403557850000" expanded="true" signature="10901:11255" placeholder="..." />
+                <marker date="1403557850000" expanded="true" signature="10911:11015" placeholder="..." />
+                <marker date="1403557850000" expanded="true" signature="11025:11234" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,7 +63,7 @@
       <file leaf-file-name="theme-options.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theme-options.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.020746889" vertical-offset="0" max-vertical-offset="723">
+            <state line="27" column="38" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.5394191" vertical-offset="15" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -99,7 +123,6 @@
         <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/sass/_blog.scss" />
         <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/js/modernizer.js" />
         <option value="$PROJECT_DIR$/js/functions.js" />
@@ -108,6 +131,7 @@
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/theme-options.php" />
       </list>
     </option>
@@ -584,7 +608,15 @@
       <created>1403557478419</created>
       <updated>1403557478420</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="moved theme options page to theme-options.php&#10;">
+      <created>1403557894502</created>
+      <updated>1403557894502</updated>
+    </task>
+    <task id="LOCAL-00088" summary="required theme-options.php and added tabs (only visually)">
+      <created>1403559208826</created>
+      <updated>1403559208826</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -626,8 +658,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="styled secondary menu and made huge improvements to primary nav dropdown" />
-    <MESSAGE value="additional menu style updates" />
     <MESSAGE value="switch featured-image to padding-bottom % based" />
     <MESSAGE value="added description at wide screen sizes and updated secondary nav styling" />
     <MESSAGE value="added featured-image display to pages" />
@@ -651,7 +681,9 @@
     <MESSAGE value="added missing text domain" />
     <MESSAGE value="tagging as v1.11" />
     <MESSAGE value="added basic theme options page." />
-    <option name="LAST_COMMIT_MESSAGE" value="added basic theme options page." />
+    <MESSAGE value="moved theme options page to theme-options.php&#10;" />
+    <MESSAGE value="required theme-options.php and added tabs (only visually)" />
+    <option name="LAST_COMMIT_MESSAGE" value="required theme-options.php and added tabs (only visually)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -676,11 +708,6 @@
         <state line="37" column="33" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2130">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/custom-editor-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="454" selection-end="454" vertical-scroll-proportion="0.39806998" vertical-offset="0" max-vertical-offset="829" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/post.php">
@@ -867,7 +894,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1091" column="0" selection-start="44071" selection-end="44071" vertical-scroll-proportion="0.50276244" vertical-offset="16001" max-vertical-offset="21825">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -926,13 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="7425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_ie9.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="1" selection-start="150" selection-end="150" vertical-scroll-proportion="0.22058824" vertical-offset="0" max-vertical-offset="884">
@@ -950,13 +970,43 @@
     <entry file="file://$PROJECT_DIR$/functions-admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="394" column="75" selection-start="11972" selection-end="11972" vertical-scroll-proportion="-27.708334" vertical-offset="5245" max-vertical-offset="6000">
+          <folding>
+            <marker date="1403557850000" expanded="true" signature="1192:1428" placeholder="..." />
+            <marker date="1403557850000" expanded="true" signature="10725:11288" placeholder="..." />
+            <marker date="1403557850000" expanded="true" signature="10738:10798" placeholder="..." />
+            <marker date="1403557850000" expanded="true" signature="10901:11255" placeholder="..." />
+            <marker date="1403557850000" expanded="true" signature="10911:11015" placeholder="..." />
+            <marker date="1403557850000" expanded="true" signature="11025:11234" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom-editor-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="1" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="385" column="36" selection-start="14664" selection-end="14677" vertical-scroll-proportion="1.66" vertical-offset="5858" max-vertical-offset="7470">
+          <folding>
+            <marker date="1403559139000" expanded="true" signature="6290:7277" placeholder="..." />
+            <marker date="1403559139000" expanded="true" signature="6360:7267" placeholder="..." />
+            <marker date="1403559139000" expanded="true" signature="6401:6930" placeholder="..." />
+            <marker date="1403559139000" expanded="true" signature="6482:6907" placeholder="..." />
+            <marker date="1403559139000" expanded="true" signature="6972:7248" placeholder="..." />
+            <marker date="1403559139000" expanded="true" signature="8790:9021" placeholder="..." />
+            <marker date="1403559139000" expanded="true" signature="17750:18494" placeholder="..." />
+            <marker date="1403559139000" expanded="true" signature="17827:18476" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theme-options.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.020746889" vertical-offset="0" max-vertical-offset="723">
+        <state line="27" column="38" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.5394191" vertical-offset="15" max-vertical-offset="885">
           <folding />
         </state>
       </provider>
