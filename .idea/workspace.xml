@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_info.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_info.scss" afterPath="$PROJECT_DIR$/sass/_info.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -73,10 +75,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="486" selection-end="486" vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="700">
+            <state line="18" column="0" selection-start="523" selection-end="523" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_info.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/_info.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="725" selection-end="725" vertical-scroll-proportion="0.27857143" vertical-offset="0" max-vertical-offset="700">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_ie9.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sass/_ie9.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="1" selection-start="150" selection-end="150" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
@@ -127,7 +147,6 @@
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/sass/_ie9.scss" />
         <option value="$PROJECT_DIR$/changelog.txt" />
-        <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/menu-footer.php" />
         <option value="$PROJECT_DIR$/menu-secondary.php" />
         <option value="$PROJECT_DIR$/sass/_post.scss" />
@@ -155,6 +174,7 @@
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/sass/_header.scss" />
         <option value="$PROJECT_DIR$/search.php" />
+        <option value="$PROJECT_DIR$/sass/_info.scss" />
       </list>
     </option>
   </component>
@@ -207,6 +227,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tracks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compete core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tracks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -604,7 +638,11 @@
       <created>1403544888291</created>
       <updated>1403544888292</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="added missing text domain">
+      <created>1403547916430</created>
+      <updated>1403547916430</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -646,7 +684,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="registered secondary and footer menus" />
     <MESSAGE value="added additional menu template parts and added footer menu call to footer.php" />
     <MESSAGE value="styled footer menu" />
     <MESSAGE value="styled secondary menu and made huge improvements to primary nav dropdown" />
@@ -671,7 +708,8 @@
     <MESSAGE value="updates for cross-browser compatability" />
     <MESSAGE value="style update for ie9" />
     <MESSAGE value="deleted changelog" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted changelog" />
+    <MESSAGE value="added missing text domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="added missing text domain" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -758,16 +796,6 @@
     <entry file="file://$PROJECT_DIR$/sass/_widget_areas.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="1" selection-start="248" selection-end="248" vertical-scroll-proportion="0.15625" vertical-offset="0" max-vertical-offset="768" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="0.40966386" vertical-offset="0" max-vertical-offset="476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_ie9.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="1" selection-start="150" selection-end="150" vertical-scroll-proportion="0.398773" vertical-offset="0" max-vertical-offset="489" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/menu-footer.php">
@@ -950,7 +978,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="486" selection-end="486" vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="700">
+        <state line="18" column="0" selection-start="523" selection-end="523" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_ie9.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="1" selection-start="150" selection-end="150" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_info.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="725" selection-end="725" vertical-scroll-proportion="0.27857143" vertical-offset="0" max-vertical-offset="700">
           <folding />
         </state>
       </provider>
