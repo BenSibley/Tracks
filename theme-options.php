@@ -23,31 +23,37 @@ function ct_tracks_options_content(){ ?>
     </h2>
     <?php
     if($active_tab == 'general'){ ?>
-        <div class="general-content">
+        <div class="content-general content">
             <p>Thanks for downloading Tracks!</p>
             <h3>Quick-start Guide</h3>
             <p>Here are a few steps to make your site pixel-perfect with Tracks:</p>
             <ul>
-                <li>Visit the menus page to setup your menus (<a href="customize.php">visit now</a>)</li>
-                <li>Visit the theme customizer to add your logo, social icons, and more (<a href="customize.php">visit now</a>)</li>
-                <li>Visit the widgets page to add widgets after your posts and/or pages (<a href="customize.php">visit now</a>)</li>
-                <li>Review Tracks on wordpress.org (<a href="customize.php">review now</a>)</li>
+                <li>Setup your menus (<a href="nav-menus.php">visit Menus page</a>)</li>
+                <li>Add your logo and social icons (<a href="customize.php">visit Theme Customizer</a>)</li>
+                <li>Add widgets after your posts and/or pages (<a href="widgets.php">visit Widgets page</a>)</li>
+                <li>Review Tracks on wordpress.org (<a href="http://wordpress.org/support/view/theme-reviews/tracks">review now</a>)</li>
             </ul>
             <p>If you want more help getting your site setup, we have <a target="_blank" href="http://www.competethemes.com/documentation/tracks-knowledgebase/">detailed tutorials</a> in our knowledgebase.</p>
-
         </div>
     <?php }
     elseif($active_tab == 'support'){ ?>
-        <div class="support">
-        <h3>Support</h3>
-        <ol>
-            <li><a target="_blank" href="http://www.competethemes.com/documentation/tracks-knowledgebase/?utm_source=WordPress%20Dashboard&utm_medium=User%20Admin&utm_content=Tracks&utm_campaign=Admin%20Support">Visit the knowledgebase</a> for self-help.</li>
-            <li><a target="_blank" href="http://wordpress.org/support/theme/tracks">Visit the support forum</a> for community support.</li>
-        </ol>
-        <p>I (Ben) visit the support forum everyday, so any questions you have will be answered there.</p>
-    </div>
+        <div class="content-support content">
+            <p>There are a few ways to get support for Tracks: </p>
+            <ul>
+                <li>Find an answer on the knowledgebase (<a target="_blank" href="http://www.competethemes.com/documentation/tracks-knowledgebase">visit the Tracks Knowledgebase</a>)</li>
+                <li>Ask a question on the support forum (<a target="_blank" href="http://wordpress.org/support/theme/tracks">visit support forum</a>)</li>
+            </ul>
+        </div>
+    <?php }
+    elseif($active_tab == 'premium-layouts'){ ?>
+        <div class="content-premium-layouts content">
+            <p>premium layouts</p>
+        </div>
+    <?php }
+    else { ?>
+        <div class="content-licenses content">
+            <p>licenses</p>
+        </div>
     <?php } ?>
-
-
 </div>
 <?php }

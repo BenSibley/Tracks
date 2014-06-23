@@ -1,1 +1,9 @@
 /* styles for theme options page */
+
+.content {
+    margin-top: 36px;
+}
+.content ul {
+    list-style: disc;
+    margin-left: 36px;
+}
