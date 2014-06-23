@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style-admin.css" afterPath="$PROJECT_DIR$/style-admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theme-options.php" afterPath="$PROJECT_DIR$/theme-options.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -27,12 +26,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="32" selection-start="1126" selection-end="1126" vertical-scroll-proportion="-6.9" vertical-offset="0" max-vertical-offset="7620">
+            <state line="322" column="13" selection-start="12432" selection-end="12432" vertical-scroll-proportion="0.5810617" vertical-offset="4425" max-vertical-offset="7365">
               <folding>
-                <marker date="1403561135000" expanded="true" signature="9151:9382" placeholder="..." />
+                <marker date="1403563504000" expanded="true" signature="9151:9382" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -63,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme-options.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="theme-options.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theme-options.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="34" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.4813278" vertical-offset="252" max-vertical-offset="975">
+            <state line="35" column="22" selection-start="1934" selection-end="1934" vertical-scroll-proportion="-11.375" vertical-offset="252" max-vertical-offset="975">
               <folding />
             </state>
           </provider>
@@ -133,17 +132,17 @@
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/style-admin.css" />
         <option value="$PROJECT_DIR$/theme-options.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="541" />
+    <option name="x" value="481" />
     <option name="y" value="-1051" />
-    <option name="width" value="1017" />
+    <option name="width" value="1077" />
     <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -627,11 +626,15 @@
       <created>1403561167055</created>
       <updated>1403561167055</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="added content to support tab and added empty final two tabs">
+      <created>1403561979925</created>
+      <updated>1403561979925</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="541" y="-1051" width="1017" height="1026" extended-state="0" />
+    <frame x="481" y="-1051" width="1077" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -640,7 +643,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3025641" sideWeight="0.7829949" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28502417" sideWeight="0.7829949" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -669,7 +672,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added featured-image display to pages" />
     <MESSAGE value="added search bar to top-navigation" />
     <MESSAGE value="finished secondary-menu dropdowns and improved dropdowns on primary menu" />
     <MESSAGE value="style adjustments" />
@@ -694,7 +696,8 @@
     <MESSAGE value="required theme-options.php and added tabs (only visually)" />
     <MESSAGE value="added tab functionality and 'general' page content" />
     <MESSAGE value="added admin stylesheet and enqueued on theme options page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added admin stylesheet and enqueued on theme options page" />
+    <MESSAGE value="added content to support tab and added empty final two tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added content to support tab and added empty final two tabs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -992,15 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="32" selection-start="1126" selection-end="1126" vertical-scroll-proportion="-6.9" vertical-offset="0" max-vertical-offset="7620">
-          <folding>
-            <marker date="1403561135000" expanded="true" signature="9151:9382" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style-admin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="1" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
@@ -1010,8 +1004,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theme-options.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.4813278" vertical-offset="252" max-vertical-offset="975">
+        <state line="35" column="22" selection-start="1934" selection-end="1934" vertical-scroll-proportion="-11.375" vertical-offset="252" max-vertical-offset="975">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="322" column="13" selection-start="12432" selection-end="12432" vertical-scroll-proportion="0.5810617" vertical-offset="4425" max-vertical-offset="7365">
+          <folding>
+            <marker date="1403563504000" expanded="true" signature="9151:9382" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
