@@ -52,7 +52,7 @@ function ct_tracks_options_content(){ ?>
     <?php }
     else { ?>
         <div class="content-licenses content">
-            <p>You can assign your new layouts in the Theme Customizer in the "Premium Layouts" section after activating your license(s).</p>
+            <p>You can assign your new layouts in the Theme Customizer in the "Premium Layouts" section after activating your license(s) below.</p>
         </div>
     <?php } ?>
 </div>
