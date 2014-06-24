@@ -10,22 +10,39 @@ function ct_tracks_load_javascript_files() {
         wp_enqueue_style('ct-tracks-google-fonts');
         wp_enqueue_style('ct-tracks-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
         wp_enqueue_style('style', get_template_directory_uri() . 'style.min.css');
+
+        // Enqueue premium layout stylesheets
+        if(is_home() || is_archive()){
+
+            if(get_theme_mod('premium_layouts_setting') == 'full-width'){
+                wp_enqueue_style('ct-tracks-full-width', get_template_directory_uri() . '/css/full-width.css');
+            }
+            elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
+                wp_enqueue_style('ct-tracks-full-width-images', get_template_directory_uri() . '/css/full-width-images.css');
+            }
+            elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side'){
+                wp_enqueue_style('ct-tracks-side-by-side', get_template_directory_uri() . '/css/side-by-side.css');
+            }
+            elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side-images'){
+                wp_enqueue_style('ct-tracks-side-by-side-images', get_template_directory_uri() . '/css/side-by-side-images.css');
+            }
+        }
     }
     // enqueues the comment-reply script on posts & pages.  This script is included in WP by default
-    if( is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' ); 
+    if( is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' );
 }
 
 add_action('wp_enqueue_scripts', 'ct_tracks_load_javascript_files' );
 
 /* enqueue styles used on theme options page */
-function ct_ignite_enqueue_admin_styles($hook){
+function ct_tracks_enqueue_admin_styles($hook){
 
     // enqueue dashboard page styles
     if ( 'appearance_page_tracks-options' == $hook) {
         wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
     }
 }
-add_action('admin_enqueue_scripts',	'ct_ignite_enqueue_admin_styles' );
+add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
 
 /* Load the core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
@@ -362,6 +379,18 @@ function ct_tracks_add_homepage_title( $title )
 function ct_tracks_body_class( $classes ) {
     if ( ! is_front_page() ) {
         $classes[] = 'not-front';
+    }
+    if(get_theme_mod('premium_layouts_setting') == 'full-width'){
+        $classes[] = 'full-width';
+    }
+    elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
+        $classes[] = 'full-width-images';
+    }
+    elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side'){
+        $classes[] = 'side-by-side';
+    }
+    elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side-images'){
+        $classes[] = 'side-by-side-images';
     }
     return $classes;
 }
