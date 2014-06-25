@@ -323,6 +323,9 @@ function ct_tracks_customize_premium_layouts( $wp_customize ) {
     if(ct_tracks_full_width_check_license() == 'valid'){
         $available_templates['full-width'] = 'Full-width';
     }
+    if(ct_tracks_full_width_images_check_license() == 'valid'){
+        $available_templates['full-width-images'] = 'Full-width Images';
+    }
 
     /* section */
     $wp_customize->add_section(

@@ -59,6 +59,7 @@ function ct_tracks_options_content(){
             <p>You can assign your new layouts in the Theme Customizer in the "Premium Layouts" section after activating your license(s) below.</p>
 
             <?php
+            // create form for each layout option available
             $layouts = array('full_width','full_width_images');
             foreach($layouts as $layout){
 
@@ -66,13 +67,21 @@ function ct_tracks_options_content(){
                 $status 	= get_option( 'ct_tracks_'. $layout . '_license_key_status' );
 
                 ?>
+                <hr />
                 <form method="post" action="options.php">
                 <?php settings_fields('ct_tracks_' . $layout . '_license'); ?>
                     <table class="form-table">
                         <tbody>
                         <tr valign="top">
                             <th scope="row" valign="top">
-                                <?php _e('License Key','tracks'); ?>
+                                <?php
+                                if($layout == 'full_width'){
+                                    _e('Full-width','tracks');
+                                }
+                                elseif($layout == 'full_width_images'){
+                                    _e('Full-width Images','tracks');
+                                }
+                                ?>
                             </th>
                             <td>
                                 <input id="ct_tracks_<?php echo $layout; ?>_license_key" name="ct_tracks_<?php echo $layout; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
@@ -98,7 +107,8 @@ function ct_tracks_options_content(){
                         <?php } ?>
                         </tbody>
                     </table>
-                    <?php submit_button(); ?>
+                    <p>Make sure to activate your license after saving it.</p>
+                    <?php submit_button('Save License'); ?>
                 </form>
             <?php } ?>
         </div>

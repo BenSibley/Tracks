@@ -1,14 +1,14 @@
 <?php
 
-// This is the URL our updater / license checker pings. This should be the URL of the site with EDD installed
-define( 'CT_TRACKS_STORE_URL', 'http://www.competethemes.com' );
+// already defined in full-width.php
+//define( 'CT_TRACKS_STORE_URL', 'http://www.competethemes.com' );
 
 // The name of your product. This should match the download name in EDD exactly
-define( 'CT_TRACKS_FULL_WIDTH', 'Tracks Full-width Layout' );
+define( 'CT_TRACKS_FULL_WIDTH_IMAGES', 'Tracks Full-width Images Layout' );
 
 
 /**
- * Full-width layout licensing
+ * Full-width Images layout licensing
  */
 
 /***********************************************
@@ -16,10 +16,10 @@ define( 'CT_TRACKS_FULL_WIDTH', 'Tracks Full-width Layout' );
  * when adding a new one
  ***********************************************/
 
-function ct_tracks_full_width_sanitize_license( $new ) {
-    $old = get_option( 'ct_tracks_full_width_license_key' );
+function ct_tracks_full_width_images_sanitize_license( $new ) {
+    $old = get_option( 'ct_tracks_full_width_images_license_key' );
     if( $old && $old != $new ) {
-        delete_option( 'ct_tracks_full_width_license_key_status' ); // new license has been entered, so must reactivate
+        delete_option( 'ct_tracks_full_width_images_license_key_status' ); // new license has been entered, so must reactivate
     }
     return $new;
 }
@@ -28,20 +28,20 @@ function ct_tracks_full_width_sanitize_license( $new ) {
  * Illustrates how to activate a license key.
  ***********************************************/
 
-function ct_tracks_full_width_activate_license() {
+function ct_tracks_full_width_images_activate_license() {
 
-    if( isset( $_POST['ct_tracks_full_width_license_activate'] ) ) {
-        if( ! check_admin_referer( 'ct_tracks_full_width_nonce', 'ct_tracks_full_width_nonce' ) )
+    if( isset( $_POST['ct_tracks_full_width_images_license_activate'] ) ) {
+        if( ! check_admin_referer( 'ct_tracks_full_width_images_nonce', 'ct_tracks_full_width_images_nonce' ) )
             return; // get out if we didn't click the Activate button
 
         global $wp_version;
 
-        $license = trim( get_option( 'ct_tracks_full_width_license_key' ) );
+        $license = trim( get_option( 'ct_tracks_full_width_images_license_key' ) );
 
         $api_params = array(
             'edd_action' => 'activate_license',
             'license' => $license,
-            'item_name' => urlencode( CT_TRACKS_FULL_WIDTH )
+            'item_name' => urlencode( CT_TRACKS_FULL_WIDTH_IMAGES )
         );
 
         $response = wp_remote_get( add_query_arg( $api_params, CT_TRACKS_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
@@ -53,34 +53,34 @@ function ct_tracks_full_width_activate_license() {
 
         // $license_data->license will be either "active" or "inactive"
 
-        update_option( 'ct_tracks_full_width_license_key_status', $license_data->license );
+        update_option( 'ct_tracks_full_width_images_license_key_status', $license_data->license );
 
     }
 }
-add_action('admin_init', 'ct_tracks_full_width_activate_license');
+add_action('admin_init', 'ct_tracks_full_width_images_activate_license');
 
 /***********************************************
  * Illustrates how to deactivate a license key.
  * This will descrease the site count
  ***********************************************/
 
-function ct_tracks_full_width_deactivate_license() {
+function ct_tracks_full_width_images_deactivate_license() {
 
     // listen for our activate button to be clicked
-    if( isset( $_POST['ct_tracks_full_width_license_deactivate'] ) ) {
+    if( isset( $_POST['ct_tracks_full_width_images_license_deactivate'] ) ) {
 
         // run a quick security check
-        if( ! check_admin_referer( 'ct_tracks_full_width_nonce', 'ct_tracks_full_width_nonce' ) )
+        if( ! check_admin_referer( 'ct_tracks_full_width_images_nonce', 'ct_tracks_full_width_images_nonce' ) )
             return; // get out if we didn't click the Activate button
 
         // retrieve the license from the database
-        $license = trim( get_option( 'ct_tracks_full_width_license_key' ) );
+        $license = trim( get_option( 'ct_tracks_full_width_images_license_key' ) );
 
         // data to send in our API request
         $api_params = array(
             'edd_action'=> 'deactivate_license',
             'license' 	=> $license,
-            'item_name' => urlencode( CT_TRACKS_FULL_WIDTH )
+            'item_name' => urlencode( CT_TRACKS_FULL_WIDTH_IMAGES )
         );
 
         // Call the custom API.
@@ -95,11 +95,11 @@ function ct_tracks_full_width_deactivate_license() {
 
         // $license_data->license will be either "deactivated" or "failed"
         if( $license_data->license == 'deactivated' )
-            delete_option( 'ct_tracks_full_width_license_key_status' );
+            delete_option( 'ct_tracks_full_width_images_license_key_status' );
 
     }
 }
-add_action('admin_init', 'ct_tracks_full_width_deactivate_license');
+add_action('admin_init', 'ct_tracks_full_width_images_deactivate_license');
 
 
 
@@ -107,16 +107,16 @@ add_action('admin_init', 'ct_tracks_full_width_deactivate_license');
  * Illustrates how to check if a license is valid
  ***********************************************/
 
-function ct_tracks_full_width_check_license() {
+function ct_tracks_full_width_images_check_license() {
 
     global $wp_version;
 
-    $license = trim( get_option( 'ct_tracks_full_width_license_key' ) );
+    $license = trim( get_option( 'ct_tracks_full_width_images_license_key' ) );
 
     $api_params = array(
         'edd_action' => 'check_license',
         'license' => $license,
-        'item_name' => urlencode( CT_TRACKS_FULL_WIDTH )
+        'item_name' => urlencode( CT_TRACKS_FULL_WIDTH_IMAGES )
     );
 
     $response = wp_remote_get( add_query_arg( $api_params, CT_TRACKS_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
