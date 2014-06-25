@@ -518,4 +518,15 @@ function ct_tracks_social_site_list(){
 
     $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam');
     return $social_sites;
-} ?>
+}
+
+function ct_tracks_category_link(){
+    $category = get_the_category();
+    $category_link = get_category_link( $category[0]->term_id );
+    $category_name = $category[0]->cat_name;
+    $html = "<a href='" . $category_link . "'>" . $category_name . "</a>";
+    echo $html;
+}
+
+
+?>

@@ -7,13 +7,7 @@ if( is_single() ) { ?>
             <span class="date"><?php echo get_the_date('F j'); ?> / </span>
             <span class="author"><?php the_author_posts_link(); ?> / </span>
                 <span class="category">
-                    <?php
-                    $category = get_the_category();
-                    $category_link = get_category_link( $category[0]->term_id );
-                    $category_name = $category[0]->cat_name;
-                    $html = "<a href='" . $category_link . "'>" . $category_name . "</a>";
-                    echo $html;
-                    ?>
+                    <?php ct_tracks_category_link();?>
                 </span>
         </div>
         <div class='entry-header'>
@@ -55,13 +49,7 @@ if( is_single() ) { ?>
                 <span class="date"><?php echo get_the_date('F j'); ?> / </span>
                 <span class="author"><?php the_author_posts_link(); ?> / </span>
                 <span class="category">
-                    <?php
-                    $category = get_the_category();
-                    $category_link = get_category_link( $category[0]->term_id );
-                    $category_name = $category[0]->cat_name;
-                    $html = "<a href='" . $category_link . "'>" . $category_name . "</a>";
-                    echo $html;
-                    ?>
+                    <?php ct_tracks_category_link(); ?>
                 </span>
             </div>
             <div class='excerpt-header'>
