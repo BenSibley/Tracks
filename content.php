@@ -1,38 +1,6 @@
-<?php 
+<?php
 
-if( is_home() ) { ?>
-    <div <?php post_class(); ?>>
-        <a class="featured-image-link" href="<?php the_permalink(); ?>">
-    	    <?php ct_tracks_featured_image(); ?>
-        </a>
-        <div class="excerpt-container">
-            <div class="excerpt-meta">
-                <span class="date"><?php echo get_the_date('F j'); ?> / </span>
-                <span class="author"><?php the_author_posts_link(); ?> / </span>
-                <span class="category">
-                    <?php
-                        $category = get_the_category();
-                        $category_link = get_category_link( $category[0]->term_id );
-                        $category_name = $category[0]->cat_name;
-                        $html = "<a href='" . $category_link . "'>" . $category_name . "</a>";
-                        echo $html;
-                    ?>
-                </span>
-            </div>
-            <div class='excerpt-header'>
-                <h1 class='excerpt-title'>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </h1>
-            </div>
-            <div class='excerpt-content'>
-                <article>
-                    <?php ct_tracks_excerpt(); ?>
-                </article>
-            </div>
-        </div>
-	</div>
-<?php     
-} elseif( is_single() ) { ?>
+if( is_single() ) { ?>
     <div <?php post_class(); ?>>
         <?php ct_tracks_featured_image(); ?>
         <div class="entry-meta">
@@ -76,7 +44,7 @@ if( is_home() ) { ?>
             </div>
         </div>
     </div>
-<?php 
+<?php
 } else { ?>
     <div <?php post_class(); ?>>
         <a class="featured-image-link" href="<?php the_permalink(); ?>">
@@ -108,6 +76,5 @@ if( is_home() ) { ?>
             </div>
         </div>
     </div>
-<?php 
+<?php
 }
-

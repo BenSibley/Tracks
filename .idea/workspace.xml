@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width.css" afterPath="$PROJECT_DIR$/css/full-width.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width.min.css" afterPath="$PROJECT_DIR$/css/full-width.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width.scss" afterPath="$PROJECT_DIR$/css/full-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content.php" afterPath="$PROJECT_DIR$/content.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -100,7 +98,7 @@
       <file leaf-file-name="content.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="18" selection-start="518" selection-end="518" vertical-scroll-proportion="0.26639345" vertical-offset="0" max-vertical-offset="1785">
+            <state line="79" column="1" selection-start="3330" selection-end="3330" vertical-scroll-proportion="0.8770492" vertical-offset="543" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -164,7 +162,6 @@
         <option value="$PROJECT_DIR$/sass/_custom_editor_styles.scss" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/library/functions/deprecated.php" />
-        <option value="$PROJECT_DIR$/content.php" />
         <option value="$PROJECT_DIR$/library/hybrid.php" />
         <option value="$PROJECT_DIR$/sidebar-after-post-content.php" />
         <option value="$PROJECT_DIR$/sass/_comments.scss" />
@@ -209,6 +206,7 @@
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/css/full-width.scss" />
+        <option value="$PROJECT_DIR$/content.php" />
       </list>
     </option>
   </component>
@@ -774,7 +772,11 @@
       <created>1403655129824</created>
       <updated>1403655129824</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="started styling full-width layout.">
+      <created>1403656076626</created>
+      <updated>1403656076626</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -816,7 +818,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="social media option added to customizer" />
     <MESSAGE value="added social icon output" />
     <MESSAGE value="add social media icon styling and updated to font awesome v4.1.0" />
     <MESSAGE value="added styling so secondary-menu, search, and social icons all play nice together" />
@@ -841,7 +842,8 @@
     <MESSAGE value="added premium layout stylesheets" />
     <MESSAGE value="added conditional enqueueing and body classes for stylesheets" />
     <MESSAGE value="license validation working. updated gruntfile for css folder." />
-    <option name="LAST_COMMIT_MESSAGE" value="license validation working. updated gruntfile for css folder." />
+    <MESSAGE value="started styling full-width layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="started styling full-width layout." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1147,7 +1149,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="18" selection-start="518" selection-end="518" vertical-scroll-proportion="0.26639345" vertical-offset="0" max-vertical-offset="1785">
+        <state line="79" column="1" selection-start="3330" selection-end="3330" vertical-scroll-proportion="0.8770492" vertical-offset="543" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
