@@ -9,10 +9,7 @@ add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
 /* callback used to add content to options page */
 function ct_tracks_options_content(){
 
-    // working license key - d7914cf73d39b04881aa79c82a67a181
-
-    $license 	= get_option( 'ct_tracks_full_width_license_key' );
-    $status 	= get_option( 'ct_tracks_full_width_license_key_status' );
+    // working full-width license key - d7914cf73d39b04881aa79c82a67a181
 
     ?>
 
@@ -60,42 +57,50 @@ function ct_tracks_options_content(){
     else { ?>
         <div class="content-licenses content">
             <p>You can assign your new layouts in the Theme Customizer in the "Premium Layouts" section after activating your license(s) below.</p>
-            <form method="post" action="options.php">
 
-                <?php settings_fields('ct_tracks_full_width_license'); ?>
+            <?php
+            $layouts = array('full_width','full_width_images');
+            foreach($layouts as $layout){
 
-                <table class="form-table">
-                    <tbody>
+                $license 	= get_option( 'ct_tracks_' . $layout . '_license_key' );
+                $status 	= get_option( 'ct_tracks_'. $layout . '_license_key_status' );
+
+                ?>
+                <form method="post" action="options.php">
+                <?php settings_fields('ct_tracks_' . $layout . '_license'); ?>
+                    <table class="form-table">
+                        <tbody>
                         <tr valign="top">
                             <th scope="row" valign="top">
-                                <?php _e('Full-width License Key','tracks'); ?>
+                                <?php _e('License Key','tracks'); ?>
                             </th>
                             <td>
-                                <input id="ct_tracks_full_width_license_key" name="ct_tracks_full_width_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
-                                <label class="description" for="ct_tracks_full_width_license_key"><?php _e('Enter your license key','tracks'); ?></label>
+                                <input id="ct_tracks_<?php echo $layout; ?>_license_key" name="ct_tracks_<?php echo $layout; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
+                                <label class="description" for="ct_tracks_<?php echo $layout; ?>_license_key"><?php _e('Enter your license key','tracks'); ?></label>
                             </td>
                         </tr>
-                    <?php if( false !== $license ) { ?>
-                        <tr valign="top">
-                            <th scope="row" valign="top">
-                                <?php _e('Activate License','tracks'); ?>
-                            </th>
-                            <td>
-                                <?php if( $status !== false && $status == 'valid' ) { ?>
-                                    <span style="color:green;"><?php _e('active','tracks'); ?></span>
-                                    <?php wp_nonce_field( 'ct_tracks_full_width_nonce', 'ct_tracks_full_width_nonce' ); ?>
-                                    <input type="submit" class="button-secondary" name="ct_tracks_full_width_license_deactivate" value="<?php _e('Deactivate License','tracks'); ?>"/>
-                                <?php } else { ?>
-                                    <?php wp_nonce_field( 'ct_tracks_full_width_nonce', 'ct_tracks_full_width_nonce' ); ?>
-                                    <input type="submit" class="button-secondary" name="ct_tracks_full_width_license_activate" value="<?php _e('Activate License','tracks'); ?>"/>
-                                <?php } ?>
-                            </td>
-                        </tr>
-                    <?php } ?>
-                    </tbody>
-                </table>
-                <?php submit_button(); ?>
-            </form>
+                        <?php if( false !== $license ) { ?>
+                            <tr valign="top">
+                                <th scope="row" valign="top">
+                                    <?php _e('Activate License','tracks'); ?>
+                                </th>
+                                <td>
+                                    <?php if( $status !== false && $status == 'valid' ) { ?>
+                                        <span style="color:green;"><?php _e('active','tracks'); ?></span>
+                                        <?php wp_nonce_field( 'ct_tracks_' . $layout . '_nonce', 'ct_tracks_' . $layout . '_nonce' ); ?>
+                                        <input type="submit" class="button-secondary" name="ct_tracks_<?php echo $layout; ?>_license_deactivate" value="<?php _e('Deactivate License','tracks'); ?>"/>
+                                    <?php } else { ?>
+                                        <?php wp_nonce_field( 'ct_tracks_' . $layout . '_nonce', 'ct_tracks_' . $layout . '_nonce' ); ?>
+                                        <input type="submit" class="button-secondary" name="ct_tracks_<?php echo $layout; ?>_license_activate" value="<?php _e('Activate License','tracks'); ?>"/>
+                                    <?php } ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
+                    <?php submit_button(); ?>
+                </form>
+            <?php } ?>
         </div>
     <?php } ?>
 </div>
@@ -106,3 +111,9 @@ function ct_tracks_full_width_register_option() {
     register_setting('ct_tracks_full_width_license', 'ct_tracks_full_width_license_key', 'ct_tracks_full_width_sanitize_license' );
 }
 add_action('admin_init', 'ct_tracks_full_width_register_option');
+
+function ct_tracks_full_width_images_register_option() {
+    // creates our settings in the options table
+    register_setting('ct_tracks_full_width_images_license', 'ct_tracks_full_width_images_license_key', 'ct_tracks_full_width_images_sanitize_license' );
+}
+add_action('admin_init', 'ct_tracks_full_width_images_register_option');

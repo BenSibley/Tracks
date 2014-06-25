@@ -41,9 +41,15 @@ if( is_single() ) { ?>
 <?php
 } else { ?>
     <div <?php post_class(); ?>>
-        <a class="featured-image-link" href="<?php the_permalink(); ?>">
-            <?php ct_tracks_featured_image(); ?>
-        </a>
+        <?php
+        // don't link the image if full-width layout
+        if(get_theme_mod('premium_layouts_setting') == 'full-width'){
+            ct_tracks_featured_image();
+        } else { ?>
+            <a class="featured-image-link" href="<?php the_permalink(); ?>">
+                <?php ct_tracks_featured_image(); ?>
+            </a>
+        <?php } ?>
         <div class="excerpt-container">
             <div class="excerpt-meta">
                 <span class="date"><?php echo get_the_date('F j'); ?> / </span>

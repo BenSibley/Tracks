@@ -354,10 +354,16 @@ function ct_tracks_featured_image() {
     global $post;
     $has_image = false;
 
-    // load smaller version on archive pages and larger version on post pages
+    // load smaller version on archive pages unless full-width layout active
     if(is_archive() || is_home()) {
+
         if (has_post_thumbnail( $post->ID ) ) {
-            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog' );
+
+            if(get_theme_mod('premium_layouts_setting') == 'full-width'){
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+            } else {
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog' );
+            }
             $image = $image[0];
             $has_image = true;
         }
