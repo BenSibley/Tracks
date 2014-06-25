@@ -318,6 +318,12 @@ function ct_tracks_sanitize_image_zoom_settings($input){
 // Premium Layouts section
 function ct_tracks_customize_premium_layouts( $wp_customize ) {
 
+    $available_templates = array('standard' => 'Standard');
+
+    if(ct_tracks_full_width_check_license() == 'valid'){
+        $available_templates['full-width'] = 'Full-width';
+    }
+
     /* section */
     $wp_customize->add_section(
         'ct_tracks_premium_layouts',
@@ -345,15 +351,16 @@ function ct_tracks_customize_premium_layouts( $wp_customize ) {
             'label' => 'Choose the layout for Tracks',
             'section' => 'ct_tracks_premium_layouts',
             'setting' => 'premium_layouts_setting',
-            'choices' => array(
-                'standard' => 'Standard',
+            'choices' => $available_templates,
+        )
+    );
+    /*
+     *                 'standard' => 'Standard',
                 'full-width' => 'Full-width',
                 'full-width-images' => 'Full-width Images',
                 'side-by-side' => 'Side-by-Side',
                 'side-by-side-images' => 'Side-by-Side Images',
-            ),
-        )
-    );
+     * */
 }
 add_action( 'customize_register', 'ct_tracks_customize_premium_layouts' );
 

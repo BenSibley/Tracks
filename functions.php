@@ -15,16 +15,16 @@ function ct_tracks_load_javascript_files() {
         if(is_home() || is_archive()){
 
             if(get_theme_mod('premium_layouts_setting') == 'full-width'){
-                wp_enqueue_style('ct-tracks-full-width', get_template_directory_uri() . '/css/full-width.css');
+                wp_enqueue_style('ct-tracks-full-width', get_template_directory_uri() . '/css/full-width.min.css');
             }
             elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
-                wp_enqueue_style('ct-tracks-full-width-images', get_template_directory_uri() . '/css/full-width-images.css');
+                wp_enqueue_style('ct-tracks-full-width-images', get_template_directory_uri() . '/css/full-width-images.min.css');
             }
             elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side'){
-                wp_enqueue_style('ct-tracks-side-by-side', get_template_directory_uri() . '/css/side-by-side.css');
+                wp_enqueue_style('ct-tracks-side-by-side', get_template_directory_uri() . '/css/side-by-side.min.css');
             }
             elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side-images'){
-                wp_enqueue_style('ct-tracks-side-by-side-images', get_template_directory_uri() . '/css/side-by-side-images.css');
+                wp_enqueue_style('ct-tracks-side-by-side-images', get_template_directory_uri() . '/css/side-by-side-images.min.css');
             }
         }
     }
@@ -89,6 +89,12 @@ function ct_tracks_theme_setup() {
 
     // adds theme options page
     require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
+
+    // add license folder files
+    foreach (glob(trailingslashit( get_template_directory() ) . 'licenses/*.php') as $filename)
+    {
+        include $filename;
+    }
 }
 
 function ct_tracks_register_widget_areas(){
