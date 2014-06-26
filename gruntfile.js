@@ -44,7 +44,8 @@ module.exports = function(grunt) {
                     'style.css': 'sass/style.scss',
                     'custom-editor-styles.css': 'sass/_custom_editor_styles.scss',
                     'css/full-width.css': 'css/full-width.scss',
-                    'css/full-width-images.css': 'css/full-width-images.scss'
+                    'css/full-width-images.css': 'css/full-width-images.scss',
+                    'css/two-column.css': 'css/two-column.scss'
                 }
             }
         },
@@ -55,7 +56,9 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'style.css': 'style.css',
-                    'css/full-width-images.css': 'css/full-width-images.css'
+                    'css/full-width.css': 'css/full-width.css',
+                    'css/full-width-images.css': 'css/full-width-images.css',
+                    'css/two-column.css': 'css/two-column.css'
                 }
             }
         },
@@ -64,7 +67,8 @@ module.exports = function(grunt) {
                 files: {
                     'style.min.css': ['style.css'],
                     'css/full-width.min.css': ['css/full-width.css'],
-                    'css/full-width-images.min.css': ['css/full-width-images.css']
+                    'css/full-width-images.min.css': ['css/full-width-images.css'],
+                    'css/two-column.min.css': ['css/two-column.css']
                 }
             }
         },
