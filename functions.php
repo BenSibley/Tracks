@@ -421,8 +421,8 @@ function ct_tracks_body_class( $classes ) {
             $classes[] = 'image-height';
         }
     }
-    elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side'){
-        $classes[] = 'side-by-side';
+    elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
+        $classes[] = 'two-column';
     }
     elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side-images'){
         $classes[] = 'side-by-side-images';
