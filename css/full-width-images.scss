@@ -1,12 +1,132 @@
+@import "../sass/variables";
+
 /* Full-width Images layout styles */
 
-/* 900px */
-@media all and (min-width: 56.25em){
+/* 800px */
+@media all and (min-width: 50em){
 
   .full-width-images {
 
+    .excerpt {
+      margin-bottom: $baseline-height * 2;
+      position: relative;
+
+      .featured-image:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        background: rgba(17, 17, 17, 0.9);
+        transition: all 0.7s ease;
+      }
+      &.even {
+
+        .featured-image {
+          right: 0;
+        }
+      }
+      &:hover {
+
+        .featured-image:after {
+          opacity: 1;
+        }
+        .excerpt-container {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+    .excerpt-container {
+      width: 100%;
+      padding: 0 22.22%;
+      color: white;
+      background: none;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: all 0.4s 0.1s ease;
+    }
+    .excerpt-meta a,
+    .excerpt-title a,
+    .more-link {
+      color: $gray-light;
+
+      &:link,
+      &:visited {
+        color: $gray-light;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: white;
+      }
+    }
+    .excerpt-header:after,
+    .more-link:after {
+      background: $gray-light;
+    }
     .featured-image {
       width: 100%;
+      position: absolute;
+    }
+  }
+}
+
+/* 2:1 image-height setup */
+
+.full-width-images.image-height {
+
+  .excerpt-container {
+    border: none;
+    margin: 0;
+  }
+  .content-container {
+    border: none;
+    margin: 0;
+    padding: 0 5.55%;
+  }
+}
+/* 800px */
+@media all and (min-width: 50em){
+
+  .full-width-images.image-height {
+
+    .excerpt-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      margin: auto;
+    }
+    .content-container {
+      padding: 0 22.22%;
+    }
+    .excerpt-meta {
+      padding-top: 0;
+    }
+    .featured-image {
+      position: relative;
+      height: 0;
+      padding-bottom: 50%;
+    }
+    .excerpt-content {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/* 1200px */
+@media all and (min-width: 75em){
+
+  .full-width-images.image-height {
+
+    .excerpt-title {
+      font-size: 2.625em; /* 42px / 16px */
+      line-height: 1.143;
     }
   }
 }

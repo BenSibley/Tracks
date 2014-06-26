@@ -22,6 +22,12 @@
   .excerpt-container {
     width: 100%;
   }
+  &.full-post {
+
+    .excerpt-content {
+      text-align: left;
+    }
+  }
 }
 
 /* 900px */

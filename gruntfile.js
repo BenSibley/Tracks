@@ -53,8 +53,10 @@ module.exports = function(grunt) {
                 options: {
                     browsers: ['last 1 version', '> 1%', 'ie 8']
                 },
-                src: 'style.css',
-                dest: 'style.css'
+                files: {
+                    'style.css': 'style.css',
+                    'css/full-width-images.css': 'css/full-width-images.css'
+                }
             }
         },
         cssmin: {

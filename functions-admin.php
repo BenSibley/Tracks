@@ -357,6 +357,54 @@ function ct_tracks_customize_premium_layouts( $wp_customize ) {
             'choices' => $available_templates,
         )
     );
+    /* setting */
+    $wp_customize->add_setting(
+        'premium_layouts_full_width_image_height',
+        array(
+            'default'           => 'content',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_image_height'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'premium_layouts_full_width_image_height',
+        array(
+            'type' => 'radio',
+            'label' => 'Image size on Blog',
+            'section' => 'ct_tracks_premium_layouts',
+            'setting' => 'premium_layouts_setting',
+            'choices' => array(
+                'content' => 'based on post content',
+                'image'   => '2:1 width/height ratio'
+            ),
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'premium_layouts_full_width_full_post',
+        array(
+            'default'           => 'no',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_full_posts'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'premium_layouts_full_width_full_post',
+        array(
+            'type' => 'radio',
+            'label' => 'Show full posts on Blog/Archives?',
+            'section' => 'ct_tracks_premium_layouts',
+            'setting' => 'premium_layouts_full_width_full_post',
+            'choices' => array(
+                'yes' => 'Yes',
+                'no'   => 'No'
+            ),
+        )
+    );
     /*
      *                 'standard' => 'Standard',
                 'full-width' => 'Full-width',
@@ -375,6 +423,34 @@ function ct_tracks_sanitize_premium_layouts($input){
         'full-width-images' => 'Full-width Images',
         'side-by-side' => 'Side-by-Side',
         'side-by-side-images' => 'Side-by-Side Images',
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/* sanitize radio button input */
+function ct_tracks_sanitize_premium_layouts_image_height($input){
+    $valid = array(
+        'content' => 'based on post content',
+        'image'   => '2:1 width/height ratio'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/* sanitize radio button input */
+function ct_tracks_sanitize_premium_layouts_full_posts($input){
+    $valid = array(
+        'yes' => 'Yes',
+        'no'   => 'No'
     );
 
     if ( array_key_exists( $input, $valid ) ) {

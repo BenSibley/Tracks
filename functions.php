@@ -275,18 +275,33 @@ function ct_tracks_remove_comments_notes_after($defaults){
 
 add_action('comment_form_defaults', 'ct_tracks_remove_comments_notes_after');
 
-// for 'read more' tag excerpts
+// excerpt handling
 function ct_tracks_excerpt() {
-	
-	global $post;
-	// check for the more tag
+
+    // make post variable available
+    global $post;
+
+    // make 'read more' setting available
+    global $more;
+
+    // get the 'show full post' setting
+    $setting = get_theme_mod('premium_layouts_full_width_full_post');
+
+    // check for the more tag
     $ismore = strpos( $post->post_content, '<!--more-->');
-    
-	/* if there is a more tag, edit the link to keep reading
-	*  works for both manual excerpts and read more tags
-	*/
-    if($ismore) {
-        the_content("Read the Post <span class='screen-reader-text'>" . get_the_title() . "</span>");
+
+    // if show full post is on, and full-width layout is on, show full post unless on search page
+    if(($setting == 'yes') && get_theme_mod('premium_layouts_setting') == 'full-width' && !is_search()){
+
+        // set read more value for all posts to 'off'
+        $more = -1;
+
+        // output the full content
+        the_content();
+    }
+    // use the read more link if present
+    elseif($ismore) {
+        the_content("Read More <span class='screen-reader-text'>" . get_the_title() . "</span>");
     }
     // otherwise the excerpt is automatic, so output it
     else {
@@ -359,7 +374,7 @@ function ct_tracks_featured_image() {
 
         if (has_post_thumbnail( $post->ID ) ) {
 
-            if(get_theme_mod('premium_layouts_setting') == 'full-width'){
+            if(get_theme_mod('premium_layouts_setting') == 'full-width' || get_theme_mod('premium_layouts_setting') == 'full-width-images'){
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
             } else {
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog' );
@@ -394,9 +409,17 @@ function ct_tracks_body_class( $classes ) {
     }
     if(get_theme_mod('premium_layouts_setting') == 'full-width'){
         $classes[] = 'full-width';
+
+        if(get_theme_mod('premium_layouts_full_width_full_post') == 'yes'){
+            $classes[] = 'full-post';
+        }
     }
     elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
         $classes[] = 'full-width-images';
+
+        if(get_theme_mod('premium_layouts_full_width_image_height') == 'image'){
+            $classes[] = 'image-height';
+        }
     }
     elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side'){
         $classes[] = 'side-by-side';
