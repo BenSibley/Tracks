@@ -20,11 +20,11 @@ function ct_tracks_load_javascript_files() {
             elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
                 wp_enqueue_style('ct-tracks-full-width-images', get_template_directory_uri() . '/css/full-width-images.min.css');
             }
-            elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side'){
-                wp_enqueue_style('ct-tracks-side-by-side', get_template_directory_uri() . '/css/side-by-side.min.css');
+            elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
+                wp_enqueue_style('ct-tracks-two-column', get_template_directory_uri() . '/css/two-column.min.css');
             }
-            elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side-images'){
-                wp_enqueue_style('ct-tracks-side-by-side-images', get_template_directory_uri() . '/css/side-by-side-images.min.css');
+            elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
+                wp_enqueue_style('ct-tracks-two-column-images', get_template_directory_uri() . '/css/two-column-images.min.css');
             }
         }
     }
