@@ -475,8 +475,15 @@ if( function_exists('add_image_size')){
 
 function ct_tracks_odd_even_post_class( $classes ) {
 
+    // access the post object
     global $wp_query;
+
+    // add even/odd class
     $classes[] = ($wp_query->current_post % 2 == 0) ? 'odd' : 'even';
+
+    // add post # class
+    $classes[] = "excerpt-" . ($wp_query->current_post + 1);
+
     return $classes;
 }
 add_filter ( 'post_class' , 'ct_tracks_odd_even_post_class' );

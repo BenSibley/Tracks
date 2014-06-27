@@ -223,6 +223,36 @@ jQuery(document).ready(function($){
     }
     displayLayoutOptions();
 
+    // ===== Two-Column Layout ==== //
+
+    function removeLayoutGaps(){
+
+        var currentExcerptNumber = 1;
+
+        $('.excerpt').each(function(){
+
+            if(currentExcerptNumber > 2){
+
+                var currentExcerpt = $('.excerpt-' + currentExcerptNumber);
+                var aboveExcerpt = $('.excerpt-' + (currentExcerptNumber - 2));
+
+                // offset plus height plus margin-bottom
+                var aboveExcerptBottom = aboveExcerpt.offset().top + aboveExcerpt.height() + 24;
+
+                var excerptGap = currentExcerpt.offset().top - aboveExcerptBottom;
+
+                if(excerptGap > 0){
+                    $(currentExcerpt).css('margin-top', -excerptGap);
+
+                }
+            }
+
+            currentExcerptNumber++;
+        });
+    }
+    removeLayoutGaps();
+
+
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */
