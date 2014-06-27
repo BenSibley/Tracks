@@ -14,7 +14,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* 900px */
 @media all and (min-width: 56.25em) {
   .two-column .main {
-    width: 94.44%;
+    width: 91.665%;
   }
   .two-column .main:after {
     content: ".";
@@ -25,10 +25,10 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     height: 0;
   }
   .two-column .excerpt {
-    width: 44.45%;
+    width: 47.225%;
     display: block;
     float: left;
-    margin: 0 2.775% 1.5em;
+    margin: 0 1.3875% 1.5em;
     clear: none;
   }
   .two-column .excerpt.even .featured-image {
@@ -48,5 +48,6 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   }
   .two-column .loop-pagination {
     clear: both;
+    padding-top: 4.5em;
   }
 }

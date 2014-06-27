@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column.css" afterPath="$PROJECT_DIR$/css/two-column.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column.min.css" afterPath="$PROJECT_DIR$/css/two-column.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column.scss" afterPath="$PROJECT_DIR$/css/two-column.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,25 +36,32 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="158" selection-start="396" selection-end="396" vertical-scroll-proportion="2.5" vertical-offset="180" max-vertical-offset="8595">
               <folding>
+                <marker date="1403887109000" expanded="true" signature="7785:8772" placeholder="..." />
+                <marker date="1403887109000" expanded="true" signature="7855:8762" placeholder="..." />
+                <marker date="1403887109000" expanded="true" signature="7896:8425" placeholder="..." />
+                <marker date="1403887109000" expanded="true" signature="7977:8402" placeholder="..." />
+                <marker date="1403887109000" expanded="true" signature="8467:8743" placeholder="..." />
                 <marker date="1403887109000" expanded="true" signature="10285:10516" placeholder="..." />
+                <marker date="1403887109000" expanded="true" signature="20015:20759" placeholder="..." />
+                <marker date="1403887109000" expanded="true" signature="20092:20741" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="two-column.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="two-column.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/two-column.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="361" selection-end="361" vertical-scroll-proportion="0.46153846" vertical-offset="0" max-vertical-offset="780">
+            <state line="33" column="16" selection-start="534" selection-end="534" vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="0" selection-start="5866" selection-end="5866" vertical-scroll-proportion="-6.909091" vertical-offset="1930" max-vertical-offset="2925">
+            <state line="158" column="0" selection-start="5951" selection-end="5951" vertical-scroll-proportion="0.7317437" vertical-offset="1879" max-vertical-offset="2730">
               <folding />
             </state>
           </provider>
@@ -156,8 +164,8 @@
         <option value="$PROJECT_DIR$/theme-options.php" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
-        <option value="$PROJECT_DIR$/css/two-column.scss" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/css/two-column.scss" />
         <option value="$PROJECT_DIR$/js/functions.js" />
       </list>
     </option>
@@ -774,7 +782,11 @@
       <created>1403885348652</created>
       <updated>1403885348652</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="added jquery function to handle positioning adjustments of excerpts">
+      <created>1403887917633</created>
+      <updated>1403887917633</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -816,7 +828,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="style update for ie9" />
     <MESSAGE value="deleted changelog" />
     <MESSAGE value="added missing text domain" />
     <MESSAGE value="tagging as v1.11" />
@@ -841,7 +852,8 @@
     <MESSAGE value="added two-column layout to theme options and customizer and added stylesheets" />
     <MESSAGE value="updated gruntfile for two-column layout." />
     <MESSAGE value="added basic styling for two-column layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="added basic styling for two-column layout" />
+    <MESSAGE value="added jquery function to handle positioning adjustments of excerpts" />
+    <option name="LAST_COMMIT_MESSAGE" value="added jquery function to handle positioning adjustments of excerpts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1129,21 +1141,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="158" selection-start="396" selection-end="396" vertical-scroll-proportion="2.5" vertical-offset="180" max-vertical-offset="8595">
           <folding>
+            <marker date="1403887109000" expanded="true" signature="7785:8772" placeholder="..." />
+            <marker date="1403887109000" expanded="true" signature="7855:8762" placeholder="..." />
+            <marker date="1403887109000" expanded="true" signature="7896:8425" placeholder="..." />
+            <marker date="1403887109000" expanded="true" signature="7977:8402" placeholder="..." />
+            <marker date="1403887109000" expanded="true" signature="8467:8743" placeholder="..." />
             <marker date="1403887109000" expanded="true" signature="10285:10516" placeholder="..." />
+            <marker date="1403887109000" expanded="true" signature="20015:20759" placeholder="..." />
+            <marker date="1403887109000" expanded="true" signature="20092:20741" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="0" selection-start="5866" selection-end="5866" vertical-scroll-proportion="-6.909091" vertical-offset="1930" max-vertical-offset="2925">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/two-column.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="361" selection-end="361" vertical-scroll-proportion="0.46153846" vertical-offset="0" max-vertical-offset="780">
+        <state line="33" column="16" selection-start="534" selection-end="534" vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="0" selection-start="5951" selection-end="5951" vertical-scroll-proportion="0.7317437" vertical-offset="1879" max-vertical-offset="2730">
           <folding />
         </state>
       </provider>

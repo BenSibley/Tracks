@@ -8,17 +8,17 @@
   .two-column {
 
     .main {
-      width: 94.44%;
+      width: 91.665%;
 
       &:after {
         @include clearfix;
       }
     }
     .excerpt {
-      width: 44.45%;
+      width: 47.225%;
       display: block;
       float: left;
-      margin: 0 2.775% $baseline-height;
+      margin: 0 1.3875% $baseline-height;
       clear: none;
 
       &.even {
@@ -42,6 +42,7 @@
     }
     .loop-pagination {
       clear: both;
+      padding-top: $baseline-height * 3;
     }
   }
 }

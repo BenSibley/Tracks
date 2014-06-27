@@ -144,31 +144,18 @@ jQuery(document).ready(function($){
 
     function removeLayoutGaps(){
 
-        var currentExcerptNumber = 1;
-
         $('.excerpt').each(function(){
 
-            if(currentExcerptNumber > 2){
+            // 40% of the screen over to be safe
+            var windowWidth = $(window).width() * 0.4;
 
-                var currentExcerpt = $('.excerpt-' + currentExcerptNumber);
-                var aboveExcerpt = $('.excerpt-' + (currentExcerptNumber - 2));
-
-                // offset plus height plus margin-bottom
-                var aboveExcerptBottom = aboveExcerpt.offset().top + aboveExcerpt.height() + 24;
-
-                var excerptGap = currentExcerpt.offset().top - aboveExcerptBottom;
-
-                if(excerptGap > 0){
-                    $(currentExcerpt).css('margin-top', -excerptGap);
-
-                }
+            // if it ends of over on the right, float it right
+            if($(this).offset().left > windowWidth){
+                $(this).css('float','right');
             }
-
-            currentExcerptNumber++;
         });
     }
     removeLayoutGaps();
-
 
 });
 
