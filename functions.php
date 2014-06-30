@@ -54,7 +54,6 @@ function ct_tracks_theme_setup() {
 	/* Theme-supported features go here. */
     add_theme_support( 'hybrid-core-template-hierarchy' );
     add_theme_support( 'loop-pagination' );
-    add_theme_support( 'cleaner-gallery' );
     add_theme_support( 'hybrid-core-widgets' );
 
     // from WordPress core not theme hybrid
