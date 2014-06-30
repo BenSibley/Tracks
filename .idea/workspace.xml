@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -26,12 +26,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="387" column="4" selection-start="14493" selection-end="14493" vertical-scroll-proportion="0.39310345" vertical-offset="5520" max-vertical-offset="7980">
+            <state line="401" column="18" selection-start="14786" selection-end="14786" vertical-scroll-proportion="51.666668" vertical-offset="7255" max-vertical-offset="7980">
               <folding>
-                <marker date="1404141461000" expanded="true" signature="9318:9549" placeholder="..." />
+                <marker date="1404141471000" expanded="true" signature="9318:9549" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -46,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions-admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="339" column="9" selection-start="10169" selection-end="10169" vertical-scroll-proportion="69.791664" vertical-offset="6760" max-vertical-offset="8220">
+            <state line="316" column="0" selection-start="9364" selection-end="9364" vertical-scroll-proportion="0.7034483" vertical-offset="4230" max-vertical-offset="6000">
               <folding />
             </state>
           </provider>
@@ -141,11 +141,11 @@
         <option value="$PROJECT_DIR$/css/full-width.scss" />
         <option value="$PROJECT_DIR$/licenses/two-column.php" />
         <option value="$PROJECT_DIR$/theme-options.php" />
-        <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/css/two-column.scss" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/functions-admin.php" />
       </list>
     </option>
   </component>
@@ -729,7 +729,11 @@
       <created>1404141450711</created>
       <updated>1404141450711</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="removed conditional logic for body class filter">
+      <created>1404141471662</created>
+      <updated>1404141471662</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -771,7 +775,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added tab functionality and 'general' page content" />
     <MESSAGE value="added admin stylesheet and enqueued on theme options page" />
     <MESSAGE value="added content to support tab and added empty final two tabs" />
     <MESSAGE value="removed leftover commented code" />
@@ -796,7 +799,8 @@
     <MESSAGE value="deleted licensing files" />
     <MESSAGE value="removed conditional loading of layout CSS" />
     <MESSAGE value="removed conditional logic for featured image" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed conditional logic for featured image" />
+    <MESSAGE value="removed conditional logic for body class filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed conditional logic for body class filter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1013,19 +1017,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+    <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="339" column="9" selection-start="10169" selection-end="10169" vertical-scroll-proportion="69.791664" vertical-offset="6760" max-vertical-offset="8220">
-          <folding />
+        <state line="401" column="18" selection-start="14786" selection-end="14786" vertical-scroll-proportion="51.666668" vertical-offset="7255" max-vertical-offset="7980">
+          <folding>
+            <marker date="1404141471000" expanded="true" signature="9318:9549" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="387" column="4" selection-start="14493" selection-end="14493" vertical-scroll-proportion="0.39310345" vertical-offset="5520" max-vertical-offset="7980">
-          <folding>
-            <marker date="1404141461000" expanded="true" signature="9318:9549" placeholder="..." />
-          </folding>
+        <state line="316" column="0" selection-start="9364" selection-end="9364" vertical-scroll-proportion="0.7034483" vertical-offset="4230" max-vertical-offset="6000">
+          <folding />
         </state>
       </provider>
     </entry>
