@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="removed premium layouts section from customizer">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="removed c">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content.php" afterPath="$PROJECT_DIR$/content.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -55,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gruntfile.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="7" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.6595461" vertical-offset="751" max-vertical-offset="1560">
+            <state line="80" column="24" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0" vertical-offset="751" max-vertical-offset="1560">
               <folding />
             </state>
           </provider>
@@ -67,7 +67,16 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="750">
+            <state line="25" column="40" selection-start="860" selection-end="860" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="18" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.61538464" vertical-offset="393" max-vertical-offset="1095">
               <folding />
             </state>
           </provider>
@@ -134,7 +143,6 @@
         <option value="$PROJECT_DIR$/licenses.php" />
         <option value="$PROJECT_DIR$/sass/_social_icons.scss" />
         <option value="$PROJECT_DIR$/css/full-width-images.css" />
-        <option value="$PROJECT_DIR$/content.php" />
         <option value="$PROJECT_DIR$/css/full-width-images.scss" />
         <option value="$PROJECT_DIR$/licenses/full-width-images.php" />
         <option value="$PROJECT_DIR$/licenses/full-width.php" />
@@ -146,6 +154,7 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
+        <option value="$PROJECT_DIR$/content.php" />
       </list>
     </option>
   </component>
@@ -737,7 +746,11 @@
       <created>1404141535412</created>
       <updated>1404141535412</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="updated gruntfile to not include premium layout stuff">
+      <created>1404141654422</created>
+      <updated>1404141654422</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -779,7 +792,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added content to support tab and added empty final two tabs" />
     <MESSAGE value="removed leftover commented code" />
     <MESSAGE value="minor update to theme-options copy" />
     <MESSAGE value="added customizer option for premium layouts and created css folder." />
@@ -804,7 +816,8 @@
     <MESSAGE value="removed conditional logic for featured image" />
     <MESSAGE value="removed conditional logic for body class filter" />
     <MESSAGE value="removed premium layouts section from customizer" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed premium layouts section from customizer" />
+    <MESSAGE value="updated gruntfile to not include premium layout stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated gruntfile to not include premium layout stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -963,11 +976,6 @@
         <state line="5" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="600" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="24" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.13104524" vertical-offset="651" max-vertical-offset="1620" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="2" selection-start="983" selection-end="1042" vertical-scroll-proportion="0.44903988" vertical-offset="551" max-vertical-offset="4365" />
@@ -980,12 +988,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="52" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.42056075" vertical-offset="405" max-vertical-offset="28125" />
+        <state line="48" column="52" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.42056075" vertical-offset="405" max-vertical-offset="28125">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="40" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
+        <state line="0" column="40" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theme-options.php">
@@ -996,13 +1008,6 @@
     <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="2" selection-start="683" selection-end="721" vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="3345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="750">
           <folding />
         </state>
       </provider>
@@ -1032,7 +1037,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="7" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.6595461" vertical-offset="751" max-vertical-offset="1560">
+        <state line="80" column="24" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0" vertical-offset="751" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="40" selection-start="860" selection-end="860" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="18" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.61538464" vertical-offset="393" max-vertical-offset="1095">
           <folding />
         </state>
       </provider>

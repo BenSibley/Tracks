@@ -41,63 +41,28 @@ if( is_single() ) { ?>
 <?php
 } else { ?>
     <div <?php post_class(); ?>>
-        <?php
-        // don't link the image if full-width layout
-        if(get_theme_mod('premium_layouts_setting') == 'full-width' || get_theme_mod('premium_layouts_setting') == 'full-width-images' ){
-            ct_tracks_featured_image();
-        } else { ?>
-            <a class="featured-image-link" href="<?php the_permalink(); ?>">
-                <?php ct_tracks_featured_image(); ?>
-            </a>
-        <?php } ?>
-
-            <?php
-            if(get_theme_mod('premium_layouts_setting') == 'full-width-images' && get_theme_mod('premium_layouts_full_width_image_height') == 'image'){ ?>
-                <table class="excerpt-container">
-                    <tr>
-                        <td class="content-container">
-                            <div class="excerpt-meta">
-                                <span class="date"><?php echo get_the_date('F j'); ?> / </span>
-                                <span class="author"><?php the_author_posts_link(); ?> / </span>
-                                <span class="category">
-                                    <?php ct_tracks_category_link(); ?>
-                                </span>
-                            </div>
-                            <div class='excerpt-header'>
-                                <h1 class='excerpt-title'>
-                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </h1>
-                            </div>
-                            <div class='excerpt-content'>
-                                <article>
-                                    <?php ct_tracks_excerpt(); ?>
-                                </article>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            <?php
-            } else { ?>
-                <div class="excerpt-container">
-                    <div class="excerpt-meta">
-                        <span class="date"><?php echo get_the_date('F j'); ?> / </span>
-                        <span class="author"><?php the_author_posts_link(); ?> / </span>
-                        <span class="category">
-                            <?php ct_tracks_category_link(); ?>
-                        </span>
-                    </div>
-                    <div class='excerpt-header'>
-                        <h1 class='excerpt-title'>
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        </h1>
-                    </div>
-                    <div class='excerpt-content'>
-                        <article>
-                            <?php ct_tracks_excerpt(); ?>
-                        </article>
-                    </div>
-                </div>
-            <?php } ?>
+        <a class="featured-image-link" href="<?php the_permalink(); ?>">
+            <?php ct_tracks_featured_image(); ?>
+        </a>
+        <div class="excerpt-container">
+            <div class="excerpt-meta">
+                <span class="date"><?php echo get_the_date('F j'); ?> / </span>
+                <span class="author"><?php the_author_posts_link(); ?> / </span>
+                <span class="category">
+                    <?php ct_tracks_category_link(); ?>
+                </span>
+            </div>
+            <div class='excerpt-header'>
+                <h1 class='excerpt-title'>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h1>
+            </div>
+            <div class='excerpt-content'>
+                <article>
+                    <?php ct_tracks_excerpt(); ?>
+                </article>
+            </div>
+        </div>
     </div>
 <?php
 }
