@@ -4,12 +4,12 @@
 	<p>Category:</p>
     <h2><?php single_cat_title(); ?></h2>
 </div>
-    
+
 <?php
 
 // The loop
 if ( have_posts() ) :
-    while (have_posts() ) : 
+    while (have_posts() ) :
         the_post();
         get_template_part('content');
     endwhile;
