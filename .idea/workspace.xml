@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/full-width-images.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/full-width-images.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/full-width-images.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/full-width.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/full-width.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/full-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/two-column.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/two-column.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/two-column.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/licenses/full-width-images.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/licenses/full-width.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/licenses/two-column.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -46,7 +40,7 @@
       <file leaf-file-name="functions.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="5" selection-start="4550" selection-end="4550" vertical-scroll-proportion="0.60881174" vertical-offset="1314" max-vertical-offset="2145">
+            <state line="106" column="40" selection-start="4049" selection-end="4049" vertical-scroll-proportion="0.36849132" vertical-offset="1314" max-vertical-offset="2145">
               <folding />
             </state>
           </provider>
@@ -209,20 +203,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compete core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tracks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="licenses" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -738,7 +718,11 @@
       <created>1404141229713</created>
       <updated>1404141229713</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="deleted premium layout CSS">
+      <created>1404141264296</created>
+      <updated>1404141264296</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -780,7 +764,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="tagging as v1.11" />
     <MESSAGE value="added basic theme options page." />
     <MESSAGE value="moved theme options page to theme-options.php&#10;" />
     <MESSAGE value="required theme-options.php and added tabs (only visually)" />
@@ -805,7 +788,8 @@
     <MESSAGE value="added jquery function to handle positioning adjustments of excerpts" />
     <MESSAGE value="removed JS function for two-column layout." />
     <MESSAGE value="removed JS function to show/hide additional premium layout options." />
-    <option name="LAST_COMMIT_MESSAGE" value="removed JS function to show/hide additional premium layout options." />
+    <MESSAGE value="deleted premium layout CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted premium layout CSS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -974,16 +958,6 @@
         <state line="57" column="2" selection-start="983" selection-end="1042" vertical-scroll-proportion="0.44903988" vertical-offset="551" max-vertical-offset="4365" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/licenses/full-width-images.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.045180723" vertical-offset="30" max-vertical-offset="2115" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/licenses/full-width.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="0" selection-end="4621" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2115" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content-attachment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="19" selection-start="392" selection-end="392" vertical-scroll-proportion="0.21367522" vertical-offset="0" max-vertical-offset="702" />
@@ -1007,11 +981,6 @@
     <entry file="file://$PROJECT_DIR$/theme-options.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="14" selection-start="6657" selection-end="6657" vertical-scroll-proportion="0.4413793" vertical-offset="1420" max-vertical-offset="2145" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/licenses/two-column.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="55" selection-start="2645" selection-end="2645" vertical-scroll-proportion="0.39310345" vertical-offset="810" max-vertical-offset="2115" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_blog.scss">
@@ -1044,7 +1013,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="5" selection-start="4550" selection-end="4550" vertical-scroll-proportion="0.60881174" vertical-offset="1314" max-vertical-offset="2145">
+        <state line="106" column="40" selection-start="4049" selection-end="4049" vertical-scroll-proportion="0.36849132" vertical-offset="1314" max-vertical-offset="2145">
           <folding />
         </state>
       </provider>
