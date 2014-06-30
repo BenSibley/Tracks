@@ -29,9 +29,9 @@
       <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="361" column="20" selection-start="13689" selection-end="13689" vertical-scroll-proportion="0.47586206" vertical-offset="5070" max-vertical-offset="8340">
+            <state line="357" column="47" selection-start="13409" selection-end="13409" vertical-scroll-proportion="0.45517242" vertical-offset="5025" max-vertical-offset="8265">
               <folding>
-                <marker date="1404141419000" expanded="true" signature="9318:9549" placeholder="..." />
+                <marker date="1404141442000" expanded="true" signature="9318:9549" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -721,7 +721,11 @@
       <created>1404141293554</created>
       <updated>1404141293554</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="removed conditional loading of layout CSS">
+      <created>1404141432639</created>
+      <updated>1404141432639</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -763,7 +767,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="moved theme options page to theme-options.php&#10;" />
     <MESSAGE value="required theme-options.php and added tabs (only visually)" />
     <MESSAGE value="added tab functionality and 'general' page content" />
     <MESSAGE value="added admin stylesheet and enqueued on theme options page" />
@@ -788,7 +791,8 @@
     <MESSAGE value="removed JS function to show/hide additional premium layout options." />
     <MESSAGE value="deleted premium layout CSS" />
     <MESSAGE value="deleted licensing files" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted licensing files" />
+    <MESSAGE value="removed conditional loading of layout CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed conditional loading of layout CSS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1014,9 +1018,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="361" column="20" selection-start="13689" selection-end="13689" vertical-scroll-proportion="0.47586206" vertical-offset="5070" max-vertical-offset="8340">
+        <state line="357" column="47" selection-start="13409" selection-end="13409" vertical-scroll-proportion="0.45517242" vertical-offset="5025" max-vertical-offset="8265">
           <folding>
-            <marker date="1404141419000" expanded="true" signature="9318:9549" placeholder="..." />
+            <marker date="1404141442000" expanded="true" signature="9318:9549" placeholder="..." />
           </folding>
         </state>
       </provider>
