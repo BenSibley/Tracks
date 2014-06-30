@@ -385,26 +385,7 @@ function ct_tracks_body_class( $classes ) {
     if ( ! is_front_page() ) {
         $classes[] = 'not-front';
     }
-    if(get_theme_mod('premium_layouts_setting') == 'full-width'){
-        $classes[] = 'full-width';
 
-        if(get_theme_mod('premium_layouts_full_width_full_post') == 'yes'){
-            $classes[] = 'full-post';
-        }
-    }
-    elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
-        $classes[] = 'full-width-images';
-
-        if(get_theme_mod('premium_layouts_full_width_image_height') == 'image'){
-            $classes[] = 'image-height';
-        }
-    }
-    elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
-        $classes[] = 'two-column';
-    }
-    elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side-images'){
-        $classes[] = 'side-by-side-images';
-    }
     return $classes;
 }
 add_filter( 'body_class', 'ct_tracks_body_class' );

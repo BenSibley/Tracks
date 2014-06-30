@@ -29,9 +29,9 @@
       <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="357" column="47" selection-start="13409" selection-end="13409" vertical-scroll-proportion="0.45517242" vertical-offset="5025" max-vertical-offset="8265">
+            <state line="387" column="4" selection-start="14493" selection-end="14493" vertical-scroll-proportion="0.39310345" vertical-offset="5520" max-vertical-offset="7980">
               <folding>
-                <marker date="1404141442000" expanded="true" signature="9318:9549" placeholder="..." />
+                <marker date="1404141461000" expanded="true" signature="9318:9549" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -725,7 +725,11 @@
       <created>1404141432639</created>
       <updated>1404141432639</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="removed conditional logic for featured image">
+      <created>1404141450711</created>
+      <updated>1404141450711</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -767,7 +771,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="required theme-options.php and added tabs (only visually)" />
     <MESSAGE value="added tab functionality and 'general' page content" />
     <MESSAGE value="added admin stylesheet and enqueued on theme options page" />
     <MESSAGE value="added content to support tab and added empty final two tabs" />
@@ -792,7 +795,8 @@
     <MESSAGE value="deleted premium layout CSS" />
     <MESSAGE value="deleted licensing files" />
     <MESSAGE value="removed conditional loading of layout CSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed conditional loading of layout CSS" />
+    <MESSAGE value="removed conditional logic for featured image" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed conditional logic for featured image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1018,9 +1022,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="357" column="47" selection-start="13409" selection-end="13409" vertical-scroll-proportion="0.45517242" vertical-offset="5025" max-vertical-offset="8265">
+        <state line="387" column="4" selection-start="14493" selection-end="14493" vertical-scroll-proportion="0.39310345" vertical-offset="5520" max-vertical-offset="7980">
           <folding>
-            <marker date="1404141442000" expanded="true" signature="9318:9549" placeholder="..." />
+            <marker date="1404141461000" expanded="true" signature="9318:9549" placeholder="..." />
           </folding>
         </state>
       </provider>
