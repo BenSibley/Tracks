@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="removed c">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content.php" afterPath="$PROJECT_DIR$/content.php" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -26,12 +26,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="401" column="18" selection-start="14786" selection-end="14786" vertical-scroll-proportion="51.666668" vertical-offset="7255" max-vertical-offset="7980">
+            <state line="71" column="0" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.43447295" vertical-offset="760" max-vertical-offset="7860">
               <folding>
-                <marker date="1404141471000" expanded="true" signature="9318:9549" placeholder="..." />
+                <marker date="1404141815000" expanded="true" signature="9032:9263" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -73,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="content.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="18" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.61538464" vertical-offset="393" max-vertical-offset="1095">
+            <state line="55" column="18" selection-start="2364" selection-end="2364" vertical-scroll-proportion="-18.0" vertical-offset="393" max-vertical-offset="1095">
               <folding />
             </state>
           </provider>
@@ -151,10 +151,10 @@
         <option value="$PROJECT_DIR$/theme-options.php" />
         <option value="$PROJECT_DIR$/css/two-column.scss" />
         <option value="$PROJECT_DIR$/js/functions.js" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/content.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -750,7 +750,11 @@
       <created>1404141654422</created>
       <updated>1404141654422</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="removed conditional logic for premium layouts">
+      <created>1404141775202</created>
+      <updated>1404141775202</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -792,7 +796,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="removed leftover commented code" />
     <MESSAGE value="minor update to theme-options copy" />
     <MESSAGE value="added customizer option for premium layouts and created css folder." />
     <MESSAGE value="added premium layout stylesheets" />
@@ -817,7 +820,8 @@
     <MESSAGE value="removed conditional logic for body class filter" />
     <MESSAGE value="removed premium layouts section from customizer" />
     <MESSAGE value="updated gruntfile to not include premium layout stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated gruntfile to not include premium layout stuff" />
+    <MESSAGE value="removed conditional logic for premium layouts" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed conditional logic for premium layouts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1019,15 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="401" column="18" selection-start="14786" selection-end="14786" vertical-scroll-proportion="51.666668" vertical-offset="7255" max-vertical-offset="7980">
-          <folding>
-            <marker date="1404141471000" expanded="true" signature="9318:9549" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions-admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="316" column="0" selection-start="9364" selection-end="9364" vertical-scroll-proportion="-21.25" vertical-offset="4230" max-vertical-offset="6000">
@@ -1051,8 +1046,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="18" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.61538464" vertical-offset="393" max-vertical-offset="1095">
+        <state line="55" column="18" selection-start="2364" selection-end="2364" vertical-scroll-proportion="-18.0" vertical-offset="393" max-vertical-offset="1095">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.43447295" vertical-offset="760" max-vertical-offset="7860">
+          <folding>
+            <marker date="1404141815000" expanded="true" signature="9032:9263" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

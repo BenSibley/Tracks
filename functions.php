@@ -70,14 +70,6 @@ function ct_tracks_theme_setup() {
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
 
-    // adds theme options page
-    require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
-
-    // add license folder files
-    foreach (glob(trailingslashit( get_template_directory() ) . 'licenses/*.php') as $filename)
-    {
-        include $filename;
-    }
 }
 
 function ct_tracks_register_widget_areas(){
