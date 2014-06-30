@@ -28,7 +28,7 @@
         (get_theme_mod('search_input_setting') == 'show') ||
 
         // if the social icon setting has been entered by a user and is not 'no'
-        ( isset($social_icon_setting) && $social_icon_setting != 'no') ) {
+        ( $social_icon_setting != 'no' && $social_icon_setting != NULL) ) {
 
             echo "<div class='top-navigation'>";
 
