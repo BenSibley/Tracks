@@ -18,21 +18,32 @@
 
     <?php
 
-    // if secondary menu is set, search bar is on, or any social icons are being used, display top-navigation
-    if( (has_nav_menu( 'secondary' )) || (get_theme_mod('search_input_setting') == 'show') || (get_theme_mod('social_icons_display_setting') != 'no') ) {
-        echo "<div class='top-navigation'>";
+    $social_icon_setting = get_theme_mod('social_icons_display_setting');
 
-            // add secondary menu if set
-            get_template_part( 'menu', 'secondary' );
+    if(
+        // if secondary menu is set, or...
+        (has_nav_menu( 'secondary' )) ||
 
-            // add search input if set
-            if(get_theme_mod('search_input_setting') == 'show'){
-                get_search_form();
-            }
-            if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'header')){
-                ct_tracks_social_icons_output();
-            }
-        echo "</div>";
+        // if search bar is on, or...
+        (get_theme_mod('search_input_setting') == 'show') ||
+
+        // if the social icon setting has been entered by a user and is not 'no'
+        ( $social_icon_setting != 'no' && $social_icon_setting != NULL) ) {
+
+            echo "<div class='top-navigation'>";
+
+                // add secondary menu if set
+                get_template_part( 'menu', 'secondary' );
+
+                // add search input if set
+                if(get_theme_mod('search_input_setting') == 'show'){
+                    get_search_form();
+                }
+                // display social icons if set
+                if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'header')){
+                    ct_tracks_social_icons_output();
+                }
+            echo "</div>";
     } ?>
 
 	<div id="title-info" class="title-info">
