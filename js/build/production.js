@@ -201,45 +201,6 @@ jQuery(document).ready(function($){
         }
     }
 
-    // ===== Show/Hide Customizer Options ==== //
-
-    function displayLayoutOptions(){
-
-        var imageHeightOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_image_height');
-        var fullPostOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_full_post');
-
-        imageHeightOption.hide();
-        fullPostOption.hide();
-
-        // if the layout is set to full-width images, display the image height option
-        $('html', window.parent.document).find('#customize-control-premium_layouts_setting option').each(function(){
-            if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width-images'){
-                imageHeightOption.show();
-            }
-            if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width'){
-                fullPostOption.show();
-            }
-        });
-    }
-    displayLayoutOptions();
-
-    // ===== Two-Column Layout ==== //
-
-    function removeLayoutGaps(){
-
-        $('.excerpt').each(function(){
-
-            // 40% of the screen over to be safe
-            var windowWidth = $(window).width() * 0.4;
-
-            // if it ends of over on the right, float it right
-            if($(this).offset().left > windowWidth){
-                $(this).css('float','right');
-            }
-        });
-    }
-    removeLayoutGaps();
-
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */
