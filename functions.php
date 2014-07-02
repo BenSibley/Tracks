@@ -424,8 +424,8 @@ function ct_tracks_body_class( $classes ) {
     elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
         $classes[] = 'two-column';
     }
-    elseif(get_theme_mod('premium_layouts_setting') == 'side-by-side-images'){
-        $classes[] = 'side-by-side-images';
+    elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
+        $classes[] = 'two-column-images';
     }
     return $classes;
 }

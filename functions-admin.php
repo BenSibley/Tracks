@@ -329,6 +329,9 @@ function ct_tracks_customize_premium_layouts( $wp_customize ) {
     if(ct_tracks_two_column_check_license() == 'valid'){
         $available_templates['two-column'] = 'Two-Column';
     }
+    if(ct_tracks_two_column_images_check_license() == 'valid'){
+        $available_templates['two-column-images'] = 'Two-Column Images';
+    }
 
     /* section */
     $wp_customize->add_section(
@@ -425,7 +428,7 @@ function ct_tracks_sanitize_premium_layouts($input){
         'full-width' => 'Full-width',
         'full-width-images' => 'Full-width Images',
         'two-column' => 'Two-Column',
-        'side-by-side-images' => 'Side-by-Side Images',
+        'two-column-images' => 'Two-Column Images',
     );
 
     if ( array_key_exists( $input, $valid ) ) {

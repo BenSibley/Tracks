@@ -60,7 +60,7 @@ function ct_tracks_options_content(){
 
             <?php
             // create form for each layout option available
-            $layouts = array('full_width','full_width_images','two_column');
+            $layouts = array('full_width','full_width_images','two_column', 'two_column_images');
             foreach($layouts as $layout){
 
                 $license 	= get_option( 'ct_tracks_' . $layout . '_license_key' );
@@ -83,6 +83,9 @@ function ct_tracks_options_content(){
                                 }
                                 elseif($layout == 'two_column'){
                                     _e('Two-Column Layout','tracks');
+                                }
+                                elseif($layout == 'two_column_images'){
+                                    _e('Two-Column Images Layout','tracks');
                                 }
                                 ?>
                             </th>
@@ -136,3 +139,9 @@ function ct_tracks_two_column_register_option() {
     register_setting('ct_tracks_two_column_license', 'ct_tracks_two_column_license_key', 'ct_tracks_two_column_sanitize_license' );
 }
 add_action('admin_init', 'ct_tracks_two_column_register_option');
+
+function ct_tracks_two_column_images_register_option() {
+    // creates our settings in the options table
+    register_setting('ct_tracks_two_column_images_license', 'ct_tracks_two_column_images_license_key', 'ct_tracks_two_column_images_sanitize_license' );
+}
+add_action('admin_init', 'ct_tracks_two_column_images_register_option');
