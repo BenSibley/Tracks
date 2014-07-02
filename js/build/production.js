@@ -86,7 +86,6 @@ jQuery(document).ready(function($){
     $(".entry-content").fitVids();
 
     // bind the tap event on the menu icon
-    // no longer using tappy.js b/c didn't work when production.min.js loaded asynchronously
     $('#toggle-navigation').bind('click', onTap);
 
     function onTap() {
