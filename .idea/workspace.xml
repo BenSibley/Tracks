@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -47,16 +49,16 @@
       <file leaf-file-name="production.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/build/production.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="202" column="3" selection-start="8121" selection-end="8121" vertical-scroll-proportion="0.0" vertical-offset="2563" max-vertical-offset="10260">
+            <state line="206" column="3" selection-start="8201" selection-end="8201" vertical-scroll-proportion="0.0" vertical-offset="2623" max-vertical-offset="10320">
               <folding>
-                <marker date="1404332112000" expanded="true" signature="6743:6812" placeholder="/*...*/" />
-                <marker date="1404332112000" expanded="true" signature="6822:8484" placeholder="{...}" />
-                <marker date="1404332112000" expanded="true" signature="7601:7670" placeholder="{...}" />
-                <marker date="1404332112000" expanded="true" signature="7750:7859" placeholder="{...}" />
-                <marker date="1404332112000" expanded="true" signature="8049:8445" placeholder="{...}" />
-                <marker date="1404332112000" expanded="true" signature="8299:8316" placeholder="{...}" />
-                <marker date="1404332112000" expanded="true" signature="8259:8319" placeholder="{...}" />
-                <marker date="1404332112000" expanded="true" signature="8353:8414" placeholder="{...}" />
+                <marker date="1404332592000" expanded="true" signature="6828:6897" placeholder="/*...*/" />
+                <marker date="1404332592000" expanded="true" signature="6907:8564" placeholder="{...}" />
+                <marker date="1404332592000" expanded="true" signature="7686:7755" placeholder="{...}" />
+                <marker date="1404332592000" expanded="true" signature="7830:7939" placeholder="{...}" />
+                <marker date="1404332592000" expanded="true" signature="8129:8525" placeholder="{...}" />
+                <marker date="1404332592000" expanded="true" signature="8379:8396" placeholder="{...}" />
+                <marker date="1404332592000" expanded="true" signature="8339:8399" placeholder="{...}" />
+                <marker date="1404332592000" expanded="true" signature="8433:8494" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -71,10 +73,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="41" selection-start="4042" selection-end="4042" vertical-scroll-proportion="0.42" vertical-offset="1320" max-vertical-offset="2190">
+            <state line="117" column="53" selection-start="4328" selection-end="4328" vertical-scroll-proportion="0.0" vertical-offset="1320" max-vertical-offset="2190">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.txt">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.4979253" vertical-offset="0" max-vertical-offset="723">
               <folding />
             </state>
           </provider>
@@ -93,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/menu-footer.php" />
         <option value="$PROJECT_DIR$/menu-secondary.php" />
         <option value="$PROJECT_DIR$/sass/_post.scss" />
         <option value="$PROJECT_DIR$/content-page.php" />
@@ -144,6 +157,7 @@
         <option value="$PROJECT_DIR$/js/iOS-orientation-fix.js" />
         <option value="$PROJECT_DIR$/sass/_base.scss" />
         <option value="$PROJECT_DIR$/js/functions.js" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
@@ -242,6 +256,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compete core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tracks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font-awesome" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -799,7 +831,11 @@
       <created>1404332152143</created>
       <updated>1404332152143</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="refactored jquery - reduced redundant selectors.">
+      <created>1404332617537</created>
+      <updated>1404332617537</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -841,7 +877,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="simplified content.php" />
     <MESSAGE value="put category link functionality into a function" />
     <MESSAGE value="refactored licensing form into a foreach for easy layout additions" />
     <MESSAGE value="added full-width-images template and update gruntfile" />
@@ -866,7 +901,8 @@
     <MESSAGE value="fixed bar on top of site appearing when user's didn't set the social media icon display yet" />
     <MESSAGE value="removed style-admin.css and function enqueueing it." />
     <MESSAGE value="added CSS-only way to prevent iPhones and iPads from zooming in on landscape orientation." />
-    <option name="LAST_COMMIT_MESSAGE" value="added CSS-only way to prevent iPhones and iPads from zooming in on landscape orientation." />
+    <MESSAGE value="refactored jquery - reduced redundant selectors." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored jquery - reduced redundant selectors." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1113,16 +1149,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/build/production.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="3" selection-start="8121" selection-end="8121" vertical-scroll-proportion="0.0" vertical-offset="2563" max-vertical-offset="10260">
+        <state line="206" column="3" selection-start="8201" selection-end="8201" vertical-scroll-proportion="0.0" vertical-offset="2623" max-vertical-offset="10320">
           <folding>
-            <marker date="1404332112000" expanded="true" signature="6743:6812" placeholder="/*...*/" />
-            <marker date="1404332112000" expanded="true" signature="6822:8484" placeholder="{...}" />
-            <marker date="1404332112000" expanded="true" signature="7601:7670" placeholder="{...}" />
-            <marker date="1404332112000" expanded="true" signature="7750:7859" placeholder="{...}" />
-            <marker date="1404332112000" expanded="true" signature="8049:8445" placeholder="{...}" />
-            <marker date="1404332112000" expanded="true" signature="8299:8316" placeholder="{...}" />
-            <marker date="1404332112000" expanded="true" signature="8259:8319" placeholder="{...}" />
-            <marker date="1404332112000" expanded="true" signature="8353:8414" placeholder="{...}" />
+            <marker date="1404332592000" expanded="true" signature="6828:6897" placeholder="/*...*/" />
+            <marker date="1404332592000" expanded="true" signature="6907:8564" placeholder="{...}" />
+            <marker date="1404332592000" expanded="true" signature="7686:7755" placeholder="{...}" />
+            <marker date="1404332592000" expanded="true" signature="7830:7939" placeholder="{...}" />
+            <marker date="1404332592000" expanded="true" signature="8129:8525" placeholder="{...}" />
+            <marker date="1404332592000" expanded="true" signature="8379:8396" placeholder="{...}" />
+            <marker date="1404332592000" expanded="true" signature="8339:8399" placeholder="{...}" />
+            <marker date="1404332592000" expanded="true" signature="8433:8494" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1136,7 +1172,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="41" selection-start="4042" selection-end="4042" vertical-scroll-proportion="0.42" vertical-offset="1320" max-vertical-offset="2190">
+        <state line="117" column="53" selection-start="4328" selection-end="4328" vertical-scroll-proportion="0.0" vertical-offset="1320" max-vertical-offset="2190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.4979253" vertical-offset="0" max-vertical-offset="723">
           <folding />
         </state>
       </provider>
