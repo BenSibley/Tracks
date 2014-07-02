@@ -7,25 +7,29 @@ jQuery(document).ready(function($){
 
     function onTap() {
 
-        if ($('#site-header').hasClass('toggled')) {
-            $('#site-header').removeClass('toggled')
-            $('#menu-primary').css('transform', 'translateX(' + 0 + 'px)');
+        var siteHeader = $('#site-header');
+        var menuPrimary = $('#menu-primary');
+
+        if (siteHeader.hasClass('toggled')) {
+            siteHeader.removeClass('toggled');
+            menuPrimary.css('transform', 'translateX(' + 0 + 'px)');
             $('#menu-primary-tracks').css('transform', 'translateX(' + 0 + 'px)');
             $(window).unbind('scroll');
             // delayed so it isn't seen
             setTimeout(function() {
-                $('#menu-primary').removeAttr('style');
+                menuPrimary.removeAttr('style');
             }, 400);
         } else {
-            var menuWidth = $('#menu-primary').width();
-            $('#site-header').addClass('toggled')
-            $('#menu-primary').css('transform', 'translateX(' + -menuWidth + 'px)');
+            var menuWidth = menuPrimary.width();
+            siteHeader.addClass('toggled');
+            menuPrimary.css('transform', 'translateX(' + -menuWidth + 'px)');
             $('#menu-primary-tracks').css('transform', 'translateX(' + menuWidth + 'px)');
             $(window).scroll(onScroll);
         }
     }
     function onScroll() {
-        var menuItemsBottom = $('#menu-primary-items').offset().top + $('#menu-primary-items').height();
+        var menuPrimaryItems = $('#menu-primary-items');
+        var menuItemsBottom = menuPrimaryItems.offset().top + menuPrimaryItems.height();
 
         // keep updating var on scroll
         var topDistance = $(window).scrollTop();
@@ -106,7 +110,7 @@ jQuery(document).ready(function($){
             body.addClass('search-open');
 
             // get the width of the search bar
-            var sitePadding = $('body').width() * 0.0555;
+            var sitePadding = body.width() * 0.0555;
 
             // get width of site padding-right
             var searchFormWidth = $('#site-header').find('.search-form').width();
