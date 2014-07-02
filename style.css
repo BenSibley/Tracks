@@ -867,11 +867,16 @@ a img {
     opacity: 1;
   }
 
+  .excerpt.odd .excerpt-container {
+    width: calc(50% + 1px);
+  }
+
   .excerpt.even .excerpt-container {
     float: right;
   }
   .excerpt.even .featured-image {
     right: 50%;
+    right: calc(50% - 1px);
   }
   .excerpt.even:after {
     content: ".";
