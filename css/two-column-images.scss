@@ -1,1 +1,134 @@
 /* Two-Column Images CSS */
+
+/* styles for two-column layout */
+
+@import "../sass/variables";
+
+/* 900px */
+@media all and (min-width: 56.25em){
+
+  .two-column-images {
+
+    /* two-column CSS */
+    .main {
+      width: 91.665%;
+
+      &:after {
+        @include clearfix;
+      }
+    }
+    .excerpt {
+      width: 47.225%;
+      display: block;
+      float: left;
+      margin: 0 1.3875% $baseline-height;
+      clear: none;
+      background: none;
+      position: relative;
+
+      &.even {
+
+        .featured-image {
+          right: 0;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(17,17,17,0.9);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+
+        /* overriding a clearfix */
+        height: 100%;
+        visibility: visible;
+      }
+      // show the description
+      &.show-description {
+
+        .excerpt-container {
+          opacity: 1;
+          visibility: visible;
+        }
+        .content-container {
+          opacity: 1;
+        }
+        &:after {
+          opacity: 1;
+          right: 0;
+        }
+      }
+    }
+    .featured-image {
+      position: relative;
+      width: auto;
+      height: auto;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .excerpt-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      padding: 0 11.11%;
+      color: white;
+      //background: rgba(17,17,17,0.9);
+      background: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+
+      td {
+        border: none;
+      }
+    }
+    .content-container {
+      opacity: 0;
+      padding: 0 $baseline-height;
+      transition: opacity 0.4s 0.1s ease;
+    }
+    .excerpt-meta {
+      padding-top: $baseline-height / 0.813;
+    }
+    .excerpt-header {
+      padding-bottom: $baseline-height;
+    }
+    .excerpt-title {
+      font-size: 1.313em; /* 21px / 16px */
+      line-height: 1.143;
+    }
+    .excerpt-meta a,
+    .excerpt-title a,
+    .more-link {
+      color: $gray-light;
+
+      &:link,
+      &:visited {
+        color: $gray-light;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: white;
+      }
+    }
+    .excerpt-header:after,
+    .more-link:after {
+      background: $gray-light;
+    }
+    .loop-pagination {
+      clear: both;
+      padding-top: $baseline-height * 3;
+    }
+  }
+}

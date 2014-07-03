@@ -367,7 +367,7 @@ function ct_tracks_customize_premium_layouts( $wp_customize ) {
     $wp_customize->add_setting(
         'premium_layouts_full_width_image_height',
         array(
-            'default'           => 'content',
+            'default'           => 'image',
             'type'              => 'theme_mod',
             'capability'        => 'edit_theme_options',
             'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_image_height'
@@ -382,8 +382,8 @@ function ct_tracks_customize_premium_layouts( $wp_customize ) {
             'section' => 'ct_tracks_premium_layouts',
             'setting' => 'premium_layouts_setting',
             'choices' => array(
-                'content' => 'based on post content',
-                'image'   => '2:1 width/height ratio'
+                'image' => 'size based on image size',
+                '2:1-ratio'   => '2:1 width/height ratio like posts'
             ),
         )
     );
@@ -411,13 +411,6 @@ function ct_tracks_customize_premium_layouts( $wp_customize ) {
             ),
         )
     );
-    /*
-     *                 'standard' => 'Standard',
-                'full-width' => 'Full-width',
-                'full-width-images' => 'Full-width Images',
-                'side-by-side' => 'Side-by-Side',
-                'side-by-side-images' => 'Side-by-Side Images',
-     * */
 }
 add_action( 'customize_register', 'ct_tracks_customize_premium_layouts' );
 
@@ -441,8 +434,8 @@ function ct_tracks_sanitize_premium_layouts($input){
 /* sanitize radio button input */
 function ct_tracks_sanitize_premium_layouts_image_height($input){
     $valid = array(
-        'content' => 'based on post content',
-        'image'   => '2:1 width/height ratio'
+        'image' => 'size based on image size',
+        '2:1-ratio'   => '2:1 width/height ratio like posts'
     );
 
     if ( array_key_exists( $input, $valid ) ) {

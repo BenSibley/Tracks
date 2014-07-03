@@ -268,7 +268,7 @@ textarea {
   border-radius: 0;
   -webkit-appearance: none;
   -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
 
 textarea {
@@ -400,11 +400,9 @@ a img {
 
 .menu-primary, .menu-primary-tracks {
   -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
+          transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   top: 0;
@@ -417,7 +415,7 @@ a img {
   background-image: -webkit-linear-gradient(#222222 24px, transparent 24px, transparent 48px);
   background-image: linear-gradient(#222222 24px, transparent 24px, transparent 48px);
   -webkit-background-size: 1px 48px;
-  background-size: 1px 48px;
+          background-size: 1px 48px;
   /* this is a 24px baseline grid */
   text-align: center;
   -webkit-transition: all 0.3s ease-in-out;
@@ -448,7 +446,6 @@ a img {
   margin: 1.5em 0 0.75em 0;
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .menu-unset > ul a:only-child,
@@ -615,10 +612,10 @@ a img {
     background: #111111;
     text-align: center;
     -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease;
     -webkit-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
   }
   .menu-unset > ul ul li,
   .menu-unset > ul ul a,
@@ -631,8 +628,8 @@ a img {
     top: 24px;
     opacity: 1;
     -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .menu-unset > ul ul a,
   .menu-primary-items ul a {
@@ -653,8 +650,8 @@ a img {
     top: 24px;
     opacity: 1;
     -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .menu-unset > ul ul ul,
   .menu-primary-items ul ul {
@@ -677,7 +674,7 @@ a img {
   position: relative;
   z-index: 9;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .excerpt {
@@ -685,7 +682,7 @@ a img {
   background: white;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .featured-image {
@@ -693,22 +690,22 @@ a img {
   height: 0;
   padding-bottom: 50%;
   background-position: 50%;
-  -webkit-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: cover cover;
+          background-size: cover;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
+          transition: transform 0.3s ease;
 }
 
 .featured-image-link {
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 .featured-image-link:hover .featured-image, .featured-image-link:active .featured-image, .featured-image-link:focus .featured-image {
   -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
   -moz-transform: scale(1.05) rotate(0.02deg);
 }
 
@@ -774,8 +771,8 @@ a img {
 }
 .more-link:hover:after, .more-link:active:after, .more-link:focus:after {
   -webkit-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
 }
 .more-link:after {
   content: '';
@@ -790,11 +787,10 @@ a img {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -844,8 +840,7 @@ a img {
 
   .excerpt {
     -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
+            transform: translateZ(0);
     /* fix weird chrome wiggle glitch */
     position: relative;
     clear: both;
@@ -856,7 +851,6 @@ a img {
     transition: opacity 0.2s ease;
     -webkit-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
     backface-visibility: hidden;
   }
   .excerpt .featured-image {
@@ -867,7 +861,6 @@ a img {
     right: 0;
     -webkit-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
     backface-visibility: hidden;
   }
   .excerpt:hover {
@@ -1341,7 +1334,7 @@ li.pingback:after {
   letter-spacing: 0.06em;
   opacity: 0.4;
   -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
+          transition: opacity 0.2s ease;
 }
 .site-footer h3:hover, .site-footer h3:active, .site-footer h3:focus {
   opacity: 0.9;
@@ -1397,13 +1390,13 @@ li.pingback:after {
     line-height: 4em;
     outline: none;
     -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+            transition: all 0.3s ease;
   }
   .return-top i {
     position: relative;
     top: 0;
     -webkit-transition: top 0.3s ease;
-    transition: top 0.3s ease;
+            transition: top 0.3s ease;
   }
 
   .return-top.visible {
@@ -1601,7 +1594,7 @@ li.pingback:after {
   padding: 0;
   outline: none;
   -webkit-transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
+          transition: transform 0.3s ease;
 }
 .toggle-secondary-navigation:hover {
   cursor: pointer;
@@ -1618,7 +1611,7 @@ li.pingback:after {
   margin: 0;
   background: #111111;
   -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 .menu-secondary-items a {
   color: #8c8c8c;
@@ -1639,7 +1632,7 @@ li.pingback:after {
 /* when secondary menu is open */
 #main, #title-info, #toggle-navigation, #site-header {
   -webkit-transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
+          transition: transform 0.3s ease;
 }
 
 .secondary-toggle .site-header {
@@ -1648,8 +1641,8 @@ li.pingback:after {
 .secondary-toggle .toggle-secondary-navigation {
   opacity: 0.9;
   -webkit-transform: rotate(315deg);
-  -ms-transform: rotate(315deg);
-  transform: rotate(315deg);
+      -ms-transform: rotate(315deg);
+          transform: rotate(315deg);
 }
 .secondary-toggle .menu-secondary-items {
   z-index: 1;
@@ -1697,10 +1690,10 @@ li.pingback:after {
     background: #111111;
     text-align: center;
     -webkit-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
     -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease;
   }
   .menu-secondary-items ul li,
   .menu-secondary-items ul a {
@@ -1720,15 +1713,15 @@ li.pingback:after {
     top: 1.5em;
     opacity: 1;
     -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .menu-secondary-items a:hover + ul, .menu-secondary-items a:active + ul, .menu-secondary-items a:focus + ul {
     top: 1.5em;
     opacity: 1;
     -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
   .menu-secondary-items ul ul:hover {
     left: 100%;
@@ -1775,7 +1768,7 @@ li.pingback:after {
     margin: 0 -12px 0 0;
     outline: none;
     -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+            transition: all 0.3s ease;
   }
   .site-header .search-form-container button:hover i, .site-header .search-form-container button:active i, .site-header .search-form-container button:focus i {
     opacity: 0.9;
@@ -1790,7 +1783,7 @@ li.pingback:after {
     opacity: 0.4;
     line-height: 1.5;
     -webkit-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease;
   }
   .site-header .search-form-container input {
     margin: 0;
@@ -1805,7 +1798,7 @@ li.pingback:after {
     width: 20em;
     height: 100%;
     -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+            transition: all 0.3s ease;
   }
   .site-header .search-form-container input.search-field {
     width: 80%;
@@ -1821,8 +1814,8 @@ li.pingback:after {
 
   .search-open .site-header .search-form {
     -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   .search-open .site-header .search-form-container i {
     opacity: 0.9;

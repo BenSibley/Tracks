@@ -10,43 +10,49 @@
     .excerpt {
       margin-bottom: $baseline-height * 2;
       position: relative;
+      background: none;
 
-      .featured-image:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        background: rgba(17, 17, 17, 0.9);
-        transition: all 0.7s ease;
-      }
       &.even {
 
         .featured-image {
           right: 0;
         }
       }
-      &:hover {
+      // show the description
+      &.show-description {
 
-        .featured-image:after {
-          opacity: 1;
-        }
         .excerpt-container {
           opacity: 1;
-          transform: translateY(0);
+          visibility: visible;
+        }
+        .content-container {
+          opacity: 1;
         }
       }
     }
     .excerpt-container {
-      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      margin: auto;
       padding: 0 22.22%;
       color: white;
-      background: none;
+      background: rgba(17,17,17,0.9);
       opacity: 0;
-      transform: translateY(6px);
-      transition: all 0.4s 0.1s ease;
+      visibility: hidden;
+      transition: all 0.4s ease;
+
+      td {
+        border: none;
+      }
+    }
+    .content-container {
+      opacity: 0;
+      padding: 0 $baseline-height;
+      transition: opacity 0.4s 0.1s ease;
     }
     .excerpt-meta a,
     .excerpt-title a,
@@ -68,65 +74,97 @@
       background: $gray-light;
     }
     .featured-image {
-      width: 100%;
-      position: absolute;
+      width: auto;
+      height: auto;
+      position: relative;
+      padding-bottom: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
 
 /* 2:1 image-height setup */
 
-.full-width-images.image-height {
-
-  .excerpt-container {
-    border: none;
-    margin: 0;
-  }
-  .content-container {
-    border: none;
-    margin: 0;
-    padding: 0 5.55%;
-  }
-}
 /* 800px */
 @media all and (min-width: 50em){
 
-  .full-width-images.image-height {
+  .full-width-images.ratio {
 
-    .excerpt-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      margin: auto;
-    }
-    .content-container {
-      padding: 0 22.22%;
-    }
-    .excerpt-meta {
-      padding-top: 0;
-    }
     .featured-image {
       position: relative;
       height: 0;
       padding-bottom: 50%;
     }
-    .excerpt-content {
-      padding-bottom: 0;
-    }
   }
 }
 
-/* 1200px */
-@media all and (min-width: 75em){
+.full-width-images.content-based {
 
-  .full-width-images.image-height {
+  .excerpt {
+    margin-bottom: $baseline-height * 2;
+    position: relative;
 
-    .excerpt-title {
-      font-size: 2.625em; /* 42px / 16px */
-      line-height: 1.143;
+    .featured-image:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      background: rgba(17, 17, 17, 0.9);
+      transition: all 0.7s ease;
     }
+    &.even {
+
+      .featured-image {
+        right: 0;
+      }
+    }
+    &:hover {
+
+      .featured-image:after {
+        opacity: 1;
+      }
+      .excerpt-container {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  .excerpt-container {
+    width: 100%;
+    padding: 0 22.22%;
+    color: white;
+    background: none;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 0.4s 0.1s ease;
+  }
+  .excerpt-meta a,
+  .excerpt-title a,
+  .more-link {
+    color: $gray-light;
+
+    &:link,
+    &:visited {
+      color: $gray-light;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+    }
+  }
+  .excerpt-header:after,
+  .more-link:after {
+    background: $gray-light;
+  }
+  .featured-image {
+    width: 100%;
+    position: absolute;
   }
 }

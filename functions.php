@@ -374,7 +374,7 @@ function ct_tracks_featured_image() {
 
         if (has_post_thumbnail( $post->ID ) ) {
 
-            if(get_theme_mod('premium_layouts_setting') == 'full-width' || get_theme_mod('premium_layouts_setting') == 'full-width-images'){
+            if(get_theme_mod('premium_layouts_setting') == 'full-width' || get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images'){
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
             } else {
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog' );
@@ -388,7 +388,13 @@ function ct_tracks_featured_image() {
         $has_image = true;
     }
     if ($has_image == true) {
-        echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
+        if(get_theme_mod('premium_layouts_full_width_image_height') == 'image' || get_theme_mod('premium_layouts_settings') == 'two-column-images'){
+            echo "<img class='featured-image' src='$image' />";
+        }
+        else {
+            echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
+        }
+
     }
 }
 
@@ -417,8 +423,8 @@ function ct_tracks_body_class( $classes ) {
     elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
         $classes[] = 'full-width-images';
 
-        if(get_theme_mod('premium_layouts_full_width_image_height') == 'image'){
-            $classes[] = 'image-height';
+        if(get_theme_mod('premium_layouts_full_width_image_height') == '2:1-ratio'){
+            $classes[] = 'ratio';
         }
     }
     elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){

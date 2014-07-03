@@ -157,6 +157,25 @@ jQuery(document).ready(function($){
     }
     removeLayoutGaps();
 
+    // ===== Full-width Images - Click to show description ===== //
+
+    $(".full-width-images").find('.featured-image').bind('click', clickShowDescription);
+    $(".two-column-images").find('.featured-image').bind('click', clickShowDescription);
+
+    // remove class from all other .excerpts, and add to select one
+    function clickShowDescription(){
+        $('.excerpt').removeClass('show-description');
+        $(this).parent().addClass('show-description');
+    }
+    clickShowDescription();
+
+    // if clicked element is an ancestor, remove class
+    $(document).click(function(event) {
+        if(!$(event.target).closest('.excerpt').length) {
+            $('.excerpt').removeClass('show-description');
+        }
+    });
+
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */
