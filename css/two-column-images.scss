@@ -25,6 +25,7 @@
       clear: none;
       background: none;
       position: relative;
+      line-height: 0; // get rid of extra height at bottom
 
       &.even {
 
@@ -101,11 +102,17 @@
       padding-top: $baseline-height / 0.813;
     }
     .excerpt-header {
-      padding-bottom: $baseline-height;
+
+      &:after {
+        display: none;
+      }
     }
     .excerpt-title {
       font-size: 1.313em; /* 21px / 16px */
       line-height: 1.143;
+    }
+    .excerpt-content {
+      padding-top: 0;
     }
     .excerpt-meta a,
     .excerpt-title a,
