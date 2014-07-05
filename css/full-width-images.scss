@@ -2,6 +2,28 @@
 
 /* Full-width Images layout styles */
 
+.full-width-images {
+
+  .excerpt,
+  .entry {
+    line-height: 0; // remove space below featured image
+  }
+  .entry-container {
+    line-height: 1.5;
+  }
+  .featured-image {
+    height: auto;
+    padding-bottom: 0;
+  }
+  .excerpt-container {
+    margin-top: 0;
+  }
+  .content-container {
+    border: none;
+    padding: 0 5.55%;
+  }
+}
+
 /* 800px */
 @media all and (min-width: 50em){
 
@@ -27,6 +49,12 @@
         }
         .content-container {
           opacity: 1;
+        }
+      }
+      .featured-image {
+
+        &:hover {
+          cursor: pointer;
         }
       }
     }
@@ -78,10 +106,19 @@
       height: auto;
       position: relative;
       padding-bottom: 0;
+    }
+  }
+  /* post page */
 
-      &:hover {
-        cursor: pointer;
-      }
+  // in case image isn't width of post
+  .entry {
+
+    .featured-image {
+      display: block;
+      margin: 0 auto;
+    }
+    .featured-image-container {
+      background: $gray-dark;
     }
   }
 }

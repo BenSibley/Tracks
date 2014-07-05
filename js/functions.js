@@ -176,6 +176,16 @@ jQuery(document).ready(function($){
         }
     });
 
+    // ===== Full-width Images - create separation between image and post ===== //
+
+    function separatePostImage(){
+
+        if($('.featured-image').width() < $('.featured-image-container').width()){
+            $('.featured-image-container').css('padding-bottom',48);
+        }
+    }
+    separatePostImage();
+
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */

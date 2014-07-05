@@ -11,8 +11,6 @@ function ct_tracks_load_javascript_files() {
         wp_enqueue_style('ct-tracks-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
         wp_enqueue_style('style', get_template_directory_uri() . 'style.min.css');
 
-        // Enqueue premium layout stylesheets
-        if(is_home() || is_archive()){
 
             if(get_theme_mod('premium_layouts_setting') == 'full-width'){
                 wp_enqueue_style('ct-tracks-full-width', get_template_directory_uri() . '/css/full-width.min.css');
@@ -26,7 +24,6 @@ function ct_tracks_load_javascript_files() {
             elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
                 wp_enqueue_style('ct-tracks-two-column-images', get_template_directory_uri() . '/css/two-column-images.min.css');
             }
-        }
     }
     // enqueues the comment-reply script on posts & pages.  This script is included in WP by default
     if( is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' );

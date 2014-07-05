@@ -31,5 +31,11 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 @media all and (min-width: 56.25em) {
   .full-width .excerpt {
     margin-bottom: 3em;
+    opacity: 1;
+  }
+  .full-width .excerpt-header h1 {
+    font-size: 2.625em;
+    /* 42px / 16px */
+    line-height: 1.143;
   }
 }
