@@ -4,12 +4,48 @@
 
 @import "../sass/variables";
 
+.two-column-images {
+
+  .excerpt,
+  .entry {
+    line-height: 0; // remove space below featured image
+  }
+  .entry-container {
+    line-height: 1.5;
+  }
+  .featured-image {
+    height: auto;
+    padding-bottom: 0;
+  }
+  .excerpt-container {
+    margin: 0;
+    width: 100%;
+  }
+  .content-container {
+    border: none;
+    padding: 0 5.55%;
+  }
+  /* post page */
+
+  // in case image isn't width of post
+  .entry {
+
+    .featured-image {
+      display: block;
+      margin: 0 auto;
+    }
+    .featured-image-container {
+      background: $gray-dark;
+    }
+  }
+}
+
 /* 900px */
 @media all and (min-width: 56.25em){
 
-  .two-column-images {
+  .two-column-images.home,
+  .two-column-images.archive {
 
-    /* two-column CSS */
     .main {
       width: 91.665%;
 
@@ -17,6 +53,9 @@
         @include clearfix;
       }
     }
+  }
+  .two-column-images {
+
     .excerpt {
       width: 47.225%;
       display: block;
@@ -62,15 +101,17 @@
           right: 0;
         }
       }
+      .featured-image {
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
     .featured-image {
       position: relative;
       width: auto;
       height: auto;
-
-      &:hover {
-        cursor: pointer;
-      }
     }
     .excerpt-container {
       position: absolute;
@@ -80,6 +121,7 @@
       left: 0;
       height: 100%;
       width: 100%;
+      max-width: 600px;
       margin: auto;
       padding: 0 11.11%;
       color: white;
@@ -112,7 +154,7 @@
       line-height: 1.143;
     }
     .excerpt-content {
-      padding-top: 0;
+      padding: 0;
     }
     .excerpt-meta a,
     .excerpt-title a,
@@ -136,6 +178,17 @@
     .loop-pagination {
       clear: both;
       padding-top: $baseline-height * 3;
+    }
+  }
+}
+/* 1600px */
+@media all and (min-width: 100em){
+
+  .two-column-images {
+
+    .excerpt-title {
+      font-size: 2.375em;
+      line-height: 1.263;
     }
   }
 }

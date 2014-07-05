@@ -5,7 +5,8 @@
 /* 900px */
 @media all and (min-width: 56.25em){
 
-  .two-column {
+  .two-column.home,
+  .two-column.archive {
 
     .main {
       width: 91.665%;
@@ -14,6 +15,9 @@
         @include clearfix;
       }
     }
+  }
+  .two-column {
+
     .excerpt {
       width: 47.225%;
       display: block;
@@ -43,6 +47,9 @@
     .loop-pagination {
       clear: both;
       padding-top: $baseline-height * 3;
+    }
+    .archive-header {
+      margin-left: 1.3875%;
     }
   }
 }

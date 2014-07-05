@@ -13,10 +13,12 @@ background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0
 background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* 900px */
 @media all and (min-width: 56.25em) {
-  .two-column .main {
+  .two-column.home .main,
+  .two-column.archive .main {
     width: 91.665%;
   }
-  .two-column .main:after {
+  .two-column.home .main:after,
+  .two-column.archive .main:after {
     content: ".";
     display: block;
     clear: both;
@@ -24,6 +26,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     line-height: 0;
     height: 0;
   }
+
   .two-column .excerpt {
     width: 47.225%;
     display: block;
@@ -49,5 +52,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   .two-column .loop-pagination {
     clear: both;
     padding-top: 4.5em;
+  }
+  .two-column .archive-header {
+    margin-left: 1.3875%;
   }
 }

@@ -23,7 +23,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   padding-bottom: 0;
 }
 .full-width-images .excerpt-container {
-  margin-top: 0;
+  margin: 0;
+  width: 100%;
 }
 .full-width-images .content-container {
   border: none;
@@ -57,6 +58,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     bottom: 0;
     left: 0;
     height: 100%;
+    width: 50%;
     margin: auto;
     padding: 0 22.22%;
     color: white;
