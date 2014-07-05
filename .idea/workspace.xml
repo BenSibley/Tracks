@@ -40,7 +40,7 @@
       <file leaf-file-name="functions-admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="258" column="47" selection-start="7830" selection-end="7830" vertical-scroll-proportion="0.5088235" vertical-offset="3524" max-vertical-offset="8700">
+            <state line="246" column="26" selection-start="7424" selection-end="7424" vertical-scroll-proportion="0.24411765" vertical-offset="3524" max-vertical-offset="8700">
               <folding />
             </state>
           </provider>
@@ -890,7 +890,11 @@
       <created>1404570167327</created>
       <updated>1404570167327</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="added custom excerpt length to customizer">
+      <created>1404570727589</created>
+      <updated>1404570727589</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -935,7 +939,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added two-column layout to theme options and customizer and added stylesheets" />
     <MESSAGE value="updated gruntfile for two-column layout." />
     <MESSAGE value="added basic styling for two-column layout" />
     <MESSAGE value="added jquery function to handle positioning adjustments of excerpts" />
@@ -960,7 +963,8 @@
     <MESSAGE value="more layout designing." />
     <MESSAGE value="fixed featured-image function conditional logic" />
     <MESSAGE value="more style updates - mostly for full-width-images" />
-    <option name="LAST_COMMIT_MESSAGE" value="more style updates - mostly for full-width-images" />
+    <MESSAGE value="added custom excerpt length to customizer" />
+    <option name="LAST_COMMIT_MESSAGE" value="added custom excerpt length to customizer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1247,7 +1251,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions-admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="258" column="47" selection-start="7830" selection-end="7830" vertical-scroll-proportion="0.5088235" vertical-offset="3524" max-vertical-offset="8700">
+        <state line="246" column="26" selection-start="7424" selection-end="7424" vertical-scroll-proportion="0.24411765" vertical-offset="3524" max-vertical-offset="8700">
           <folding />
         </state>
       </provider>

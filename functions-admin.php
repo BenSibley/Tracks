@@ -266,7 +266,7 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
         new ct_tracks_number_input_control(
             $wp_customize, 'additional_options_excerpt_length_settings',
             array(
-                'label' => 'Change length of automatic excerpts',
+                'label' => 'Word count in automatic excerpts',
                 'section' => 'ct_tracks_additional_options',
                 'settings' => 'additional_options_excerpt_length_settings',
                 'type' => 'number',
