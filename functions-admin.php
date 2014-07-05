@@ -228,6 +228,20 @@ function ct_tracks_sanitize_tagline_display($input){
 
 function ct_tracks_customizer_additional_options( $wp_customize ) {
 
+    /* create custom control for number input */
+    class ct_tracks_number_input_control extends WP_Customize_Control {
+        public $type = 'number';
+
+        public function render_content() {
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <input type="number" <?php $this->link(); ?> value="<?php echo $this->value(); ?>" />
+            </label>
+        <?php
+        }
+    }
+
     /* section */
     $wp_customize->add_section(
         'ct_tracks_additional_options',
@@ -235,6 +249,28 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
             'title'      => esc_html__( 'Additional Options', 'tracks' ),
             'priority'   => 80,
             'capability' => 'edit_theme_options'
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'additional_options_excerpt_length_settings',
+        array(
+            'default'           => 15,
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'absint',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        new ct_tracks_number_input_control(
+            $wp_customize, 'additional_options_excerpt_length_settings',
+            array(
+                'label' => 'Change length of automatic excerpts',
+                'section' => 'ct_tracks_additional_options',
+                'settings' => 'additional_options_excerpt_length_settings',
+                'type' => 'number',
+            )
         )
     );
     /* setting */

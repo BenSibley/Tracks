@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="fixed featured-image function conditional logic">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content.php" afterPath="$PROJECT_DIR$/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width-images.css" afterPath="$PROJECT_DIR$/css/full-width-images.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width-images.min.css" afterPath="$PROJECT_DIR$/css/full-width-images.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width-images.scss" afterPath="$PROJECT_DIR$/css/full-width-images.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width.css" afterPath="$PROJECT_DIR$/css/full-width.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width.min.css" afterPath="$PROJECT_DIR$/css/full-width.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width.scss" afterPath="$PROJECT_DIR$/css/full-width.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -39,10 +29,19 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="35" selection-start="701" selection-end="701" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="8685">
+            <state line="14" column="35" selection-start="701" selection-end="701" vertical-scroll-proportion="85.5" vertical-offset="4485" max-vertical-offset="8685">
               <folding>
                 <marker date="1404569448000" expanded="true" signature="10190:10421" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions-admin.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions-admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="258" column="47" selection-start="7830" selection-end="7830" vertical-scroll-proportion="0.5088235" vertical-offset="3524" max-vertical-offset="8700">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="full-width-images.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="full-width-images.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/full-width-images.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="29" selection-start="692" selection-end="692" vertical-scroll-proportion="0.4798331" vertical-offset="285" max-vertical-offset="3180">
+            <state line="48" column="9" selection-start="812" selection-end="812" vertical-scroll-proportion="-18.125" vertical-offset="285" max-vertical-offset="3180">
               <folding />
             </state>
           </provider>
@@ -168,12 +167,12 @@
         <option value="$PROJECT_DIR$/gruntfile.js" />
         <option value="$PROJECT_DIR$/theme-options.php" />
         <option value="$PROJECT_DIR$/css/two-column-images.scss" />
-        <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/css/full-width.scss" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/content.php" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/css/full-width-images.scss" />
+        <option value="$PROJECT_DIR$/functions-admin.php" />
       </list>
     </option>
   </component>
@@ -887,13 +886,18 @@
       <created>1404479469803</created>
       <updated>1404479469803</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="more style updates - mostly for full-width-images">
+      <created>1404570167327</created>
+      <updated>1404570167327</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="502" y="-1058" width="1052" height="1058" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17805383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -909,7 +913,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32298136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -932,7 +935,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="added styling for full-width layout with full-post turned on." />
     <MESSAGE value="added two-column layout to theme options and customizer and added stylesheets" />
     <MESSAGE value="updated gruntfile for two-column layout." />
     <MESSAGE value="added basic styling for two-column layout" />
@@ -957,7 +959,8 @@
     <MESSAGE value="continued layout designs." />
     <MESSAGE value="more layout designing." />
     <MESSAGE value="fixed featured-image function conditional logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed featured-image function conditional logic" />
+    <MESSAGE value="more style updates - mostly for full-width-images" />
+    <option name="LAST_COMMIT_MESSAGE" value="more style updates - mostly for full-width-images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1163,19 +1166,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="406" column="64" selection-start="12552" selection-end="12552" vertical-scroll-proportion="0.64128846" vertical-offset="5652" max-vertical-offset="8160">
-          <folding>
-            <marker date="1404482120000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1404482120000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1404482120000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1404482120000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1404482120000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/two-column.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="21" selection-start="0" selection-end="783" vertical-scroll-proportion="0.13072777" vertical-offset="53" max-vertical-offset="795">
@@ -1225,15 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="701" selection-end="701" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="8685">
-          <folding>
-            <marker date="1404569448000" expanded="true" signature="10190:10421" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="32" selection-start="386" selection-end="386" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="1740">
@@ -1250,7 +1231,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/full-width-images.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="29" selection-start="692" selection-end="692" vertical-scroll-proportion="0.4798331" vertical-offset="285" max-vertical-offset="3180">
+        <state line="48" column="9" selection-start="812" selection-end="812" vertical-scroll-proportion="-18.125" vertical-offset="285" max-vertical-offset="3180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="35" selection-start="701" selection-end="701" vertical-scroll-proportion="85.5" vertical-offset="4485" max-vertical-offset="8685">
+          <folding>
+            <marker date="1404569448000" expanded="true" signature="10190:10421" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="258" column="47" selection-start="7830" selection-end="7830" vertical-scroll-proportion="0.5088235" vertical-offset="3524" max-vertical-offset="8700">
           <folding />
         </state>
       </provider>
