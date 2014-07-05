@@ -316,8 +316,18 @@ add_filter('the_excerpt', 'ct_tracks_excerpt_read_more_link');
 
 // change the length of the excerpts
 function ct_tracks_custom_excerpt_length( $length ) {
-    return 15;
+
+    $new_excerpt_length = get_theme_mod('additional_options_excerpt_length_settings');
+
+    // if there is a new length set and it's not 15, change it
+    if(!empty($new_excerpt_length) && $new_excerpt_length != 15){
+        return $new_excerpt_length;
+    } else {
+        return 15;
+    }
+
 }
+
 add_filter( 'excerpt_length', 'ct_tracks_custom_excerpt_length', 999 );
 
 // switch [...] to ellipsis on automatic excerpt
@@ -569,6 +579,5 @@ function ct_tracks_category_link(){
     $html = "<a href='" . $category_link . "'>" . $category_name . "</a>";
     echo $html;
 }
-
 
 ?>

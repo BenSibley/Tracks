@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -26,21 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="35" selection-start="701" selection-end="701" vertical-scroll-proportion="85.5" vertical-offset="4485" max-vertical-offset="8685">
+            <state line="322" column="38" selection-start="12370" selection-end="12370" vertical-scroll-proportion="0.5588235" vertical-offset="4450" max-vertical-offset="8820">
               <folding>
-                <marker date="1404569448000" expanded="true" signature="10190:10421" placeholder="..." />
+                <marker date="1404570980000" expanded="true" signature="10190:10421" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions-admin.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions-admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="246" column="26" selection-start="7424" selection-end="7424" vertical-scroll-proportion="0.24411765" vertical-offset="3524" max-vertical-offset="8700">
+            <state line="255" column="9" selection-start="7684" selection-end="7726" vertical-scroll-proportion="-6.02" vertical-offset="3524" max-vertical-offset="8700">
               <folding />
             </state>
           </provider>
@@ -168,11 +168,11 @@
         <option value="$PROJECT_DIR$/theme-options.php" />
         <option value="$PROJECT_DIR$/css/two-column-images.scss" />
         <option value="$PROJECT_DIR$/css/full-width.scss" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/content.php" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/css/full-width-images.scss" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
       </list>
     </option>
   </component>
@@ -894,7 +894,11 @@
       <created>1404570727589</created>
       <updated>1404570727589</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="improved copy in excerpt length option">
+      <created>1404570831571</created>
+      <updated>1404570831571</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -939,7 +943,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="updated gruntfile for two-column layout." />
     <MESSAGE value="added basic styling for two-column layout" />
     <MESSAGE value="added jquery function to handle positioning adjustments of excerpts" />
     <MESSAGE value="removed JS function for two-column layout." />
@@ -964,7 +967,8 @@
     <MESSAGE value="fixed featured-image function conditional logic" />
     <MESSAGE value="more style updates - mostly for full-width-images" />
     <MESSAGE value="added custom excerpt length to customizer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added custom excerpt length to customizer" />
+    <MESSAGE value="improved copy in excerpt length option" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved copy in excerpt length option" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1240,19 +1244,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
+    <entry file="file://$PROJECT_DIR$/functions-admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="701" selection-end="701" vertical-scroll-proportion="85.5" vertical-offset="4485" max-vertical-offset="8685">
-          <folding>
-            <marker date="1404569448000" expanded="true" signature="10190:10421" placeholder="..." />
-          </folding>
+        <state line="255" column="9" selection-start="7684" selection-end="7726" vertical-scroll-proportion="-6.02" vertical-offset="3524" max-vertical-offset="8700">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
+    <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="26" selection-start="7424" selection-end="7424" vertical-scroll-proportion="0.24411765" vertical-offset="3524" max-vertical-offset="8700">
-          <folding />
+        <state line="322" column="38" selection-start="12370" selection-end="12370" vertical-scroll-proportion="0.5588235" vertical-offset="4450" max-vertical-offset="8820">
+          <folding>
+            <marker date="1404570980000" expanded="true" signature="10190:10421" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
