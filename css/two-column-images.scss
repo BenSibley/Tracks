@@ -25,18 +25,18 @@
     border: none;
     padding: 0 5.55%;
   }
-  /* post page */
+}
+/* post page */
 
-  // in case image isn't width of post
-  .entry {
+// in case image isn't width of post
+.singular-post {
 
-    .featured-image {
-      display: block;
-      margin: 0 auto;
-    }
-    .featured-image-container {
-      background: $gray-dark;
-    }
+  .featured-image {
+    display: block;
+    margin: 0 auto;
+  }
+  .featured-image-container {
+    background: $gray-dark;
   }
 }
 

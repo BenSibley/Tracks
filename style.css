@@ -1430,7 +1430,7 @@ li.pingback:after {
 
 .singular-page .featured-image {
   margin-top: -3em;
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 
 .error-404 input,
@@ -1480,6 +1480,10 @@ li.pingback:after {
 }
 /* 900px */
 @media all and (min-width: 56.25em) {
+  .singular-page .featured-image {
+    margin-bottom: 3em;
+  }
+
   .search-form-container {
     margin: 1.5em 0 4.5em;
   }

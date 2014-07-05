@@ -12,7 +12,7 @@
 
   .featured-image {
     margin-top: -$baseline-height * 2;
-    margin-bottom: $baseline-height * 2;
+    margin-bottom: $baseline-height;
   }
 }
 .error-404,
@@ -70,6 +70,12 @@
 /* 900px */
 @media all and (min-width: 56.25em) {
 
+  .singular-page {
+
+    .featured-image {
+      margin-bottom: $baseline-height * 2;
+    }
+  }
   .search-form-container {
     margin: $baseline-height 0 $baseline-height * 3;
   }

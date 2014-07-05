@@ -110,89 +110,17 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   }
 
   /* post page */
-  .entry .featured-image {
+  .singular-post .featured-image {
     display: block;
     margin: 0 auto;
   }
-  .entry .featured-image-container {
+  .singular-post .featured-image-container {
     background: #222222;
   }
 }
 /* 2:1 image-height setup */
-/* 800px */
-@media all and (min-width: 50em) {
-  .full-width-images.ratio .featured-image {
-    position: relative;
-    height: 0;
-    padding-bottom: 50%;
-  }
-}
-.full-width-images.content-based .excerpt {
-  margin-bottom: 3em;
+.full-width-images.ratio .featured-image {
   position: relative;
-}
-.full-width-images.content-based .excerpt .featured-image:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  background: rgba(17, 17, 17, 0.9);
-  -webkit-transition: all 0.7s ease;
-          transition: all 0.7s ease;
-}
-.full-width-images.content-based .excerpt.even .featured-image {
-  right: 0;
-}
-.full-width-images.content-based .excerpt:hover .featured-image:after {
-  opacity: 1;
-}
-.full-width-images.content-based .excerpt:hover .excerpt-container {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-}
-.full-width-images.content-based .excerpt-container {
-  width: 100%;
-  padding: 0 22.22%;
-  color: white;
-  background: none;
-  opacity: 0;
-  -webkit-transform: translateY(6px);
-      -ms-transform: translateY(6px);
-          transform: translateY(6px);
-  -webkit-transition: all 0.4s 0.1s ease;
-          transition: all 0.4s 0.1s ease;
-}
-.full-width-images.content-based .excerpt-meta a,
-.full-width-images.content-based .excerpt-title a,
-.full-width-images.content-based .more-link {
-  color: #aaaaaa;
-}
-.full-width-images.content-based .excerpt-meta a:link, .full-width-images.content-based .excerpt-meta a:visited,
-.full-width-images.content-based .excerpt-title a:link,
-.full-width-images.content-based .excerpt-title a:visited,
-.full-width-images.content-based .more-link:link,
-.full-width-images.content-based .more-link:visited {
-  color: #aaaaaa;
-}
-.full-width-images.content-based .excerpt-meta a:hover, .full-width-images.content-based .excerpt-meta a:active, .full-width-images.content-based .excerpt-meta a:focus,
-.full-width-images.content-based .excerpt-title a:hover,
-.full-width-images.content-based .excerpt-title a:active,
-.full-width-images.content-based .excerpt-title a:focus,
-.full-width-images.content-based .more-link:hover,
-.full-width-images.content-based .more-link:active,
-.full-width-images.content-based .more-link:focus {
-  color: white;
-}
-.full-width-images.content-based .excerpt-header:after,
-.full-width-images.content-based .more-link:after {
-  background: #aaaaaa;
-}
-.full-width-images.content-based .featured-image {
-  width: 100%;
-  position: absolute;
+  height: 0;
+  padding-bottom: 50%;
 }

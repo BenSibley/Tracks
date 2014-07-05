@@ -113,7 +113,7 @@
   /* post page */
 
   // in case image isn't width of post
-  .entry {
+  .singular-post {
 
     .featured-image {
       display: block;
@@ -127,83 +127,12 @@
 
 /* 2:1 image-height setup */
 
-/* 800px */
-@media all and (min-width: 50em){
 
-  .full-width-images.ratio {
+.full-width-images.ratio {
 
-    .featured-image {
-      position: relative;
-      height: 0;
-      padding-bottom: 50%;
-    }
-  }
-}
-
-.full-width-images.content-based {
-
-  .excerpt {
-    margin-bottom: $baseline-height * 2;
-    position: relative;
-
-    .featured-image:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      background: rgba(17, 17, 17, 0.9);
-      transition: all 0.7s ease;
-    }
-    &.even {
-
-      .featured-image {
-        right: 0;
-      }
-    }
-    &:hover {
-
-      .featured-image:after {
-        opacity: 1;
-      }
-      .excerpt-container {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  }
-  .excerpt-container {
-    width: 100%;
-    padding: 0 22.22%;
-    color: white;
-    background: none;
-    opacity: 0;
-    transform: translateY(6px);
-    transition: all 0.4s 0.1s ease;
-  }
-  .excerpt-meta a,
-  .excerpt-title a,
-  .more-link {
-    color: $gray-light;
-
-    &:link,
-    &:visited {
-      color: $gray-light;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      color: white;
-    }
-  }
-  .excerpt-header:after,
-  .more-link:after {
-    background: $gray-light;
-  }
   .featured-image {
-    width: 100%;
-    position: absolute;
+    position: relative;
+    height: 0;
+    padding-bottom: 50%;
   }
 }
