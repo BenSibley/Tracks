@@ -43,7 +43,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     height: 0;
     padding-bottom: 50%;
   }
-  .two-column .excerpt-container {
+  .two-column #main .excerpt-container {
     width: 100%;
   }
   .two-column .excerpt-meta {

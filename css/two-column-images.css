@@ -23,8 +23,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   height: auto;
   padding-bottom: 0;
 }
-.two-column-images .excerpt-container {
-  margin: 0;
+.two-column-images #main .excerpt-container {
+  margin: auto;
   width: 100%;
 }
 .two-column-images .content-container {

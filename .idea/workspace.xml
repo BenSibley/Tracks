@@ -2,29 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/full-width-images.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/full-width-images.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/licenses/full-width-images.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/full-width-images.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/full-width.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/full-width.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/licenses/full-width.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/full-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style-admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theme-options.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/two-column-images.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/two-column-images.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/licenses/two-column-images.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/two-column-images.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/two-column.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/two-column.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/licenses/two-column.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/two-column.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content.php" afterPath="$PROJECT_DIR$/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions-admin.php" afterPath="$PROJECT_DIR$/functions-admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gruntfile.js" afterPath="$PROJECT_DIR$/gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width.css" afterPath="$PROJECT_DIR$/css/full-width.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width.min.css" afterPath="$PROJECT_DIR$/css/full-width.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width.scss" afterPath="$PROJECT_DIR$/css/full-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column-images.css" afterPath="$PROJECT_DIR$/css/two-column-images.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column-images.min.css" afterPath="$PROJECT_DIR$/css/two-column-images.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column-images.scss" afterPath="$PROJECT_DIR$/css/two-column-images.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column.css" afterPath="$PROJECT_DIR$/css/two-column.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column.min.css" afterPath="$PROJECT_DIR$/css/two-column.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column.scss" afterPath="$PROJECT_DIR$/css/two-column.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -62,7 +50,25 @@
       <file leaf-file-name="full-width.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/full-width.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="840">
+            <state line="21" column="2" selection-start="272" selection-end="354" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="two-column-images.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/two-column-images.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="16" selection-start="393" selection-end="393" vertical-scroll-proportion="0.44850498" vertical-offset="45" max-vertical-offset="3015">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="two-column.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/two-column.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="14" selection-start="631" selection-end="631" vertical-scroll-proportion="-15.625" vertical-offset="225" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
@@ -77,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_info.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_info.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_info.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="0.31862745" vertical-offset="0" max-vertical-offset="612">
+            <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
@@ -153,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/menu-footer.php" />
         <option value="$PROJECT_DIR$/menu-secondary.php" />
         <option value="$PROJECT_DIR$/sass/_post.scss" />
         <option value="$PROJECT_DIR$/content-page.php" />
@@ -179,7 +184,6 @@
         <option value="$PROJECT_DIR$/licenses/full-width-images.php" />
         <option value="$PROJECT_DIR$/licenses/full-width.php" />
         <option value="$PROJECT_DIR$/licenses/two-column.php" />
-        <option value="$PROJECT_DIR$/css/two-column.scss" />
         <option value="$PROJECT_DIR$/sass/_gallery.scss" />
         <option value="$PROJECT_DIR$/sass/style.scss" />
         <option value="$PROJECT_DIR$/header.php" />
@@ -201,9 +205,11 @@
         <option value="$PROJECT_DIR$/content.php" />
         <option value="$PROJECT_DIR$/functions-admin.php" />
         <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/css/full-width.scss" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/sass/_info.scss" />
+        <option value="$PROJECT_DIR$/css/full-width.scss" />
+        <option value="$PROJECT_DIR$/css/two-column.scss" />
+        <option value="$PROJECT_DIR$/css/two-column-images.scss" />
       </list>
     </option>
   </component>
@@ -865,15 +871,20 @@
       <created>1404223414932</created>
       <updated>1404223414932</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="added all of the licensing and layout updates from layout branch">
+      <created>1405275709353</created>
+      <updated>1405275709353</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="518" y="-1053" width="1052" height="1040" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2616034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2616034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -881,13 +892,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33267328" sideWeight="0.21571429" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33267328" sideWeight="0.21571429" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17908902" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32298136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -910,7 +920,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="simplified content.php" />
     <MESSAGE value="put category link functionality into a function" />
     <MESSAGE value="refactored licensing form into a foreach for easy layout additions" />
     <MESSAGE value="added full-width-images template and update gruntfile" />
@@ -935,24 +944,13 @@
     <MESSAGE value="fixed bar on top of site appearing when user's didn't set the social media icon display yet" />
     <MESSAGE value="removed style-admin.css and function enqueueing it." />
     <MESSAGE value="merged with updates72 branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged with updates72 branch" />
+    <MESSAGE value="added all of the licensing and layout updates from layout branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="added all of the licensing and layout updates from layout branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="3" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="900" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="0" selection-start="5120" selection-end="5120" vertical-scroll-proportion="0.0" vertical-offset="2595" max-vertical-offset="2685">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="40" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="750" />
@@ -1228,13 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/full-width.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="185" column="7" selection-start="6941" selection-end="6941" vertical-scroll-proportion="0.0" vertical-offset="2619" max-vertical-offset="3420">
@@ -1244,7 +1235,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_info.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="0.31862745" vertical-offset="0" max-vertical-offset="612">
+        <state line="13" column="2" selection-start="727" selection-end="727" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/full-width.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="2" selection-start="272" selection-end="354" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/two-column.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="14" selection-start="631" selection-end="631" vertical-scroll-proportion="-15.625" vertical-offset="225" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/two-column-images.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="16" selection-start="393" selection-end="393" vertical-scroll-proportion="0.44850498" vertical-offset="45" max-vertical-offset="3015">
           <folding />
         </state>
       </provider>

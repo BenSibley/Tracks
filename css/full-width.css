@@ -20,7 +20,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   height: 0;
   padding-bottom: 50%;
 }
-.full-width .excerpt-container {
+.full-width #main .excerpt-container {
   width: 100%;
 }
 .full-width.full-post .excerpt-content {

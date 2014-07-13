@@ -17,8 +17,9 @@
     height: auto;
     padding-bottom: 0;
   }
-  .excerpt-container {
-    margin: 0;
+  // need specificity for override
+  #main .excerpt-container {
+    margin: auto;
     width: 100%;
   }
   .content-container {
