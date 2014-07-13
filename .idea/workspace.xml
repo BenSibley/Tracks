@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_pages.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a2669ca2365b814039a34a9d1a1ae23795bd6c43/_pages.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/_pages.scss" afterPath="$PROJECT_DIR$/sass/_pages.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width-images.css" afterPath="$PROJECT_DIR$/css/full-width-images.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width-images.min.css" afterPath="$PROJECT_DIR$/css/full-width-images.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/full-width-images.scss" afterPath="$PROJECT_DIR$/css/full-width-images.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.js" afterPath="$PROJECT_DIR$/js/build/production.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/build/production.min.js" afterPath="$PROJECT_DIR$/js/build/production.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.min.css" afterPath="$PROJECT_DIR$/style.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column-images.min.css" afterPath="$PROJECT_DIR$/css/two-column-images.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/two-column-images.scss" afterPath="$PROJECT_DIR$/css/two-column-images.scss" />
+    <list default="true" id="3ead8dfa-ecbf-4b8b-b8f0-5ab4a8c6d33f" name="Default" comment="pre">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="compete core.iws" />
@@ -40,42 +28,7 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="309" column="45" selection-start="11839" selection-end="11839" vertical-scroll-proportion="-3.7" vertical-offset="4450" max-vertical-offset="8820">
-              <folding>
-                <marker date="1404570980000" expanded="true" signature="7690:8677" placeholder="..." />
-                <marker date="1404570980000" expanded="true" signature="7760:8667" placeholder="..." />
-                <marker date="1404570980000" expanded="true" signature="7801:8330" placeholder="..." />
-                <marker date="1404570980000" expanded="true" signature="7882:8307" placeholder="..." />
-                <marker date="1404570980000" expanded="true" signature="8372:8648" placeholder="..." />
-                <marker date="1404570980000" expanded="true" signature="10190:10421" placeholder="..." />
-                <marker date="1404570980000" expanded="true" signature="20615:21359" placeholder="..." />
-                <marker date="1404570980000" expanded="true" signature="20692:21341" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions-admin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions-admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="255" column="9" selection-start="7684" selection-end="7726" vertical-scroll-proportion="-6.02" vertical-offset="3524" max-vertical-offset="8700">
-              <folding>
-                <marker date="1404570773000" expanded="true" signature="1192:1428" placeholder="..." />
-                <marker date="1404570773000" expanded="true" signature="7091:7315" placeholder="..." />
-                <marker date="1404570773000" expanded="true" signature="16462:17025" placeholder="..." />
-                <marker date="1404570773000" expanded="true" signature="16475:16535" placeholder="..." />
-                <marker date="1404570773000" expanded="true" signature="16638:16992" placeholder="..." />
-                <marker date="1404570773000" expanded="true" signature="16648:16752" placeholder="..." />
-                <marker date="1404570773000" expanded="true" signature="16762:16971" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="full-width.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/full-width.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="27" selection-start="647" selection-end="647" vertical-scroll-proportion="-28.125" vertical-offset="0" max-vertical-offset="840">
+            <state line="201" column="56" selection-start="7818" selection-end="7818" vertical-scroll-proportion="0.0" vertical-offset="2755" max-vertical-offset="8820">
               <folding />
             </state>
           </provider>
@@ -84,25 +37,52 @@
       <file leaf-file-name="two-column-images.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/two-column-images.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="14" selection-start="427" selection-end="427" vertical-scroll-proportion="-1.5" vertical-offset="300" max-vertical-offset="3000">
+            <state line="25" column="14" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="3000">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_pages.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_pages.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/_pages.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="18" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.5945946" vertical-offset="772" max-vertical-offset="1395">
+            <state line="68" column="0" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1395">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_post.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sass/_post.scss">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="204" column="2" selection-start="3067" selection-end="3152" vertical-scroll-proportion="-19.333334" vertical-offset="2596" max-vertical-offset="4080">
+            <state line="1468" column="1" selection-start="29172" selection-end="29172" vertical-scroll-proportion="0.0" vertical-offset="22020" max-vertical-offset="28080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="41" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1170">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_comments.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sass/_comments.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="16" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="3225">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_variables.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sass/_variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="1" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2445">
               <folding />
             </state>
           </provider>
@@ -111,16 +91,7 @@
       <file leaf-file-name="two-column.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/two-column.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="2" selection-start="118" selection-end="256" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="900">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_base.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sass/_base.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="2" selection-start="983" selection-end="1042" vertical-scroll-proportion="-7.625" vertical-offset="672" max-vertical-offset="4365">
+            <state line="7" column="2" selection-start="118" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
@@ -129,16 +100,16 @@
       <file leaf-file-name="full-width-images.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/full-width-images.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="16" selection-start="2035" selection-end="2035" vertical-scroll-proportion="-14.375" vertical-offset="1410" max-vertical-offset="2160">
+            <state line="117" column="16" selection-start="2035" selection-end="2035" vertical-scroll-proportion="0.0" vertical-offset="1755" max-vertical-offset="2160">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="32" selection-start="5620" selection-end="5620" vertical-scroll-proportion="0.0" vertical-offset="1820" max-vertical-offset="3390">
+            <state line="26" column="5" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.57101023" vertical-offset="0" max-vertical-offset="3390">
               <folding />
             </state>
           </provider>
@@ -213,10 +184,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="221" />
-    <option name="y" value="22" />
+    <option name="x" value="450" />
+    <option name="y" value="-1050" />
     <option name="width" value="1052" />
-    <option name="height" value="778" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -244,7 +215,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -357,6 +327,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -941,32 +912,36 @@
       <created>1404575728613</created>
       <updated>1404575728613</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="more style updates">
+      <created>1404580878173</created>
+      <updated>1404580878173</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="221" y="22" width="1052" height="778" extended-state="0" />
-    <editor active="true" />
+    <frame x="450" y="-1050" width="1052" height="1040" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13556851" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21202531" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25247526" sideWeight="0.78246206" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28217822" sideWeight="0.78246206" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25247526" sideWeight="0.2158516" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25247526" sideWeight="0.2158516" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17908902" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32298136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -986,7 +961,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="removed JS function for two-column layout." />
     <MESSAGE value="removed JS function to show/hide additional premium layout options." />
     <MESSAGE value="deleted premium layout CSS" />
     <MESSAGE value="deleted licensing files" />
@@ -1011,7 +985,8 @@
     <MESSAGE value="improved copy in excerpt length option" />
     <MESSAGE value="updated excerpt length function to account for custom lengths." />
     <MESSAGE value="more styling for updated layouts." />
-    <option name="LAST_COMMIT_MESSAGE" value="more styling for updated layouts." />
+    <MESSAGE value="more style updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="more style updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1027,11 +1002,6 @@
         <state line="55" column="18" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="1725" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_comments.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="16" selection-start="1502" selection-end="1507" vertical-scroll-proportion="0.3328841" vertical-offset="1268" max-vertical-offset="3225" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/searchform.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="26" selection-start="62" selection-end="62" vertical-scroll-proportion="0.020491803" vertical-offset="0" max-vertical-offset="732" />
@@ -1040,11 +1010,6 @@
     <entry file="file://$PROJECT_DIR$/menu-primary.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="4" selection-start="242" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="270" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="228" selection-end="228" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="2445" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_footer.scss">
@@ -1095,11 +1060,6 @@
     <entry file="file://$PROJECT_DIR$/attachment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content-404.php">
@@ -1162,11 +1122,6 @@
         <state line="17" column="37" selection-start="324" selection-end="324" vertical-scroll-proportion="0.3445946" vertical-offset="0" max-vertical-offset="740" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="548" selection-end="548" vertical-scroll-proportion="0.16506189" vertical-offset="0" max-vertical-offset="30525" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="8" selection-start="87" selection-end="486" vertical-scroll-proportion="0.10474861" vertical-offset="0" max-vertical-offset="716" />
@@ -1188,11 +1143,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="525" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/licenses/two-column.php">
@@ -1207,115 +1162,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="153" selection-end="153" vertical-scroll-proportion="0.16689847" vertical-offset="0" max-vertical-offset="719">
-          <folding />
-        </state>
+        <state line="8" column="35" selection-start="153" selection-end="153" vertical-scroll-proportion="0.16689847" vertical-offset="0" max-vertical-offset="719" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="3644" selection-end="3644" vertical-scroll-proportion="0.8007968" vertical-offset="987" max-vertical-offset="1740">
-          <folding />
-        </state>
+        <state line="106" column="0" selection-start="3644" selection-end="3644" vertical-scroll-proportion="0.8007968" vertical-offset="987" max-vertical-offset="1740" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theme-options.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="33" selection-start="4466" selection-end="4466" vertical-scroll-proportion="0.30178326" vertical-offset="1055" max-vertical-offset="2280">
-          <folding />
-        </state>
+        <state line="85" column="33" selection-start="4466" selection-end="4466" vertical-scroll-proportion="0.30178326" vertical-offset="1055" max-vertical-offset="2280" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_post.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="2" selection-start="3067" selection-end="3152" vertical-scroll-proportion="-19.333334" vertical-offset="2596" max-vertical-offset="4080">
-          <folding />
-        </state>
+        <state line="204" column="2" selection-start="3067" selection-end="3152" vertical-scroll-proportion="0.0" vertical-offset="2596" max-vertical-offset="4080" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="2" selection-start="983" selection-end="1042" vertical-scroll-proportion="-7.625" vertical-offset="672" max-vertical-offset="4365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="309" column="45" selection-start="11839" selection-end="11839" vertical-scroll-proportion="-3.7" vertical-offset="4450" max-vertical-offset="8820">
-          <folding>
-            <marker date="1404570980000" expanded="true" signature="7690:8677" placeholder="..." />
-            <marker date="1404570980000" expanded="true" signature="7760:8667" placeholder="..." />
-            <marker date="1404570980000" expanded="true" signature="7801:8330" placeholder="..." />
-            <marker date="1404570980000" expanded="true" signature="7882:8307" placeholder="..." />
-            <marker date="1404570980000" expanded="true" signature="8372:8648" placeholder="..." />
-            <marker date="1404570980000" expanded="true" signature="10190:10421" placeholder="..." />
-            <marker date="1404570980000" expanded="true" signature="20615:21359" placeholder="..." />
-            <marker date="1404570980000" expanded="true" signature="20692:21341" placeholder="..." />
-          </folding>
-        </state>
+        <state line="57" column="2" selection-start="983" selection-end="1042" vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="4365" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions-admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="255" column="9" selection-start="7684" selection-end="7726" vertical-scroll-proportion="-6.02" vertical-offset="3524" max-vertical-offset="8700">
-          <folding>
-            <marker date="1404570773000" expanded="true" signature="1192:1428" placeholder="..." />
-            <marker date="1404570773000" expanded="true" signature="7091:7315" placeholder="..." />
-            <marker date="1404570773000" expanded="true" signature="16462:17025" placeholder="..." />
-            <marker date="1404570773000" expanded="true" signature="16475:16535" placeholder="..." />
-            <marker date="1404570773000" expanded="true" signature="16638:16992" placeholder="..." />
-            <marker date="1404570773000" expanded="true" signature="16648:16752" placeholder="..." />
-            <marker date="1404570773000" expanded="true" signature="16762:16971" placeholder="..." />
-          </folding>
-        </state>
+        <state line="255" column="9" selection-start="7684" selection-end="7726" vertical-scroll-proportion="0.0" vertical-offset="3524" max-vertical-offset="8700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/full-width.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="27" selection-start="647" selection-end="647" vertical-scroll-proportion="-28.125" vertical-offset="0" max-vertical-offset="840">
-          <folding />
-        </state>
+        <state line="45" column="27" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="840" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/two-column.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="118" selection-end="256" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="900">
+        <state line="7" column="2" selection-start="118" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="16" selection-start="359" selection-end="359" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="32" selection-start="5620" selection-end="5620" vertical-scroll-proportion="0.0" vertical-offset="1820" max-vertical-offset="3390">
-          <folding />
-        </state>
+        <state line="9" column="16" selection-start="359" selection-end="359" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1740" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/full-width-images.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="16" selection-start="2035" selection-end="2035" vertical-scroll-proportion="-14.375" vertical-offset="1410" max-vertical-offset="2160">
+        <state line="117" column="16" selection-start="2035" selection-end="2035" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="2160">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/two-column-images.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="14" selection-start="427" selection-end="427" vertical-scroll-proportion="-1.5" vertical-offset="300" max-vertical-offset="3000">
+        <state line="25" column="14" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="3000">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/_pages.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="18" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.5945946" vertical-offset="772" max-vertical-offset="1395">
+        <state line="68" column="0" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0" vertical-offset="481" max-vertical-offset="1395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1468" column="1" selection-start="29172" selection-end="29172" vertical-scroll-proportion="0.0" vertical-offset="21525" max-vertical-offset="28080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="56" selection-start="7818" selection-end="7818" vertical-scroll-proportion="0.0" vertical-offset="2755" max-vertical-offset="8820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="41" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0" vertical-offset="269" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_comments.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="16" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="3225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="1" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="5" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.57101023" vertical-offset="0" max-vertical-offset="3390">
           <folding />
         </state>
       </provider>
