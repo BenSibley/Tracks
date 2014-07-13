@@ -228,6 +228,41 @@ function ct_tracks_sanitize_tagline_display($input){
 
 function ct_tracks_customizer_additional_options( $wp_customize ) {
 
+    /* create custom control for number input */
+    class ct_tracks_number_input_control extends WP_Customize_Control {
+        public $type = 'number';
+
+        public function render_content() {
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <input type="number" <?php $this->link(); ?> value="<?php echo $this->value(); ?>" />
+            </label>
+        <?php
+        }
+    }
+    /* setting */
+    $wp_customize->add_setting(
+        'additional_options_excerpt_length_settings',
+        array(
+            'default'           => 15,
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'absint',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        new ct_tracks_number_input_control(
+            $wp_customize, 'additional_options_excerpt_length_settings',
+            array(
+                'label' => 'Word count in automatic excerpts',
+                'section' => 'ct_tracks_additional_options',
+                'settings' => 'additional_options_excerpt_length_settings',
+                'type' => 'number',
+            )
+        )
+    );
     /* section */
     $wp_customize->add_section(
         'ct_tracks_additional_options',
@@ -306,6 +341,150 @@ function ct_tracks_sanitize_image_zoom_settings($input){
     $valid = array(
         'zoom' => 'Zoom',
         'no-zoom' => 'Do not Zoom'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+// Premium Layouts section
+function ct_tracks_customize_premium_layouts( $wp_customize ) {
+
+    $available_templates = array('standard' => 'Standard');
+
+    if(ct_tracks_full_width_check_license() == 'valid'){
+        $available_templates['full-width'] = 'Full-width';
+    }
+    if(ct_tracks_full_width_images_check_license() == 'valid'){
+        $available_templates['full-width-images'] = 'Full-width Images';
+    }
+    if(ct_tracks_two_column_check_license() == 'valid'){
+        $available_templates['two-column'] = 'Two-Column';
+    }
+    if(ct_tracks_two_column_images_check_license() == 'valid'){
+        $available_templates['two-column-images'] = 'Two-Column Images';
+    }
+
+    /* section */
+    $wp_customize->add_section(
+        'ct_tracks_premium_layouts',
+        array(
+            'title'      => esc_html__( 'Premium Layouts', 'tracks' ),
+            'priority'   => 85,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'premium_layouts_setting',
+        array(
+            'default'           => 'standard',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'premium_layouts_setting',
+        array(
+            'type' => 'select',
+            'label' => 'Choose the layout for Tracks',
+            'section' => 'ct_tracks_premium_layouts',
+            'setting' => 'premium_layouts_setting',
+            'choices' => $available_templates,
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'premium_layouts_full_width_image_height',
+        array(
+            'default'           => 'image',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_image_height'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'premium_layouts_full_width_image_height',
+        array(
+            'type' => 'radio',
+            'label' => 'Image size on Blog',
+            'section' => 'ct_tracks_premium_layouts',
+            'setting' => 'premium_layouts_setting',
+            'choices' => array(
+                'image' => 'size based on image size',
+                '2:1-ratio'   => '2:1 width/height ratio like posts'
+            ),
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'premium_layouts_full_width_full_post',
+        array(
+            'default'           => 'no',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_full_posts'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'premium_layouts_full_width_full_post',
+        array(
+            'type' => 'radio',
+            'label' => 'Show full posts on Blog/Archives?',
+            'section' => 'ct_tracks_premium_layouts',
+            'setting' => 'premium_layouts_full_width_full_post',
+            'choices' => array(
+                'yes' => 'Yes',
+                'no'   => 'No'
+            ),
+        )
+    );
+}
+add_action( 'customize_register', 'ct_tracks_customize_premium_layouts' );
+
+/* sanitize premium layout options */
+function ct_tracks_sanitize_premium_layouts($input){
+    $valid = array(
+        'standard' => 'Standard',
+        'full-width' => 'Full-width',
+        'full-width-images' => 'Full-width Images',
+        'two-column' => 'Two-Column',
+        'two-column-images' => 'Two-Column Images',
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/* sanitize radio button input */
+function ct_tracks_sanitize_premium_layouts_image_height($input){
+    $valid = array(
+        'image' => 'size based on image size',
+        '2:1-ratio'   => '2:1 width/height ratio like posts'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/* sanitize radio button input */
+function ct_tracks_sanitize_premium_layouts_full_posts($input){
+    $valid = array(
+        'yes' => 'Yes',
+        'no'   => 'No'
     );
 
     if ( array_key_exists( $input, $valid ) ) {

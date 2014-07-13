@@ -121,6 +121,88 @@ jQuery(document).ready(function($){
         }
     }
 
+    // ===== Show/Hide Customizer Options ==== //
+
+    function displayLayoutOptions(){
+
+        var imageHeightOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_image_height');
+        var fullPostOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_full_post');
+
+        imageHeightOption.hide();
+        fullPostOption.hide();
+
+        // if the layout is set to full-width images, display the image height option
+        $('html', window.parent.document).find('#customize-control-premium_layouts_setting option').each(function(){
+            if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width-images'){
+                imageHeightOption.show();
+            }
+            if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width'){
+                fullPostOption.show();
+            }
+        });
+    }
+    displayLayoutOptions();
+
+    // ===== Two-Column Layout ==== //
+
+    function removeLayoutGaps(){
+
+        if( $('body').hasClass('two-column') || $('body').hasClass('two-column-images')){
+
+            $('.excerpt').each(function(){
+
+                // 40% of the screen over to be safe
+                var windowWidth = $(window).width() * 0.4;
+
+                // if it ends of over on the right, float it right
+                if($(this).offset().left > windowWidth){
+                    $(this).css('float','right');
+                } else {
+                    // to remove old float: right; on window resize
+                    $(this).css('float','left');
+                }
+            });
+        }
+    }
+    removeLayoutGaps();
+
+    // ===== Full-width Images - Click to show description ===== //
+
+    $(".full-width-images").find('.featured-image').bind('click', clickShowDescription);
+    $(".two-column-images").find('.featured-image').bind('click', clickShowDescription);
+
+    // remove class from all other .excerpts, and add to select one
+    function clickShowDescription(){
+        $('.excerpt').removeClass('show-description');
+        $(this).parent().addClass('show-description');
+    }
+    clickShowDescription();
+
+    // if clicked element is an ancestor, remove class
+    $(document).click(function(event) {
+        if(!$(event.target).closest('.excerpt').length) {
+            $('.excerpt').removeClass('show-description');
+        }
+    });
+
+    // ===== Full-width Images - create separation between image and post ===== //
+
+    function separatePostImage(){
+
+        if($('.featured-image').width() < $('.featured-image-container').width()){
+            $('.featured-image-container').css('padding-bottom', 48);
+        } else {
+            $('.featured-image-container').css('padding-bottom', 0);
+        }
+    }
+    separatePostImage();
+
+    // ===== Window Resize ===== //
+
+    $(window).on('resize', function(){
+        separatePostImage();
+        removeLayoutGaps();
+    });
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */

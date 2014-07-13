@@ -10,12 +10,35 @@ function ct_tracks_load_javascript_files() {
         wp_enqueue_style('ct-tracks-google-fonts');
         wp_enqueue_style('ct-tracks-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
         wp_enqueue_style('style', get_template_directory_uri() . 'style.min.css');
+
+        if(get_theme_mod('premium_layouts_setting') == 'full-width'){
+            wp_enqueue_style('ct-tracks-full-width', get_template_directory_uri() . '/css/full-width.min.css');
+        }
+        elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
+            wp_enqueue_style('ct-tracks-full-width-images', get_template_directory_uri() . '/css/full-width-images.min.css');
+        }
+        elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
+            wp_enqueue_style('ct-tracks-two-column', get_template_directory_uri() . '/css/two-column.min.css');
+        }
+        elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
+            wp_enqueue_style('ct-tracks-two-column-images', get_template_directory_uri() . '/css/two-column-images.min.css');
+        }
     }
     // enqueues the comment-reply script on posts & pages.  This script is included in WP by default
     if( is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' );
 }
 
 add_action('wp_enqueue_scripts', 'ct_tracks_load_javascript_files' );
+
+/* enqueue styles used on theme options page */
+function ct_tracks_enqueue_admin_styles($hook){
+
+    // enqueue dashboard page styles
+    if ( 'appearance_page_tracks-options' == $hook) {
+        wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
+    }
+}
+add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
 
 /* Load the core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
@@ -59,6 +82,14 @@ function ct_tracks_theme_setup() {
     // adds the file with the customizer functionality
     require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
 
+    // adds theme options page
+    require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
+
+    // add license folder files
+    foreach (glob(trailingslashit( get_template_directory() ) . 'licenses/*.php') as $filename)
+    {
+        include $filename;
+    }
 }
 
 function ct_tracks_register_widget_areas(){
@@ -283,7 +314,15 @@ add_filter('the_excerpt', 'ct_tracks_excerpt_read_more_link');
 
 // change the length of the excerpts
 function ct_tracks_custom_excerpt_length( $length ) {
-    return 15;
+
+    $new_excerpt_length = get_theme_mod('additional_options_excerpt_length_settings');
+
+    // if there is a new length set and it's not 15, change it
+    if(!empty($new_excerpt_length) && $new_excerpt_length != 15){
+        return $new_excerpt_length;
+    } else {
+        return 15;
+    }
 }
 add_filter( 'excerpt_length', 'ct_tracks_custom_excerpt_length', 999 );
 
@@ -333,11 +372,18 @@ function ct_tracks_featured_image() {
     global $post;
     $has_image = false;
 
+    $premium_layout = get_theme_mod('premium_layouts_setting');
+
     // load smaller version on archive pages unless full-width layout active
     if(is_archive() || is_home()) {
 
         if (has_post_thumbnail( $post->ID ) ) {
-            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog' );
+
+            if($premium_layout == 'full-width' || $premium_layout == 'full-width-images' || $premium_layout == 'two-column-images'){
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+            } else {
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog' );
+            }
             $image = $image[0];
             $has_image = true;
         }
@@ -347,7 +393,14 @@ function ct_tracks_featured_image() {
         $has_image = true;
     }
     if ($has_image == true) {
-        echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
+        // if two-column-images layout or full-width-images layout with image-based height set
+        if($premium_layout == 'two-column-images' || ($premium_layout == 'full-width-images' && get_theme_mod('premium_layouts_full_width_image_height') == 'image')){
+            echo "<img class='featured-image' src='$image' />";
+        }
+        else {
+            echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
+        }
+
     }
 }
 
@@ -361,12 +414,31 @@ function ct_tracks_add_homepage_title( $title )
     return $title;
 }
 
-/* add a class of 'not-front' to all pages that aren't the front page */
+/* add conditional classes for premium layouts */
 function ct_tracks_body_class( $classes ) {
     if ( ! is_front_page() ) {
         $classes[] = 'not-front';
     }
+    if(get_theme_mod('premium_layouts_setting') == 'full-width'){
+        $classes[] = 'full-width';
 
+        if(get_theme_mod('premium_layouts_full_width_full_post') == 'yes'){
+            $classes[] = 'full-post';
+        }
+    }
+    elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
+        $classes[] = 'full-width-images';
+
+        if(get_theme_mod('premium_layouts_full_width_image_height') == '2:1-ratio'){
+            $classes[] = 'ratio';
+        }
+    }
+    elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
+        $classes[] = 'two-column';
+    }
+    elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
+        $classes[] = 'two-column-images';
+    }
     return $classes;
 }
 add_filter( 'body_class', 'ct_tracks_body_class' );

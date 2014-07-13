@@ -1,0 +1,126 @@
+/*===== Variables =====*/
+/* Theme Colors */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/* grid stuff */
+                           /* Baseline Grid
+background-image: linear-gradient(#fff 23px, #00fffc 24px, #fff 0px);
+background-size: 1px 24px; /* this is a 24px baseline grid */
+                        /* Column Grid
+background-color: gray;
+background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
+background-size: 11.1%; /* This is at 6-columns -> just change this # */
+/* Full-width Images layout styles */
+.full-width-images .excerpt,
+.full-width-images .entry {
+  line-height: 0;
+}
+.full-width-images .entry-container {
+  line-height: 1.5;
+}
+.full-width-images .featured-image {
+  height: auto;
+  padding-bottom: 0;
+}
+.full-width-images .excerpt-container {
+  margin: 0;
+  width: 100%;
+}
+.full-width-images .content-container {
+  border: none;
+  padding: 0 5.55%;
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+  .full-width-images .excerpt {
+    margin-bottom: 3em;
+    position: relative;
+    background: none;
+  }
+  .full-width-images .excerpt.even .featured-image {
+    right: 0;
+  }
+  .full-width-images .excerpt.show-description .excerpt-container {
+    opacity: 1;
+    visibility: visible;
+  }
+  .full-width-images .excerpt.show-description .content-container {
+    opacity: 1;
+  }
+  .full-width-images .excerpt .featured-image:hover {
+    cursor: pointer;
+  }
+  .full-width-images .excerpt-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    margin: auto;
+    padding: 0 22.22%;
+    color: white;
+    background: rgba(17, 17, 17, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+  }
+  .full-width-images .excerpt-container td {
+    border: none;
+  }
+  .full-width-images .content-container {
+    opacity: 0;
+    padding: 0 1.5em;
+    -webkit-transition: opacity 0.4s 0.1s ease;
+            transition: opacity 0.4s 0.1s ease;
+  }
+  .full-width-images .excerpt-meta a,
+  .full-width-images .excerpt-title a,
+  .full-width-images .more-link {
+    color: #aaaaaa;
+  }
+  .full-width-images .excerpt-meta a:link, .full-width-images .excerpt-meta a:visited,
+  .full-width-images .excerpt-title a:link,
+  .full-width-images .excerpt-title a:visited,
+  .full-width-images .more-link:link,
+  .full-width-images .more-link:visited {
+    color: #aaaaaa;
+  }
+  .full-width-images .excerpt-meta a:hover, .full-width-images .excerpt-meta a:active, .full-width-images .excerpt-meta a:focus,
+  .full-width-images .excerpt-title a:hover,
+  .full-width-images .excerpt-title a:active,
+  .full-width-images .excerpt-title a:focus,
+  .full-width-images .more-link:hover,
+  .full-width-images .more-link:active,
+  .full-width-images .more-link:focus {
+    color: white;
+  }
+  .full-width-images .excerpt-header:after,
+  .full-width-images .more-link:after {
+    background: #aaaaaa;
+  }
+  .full-width-images .featured-image {
+    width: auto;
+    height: auto;
+    position: relative;
+    padding-bottom: 0;
+  }
+
+  /* post page */
+  .singular-post .featured-image {
+    display: block;
+    margin: 0 auto;
+  }
+  .singular-post .featured-image-container {
+    background: #222222;
+  }
+}
+/* 2:1 image-height setup */
+.full-width-images.ratio .featured-image {
+  position: relative;
+  height: 0;
+  padding-bottom: 50%;
+}

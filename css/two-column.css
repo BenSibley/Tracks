@@ -1,0 +1,59 @@
+/* styles for two-column layout */
+/*===== Variables =====*/
+/* Theme Colors */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/* grid stuff */
+                           /* Baseline Grid
+background-image: linear-gradient(#fff 23px, #00fffc 24px, #fff 0px);
+background-size: 1px 24px; /* this is a 24px baseline grid */
+                        /* Column Grid
+background-color: gray;
+background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
+background-size: 11.1%; /* This is at 6-columns -> just change this # */
+/* 900px */
+@media all and (min-width: 56.25em) {
+  .two-column.home .main,
+  .two-column.archive .main {
+    width: 91.665%;
+  }
+  .two-column.home .main:after,
+  .two-column.archive .main:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+
+  .two-column .excerpt {
+    width: 47.225%;
+    display: block;
+    float: left;
+    margin: 0 1.3875% 1.5em;
+    clear: none;
+  }
+  .two-column .excerpt.even .featured-image {
+    right: 0;
+  }
+  .two-column .featured-image {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+  }
+  .two-column .excerpt-container {
+    width: 100%;
+  }
+  .two-column .excerpt-meta {
+    padding-top: 1.84502em;
+  }
+  .two-column .loop-pagination {
+    clear: both;
+    padding-top: 4.5em;
+  }
+  .two-column .archive-header {
+    margin-left: 1.3875%;
+  }
+}

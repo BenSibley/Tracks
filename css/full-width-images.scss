@@ -1,0 +1,138 @@
+@import "../sass/variables";
+
+/* Full-width Images layout styles */
+
+.full-width-images {
+
+  .excerpt,
+  .entry {
+    line-height: 0; // remove space below featured image
+  }
+  .entry-container {
+    line-height: 1.5;
+  }
+  .featured-image {
+    height: auto;
+    padding-bottom: 0;
+  }
+  .excerpt-container {
+    margin: 0;
+    width: 100%;
+  }
+  .content-container {
+    border: none;
+    padding: 0 5.55%;
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em){
+
+  .full-width-images {
+
+    .excerpt {
+      margin-bottom: $baseline-height * 2;
+      position: relative;
+      background: none;
+
+      &.even {
+
+        .featured-image {
+          right: 0;
+        }
+      }
+      // show the description
+      &.show-description {
+
+        .excerpt-container {
+          opacity: 1;
+          visibility: visible;
+        }
+        .content-container {
+          opacity: 1;
+        }
+      }
+      .featured-image {
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .excerpt-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+      margin: auto;
+      padding: 0 22.22%;
+      color: white;
+      background: rgba(17,17,17,0.9);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+
+      td {
+        border: none;
+      }
+    }
+    .content-container {
+      opacity: 0;
+      padding: 0 $baseline-height;
+      transition: opacity 0.4s 0.1s ease;
+    }
+    .excerpt-meta a,
+    .excerpt-title a,
+    .more-link {
+      color: $gray-light;
+
+      &:link,
+      &:visited {
+        color: $gray-light;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: white;
+      }
+    }
+    .excerpt-header:after,
+    .more-link:after {
+      background: $gray-light;
+    }
+    .featured-image {
+      width: auto;
+      height: auto;
+      position: relative;
+      padding-bottom: 0;
+    }
+  }
+  /* post page */
+
+  // in case image isn't width of post
+  .singular-post {
+
+    .featured-image {
+      display: block;
+      margin: 0 auto;
+    }
+    .featured-image-container {
+      background: $gray-dark;
+    }
+  }
+}
+
+/* 2:1 image-height setup */
+
+
+.full-width-images.ratio {
+
+  .featured-image {
+    position: relative;
+    height: 0;
+    padding-bottom: 50%;
+  }
+}

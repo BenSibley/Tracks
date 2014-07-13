@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                 }
             },
             css: {
-                files: ['sass/*.scss'],
+                files: ['sass/*.scss', 'css/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'cssmin'],
                 options: {
                     livereload: true,
@@ -42,7 +42,11 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'style.css': 'sass/style.scss',
-                    'custom-editor-styles.css': 'sass/_custom_editor_styles.scss'
+                    'custom-editor-styles.css': 'sass/_custom_editor_styles.scss',
+                    'css/full-width.css': 'css/full-width.scss',
+                    'css/full-width-images.css': 'css/full-width-images.scss',
+                    'css/two-column.css': 'css/two-column.scss',
+                    'css/two-column-images.css': 'css/two-column-images.scss'
                 }
             }
         },
@@ -52,14 +56,22 @@ module.exports = function(grunt) {
                     browsers: ['last 1 version', '> 1%', 'ie 8']
                 },
                 files: {
-                    'style.css': 'style.css'
+                    'style.css': 'style.css',
+                    'css/full-width.css': 'css/full-width.css',
+                    'css/full-width-images.css': 'css/full-width-images.css',
+                    'css/two-column.css': 'css/two-column.css',
+                    'css/two-column-images.css': 'css/two-column-images.css'
                 }
             }
         },
         cssmin: {
             combine: {
                 files: {
-                    'style.min.css': ['style.css']
+                    'style.min.css': ['style.css'],
+                    'css/full-width.min.css': ['css/full-width.css'],
+                    'css/full-width-images.min.css': ['css/full-width-images.css'],
+                    'css/two-column.min.css': ['css/two-column.css'],
+                    'css/two-column-images.min.css': ['css/two-column-images.css']
                 }
             }
         },
