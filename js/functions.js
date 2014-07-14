@@ -1,6 +1,7 @@
 jQuery(document).ready(function($){
 
     $(".entry-content").fitVids();
+    $(".excerpt-content").fitVids();
 
     // bind the tap event on the menu icon
     $('#toggle-navigation').bind('click', onTap);
@@ -203,6 +204,29 @@ jQuery(document).ready(function($){
         separatePostImage();
         removeLayoutGaps();
     });
+
+    /* ===== IE9 full-width image text positioning ===== */
+
+    function centerContentIE(){
+
+        if($('html').hasClass('ie9') && $('body').hasClass('full-width-images')){
+
+            $('.excerpt').each(function(){
+
+                var container = $(this);
+                var content = $(this).find('.content-container');
+
+                var containerBottom = container.offset().top - container.height();
+                var contentBottom = content.offset().top - content.height();
+
+                var topDistance = Math.abs((containerBottom - contentBottom) / 2);
+
+                $(this).find('.excerpt-container').css('top', topDistance);
+            });
+        }
+    }
+    centerContentIE();
+
 });
 
 /* fix for skip-to-content link bug in Chrome & IE9 */

@@ -29,6 +29,9 @@
       text-align: left;
     }
   }
+  .excerpt-content {
+    margin-top: $baseline-height;
+  }
 }
 /* 700px */
 @media all and (min-width: 43.75em){
@@ -45,7 +48,8 @@
         position: relative;
         left: -25%;
         width: 150%;
-        padding: 0 8.35%;
+        padding-left: 8.35%;
+        padding-right: 8.35%;
       }
     }
   }

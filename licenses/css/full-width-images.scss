@@ -18,9 +18,10 @@
   .excerpt-container {
     margin: 0;
     width: 100%;
+    display: table;
+    line-height: 1.5;
   }
   .content-container {
-    border: none;
     padding: 0 5.55%;
   }
 }
@@ -39,6 +40,12 @@
 
         .featured-image {
           right: 0;
+        }
+      }
+      &.odd {
+
+        .excerpt-container {
+          width: 100%;
         }
       }
       // show the description
@@ -62,11 +69,11 @@
     .excerpt-container {
       position: absolute;
       top: 0;
-      right: 25%;
+      right: 0;
       bottom: 0;
-      left: 25%;
+      left: 0;
       height: 100%;
-      max-width: 50%;
+      width: 100%;
       margin: auto;
       padding: 0 22.22%;
       color: white;
@@ -75,15 +82,18 @@
       visibility: hidden;
       transition: all 0.4s ease;
 
-      td {
-        border: none;
-      }
+      // flexbox
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .content-container {
       opacity: 0;
       padding: 0 $baseline-height;
       background: rgba(17,17,17,0.9);
       transition: opacity 0.4s 0.1s ease;
+      max-width: 100%;
+
     }
     .excerpt-meta a,
     .excerpt-title a,

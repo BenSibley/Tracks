@@ -25,9 +25,10 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 .full-width-images .excerpt-container {
   margin: 0;
   width: 100%;
+  display: table;
+  line-height: 1.5;
 }
 .full-width-images .content-container {
-  border: none;
   padding: 0 5.55%;
 }
 
@@ -40,6 +41,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   }
   .full-width-images .excerpt.even .featured-image {
     right: 0;
+  }
+  .full-width-images .excerpt.odd .excerpt-container {
+    width: 100%;
   }
   .full-width-images .excerpt.show-description .excerpt-container {
     opacity: 1;
@@ -54,11 +58,11 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   .full-width-images .excerpt-container {
     position: absolute;
     top: 0;
-    right: 25%;
+    right: 0;
     bottom: 0;
-    left: 25%;
+    left: 0;
     height: 100%;
-    max-width: 50%;
+    width: 100%;
     margin: auto;
     padding: 0 22.22%;
     color: white;
@@ -67,9 +71,15 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     visibility: hidden;
     -webkit-transition: all 0.4s ease;
             transition: all 0.4s ease;
-  }
-  .full-width-images .excerpt-container td {
-    border: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .full-width-images .content-container {
     opacity: 0;
@@ -77,6 +87,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     background: rgba(17, 17, 17, 0.9);
     -webkit-transition: opacity 0.4s 0.1s ease;
             transition: opacity 0.4s 0.1s ease;
+    max-width: 100%;
   }
   .full-width-images .excerpt-meta a,
   .full-width-images .excerpt-title a,

@@ -58,54 +58,33 @@ if( is_single() ) { ?>
                 <?php ct_tracks_featured_image(); ?>
             </a>
         <?php } ?>
-
-        <?php
-        if(get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images'){ ?>
-            <table class="excerpt-container">
-                <tr>
-                    <td class="content-container">
-                        <div class="excerpt-meta">
-                            <span class="date"><?php echo get_the_date('F j'); ?> / </span>
-                            <span class="author"><?php the_author_posts_link(); ?> / </span>
-                                <span class="category">
-                                    <?php ct_tracks_category_link(); ?>
-                                </span>
-                        </div>
-                        <div class='excerpt-header'>
-                            <h1 class='excerpt-title'>
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </h1>
-                        </div>
-                        <div class='excerpt-content'>
-                            <article>
-                                <?php ct_tracks_excerpt(); ?>
-                            </article>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        <?php
-        } else { ?>
-            <div class="excerpt-container">
-                <div class="excerpt-meta">
-                    <span class="date"><?php echo get_the_date('F j'); ?> / </span>
-                    <span class="author"><?php the_author_posts_link(); ?> / </span>
-                        <span class="category">
-                            <?php ct_tracks_category_link(); ?>
-                        </span>
-                </div>
-                <div class='excerpt-header'>
-                    <h1 class='excerpt-title'>
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </h1>
-                </div>
-                <div class='excerpt-content'>
-                    <article>
-                        <?php ct_tracks_excerpt(); ?>
-                    </article>
-                </div>
+        <div class="excerpt-container">
+            <?php
+            if(get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images'){ ?>
+                <div class="content-container">
+            <?php } ?>
+            <div class="excerpt-meta">
+                <span class="date"><?php echo get_the_date('F j'); ?> / </span>
+                <span class="author"><?php the_author_posts_link(); ?> / </span>
+                    <span class="category">
+                        <?php ct_tracks_category_link(); ?>
+                    </span>
             </div>
-        <?php } ?>
+            <div class='excerpt-header'>
+                <h1 class='excerpt-title'>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h1>
+            </div>
+            <div class='excerpt-content'>
+                <article>
+                    <?php ct_tracks_excerpt(); ?>
+                </article>
+            </div>
+            <?php
+                if(get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images'){ ?>
+                </div>
+            <?php } ?>
+        </div>
     </div>
 <?php
 }

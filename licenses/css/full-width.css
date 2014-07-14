@@ -26,6 +26,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 .full-width.full-post .excerpt-content {
   text-align: left;
 }
+.full-width .excerpt-content {
+  margin-top: 1.5em;
+}
 
 /* 700px */
 @media all and (min-width: 43.75em) {
@@ -37,7 +40,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     position: relative;
     left: -25%;
     width: 150%;
-    padding: 0 8.35%;
+    padding-left: 8.35%;
+    padding-right: 8.35%;
   }
 }
 /* 900px */
