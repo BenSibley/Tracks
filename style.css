@@ -1005,7 +1005,7 @@ a img {
 /* 600px */
 @media all and (min-width: 37.5em) {
   .entry {
-    width: 89.89%;
+    width: 88.88%;
     margin: 0 auto;
   }
 
@@ -1251,7 +1251,7 @@ li.pingback:after {
 @media all and (min-width: 37.5em) {
   .comments {
     padding: 0 5.55% 3em;
-    width: 89.89%;
+    width: 88.88%;
     margin: 0 auto;
   }
 

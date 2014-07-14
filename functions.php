@@ -12,16 +12,16 @@ function ct_tracks_load_javascript_files() {
         wp_enqueue_style('style', get_template_directory_uri() . 'style.min.css');
 
         if(get_theme_mod('premium_layouts_setting') == 'full-width'){
-            wp_enqueue_style('ct-tracks-full-width', get_template_directory_uri() . '/css/full-width.min.css');
+            wp_enqueue_style('ct-tracks-full-width', get_template_directory_uri() . '/licenses/css/full-width.min.css');
         }
         elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
-            wp_enqueue_style('ct-tracks-full-width-images', get_template_directory_uri() . '/css/full-width-images.min.css');
+            wp_enqueue_style('ct-tracks-full-width-images', get_template_directory_uri() . '/licenses/css/full-width-images.min.css');
         }
         elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
-            wp_enqueue_style('ct-tracks-two-column', get_template_directory_uri() . '/css/two-column.min.css');
+            wp_enqueue_style('ct-tracks-two-column', get_template_directory_uri() . '/licenses/css/two-column.min.css');
         }
         elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
-            wp_enqueue_style('ct-tracks-two-column-images', get_template_directory_uri() . '/css/two-column-images.min.css');
+            wp_enqueue_style('ct-tracks-two-column-images', get_template_directory_uri() . '/licenses/css/two-column-images.min.css');
         }
     }
     // enqueues the comment-reply script on posts & pages.  This script is included in WP by default

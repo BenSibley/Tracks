@@ -1,4 +1,4 @@
-@import "../sass/variables";
+@import "../../sass/variables";
 
 /* Full-width Images layout styles */
 
@@ -62,15 +62,15 @@
     .excerpt-container {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 25%;
       bottom: 0;
-      left: 0;
+      left: 25%;
       height: 100%;
-      width: 50%;
+      max-width: 50%;
       margin: auto;
       padding: 0 22.22%;
       color: white;
-      background: rgba(17,17,17,0.9);
+      background: none;
       opacity: 0;
       visibility: hidden;
       transition: all 0.4s ease;
@@ -82,6 +82,7 @@
     .content-container {
       opacity: 0;
       padding: 0 $baseline-height;
+      background: rgba(17,17,17,0.9);
       transition: opacity 0.4s 0.1s ease;
     }
     .excerpt-meta a,
@@ -126,7 +127,6 @@
 }
 
 /* 2:1 image-height setup */
-
 
 .full-width-images.ratio {
 

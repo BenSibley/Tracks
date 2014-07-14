@@ -2,7 +2,7 @@
 
 /* styles for two-column layout */
 
-@import "../sass/variables";
+@import "../../sass/variables";
 
 .two-column-images {
 
@@ -99,7 +99,7 @@
         }
         &:after {
           opacity: 1;
-          right: 0;
+          right: -1px; // to fix extra px showing on end
         }
       }
       .featured-image {

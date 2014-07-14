@@ -54,15 +54,15 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   .full-width-images .excerpt-container {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 25%;
     bottom: 0;
-    left: 0;
+    left: 25%;
     height: 100%;
-    width: 50%;
+    max-width: 50%;
     margin: auto;
     padding: 0 22.22%;
     color: white;
-    background: rgba(17, 17, 17, 0.9);
+    background: none;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.4s ease;
@@ -74,6 +74,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   .full-width-images .content-container {
     opacity: 0;
     padding: 0 1.5em;
+    background: rgba(17, 17, 17, 0.9);
     -webkit-transition: opacity 0.4s 0.1s ease;
             transition: opacity 0.4s 0.1s ease;
   }

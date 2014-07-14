@@ -93,7 +93,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   }
   .two-column-images .excerpt.show-description:after {
     opacity: 1;
-    right: 0;
+    right: -1px;
   }
   .two-column-images .excerpt .featured-image:hover {
     cursor: pointer;

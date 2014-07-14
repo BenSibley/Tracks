@@ -311,7 +311,7 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
         'additional_options_image_zoom_settings',
         array(
             'type' => 'radio',
-            'label' => 'Zoom-in blog images on hover',
+            'label' => 'Zoom-in blog images on hover?',
             'section' => 'ct_tracks_additional_options',
             'choices' => array(
                 'zoom' => 'Zoom in',

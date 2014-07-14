@@ -49,46 +49,67 @@ function ct_tracks_options_content(){
         <?php }
         elseif($active_tab == 'premium-layouts'){ ?>
             <div class="content-premium-layouts content">
-                <p>premium layouts</p>
+                <h2>Upgrade your site with a new layout</h2>
+                <p>Tracks has premium layouts you can unlock to take your site to the next level. <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/">Check out the upgrades gallery.</a></p>
+                <div>
+                    <h3>Two-column Layout</h3><span> - <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-two-column-layout/">View Layout</a></span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tracks-two-column-layout.png" />
+                </div>
+                <div>
+                    <h3>Two-column Images Layout</h3><span> - <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-two-column-images-layout/">View Layout</a></span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tracks-two-column-images-layout.png" />
+                </div>
+                <div>
+                    <h3>Full-width Layout</h3><span> - <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-full-width-layout/">View Layout</a></span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tracks-full-width-layout.png" />
+                </div>
+                <div>
+                    <h3>Full-width Images Layout</h3><span> - <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-full-width-images-layout/">View Layout</a></span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tracks-full-width-images-layout.png" />
+                </div>
             </div>
         <?php }
         else { ?>
             <div class="content-licenses content">
-                <p>You can assign your new layouts in the Theme Customizer in the "Premium Layouts" section after activating your license(s) below.</p>
 
                 <?php
                 // create form for each layout option available
-                $layouts = array('full_width','full_width_images','two_column', 'two_column_images');
+                $layouts = array('two_column', 'two_column_images', 'full_width', 'full_width_images');
                 foreach($layouts as $layout){
 
                     $license 	= get_option( 'ct_tracks_' . $layout . '_license_key' );
                     $status 	= get_option( 'ct_tracks_'. $layout . '_license_key_status' );
 
                     ?>
-                    <hr />
                     <form method="post" action="options.php">
                         <?php settings_fields('ct_tracks_' . $layout . '_license'); ?>
+                        <?php if( $status !== false && $status == 'valid' ) { ?>
+                            <p class='valid'>License activated!</p>
+                            <span>You can switch to your new layout in the "Premium Layouts" section in the <a href="customize.php">Customizer</a></span>
+                        <?php } else { ?>
+                            <p class='invalid'>License not active</p>
+                        <?php } ?>
                         <table class="form-table">
                             <tbody>
                             <tr valign="top">
                                 <th scope="row" valign="top">
                                     <?php
-                                    if($layout == 'full_width'){
-                                        _e('Full-width Layout','tracks');
-                                    }
-                                    elseif($layout == 'full_width_images'){
-                                        _e('Full-width Images Layout','tracks');
-                                    }
-                                    elseif($layout == 'two_column'){
+                                    if($layout == 'two_column'){
                                         _e('Two-Column Layout','tracks');
                                     }
                                     elseif($layout == 'two_column_images'){
                                         _e('Two-Column Images Layout','tracks');
                                     }
+                                    elseif($layout == 'full_width'){
+                                        _e('Full-width Layout','tracks');
+                                    }
+                                    elseif($layout == 'full_width_images'){
+                                        _e('Full-width Images Layout','tracks');
+                                    }
                                     ?>
                                 </th>
                                 <td>
-                                    <input id="ct_tracks_<?php echo $layout; ?>_license_key" name="ct_tracks_<?php echo $layout; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
+                                    <input id="ct_tracks_<?php echo $layout; ?>_license_key" name="ct_tracks_<?php echo $layout; ?>_license_key" type="text" class="regular-text" placeholder="ex. 1d58ag920zf5e551bab24aa3d18e2c79" value="<?php echo esc_attr( $license ); ?>" />
                                     <label class="description" for="ct_tracks_<?php echo $layout; ?>_license_key"><?php _e('Enter your license key','tracks'); ?></label>
                                 </td>
                             </tr>
@@ -99,7 +120,6 @@ function ct_tracks_options_content(){
                                     </th>
                                     <td>
                                         <?php if( $status !== false && $status == 'valid' ) { ?>
-                                            <span style="color:green;"><?php _e('active','tracks'); ?></span>
                                             <?php wp_nonce_field( 'ct_tracks_' . $layout . '_nonce', 'ct_tracks_' . $layout . '_nonce' ); ?>
                                             <input type="submit" class="button-secondary" name="ct_tracks_<?php echo $layout; ?>_license_deactivate" value="<?php _e('Deactivate License','tracks'); ?>"/>
                                         <?php } else { ?>
@@ -111,7 +131,6 @@ function ct_tracks_options_content(){
                             <?php } ?>
                             </tbody>
                         </table>
-                        <p>Make sure to activate your license after saving it.</p>
                         <?php submit_button('Save License'); ?>
                     </form>
                 <?php } ?>
