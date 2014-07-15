@@ -252,15 +252,15 @@ jQuery(document).ready(function($){
 
     // ===== Full-width Images - Click to show description ===== //
 
-    $(".full-width-images").find('.featured-image').bind('click', clickShowDescription);
+    $(".full-width-images").find('.excerpt').bind('click', clickShowDescription);
     $(".two-column-images").find('.featured-image').bind('click', clickShowDescription);
 
     // remove class from all other .excerpts, and add to select one
     function clickShowDescription(){
         $('.excerpt').removeClass('show-description');
-        $(this).parent().addClass('show-description');
+        $(this).addClass('show-description');
     }
-    clickShowDescription();
+    //clickShowDescription();
 
     // if clicked element is an ancestor, remove class
     $(document).click(function(event) {
@@ -292,18 +292,28 @@ jQuery(document).ready(function($){
 
     function centerContentIE(){
 
+        // only if ie9 and full-width-images layout
         if($('html').hasClass('ie9') && $('body').hasClass('full-width-images')){
 
             $('.excerpt').each(function(){
 
+                // excerpt is container of content-container
                 var container = $(this);
                 var content = $(this).find('.content-container');
 
-                var containerBottom = container.offset().top - container.height();
-                var contentBottom = content.offset().top - content.height();
+                // if theres a featured-image use .excerpt height, else use .excerpt padding-bottom
+                if($(this).hasClass('has-post-thumbnail')){
+                    var containerBottom = container.offset().top + container.height();
+                } else {
+                    var containerBottom = container.offset().top + parseInt(container.css('padding-bottom'));
+                }
+                // coordinates of bottom of content
+                var contentBottom = content.offset().top + content.height();
 
-                var topDistance = Math.abs((containerBottom - contentBottom) / 2);
+                // distance of bottom of container - content / 2 gives desired distance from top
+                var topDistance = (containerBottom - contentBottom) / 2;
 
+                // add the distance to the top
                 $(this).find('.excerpt-container').css('top', topDistance);
             });
         }

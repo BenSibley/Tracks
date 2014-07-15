@@ -14,6 +14,7 @@
   .featured-image {
     height: auto;
     padding-bottom: 0;
+    max-width: 100%;
   }
   .excerpt-container {
     margin: 0;
@@ -66,6 +67,15 @@
         }
       }
     }
+    .excerpt:not(.has-post-thumbnail){
+      background: $gray-very-dark;
+      height: 0;
+      padding-bottom: 50%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
     .excerpt-container {
       position: absolute;
       top: 0;
@@ -76,7 +86,7 @@
       width: 100%;
       margin: auto;
       padding: 0 22.22%;
-      color: white;
+      color: $gray-light;
       background: none;
       opacity: 0;
       visibility: hidden;
