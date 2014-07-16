@@ -8,8 +8,12 @@
   .entry {
     line-height: 0; // remove space below featured image
   }
-  .entry-container {
+  .entry-container,
+  .excerpt-container {
     line-height: 1.5;
+  }
+  .excerpt {
+    position: relative;
   }
   .featured-image {
     height: auto;
@@ -17,13 +21,81 @@
     max-width: 100%;
   }
   .excerpt-container {
-    margin: 0;
-    width: 100%;
+    position: absolute;
     display: table;
-    line-height: 1.5;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0 11.11%;
+    background: none;
+
+    // flexbox for modern browsers
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .content-container {
-    padding: 0 5.55%;
+  .overlay-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(17,17,17,0.6);
+    opacity: 1;
+  }
+  .excerpt-header {
+
+    i {
+      font-size: 1.625em; /* 26px / 16px */
+      line-height: 1.85;
+      color: white;
+      opacity: 0.6;
+    }
+    &:after {
+      display: none;
+    }
+  }
+  .excerpt-title {
+    color: white;
+    opacity: 0.9;
+    font-size: 1.313em; /* 21px / 16px */
+    line-height: 1.143;
+  }
+  .excerpt:not(.has-post-thumbnail){
+    background: $gray-very-dark;
+    height: 0;
+    width: 100%;
+    padding-bottom: 60%;
+  }
+  .loop-pagination {
+    clear: both;
+    padding-top: $baseline-height * 3;
+  }
+  /* post page */
+
+  // in case image isn't width of post
+  .singular-post {
+
+    .featured-image {
+      display: block;
+      margin: 0 auto;
+    }
+    .featured-image-container {
+      background: $gray-dark;
+    }
   }
 }
 
@@ -34,8 +106,6 @@
 
     .excerpt {
       margin-bottom: $baseline-height * 2;
-      position: relative;
-      background: none;
 
       &.even {
 
@@ -49,99 +119,49 @@
           width: 100%;
         }
       }
-      // show the description
-      &.show-description {
-
-        .excerpt-container {
-          opacity: 1;
-          visibility: visible;
-        }
-        .content-container {
-          opacity: 1;
-        }
-      }
-      .featured-image {
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
     }
     .excerpt:not(.has-post-thumbnail){
-      background: $gray-very-dark;
-      height: 0;
       padding-bottom: 50%;
-
-      &:hover {
-        cursor: pointer;
-      }
     }
-    .excerpt-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      margin: auto;
-      padding: 0 22.22%;
-      color: $gray-light;
-      background: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.4s ease;
-
-      // flexbox
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .featured-image {
+      position: relative;
+      width: auto;
+      height: auto;
     }
-    .content-container {
+    .excerpt-container,
+    .overlay {
       opacity: 0;
-      padding: 0 $baseline-height;
+      transition: opacity 0.3s ease;
+    }
+    .overlay {
       background: rgba(17,17,17,0.9);
-      transition: opacity 0.4s 0.1s ease;
-      max-width: 100%;
-
     }
-    .excerpt-meta a,
-    .excerpt-title a,
-    .more-link {
-      color: $gray-light;
+    .overlay-link {
 
-      &:link,
-      &:visited {
-        color: $gray-light;
-      }
       &:hover,
       &:active,
       &:focus {
-        color: white;
+
+        ~ div {
+          opacity: 1;
+
+          i {
+            opacity: 1;
+          }
+        }
       }
     }
-    .excerpt-header:after,
-    .more-link:after {
-      background: $gray-light;
+    .excerpt-title {
+      font-size: 2.375em;
+      line-height: 1.263;
     }
-    .featured-image {
-      width: auto;
-      height: auto;
-      position: relative;
-      padding-bottom: 0;
-    }
-  }
-  /* post page */
+    .excerpt-header {
 
-  // in case image isn't width of post
-  .singular-post {
-
-    .featured-image {
-      display: block;
-      margin: 0 auto;
-    }
-    .featured-image-container {
-      background: $gray-dark;
+      i {
+        font-size: 2.625em; /* 42px / 16px */
+        line-height: 1.143;
+        margin-top: 18px;
+      }
     }
   }
 }

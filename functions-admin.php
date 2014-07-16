@@ -446,32 +446,6 @@ function ct_tracks_customize_premium_layouts( $wp_customize ) {
             ),
         )
     );
-    /* setting */
-    $wp_customize->add_setting(
-        'premium_layouts_two_column_images_content_display',
-        array(
-            'default'           => 'title',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_content_display'
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'premium_layouts_two_column_images_content_display',
-        array(
-            'type' => 'radio',
-            'label' => 'Additional display options',
-            'section' => 'ct_tracks_premium_layouts',
-            'setting' => 'premium_layouts_two_column_images_content_display',
-            'choices' => array(
-                'excerpt' => 'Show excerpt',
-                'meta'   => 'Show post meta',
-                'both'   => 'Show both',
-                'title'   => 'Show just the title'
-            ),
-        )
-    );
 }
 add_action( 'customize_register', 'ct_tracks_customize_premium_layouts' );
 
@@ -511,22 +485,6 @@ function ct_tracks_sanitize_premium_layouts_full_posts($input){
     $valid = array(
         'yes' => 'Yes',
         'no'   => 'No'
-    );
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
-
-/* sanitize radio button input */
-function ct_tracks_sanitize_premium_layouts_content_display($input){
-    $valid = array(
-        'excerpt' => 'Show excerpt',
-        'meta'   => 'Show post meta',
-        'both'   => 'Show both',
-        'title'   => 'Show just the title'
     );
 
     if ( array_key_exists( $input, $valid ) ) {

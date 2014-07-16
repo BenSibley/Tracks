@@ -157,7 +157,6 @@ th {
 .alignnone {
   margin: $baseline-height;
 }
-img,
 .alignright,
 .alignleft,
 .aligncenter,
@@ -176,6 +175,10 @@ img,
   img {
     max-width: 100%;
   }
+}
+img {
+  height: auto;
+  line-height: 0;
 }
 .wp-caption-text {
   margin: 0;

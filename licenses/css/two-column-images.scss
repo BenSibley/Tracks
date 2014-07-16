@@ -56,8 +56,17 @@
     background: rgba(17,17,17,0.6);
     opacity: 1;
   }
-  .excerpt-header:after {
-    display: none;
+  .excerpt-header {
+
+    i {
+      font-size: 1.625em; /* 26px / 16px */
+      line-height: 1.85;
+      color: white;
+      opacity: 0.6;
+    }
+    &:after {
+      display: none;
+    }
   }
   .excerpt-title {
     color: white;
@@ -89,8 +98,6 @@
     }
   }
 }
-
-
 
 /* 900px */
 @media all and (min-width: 56.25em){
@@ -155,6 +162,10 @@
 
         ~ div {
           opacity: 1;
+
+          i {
+            opacity: 1;
+          }
         }
       }
     }

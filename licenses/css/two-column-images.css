@@ -70,6 +70,13 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   background: rgba(17, 17, 17, 0.6);
   opacity: 1;
 }
+.two-column-images .excerpt-header i {
+  font-size: 1.625em;
+  /* 26px / 16px */
+  line-height: 1.85;
+  color: white;
+  opacity: 0.6;
+}
 .two-column-images .excerpt-header:after {
   display: none;
 }
@@ -148,6 +155,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     background: rgba(17, 17, 17, 0.9);
   }
   .two-column-images .overlay-link:hover ~ div, .two-column-images .overlay-link:active ~ div, .two-column-images .overlay-link:focus ~ div {
+    opacity: 1;
+  }
+  .two-column-images .overlay-link:hover ~ div i, .two-column-images .overlay-link:active ~ div i, .two-column-images .overlay-link:focus ~ div i {
     opacity: 1;
   }
 }

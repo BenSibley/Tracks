@@ -233,7 +233,6 @@ th {
   margin: 1.5em;
 }
 
-img,
 .alignright,
 .alignleft,
 .aligncenter,
@@ -248,7 +247,6 @@ img,
   max-width: 100%;
   max-width: calc(100% - 48px);
 }
-img img,
 .alignright img,
 .alignleft img,
 .aligncenter img,
@@ -259,6 +257,11 @@ img img,
 .size-medium img,
 .size-thumbnail img {
   max-width: 100%;
+}
+
+img {
+  height: auto;
+  line-height: 0;
 }
 
 .wp-caption-text {

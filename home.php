@@ -8,7 +8,11 @@ if ( have_posts() ) :
         the_post();
         if(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
             get_template_part('licenses/content/content-two-column-images');
-        } else {
+        }
+        elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
+            get_template_part('licenses/content/content-full-width-images');
+        }
+        else {
             get_template_part('content');
         }
     endwhile;
