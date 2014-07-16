@@ -151,6 +151,7 @@ jQuery(document).ready(function($){
 
     // ===== Two-Column Layout ==== //
 
+    // called by lazy loading function
     function removeLayoutGaps(){
 
         if( $('body').hasClass('two-column') || $('body').hasClass('two-column-images')){
@@ -170,7 +171,6 @@ jQuery(document).ready(function($){
             });
         }
     }
-    removeLayoutGaps();
 
 
     // ===== Full-width Images - create separation between image and post ===== //
@@ -223,6 +223,35 @@ jQuery(document).ready(function($){
         }
     }
     centerContentIE();
+
+    /* lazy load images */
+    function lazyLoadImages(){
+
+        $('.lazy').each(function(){
+            var distanceToTop = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            var isVisible = distanceToTop - scroll < windowHeight;
+            if (isVisible) {
+
+                if( $(this).hasClass('lazy-image') ){
+                    $(this).attr('src', $(this).attr('data-src')).removeClass('lazy-image');
+                }
+                if( $(this).hasClass('lazy-bg-image') ){
+                    $(this).css('background-image', 'url("' + $(this).attr('data-background') + '")').removeClass('lazy-bg-image');
+                }
+            }
+        });
+        // delayed so it waits until after the images are loaded
+        setTimeout(function() {
+            removeLayoutGaps();
+        }, 0);
+    }
+    lazyLoadImages();
+
+    $(window).scroll(function() {
+        lazyLoadImages();
+    });
 
 });
 

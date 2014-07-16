@@ -395,10 +395,10 @@ function ct_tracks_featured_image() {
     if ($has_image == true) {
         // if two-column-images layout or full-width-images layout with image-based height set
         if($premium_layout == 'two-column-images' || ($premium_layout == 'full-width-images' && get_theme_mod('premium_layouts_full_width_image_height') == 'image')){
-            echo "<img class='featured-image' src='$image' />";
+            echo "<img class='featured-image lazy lazy-image' data-src='$image' />";
         }
         else {
-            echo "<div class='featured-image' style=\"background-image: url('".$image."')\"></div>";
+            echo "<div class='featured-image lazy lazy-bg-image' data-background='$image')\"></div>";
         }
 
     }

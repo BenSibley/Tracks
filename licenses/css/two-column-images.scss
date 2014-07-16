@@ -123,6 +123,8 @@
       clear: none;
       position: relative;
       line-height: 0; // get rid of extra height at bottom
+      min-height: 200px;
+      background: none;
 
       &.even {
 

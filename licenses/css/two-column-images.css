@@ -129,6 +129,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     clear: none;
     position: relative;
     line-height: 0;
+    min-height: 200px;
+    background: none;
   }
   .two-column-images .excerpt.even .featured-image {
     right: 0;
