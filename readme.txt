@@ -25,4 +25,5 @@ Tracks also uses:
 * Placeholders.js by James Allardice, http://jamesallardice.github.io/Placeholders.js/, licensed under the MIT license.
 * Google Fonts, http://google.com/fonts, licensed under open source licenses, see: https://developers.google.com/fonts/faq#Any_Page_OK.
 * Font Awesome by Dave Gandy, licensed under open source licenses, see: http://fortawesome.github.io/Font-Awesome/license/.
+* Picturefill by Scott Jehl, http://scottjehl.github.io/picturefill, licensed under the MIT license.
 * All images in screenshot.png from http://unsplash.com, licensed under Public Domain
