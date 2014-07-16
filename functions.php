@@ -576,5 +576,25 @@ function ct_tracks_category_link(){
     echo $html;
 }
 
+/* css output for hiding the scroll to top link */
+function ct_tracks_two_column_images_display(){
+
+    $setting = get_theme_mod('premium_layouts_two_column_images_content_display');
+
+    if($setting == 'excerpt') {
+        $css = ".two-column-images .excerpt .excerpt-content { display: block; }";
+        wp_add_inline_style('style', $css);
+    }
+    elseif($setting == 'meta') {
+        $css = ".two-column-images .excerpt .excerpt-meta { display: block; }";
+        wp_add_inline_style('style', $css);
+    }
+    elseif($setting == 'both') {
+        $css = ".two-column-images .excerpt .excerpt-meta, .two-column-images .excerpt .excerpt-content { display: block; }";
+        wp_add_inline_style('style', $css);
+    }
+}
+add_action('wp_enqueue_scripts','ct_tracks_two_column_images_display');
+
 
 ?>

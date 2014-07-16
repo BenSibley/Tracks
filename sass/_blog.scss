@@ -183,15 +183,16 @@
     margin-bottom: $baseline-height;
     opacity: 0.8;
     @include transition(opacity 0.2s ease);
-    @include backface-visibility(hidden);
+    backface-visibility: hidden;
 
     .featured-image {
+      transform: translateZ(0);/* fixes FF glitch where image focuses & unfocuses */
       width: 50%;
       height: 100%;
       padding-bottom: 0;
       position: absolute;
       right: 0;
-      @include backface-visibility(hidden);
+      backface-visibility: hidden;
     }
     &:hover {
       opacity: 1;

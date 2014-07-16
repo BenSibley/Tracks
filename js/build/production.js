@@ -211,9 +211,11 @@ jQuery(document).ready(function($){
 
         var imageHeightOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_image_height');
         var fullPostOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_full_post');
+        var contentDisplayOption = $('html', window.parent.document).find('#customize-control-premium_layouts_two_column_images_content_display');
 
         imageHeightOption.hide();
         fullPostOption.hide();
+        contentDisplayOption.hide();
 
         // if the layout is set to full-width images, display the image height option
         $('html', window.parent.document).find('#customize-control-premium_layouts_setting option').each(function(){
@@ -222,6 +224,9 @@ jQuery(document).ready(function($){
             }
             if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width'){
                 fullPostOption.show();
+            }
+            if($(this).attr('selected') == 'selected' && $(this).val() == 'two-column-images'){
+                contentDisplayOption.show();
             }
         });
     }
@@ -253,14 +258,13 @@ jQuery(document).ready(function($){
     // ===== Full-width Images - Click to show description ===== //
 
     $(".full-width-images").find('.excerpt').bind('click', clickShowDescription);
-    $(".two-column-images").find('.featured-image').bind('click', clickShowDescription);
+    $(".two-column-images").find('.excerpt').bind('click', clickShowDescription);
 
     // remove class from all other .excerpts, and add to select one
     function clickShowDescription(){
         $('.excerpt').removeClass('show-description');
         $(this).addClass('show-description');
     }
-    //clickShowDescription();
 
     // if clicked element is an ancestor, remove class
     $(document).click(function(event) {
@@ -292,8 +296,8 @@ jQuery(document).ready(function($){
 
     function centerContentIE(){
 
-        // only if ie9 and full-width-images layout
-        if($('html').hasClass('ie9') && $('body').hasClass('full-width-images')){
+        // only if ie9 and full-width-images layout or two-column-images layout
+        if($('html').hasClass('ie9') && ($('body').hasClass('full-width-images') || $('body').hasClass('two-column-images'))){
 
             $('.excerpt').each(function(){
 

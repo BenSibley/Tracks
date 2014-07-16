@@ -53,7 +53,7 @@ if( is_single() ) { ?>
     <div <?php post_class(); ?>>
         <?php
         // don't link the image if full-width layout
-        if(get_theme_mod('premium_layouts_setting') == 'full-width' || get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images' ){
+        if(get_theme_mod('premium_layouts_setting') == 'full-width' || get_theme_mod('premium_layouts_setting') == 'full-width-images'){
             ct_tracks_featured_image();
         } else { ?>
             <a class="featured-image-link" href="<?php the_permalink(); ?>">

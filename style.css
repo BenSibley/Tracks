@@ -875,18 +875,19 @@ a img {
     -webkit-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
     -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .excerpt .featured-image {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    /* fixes FF glitch where image focuses & unfocuses */
     width: 50%;
     height: 100%;
     padding-bottom: 0;
     position: absolute;
     right: 0;
     -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .excerpt:hover {
     opacity: 1;

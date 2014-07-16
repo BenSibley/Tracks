@@ -1,7 +1,5 @@
 /* Two-Column Images CSS */
 
-/* styles for two-column layout */
-
 @import "../../sass/variables";
 
 .two-column-images {
@@ -10,36 +8,89 @@
   .entry {
     line-height: 0; // remove space below featured image
   }
-  .entry-container {
+  .entry-container,
+  .excerpt-container {
     line-height: 1.5;
+  }
+  .excerpt {
+    position: relative;
   }
   .featured-image {
     height: auto;
     padding-bottom: 0;
+    max-width: 100%;
   }
-  // need specificity for override
-  #main .excerpt-container {
-    margin: auto;
+  .excerpt-container {
+    position: absolute;
+    display: table;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0 11.11%;
+    background: none;
+
+    // flexbox for modern browsers
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .content-container {
-    border: none;
-    padding: 0 5.55%;
+  .overlay-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(17,17,17,0.6);
+    opacity: 1;
+  }
+  .excerpt-header:after {
+    display: none;
+  }
+  .excerpt-title {
+    color: white;
+    opacity: 0.9;
+    font-size: 1.313em; /* 21px / 16px */
+    line-height: 1.143;
+  }
+  .excerpt:not(.has-post-thumbnail){
+    background: $gray-very-dark;
+    height: 0;
+    width: 100%;
+    padding-bottom: 60%;
+  }
+  .loop-pagination {
+    clear: both;
+    padding-top: $baseline-height * 3;
+  }
+  /* post page */
+
+  // in case image isn't width of post
+  .singular-post {
+
+    .featured-image {
+      display: block;
+      margin: 0 auto;
+    }
+    .featured-image-container {
+      background: $gray-dark;
+    }
   }
 }
-/* post page */
 
-// in case image isn't width of post
-.singular-post {
 
-  .featured-image {
-    display: block;
-    margin: 0 auto;
-  }
-  .featured-image-container {
-    background: $gray-dark;
-  }
-}
 
 /* 900px */
 @media all and (min-width: 56.25em){
@@ -63,7 +114,6 @@
       float: left;
       margin: 0 1.3875% $baseline-height;
       clear: none;
-      background: none;
       position: relative;
       line-height: 0; // get rid of extra height at bottom
 
@@ -73,112 +123,40 @@
           right: 0;
         }
       }
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(17,17,17,0.9);
-        opacity: 0;
-        transition: opacity 0.4s ease;
-
-        /* overriding a clearfix */
-        height: 100%;
-        visibility: visible;
-      }
-      // show the description
-      &.show-description {
+      &.odd {
 
         .excerpt-container {
-          opacity: 1;
-          visibility: visible;
-        }
-        .content-container {
-          opacity: 1;
-        }
-        &:after {
-          opacity: 1;
-          right: -1px; // to fix extra px showing on end
+          width: 100%;
         }
       }
-      .featured-image {
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
+    }
+    .excerpt:not(.has-post-thumbnail){
+      padding-bottom: 30%;
+      width: 47.225%;
     }
     .featured-image {
       position: relative;
       width: auto;
       height: auto;
     }
-    .excerpt-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      max-width: 600px;
-      margin: auto;
-      padding: 0 11.11%;
-      color: white;
-      //background: rgba(17,17,17,0.9);
-      background: none;
+    .excerpt-container,
+    .overlay {
       opacity: 0;
-      visibility: hidden;
-      transition: all 0.4s ease;
+      transition: opacity 0.3s ease;
+    }
+    .overlay {
+      background: rgba(17,17,17,0.9);
+    }
+    .overlay-link {
 
-      td {
-        border: none;
-      }
-    }
-    .content-container {
-      opacity: 0;
-      padding: 0 $baseline-height;
-      transition: opacity 0.4s 0.1s ease;
-    }
-    .excerpt-meta {
-      padding-top: $baseline-height / 0.813;
-    }
-    .excerpt-header {
-
-      &:after {
-        display: none;
-      }
-    }
-    .excerpt-title {
-      font-size: 1.313em; /* 21px / 16px */
-      line-height: 1.143;
-    }
-    .excerpt-content {
-      padding: 0;
-    }
-    .excerpt-meta a,
-    .excerpt-title a,
-    .more-link {
-      color: $gray-light;
-
-      &:link,
-      &:visited {
-        color: $gray-light;
-      }
       &:hover,
       &:active,
       &:focus {
-        color: white;
+
+        ~ div {
+          opacity: 1;
+        }
       }
-    }
-    .excerpt-header:after,
-    .more-link:after {
-      background: $gray-light;
-    }
-    .loop-pagination {
-      clear: both;
-      padding-top: $baseline-height * 3;
     }
   }
 }
