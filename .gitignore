@@ -1,5 +1,4 @@
-.sass-cache
+.sass-cache/
 .DS_Store
-.idea
-.idea/*
-.idea/workspace.xml
+.idea/
+node_modules/
