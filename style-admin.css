@@ -31,12 +31,13 @@
 /* 1200px */
 @media all and (min-width: 75em){
 
-    .content-licenses tbody tr:first-child {
-        width: 60%;
-        float: left;
-    }
+    /* before 'activate' button appears it's both, so put last-child styles here first*/
     .content-licenses tbody tr:last-child {
         width: 40%;
+        float: left;
+    }
+    .content-licenses tbody tr:first-child {
+        width: 60%;
         float: left;
     }
 }
