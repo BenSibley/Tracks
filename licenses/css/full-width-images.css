@@ -24,6 +24,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 }
 .full-width-images .excerpt {
   position: relative;
+  min-height: 100px;
 }
 .full-width-images .featured-image {
   height: auto;
@@ -109,6 +110,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 @media all and (min-width: 50em) {
   .full-width-images .excerpt {
     margin-bottom: 3em;
+    background: none;
+    min-height: 200px;
   }
   .full-width-images .excerpt.even .featured-image {
     right: 0;
@@ -123,6 +126,10 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     position: relative;
     width: auto;
     height: auto;
+  }
+  .full-width-images .featured-image-container {
+    background: #222222;
+    text-align: center;
   }
   .full-width-images .excerpt-container,
   .full-width-images .overlay {

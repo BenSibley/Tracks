@@ -24,6 +24,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 }
 .two-column-images .excerpt {
   position: relative;
+  min-height: 100px;
 }
 .two-column-images .featured-image {
   height: auto;
@@ -69,6 +70,11 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   left: 0;
   background: rgba(17, 17, 17, 0.6);
   opacity: 1;
+}
+.two-column-images .excerpt-header {
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 .two-column-images .excerpt-header i {
   font-size: 1.625em;
@@ -146,6 +152,10 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     position: relative;
     width: auto;
     height: auto;
+  }
+  .two-column-images .featured-image-container {
+    background: #222222;
+    text-align: center;
   }
   .two-column-images .excerpt-container,
   .two-column-images .overlay {

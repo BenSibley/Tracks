@@ -171,6 +171,7 @@ jQuery(document).ready(function($){
             });
         }
     }
+    removeLayoutGaps();
 
 
     // ===== Full-width Images - create separation between image and post ===== //
@@ -183,7 +184,11 @@ jQuery(document).ready(function($){
             $('.featured-image-container').css('padding-bottom', 0);
         }
     }
-    separatePostImage();
+
+    // wait until image loaded
+    $(window).bind('load', function() {
+        separatePostImage();
+    });
 
     // ===== Window Resize ===== //
 
@@ -199,18 +204,14 @@ jQuery(document).ready(function($){
         // only if ie9 and full-width-images layout or two-column-images layout
         if($('html').hasClass('ie9') && ($('body').hasClass('full-width-images') || $('body').hasClass('two-column-images'))){
 
-            $('.excerpt').each(function(){
+            $('.excerpt-container').each(function(){
 
                 // excerpt is container of content-container
                 var container = $(this);
-                var content = $(this).find('.content-container');
+                var content = $(this).find('.excerpt-header');
 
-                // if theres a featured-image use .excerpt height, else use .excerpt padding-bottom
-                if($(this).hasClass('has-post-thumbnail')){
-                    var containerBottom = container.offset().top + container.height();
-                } else {
-                    var containerBottom = container.offset().top + parseInt(container.css('padding-bottom'));
-                }
+                var containerBottom = container.offset().top + container.height();
+
                 // coordinates of bottom of content
                 var contentBottom = content.offset().top + content.height();
 
@@ -218,7 +219,8 @@ jQuery(document).ready(function($){
                 var topDistance = (containerBottom - contentBottom) / 2;
 
                 // add the distance to the top
-                $(this).find('.excerpt-container').css('top', topDistance);
+                content.css('top', topDistance);
+
             });
         }
     }
@@ -231,7 +233,9 @@ jQuery(document).ready(function($){
             var distanceToTop = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            var isVisible = distanceToTop - scroll < windowHeight;
+
+            // distance from top plus 100 px to help it load a bit earlier to avoid FOUC and b/c only checked every 400ms
+            var isVisible = distanceToTop - scroll - 100 < windowHeight;
             if (isVisible) {
 
                 if( $(this).hasClass('lazy-image') ){
@@ -242,15 +246,23 @@ jQuery(document).ready(function($){
                 }
             }
         });
-        // delayed so it waits until after the images are loaded
-        setTimeout(function() {
-            removeLayoutGaps();
-        }, 0);
     }
     lazyLoadImages();
 
+    var scrollHandling = {
+        allow: true,
+        reallow: function() {
+            scrollHandling.allow = true;
+        },
+        delay: 100 //(milliseconds) adjust to the highest acceptable value
+    };
     $(window).scroll(function() {
-        lazyLoadImages();
+
+        if(scrollHandling.allow) {
+            lazyLoadImages();
+            scrollHandling.allow = false;
+            setTimeout(scrollHandling.reallow, scrollHandling.delay);
+        }
     });
 
 });

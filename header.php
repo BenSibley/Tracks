@@ -7,6 +7,11 @@
 
     <?php wp_head(); ?>
 
+    <script>
+        // In case older browser finds picture element before picturefill is finished loading
+        document.createElement( "picture" );
+    </script>
+
 </head>
 
 

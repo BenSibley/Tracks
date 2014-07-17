@@ -9,6 +9,7 @@
   background: white;
   overflow: hidden;
   backface-visibility: hidden;
+  margin-bottom: $baseline-height;
 }
 .featured-image {
   position: relative;
@@ -55,8 +56,8 @@
 .excerpt-title {
   @extend %uppercase;
   letter-spacing: 0.04em;
-  font-size: 1.875em; /* 30px */
-  line-height: 1.6;
+  font-size: 1.313em; /* 21px / 16px */
+  line-height: 1.143;
 
   a {
     color: $primary-gray;
@@ -165,6 +166,10 @@
   }
   .loop-pagination {
     padding: $baseline-height / 2 $baseline-height $baseline-height * 2;
+  }
+  .excerpt-title {
+    font-size: 1.875em; /* 30px */
+    line-height: 1.6;
   }
 }
 

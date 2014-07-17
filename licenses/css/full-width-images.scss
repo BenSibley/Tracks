@@ -14,6 +14,7 @@
   }
   .excerpt {
     position: relative;
+    min-height: 100px;
   }
   .featured-image {
     height: auto;
@@ -106,6 +107,8 @@
 
     .excerpt {
       margin-bottom: $baseline-height * 2;
+      background: none;
+      min-height: 200px;
 
       &.even {
 
@@ -127,6 +130,10 @@
       position: relative;
       width: auto;
       height: auto;
+    }
+    .featured-image-container {
+      background: $gray-dark;
+      text-align: center;
     }
     .excerpt-container,
     .overlay {

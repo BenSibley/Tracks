@@ -374,33 +374,34 @@ function ct_tracks_featured_image() {
 
     $premium_layout = get_theme_mod('premium_layouts_setting');
 
-    // load smaller version on archive pages unless full-width layout active
-    if(is_archive() || is_home()) {
+    if (has_post_thumbnail( $post->ID ) ) {
 
-        if (has_post_thumbnail( $post->ID ) ) {
-
-            if($premium_layout == 'full-width' || $premium_layout == 'full-width-images' || $premium_layout == 'two-column-images'){
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-            } else {
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog' );
-            }
-            $image = $image[0];
-            $has_image = true;
+        if( is_archive() || is_home() && $premium_layout != 'full-width' ) {
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+        } else {
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
         }
-    } elseif (has_post_thumbnail( $post->ID ) ) {
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
         $image = $image[0];
         $has_image = true;
     }
     if ($has_image == true) {
-        // if two-column-images layout or full-width-images layout with image-based height set
+
+        // for layouts using img
         if($premium_layout == 'two-column-images' || ($premium_layout == 'full-width-images' && get_theme_mod('premium_layouts_full_width_image_height') == 'image')){
-            echo "<img class='featured-image lazy lazy-image' data-src='$image' />";
+
+            // if it's an archive page and the two-column-images layout, switch to a potentially smaller version
+            if(is_archive() || is_home() && $premium_layout == 'two-column-images'){
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+                $image = $image[0];
+            }
+            ?>
+             <img class="featured-image" src='<?php echo $image; ?>' data-src='<?php echo $image; ?>' />;
+            <?php
         }
+        // otherwise, just output the src as a bg image
         else {
             echo "<div class='featured-image lazy lazy-bg-image' data-background='$image')\"></div>";
         }
-
     }
 }
 

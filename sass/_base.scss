@@ -280,16 +280,12 @@ a img {
   }
 }
 
-/* 600px */
-@media all and (min-width: 37.5em) {
+.blog,
+.archive {
 
-  .blog,
-  .archive {
-
-    .main {
-      width: 88.89%;
-      margin: 0 auto;
-    }
+  .main {
+    width: 88.89%;
+    margin: 0 auto;
   }
 }
 
