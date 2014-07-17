@@ -264,6 +264,10 @@ img {
   line-height: 0;
 }
 
+.singular-attachment img {
+  max-width: 100%;
+}
+
 .wp-caption-text {
   margin: 0;
   color: #8c8c8c;

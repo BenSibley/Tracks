@@ -180,6 +180,12 @@ img {
   height: auto;
   line-height: 0;
 }
+.singular-attachment {
+
+  img {
+    max-width: 100%;
+  }
+}
 .wp-caption-text {
   margin: 0;
   @extend %thirteen-pixels;
