@@ -27,7 +27,7 @@ function ct_tracks_options_content(){
         if($active_tab == 'general'){ ?>
             <div class="content-general content">
                 <p>Thanks for downloading Tracks!</p>
-                <h3>Quick-start Guide</h3>
+                <h3>Getting Started</h3>
                 <p>Here are a few steps to make your site pixel-perfect with Tracks:</p>
                 <ul>
                     <li>Setup your menus (<a href="nav-menus.php">visit Menus page</a>)</li>
