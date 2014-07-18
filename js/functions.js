@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(function($){
 
     $(".entry-content").fitVids();
     $(".excerpt-content").fitVids();
@@ -149,30 +149,6 @@ jQuery(document).ready(function($){
     }
     displayLayoutOptions();
 
-    // ===== Two-Column Layout ==== //
-
-    // called by lazy loading function
-    function removeLayoutGaps(){
-
-        if( $('body').hasClass('two-column') || $('body').hasClass('two-column-images')){
-
-            $('.excerpt').each(function(){
-
-                // 40% of the screen over to be safe
-                var windowWidth = $(window).width() * 0.4;
-
-                // if it ends of over on the right, float it right
-                if($(this).offset().left > windowWidth){
-                    $(this).css('float','right');
-                } else {
-                    // to remove old float: right; on window resize
-                    $(this).css('float','left');
-                }
-            });
-        }
-    }
-    removeLayoutGaps();
-
 
     // ===== Full-width Images - create separation between image and post ===== //
 
@@ -194,7 +170,6 @@ jQuery(document).ready(function($){
 
     $(window).on('resize', function(){
         separatePostImage();
-        removeLayoutGaps();
     });
 
     /* ===== IE9 full-width image text positioning ===== */
@@ -266,6 +241,42 @@ jQuery(document).ready(function($){
     });
 
 });
+
+jQuery(window).load(function(){
+
+    var $ = jQuery;
+
+    // ===== Two-Column Layout ==== //
+
+    function removeLayoutGaps(){
+
+        if( $('body').hasClass('two-column') || $('body').hasClass('two-column-images')){
+
+            $('.excerpt').each(function(){
+
+                // 40% of the screen over to be safe
+                var windowWidth = $(window).width() * 0.4;
+
+                // if it ends of over on the right, float it right
+                if($(this).offset().left > windowWidth){
+                    $(this).css('float','right');
+                } else {
+                    // to remove old float: right; on window resize
+                    $(this).css('float','left');
+                }
+            });
+        }
+    }
+    removeLayoutGaps();
+
+    // ===== Window Resize ===== //
+
+    $(window).on('resize', function(){
+        removeLayoutGaps();
+    });
+
+});
+
 
 /* fix for skip-to-content link bug in Chrome & IE9 */
 window.addEventListener("hashchange", function(event) {

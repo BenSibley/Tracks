@@ -42,8 +42,8 @@ function ct_tracks_options_content(){
             <div class="content-support content">
                 <p>There are a few ways to get support for Tracks: </p>
                 <ul>
-                    <li>Find an answer on the knowledgebase (<a target="_blank" href="http://www.competethemes.com/documentation/tracks-knowledgebase">visit the Tracks Knowledgebase</a>)</li>
-                    <li>Ask a question on the support forum (<a target="_blank" href="http://wordpress.org/support/theme/tracks">visit support forum</a>)</li>
+                    <li>Find an answer on the knowledgebase (<a target="_blank" href="http://www.competethemes.com/documentation/tracks-knowledgebase/">visit the Tracks Knowledgebase</a>)</li>
+                    <li>Ask a question on the support forum (<a target="_blank" href="http://wordpress.org/support/theme/tracks/">visit support forum</a>)</li>
                 </ul>
             </div>
         <?php }
