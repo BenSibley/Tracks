@@ -110,6 +110,16 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 .two-column-images .singular-post .featured-image-container {
   background: #222222;
 }
+.two-column-images.singular-page .featured-image {
+  margin-bottom: 0;
+}
+.two-column-images.singular-page .entry {
+  padding-top: 0;
+  margin-top: 3em;
+}
+.two-column-images.singular-page .entry-header {
+  padding-top: 3em;
+}
 
 /* 900px */
 @media all and (min-width: 56.25em) {
