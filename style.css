@@ -300,7 +300,19 @@ textarea {
 input[type="submit"] {
   background: #222222;
   color: white;
-  max-width: 13.875em !important;
+  max-width: 22.2em !important;
+  min-width: 11.1em;
+  padding: 0.8em;
+  min-height: 45px;
+  outline: none;
+  border: none;
+  font-family: "raleway", sans-serif;
+  font-size: 0.813em;
+  line-height: 1.85;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
 input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
   cursor: pointer;

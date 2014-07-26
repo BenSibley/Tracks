@@ -217,7 +217,18 @@ textarea {
 input[type="submit"] {
   background: $gray-dark;
   color: white;
-  max-width: $baseline-height * 5 * 1.85 !important;
+  max-width: $baseline-height * 8 * 1.85 !important;
+  min-width: $baseline-height * 4 * 1.85;
+  padding: 0.8em;
+  min-height: 45px; // fix for IEs not handling padding well
+  outline: none;
+  border: none;
+  font-family: $primary-font-stack;
+  font-size: 0.813em;
+  line-height: 1.85;
+  border-radius: 0;
+  -webkit-appearance: none;
+  transition: all 0.2s ease;
 
   &:hover,
   &:active,
