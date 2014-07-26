@@ -60,6 +60,11 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-size: 100%;
   margin: 0;
@@ -76,6 +81,8 @@ body {
 .overflow-container {
   overflow: hidden;
   position: relative;
+  height: auto;
+  min-height: 100%;
 }
 
 .main {
@@ -806,6 +813,7 @@ a img {
   position: relative;
   text-decoration: none;
   color: #4d4d4d;
+  clear: both;
 }
 .more-link:link, .more-link:visited {
   color: #4d4d4d;

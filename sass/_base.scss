@@ -5,6 +5,10 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
 body {
   font-size: 100%;
   margin: 0;
@@ -20,6 +24,9 @@ body {
 .overflow-container {
   overflow: hidden;
   position: relative;
+  height: auto;
+  min-height: 100%;
+
 }
 .main {
   background: $gray-dark;
