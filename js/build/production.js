@@ -353,7 +353,8 @@ jQuery(window).load(function(){
 
     function removeLayoutGaps(){
 
-        if(window.width() > 899){
+        // if wide enough for two-column layout
+        if($(window).width() > 899){
 
             if( $('body').hasClass('two-column') || $('body').hasClass('two-column-images')){
 
@@ -371,6 +372,10 @@ jQuery(window).load(function(){
                     }
                 });
             }
+        }
+        // otherwise, remove inline styles in case screen shrunk from >900 to <900
+        else {
+            $('.excerpt').removeAttr('style');
         }
     }
     removeLayoutGaps();
