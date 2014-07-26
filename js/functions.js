@@ -29,7 +29,13 @@ jQuery(function($){
         }
     }
     function onScroll() {
-        var menuPrimaryItems = $('#menu-primary-items');
+
+        if($('#menu-primary-items').length){
+            var menuPrimaryItems = $('#menu-primary-items');
+        } else {
+            var menuPrimaryItems = $('.menu-unset');
+        }
+
         var menuItemsBottom = menuPrimaryItems.offset().top + menuPrimaryItems.height();
 
         // keep updating var on scroll
@@ -264,21 +270,24 @@ jQuery(window).load(function(){
 
     function removeLayoutGaps(){
 
-        if( $('body').hasClass('two-column') || $('body').hasClass('two-column-images')){
+        if(window.width() > 899){
 
-            $('.excerpt').each(function(){
+            if( $('body').hasClass('two-column') || $('body').hasClass('two-column-images')){
 
-                // 40% of the screen over to be safe
-                var windowWidth = $(window).width() * 0.4;
+                $('.excerpt').each(function(){
 
-                // if it ends of over on the right, float it right
-                if($(this).offset().left > windowWidth){
-                    $(this).css('float','right');
-                } else {
-                    // to remove old float: right; on window resize
-                    $(this).css('float','left');
-                }
-            });
+                    // 40% of the screen over to be safe
+                    var windowWidth = $(window).width() * 0.4;
+
+                    // if it ends of over on the right, float it right
+                    if($(this).offset().left > windowWidth){
+                        $(this).css('float','right');
+                    } else {
+                        // to remove old float: right; on window resize
+                        $(this).css('float','left');
+                    }
+                });
+            }
         }
     }
     removeLayoutGaps();
