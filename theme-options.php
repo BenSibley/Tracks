@@ -52,19 +52,19 @@ function ct_tracks_options_content(){
                 <h2>Upgrade your site with a new layout</h2>
                 <p>Tracks has premium layouts you can unlock to take your site to the next level. <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/">Check out the upgrades gallery.</a></p>
                 <div>
-                    <h3>Two-column Layout</h3><span> - <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-two-column-layout/">View Layout</a></span>
+                    <h3>Two-column Layout</h3><span><a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-two-column-layout/">View Layout</a> or <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-two-column-layout/?edd_action=add_to_cart&download_id=4281">buy now ($15)</a></span>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tracks-two-column-layout.png" />
                 </div>
                 <div>
-                    <h3>Two-column Images Layout</h3><span> - <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-two-column-images-layout/">View Layout</a></span>
+                    <h3>Two-column Images Layout</h3><span><a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-two-column-images-layout/">View Layout</a> or <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-two-column-images-layout/?edd_action=add_to_cart&download_id=4437">buy now ($15)</a></span>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tracks-two-column-images-layout.png" />
                 </div>
                 <div>
-                    <h3>Full-width Layout</h3><span> - <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-full-width-layout/">View Layout</a></span>
+                    <h3>Full-width Layout</h3><span><a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-full-width-layout/">View Layout</a> or <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-full-width-layout/?edd_action=add_to_cart&download_id=4203">buy now ($15)</a></span>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tracks-full-width-layout.png" />
                 </div>
                 <div>
-                    <h3>Full-width Images Layout</h3><span> - <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-full-width-images-layout/">View Layout</a></span>
+                    <h3>Full-width Images Layout</h3><span><a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-full-width-images-layout/">View Layout</a> or <a target="_blank" href="http://www.competethemes.com/tracks-theme-upgrades/tracks-full-width-images-layout/?edd_action=add_to_cart&download_id=4238">buy now ($15)</a></span>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tracks-full-width-images-layout.png" />
                 </div>
             </div>
