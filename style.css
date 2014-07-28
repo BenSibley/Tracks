@@ -1552,6 +1552,23 @@ li.pingback:after {
     padding-bottom: 1.5em;
   }
 }
+/* Attachment styles */
+.singular-attachment .further-reading a {
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #8c8c8c;
+}
+.singular-attachment .further-reading a:link, .singular-attachment .further-reading a:visited {
+  color: #8c8c8c;
+}
+.singular-attachment .further-reading a:hover, .singular-attachment .further-reading a:active, .singular-attachment .further-reading a:focus {
+  color: black;
+}
+.singular-attachment .further-reading p {
+  width: 49.5%;
+}
+
 /* Widget Area Styles */
 .sidebar-after-post-content,
 .sidebar-after-page-content {

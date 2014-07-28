@@ -1,0 +1,27 @@
+/* Attachment styles */
+
+.singular-attachment {
+
+  .further-reading {
+
+    a {
+      font-weight: 700;
+      font-size: 1em;
+      line-height: 1.5;
+      color: $gray-medium;
+
+      &:link,
+      &:visited {
+        color: $gray-medium;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: black;
+      }
+    }
+    p {
+      width: 49.5%;
+    }
+  }
+}
