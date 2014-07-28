@@ -395,7 +395,7 @@ function ct_tracks_featured_image() {
                 $image = $image[0];
             }
             ?>
-             <img class="featured-image" src='<?php echo $image; ?>' data-src='<?php echo $image; ?>' />;
+             <img class="featured-image" src='<?php echo $image; ?>' data-src='<?php echo $image; ?>' />
             <?php
         }
         // otherwise, just output the src as a bg image
