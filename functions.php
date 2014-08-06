@@ -395,12 +395,19 @@ function ct_tracks_featured_image() {
                 $image = $image[0];
             }
             ?>
-             <img class="featured-image" src='<?php echo $image; ?>' data-src='<?php echo $image; ?>' />
+             <img class="featured-image" src='<?php echo $image; ?>' />
             <?php
         }
-        // otherwise, just output the src as a bg image
+        // otherwise, output the src as a bg image
         else {
-            echo "<div class='featured-image lazy lazy-bg-image' data-background='$image')\"></div>";
+            // if lazy loading is enabled
+            if(get_theme_mod('additional_options_lazy_load_settings') == 'yes'){
+                echo "<div class='featured-image lazy lazy-bg-image' data-background='$image')\"></div>";
+            }
+            // if lazy loading is NOT enabled
+            else {
+                echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\")\"></div>";
+            }
         }
     }
 }

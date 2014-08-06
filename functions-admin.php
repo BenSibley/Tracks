@@ -319,6 +319,29 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
             ),
         )
     );
+    /* setting */
+    $wp_customize->add_setting(
+        'additional_options_lazy_load_settings',
+        array(
+            'default'           => 'no',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_lazy_load_settings',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'additional_options_lazy_load_settings',
+        array(
+            'type' => 'radio',
+            'label' => 'Lazy load images?',
+            'section' => 'ct_tracks_additional_options',
+            'choices' => array(
+                'yes' => 'Yes',
+                'no' => 'No'
+            ),
+        )
+    );
 }
 add_action( 'customize_register', 'ct_tracks_customizer_additional_options' );
 
@@ -349,6 +372,21 @@ function ct_tracks_sanitize_image_zoom_settings($input){
         return '';
     }
 }
+
+/* sanitize radio button input */
+function ct_tracks_sanitize_lazy_load_settings($input){
+    $valid = array(
+        'yes' => 'Yes',
+        'no' => 'No'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
 
 // Premium Layouts section
 function ct_tracks_customize_premium_layouts( $wp_customize ) {
