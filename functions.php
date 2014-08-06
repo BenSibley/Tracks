@@ -406,7 +406,7 @@ function ct_tracks_featured_image() {
             }
             // if lazy loading is NOT enabled
             else {
-                echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\")\"></div>";
+                echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\")></div>";
             }
         }
     }
