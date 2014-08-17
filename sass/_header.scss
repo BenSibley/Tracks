@@ -181,6 +181,7 @@
     padding: 0;
     margin: 0;
     text-align: right;
+    min-height: 37px; // stop posts from covering description when no menu items
 
     .site-description {
       position: absolute;

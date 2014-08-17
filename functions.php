@@ -304,7 +304,7 @@ function ct_tracks_excerpt() {
     }
 }
 
-// for custom & automatic excerpts
+// filter the link on excerpts
 function ct_tracks_excerpt_read_more_link($output) {
 	global $post;
 	return $output . "<p><a class='more-link' href='". get_permalink() ."'>Read the Post <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
