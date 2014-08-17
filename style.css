@@ -1501,12 +1501,11 @@ li.pingback:after {
   margin-right: 0.75em;
 }
 
-.search .search-icon {
-  display: none;
-}
-
 .search-form-container {
   margin: 1.5em 0 3em;
+}
+.search-form-container .search-icon {
+  display: none;
 }
 
 .archive-header {
@@ -1598,6 +1597,10 @@ li.pingback:after {
 }
 .widget li a:hover, .widget li a:active, .widget li a:focus {
   color: black;
+}
+
+.widget-search .search-form-container {
+  margin-bottom: 3em;
 }
 
 /* Footer menu styles */

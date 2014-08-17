@@ -25,14 +25,12 @@
     margin-right: $baseline-height / 2;
   }
 }
-.search {
+.search-form-container {
+  margin: $baseline-height 0 $baseline-height * 2;
 
   .search-icon {
     display: none;
   }
-}
-.search-form-container {
-  margin: $baseline-height 0 $baseline-height * 2;
 }
 .archive-header {
   padding: $baseline-height 5.55%;
