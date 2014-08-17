@@ -3,12 +3,13 @@
 .site-header .search-form-container {
   position: absolute;
   right: 5.55%;
-  left: 15.55%; // so it doesn't cover the secondary menu when closed
+  left: 12.55%; // so it doesn't cover the secondary menu when closed
   top: 0;
   height: 100%;
   margin: 0;
 
   button {
+    transform: translateZ(0); // hardware acceleration
     position: relative;
     z-index: 9;
     display: block;
@@ -49,6 +50,7 @@
     position: absolute;
   }
   .search-form {
+    transform: translateZ(0); // hardware acceleration
     position: absolute;
     top: 0;
     z-index: 19;

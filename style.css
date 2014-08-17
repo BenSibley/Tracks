@@ -1815,12 +1815,14 @@ li.pingback:after {
 .site-header .search-form-container {
   position: absolute;
   right: 5.55%;
-  left: 15.55%;
+  left: 12.55%;
   top: 0;
   height: 100%;
   margin: 0;
 }
 .site-header .search-form-container button {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
   position: relative;
   z-index: 9;
   display: block;
@@ -1857,6 +1859,8 @@ li.pingback:after {
   position: absolute;
 }
 .site-header .search-form-container .search-form {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
   position: absolute;
   top: 0;
   z-index: 19;
