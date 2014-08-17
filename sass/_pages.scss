@@ -25,6 +25,12 @@
     margin-right: $baseline-height / 2;
   }
 }
+.search {
+
+  .search-icon {
+    display: none;
+  }
+}
 .search-form-container {
   margin: $baseline-height 0 $baseline-height * 2;
 }

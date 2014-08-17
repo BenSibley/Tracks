@@ -1501,6 +1501,10 @@ li.pingback:after {
   margin-right: 0.75em;
 }
 
+.search .search-icon {
+  display: none;
+}
+
 .search-form-container {
   margin: 1.5em 0 3em;
 }
