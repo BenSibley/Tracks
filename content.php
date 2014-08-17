@@ -16,9 +16,9 @@ if( is_single() ) { ?>
         <div class="entry-meta">
             <span class="date"><?php echo get_the_date('F j'); ?> / </span>
             <span class="author"><?php the_author_posts_link(); ?> / </span>
-                <span class="category">
-                    <?php ct_tracks_category_link();?>
-                </span>
+            <span class="category">
+                <?php ct_tracks_category_link();?>
+            </span>
         </div>
         <div class='entry-header'>
             <h1 class='entry-title'><?php the_title(); ?></h1>
@@ -68,9 +68,9 @@ if( is_single() ) { ?>
             <div class="excerpt-meta">
                 <span class="date"><?php echo get_the_date('F j'); ?> / </span>
                 <span class="author"><?php the_author_posts_link(); ?> / </span>
-                    <span class="category">
-                        <?php ct_tracks_category_link(); ?>
-                    </span>
+                <span class="category">
+                    <?php ct_tracks_category_link(); ?>
+                </span>
             </div>
             <div class='excerpt-header'>
                 <h1 class='excerpt-title'>

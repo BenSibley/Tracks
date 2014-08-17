@@ -170,6 +170,95 @@ function ct_tracks_customize_search_input( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_tracks_customize_search_input' );
 
+// add display option for post meta
+function ct_tracks_customize_post_meta_display( $wp_customize ) {
+
+    /* section */
+    $wp_customize->add_section(
+        'ct_tracks_post_meta_display',
+        array(
+            'title'      => esc_html__( 'Post Meta', 'tracks' ),
+            'priority'   => 65,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'post_date_display_setting',
+        array(
+            'default'           => 'show',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            //'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'post_date_display_setting',
+        array(
+            'type' => 'radio',
+            'label' => 'Display date above post title?',
+            'section' => 'ct_tracks_post_meta_display',
+            'setting' => 'post_date_display_setting',
+            'choices' => array(
+                'show' => 'Show',
+                'hide' => 'Hide'
+            ),
+        )
+    );
+
+    /* setting */
+    $wp_customize->add_setting(
+        'post_author_display_setting',
+        array(
+            'default'           => 'show',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            //'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'post_author_display_setting',
+        array(
+            'type' => 'radio',
+            'label' => 'Display author name above post title?',
+            'section' => 'ct_tracks_post_meta_display',
+            'setting' => 'post_author_display_setting',
+            'choices' => array(
+                'show' => 'Show',
+                'hide' => 'Hide'
+            ),
+        )
+    );
+
+    /* setting */
+    $wp_customize->add_setting(
+        'post_category_display_setting',
+        array(
+            'default'           => 'show',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            //'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'post_category_display_setting',
+        array(
+            'type' => 'radio',
+            'label' => 'Display category above post title?',
+            'section' => 'ct_tracks_post_meta_display',
+            'setting' => 'post_category_display_setting',
+            'choices' => array(
+                'show' => 'Show',
+                'hide' => 'Hide'
+            ),
+        )
+    );
+}
+add_action( 'customize_register', 'ct_tracks_customize_post_meta_display' );
+
 // add tagline display options to existing 'site title & tagline' section
 function ct_tracks_customize_tagline_display( $wp_customize ) {
 
