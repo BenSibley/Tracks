@@ -387,6 +387,30 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
     );
     /* setting */
     $wp_customize->add_setting(
+        'additional_options_author_meta_settings',
+        array(
+            'default'           => 'show',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_return_top_settings',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'additional_options_author_meta_settings',
+        array(
+            'type' => 'radio',
+            'label' => 'Show author info box after posts?',
+            'section' => 'ct_tracks_additional_options',
+            'setting' => 'additional_options_author_meta_settings',
+            'choices' => array(
+                'show' => 'Show',
+                'hide' => 'Hide'
+            ),
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
         'additional_options_image_zoom_settings',
         array(
             'default'           => 'zoom',

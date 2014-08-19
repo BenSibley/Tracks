@@ -32,16 +32,19 @@ if( is_single() ) { ?>
                 <div class="entry-categories"><?php ct_tracks_category_display(); ?></div>
                 <div class="entry-tags"><?php ct_tracks_tags_display(); ?></div>
             </div>
-            <div class="author-meta">
-                <div class="author">
-                    <?php ct_tracks_profile_image_output(); ?>
-                    <span>Written by: <?php the_author_posts_link(); ?></span>
+            <?php
+            if(get_theme_mod('additional_options_author_meta_settings') != 'hide'){ ?>
+                <div class="author-meta">
+                    <div class="author">
+                        <?php ct_tracks_profile_image_output(); ?>
+                        <span>Written by: <?php the_author_posts_link(); ?></span>
+                    </div>
+                    <div class="bio">
+                        <p><?php the_author_meta( 'description' ); ?></p>
+                        <?php ct_tracks_author_social_icons(); ?>
+                    </div>
                 </div>
-                <div class="bio">
-                    <p><?php the_author_meta( 'description' ); ?></p>
-                    <?php ct_tracks_author_social_icons(); ?>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 <?php
