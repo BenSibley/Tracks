@@ -645,6 +645,54 @@ function ct_tracks_sanitize_premium_layouts_full_posts($input){
     }
 }
 
+/* Custom CSS Section */
+function ct_tracks_customizer_custom_css( $wp_customize ) {
+
+    // Custom Textarea Control
+    class ct_tracks_Textarea_Control extends WP_Customize_Control {
+        public $type = 'textarea';
+
+        public function render_content() {
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+            </label>
+        <?php
+        }
+    }
+    // section
+    $wp_customize->add_section(
+        'ct-custom-css',
+        array(
+            'title'      => __( 'Custom CSS', 'tracks' ),
+            'priority'   => 90,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    // setting
+    $wp_customize->add_setting(
+        'ct_tracks_custom_css_setting',
+        array(
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'esc_textarea',
+        )
+    );
+    // control
+    $wp_customize->add_control(
+        new ct_tracks_Textarea_Control(
+            $wp_customize,
+            'ct_tracks_custom_css_setting',
+            array(
+                'label'          => __( 'Add Custom CSS Here:', 'tracks' ),
+                'section'        => 'ct-custom-css',
+                'settings'       => 'ct_tracks_custom_css_setting',
+            )
+        ) );
+}
+add_action( 'customize_register', 'ct_tracks_customizer_custom_css' );
+
 function ct_tracks_user_profile_image_setting( $user ) { ?>
 
     <table id="profile-image-table" class="form-table">

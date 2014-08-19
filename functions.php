@@ -651,4 +651,15 @@ function ct_tracks_profile_image_output(){
     }
 }
 
+function ct_tracks_custom_css_output(){
+
+    $custom_css = get_theme_mod('ct_tracks_custom_css_setting');
+
+    /* output custom css */
+    if($custom_css) {
+        wp_add_inline_style('style', $custom_css);
+    }
+}
+add_action('wp_enqueue_scripts','ct_tracks_custom_css_output');
+
 ?>
