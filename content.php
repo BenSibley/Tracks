@@ -34,23 +34,7 @@ if( is_single() ) { ?>
             </div>
             <div class="author-meta">
                 <div class="author">
-                    <?php
-                    // use User's profile image, else default to their Gravatar
-                    if(get_the_author_meta('user_profile_image')){
-
-                        // get the id based on the image's URL
-                        $image_id = ct_tracks_get_image_id(get_the_author_meta('user_profile_image'));
-
-                        // retrieve the thumbnail size of profile image
-                        $image_thumb = wp_get_attachment_image($image_id, 'thumbnail');
-
-                        // display the image
-                        echo $image_thumb;
-
-                    } else {
-                        echo get_avatar( get_the_author_meta( 'ID' ), 72 );
-                    }
-                    ?>
+                    <?php ct_tracks_profile_image_output(); ?>
                     <span>Written by: <?php the_author_posts_link(); ?></span>
                 </div>
                 <div class="bio">

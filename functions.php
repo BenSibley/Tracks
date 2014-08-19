@@ -207,11 +207,20 @@ function ct_tracks_tags_display() {
 /* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
 function ct_tracks_customize_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
+    global $post;
  
     ?>
     <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
         <article id="comment-<?php comment_ID(); ?>" class="comment">
-            <div class="comment-author"><?php echo get_avatar( get_comment_author_email(), 72 ); ?>
+            <div class="comment-author">
+                <?php
+                // if is post author
+                if( $comment->user_id === $post->post_author ) {
+                    ct_tracks_profile_image_output();
+                } else {
+                    echo get_avatar( get_comment_author_email(), 72 );
+                }
+                ?>
                 <div>
                     <div class="author-name"><?php comment_author_link(); ?></div>
                     <div class="comment-date"><?php comment_date('n/j/Y'); ?></div>
@@ -621,6 +630,25 @@ function ct_tracks_get_image_id($url) {
 
     // Returns null if no attachment is found
     return $attachment[0];
+}
+
+function ct_tracks_profile_image_output(){
+
+    // use User's profile image, else default to their Gravatar
+    if(get_the_author_meta('user_profile_image')){
+
+        // get the id based on the image's URL
+        $image_id = ct_tracks_get_image_id(get_the_author_meta('user_profile_image'));
+
+        // retrieve the thumbnail size of profile image
+        $image_thumb = wp_get_attachment_image($image_id, 'thumbnail');
+
+        // display the image
+        echo $image_thumb;
+
+    } else {
+        echo get_avatar( get_the_author_meta( 'ID' ), 72 );
+    }
 }
 
 ?>
