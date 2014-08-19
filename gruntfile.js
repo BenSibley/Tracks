@@ -7,15 +7,18 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'js/*.js'
+                    'js/*.js',
+                    '!js/profile-uploader.js'
                 ],
                 dest: 'js/build/production.js'
             }
         },
         uglify: {
-            build: {
-                src: 'js/build/production.js',
-                dest: 'js/build/production.min.js'
+            dist: {
+                files: {
+                    'js/build/production.min.js': 'js/build/production.js',
+                    'js/build/profile-uploader.min.js': 'js/profile-uploader.js'
+                }
             }
         },
         watch: {
