@@ -40,6 +40,20 @@ function ct_tracks_enqueue_admin_styles($hook){
 }
 add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
 
+function ct_tracks_enqueue_profile_image_uploader($hook) {
+
+    // if is user profile page
+    if('profile.php' == $hook){
+
+        // Enqueues all scripts, styles, settings, and templates necessary to use all media JavaScript APIs.
+        wp_enqueue_media();
+
+        // enqueue the JS needed to utilize media uploader on profile image upload
+        wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js');
+    }
+}
+add_action('admin_enqueue_scripts', 'ct_tracks_enqueue_profile_image_uploader');
+
 /* Load the core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 new Hybrid();
