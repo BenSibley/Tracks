@@ -1,16 +1,36 @@
 /* styles for theme options page */
 
+#tracks-dashboard-wrap .nav-tab-wrapper {
+    padding-top: 24px;
+}
 .content {
-    margin-top: 36px;
+    margin-top: 24px;
+    padding: 12px 24px;
+    border: solid 1px #CCC;
+}
+.content-premium-layouts:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.content .button-primary {
+    margin: 12px 0;
 }
 .content ul {
     list-style: disc;
     margin-left: 36px;
 }
+.content-licenses {
+    border: none;
+    padding: 0;
+}
 .content-licenses form {
-    background: #dddddd;
     padding: 0 24px;
     margin-bottom: 24px;
+    border: solid 1px #ccc;
 }
 .content-licenses label {
     display: block;

@@ -15,36 +15,32 @@ function ct_tracks_options_content(){
 
         <h2>Tracks Dashboard</h2>
 
-        <?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'general'; ?>
+        <?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'getting-started'; ?>
 
         <h2 class="nav-tab-wrapper">
-            <a href="?page=tracks-options&tab=general" class="nav-tab <?php echo $active_tab == 'general' ? 'nav-tab-active' : ''; ?>">General</a>
+            <a href="?page=tracks-options&tab=getting-started" class="nav-tab <?php echo $active_tab == 'getting-started' ? 'nav-tab-active' : ''; ?>">Getting Started</a>
             <a href="?page=tracks-options&tab=support" class="nav-tab <?php echo $active_tab == 'support' ? 'nav-tab-active' : ''; ?>">Support</a>
             <a href="?page=tracks-options&tab=premium-layouts" class="nav-tab <?php echo $active_tab == 'premium-layouts' ? 'nav-tab-active' : ''; ?>">Premium Layouts</a>
             <a href="?page=tracks-options&tab=licenses" class="nav-tab <?php echo $active_tab == 'licenses' ? 'nav-tab-active' : ''; ?>">Licenses</a>
         </h2>
         <?php
-        if($active_tab == 'general'){ ?>
-            <div class="content-general content">
-                <p>Thanks for downloading Tracks!</p>
-                <h3>Getting Started</h3>
-                <p>Here are a few steps to make your site pixel-perfect with Tracks:</p>
-                <ul>
-                    <li>Setup your menus (<a href="nav-menus.php">visit Menus page</a>)</li>
-                    <li>Add your logo and social icons (<a href="customize.php">visit Theme Customizer</a>)</li>
-                    <li>Add widgets after your posts and/or pages (<a href="widgets.php">visit Widgets page</a>)</li>
-                    <li>Review Tracks on wordpress.org (<a href="http://wordpress.org/support/view/theme-reviews/tracks">review now</a>)</li>
-                </ul>
-                <p>If you want more help getting your site setup, we have <a target="_blank" href="http://www.competethemes.com/documentation/tracks-knowledgebase/">detailed tutorials</a> in our knowledgebase.</p>
+        if($active_tab == 'getting-started'){ ?>
+            <div class="content-getting-started content">
+                <h3><?php _e('Start Customizing', 'tracks'); ?></h3>
+                <p><?php _e('Thanks for downloading Tracks!', 'tracks'); ?></p>
+                <p><?php _e("To start customizing Tracks, click the 'Customize' option in your menu, or use the button below to get started", 'tracks'); ?>.</p>
+                <p>
+                    <a class="button-primary" href="customize.php"><?php _e('Use Customizer', 'tracks') ?></a>
+                </p>
             </div>
         <?php }
         elseif($active_tab == 'support'){ ?>
             <div class="content-support content">
-                <p>There are a few ways to get support for Tracks: </p>
-                <ul>
-                    <li>Find an answer on the knowledgebase (<a target="_blank" href="http://www.competethemes.com/documentation/tracks-knowledgebase/">visit the Tracks Knowledgebase</a>)</li>
-                    <li>Ask a question on the support forum (<a target="_blank" href="http://wordpress.org/support/theme/tracks/">visit support forum</a>)</li>
-                </ul>
+                <h3><?php _e('Get Support', 'tracks'); ?></h3>
+                <p><?php _e("You can find the knowledgebase, tutorials, support forum, and more in the Tracks Support Center", "tracks"); ?>.</p>
+                <p>
+                    <a target="_blank" class="button-primary" href="http://www.competethemes.com/documentation/tracks-support-center/"><?php _e('Visit Support Center', 'tracks'); ?></a>
+                </p>
             </div>
         <?php }
         elseif($active_tab == 'premium-layouts'){ ?>
@@ -69,7 +65,7 @@ function ct_tracks_options_content(){
                 </div>
             </div>
         <?php }
-        else { ?>
+        elseif($active_tab == 'licenses'){ ?>
             <div class="content-licenses content">
 
                 <?php
