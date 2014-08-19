@@ -38,9 +38,6 @@ if( is_single() ) { ?>
                     // use User's profile image, else default to their Gravatar
                     if(get_the_author_meta('user_profile_image')){
 
-                        // div needed to crop image into a square
-                        echo "<div class='author-profile-image'>";
-
                         // get the id based on the image's URL
                         $image_id = ct_tracks_get_image_id(get_the_author_meta('user_profile_image'));
 
@@ -50,7 +47,6 @@ if( is_single() ) { ?>
                         // display the image
                         echo $image_thumb;
 
-                        echo "</div>";
                     } else {
                         echo get_avatar( get_the_author_meta( 'ID' ), 72 );
                     }
