@@ -1,0 +1,47 @@
+/* Styles for Disqus Comment System */
+
+#disqus_thread {
+  background: white;
+  padding: $baseline-height 5.55%;
+}
+
+/* 600px */
+@media all and (min-width: 37.5em){
+
+  #disqus_thread {
+    width: 88.88%;
+    margin: 0 auto;
+  }
+}
+
+/* 700px */
+@media all and (min-width: 43.75em) {
+
+  #disqus_thread {
+    padding: $baseline-height 10%;
+  }
+}
+
+/* 900px */
+@media all and (min-width: 56.25em){
+
+  #disqus_thread {
+    padding: $baseline-height 14.66%;
+  }
+}
+
+/* 1100px */
+@media all and (min-width: 68.75em) {
+
+  #disqus_thread {
+    padding: $baseline-height 17.435% $baseline-height * 2;
+  }
+}
+
+/* 1200px */
+@media all and (min-width: 75em) {
+
+  #disqus_thread {
+    padding: $baseline-height 19.75% $baseline-height * 2;
+  }
+}
