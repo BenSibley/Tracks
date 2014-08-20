@@ -1835,6 +1835,7 @@ li.pingback:after {
   display: block;
   left: 0;
   height: 100%;
+  height: calc(100% + 1px);
   float: right;
   border: none;
   background: #111111;

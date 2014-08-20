@@ -207,7 +207,7 @@ jQuery(function($){
 
             /* transform on a button makes it disappear in webkit, so using left.
             *  Move search-form width left minus site padding plus extra 7px space */
-            $('#search-icon').css('left', -searchFormWidth + sitePadding - 7);
+            $('#search-icon').css('left', -searchFormWidth + sitePadding - 5);
         }
     }
 

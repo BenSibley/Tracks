@@ -25,6 +25,13 @@
     <i class="fa fa-arrow-up"></i>
 </button>
 
+<?php
+    // add the background image if being used
+    if(get_theme_mod( 'ct_tracks_background_image_setting')){
+        echo "<div class='background-image'></div>";
+    }
+?>
+
 </div><!-- .overflow-container -->
 
 <?php wp_footer(); ?>

@@ -15,6 +15,7 @@
     display: block;
     left: 0;
     height: 100%;
+    height: calc(100% + 1px); // b/c of border on inputs
     float: right;
     border: none;
     background: $gray-very-dark;

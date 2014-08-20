@@ -662,4 +662,34 @@ function ct_tracks_custom_css_output(){
 }
 add_action('wp_enqueue_scripts','ct_tracks_custom_css_output');
 
+
+function ct_tracks_background_image_output(){
+
+    $background_image = get_theme_mod( 'ct_tracks_background_image_setting');
+
+    if($background_image){
+
+        $background_image_css = "
+            .background-image {
+                background-image: url('$background_image');
+                background-size: cover;
+                position: fixed;
+                z-index: -1;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            .site-header, .top-navigation, .main {
+              background: none;
+            }
+            .excerpt {
+              opacity: 1;
+            }
+        ";
+        wp_add_inline_style('style', $background_image_css);
+    }
+}
+add_action('wp_enqueue_scripts','ct_tracks_background_image_output');
+
 ?>
