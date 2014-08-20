@@ -1935,14 +1935,14 @@ li.pingback:after {
   /* 21px / 16px */
   line-height: 1.714;
   margin: 0 0.375em;
-  color: #8c8c8c;
-  opacity: 0.6;
+  color: white;
+  opacity: 0.4;
 }
 .social-media-icons a:link, .social-media-icons a:visited {
-  color: #8c8c8c;
+  color: white;
 }
 .social-media-icons a:hover, .social-media-icons a:active, .social-media-icons a:focus {
-  color: #8c8c8c;
+  color: white;
   opacity: 0.9;
 }
 

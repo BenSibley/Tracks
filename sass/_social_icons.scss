@@ -12,17 +12,17 @@
     font-size: 1.313em; /* 21px / 16px */
     line-height: 1.714; // needs 36px to fit perfectly
     margin: 0 $baseline-height / 4;
-    color: $gray-medium;
-    opacity: 0.6;
+    color: white;
+    opacity: 0.4;
 
     &:link,
     &:visited {
-      color: $gray-medium;
+      color: white;
     }
     &:hover,
     &:active,
     &:focus {
-      color: $gray-medium;
+      color: white;
       opacity: 0.9;
     }
   }

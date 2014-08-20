@@ -683,8 +683,17 @@ function ct_tracks_background_image_output(){
             .site-header, .top-navigation, .main {
               background: none;
             }
+            .site-header {
+              border-color: transparent;
+            }
             .excerpt {
               opacity: 1;
+            }
+            .site-header .search-form-container button {
+              background: none;
+            }
+            .site-footer {
+              background: #222;
             }
         ";
         wp_add_inline_style('style', $background_image_css);
