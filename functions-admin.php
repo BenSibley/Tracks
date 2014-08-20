@@ -500,7 +500,6 @@ function ct_tracks_sanitize_lazy_load_settings($input){
     }
 }
 
-
 // Premium Layouts section
 function ct_tracks_customize_premium_layouts( $wp_customize ) {
 
