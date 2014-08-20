@@ -97,6 +97,9 @@ function ct_tracks_license_form_output($upgrades){
                 elseif($upgrade == 'full_width_images'){
                     _e('Full-width Images Layout','tracks');
                 }
+                elseif($upgrade == 'background_images'){
+                    _e('Background Images','tracks');
+                }
                 ?>
             </h4>
             <table class="form-table">
@@ -126,9 +129,12 @@ function ct_tracks_license_form_output($upgrades){
                 <?php } ?>
                 </tbody>
             </table>
-            <?php if( $status !== false && $status == 'valid' ) { ?>
-                <p class="valid">You can switch to your new layout in the "Premium Layouts" section in the <a href="customize.php">Customizer</a></p>
-            <?php } ?>
+            <?php if( $status !== false && $status == 'valid' ) {
+                if($upgrade == 'background_images'){ ?>
+                    <p class="valid">You can add a background image now in the "Background Images" section in the <a href="customize.php">Customizer</a></p><?php }
+                else { ?>
+                    <p class="valid">You can switch to your new layout in the "Premium Layouts" section in the <a href="customize.php">Customizer</a></p><?php }
+            } ?>
             <?php submit_button('Save License'); ?>
         </form>
 <?php }
