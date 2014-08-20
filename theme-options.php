@@ -57,38 +57,20 @@ function ct_tracks_options_content(){
                 <?php
                 // array of available layouts
                 $layouts = array('two_column', 'two_column_images', 'full_width', 'full_width_images');
-                // create form for each layout option available
+                // create form for each layout
                 ct_tracks_license_form_output($layouts);
                 ?>
                 <h3>Premium Features</h3>
+                <?php
+                // array of available features
+                $features = array('background_images');
+                // create form for each feature
+                ct_tracks_license_form_output($features);
+                ?>
             </div>
         <?php } ?>
     </div>
 <?php }
-
-function ct_tracks_full_width_register_option() {
-    // creates our settings in the options table
-    register_setting('ct_tracks_full_width_license', 'ct_tracks_full_width_license_key', 'ct_tracks_full_width_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_full_width_register_option');
-
-function ct_tracks_full_width_images_register_option() {
-    // creates our settings in the options table
-    register_setting('ct_tracks_full_width_images_license', 'ct_tracks_full_width_images_license_key', 'ct_tracks_full_width_images_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_full_width_images_register_option');
-
-function ct_tracks_two_column_register_option() {
-    // creates our settings in the options table
-    register_setting('ct_tracks_two_column_license', 'ct_tracks_two_column_license_key', 'ct_tracks_two_column_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_two_column_register_option');
-
-function ct_tracks_two_column_images_register_option() {
-    // creates our settings in the options table
-    register_setting('ct_tracks_two_column_images_license', 'ct_tracks_two_column_images_license_key', 'ct_tracks_two_column_images_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_two_column_images_register_option');
 
 // loop through array creating a license activation form for each upgrade
 function ct_tracks_license_form_output($upgrades){
@@ -151,3 +133,29 @@ function ct_tracks_license_form_output($upgrades){
         </form>
 <?php }
 }
+
+/* Register the options so licenses can be saved to db */
+
+function ct_tracks_full_width_register_option() {
+    // creates our settings in the options table
+    register_setting('ct_tracks_full_width_license', 'ct_tracks_full_width_license_key', 'ct_tracks_full_width_sanitize_license' );
+}
+add_action('admin_init', 'ct_tracks_full_width_register_option');
+
+function ct_tracks_full_width_images_register_option() {
+    // creates our settings in the options table
+    register_setting('ct_tracks_full_width_images_license', 'ct_tracks_full_width_images_license_key', 'ct_tracks_full_width_images_sanitize_license' );
+}
+add_action('admin_init', 'ct_tracks_full_width_images_register_option');
+
+function ct_tracks_two_column_register_option() {
+    // creates our settings in the options table
+    register_setting('ct_tracks_two_column_license', 'ct_tracks_two_column_license_key', 'ct_tracks_two_column_sanitize_license' );
+}
+add_action('admin_init', 'ct_tracks_two_column_register_option');
+
+function ct_tracks_two_column_images_register_option() {
+    // creates our settings in the options table
+    register_setting('ct_tracks_two_column_images_license', 'ct_tracks_two_column_images_license_key', 'ct_tracks_two_column_images_sanitize_license' );
+}
+add_action('admin_init', 'ct_tracks_two_column_images_register_option');
