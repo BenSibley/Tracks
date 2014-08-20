@@ -159,3 +159,9 @@ function ct_tracks_two_column_images_register_option() {
     register_setting('ct_tracks_two_column_images_license', 'ct_tracks_two_column_images_license_key', 'ct_tracks_two_column_images_sanitize_license' );
 }
 add_action('admin_init', 'ct_tracks_two_column_images_register_option');
+
+function ct_tracks_background_images_register_option() {
+    // creates our settings in the options table
+    register_setting('ct_tracks_background_images_license', 'ct_tracks_background_images_license_key', 'ct_tracks_background_images_sanitize_license' );
+}
+add_action('admin_init', 'ct_tracks_background_images_register_option');
