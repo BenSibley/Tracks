@@ -15,7 +15,6 @@
     display: block;
     left: 0;
     height: 100%;
-    height: calc(100% + 1px); // b/c of border on inputs
     float: right;
     border: none;
     background: $gray-very-dark;
@@ -64,12 +63,14 @@
     width: 80%;
     left: 0;
     max-width: none !important;
+    outline: none !important;
   }
   input.search-submit {
     width: 30%;
     right: 0;
     max-width: none !important;
     min-width: 0 !important;
+    outline: none !important;
   }
 
   // move over the social icons if present

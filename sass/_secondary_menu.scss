@@ -35,18 +35,18 @@
   a {
     @extend %uppercase;
     @extend %thirteen-pixels;
-    color: $gray-medium;
-    opacity: 0.6;
+    color: white;
+    opacity: 0.4;
     margin-right: $baseline-height / 2; // account for inline-block 4px spacing
 
     &:link,
     &:visited {
-      color: $gray-medium;
+      color: white;
     }
     &:hover,
     &:active,
     &:focus {
-      color: $gray-medium;
+      color: white;
       opacity: 0.9;
     }
   }
@@ -87,8 +87,8 @@
     &:before {
       content: '//';
       margin-right: 16px;
-      color: $gray-medium;
-      opacity: 0.6;
+      color: white;
+      opacity: 0.4;
     }
     li,
     a {

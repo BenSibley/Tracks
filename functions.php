@@ -689,7 +689,7 @@ function ct_tracks_background_image_output(){
             .excerpt {
               opacity: 1;
             }
-            .site-header .search-form-container button {
+            .site-header .search-form-container button, .menu-secondary-items {
               background: none;
             }
             .site-footer {
