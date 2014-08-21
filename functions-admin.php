@@ -500,6 +500,68 @@ function ct_tracks_sanitize_lazy_load_settings($input){
     }
 }
 
+// Background texture section
+function ct_tracks_customize_background_texture($wp_customize){
+
+    // only add the background images if license is valid
+    //if(ct_tracks_background_images_check_license() == 'valid'){
+
+        /* section */
+        $wp_customize->add_section(
+            'ct_tracks_background_texture',
+            array(
+                'title'      => esc_html__( 'Background Texture', 'tracks' ),
+                'priority'   => 83,
+                'capability' => 'edit_theme_options'
+            )
+        );
+        /* setting */
+        $wp_customize->add_setting(
+            'ct_tracks_background_texture_setting',
+            array(
+                'type'              => 'theme_mod',
+                'capability'        => 'edit_theme_options',
+                //'sanitize_callback' => 'esc_url_raw',
+            )
+        );
+    /* background texture control */
+    // textures from subtlepatterns.com
+    $wp_customize->add_control(
+        'ct_tracks_background_texture_setting',
+        array(
+            'label'          => __( 'Choose a Texture', 'tracks' ),
+            'section'        => 'ct_tracks_background_texture',
+            'settings'       => 'ct_tracks_background_texture_setting',
+            'type'           => 'radio',
+            'choices'        => array(
+                'binding_dark'   => '',
+                'brickwall'   => '',
+                'congruent_outline'  => '',
+                'crossword'  => '',
+                'escheresque_ste'  => '',
+                'fabric_squares'  => '',
+                'geometry'  => '',
+                'grey_wash_wall'  => '',
+                'halftone'  => '',
+                'notebook'  => '',
+                'office'  => '',
+                'pixel_weave'  => '',
+                'sativa'  => '',
+                'shattered'  => '',
+                'skulls'  => '',
+                'snow'  => '',
+                'sos'  => '',
+                'sprinkles'  => '',
+                'squared_metal'  => '',
+                'stardust'  => '',
+                'tweed'  => ''
+            )
+        )
+    );
+    //}
+}
+add_action( 'customize_register', 'ct_tracks_customize_background_texture' );
+
 // Background images section
 function ct_tracks_customize_background_image($wp_customize){
 
