@@ -500,6 +500,35 @@ function ct_tracks_sanitize_lazy_load_settings($input){
     }
 }
 
+function ct_tracks_textures_array(){
+
+    $textures = array(
+                'binding_dark'   => '',
+                'brickwall'   => '',
+                'congruent_outline'  => '',
+                'crossword'  => '',
+                'escheresque_ste'  => '',
+                'fabric_squares'  => '',
+                'geometry'  => '',
+                'grey_wash_wall'  => '',
+                'halftone'  => '',
+                'notebook'  => '',
+                'office'  => '',
+                'pixel_weave'  => '',
+                'sativa'  => '',
+                'shattered'  => '',
+                'skulls'  => '',
+                'snow'  => '',
+                'sos'  => '',
+                'sprinkles'  => '',
+                'squared_metal'  => '',
+                'stardust'  => '',
+                'tweed'  => ''
+    );
+
+    return $textures;
+}
+
 // Background texture section
 function ct_tracks_customize_background_texture($wp_customize){
 
@@ -524,40 +553,20 @@ function ct_tracks_customize_background_texture($wp_customize){
                 //'sanitize_callback' => 'esc_url_raw',
             )
         );
-    /* background texture control */
-    // textures from subtlepatterns.com
-    $wp_customize->add_control(
-        'ct_tracks_background_texture_setting',
-        array(
-            'label'          => __( 'Choose a Texture', 'tracks' ),
-            'section'        => 'ct_tracks_background_texture',
-            'settings'       => 'ct_tracks_background_texture_setting',
-            'type'           => 'radio',
-            'choices'        => array(
-                'binding_dark'   => '',
-                'brickwall'   => '',
-                'congruent_outline'  => '',
-                'crossword'  => '',
-                'escheresque_ste'  => '',
-                'fabric_squares'  => '',
-                'geometry'  => '',
-                'grey_wash_wall'  => '',
-                'halftone'  => '',
-                'notebook'  => '',
-                'office'  => '',
-                'pixel_weave'  => '',
-                'sativa'  => '',
-                'shattered'  => '',
-                'skulls'  => '',
-                'snow'  => '',
-                'sos'  => '',
-                'sprinkles'  => '',
-                'squared_metal'  => '',
-                'stardust'  => '',
-                'tweed'  => ''
+        // textures from subtlepatterns.com
+        $textures = ct_tracks_textures_array();
+
+    /* control */
+        $wp_customize->add_control(
+            'ct_tracks_background_texture_setting',
+            array(
+                'label'          => __( 'Choose a Texture', 'tracks' ),
+                'section'        => 'ct_tracks_background_texture',
+                'settings'       => 'ct_tracks_background_texture_setting',
+                'type'           => 'radio',
+                'choices'        => $textures
             )
-        )
-    );
+        );
     //}
 }
 add_action( 'customize_register', 'ct_tracks_customize_background_texture' );
