@@ -456,6 +456,9 @@ function ct_tracks_body_class( $classes ) {
     if ( ! is_front_page() ) {
         $classes[] = 'not-front';
     }
+    if (get_theme_mod('ct_tracks_header_color_setting') == 'dark'){
+        $classes[] = 'dark-header';
+    }
     if(get_theme_mod('premium_layouts_setting') == 'full-width'){
         $classes[] = 'full-width';
 
