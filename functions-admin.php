@@ -315,6 +315,46 @@ function ct_tracks_sanitize_tagline_display($input){
     }
 }
 
+// allow users to switch to a dark header
+function ct_tracks_customize_header_color( $wp_customize ) {
+
+    /* section */
+    $wp_customize->add_section(
+        'ct_tracks_header_color',
+        array(
+            'title'      => esc_html__( 'Header Color', 'tracks' ),
+            'description' => esc_html__('Change to dark if your new background makes the menu hard to read.', 'tracks'),
+            'priority'   => 81,
+            'capability' => 'edit_theme_options'
+        )
+    );
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_tracks_header_color_setting',
+        array(
+            'default'           => 'light',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            //'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        'ct_tracks_header_color_setting',
+        array(
+            'type' => 'radio',
+            'label' => 'Light or dark header color?',
+            'section' => 'ct_tracks_header_color',
+            'setting' => 'ct_tracks_header_color_setting',
+            'choices' => array(
+                'light' => 'Light',
+                'dark' => 'Dark',
+            ),
+        )
+    );
+}
+add_action( 'customize_register', 'ct_tracks_customize_header_color' );
+
 function ct_tracks_customizer_additional_options( $wp_customize ) {
 
     /* create custom control for number input */
@@ -558,6 +598,7 @@ function ct_tracks_customize_background_texture($wp_customize){
             'ct_tracks_background_texture',
             array(
                 'title'      => esc_html__( 'Background Texture', 'tracks' ),
+                'description' => esc_html__('Use the Header Color section above if your new texture makes the menu hard to read.', 'tracks'),
                 'priority'   => 83,
                 'capability' => 'edit_theme_options'
             )
@@ -600,6 +641,7 @@ function ct_tracks_customize_background_image($wp_customize){
             'ct_tracks_background_image',
             array(
                 'title'      => esc_html__( 'Background Image', 'tracks' ),
+                'description' => esc_html__('Use the Header Color section above if your new background image makes the menu hard to read.', 'tracks'),
                 'priority'   => 84,
                 'capability' => 'edit_theme_options'
             )
