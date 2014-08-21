@@ -1,0 +1,58 @@
+/* Styles for when user selects a dark header */
+
+.dark-header {
+
+  .site-title {
+
+    a {
+      color: $gray-dark;
+
+      &:link,
+      &:visited,
+      &:hover,
+      &:active,
+      &:focus {
+        color: $gray-dark;
+      }
+    }
+  }
+  .toggle-navigation {
+    color: $gray-dark;
+  }
+  .site-header .site-description {
+    color: $gray-dark;
+  }
+  .menu-unset > ul,
+  .menu-primary-items {
+
+    a {
+      color: $gray-dark;
+
+      &:link,
+      &:visited {
+        color: $gray-dark;
+      }
+    }
+  }
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+
+  .dark-header {
+
+    .menu-unset > ul,
+    .menu-primary-items {
+
+      > li {
+
+        &:after {
+          color: $gray-dark;
+        }
+      }
+      ul {
+        background: white;
+      }
+    }
+  }
+}

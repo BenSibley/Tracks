@@ -390,7 +390,6 @@ a img {
 }
 .site-header {
   padding: 0.75em 5.55%;
-  color: black;
   background-color: #222222;
 }
 .site-header:after {
@@ -410,7 +409,7 @@ a img {
 
 .site-title {
   letter-spacing: 0.06em;
-  opacity: 0.6;
+  opacity: 0.8;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
@@ -430,7 +429,7 @@ a img {
   max-height: 1.5em;
 }
 .site-title:hover, .site-title:active, .site-title:focus {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .toggle-navigation {
@@ -500,7 +499,7 @@ a img {
 .menu-primary-items a {
   display: block;
   color: white;
-  opacity: 0.6;
+  opacity: 0.8;
   margin: 1.5em 0 0.75em 0;
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -519,7 +518,7 @@ a img {
 .menu-primary-items a:hover,
 .menu-primary-items a:active,
 .menu-primary-items a:focus {
-  opacity: 0.9;
+  opacity: 1;
 }
 .menu-unset > ul .sub-menu,
 .menu-unset > ul .children,
@@ -532,7 +531,7 @@ a img {
 .menu-primary-items .sub-menu li a,
 .menu-primary-items .children li a {
   margin: 0.75em 0;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 .menu-unset > ul .sub-menu li a:hover, .menu-unset > ul .sub-menu li a:active, .menu-unset > ul .sub-menu li a:focus,
 .menu-unset > ul .children li a:hover,
@@ -544,7 +543,7 @@ a img {
 .menu-primary-items .children li a:hover,
 .menu-primary-items .children li a:active,
 .menu-primary-items .children li a:focus {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .site-header.toggled .menu-unset > ul,
@@ -596,7 +595,7 @@ a img {
   .menu-primary .site-description, .menu-primary-tracks .site-description {
     position: absolute;
     left: 0;
-    opacity: 0.4;
+    opacity: 0.8;
   }
   .menu-primary .site-description + div, .menu-primary-tracks .site-description + div {
     margin-bottom: 0.75em;
@@ -639,7 +638,7 @@ a img {
     right: -6px;
     top: 0;
     color: white;
-    opacity: 0.6;
+    opacity: 0.8;
   }
   .menu-unset > ul > li:last-child:after,
   .menu-primary-items > li:last-child:after {
@@ -651,7 +650,7 @@ a img {
   }
   .menu-unset > ul a,
   .menu-primary-items a {
-    opacity: 0.4;
+    opacity: 0.8;
     margin: 0 0.75em;
   }
   .menu-unset > ul a:only-child,
@@ -2127,6 +2126,40 @@ li.pingback:after {
   width: 3.33%;
 }
 
+/* Styles for when user selects a dark header */
+.dark-header .site-title a {
+  color: #222222;
+}
+.dark-header .site-title a:link, .dark-header .site-title a:visited, .dark-header .site-title a:hover, .dark-header .site-title a:active, .dark-header .site-title a:focus {
+  color: #222222;
+}
+.dark-header .toggle-navigation {
+  color: #222222;
+}
+.dark-header .site-header .site-description {
+  color: #222222;
+}
+.dark-header .menu-unset > ul a,
+.dark-header .menu-primary-items a {
+  color: #222222;
+}
+.dark-header .menu-unset > ul a:link, .dark-header .menu-unset > ul a:visited,
+.dark-header .menu-primary-items a:link,
+.dark-header .menu-primary-items a:visited {
+  color: #222222;
+}
+
+/* 800px */
+@media all and (min-width: 50em) {
+  .dark-header .menu-unset > ul > li:after,
+  .dark-header .menu-primary-items > li:after {
+    color: #222222;
+  }
+  .dark-header .menu-unset > ul ul,
+  .dark-header .menu-primary-items ul {
+    background: white;
+  }
+}
 /* 900px */
 @media all and (min-width: 56.25em) {
   .ie9 .excerpt {

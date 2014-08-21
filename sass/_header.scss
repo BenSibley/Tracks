@@ -1,6 +1,5 @@
 .site-header {
   padding: $baseline-height / 2 5.55%;
-  color: black;
   background-color: $gray-dark;
 
   &:after {
@@ -16,7 +15,7 @@
   @extend %uppercase;
   @extend %twenty-six-pixels;
   letter-spacing: 0.06em;
-  opacity: 0.6;
+  opacity: 0.8;
   @include transition(opacity 0.2s ease);
 
   span {
@@ -42,7 +41,7 @@
   &:hover,
   &:active,
   &:focus {
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 .toggle-navigation {
@@ -106,7 +105,7 @@
     @extend %uppercase;
     display: block;
     color: white;
-    opacity: 0.6;
+    opacity: 0.8;
     margin: $baseline-height 0 $baseline-height / 2 0;
     @include backface-visibility(hidden);
 
@@ -120,7 +119,7 @@
     &:hover,
     &:active,
     &:focus {
-      opacity: 0.9;
+      opacity: 1;
     }
   }
   .sub-menu,
@@ -129,12 +128,12 @@
 
     li a {
       margin: $baseline-height / 2 0;
-      opacity: 0.3;
+      opacity: 0.6;
 
       &:hover,
       &:active,
       &:focus {
-        opacity: 0.9;
+        opacity: 1;
       }
     }
   }
@@ -190,7 +189,7 @@
     .site-description {
       position: absolute;
       left: 0;
-      opacity: 0.4;
+      opacity: 0.8;
 
       // if site description is present, give header more space below
       + div {
@@ -226,7 +225,7 @@
         right: -6px;
         top: 0;
         color: white;
-        opacity: 0.6;
+        opacity: 0.8;
       }
       &:last-child {
 
@@ -239,7 +238,7 @@
       }
     }
     a {
-      opacity: 0.4;
+      opacity: 0.8;
       margin: 0 $baseline-height / 2;
 
       &:only-child {
