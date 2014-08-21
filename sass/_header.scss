@@ -2,6 +2,10 @@
   padding: $baseline-height / 2 5.55%;
   color: black;
   background-color: $gray-dark;
+
+  &:after {
+    @include clearfix;
+  }
 }
 .title-info {
   display: inline-block;

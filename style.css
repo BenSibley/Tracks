@@ -393,6 +393,14 @@ a img {
   color: black;
   background-color: #222222;
 }
+.site-header:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
 
 .title-info {
   display: inline-block;
@@ -1745,7 +1753,7 @@ li.pingback:after {
     content: '//';
     margin-right: 16px;
     color: white;
-    opacity: 0.6;
+    opacity: 0.4;
   }
   .menu-secondary-items li,
   .menu-secondary-items a {
