@@ -45,8 +45,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'style.css': 'sass/style.scss',
-                    'custom-editor-styles.css': 'sass/_custom_editor_styles.scss',
-                    'style-customizer.css': 'sass/_customizer.scss',
+                    'custom-editor-style.css': 'sass/custom_editor_styles.scss',
+                    'style-customizer.css': 'sass/customizer.scss',
                     'licenses/css/full-width.css': 'licenses/css/full-width.scss',
                     'licenses/css/full-width-images.css': 'licenses/css/full-width-images.scss',
                     'licenses/css/two-column.css': 'licenses/css/two-column.scss',
@@ -61,6 +61,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'style.css': 'style.css',
+                    'custom-editor-style.css': 'custom-editor-style.css',
+                    'style-customizer.css': 'style-customizer.css',
                     'licenses/css/full-width.css': 'licenses/css/full-width.css',
                     'licenses/css/full-width-images.css': 'licenses/css/full-width-images.css',
                     'licenses/css/two-column.css': 'licenses/css/two-column.css',
