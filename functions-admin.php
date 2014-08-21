@@ -503,37 +503,42 @@ function ct_tracks_sanitize_lazy_load_settings($input){
 // Background images section
 function ct_tracks_customize_background_image($wp_customize){
 
-    /* section */
-    $wp_customize->add_section(
-        'ct_tracks_background_image',
-        array(
-            'title'      => esc_html__( 'Background Image', 'tracks' ),
-            'priority'   => 84,
-            'capability' => 'edit_theme_options'
-        )
-    );
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_tracks_background_image_setting',
-        array(
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_url_raw',
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        new WP_Customize_Image_Control(
-            $wp_customize, 'ct_tracks_background_image_setting',
+    // only add the background images if license is valid
+    if(ct_tracks_background_images_check_license() == 'valid'){
+
+        /* section */
+        $wp_customize->add_section(
+            'ct_tracks_background_image',
             array(
-                'label'    => __( 'Background image', 'tracks' ),
-                'section'  => 'ct_tracks_background_image',
-                'settings' => 'ct_tracks_background_image_setting'
+                'title'      => esc_html__( 'Background Image', 'tracks' ),
+                'priority'   => 84,
+                'capability' => 'edit_theme_options'
             )
-        )
-    );
+        );
+        /* setting */
+        $wp_customize->add_setting(
+            'ct_tracks_background_image_setting',
+            array(
+                'type'              => 'theme_mod',
+                'capability'        => 'edit_theme_options',
+                'sanitize_callback' => 'esc_url_raw',
+            )
+        );
+        /* control */
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize, 'ct_tracks_background_image_setting',
+                array(
+                    'label'    => __( 'Background image', 'tracks' ),
+                    'section'  => 'ct_tracks_background_image',
+                    'settings' => 'ct_tracks_background_image_setting'
+                )
+            )
+        );
+    }
 }
 add_action( 'customize_register', 'ct_tracks_customize_background_image' );
+
 
 // Premium Layouts section
 function ct_tracks_customize_premium_layouts( $wp_customize ) {

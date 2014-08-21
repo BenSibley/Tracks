@@ -131,7 +131,7 @@ function ct_tracks_license_form_output($upgrades){
             </table>
             <?php if( $status !== false && $status == 'valid' ) {
                 if($upgrade == 'background_images'){ ?>
-                    <p class="valid">You can add a background image now in the "Background Images" section in the <a href="customize.php">Customizer</a></p><?php }
+                    <p class="valid">You can add a background image now in the "Background Image" section in the <a href="customize.php">Customizer</a></p><?php }
                 else { ?>
                     <p class="valid">You can switch to your new layout in the "Premium Layouts" section in the <a href="customize.php">Customizer</a></p><?php }
             } ?>
