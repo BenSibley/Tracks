@@ -409,9 +409,9 @@ a img {
 
 .site-title {
   letter-spacing: 0.06em;
-  opacity: 0.8;
+  opacity: 0.6;
   -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
+          transition: opacity 0.2s ease;
 }
 .site-title span {
   opacity: 0;
@@ -447,10 +447,10 @@ a img {
   color: white;
   opacity: 0.6;
   -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
+          transition: opacity 0.2s ease;
 }
 .toggle-navigation:hover, .toggle-navigation:active, .toggle-navigation:focus {
-  opacity: 0.9;
+  opacity: 1;
   cursor: pointer;
   outline: none;
 }
@@ -499,7 +499,7 @@ a img {
 .menu-primary-items a {
   display: block;
   color: white;
-  opacity: 0.8;
+  opacity: 0.6;
   margin: 1.5em 0 0.75em 0;
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -531,7 +531,7 @@ a img {
 .menu-primary-items .sub-menu li a,
 .menu-primary-items .children li a {
   margin: 0.75em 0;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 .menu-unset > ul .sub-menu li a:hover, .menu-unset > ul .sub-menu li a:active, .menu-unset > ul .sub-menu li a:focus,
 .menu-unset > ul .children li a:hover,
@@ -549,8 +549,8 @@ a img {
 .site-header.toggled .menu-unset > ul,
 .site-header.toggled .menu-primary-items,
 .site-header.toggled .site-description {
-  -webkit-transition: opacity 0.3s 0.3s;
-  transition: opacity 0.3s 0.3s;
+  -webkit-transition: opacity 0.3s 0.3s ease;
+          transition: opacity 0.3s 0.3s ease;
 }
 .site-header.toggled .menu-unset > ul,
 .site-header.toggled .menu-primary-items {
@@ -595,7 +595,7 @@ a img {
   .menu-primary .site-description, .menu-primary-tracks .site-description {
     position: absolute;
     left: 0;
-    opacity: 0.8;
+    opacity: 0.6;
   }
   .menu-primary .site-description + div, .menu-primary-tracks .site-description + div {
     margin-bottom: 0.75em;
@@ -638,7 +638,7 @@ a img {
     right: -6px;
     top: 0;
     color: white;
-    opacity: 0.8;
+    opacity: 0.6;
   }
   .menu-unset > ul > li:last-child:after,
   .menu-primary-items > li:last-child:after {
@@ -650,7 +650,7 @@ a img {
   }
   .menu-unset > ul a,
   .menu-primary-items a {
-    opacity: 0.8;
+    opacity: 0.6;
     margin: 0 0.75em;
   }
   .menu-unset > ul a:only-child,
@@ -914,7 +914,7 @@ a img {
     margin-bottom: 1.5em;
     opacity: 0.8;
     -webkit-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
   }
@@ -1131,7 +1131,7 @@ a img {
     width: 100%;
     opacity: 0.2;
     -webkit-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease;
   }
   .entry .featured-image:hover:after {
     opacity: 0;
@@ -1853,7 +1853,7 @@ li.pingback:after {
           transition: all 0.3s ease;
 }
 .site-header .search-form-container button:hover i, .site-header .search-form-container button:active i, .site-header .search-form-container button:focus i {
-  opacity: 0.9;
+  opacity: 1;
 }
 .site-header .search-form-container button:hover {
   cursor: pointer;
@@ -1913,7 +1913,7 @@ li.pingback:after {
   width: 24%;
 }
 .search-open .site-header .search-form-container i {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* 600px */
@@ -1951,7 +1951,7 @@ li.pingback:after {
 }
 .social-media-icons a:hover, .social-media-icons a:active, .social-media-icons a:focus {
   color: white;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .site-header .social-media-icons {

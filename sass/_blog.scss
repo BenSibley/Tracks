@@ -188,7 +188,7 @@
     padding: 0;
     margin-bottom: $baseline-height;
     opacity: 0.8;
-    @include transition(opacity 0.2s ease);
+    transition: opacity 0.2s ease;
     backface-visibility: hidden;
 
     .featured-image {

@@ -189,7 +189,7 @@
         left: 0;
         width: 100%;
         opacity: 0.2;
-        @include transition(opacity 0.2s ease);
+        transition: opacity 0.2s ease;
       }
       &:hover {
 

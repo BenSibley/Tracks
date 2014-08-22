@@ -15,8 +15,8 @@
   @extend %uppercase;
   @extend %twenty-six-pixels;
   letter-spacing: 0.06em;
-  opacity: 0.8;
-  @include transition(opacity 0.2s ease);
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
 
   span {
     opacity: 0;
@@ -58,7 +58,7 @@
   top: 0;
   color: white;
   opacity: 0.6;
-  @include transition(opacity 0.2s ease);
+  transition: opacity 0.2s ease;
 
   i {
     @extend %twenty-six-pixels;
@@ -66,7 +66,7 @@
   &:hover,
   &:active,
   &:focus {
-    opacity: 0.9;
+    opacity: 1;
     cursor: pointer;
     outline: none;
   }
@@ -105,7 +105,7 @@
     @extend %uppercase;
     display: block;
     color: white;
-    opacity: 0.8;
+    opacity: 0.6;
     margin: $baseline-height 0 $baseline-height / 2 0;
     @include backface-visibility(hidden);
 
@@ -128,7 +128,7 @@
 
     li a {
       margin: $baseline-height / 2 0;
-      opacity: 0.6;
+      opacity: 0.4;
 
       &:hover,
       &:active,
@@ -143,7 +143,7 @@
   .menu-unset > ul,
   .menu-primary-items,
   .site-description {
-    @include transition(opacity 0.3s 0.3s);
+    transition: opacity 0.3s 0.3s ease;
   }
   .menu-unset > ul,
   .menu-primary-items {
@@ -189,7 +189,7 @@
     .site-description {
       position: absolute;
       left: 0;
-      opacity: 0.8;
+      opacity: 0.6;
 
       // if site description is present, give header more space below
       + div {
@@ -225,7 +225,7 @@
         right: -6px;
         top: 0;
         color: white;
-        opacity: 0.8;
+        opacity: 0.6;
       }
       &:last-child {
 
@@ -238,7 +238,7 @@
       }
     }
     a {
-      opacity: 0.8;
+      opacity: 0.6;
       margin: 0 $baseline-height / 2;
 
       &:only-child {
