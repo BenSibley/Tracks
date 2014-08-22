@@ -2127,6 +2127,11 @@ li.pingback:after {
 }
 
 /* Styles for when user selects a dark header */
+.dark-header {
+  /* Social Icons */
+  /* Secondary Nav */
+  /* Search Icon */
+}
 .dark-header .site-title a {
   color: #222222;
 }
@@ -2148,7 +2153,39 @@ li.pingback:after {
 .dark-header .menu-primary-items a:visited {
   color: #222222;
 }
+.dark-header .social-media-icons a {
+  color: #222222;
+}
+.dark-header .social-media-icons a:link, .dark-header .social-media-icons a:visited {
+  color: #222222;
+}
+.dark-header .social-media-icons a:hover, .dark-header .social-media-icons a:active, .dark-header .social-media-icons a:focus {
+  color: #222222;
+}
+.dark-header .toggle-secondary-navigation {
+  color: #222222;
+}
+.dark-header .menu-secondary-items a,
+.dark-header .menu-secondary-items a:link,
+.dark-header .menu-secondary-items a:visited,
+.dark-header .menu-secondary-items a:hover,
+.dark-header .menu-secondary-items a:active,
+.dark-header .menu-secondary-items a:focus {
+  color: #222222;
+}
+.dark-header .site-header .search-form-container i {
+  color: #222222;
+}
 
+/* 600px */
+@media all and (min-width: 37.5em) {
+  .dark-header .menu-secondary-items:before {
+    color: #222222;
+  }
+  .dark-header .menu-secondary-items ul {
+    background: white;
+  }
+}
 /* 800px */
 @media all and (min-width: 50em) {
   .dark-header .menu-unset > ul > li:after,

@@ -34,6 +34,59 @@
       }
     }
   }
+  /* Social Icons */
+  .social-media-icons {
+
+    a {
+      color: $gray-dark;
+
+      &:link,
+      &:visited {
+        color: $gray-dark;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: $gray-dark;
+      }
+    }
+  }
+  /* Secondary Nav */
+  .toggle-secondary-navigation {
+    color: $gray-dark;
+  }
+  .menu-secondary-items {
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active,
+    a:focus{
+      color: $gray-dark;
+    }
+  }
+  /* Search Icon */
+  .site-header .search-form-container i {
+    color: $gray-dark;
+  }
+}
+
+/* 600px */
+@media all and (min-width: 37.5em){
+
+  .dark-header {
+
+    .menu-secondary-items {
+
+      &:before {
+        color: $gray-dark;
+      }
+      ul {
+        background: white;
+      }
+    }
+  }
 }
 
 /* 800px */
