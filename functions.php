@@ -711,8 +711,9 @@ add_action('wp_enqueue_scripts','ct_tracks_background_image_output');
 function ct_tracks_background_texture_output(){
 
     $background_texture = get_theme_mod( 'ct_tracks_background_texture_setting');
+    $background_texture_display = get_theme_mod('ct_tracks_texture_display_setting');
 
-    if($background_texture){
+    if($background_texture && $background_texture_display == 'yes'){
 
         $background_texture_css = "
             .overflow-container {

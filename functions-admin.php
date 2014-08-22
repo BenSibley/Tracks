@@ -605,6 +605,30 @@ function ct_tracks_customize_background_texture($wp_customize){
         );
         /* setting */
         $wp_customize->add_setting(
+            'ct_tracks_texture_display_setting',
+            array(
+                'default'           => 'no',
+                'type'              => 'theme_mod',
+                'capability'        => 'edit_theme_options',
+                //'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
+            )
+        );
+        /* control */
+        $wp_customize->add_control(
+            'ct_tracks_texture_display_setting',
+            array(
+                'type' => 'radio',
+                'label' => 'Enable background texture?',
+                'section' => 'ct_tracks_background_texture',
+                'setting' => 'ct_tracks_texture_display_setting',
+                'choices' => array(
+                    'yes' => 'Yes',
+                    'no' => 'No',
+                ),
+            )
+        );
+        /* setting */
+        $wp_customize->add_setting(
             'ct_tracks_background_texture_setting',
             array(
                 'type'              => 'theme_mod',
