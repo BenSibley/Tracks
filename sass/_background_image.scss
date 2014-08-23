@@ -1,0 +1,32 @@
+/* background image styles */
+
+.background-image-active {
+
+  .background-image {
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .site-header {
+    border-color: transparent;
+  }
+  .excerpt {
+    opacity: 1;
+  }
+  .site-header,
+  .site-header .search-form-container button,
+  .main,
+  .menu-secondary-items {
+    background: none;
+  }
+  .top-navigation {
+    background: rgba(255,255,255,0.1);
+  }
+  .site-footer {
+    background: #222;
+  }
+}

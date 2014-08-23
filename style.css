@@ -2197,6 +2197,36 @@ li.pingback:after {
     background: white;
   }
 }
+/* background image styles */
+.background-image-active .background-image {
+  -webkit-background-size: cover cover;
+          background-size: cover;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.background-image-active .site-header {
+  border-color: transparent;
+}
+.background-image-active .excerpt {
+  opacity: 1;
+}
+.background-image-active .site-header,
+.background-image-active .site-header .search-form-container button,
+.background-image-active .main,
+.background-image-active .menu-secondary-items {
+  background: none;
+}
+.background-image-active .top-navigation {
+  background: rgba(255, 255, 255, 0.1);
+}
+.background-image-active .site-footer {
+  background: #222;
+}
+
 /* 900px */
 @media all and (min-width: 56.25em) {
   .ie9 .excerpt {
