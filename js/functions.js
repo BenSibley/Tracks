@@ -155,7 +155,6 @@ jQuery(function($){
     }
     displayLayoutOptions();
 
-
     // ===== Full-width Images - create separation between image and post ===== //
 
     function separatePostImage(){
