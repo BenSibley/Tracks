@@ -56,7 +56,7 @@ add_action('admin_enqueue_scripts', 'ct_tracks_enqueue_profile_image_uploader');
 
 /* enqueues scripts and styles used on customizer page */
 function ct_tracks_enqueue_customizer_styles(){
-    wp_enqueue_style('style-customizer', get_template_directory_uri() . '/js/build/customizer.min.js');
+    wp_enqueue_script('style-customizer', get_template_directory_uri() . '/js/build/customizer.min.js');
     wp_enqueue_style('style-customizer', get_template_directory_uri() . '/style-customizer.css');
 }
 add_action('customize_controls_enqueue_scripts','ct_tracks_enqueue_customizer_styles');

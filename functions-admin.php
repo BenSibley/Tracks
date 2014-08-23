@@ -610,7 +610,7 @@ function ct_tracks_customize_background_texture($wp_customize){
                 'default'           => 'no',
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
-                'sanitize_callback' => 'ct_tracks_texture_display_setting_sanitization'
+                //'sanitize_callback' => 'ct_tracks_texture_display_setting_sanitization'
             )
         );
         /* control */
@@ -633,7 +633,7 @@ function ct_tracks_customize_background_texture($wp_customize){
             array(
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
-                'sanitize_callback' => 'ct_tracks_background_texture_setting_sanitization',
+                //'sanitize_callback' => 'ct_tracks_background_texture_setting_sanitization',
             )
         );
         // textures from subtlepatterns.com
