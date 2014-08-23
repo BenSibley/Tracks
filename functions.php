@@ -483,7 +483,7 @@ function ct_tracks_body_class( $classes ) {
     if(get_theme_mod( 'ct_tracks_background_image_setting')){
         $classes[] = 'background-image-active';
     }
-    if(get_theme_mod( 'ct_tracks_background_texture_setting')){
+    if(get_theme_mod( 'ct_tracks_texture_display_setting') == 'yes'){
         $classes[] = 'background-texture-active';
     }
     return $classes;
