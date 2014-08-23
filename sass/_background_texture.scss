@@ -1,0 +1,20 @@
+/* background style textures */
+
+.background-texture-active {
+
+  .site-header,
+  .site-header .search-form-container button,
+  .main,
+  .menu-secondary-items {
+    background: none;
+  }
+  .site-header {
+    border-color: transparent;
+  }
+  .site-footer {
+    background: #222;
+  }
+  .top-navigation {
+    background: rgba(255,255,255,0.2);
+  }
+}

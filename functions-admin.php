@@ -610,7 +610,7 @@ function ct_tracks_customize_background_texture($wp_customize){
                 'default'           => 'no',
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
-                //'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
+                'sanitize_callback' => 'ct_tracks_texture_display_setting_sanitization'
             )
         );
         /* control */
@@ -633,7 +633,7 @@ function ct_tracks_customize_background_texture($wp_customize){
             array(
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
-                //'sanitize_callback' => 'esc_url_raw',
+                'sanitize_callback' => 'ct_tracks_background_texture_setting_sanitization',
             )
         );
         // textures from subtlepatterns.com
@@ -653,6 +653,33 @@ function ct_tracks_customize_background_texture($wp_customize){
     //}
 }
 add_action( 'customize_register', 'ct_tracks_customize_background_texture' );
+
+function ct_tracks_texture_display_setting_sanitization($input){
+
+    $valid = array(
+        'yes' => 'Yes',
+        'no' => 'No',
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+function ct_tracks_background_texture_setting_sanitization($input){
+
+    $textures = ct_tracks_textures_array();
+
+    $valid = $textures;
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
 
 // Background images section
 function ct_tracks_customize_background_image($wp_customize){

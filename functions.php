@@ -482,6 +482,9 @@ function ct_tracks_body_class( $classes ) {
     if(get_theme_mod( 'ct_tracks_background_image_setting')){
         $classes[] = 'background-image-active';
     }
+    if(get_theme_mod( 'ct_tracks_background_texture_setting')){
+        $classes[] = 'background-texture-active';
+    }
     return $classes;
 }
 add_filter( 'body_class', 'ct_tracks_body_class' );
@@ -701,15 +704,6 @@ function ct_tracks_background_texture_output(){
         $background_texture_css = "
             .overflow-container {
                 background-image: url('" . get_template_directory_uri() . "/assets/images/textures/$background_texture.png');
-            }
-            .site-header, .site-header .search-form-container button, .top-navigation, .main, .menu-secondary-items {
-              background: none;
-            }
-            .site-header {
-                border-color: transparent;
-            }
-            .site-footer {
-              background: #222;
             }
         ";
         wp_add_inline_style('style', $background_texture_css);

@@ -2221,10 +2221,27 @@ li.pingback:after {
   background: none;
 }
 .background-image-active .top-navigation {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
 }
 .background-image-active .site-footer {
   background: #222;
+}
+
+/* background style textures */
+.background-texture-active .site-header,
+.background-texture-active .site-header .search-form-container button,
+.background-texture-active .main,
+.background-texture-active .menu-secondary-items {
+  background: none;
+}
+.background-texture-active .site-header {
+  border-color: transparent;
+}
+.background-texture-active .site-footer {
+  background: #222;
+}
+.background-texture-active .top-navigation {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* 900px */
