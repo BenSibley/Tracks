@@ -591,7 +591,7 @@ function ct_tracks_textures_array(){
 function ct_tracks_customize_background_texture($wp_customize){
 
     // only add the background images if license is valid
-    //if(ct_tracks_background_images_check_license() == 'valid'){
+    if(ct_tracks_background_textures_check_license() == 'valid'){
 
         /* section */
         $wp_customize->add_section(
@@ -650,7 +650,7 @@ function ct_tracks_customize_background_texture($wp_customize){
                 'choices'        => $textures
             )
         );
-    //}
+    }
 }
 add_action( 'customize_register', 'ct_tracks_customize_background_texture' );
 
