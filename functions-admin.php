@@ -318,40 +318,47 @@ function ct_tracks_sanitize_tagline_display($input){
 // allow users to switch to a dark header
 function ct_tracks_customize_header_color( $wp_customize ) {
 
-    /* section */
-    $wp_customize->add_section(
-        'ct_tracks_header_color',
-        array(
-            'title'      => esc_html__( 'Header Color', 'tracks' ),
-            'description' => esc_html__('Change to dark if your new background makes the menu hard to read.', 'tracks'),
-            'priority'   => 81,
-            'capability' => 'edit_theme_options'
-        )
-    );
-    /* setting */
-    $wp_customize->add_setting(
-        'ct_tracks_header_color_setting',
-        array(
-            'default'           => 'light',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            //'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
-        )
-    );
-    /* control */
-    $wp_customize->add_control(
-        'ct_tracks_header_color_setting',
-        array(
-            'type' => 'radio',
-            'label' => 'Light or dark header color?',
-            'section' => 'ct_tracks_header_color',
-            'setting' => 'ct_tracks_header_color_setting',
-            'choices' => array(
-                'light' => 'Light',
-                'dark' => 'Dark',
-            ),
-        )
-    );
+    // only add if background images or textures active
+    if(
+        ct_tracks_background_textures_check_license() == 'valid'
+        || ct_tracks_background_images_check_license() == 'valid'
+    ){
+
+        /* section */
+        $wp_customize->add_section(
+            'ct_tracks_header_color',
+            array(
+                'title'      => esc_html__( 'Header Color', 'tracks' ),
+                'description' => esc_html__('Change to dark if your new background makes the menu hard to read.', 'tracks'),
+                'priority'   => 81,
+                'capability' => 'edit_theme_options'
+            )
+        );
+        /* setting */
+        $wp_customize->add_setting(
+            'ct_tracks_header_color_setting',
+            array(
+                'default'           => 'light',
+                'type'              => 'theme_mod',
+                'capability'        => 'edit_theme_options',
+                //'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
+            )
+        );
+        /* control */
+        $wp_customize->add_control(
+            'ct_tracks_header_color_setting',
+            array(
+                'type' => 'radio',
+                'label' => 'Light or dark header color?',
+                'section' => 'ct_tracks_header_color',
+                'setting' => 'ct_tracks_header_color_setting',
+                'choices' => array(
+                    'light' => 'Light',
+                    'dark' => 'Dark',
+                ),
+            )
+        );
+    }
 }
 add_action( 'customize_register', 'ct_tracks_customize_header_color' );
 
