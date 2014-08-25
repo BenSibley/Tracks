@@ -28,7 +28,7 @@ if( is_single() ) { ?>
             </div>
             <?php echo get_template_part('sidebar','after-post-content'); ?>
             <div class='entry-meta-bottom'>
-                <?php ct_tracks_further_reading(); ?>
+                <?php get_template_part('content/further-reading'); ?>
                 <div class="entry-categories"><?php ct_tracks_category_display(); ?></div>
                 <div class="entry-tags"><?php ct_tracks_tags_display(); ?></div>
             </div>
