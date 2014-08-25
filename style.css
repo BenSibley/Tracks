@@ -1817,12 +1817,12 @@ li.pingback:after {
   .menu-secondary-items ul ul:hover {
     left: 100%;
     right: -100%;
-    top: -0.75em;
+    top: -0.60975em;
   }
   .menu-secondary-items ul a:hover + ul, .menu-secondary-items ul a:active + ul, .menu-secondary-items ul a:focus + ul {
     left: 100%;
     right: -100%;
-    top: -0.75em;
+    top: -0.60975em;
   }
 }
 /* search form styles */
@@ -2242,6 +2242,9 @@ li.pingback:after {
 }
 .background-texture-active .top-navigation {
   background: rgba(255, 255, 255, 0.2);
+}
+.background-texture-active .excerpt {
+  opacity: 1;
 }
 
 /* 900px */

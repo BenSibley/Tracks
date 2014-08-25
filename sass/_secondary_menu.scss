@@ -156,7 +156,7 @@
       &:hover {
         left: 100%;
         right: -100%;
-        top: -$baseline-height / 2;
+        top: -$baseline-height / 2 * 0.813; // 16px vs 13px font-size diff
       }
     }
     ul a {
@@ -168,7 +168,7 @@
         + ul {
           left: 100%;
           right: -100%;
-          top: -$baseline-height / 2;
+          top: -$baseline-height / 2 * 0.813; // 16px vs 13px font-size diff
         }
       }
     }
