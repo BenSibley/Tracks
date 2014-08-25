@@ -74,13 +74,15 @@ function ct_tracks_options_content(){
 // loop through array creating a license activation form for each upgrade
 function ct_tracks_license_form_output($upgrades){
 
+    $class = 'odd';
+
     foreach($upgrades as $upgrade){
 
         $license 	= get_option( 'ct_tracks_' . $upgrade . '_license_key' );
         $status 	= get_option( 'ct_tracks_'. $upgrade . '_license_key_status' );
 
         ?>
-        <form method="post" action="options.php">
+        <form class="<?php echo $class; ?>" method="post" action="options.php">
             <?php settings_fields('ct_tracks_' . $upgrade . '_license'); ?>
             <h4>
                 <?php
@@ -141,7 +143,13 @@ function ct_tracks_license_form_output($upgrades){
             } ?>
             <?php submit_button('Save License'); ?>
         </form>
-<?php }
+        <?php
+        if($class == 'odd'){
+            $class = 'even';
+        } else {
+            $class = 'odd';
+        }
+    }
 }
 
 /* Register the options so licenses can be saved to db */

@@ -76,7 +76,7 @@
         width: 43%;
         float: left;
     }
-    .content-licenses form:nth-child(even){
+    .content-licenses form.odd {
         margin-right: 2%;
         clear: left;
     }
