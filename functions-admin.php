@@ -341,7 +341,7 @@ function ct_tracks_customize_header_color( $wp_customize ) {
                 'default'           => 'light',
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
-                //'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
+                'sanitize_callback' => 'ct_tracks_sanitize_header_color_settings'
             )
         );
         /* control */
@@ -361,6 +361,20 @@ function ct_tracks_customize_header_color( $wp_customize ) {
     }
 }
 add_action( 'customize_register', 'ct_tracks_customize_header_color' );
+
+/* sanitize input */
+function ct_tracks_sanitize_header_color_settings($input){
+    $valid = array(
+        'light' => 'Light',
+        'dark' => 'Dark',
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
 
 function ct_tracks_customizer_additional_options( $wp_customize ) {
 
