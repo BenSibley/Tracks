@@ -63,7 +63,7 @@ function ct_tracks_options_content(){
                 <h3>Premium Features</h3>
                 <?php
                 // array of available features
-                $features = array('background_images');
+                $features = array('background_images', 'background_textures');
                 // create form for each feature
                 ct_tracks_license_form_output($features);
                 ?>
@@ -100,6 +100,9 @@ function ct_tracks_license_form_output($upgrades){
                 elseif($upgrade == 'background_images'){
                     _e('Background Images','tracks');
                 }
+                elseif($upgrade == 'background_textures'){
+                    _e('Background Textures','tracks');
+                }
                 ?>
             </h4>
             <table class="form-table">
@@ -132,6 +135,8 @@ function ct_tracks_license_form_output($upgrades){
             <?php if( $status !== false && $status == 'valid' ) {
                 if($upgrade == 'background_images'){ ?>
                     <p class="valid">You can add a background image now in the "Background Image" section in the <a href="customize.php">Customizer</a></p><?php }
+                elseif($upgrade == 'background_textures'){ ?>
+                    <p class="valid">You can add a background texture now in the "Background Texture" section in the <a href="customize.php">Customizer</a></p><?php }
                 else { ?>
                     <p class="valid">You can switch to your new layout in the "Premium Layouts" section in the <a href="customize.php">Customizer</a></p><?php }
             } ?>
@@ -171,3 +176,9 @@ function ct_tracks_background_images_register_option() {
     register_setting('ct_tracks_background_images_license', 'ct_tracks_background_images_license_key', 'ct_tracks_background_images_sanitize_license' );
 }
 add_action('admin_init', 'ct_tracks_background_images_register_option');
+
+function ct_tracks_background_textures_register_option() {
+    // creates our settings in the options table
+    register_setting('ct_tracks_background_textures_license', 'ct_tracks_background_textures_license_key', 'ct_tracks_background_textures_sanitize_license' );
+}
+add_action('admin_init', 'ct_tracks_background_textures_register_option');
