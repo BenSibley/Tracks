@@ -319,10 +319,10 @@ function ct_tracks_sanitize_tagline_display($input){
 function ct_tracks_customize_header_color( $wp_customize ) {
 
     // only add if background images or textures active
-    if(
-        ct_tracks_background_textures_check_license() == 'valid'
-        || ct_tracks_background_images_check_license() == 'valid'
-    ){
+    $license_images = trim( get_option( 'ct_tracks_background_images_license_key_status' ) );
+    $license_textures = trim( get_option( 'ct_tracks_background_textures_license_key_status' ) );
+
+    if( $license_images == 'valid' || $license_textures == 'valid') {
 
         /* section */
         $wp_customize->add_section(
@@ -611,8 +611,10 @@ function ct_tracks_textures_array(){
 // Background texture section
 function ct_tracks_customize_background_texture($wp_customize){
 
-    // only add the background images if license is valid
-    if(ct_tracks_background_textures_check_license() == 'valid'){
+    $license = trim( get_option( 'ct_tracks_background_textures_license_key_status' ) );
+
+    // only add the background textures if license is valid
+    if($license == 'valid'){
 
         /* section */
         $wp_customize->add_section(
@@ -705,8 +707,10 @@ function ct_tracks_background_texture_setting_sanitization($input){
 // Background images section
 function ct_tracks_customize_background_image($wp_customize){
 
+    $license = trim( get_option( 'ct_tracks_background_images_license_key_status' ) );
+
     // only add the background images if license is valid
-    if(ct_tracks_background_images_check_license() == 'valid'){
+    if($license == 'valid'){
 
         /* section */
         $wp_customize->add_section(
@@ -748,16 +752,21 @@ function ct_tracks_customize_premium_layouts( $wp_customize ) {
 
     $available_templates = array('standard' => 'Standard');
 
-    if(ct_tracks_full_width_check_license() == 'valid'){
+    $full_width = trim( get_option( 'ct_tracks_full_width_license_key_status' ) );
+    $full_width_images = trim( get_option( 'ct_tracks_full_width_images_license_key_status' ) );
+    $two_column = trim( get_option( 'ct_tracks_two_column_license_key_status' ) );
+    $two_column_images = trim( get_option( 'ct_tracks_two_column_images_license_key_status' ) );
+
+    if($full_width == 'valid'){
         $available_templates['full-width'] = 'Full-width';
     }
-    if(ct_tracks_full_width_images_check_license() == 'valid'){
+    if($full_width_images == 'valid'){
         $available_templates['full-width-images'] = 'Full-width Images';
     }
-    if(ct_tracks_two_column_check_license() == 'valid'){
+    if($two_column == 'valid'){
         $available_templates['two-column'] = 'Two-Column';
     }
-    if(ct_tracks_two_column_images_check_license() == 'valid'){
+    if($two_column_images == 'valid'){
         $available_templates['two-column-images'] = 'Two-Column Images';
     }
 
