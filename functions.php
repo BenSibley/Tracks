@@ -39,33 +39,24 @@ function ct_tracks_enqueue_admin_styles($hook){
     if ( 'appearance_page_tracks-options' == $hook) {
         wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
     }
-}
-add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
-
-function ct_tracks_enqueue_profile_image_uploader($hook) {
-
     // if is user profile page
     if('profile.php' == $hook || 'user-edit.php' == $hook){
 
-        // Enqueues all scripts, styles, settings, and templates necessary to use all media JavaScript APIs.
+        // Enqueues all scripts, styles, settings, and templates necessary to use media JavaScript APIs.
         wp_enqueue_media();
 
         // enqueue the JS needed to utilize media uploader on profile image upload
         wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js');
     }
 }
-add_action('admin_enqueue_scripts', 'ct_tracks_enqueue_profile_image_uploader');
+add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
 
 /* enqueues scripts and styles used on customizer page */
 function ct_tracks_enqueue_customizer_styles(){
-    wp_enqueue_script('style-customizer', get_template_directory_uri() . '/js/build/customizer.min.js');
-    wp_enqueue_style('style-customizer', get_template_directory_uri() . '/style-customizer.css');
+    wp_enqueue_script('ct-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js');
+    wp_enqueue_style('ct-customizer-css', get_template_directory_uri() . '/style-customizer.css');
 }
 add_action('customize_controls_enqueue_scripts','ct_tracks_enqueue_customizer_styles');
-
-/* Load the core theme framework. */
-require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
-new Hybrid();
 
 // load all scripts enqueued by theme asynchronously
 function ct_tracks_add_async_script($url) {
@@ -78,6 +69,10 @@ function ct_tracks_add_async_script($url) {
     return str_replace('#ct_tracks_asyncload', '', $url)."' async='async";
 }
 add_filter('clean_url', 'ct_tracks_add_async_script', 11, 1);
+
+/* Load the core theme framework. */
+require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
+new Hybrid();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'ct_tracks_theme_setup', 10 );
