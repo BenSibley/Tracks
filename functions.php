@@ -1,6 +1,6 @@
 <?php
 
-// register and enqueue all of the scripts used by Aside
+// register and enqueue all of the scripts used by Tracks
 function ct_tracks_load_javascript_files() {
 
     wp_register_style( 'ct-tracks-google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700');
@@ -25,7 +25,9 @@ function ct_tracks_load_javascript_files() {
         }
     }
     // enqueues the comment-reply script on posts & pages.  This script is included in WP by default
-    if( is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' );
+    if( is_singular() && comments_open() && get_option('thread_comments') ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 }
 
 add_action('wp_enqueue_scripts', 'ct_tracks_load_javascript_files' );
