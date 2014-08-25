@@ -181,8 +181,13 @@ function ct_tracks_further_reading() {
 // Outputs the categories the post was included in with their names hyperlinked to their permalink
 // separator removed so links site tightly against each other
 function ct_tracks_category_display() {
-       
+
     $categories = get_the_category();
+
+    // if only uncategorized, don't display
+    if( (count($categories) == 1) && ($categories[0]->name == "Uncategorized") ){
+        return false;
+    }
     $separator = ' ';
     $output = '';
     if($categories){
