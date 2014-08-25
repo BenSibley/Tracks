@@ -45,10 +45,9 @@ function ct_tracks_options_content(){
         <?php }
         elseif($active_tab == 'premium-upgrades'){ ?>
             <div class="content-premium-upgrades content">
-                <h3>Upgrade Your Site</h3>
+                <h3>Premium Upgrades ($9-15)</h3>
                 <p>New layouts, features, and more. Make your site more customizable and beautiful with Tracks premium upgrades.</p>
                 <p><a target="_blank" class="button-primary" href="http://www.competethemes.com/tracks-theme-upgrades/">Visit Upgrades Gallery</a></p>
-                <p><em>Upgrades range from $9-15.</em></p>
             </div>
         <?php }
         elseif($active_tab == 'licenses'){ ?>
