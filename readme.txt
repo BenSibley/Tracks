@@ -26,4 +26,5 @@ Tracks also uses:
 * Google Fonts, http://google.com/fonts, licensed under open source licenses, see: https://developers.google.com/fonts/faq#Any_Page_OK.
 * Font Awesome by Dave Gandy, licensed under open source licenses, see: http://fortawesome.github.io/Font-Awesome/license/.
 * Picturefill by Scott Jehl, http://scottjehl.github.io/picturefill, licensed under the MIT license.
+* All textures in the Background Textures upgrade come from Atle Mo, http://subtlepatterns.com, under the Attribution-ShareAlike 3.0 Creative Commons license: https://creativecommons.org/licenses/by-sa/3.0/us/
 * All images in screenshot.png from http://unsplash.com, licensed under Public Domain
