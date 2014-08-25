@@ -14,7 +14,7 @@ if( is_single() ) { ?>
         }
         ?>
         <div class="entry-meta">
-            <?php get_template_part('content/content', 'post-meta'); ?>
+            <?php get_template_part('content/post-meta'); ?>
         </div>
         <div class='entry-header'>
             <h1 class='entry-title'><?php the_title(); ?></h1>
@@ -29,8 +29,12 @@ if( is_single() ) { ?>
             <?php echo get_template_part('sidebar','after-post-content'); ?>
             <div class='entry-meta-bottom'>
                 <?php get_template_part('content/further-reading'); ?>
-                <div class="entry-categories"><?php ct_tracks_category_display(); ?></div>
-                <div class="entry-tags"><?php ct_tracks_tags_display(); ?></div>
+                <div class="entry-categories">
+                    <?php get_template_part('content/category-links'); ?>
+                </div>
+                <div class="entry-tags">
+                    <?php get_template_part('content/tag-links'); ?>
+                </div>
             </div>
             <?php
             if(get_theme_mod('additional_options_author_meta_settings') != 'hide'){ ?>
@@ -65,7 +69,7 @@ if( is_single() ) { ?>
                 <div class="content-container">
             <?php } ?>
             <div class="excerpt-meta">
-                <?php get_template_part('content/content', 'post-meta'); ?>
+                <?php get_template_part('content/post-meta'); ?>
             </div>
             <div class='excerpt-header'>
                 <h1 class='excerpt-title'>

@@ -14,7 +14,7 @@
     <?php
         // add social icons if set
         if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'footer')){
-            ct_tracks_social_icons_output();
+            ct_tracks_customizer_social_icons_output();
         }
     ?>
     <div class="design-credit">

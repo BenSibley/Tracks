@@ -131,44 +131,6 @@ function ct_tracks_register_widget_areas(){
 }
 add_action('widgets_init','ct_tracks_register_widget_areas');
 
-// Outputs the categories the post was included in with their names hyperlinked to their permalink
-// separator removed so links site tightly against each other
-function ct_tracks_category_display() {
-
-    $categories = get_the_category();
-
-    // if only uncategorized, don't display
-    if( (count($categories) == 1) && ($categories[0]->name == "Uncategorized") ){
-        return false;
-    }
-    $separator = ' ';
-    $output = '';
-    if($categories){
-	    echo "<p><span>Categories</span>";
-        foreach($categories as $category) {
-            $output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s", 'tracks' ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
-        }
-        echo trim($output, $separator);
-	    echo "</p>";
-    }   
-}
-
-// Outputs the tags the post used with their names hyperlinked to their permalink
-function ct_tracks_tags_display() {
-       
-    $tags = get_the_tags();
-    $separator = ' ';
-    $output = '';
-    if($tags){
-        echo "<p><span>Tags</span>";
-        foreach($tags as $tag) {
-            $output .= '<a href="'.get_tag_link( $tag->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts tagged %s", 'tracks' ), $tag->name ) ) . '">'.$tag->name.'</a>'.$separator;
-        }
-        echo trim($output, $separator);
-	    echo "</p>";
-    }
-}
-
 /* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
 function ct_tracks_customize_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
@@ -536,7 +498,7 @@ function ct_tracks_image_zoom_settings_output(){
 add_action('wp_enqueue_scripts','ct_tracks_image_zoom_settings_output');
 
 // outputs linked social media icons from customizer
-function ct_tracks_social_icons_output() {
+function ct_tracks_customizer_social_icons_output() {
 
     // array of social media site names
     $social_sites = ct_tracks_social_site_list();
