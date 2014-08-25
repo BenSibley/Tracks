@@ -14,7 +14,7 @@ if( is_single() ) { ?>
         }
         ?>
         <div class="entry-meta">
-            <?php get_template_part('content', 'post-meta'); ?>
+            <?php get_template_part('content/content', 'post-meta'); ?>
         </div>
         <div class='entry-header'>
             <h1 class='entry-title'><?php the_title(); ?></h1>
@@ -65,7 +65,7 @@ if( is_single() ) { ?>
                 <div class="content-container">
             <?php } ?>
             <div class="excerpt-meta">
-                <?php get_template_part('content', 'post-meta'); ?>
+                <?php get_template_part('content/content', 'post-meta'); ?>
             </div>
             <div class='excerpt-header'>
                 <h1 class='excerpt-title'>
