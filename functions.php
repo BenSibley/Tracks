@@ -383,7 +383,7 @@ function ct_tracks_author_social_icons() {
 
     foreach ($social_sites as $key => $social_site) {
         if(get_the_author_meta( $social_site)) {
-            if( $key ==  "flickr" || $key ==  "dribbble" || $key ==  "instagram" || $key ==  "soundcloud" || $key ==  "spotify" || $key ==  "vine" || $key ==  "yahoo" || $key ==  "codepen" || $key ==  "delicious" || $key ==  "stumbleupon" || $key ==  "deviantart" || $key ==  "digg" || $key ==  "hacker-news") {
+            if( $key ==  "flickr" || $key ==  "dribbble" || $key ==  "instagram" || $key ==  "soundcloud" || $key ==  "spotify" || $key ==  "vine" || $key ==  "yahoo" || $key ==  "codepen" || $key ==  "delicious" || $key ==  "stumbleupon" || $key ==  "deviantart" || $key ==  "digg" || $key ==  "hacker-news" || $key == 'vk') {
                 echo "<a href='".esc_url(get_the_author_meta( $social_site))."'><i class=\"fa fa-$key\"></i></a>";
             }
             elseif($key == 'googleplus'){
@@ -596,7 +596,7 @@ function ct_tracks_social_icons_output() {
         foreach ($active_sites as $active_site) { ?>
             <li>
             <a target="_blank" href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
-                <?php if( $active_site ==  "flickr" || $active_site ==  "dribbble" || $active_site ==  "instagram" || $active_site ==  "soundcloud" || $active_site ==  "spotify" || $active_site ==  "vine" || $active_site ==  "yahoo" || $active_site ==  "codepen" || $active_site ==  "delicious" || $active_site ==  "stumbleupon" || $active_site ==  "deviantart" || $active_site ==  "digg" || $active_site ==  "hacker-news") { ?>
+                <?php if( $active_site ==  "flickr" || $active_site ==  "dribbble" || $active_site ==  "instagram" || $active_site ==  "soundcloud" || $active_site ==  "spotify" || $active_site ==  "vine" || $active_site ==  "yahoo" || $active_site ==  "codepen" || $active_site ==  "delicious" || $active_site ==  "stumbleupon" || $active_site ==  "deviantart" || $active_site ==  "digg" || $active_site ==  "hacker-news" || $active_site == 'vk') { ?>
                     <i class="fa fa-<?php echo $active_site; ?>"></i> <?php
                 } else { ?>
                 <i class="fa fa-<?php echo $active_site; ?>-square"></i><?php
@@ -611,7 +611,7 @@ function ct_tracks_social_icons_output() {
 // array of social media site names
 function ct_tracks_social_site_list(){
 
-    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam');
+    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk' );
     return $social_sites;
 }
 

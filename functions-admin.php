@@ -1001,7 +1001,8 @@ function ct_tracks_social_array(){
         'digg' => 'digg_profile',
         'git' => 'git_profile',
         'hacker-news' => 'hacker-news_profile',
-        'steam' => 'steam_profile'
+        'steam' => 'steam_profile',
+        'vk' => 'vk_profile'
     );
     return $social_sites;
 }
