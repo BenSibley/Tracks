@@ -73,6 +73,7 @@ if ( have_posts() ) :
                 get_template_part('content');
             }
         }
+        /* Custom Post Types */
         else {
             get_template_part('content');
         }

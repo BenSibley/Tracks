@@ -532,6 +532,7 @@ function ct_tracks_social_site_list(){
     return $social_sites;
 }
 
+// for above the post titles
 function ct_tracks_category_link(){
     $category = get_the_category();
     $category_link = get_category_link( $category[0]->term_id );
