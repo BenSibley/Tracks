@@ -108,6 +108,12 @@ function ct_tracks_theme_setup() {
     {
         include $filename;
     }
+
+    // add inc folder files
+    foreach (glob(trailingslashit( get_template_directory() ) . 'inc/*.php') as $filename)
+    {
+        include $filename;
+    }
 }
 
 function ct_tracks_register_widget_areas(){
