@@ -22,18 +22,6 @@
   .site-header .site-description {
     color: $gray-dark;
   }
-  .menu-unset > ul,
-  .menu-primary-items {
-
-    a {
-      color: $gray-dark;
-
-      &:link,
-      &:visited {
-        color: $gray-dark;
-      }
-    }
-  }
   /* Social Icons */
   .social-media-icons {
 
@@ -70,6 +58,29 @@
   .site-header .search-form-container i {
     color: $gray-dark;
   }
+  .site-header.toggled {
+
+    .site-title {
+
+      a {
+        color: white;
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:active,
+        &:focus {
+          color: white;
+        }
+      }
+    }
+    .toggle-navigation {
+      color: white;
+    }
+    .site-header .site-description {
+      color: white;
+    }
+  }
 }
 
 /* 600px */
@@ -97,6 +108,14 @@
     .menu-unset > ul,
     .menu-primary-items {
 
+      a {
+        color: $gray-dark;
+
+        &:link,
+        &:visited {
+          color: $gray-dark;
+        }
+      }
       > li {
 
         &:after {
