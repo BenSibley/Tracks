@@ -72,6 +72,9 @@
 /* 1100px */
 @media all and (min-width: 68.75em){
 
+    .content-licenses h3 {
+        clear: both;
+    }
     .content-licenses form {
         width: 43%;
         float: left;
