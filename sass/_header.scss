@@ -49,17 +49,14 @@
   }
 }
 .toggle-navigation {
-  position: absolute;
-  right: 0;
+  position: relative;
+  float: right;
   z-index: 29;
   border: none;
   background: none;
   font-size: 1em;
   margin: 0;
-  width: $baseline-height * 3;
-  text-align: right;
-  padding: $baseline-height / 2 5.55% 0 0;
-  top: 0;
+  padding: 0 0 0 $baseline-height; // left padding to make clicking easier
   color: white;
   opacity: 0.6;
   transition: opacity 0.2s ease;
