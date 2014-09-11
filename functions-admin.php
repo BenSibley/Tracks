@@ -1013,7 +1013,8 @@ function ct_tracks_social_array(){
         'git' => 'git_profile',
         'hacker-news' => 'hacker-news_profile',
         'steam' => 'steam_profile',
-        'steam' => 'vk_profile'
+        'steam' => 'vk_profile',
+        'email' => 'email_profile'
     );
     return $social_sites;
 }
@@ -1032,13 +1033,20 @@ function ct_tracks_add_social_profile_settings($user) {
         	foreach($social_sites as $key => $social_site) {
   				?>      	
         		<tr>
-					<td>
-						<label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> Profile:</label>
-					</td>
-					<td>
-						<input type='url' id='<?php echo $key; ?>-profile' class='regular-text' name='<?php echo $key; ?>-profile' value='<?php echo esc_url_raw(get_the_author_meta($social_site, $user->ID )); ?>' />
-					</td>
-					</td>
+                    <th>
+                        <?php if( $key == 'email' ) : ?>
+                            <label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Address:', 'tracks'); ?></label>
+                        <?php else : ?>
+                            <label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Profile:', 'tracks'); ?></label>
+                        <?php endif; ?>
+                    </th>
+                    <td>
+                        <?php if( $key == 'email' ) : ?>
+                            <input type='text' id='<?php echo $key; ?>-profile' class='regular-text' name='<?php echo $key; ?>-profile' value='<?php echo is_email(get_the_author_meta($social_site, $user->ID )); ?>' />
+                        <?php else : ?>
+                            <input type='url' id='<?php echo $key; ?>-profile' class='regular-text' name='<?php echo $key; ?>-profile' value='<?php echo esc_url(get_the_author_meta($social_site, $user->ID )); ?>' />
+                        <?php endif; ?>
+                    </td>
 				</tr>
         	<?php }	?>
     </table>
@@ -1055,9 +1063,16 @@ function ct_tracks_save_social_profiles($user_id) {
 	$social_sites = ct_tracks_social_array();
    	
    	foreach ($social_sites as $key => $social_site) {
-		if( isset( $_POST["$key-profile"] ) ){
-			update_user_meta( $user_id, $social_site, esc_url_raw( $_POST["$key-profile"] ) );
-		}
+        if( $key == 'email' ) {
+            // if email, only accept 'mailto' protocol
+            if( isset( $_POST["$key-profile"] ) ){
+                update_user_meta( $user_id, $social_site, sanitize_email( $_POST["$key-profile"] ) );
+            }
+        } else {
+            if( isset( $_POST["$key-profile"] ) ){
+                update_user_meta( $user_id, $social_site, esc_url_raw( $_POST["$key-profile"] ) );
+            }
+        }
 	}
 }
 

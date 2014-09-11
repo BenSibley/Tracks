@@ -518,19 +518,20 @@ function ct_tracks_customizer_social_icons_output() {
         echo "<ul class='social-media-icons'>";
         foreach ($active_sites as $active_site) { ?>
             <li>
-            <?php if( $active_site == 'email' ) :
-                    if( is_email( get_theme_mod( $active_site ) ) ) : ?>
-                        <a target="_blank" href="mailto:<?php echo get_theme_mod( $active_site ); ?>">
-                    <?php endif; ?>
-            <?php else : ?>
-                <a target="_blank" href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
-            <?php endif; ?>
+                <?php if( $active_site == 'email' ) :
+                        if( is_email( get_theme_mod( $active_site ) ) ) : ?>
+                            <a target="_blank" href="mailto:<?php echo get_theme_mod( $active_site ); ?>">
+                        <?php endif; ?>
+                <?php else : ?>
+                    <a target="_blank" href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
+                <?php endif; ?>
+
                 <?php if( $active_site ==  "flickr" || $active_site ==  "dribbble" || $active_site ==  "instagram" || $active_site ==  "soundcloud" || $active_site ==  "spotify" || $active_site ==  "vine" || $active_site ==  "yahoo" || $active_site ==  "codepen" || $active_site ==  "delicious" || $active_site ==  "stumbleupon" || $active_site ==  "deviantart" || $active_site ==  "digg" || $active_site ==  "hacker-news" || $active_site == 'vk') { ?>
                     <i class="fa fa-<?php echo $active_site; ?>"></i>
                 <?php } elseif( $active_site == 'email' ) { ?>
                     <i class="fa fa-envelope"></i>
                 <?php } else { ?>
-                <i class="fa fa-<?php echo $active_site; ?>-square"></i><?php
+                    <i class="fa fa-<?php echo $active_site; ?>-square"></i><?php
                 } ?>
                 </a>
             </li><?php
