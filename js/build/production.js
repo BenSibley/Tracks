@@ -342,6 +342,25 @@ jQuery(function($){
     }
     $(document).on('click', reApplyClosedClass);
 
+    // reposition the description if a logo is present
+    function positionSiteDescription(){
+
+        // if screen is 800px+ wide
+        if( $(window).width() > 799 ) {
+
+            // if there is a logo
+            if( $('#site-header').find('.logo') ) {
+
+                // get the logo height
+                var logoHeight = $('#site-header').find('.logo').height();
+
+                // adjust the description placement accordingly
+                $(".site-description").css('top', logoHeight - 25 );
+            }
+        }
+    }
+    positionSiteDescription();
+
 });
 
 jQuery(window).load(function(){
