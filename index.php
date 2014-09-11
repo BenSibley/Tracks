@@ -2,6 +2,9 @@
 
 <?php
 
+// get user's comment display setting
+$comments_display = get_theme_mod('ct_tracks_comments_setting');
+
 /* Category header */
 if(is_category()){ ?>
     <div class='archive-header'>
@@ -48,17 +51,41 @@ if ( have_posts() ) :
         /* Post */
         elseif(is_singular('post')){
             get_template_part('content');
-            comments_template();
+
+            // error prevention
+            if( is_array( $comments_display ) ) {
+
+                // check for posts as a selected option
+                if (in_array( 'posts', $comments_display ) ) {
+                    comments_template();
+                }
+            }
         }
         /* Page */
         elseif(is_page()){
             get_template_part('content', 'page');
-            comments_template();
+
+            // error prevention
+            if( is_array( $comments_display ) ) {
+
+                // check for pages as a selected option
+                if (in_array( 'pages', $comments_display ) ) {
+                    comments_template();
+                }
+            }
         }
         /* Attachment */
         elseif(is_attachment()){
             get_template_part( 'content', 'attachment' );
-            comments_template();
+
+            // error prevention
+            if( is_array( $comments_display ) ) {
+
+                // check for attachments as a selected option
+                if (in_array( 'attachments', $comments_display ) ) {
+                    comments_template();
+                }
+            }
         }
         /* Archive */
         elseif(is_archive()){
