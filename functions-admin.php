@@ -119,7 +119,7 @@ function ct_tracks_customize_social_icons($wp_customize) {
                 array(
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
-                'sanitize_callback' => 'esc_url'
+                'sanitize_callback' => 'esc_url_raw'
             ) );
 
             /* control */
