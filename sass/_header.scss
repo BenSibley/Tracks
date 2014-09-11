@@ -74,7 +74,7 @@
 }
 .menu-primary {
   transform: translateZ(0);
-  @include backface-visibility(hidden);
+  backface-visibility: hidden;
   position: absolute;
   top: 0;
   padding-top: $baseline-height * 4;
@@ -85,7 +85,7 @@
   background-image: linear-gradient($gray-dark 24px, transparent 24px, transparent 48px);
   background-size: 1px 48px; /* this is a 24px baseline grid */
   text-align: center;
-  @include transition(all 0.3s ease-in-out);
+  transition: all 0.3s ease-in-out;
 }
 .menu-primary-tracks {
   @extend .menu-primary;
@@ -108,7 +108,7 @@
     color: white;
     opacity: 0.6;
     margin: $baseline-height 0 $baseline-height / 2 0;
-    @include backface-visibility(hidden);
+    backface-visibility: hidden;
 
     &:only-child {
       margin: $baseline-height 0;

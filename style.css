@@ -465,8 +465,7 @@ a img {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
   position: absolute;
   top: 0;
   padding-top: 6em;
@@ -482,7 +481,7 @@ a img {
   /* this is a 24px baseline grid */
   text-align: center;
   -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
 }
 
 .menu-primary-tracks {
@@ -510,6 +509,8 @@ a img {
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 .menu-unset > ul a:only-child,
 .menu-primary-items a:only-child {
