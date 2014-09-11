@@ -586,7 +586,7 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
             'ct_tracks_comments_setting',
             array(
                 'label'          => __( 'Show comments on:', 'tracks' ),
-                'section'        => 'ct-additional-options',
+                'section'        => 'ct_tracks_additional_options',
                 'settings'       => 'ct_tracks_comments_setting',
                 'type'           => 'multi-checkbox',
                 'choices'        => array(
