@@ -63,7 +63,15 @@ if ( have_posts() ) :
         /* Archive */
         elseif(is_archive()){
 
-            if(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
+            /* check if bbPress is active */
+            if( function_exists( 'is_bbpress' ) ) {
+
+                /* if is bbPress forum list */
+                if( is_bbpress() ) {
+                    get_template_part( 'content/bbpress' );
+                }
+            }
+            elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
                 get_template_part('licenses/content/content-two-column-images');
             }
             elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
@@ -73,6 +81,10 @@ if ( have_posts() ) :
                 get_template_part('content');
             }
         }
+        /* bbPress */
+        elseif( is_bbpress() ) {
+            get_template_part( 'content/bbpress' );
+        }
         /* Custom Post Types */
         else {
             get_template_part('content');
@@ -80,6 +92,19 @@ if ( have_posts() ) :
     endwhile;
 endif; ?>
 
-<?php ct_tracks_post_navigation(); ?>
-    
+<?php
+
+// include loop pagination except for on bbPress Forum root
+if( function_exists( 'is_bbpress' ) ) {
+
+    if( ! ( is_bbpress() && is_archive() ) ) {
+        ct_ignite_post_navigation();
+    }
+
+} else {
+    ct_ignite_post_navigation();
+}
+
+?>
+
 <?php get_footer(); ?>
