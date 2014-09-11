@@ -546,8 +546,73 @@ function ct_tracks_customizer_additional_options( $wp_customize ) {
             ),
         )
     );
+
+    class ct_tracks_Multi_Checkbox_Control extends WP_Customize_Control {
+        public $type = 'multi-checkbox';
+
+        public function render_content() {
+
+            if ( empty( $this->choices ) )
+                return;
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <select id="comment-display-control" <?php $this->link(); ?> multiple="multiple" style="height: 100%;">
+                    <?php
+                    foreach ( $this->choices as $value => $label ) {
+                        $selected = ( in_array( $value, $this->value() ) ) ? selected( 1, 1, false ) : '';
+                        echo '<option value="' . esc_attr( $value ) . '"' . $selected . '>' . $label . '</option>';
+                    }
+                    ?>
+                </select>
+            </label>
+        <?php }
+    }
+
+    /* setting */
+    $wp_customize->add_setting(
+        'ct_tracks_comments_setting',
+        array(
+            'default'           => 'none',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_comments_setting',
+        )
+    );
+    /* control */
+    $wp_customize->add_control(
+        new ct_tracks_Multi_Checkbox_Control(
+            $wp_customize,
+            'ct_tracks_comments_setting',
+            array(
+                'label'          => __( 'Show comments on:', 'tracks' ),
+                'section'        => 'ct-additional-options',
+                'settings'       => 'ct_tracks_comments_setting',
+                'type'           => 'multi-checkbox',
+                'choices'        => array(
+                    'posts'   => __('Posts', 'tracks'),
+                    'pages'  => __('Pages', 'tracks'),
+                    'attachments'  => __('Attachments', 'tracks'),
+                    'none'  => __('Do not show', 'tracks')
+                )
+            )
+        )
+    );
 }
 add_action( 'customize_register', 'ct_tracks_customizer_additional_options' );
+
+// sets comment display values on new sites or sites updating to new version with this feature
+function ct_tracks_set_comment_display_values() {
+
+    // get the current value
+    $current_settings = get_theme_mod( 'ct_tracks_comments_setting' );
+
+    // if empty, set to all
+    if( empty( $current_settings ) ) {
+        set_theme_mod( 'ct_tracks_comments_setting', array( 'posts', 'pages', 'attachments', 'none' ) );
+    }
+}
+add_action( 'init', 'ct_tracks_set_comment_display_values' );
 
 /* sanitize radio button input */
 function ct_tracks_sanitize_all_show_hide_settings($input){
@@ -576,6 +641,30 @@ function ct_tracks_sanitize_image_zoom_settings($input){
         return '';
     }
 }
+
+/* sanitize comment display multi-check */
+function ct_tracks_sanitize_comments_setting($input){
+
+    // valid data
+    $valid = array(
+        'posts'   => __('Posts', 'tracks'),
+        'pages'  => __('Pages', 'tracks'),
+        'attachments'  => __('Attachments', 'tracks'),
+        'none'  => __('Do not show', 'tracks')
+    );
+
+    // loop through array
+    foreach( $input as $selection ) {
+
+        // if it's in the valid data, return it
+        if ( array_key_exists( $selection, $valid ) ) {
+            return $input;
+        } else {
+            return '';
+        }
+    }
+}
+
 
 function ct_tracks_textures_array(){
 
