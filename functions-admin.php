@@ -946,6 +946,42 @@ function ct_tracks_customizer_custom_css( $wp_customize ) {
 }
 add_action( 'customize_register', 'ct_tracks_customizer_custom_css' );
 
+/* Footer Text Section */
+function ct_tracks_customizer_footer_text( $wp_customize ) {
+
+    // section
+    $wp_customize->add_section(
+        'ct-footer-text',
+        array(
+            'title'      => __( 'Footer Text', 'tracks' ),
+            'priority'   => 95,
+            'capability' => 'edit_theme_options'
+        )
+    );
+
+    // setting
+    $wp_customize->add_setting(
+        'ct_tracks_footer_text_setting',
+        array(
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'wp_kses_post',
+        )
+    );
+    // control
+    $wp_customize->add_control(
+        new ct_tracks_Textarea_Control(
+            $wp_customize,
+            'ct_tracks_footer_text_setting',
+            array(
+                'label'          => __( 'Edit the text in your footer', 'tracks' ),
+                'section'        => 'ct-footer-text',
+                'settings'       => 'ct_tracks_footer_text_setting',
+            )
+        ) );
+}
+add_action( 'customize_register', 'ct_tracks_customizer_footer_text' );
+
 function ct_tracks_user_profile_image_setting( $user ) { ?>
 
     <table id="profile-image-table" class="form-table">
