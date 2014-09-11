@@ -266,7 +266,7 @@ jQuery(function($){
         if( $(window).width() > 799 ) {
 
             // if there is a logo
-            if( $('#site-header').find('.logo') ) {
+            if( $('#site-header').find('.logo').length ) {
 
                 // get the logo height
                 var logoHeight = $('#site-header').find('.logo').height();
