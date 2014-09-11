@@ -1,0 +1,58 @@
+/* bbpress Styles */
+
+.entry-bbpress {
+  padding-top: $baseline-height * 2;
+
+  .entry-container {
+    padding: 0 11.11%;
+  }
+}
+#wp-bbp_topic_content-editor-container,
+#wp-bbp_reply_content-editor-container {
+
+  input {
+    width: auto;
+    padding: 6px 24px !important;
+  }
+  textarea {
+    outline: solid 1px $gray-dark;
+    margin-top: $baseline-height !important;
+  }
+}
+#bbp_topic_tags {
+  max-width: 500px;
+  font-size: 13px;
+
+}
+#bbp_topic_title {
+  max-width: none;
+}
+.bbp-submit-wrapper button {
+  background: $gray-dark;
+  color: white;
+  max-width: $baseline-height * 8 * 1.85 !important;
+  min-width: $baseline-height * 4 * 1.85;
+  padding: 0.8em;
+  min-height: 45px; // fix for IEs not handling padding well
+  outline: none;
+  border: none;
+  font-family: $primary-font-stack;
+  font-size: 0.813em;
+  line-height: 1.85;
+  border-radius: 0;
+  -webkit-appearance: none;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    background: black;
+  }
+}
+@media all and (min-width: 62.5em){
+
+  #bbp_topic_title {
+    width: 70%;
+  }
+}

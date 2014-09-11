@@ -98,11 +98,11 @@ endif; ?>
 if( function_exists( 'is_bbpress' ) ) {
 
     if( ! ( is_bbpress() && is_archive() ) ) {
-        ct_ignite_post_navigation();
+        ct_tracks_post_navigation();
     }
 
 } else {
-    ct_ignite_post_navigation();
+    ct_tracks_post_navigation();
 }
 
 ?>

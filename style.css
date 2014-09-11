@@ -2300,3 +2300,58 @@ li.pingback:after {
     padding: 1.5em 19.75% 3em;
   }
 }
+/* bbpress Styles */
+.entry-bbpress {
+  padding-top: 3em;
+}
+.entry-bbpress .entry-container {
+  padding: 0 11.11%;
+}
+
+#wp-bbp_topic_content-editor-container input,
+#wp-bbp_reply_content-editor-container input {
+  width: auto;
+  padding: 6px 24px !important;
+}
+#wp-bbp_topic_content-editor-container textarea,
+#wp-bbp_reply_content-editor-container textarea {
+  outline: solid 1px #222222;
+  margin-top: 1.5em !important;
+}
+
+#bbp_topic_tags {
+  max-width: 500px;
+  font-size: 13px;
+}
+
+#bbp_topic_title {
+  max-width: none;
+}
+
+.bbp-submit-wrapper button {
+  background: #222222;
+  color: white;
+  max-width: 22.2em !important;
+  min-width: 11.1em;
+  padding: 0.8em;
+  min-height: 45px;
+  outline: none;
+  border: none;
+  font-family: "raleway", sans-serif;
+  font-size: 0.813em;
+  line-height: 1.85;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+.bbp-submit-wrapper button:hover, .bbp-submit-wrapper button:active, .bbp-submit-wrapper button:focus {
+  cursor: pointer;
+  background: black;
+}
+
+@media all and (min-width: 62.5em) {
+  #bbp_topic_title {
+    width: 70%;
+  }
+}
