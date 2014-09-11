@@ -91,29 +91,60 @@ function ct_tracks_customize_social_icons($wp_customize) {
 
     foreach($social_sites as $social_site) {
 
-        /* setting */
-        $wp_customize->add_setting(
-            "$social_site",
-            array(
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_url_raw'
-        ) );
+        if( $social_site == 'email' ) {
 
-        /* control */
-        $wp_customize->add_control(
-            new ct_tracks_url_input_control(
-                $wp_customize, $social_site, array(
+            /* setting */
+            $wp_customize->add_setting(
+                "$social_site",
+                array(
+                    'type'              => 'theme_mod',
+                    'capability'        => 'edit_theme_options',
+                    'sanitize_callback' => 'ct_tracks_sanitize_email'
+                ) );
+
+            /* control */
+            $wp_customize->add_control(
+                $social_site, array(
                     'label'   => $social_site, // brand name so no internationalization required
                     'section' => 'ct_tracks_social_icons',
                     'priority'=> $priority,
                 )
-            )
-        );
-        $priority = $priority + 5;
+            );
+            $priority = $priority + 5;
+        } else {
+
+            /* setting */
+            $wp_customize->add_setting(
+                "$social_site",
+                array(
+                'type'              => 'theme_mod',
+                'capability'        => 'edit_theme_options',
+                'sanitize_callback' => 'esc_url_raw'
+            ) );
+
+            /* control */
+            $wp_customize->add_control(
+                new ct_tracks_url_input_control(
+                    $wp_customize, $social_site, array(
+                        'label'   => $social_site, // brand name so no internationalization required
+                        'section' => 'ct_tracks_social_icons',
+                        'priority'=> $priority,
+                    )
+                )
+            );
+            $priority = $priority + 5;
+        }
     }
 }
 add_action('customize_register', 'ct_tracks_customize_social_icons');
+
+// sanitize proper email address url
+function ct_tracks_sanitize_email( $input ) {
+
+    esc_url_raw( $input, array('mailto:') );
+
+    return $input;
+}
 
 /* sanitize radio button input */
 function ct_tracks_sanitize_social_icons_display($input){
