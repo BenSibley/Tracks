@@ -119,7 +119,7 @@ function ct_tracks_customize_social_icons($wp_customize) {
                 array(
                 'type'              => 'theme_mod',
                 'capability'        => 'edit_theme_options',
-                'sanitize_callback' => 'esc_url_raw'
+                'sanitize_callback' => 'esc_url'
             ) );
 
             /* control */
@@ -141,9 +141,7 @@ add_action('customize_register', 'ct_tracks_customize_social_icons');
 // sanitize proper email address url
 function ct_tracks_sanitize_email( $input ) {
 
-    esc_url_raw( $input, array('mailto:') );
-
-    return $input;
+    return sanitize_email( $input );
 }
 
 /* sanitize radio button input */
