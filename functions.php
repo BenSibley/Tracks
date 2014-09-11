@@ -53,6 +53,10 @@ add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
 
 /* enqueues scripts and styles used on customizer page */
 function ct_tracks_enqueue_customizer_styles(){
+
+    wp_enqueue_script('multiple-select', get_template_directory_uri() . '/js/build/multiple-select.min.js',array('jquery'),'',true);
+    wp_enqueue_style('multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.css');
+
     wp_enqueue_script('ct-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js#ct_tracks_asyncload');
     wp_enqueue_style('ct-customizer-css', get_template_directory_uri() . '/style-customizer.css');
 }
