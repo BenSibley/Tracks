@@ -32,25 +32,31 @@
 
             echo "<div class='top-navigation'>";
 
-                // add secondary menu if set
-                get_template_part( 'menu', 'secondary' );
+                echo "<div class='container'>";
 
-                // add search input if set
-                if(get_theme_mod('search_input_setting') == 'show'){
-                    get_search_form();
-                }
-                // display social icons if set
-                if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'header')){
-                    ct_tracks_customizer_social_icons_output();
-                }
+                    // add secondary menu if set
+                    get_template_part( 'menu', 'secondary' );
+
+                    // add search input if set
+                    if(get_theme_mod('search_input_setting') == 'show'){
+                        get_search_form();
+                    }
+                    // display social icons if set
+                    if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'header')){
+                        ct_tracks_customizer_social_icons_output();
+                    }
+
+                echo "</div>";
+
             echo "</div>";
     } ?>
+    <div class="container">
 
-	<div id="title-info" class="title-info">
-		<?php get_template_part('logo')  ?>
-	</div>
+        <div id="title-info" class="title-info">
+            <?php get_template_part('logo')  ?>
+        </div>
 
-	<?php get_template_part( 'menu', 'primary' ); // adds the primary menu ?>
-
+        <?php get_template_part( 'menu', 'primary' ); // adds the primary menu ?>
+    </div><!-- .container -->
 </header>
 <div id="main" class="main" role="main">

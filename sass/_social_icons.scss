@@ -33,3 +33,11 @@
   float: right;
   height:  100%;
 }
+
+@media all and (min-width: 1500px){
+
+  .top-navigation .social-media-icons {
+    margin-right: 0px !important;
+  }
+}
+

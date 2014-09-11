@@ -2,6 +2,10 @@
   padding: $baseline-height / 2 5.55%;
   background-color: $gray-dark;
 
+  .container {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
   &:after {
     @include clearfix;
   }

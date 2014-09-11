@@ -31,6 +31,7 @@ body {
 .main {
   background: $gray-dark;
   padding-bottom: $baseline-height;
+  margin: 0 auto;
 }
 p {
   margin: $baseline-height 0;
@@ -310,8 +311,11 @@ a img {
 
   .main {
     width: 88.89%;
-    margin: 0 auto;
+    max-width: 1280px;
   }
+}
+.entry {
+  max-width: 1280px;
 }
 
 // stop iphone from zooming in on landscape view

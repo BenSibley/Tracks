@@ -2,6 +2,7 @@
   @extend %half-column-padding;
   background: white;
   padding-bottom: $baseline-height * 2;
+  max-width: 1280px;
 }
 .comments-number {
   padding: $baseline-height 0;
