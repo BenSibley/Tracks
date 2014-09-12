@@ -507,9 +507,6 @@ a img {
   opacity: 0.6;
   margin: 1.5em 0 0.75em 0;
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
 .menu-unset > ul a:only-child,
@@ -2196,7 +2193,7 @@ li.pingback:after {
 .dark-header .site-header.toggled .toggle-navigation {
   color: white;
 }
-.dark-header .site-header.toggled .site-header .site-description {
+.dark-header .site-header.toggled .site-description {
   color: white;
 }
 
