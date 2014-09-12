@@ -1103,7 +1103,7 @@ function ct_tracks_save_user_profile_image( $user_id ) {
     if ( !current_user_can( 'edit_user', $user_id ) )
         return false;
 
-    update_user_meta( $user_id, 'user_profile_image', $_POST['user_profile_image'] );
+    update_user_meta( $user_id, 'user_profile_image', esc_url_raw( $_POST['user_profile_image'] ) );
 }
 
 add_action( 'personal_options_update', 'ct_tracks_save_user_profile_image' );
