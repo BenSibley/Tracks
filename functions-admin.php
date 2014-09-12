@@ -1073,6 +1073,13 @@ add_action( 'customize_register', 'ct_tracks_customizer_footer_text' );
 
 function ct_tracks_user_profile_image_setting( $user ) { ?>
 
+    <?php
+        $user_id = get_current_user_id();
+
+        // only added for contributors and above
+        if ( ! current_user_can( 'edit_posts', $user_id ) ) return false;
+    ?>
+
     <table id="profile-image-table" class="form-table">
 
         <tr>
@@ -1100,7 +1107,7 @@ add_action( 'edit_user_profile', 'ct_tracks_user_profile_image_setting' );
 function ct_tracks_save_user_profile_image( $user_id ) {
 
     // only saves if the current user can edit user profiles
-    if ( !current_user_can( 'edit_user', $user_id ) )
+    if ( ! current_user_can( 'edit_user', $user_id ) )
         return false;
 
     update_user_meta( $user_id, 'user_profile_image', esc_url_raw( $_POST['user_profile_image'] ) );
@@ -1148,6 +1155,11 @@ function ct_tracks_social_array(){
 function ct_tracks_add_social_profile_settings($user) {
 
     $social_sites = ct_tracks_social_array();
+
+    $user_id = get_current_user_id();
+
+    // only added for contributors and above
+    if ( ! current_user_can( 'edit_posts', $user_id ) ) return false;
 
 	?>	
     <table class="form-table">
