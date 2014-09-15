@@ -631,17 +631,70 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         ) );
     }
 
+    /***** Header Color *****/
+
+    // get license statuses from databases
+    $license_images = trim( get_option( 'ct_tracks_background_images_license_key_status' ) );
+    $license_textures = trim( get_option( 'ct_tracks_background_textures_license_key_status' ) );
+
+    // only add if one or more licenses are active
+    if( $license_images == 'valid' || $license_textures == 'valid') {
+
+        // section
+        $wp_customize->add_section( 'ct_tracks_header_color', array(
+            'title'      => __( 'Header Color', 'tracks' ),
+            'description' => __('Change to dark if your new background makes the menu hard to read.', 'tracks'),
+            'priority'   => 99,
+            'capability' => 'edit_theme_options'
+        ) );
+        // setting
+        $wp_customize->add_setting( 'ct_tracks_header_color_setting', array(
+            'default'           => 'light',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'ct_tracks_sanitize_header_color_settings'
+        ) );
+        // control
+        $wp_customize->add_control( 'ct_tracks_header_color_setting', array(
+            'type' => 'radio',
+            'label' => 'Light or dark header color?',
+            'section' => 'ct_tracks_header_color',
+            'setting' => 'ct_tracks_header_color_setting',
+            'choices' => array(
+                'light' => 'Light',
+                'dark' => 'Dark',
+            ),
+        ) );
+    }
 }
 
 /***** Custom Sanitization Functions *****/
 
-// sanitize proper email address url
+// sanitize tagline display setting
+function ct_tracks_sanitize_tagline_display($input){
+    $valid = array(
+        'header-footer' => 'Header & Footer',
+        'header' => 'Header',
+        'footer' => 'Footer'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/*
+ * sanitize email address
+ * Used in: Social Media Icons
+ */
 function ct_tracks_sanitize_email( $input ) {
 
     return sanitize_email( $input );
 }
 
-/* sanitize radio button input */
+// sanitize social icon display setting
 function ct_tracks_sanitize_social_icons_display($input){
     $valid = array(
         'header-footer' => 'Header & Footer',
@@ -657,97 +710,10 @@ function ct_tracks_sanitize_social_icons_display($input){
     }
 }
 
-
-/* sanitize radio button input */
-function ct_tracks_sanitize_tagline_display($input){
-    $valid = array(
-        'header-footer' => 'Header & Footer',
-        'header' => 'Header',
-        'footer' => 'Footer'
-    );
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
-
-// allow users to switch to a dark header
-function ct_tracks_customize_header_color( $wp_customize ) {
-
-    // only add if background images or textures active
-    $license_images = trim( get_option( 'ct_tracks_background_images_license_key_status' ) );
-    $license_textures = trim( get_option( 'ct_tracks_background_textures_license_key_status' ) );
-
-    if( $license_images == 'valid' || $license_textures == 'valid') {
-
-        /* section */
-        $wp_customize->add_section(
-            'ct_tracks_header_color',
-            array(
-                'title'      => esc_html__( 'Header Color', 'tracks' ),
-                'description' => esc_html__('Change to dark if your new background makes the menu hard to read.', 'tracks'),
-                'priority'   => 99,
-                'capability' => 'edit_theme_options'
-            )
-        );
-        /* setting */
-        $wp_customize->add_setting(
-            'ct_tracks_header_color_setting',
-            array(
-                'default'           => 'light',
-                'type'              => 'theme_mod',
-                'capability'        => 'edit_theme_options',
-                'sanitize_callback' => 'ct_tracks_sanitize_header_color_settings'
-            )
-        );
-        /* control */
-        $wp_customize->add_control(
-            'ct_tracks_header_color_setting',
-            array(
-                'type' => 'radio',
-                'label' => 'Light or dark header color?',
-                'section' => 'ct_tracks_header_color',
-                'setting' => 'ct_tracks_header_color_setting',
-                'choices' => array(
-                    'light' => 'Light',
-                    'dark' => 'Dark',
-                ),
-            )
-        );
-    }
-}
-add_action( 'customize_register', 'ct_tracks_customize_header_color' );
-
-/* sanitize input */
-function ct_tracks_sanitize_header_color_settings($input){
-    $valid = array(
-        'light' => 'Light',
-        'dark' => 'Dark',
-    );
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
-
-// sets comment display values on new sites or sites updating to new version with this feature
-function ct_tracks_set_comment_display_values() {
-
-    // get the current value
-    $current_settings = get_theme_mod( 'ct_tracks_comments_setting' );
-
-    // if empty, set to all
-    if( empty( $current_settings ) ) {
-        set_theme_mod( 'ct_tracks_comments_setting', array( 'posts', 'pages', 'attachments', 'none' ) );
-    }
-}
-add_action( 'init', 'ct_tracks_set_comment_display_values' );
-
-/* sanitize radio button input */
+/*
+ * Sanitize settings with show/hide as options
+ * Used in: author meta, return-to-top arrow, post meta, search bar
+ */
 function ct_tracks_sanitize_all_show_hide_settings($input){
     $valid = array(
         'show' => 'Show',
@@ -761,11 +727,15 @@ function ct_tracks_sanitize_all_show_hide_settings($input){
     }
 }
 
-/* sanitize radio button input */
-function ct_tracks_sanitize_image_zoom_settings($input){
+/*
+ * Sanitize settings with yes/no as options
+ * Used in: background texture, lazy loading, full-width image show full post
+ */
+function ct_tracks_all_yes_no_setting_sanitization($input){
+
     $valid = array(
-        'zoom' => 'Zoom',
-        'no-zoom' => 'Do not Zoom'
+        'yes' => 'Yes',
+        'no' => 'No',
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -775,7 +745,7 @@ function ct_tracks_sanitize_image_zoom_settings($input){
     }
 }
 
-/* sanitize comment display multi-check */
+// sanitize comment display multi-check
 function ct_tracks_sanitize_comments_setting($input){
 
     // valid data
@@ -798,7 +768,95 @@ function ct_tracks_sanitize_comments_setting($input){
     }
 }
 
+// sanitize image zoom setting
+function ct_tracks_sanitize_image_zoom_settings($input){
+    $valid = array(
+        'zoom' => 'Zoom',
+        'no-zoom' => 'Do not Zoom'
+    );
 
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+// sanitize premium layout setting
+function ct_tracks_sanitize_premium_layouts($input){
+    $valid = array(
+        'standard' => 'Standard',
+        'full-width' => 'Full-width',
+        'full-width-images' => 'Full-width Images',
+        'two-column' => 'Two-Column',
+        'two-column-images' => 'Two-Column Images',
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+// sanitize full-width image height setting
+function ct_tracks_sanitize_premium_layouts_image_height($input){
+    $valid = array(
+        'image' => 'size based on image size',
+        '2:1-ratio'   => '2:1 width/height ratio like posts'
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+// sanitize background texture setting
+function ct_tracks_background_texture_setting_sanitization($input){
+
+    $textures = ct_tracks_textures_array();
+
+    $valid = $textures;
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+// sanitize header color setting
+function ct_tracks_sanitize_header_color_settings($input){
+    $valid = array(
+        'light' => 'Light',
+        'dark' => 'Dark',
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/***** Helper Functions *****/
+
+// sets comment display values on new sites or sites updating to new version with this feature
+function ct_tracks_set_comment_display_values() {
+
+    // get the current value
+    $current_settings = get_theme_mod( 'ct_tracks_comments_setting' );
+
+    // if empty, set to all
+    if( empty( $current_settings ) ) {
+        set_theme_mod( 'ct_tracks_comments_setting', array( 'posts', 'pages', 'attachments', 'none' ) );
+    }
+}
+add_action( 'init', 'ct_tracks_set_comment_display_values' );
+
+// array of textures used as choices in texture setting
 function ct_tracks_textures_array(){
 
     $textures = array(
@@ -846,63 +904,9 @@ function ct_tracks_textures_array(){
     return $textures;
 }
 
-function ct_tracks_all_yes_no_setting_sanitization($input){
 
-    $valid = array(
-        'yes' => 'Yes',
-        'no' => 'No',
-    );
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
 
-function ct_tracks_background_texture_setting_sanitization($input){
-
-    $textures = ct_tracks_textures_array();
-
-    $valid = $textures;
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
-
-/* sanitize premium layout options */
-function ct_tracks_sanitize_premium_layouts($input){
-    $valid = array(
-        'standard' => 'Standard',
-        'full-width' => 'Full-width',
-        'full-width-images' => 'Full-width Images',
-        'two-column' => 'Two-Column',
-        'two-column-images' => 'Two-Column Images',
-    );
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
-
-/* sanitize radio button input */
-function ct_tracks_sanitize_premium_layouts_image_height($input){
-    $valid = array(
-        'image' => 'size based on image size',
-        '2:1-ratio'   => '2:1 width/height ratio like posts'
-    );
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
 
 
 function ct_tracks_user_profile_image_setting( $user ) { ?>
