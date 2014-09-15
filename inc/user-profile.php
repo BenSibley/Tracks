@@ -1,17 +1,13 @@
 <?php
 
-
-
-
-
-
+// add profile image option for contributors roles and higher
 function ct_tracks_user_profile_image_setting( $user ) { ?>
 
     <?php
-        $user_id = get_current_user_id();
+    $user_id = get_current_user_id();
 
-        // only added for contributors and above
-        if ( ! current_user_can( 'edit_posts', $user_id ) ) return false;
+    // only added for contributors and above
+    if ( ! current_user_can( 'edit_posts', $user_id ) ) return false;
     ?>
 
     <table id="profile-image-table" class="form-table">
@@ -22,7 +18,7 @@ function ct_tracks_user_profile_image_setting( $user ) { ?>
                 <!-- Outputs the image after save -->
                 <img id="image-preview" src="<?php echo esc_url( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" style="width:100px;"><br />
                 <!-- Outputs the text field and displays the URL of the image retrieved by the media uploader -->
-                <input type="text" name="user_profile_image" id="user_profile_image" value="<?php echo esc_url_raw( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" class="regular-text" />
+                <input type="text" name="user_profile_image" id="user_profile_image" value="<?php echo esc_url( get_the_author_meta( 'user_profile_image', $user->ID ) ); ?>" class="regular-text" />
                 <!-- Outputs the save button -->
                 <input type='button' id="user-profile-upload" class="button-primary" value="<?php _e( 'Upload Image', 'tracks' ); ?>"/><br />
                 <span class="description"><?php _e( 'Upload an image here to use instead of your Gravatar. Perfectly square images will not be cropped.', 'tracks' ); ?></span>
@@ -95,34 +91,34 @@ function ct_tracks_add_social_profile_settings($user) {
     // only added for contributors and above
     if ( ! current_user_can( 'edit_posts', $user_id ) ) return false;
 
-	?>	
+    ?>
     <table class="form-table">
         <tr>
             <th><h3>Social Profiles</h3></th>
         </tr>
         <?php
-        	foreach($social_sites as $key => $social_site) {
-  				?>      	
-        		<tr>
-                    <th>
-                        <?php if( $key == 'email' ) : ?>
-                            <label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Address:', 'tracks'); ?></label>
-                        <?php else : ?>
-                            <label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Profile:', 'tracks'); ?></label>
-                        <?php endif; ?>
-                    </th>
-                    <td>
-                        <?php if( $key == 'email' ) : ?>
-                            <input type='text' id='<?php echo $key; ?>-profile' class='regular-text' name='<?php echo $key; ?>-profile' value='<?php echo is_email(get_the_author_meta($social_site, $user->ID )); ?>' />
-                        <?php else : ?>
-                            <input type='url' id='<?php echo $key; ?>-profile' class='regular-text' name='<?php echo $key; ?>-profile' value='<?php echo esc_url(get_the_author_meta($social_site, $user->ID )); ?>' />
-                        <?php endif; ?>
-                    </td>
-				</tr>
-        	<?php }	?>
+        foreach($social_sites as $key => $social_site) {
+            ?>
+            <tr>
+                <th>
+                    <?php if( $key == 'email' ) : ?>
+                        <label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Address:', 'tracks'); ?></label>
+                    <?php else : ?>
+                        <label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Profile:', 'tracks'); ?></label>
+                    <?php endif; ?>
+                </th>
+                <td>
+                    <?php if( $key == 'email' ) : ?>
+                        <input type='text' id='<?php echo $key; ?>-profile' class='regular-text' name='<?php echo $key; ?>-profile' value='<?php echo is_email(get_the_author_meta($social_site, $user->ID )); ?>' />
+                    <?php else : ?>
+                        <input type='url' id='<?php echo $key; ?>-profile' class='regular-text' name='<?php echo $key; ?>-profile' value='<?php echo esc_url(get_the_author_meta($social_site, $user->ID )); ?>' />
+                    <?php endif; ?>
+                </td>
+            </tr>
+        <?php }	?>
     </table>
-    <?php
-} 
+<?php
+}
 
 add_action( 'show_user_profile', 'ct_tracks_add_social_profile_settings' );
 add_action( 'edit_user_profile', 'ct_tracks_add_social_profile_settings' );
@@ -131,9 +127,9 @@ function ct_tracks_save_social_profiles($user_id) {
 
     if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
 
-	$social_sites = ct_tracks_social_array();
-   	
-   	foreach ($social_sites as $key => $social_site) {
+    $social_sites = ct_tracks_social_array();
+
+    foreach ($social_sites as $key => $social_site) {
         if( $key == 'email' ) {
             // if email, only accept 'mailto' protocol
             if( isset( $_POST["$key-profile"] ) ){
@@ -144,7 +140,7 @@ function ct_tracks_save_social_profiles($user_id) {
                 update_user_meta( $user_id, $social_site, esc_url_raw( $_POST["$key-profile"] ) );
             }
         }
-	}
+    }
 }
 
 add_action( 'personal_options_update', 'ct_tracks_save_social_profiles' );
