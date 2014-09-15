@@ -1,7 +1,9 @@
 <?php
 
 // This is the URL our updater / license checker pings. This should be the URL of the site with EDD installed
-//define( 'CT_TRACKS_STORE_URL', 'http://www.competethemes.com' );
+if( ! defined( 'CT_TRACKS_STORE_URL' ) ) {
+    define( 'CT_TRACKS_STORE_URL', 'http://www.competethemes.com' );
+}
 
 // The name of your product. This should match the download name in EDD exactly
 define( 'CT_TRACKS_TWO_COLUMN', 'Tracks Two-Column Layout' );
@@ -41,7 +43,8 @@ function ct_tracks_two_column_activate_license() {
         $api_params = array(
             'edd_action' => 'activate_license',
             'license' => $license,
-            'item_name' => urlencode( CT_TRACKS_TWO_COLUMN )
+            'item_name' => urlencode( CT_TRACKS_TWO_COLUMN ),
+            'url'       => home_url()
         );
 
         $response = wp_remote_get( add_query_arg( $api_params, CT_TRACKS_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
@@ -80,7 +83,8 @@ function ct_tracks_two_column_deactivate_license() {
         $api_params = array(
             'edd_action'=> 'deactivate_license',
             'license' 	=> $license,
-            'item_name' => urlencode( CT_TRACKS_TWO_COLUMN )
+            'item_name' => urlencode( CT_TRACKS_TWO_COLUMN ),
+            'url'       => home_url()
         );
 
         // Call the custom API.
@@ -116,7 +120,8 @@ function ct_tracks_two_column_check_license() {
     $api_params = array(
         'edd_action' => 'check_license',
         'license' => $license,
-        'item_name' => urlencode( CT_TRACKS_TWO_COLUMN )
+        'item_name' => urlencode( CT_TRACKS_TWO_COLUMN ),
+        'url'       => home_url()
     );
 
     $response = wp_remote_get( add_query_arg( $api_params, CT_TRACKS_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
