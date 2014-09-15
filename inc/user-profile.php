@@ -81,7 +81,7 @@ function ct_tracks_social_array(){
     return $social_sites;
 }
 
-// add the social profile boxes to the user screen.  NEEDS sanitize callback?
+// add the social profile boxes to the user screen.
 function ct_tracks_add_social_profile_settings($user) {
 
     $social_sites = ct_tracks_social_array();

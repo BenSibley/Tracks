@@ -100,9 +100,6 @@ function ct_tracks_theme_setup() {
         'secondary' => __('Secondary', 'tracks'),
         'footer' => __('Footer', 'tracks')
     ));
-    
-    // adds the file with the customizer functionality
-    require_once( trailingslashit( get_template_directory() ) . 'functions-admin.php' );
 
     // adds theme options page
     require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
