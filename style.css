@@ -1387,6 +1387,12 @@ li.pingback:after {
     padding: 0 19.435% 3em;
   }
 }
+/* 1445px */
+@media all and (min-width: 1445px) {
+  .comments {
+    padding: 0 284px 1.5em;
+  }
+}
 .site-footer {
   color: #8c8c8c;
   text-align: center;

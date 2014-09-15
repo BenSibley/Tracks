@@ -200,3 +200,11 @@ li.pingback {
     padding: 0 19.435% $baseline-height * 2;
   }
 }
+
+/* 1445px */
+@media all and (min-width: 1445px) {
+
+  .comments {
+    padding: 0 284px $baseline-height * 2;
+  }
+}
