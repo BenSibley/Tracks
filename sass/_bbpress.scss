@@ -1,5 +1,11 @@
 /* bbpress Styles */
 
+// forum list page not wide enough
+.bbpress.archive .main {
+  width: 100%;
+  margin-bottom: $baseline-height * 2;
+}
+
 .entry-bbpress {
   padding-top: $baseline-height * 2;
 
@@ -54,5 +60,19 @@
 
   #bbp_topic_title {
     width: 70%;
+  }
+}
+
+// search bar
+
+#bbpress-forums div.bbp-search-form {
+  margin: 1px 0 12px 0;
+}
+
+@media all and (min-width: 43.75em){
+
+  // overriding bbpress' ABSOLUTELY RIDICULOUS CSS
+  #bbpress-forums #bbp-search-form #bbp_search {
+    width: 500px !important;
   }
 }

@@ -1390,7 +1390,7 @@ li.pingback:after {
 /* 1445px */
 @media all and (min-width: 1445px) {
   .comments {
-    padding: 0 284px 1.5em;
+    padding: 0 284px 3em;
   }
 }
 .site-footer {
@@ -2329,6 +2329,11 @@ li.pingback:after {
   }
 }
 /* bbpress Styles */
+.bbpress.archive .main {
+  width: 100%;
+  margin-bottom: 3em;
+}
+
 .entry-bbpress {
   padding-top: 3em;
 }
@@ -2381,5 +2386,14 @@ li.pingback:after {
 @media all and (min-width: 62.5em) {
   #bbp_topic_title {
     width: 70%;
+  }
+}
+#bbpress-forums div.bbp-search-form {
+  margin: 1px 0 12px 0;
+}
+
+@media all and (min-width: 43.75em) {
+  #bbpress-forums #bbp-search-form #bbp_search {
+    width: 500px !important;
   }
 }
