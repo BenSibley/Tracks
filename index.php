@@ -97,6 +97,10 @@ if ( have_posts() ) :
                 if( is_bbpress() ) {
                     get_template_part( 'content/bbpress' );
                 }
+                /* normal archive */
+                else {
+                    get_template_part('content');
+                }
             }
             elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
                 get_template_part('licenses/content/content-two-column-images');
