@@ -109,7 +109,11 @@ function ct_tracks_theme_setup() {
     {
         include $filename;
     }
-
+	// add license/functions folder files
+	foreach (glob(trailingslashit( get_template_directory() ) . 'licenses/functions/*.php') as $filename)
+	{
+		include $filename;
+	}
     // add inc folder files
     foreach (glob(trailingslashit( get_template_directory() ) . 'inc/*.php') as $filename)
     {
