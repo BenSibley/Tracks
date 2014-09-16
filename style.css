@@ -2151,7 +2151,6 @@ li.pingback:after {
 
 /* Styles for when user selects a dark header */
 .dark-header {
-  /* Social Icons */
   /* Secondary Nav */
   /* Search Icon */
 }
@@ -2167,13 +2166,13 @@ li.pingback:after {
 .dark-header .site-header .site-description {
   color: #222222;
 }
-.dark-header .social-media-icons a {
+.dark-header .site-header .social-media-icons a {
   color: #222222;
 }
-.dark-header .social-media-icons a:link, .dark-header .social-media-icons a:visited {
+.dark-header .site-header .social-media-icons a:link, .dark-header .site-header .social-media-icons a:visited {
   color: #222222;
 }
-.dark-header .social-media-icons a:hover, .dark-header .social-media-icons a:active, .dark-header .social-media-icons a:focus {
+.dark-header .site-header .social-media-icons a:hover, .dark-header .site-header .social-media-icons a:active, .dark-header .site-header .social-media-icons a:focus {
   color: #222222;
 }
 .dark-header .toggle-secondary-navigation {

@@ -19,26 +19,29 @@
   .toggle-navigation {
     color: $gray-dark;
   }
-  .site-header .site-description {
-    color: $gray-dark;
-  }
-  /* Social Icons */
-  .social-media-icons {
+  .site-header {
 
-    a {
+    .site-description {
       color: $gray-dark;
+    }
+    .social-media-icons {
 
-      &:link,
-      &:visited {
+      a {
         color: $gray-dark;
-      }
-      &:hover,
-      &:active,
-      &:focus {
-        color: $gray-dark;
+
+        &:link,
+        &:visited {
+          color: $gray-dark;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          color: $gray-dark;
+        }
       }
     }
   }
+
   /* Secondary Nav */
   .toggle-secondary-navigation {
     color: $gray-dark;
