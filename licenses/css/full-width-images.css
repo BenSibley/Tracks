@@ -44,15 +44,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   margin: auto;
   padding: 0 11.11%;
   background: none;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .full-width-images .overlay-link {
   position: absolute;
@@ -144,8 +138,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   .full-width-images .excerpt-container,
   .full-width-images .overlay {
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease;
-            transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
   }
   .full-width-images .overlay {
     background: rgba(17, 17, 17, 0.9);
