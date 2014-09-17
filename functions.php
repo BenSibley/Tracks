@@ -37,7 +37,7 @@ function ct_tracks_enqueue_admin_styles($hook){
 
     // enqueue dashboard page styles
     if ( 'appearance_page_tracks-options' == $hook) {
-        wp_enqueue_style('style-admin', get_template_directory_uri() . '/style-admin.css');
+        wp_enqueue_style('style-admin', get_template_directory_uri() . '/styles/style-admin.css');
     }
     // if is user profile page
     if('profile.php' == $hook || 'user-edit.php' == $hook){
@@ -58,7 +58,7 @@ function ct_tracks_enqueue_customizer_styles(){
     wp_enqueue_style('multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.css');
 
     wp_enqueue_script('ct-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js#ct_tracks_asyncload');
-    wp_enqueue_style('ct-customizer-css', get_template_directory_uri() . '/style-customizer.css');
+    wp_enqueue_style('ct-customizer-css', get_template_directory_uri() . '/styles/style-customizer.css');
 }
 add_action('customize_controls_enqueue_scripts','ct_tracks_enqueue_customizer_styles');
 
