@@ -44,9 +44,15 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   margin: auto;
   padding: 0 11.11%;
   background: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .two-column-images .overlay-link {
   position: absolute;
@@ -66,7 +72,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   opacity: 1;
 }
 .two-column-images .excerpt-header {
-  flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 .two-column-images .excerpt-header i {
   font-size: 1.625em;
@@ -162,7 +170,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   .two-column-images .excerpt-container,
   .two-column-images .overlay {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease;
   }
   .two-column-images .overlay {
     background: rgba(17, 17, 17, 0.9);

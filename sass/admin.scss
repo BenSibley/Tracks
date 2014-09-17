@@ -1,3 +1,5 @@
+@import "variables";
+
 /* styles for theme options page */
 
 #tracks-dashboard-wrap .nav-tab-wrapper {
@@ -93,7 +95,7 @@
         clear: left;
       }
       &:after {
-        @include clearfix();
+        @include clearfix;
       }
     }
   }
@@ -101,4 +103,28 @@
 
 /* Styles for Post Video meta box */
 
-/*#ct_tracks_video*/
+.ct_tracks_video_input_container {
+  margin: 24px 12px;
+  border-bottom: solid 1px #e5e5e5;
+  padding-bottom: 24px;
+
+  label {
+    margin-right: 46px;
+  }
+}
+.ct_tracks_video_upload_container {
+  margin: 24px 12px;
+
+  label {
+    margin-right: 24px;
+  }
+}
+.ct_tracks_video_preview_container {
+  margin: 24px -12px -12px -12px;
+  padding: 24px;
+  background: #333;
+  text-align: center;
+}
+
+
+

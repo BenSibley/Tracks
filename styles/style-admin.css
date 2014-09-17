@@ -1,3 +1,15 @@
+/*===== Variables =====*/
+/* Theme Colors */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/* grid stuff */
+                           /* Baseline Grid
+background-image: linear-gradient(#fff 23px, #00fffc 24px, #fff 0px);
+background-size: 1px 24px; /* this is a 24px baseline grid */
+                        /* Column Grid
+background-color: gray;
+background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
+background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* styles for theme options page */
 #tracks-dashboard-wrap .nav-tab-wrapper {
   padding-top: 24px;
@@ -85,8 +97,7 @@
     margin-right: 2%;
     clear: left;
   }
-
-  .content-licenses:after {
+  .content-licenses form:after {
     content: ".";
     display: block;
     clear: both;
@@ -96,4 +107,25 @@
   }
 }
 /* Styles for Post Video meta box */
-/*#ct_tracks_video*/
+.ct_tracks_video_input_container {
+  margin: 24px 12px;
+  border-bottom: solid 1px #e5e5e5;
+  padding-bottom: 24px;
+}
+.ct_tracks_video_input_container label {
+  margin-right: 46px;
+}
+
+.ct_tracks_video_upload_container {
+  margin: 24px 12px;
+}
+.ct_tracks_video_upload_container label {
+  margin-right: 24px;
+}
+
+.ct_tracks_video_preview_container {
+  margin: 24px -12px -12px -12px;
+  padding: 24px;
+  background: #333;
+  text-align: center;
+}

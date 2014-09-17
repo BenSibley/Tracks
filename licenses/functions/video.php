@@ -36,7 +36,7 @@ function ct_tracks_video_callback( $post ) {
 	$value = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
 
 	// video URL input
-	echo '<div>';
+	echo '<div class="ct_tracks_video_input_container">';
 		echo '<label for="ct_tracks_video_url">';
 			_e( 'Add video URL', 'tracks' );
 		echo '</label> ';
@@ -44,7 +44,7 @@ function ct_tracks_video_callback( $post ) {
 	echo '</div>';
 
 	// video upload input
-	echo '<div>';
+	echo '<div class="ct_tracks_video_upload_container">';
 		echo '<label for="ct_tracks_video_select">';
 			_e( 'Or, upload a video', 'tracks' );
 		echo '</label> ';
@@ -52,10 +52,7 @@ function ct_tracks_video_callback( $post ) {
 	echo '</div>';
 
 	// video preview
-	echo '<div>';
-		echo '<label for="ct_tracks_video_preview">';
-			_e( 'Video Preview', 'tracks' );
-		echo '</label> ';
+	echo '<div class="ct_tracks_video_preview_container">';
 //		echo '<input type="button" id="ct_tracks_video_preview" name="ct_tracks_video_preview" class="button-primary" value="Upload Video" />';
 		if( $value ) {
 			echo wp_oembed_get( $value );

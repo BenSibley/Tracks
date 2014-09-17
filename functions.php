@@ -39,6 +39,10 @@ function ct_tracks_enqueue_admin_styles($hook){
     if ( 'appearance_page_tracks-options' == $hook || 'post.php' == $hook ) {
         wp_enqueue_style('style-admin', get_template_directory_uri() . '/styles/style-admin.css');
     }
+	// enqueue Fitvids in Post Editor for Video Post upgrade
+	if ( 'post.php' == $hook ) {
+		wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/fitvids.js#ct_tracks_asyncload');
+	}
     // if is user profile page
     if('profile.php' == $hook || 'user-edit.php' == $hook){
 
