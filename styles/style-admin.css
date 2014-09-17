@@ -107,25 +107,65 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   }
 }
 /* Styles for Post Video meta box */
+#ct_tracks_video .inside {
+  padding: 0;
+}
+
 .ct_tracks_video_input_container {
-  margin: 24px 12px;
+  margin-bottom: 24px;
+  padding: 12px 24px 24px;
   border-bottom: solid 1px #e5e5e5;
-  padding-bottom: 24px;
 }
 .ct_tracks_video_input_container label {
   margin-right: 46px;
 }
+.ct_tracks_video_input_container div {
+  position: relative;
+  display: inline-block;
+}
+.ct_tracks_video_input_container div svg {
+  position: absolute;
+  top: 3px;
+  padding: 5px;
+  right: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+          transition: opacity 0.2s ease;
+}
+.ct_tracks_video_input_container.has-vid svg {
+  opacity: 1;
+}
 
 .ct_tracks_video_upload_container {
-  margin: 24px 12px;
+  margin: 24px 0;
+  padding: 0 24px;
 }
 .ct_tracks_video_upload_container label {
   margin-right: 24px;
 }
 
 .ct_tracks_video_preview_container {
-  margin: 24px -12px -12px -12px;
+  position: relative;
+  margin-top: 24px;
   padding: 24px;
   border-top: solid 1px #e5e5e5;
   text-align: center;
+  min-height: 300px;
+  border: dashed 4px #E1ECED;
+  background: #EDF8FA;
+}
+.ct_tracks_video_preview_container label {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  display: block;
+  font-size: 24px;
+  color: #C9D2D4;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.ct_tracks_video_preview_container.has-vid {
+  min-height: 0;
 }

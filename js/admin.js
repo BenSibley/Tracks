@@ -3,8 +3,15 @@ jQuery(function($) {
     // add fitvid to Post Video preview div
     $('#ct_tracks_video_preview_container').fitVids();
 
+
+    if( $('#ct_tracks_video_preview_container').children('div').length > 0 ) {
+        $('#ct_tracks_video_preview_container, .ct_tracks_video_input_container').addClass('has-vid');
+    }
+
+
     // watch for a video selection
-    $( '#ct_tracks_video_url').change( oEmbedAjax );
+    //$( '#ct_tracks_video_url').change( oEmbedAjax );
+    $('#ct_tracks_video_url').on( 'input propertychange', oEmbedAjax );
 
 
     function oEmbedAjax() {
@@ -16,31 +23,24 @@ jQuery(function($) {
         };
 
         jQuery.post(ajaxurl, data, function(response) {
-            $('#ct_tracks_video_preview_container').append(response);
 
-            // add fitvid to Post Video preview div
-            $('#ct_tracks_video_preview_container').fitVids();
+            $('#ct_tracks_video_preview_container div').remove();
+
+            if( response ){
+
+                $('#ct_tracks_video_preview_container, .ct_tracks_video_input_container').addClass('has-vid');
+
+                $('#ct_tracks_video_preview_container').append(response);
+
+                // add fitvid to Post Video preview div
+                $('#ct_tracks_video_preview_container').fitVids();
+            } else {
+                $('#ct_tracks_video_preview_container, .ct_tracks_video_input_container').removeClass('has-vid');
+            }
+
+
+
         });
 
-        //console.log("asdfsa");
-        //
-        //$.ajax({
-        //    method: 'POST',
-        //    url: '/wp-admin/admin-ajax.php',
-        //    data: ({
-        //        action: 'add_oembed',
-        //        videoURL: videoURL
-        //    }),
-        //    success: function (data) {
-        //        console.log("success");
-        //    },
-        //    error: function (xhr, status, error) {
-        //        console.log("failure");
-        //    }
-        //});
-
     }
-
-
-
 });

@@ -40,7 +40,10 @@ function ct_tracks_video_callback( $post ) {
 		echo '<label for="ct_tracks_video_url">';
 			_e( 'Add video URL', 'tracks' );
 		echo '</label> ';
-		echo '<input type="text" class="regular-text" id="ct_tracks_video_url" name="ct_tracks_video_url" value="' . esc_url( $value ) . '" />';
+		echo '<div>';
+			echo '<input type="text" class="regular-text" id="ct_tracks_video_url" name="ct_tracks_video_url" value="' . esc_url( $value ) . '" />';
+			echo ct_tracks_green_checkmark_svg();
+		echo '</div>';
 	echo '</div>';
 
 	// video upload input
@@ -54,6 +57,9 @@ function ct_tracks_video_callback( $post ) {
 	// video preview
 	echo '<div class="ct_tracks_video_preview_container" id="ct_tracks_video_preview_container">';
 //		echo '<input type="button" id="ct_tracks_video_preview" name="ct_tracks_video_preview" class="button-primary" value="Upload Video" />';
+	echo '<label for="ct_tracks_video_url">';
+		_e( 'Video Preview', 'tracks' );
+	echo '</label> ';
 		if( $value ) {
 			echo wp_oembed_get( $value );
 		}
@@ -67,11 +73,13 @@ function add_oembed_callback() {
 	global $wpdb;  // this is how you get access to the database
 	global $post;
 
-	$embed = $_POST['videoURL'];
+	$video_url = $_POST['videoURL'];
 
 	// generate the response
-	if ( $embed ) {
-		$response = wp_oembed_get( $embed );
+	if ( $video_url ) {
+		$response = wp_oembed_get( $video_url );
+	} else {
+		$response = "";
 	}
 
 	echo $response;
