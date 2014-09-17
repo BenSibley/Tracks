@@ -17,7 +17,9 @@ jQuery(function($) {
 
         jQuery.post(ajaxurl, data, function(response) {
             $('#ct_tracks_video_preview_container').append(response);
-            //console.log( response );
+
+            // add fitvid to Post Video preview div
+            $('#ct_tracks_video_preview_container').fitVids();
         });
 
         //console.log("asdfsa");

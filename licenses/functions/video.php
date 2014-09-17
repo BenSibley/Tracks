@@ -67,9 +67,15 @@ function add_oembed_callback() {
 	global $wpdb;  // this is how you get access to the database
 	global $post;
 
-	$video_url = $_POST['videoURL'];
+	$embed = $_POST['videoURL'];
 
-	echo wp_oembed_get( $video_url );
+	// generate the response
+	if ( $embed ) {
+		$response = wp_oembed_get( $embed );
+	}
+
+	echo $response;
+//	echo wp_oembed_get( $video_url );
 //	echo $video_url;
 
 	die(); // this is required to return a proper result
