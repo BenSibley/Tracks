@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 // Uploading files
     var file_frame;
 
-    $('#user-profile-upload').on('click', function( event ){
+    $('#user-profile-upload, #ct_tracks_video_select').on('click', function( event ){
 
         event.preventDefault();
 
@@ -30,7 +30,8 @@ jQuery(document).ready(function($){
             attachment = file_frame.state().get('selection').first().toJSON();
 
             // Do something with attachment.id and/or attachment.url here
-            $('#user_profile_image').val(attachment.url);
+            $('#user_profile_image, #ct_tracks_video_url').val(attachment.url).trigger('propertychange');
+
             $('#image-preview').attr('src', attachment.url);
         });
 

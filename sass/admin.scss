@@ -171,7 +171,38 @@
   &.has-vid {
     min-height: 0;
   }
+  .loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(67,179,196,0.4);
+    opacity: 0;
+    text-align: center;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    svg {
+      position: absolute;
+      right: 47%;
+      top: 38%;
+      animation: spin 2s linear infinite;
+    }
+  }
+  &.ajax-loading {
+
+    .loading {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }
 
+@-o-keyframes spin { 100% { transform: rotate(360deg); } }
+@-ms-keyframes spin { 100% { transform: rotate(360deg); } }
+@-moz-keyframes spin { 100% { transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes spin { 100% { transform: rotate(360deg); } }
 
 
