@@ -57,7 +57,28 @@ function ct_tracks_video_callback( $post ) {
 		if( $value ) {
 			echo wp_oembed_get( $value );
 		}
+
 	echo '</div>';
+}
+
+add_action('wp_ajax_add_oembed', 'ct_tracks_video_preview_callback');
+
+function ct_tracks_video_preview_callback() {
+	global $wpdb;  // this is how you get access to the database
+	global $post;
+
+//	$value = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
+
+	$video_url = $_POST['videoURL'];
+
+//	$whatever += 10;
+
+//	echo $whatever;
+
+//	echo "response";
+
+	echo wp_oembed_get( $video_url );
+	die(); // this is required to return a proper result
 }
 
 /**
