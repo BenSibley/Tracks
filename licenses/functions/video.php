@@ -52,7 +52,7 @@ function ct_tracks_video_callback( $post ) {
 	echo '</div>';
 
 	// video preview
-	echo '<div class="ct_tracks_video_preview_container">';
+	echo '<div class="ct_tracks_video_preview_container" id="ct_tracks_video_preview_container">';
 //		echo '<input type="button" id="ct_tracks_video_preview" name="ct_tracks_video_preview" class="button-primary" value="Upload Video" />';
 		if( $value ) {
 			echo wp_oembed_get( $value );
