@@ -23,7 +23,7 @@ if( is_single() ) { ?>
 			        echo "</div>";
 		        }
 	        }
-	        // otherwise, output the featured iamge
+	        // otherwise, output the featured image
 	        else {
 		        ct_tracks_featured_image();
 	        }
@@ -93,7 +93,7 @@ if( is_single() ) { ?>
 				    echo "</div>";
 			    }
 		    }
-		    // otherwise, output the featured iamge
+		    // otherwise, output the featured image
 		    else {
 			    ct_tracks_featured_image();
 		    }

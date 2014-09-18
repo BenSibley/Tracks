@@ -32,6 +32,13 @@ function ct_tracks_video_callback( $post ) {
 	 */
 	$value = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
 
+	$display_value = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
+
+	// sets video to display on posts only by default
+	if( empty( $display_value ) ) {
+		$display_value = "post";
+	}
+
 	// video URL input
 	echo '<div class="ct_tracks_video_input_container">';
 		echo '<label for="ct_tracks_video_url">';
@@ -65,9 +72,17 @@ function ct_tracks_video_callback( $post ) {
 		echo '<span class="loading">' . ct_tracks_loading_indicator_svg() . '</span>';
 	echo '</div>';
 
-	// description
-	echo '<p class="description">The Featured Video will replace the Featured Image on the Post page.</p>';
-
+	// Display option
+	echo '<div class="ct_tracks_video_display_container">';
+		echo '<label for="ct_tracks_video_display_post">';
+			_e( 'Display on Post', 'tracks' );
+			echo '<input type="radio" name="ct_tracks_video_display" id="ct_tracks_video_display_post" value="post" ' . checked( $display_value, "post", false ) . '>';
+		echo '</label> ';
+		echo '<label for="ct_tracks_video_display_both">';
+			_e( 'Display on Post and Blog', 'tracks' );
+			echo '<input type="radio" name="ct_tracks_video_display" id="ct_tracks_video_display_both" value="both" ' . checked( $display_value, "both", false ) . '>';
+		echo '</label> ';
+	echo '</div>';
 }
 
 // ajax callback to return video embed content
@@ -131,15 +146,35 @@ function ct_tracks_video_save_data( $post_id ) {
 
 	/* OK, it's safe for us to save the data now. */
 
-	// Make sure that it is set.
+	// Make sure video URL is set
 	if ( ! isset( $_POST['ct_tracks_video_url'] ) ) {
 		return;
 	}
 
-	// Sanitize user input.
+
+	// validate user input.
 	$my_data = esc_url_raw( $_POST['ct_tracks_video_url'] );
 
 	// Update the meta field in the database.
 	update_post_meta( $post_id, 'ct_tracks_video_key', $my_data );
+
+	// Make sure display setting is set
+	if ( ! isset( $_POST['ct_tracks_video_display'] ) ) {
+		return;
+	}
+
+	// get user input
+	$raw_data = $_POST[ 'ct_tracks_video_display' ];
+
+	// validate user input
+	if( $raw_data == 'post' || $raw_data == 'both' ) {
+		$clean_data = $raw_data;
+	} else {
+		return;
+	}
+
+	// Saves video display option
+	update_post_meta( $post_id, 'ct_tracks_video_display_key', $clean_data );
+
 }
 add_action( 'save_post', 'ct_tracks_video_save_data' );
