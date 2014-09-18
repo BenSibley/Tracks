@@ -61,12 +61,14 @@ function ct_tracks_video_callback( $post ) {
 		// if from media manager, use HTML5 <video>
 		if (strpos( $value, home_url() ) !== false ) {
 			echo '<video controls>';
-				echo '<source src="' . $value . '" type="video/mp4">';
+				// output video (sanitize right before use)
+				echo '<source src="' . esc_url( $value ) . '" type="video/mp4">';
 			echo '</video>';
 		}
-		// else must be from youtube, vimeo, etc. so use oembed
+		// else must be from youtube, vimeo, etc.
 		else {
-			echo wp_oembed_get( $value );
+			// output oembed code (sanitize right before use)
+			echo wp_oembed_get( esc_url( $value ) );
 		}
 	}
 		// add loading indicator
@@ -80,10 +82,11 @@ function ct_tracks_video_callback( $post ) {
 
 // ajax callback to return video embed content
 function add_oembed_callback() {
+
 	global $wpdb, $post;  // $wpdb - access to the database
 
-	// get the video url passed from the JS
-	$video_url = $_POST['videoURL'];
+	// get the video url passed from the JS (validate user input right away)
+	$video_url = esc_url_raw( $_POST['videoURL'] );
 
 	// if got a URL
 	if ( $video_url ) {

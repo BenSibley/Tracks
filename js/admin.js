@@ -32,7 +32,8 @@ jQuery(function($) {
         // set up data object
         var data = {
             action: 'add_oembed',
-            videoURL: videoURL
+            videoURL: videoURL,
+            security: '<?php echo $ajax_nonce; ?>'
         };
 
         // post data received from PHP responde
