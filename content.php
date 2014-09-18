@@ -75,15 +75,38 @@ if( is_single() ) { ?>
 <?php
 } else { ?>
     <div <?php post_class(); ?>>
-        <?php
-        // don't link the image if full-width layout
-        if(get_theme_mod('premium_layouts_setting') == 'full-width' || get_theme_mod('premium_layouts_setting') == 'full-width-images'){
-            ct_tracks_featured_image();
-        } else { ?>
-            <a class="featured-image-link" href="<?php the_permalink(); ?>">
-                <?php ct_tracks_featured_image(); ?>
-            </a>
-        <?php } ?>
+	    <?php
+	    $video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
+	    // if has a video do that
+	    if( $video ) {
+		    // if from media manager, use HTML5 <video>
+		    if (strpos( $video, home_url() ) !== false ) {
+			    $output = '<div class="featured-image"><div class="featured-video">';
+			    $output .= '<video controls>';
+			    $output .=  '<source src="' . $video . '" type="video/mp4">';
+			    $output .= '</video>';
+			    $output .= '</div></div>';
+			    echo $output;
+		    }
+		    // else must be from youtube, vimeo, etc. so use oembed
+		    else {
+			    echo '<div class="featured-image"><div class="featured-video">';
+			    echo wp_oembed_get( $video );
+			    echo '</div></div>';
+		    }
+	    } else {
+
+		    if ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' || get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
+			    if ( has_post_thumbnail( $post->ID ) ) {
+				    echo "<div class='featured-image-container'>";
+				    ct_tracks_featured_image();
+				    echo "</div>";
+			    }
+		    } else {
+			    ct_tracks_featured_image();
+		    }
+	    }
+	    ?>
         <div class="excerpt-container">
             <?php
             if(get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images'){ ?>

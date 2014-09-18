@@ -58,18 +58,8 @@ function ct_tracks_video_callback( $post ) {
 		echo '</label> ';
 	if( $value ) {
 
-		// if from media manager, use HTML5 <video>
-		if (strpos( $value, home_url() ) !== false ) {
-			echo '<video controls>';
-				// output video (sanitize right before use)
-				echo '<source src="' . esc_url( $value ) . '" type="video/mp4">';
-			echo '</video>';
-		}
-		// else must be from youtube, vimeo, etc.
-		else {
-			// output oembed code (sanitize right before use)
-			echo wp_oembed_get( esc_url( $value ) );
-		}
+		// output video embed
+		echo ct_tracks_embed_video( $value );
 	}
 		// add loading indicator
 		echo '<span class="loading">' . ct_tracks_loading_indicator_svg() . '</span>';
@@ -91,16 +81,9 @@ function add_oembed_callback() {
 	// if got a URL
 	if ( $video_url ) {
 
-		// if from media manager, use HTML5 <video>
-		if (strpos( $video_url, home_url() ) !== false ) {
-			$response = '<video controls>';
-			$response .=  '<source src="' . $video_url . '" type="video/mp4">';
-			$response .= '</video>';
-		}
-		// else must be from youtube, vimeo, etc. so use oembed
-		else {
-			$response = wp_oembed_get( $video_url );
-		}
+		// output video embed
+		$response = ct_tracks_embed_video( $video_url );
+
 	// else return nothing
 	} else {
 		$response = "";

@@ -684,4 +684,20 @@ function ct_tracks_loading_indicator_svg() {
 
 	return $svg;
 }
+
+function ct_tracks_embed_video( $video_url ) {
+
+	// if from media manager, use HTML5 <video>
+	if (strpos( $video_url, home_url() ) !== false ) {
+		$response = '<video controls>';
+		$response .=  '<source src="' . $video_url . '" type="video/mp4">';
+		$response .= '</video>';
+	}
+	// else must be from youtube, vimeo, etc. so use oembed
+	else {
+		$response = wp_oembed_get( $video_url );
+	}
+
+	return $response;
+}
 ?>
