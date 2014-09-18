@@ -83,8 +83,7 @@
 })( window.jQuery || window.Zepto );
 jQuery(function($){
 
-    $(".entry-content").fitVids();
-    $(".excerpt-content").fitVids();
+    $('.entry-content, .excerpt-content, .featured-video').fitVids();
 
     // bind the tap event on the menu icon
     $('#toggle-navigation').bind('click', onTap);
