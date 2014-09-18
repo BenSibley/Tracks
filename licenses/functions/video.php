@@ -13,7 +13,9 @@ function ct_tracks_add_video_meta_box() {
 			'ct_tracks_video',
 			__( 'Post Video', 'tracks' ),
 			'ct_tracks_video_callback',
-			$screen
+			$screen,
+			'normal',
+			'high'
 		);
 	}
 }
