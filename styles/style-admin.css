@@ -110,6 +110,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 #ct_tracks_video .inside {
   padding: 0;
 }
+#ct_tracks_video .description {
+  padding: 6px 12px 12px 24px;
+}
 
 .ct_tracks_video_input_container {
   margin-bottom: 24px;

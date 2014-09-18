@@ -11,7 +11,7 @@ function ct_tracks_add_video_meta_box() {
 
 		add_meta_box(
 			'ct_tracks_video',
-			__( 'Post Video', 'tracks' ),
+			__( 'Featured Video', 'tracks' ),
 			'ct_tracks_video_callback',
 			$screen,
 			'normal',
@@ -78,6 +78,8 @@ function ct_tracks_video_callback( $post ) {
 	echo '<span class="loading">' . ct_tracks_loading_indicator_svg() . '</span>';
 
 	echo '</div>';
+
+	echo '<p class="description"><em>The Featured Video will replace the Featured Image on the Post page.</em></p>';
 }
 
 add_action('wp_ajax_add_oembed', 'add_oembed_callback');
