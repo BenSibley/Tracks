@@ -42,7 +42,7 @@ function ct_tracks_enqueue_admin_styles($hook){
 	// enqueue Fitvids in Post Editor for Video Post upgrade
 	if ( 'post.php' == $hook ) {
 		wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
-		wp_enqueue_script('admin', get_template_directory_uri() . '/js/admin.js', array('jquery'),'', true);
+		wp_enqueue_script('admin', get_template_directory_uri() . '/js/build/admin.min.js', array('jquery'),'', true);
 		wp_enqueue_script('media-manager', get_template_directory_uri() . '/js/build/profile-uploader.min.js', array('jquery'),'', true);
 	}
     // if is user profile page
