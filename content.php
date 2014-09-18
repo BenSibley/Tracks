@@ -3,6 +3,7 @@
 if( is_single() ) { ?>
     <div <?php post_class(); ?>>
         <?php
+
         // check for Featured Video
         $video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
 
@@ -71,16 +72,21 @@ if( is_single() ) { ?>
 } else { ?>
     <div <?php post_class(); ?>>
 	    <?php
-	    // check for Featured Video
-	    $video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
 
-	    // if has a video, embed it instead of featured image
-	    if( $video ) {
+	    // if post has video enabled on blog
+	    if( get_post_meta( $post->ID, 'ct_tracks_video_display_key', true ) == 'both' ) {
 
-		    echo '<div class="featured-image"><div class="featured-video">';
-		        echo ct_tracks_embed_video( $video );
-		    echo '</div></div>';
+		    // check for Featured Video
+		    $video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
 
+		    // if has a video, embed it instead of featured image
+		    if ( $video ) {
+
+			    echo '<div class="featured-video">';
+			        echo ct_tracks_embed_video( $video );
+			    echo '</div>';
+
+		    }
 	    }
 	    // otherwise output Featured Image
 	    else {

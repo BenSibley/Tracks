@@ -2281,6 +2281,38 @@ li.pingback:after {
   opacity: 1;
 }
 
+/* Featured Video styles */
+@media all and (min-width: 56.25em) {
+  .excerpt .featured-video {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    /* fixes FF glitch where image focuses & unfocuses */
+    width: 50%;
+    height: 100%;
+    padding-bottom: 0;
+    position: absolute;
+    right: 0;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .excerpt .featured-video div,
+  .excerpt .featured-video video {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
+  .excerpt.even .featured-video {
+    right: 50%;
+    right: calc(50% - 1px);
+  }
+
+  .featured-video video {
+    width: 100%;
+  }
+}
 /* 900px */
 @media all and (min-width: 56.25em) {
   .ie9 .excerpt {
