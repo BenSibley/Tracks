@@ -109,18 +109,18 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* Styles for Post Video meta box */
 #ct_tracks_video .inside {
   padding: 0;
+  margin: 0;
 }
 #ct_tracks_video .description {
   padding: 6px 12px 12px 24px;
 }
 
 .ct_tracks_video_input_container {
-  margin-bottom: 24px;
-  padding: 12px 24px 24px;
-  border-bottom: solid 1px #e5e5e5;
+  padding: 24px 24px 12px;
 }
 .ct_tracks_video_input_container label {
   margin-right: 46px;
+  font-weight: 700;
 }
 .ct_tracks_video_input_container div {
   position: relative;
@@ -141,22 +141,21 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 }
 
 .ct_tracks_video_upload_container {
-  margin: 24px 0;
-  padding: 0 24px;
+  padding: 12px 24px 24px;
+  border-bottom: solid 1px #e5e5e5;
 }
 .ct_tracks_video_upload_container label {
   margin-right: 24px;
+  font-weight: 700;
 }
 
 .ct_tracks_video_preview_container {
   position: relative;
-  margin-top: 24px;
   padding: 24px;
-  border-top: solid 1px #e5e5e5;
   text-align: center;
   min-height: 300px;
   border: dashed 4px #E1ECED;
-  background: #EDF8FA;
+  background: #F2F9FA;
 }
 .ct_tracks_video_preview_container label {
   position: absolute;
@@ -171,6 +170,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 }
 .ct_tracks_video_preview_container.has-vid {
   min-height: 0;
+  border: none;
+  border-bottom: solid 1px #e5e5e5;
+  background: none;
 }
 .ct_tracks_video_preview_container .loading {
   position: absolute;
@@ -213,4 +215,17 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+.ct_tracks_video_display_container {
+  padding: 12px 24px 24px;
+}
+.ct_tracks_video_display_container p {
+  font-weight: 700;
+}
+.ct_tracks_video_display_container label {
+  display: block;
+  margin-bottom: 6px;
+}
+.ct_tracks_video_display_container input {
+  margin-right: 12px;
 }
