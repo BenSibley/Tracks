@@ -1,23 +1,18 @@
 <?php
 
 /**
- * Adds a box to the main column on the Post and Page edit screens.
+ * Adds Featured Video meta box to top of main column on the Post edit screens.
  */
 function ct_tracks_add_video_meta_box() {
 
-	$screens = array( 'post', );
-
-	foreach ( $screens as $screen ) {
-
-		add_meta_box(
-			'ct_tracks_video',
-			__( 'Featured Video', 'tracks' ),
-			'ct_tracks_video_callback',
-			$screen,
-			'normal',
-			'high'
-		);
-	}
+	add_meta_box(
+		'ct_tracks_video',
+		__( 'Featured Video', 'tracks' ),
+		'ct_tracks_video_callback',
+		'post',
+		'normal',
+		'high'
+	);
 }
 add_action( 'add_meta_boxes', 'ct_tracks_add_video_meta_box' );
 
@@ -48,7 +43,7 @@ function ct_tracks_video_callback( $post ) {
 		echo '</div>';
 	echo '</div>';
 
-	// video upload input
+	// video upload button
 	echo '<div class="ct_tracks_video_upload_container">';
 		echo '<label for="ct_tracks_video_select">';
 			_e( 'Or, upload a video', 'tracks' );
@@ -58,63 +53,63 @@ function ct_tracks_video_callback( $post ) {
 
 	// video preview
 	echo '<div class="ct_tracks_video_preview_container" id="ct_tracks_video_preview_container">';
-//		echo '<input type="button" id="ct_tracks_video_preview" name="ct_tracks_video_preview" class="button-primary" value="Upload Video" />';
-	echo '<label for="ct_tracks_video_url">';
-		_e( 'Video Preview', 'tracks' );
-	echo '</label> ';
+		echo '<label for="ct_tracks_video_url">';
+			_e( 'Video Preview', 'tracks' );
+		echo '</label> ';
 	if( $value ) {
 
-		// if from media manager
+		// if from media manager, use HTML5 <video>
 		if (strpos( $value, home_url() ) !== false ) {
 			echo '<video controls>';
-			echo '<source src="' . $value . '" type="video/mp4">';
+				echo '<source src="' . $value . '" type="video/mp4">';
 			echo '</video>';
 		}
-		// else must be from youtube, vimeo, etc.
+		// else must be from youtube, vimeo, etc. so use oembed
 		else {
 			echo wp_oembed_get( $value );
 		}
 	}
-	echo '<span class="loading">' . ct_tracks_loading_indicator_svg() . '</span>';
-
+		// add loading indicator
+		echo '<span class="loading">' . ct_tracks_loading_indicator_svg() . '</span>';
 	echo '</div>';
 
-	echo '<p class="description"><em>The Featured Video will replace the Featured Image on the Post page.</em></p>';
+	// description
+	echo '<p class="description">The Featured Video will replace the Featured Image on the Post page.</p>';
+
 }
 
-add_action('wp_ajax_add_oembed', 'add_oembed_callback');
-
+// ajax callback to return video embed content
 function add_oembed_callback() {
-	global $wpdb;  // this is how you get access to the database
-	global $post;
+	global $wpdb, $post;  // $wpdb - access to the database
 
+	// get the video url passed from the JS
 	$video_url = $_POST['videoURL'];
 
 	// if got a URL
 	if ( $video_url ) {
 
-		// if from media manager
+		// if from media manager, use HTML5 <video>
 		if (strpos( $video_url, home_url() ) !== false ) {
 			$response = '<video controls>';
 			$response .=  '<source src="' . $video_url . '" type="video/mp4">';
 			$response .= '</video>';
 		}
-		// else must be from youtube, vimeo, etc.
+		// else must be from youtube, vimeo, etc. so use oembed
 		else {
 			$response = wp_oembed_get( $video_url );
 		}
-
+	// else return nothing
 	} else {
 		$response = "";
 	}
 
+	// return response
 	echo $response;
-//	echo wp_oembed_get( $video_url );
-//	echo $video_url;
 
 	die(); // this is required to return a proper result
 
 }
+add_action('wp_ajax_add_oembed', 'add_oembed_callback');
 
 /**
  * When the post is saved, saves our custom data.
