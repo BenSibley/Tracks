@@ -410,6 +410,9 @@ function ct_tracks_body_class( $classes ) {
         if(get_theme_mod('premium_layouts_full_width_image_height') == '2:1-ratio'){
             $classes[] = 'ratio';
         }
+	    if(get_theme_mod('premium_layouts_full_width_image_style') == 'title'){
+		    $classes[] = 'title-below';
+	    }
     }
     elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
         $classes[] = 'two-column';

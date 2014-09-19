@@ -116,6 +116,32 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   padding-top: 3em;
 }
 
+.full-width-images.title-below .excerpt {
+  background: none;
+}
+.full-width-images.title-below .excerpt-container {
+  position: relative;
+  opacity: 1;
+}
+.full-width-images.title-below .excerpt-header {
+  padding: 0.75em 1.5em 1.5em;
+}
+.full-width-images.title-below .excerpt-title {
+  font-size: 1em;
+  line-height: 1.5;
+}
+.full-width-images.title-below .excerpt-title a {
+  color: white;
+  opacity: 0.8;
+}
+.full-width-images.title-below .excerpt-title a:link, .full-width-images.title-below .excerpt-title a:visited {
+  color: white;
+}
+.full-width-images.title-below .excerpt-title a:hover, .full-width-images.title-below .excerpt-title a:active, .full-width-images.title-below .excerpt-title a:focus {
+  color: white;
+  opacity: 1;
+}
+
 /* 800px */
 @media all and (min-width: 50em) {
   .full-width-images .excerpt {
