@@ -11,7 +11,8 @@ background-color: gray;
 background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
 background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* Full-width layout styles */
-.full-width .excerpt.even .featured-image {
+.full-width .excerpt.even .featured-image,
+.full-width .excerpt.even .featured-video {
   right: 0;
 }
 .full-width .featured-image {

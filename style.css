@@ -2282,6 +2282,10 @@ li.pingback:after {
 }
 
 /* Featured Video styles */
+.featured-video video {
+  width: 100%;
+}
+
 @media all and (min-width: 56.25em) {
   .excerpt .featured-video {
     -webkit-transform: translateZ(0);
@@ -2309,8 +2313,19 @@ li.pingback:after {
     right: calc(50% - 1px);
   }
 
-  .featured-video video {
+  /* Full-width */
+  .full-width .featured-video {
     width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .full-width .featured-video div,
+  .full-width .featured-video video {
+    position: relative;
+    top: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
 /* 900px */

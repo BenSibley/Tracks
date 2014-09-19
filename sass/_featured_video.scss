@@ -1,5 +1,12 @@
 /* Featured Video styles */
 
+.featured-video {
+
+  video {
+    width: 100%;
+  }
+}
+
 @media all and (min-width: 56.25em){
 
   .excerpt .featured-video {
@@ -25,10 +32,20 @@
       right: calc(50% - 1px); // -px to prevent black line
     }
   }
-  .featured-video {
+  /* Full-width */
+  .full-width {
 
-    video {
+    .featured-video {
       width: 100%;
+      height: auto;
+      position: relative;
+
+      div,
+      video {
+        position: relative;
+        top: 0;
+        transform: none;
+      }
     }
   }
 }
