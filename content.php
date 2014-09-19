@@ -9,38 +9,13 @@ if( is_single() ) { ?>
 
         // if has a video, embed it instead of featured image
         if( $video ) {
-
-	        // Check if a layout that needs an additional container
-	        if ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' || get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
-		        if ( has_post_thumbnail( $post->ID ) ) {
-			        echo "<div class='featured-image-container'>";
-				        echo '<div class="featured-video">';
-				            echo ct_tracks_embed_video( $video );
-				        echo '</div>';
-			        echo "</div>";
-		        }
-	        } else {
-		        echo '<div class="featured-video">';
-		            echo ct_tracks_embed_video( $video );
-		        echo '</div>';
-	        }
-
+	        echo '<div class="featured-video">';
+	            echo ct_tracks_embed_video( $video );
+	        echo '</div>';
         }
-        // otherwise output Featured Image
+        // otherwise, output the featured image
         else {
-
-	        // Check if a layout that needs an additional container
-	        if ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' || get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
-		        if ( has_post_thumbnail( $post->ID ) ) {
-			        echo "<div class='featured-image-container'>";
-			        ct_tracks_featured_image();
-			        echo "</div>";
-		        }
-	        }
-	        // otherwise, output the featured image
-	        else {
-		        ct_tracks_featured_image();
-	        }
+	        ct_tracks_featured_image();
         }
         ?>
         <div class="entry-meta">
@@ -94,38 +69,14 @@ if( is_single() ) { ?>
 
 		    // if has a video, embed it instead of featured image
 		    if ( $video ) {
-
-			    // Check if a layout that needs an additional container
-			    if ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' || get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
-				    if ( has_post_thumbnail( $post->ID ) ) {
-					    echo "<div class='featured-image-container'>";
-						    echo '<div class="featured-video">';
-						        echo ct_tracks_embed_video( $video );
-						    echo '</div>';
-					    echo "</div>";
-				    }
-			    } else {
-				    echo '<div class="featured-video">';
-				        echo ct_tracks_embed_video( $video );
-				    echo '</div>';
-			    }
+			    echo '<div class="featured-video">';
+			        echo ct_tracks_embed_video( $video );
+			    echo '</div>';
 		    }
 	    }
 	    // otherwise output Featured Image
 	    else {
-
-		    // Check if a layout that needs an additional container
-		    if ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' || get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
-			    if ( has_post_thumbnail( $post->ID ) ) {
-				    echo "<div class='featured-image-container'>";
-				        ct_tracks_featured_image();
-				    echo "</div>";
-			    }
-		    }
-		    // otherwise, output the featured image
-		    else {
-			    ct_tracks_featured_image();
-		    }
+		    ct_tracks_featured_image();
 	    }
 	    ?>
         <div class="excerpt-container">

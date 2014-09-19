@@ -32,13 +32,15 @@
       right: calc(50% - 1px); // -px to prevent black line
     }
   }
-  /* Full-width */
-  .full-width {
+  /* Premium Layouts */
+  .full-width,
+  .full-width-images {
 
-    .featured-video {
+    .excerpt .featured-video {
       width: 100%;
       height: auto;
       position: relative;
+      right: 0;
 
       div,
       video {
