@@ -2331,6 +2331,37 @@ li.pingback:after {
         -ms-transform: none;
             transform: none;
   }
+
+  .full-width-images .excerpt.has-video {
+    background: none;
+  }
+  .full-width-images .excerpt.has-video .overlay,
+  .full-width-images .excerpt.has-video .overlay-link,
+  .full-width-images .excerpt.has-video i {
+    display: none;
+  }
+  .full-width-images .excerpt.has-video .excerpt-container {
+    position: relative;
+    opacity: 1;
+  }
+  .full-width-images .excerpt.has-video .excerpt-header, .full-width-images .excerpt.has-video .entry-header {
+    padding: 0.75em 1.5em 1.5em;
+  }
+  .full-width-images .excerpt.has-video .excerpt-title, .full-width-images .excerpt.has-video .entry-title {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .full-width-images .excerpt.has-video .excerpt-title a, .full-width-images .excerpt.has-video .entry-title a {
+    color: white;
+    opacity: 0.8;
+  }
+  .full-width-images .excerpt.has-video .excerpt-title a:link, .full-width-images .excerpt.has-video .entry-title a:link, .full-width-images .excerpt.has-video .excerpt-title a:visited, .full-width-images .excerpt.has-video .entry-title a:visited {
+    color: white;
+  }
+  .full-width-images .excerpt.has-video .excerpt-title a:hover, .full-width-images .excerpt.has-video .entry-title a:hover, .full-width-images .excerpt.has-video .excerpt-title a:active, .full-width-images .excerpt.has-video .entry-title a:active, .full-width-images .excerpt.has-video .excerpt-title a:focus, .full-width-images .excerpt.has-video .entry-title a:focus {
+    color: white;
+    opacity: 1;
+  }
 }
 /* 900px */
 @media all and (min-width: 56.25em) {

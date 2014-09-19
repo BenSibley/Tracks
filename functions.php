@@ -445,9 +445,12 @@ add_action( 'init', 'ct_tracks_add_editor_styles' );
 
 function ct_tracks_post_class_update($classes){
 
+	global $post;
+
     $remove = array();
     $remove[] = 'entry';
 
+	// remove 'entry' class newer version of Hybrid Core adds
     if ( ! is_singular() ) {
         foreach ( $classes as $key => $class ) {
 
@@ -457,6 +460,11 @@ function ct_tracks_post_class_update($classes){
             }
         }
     }
+	// add class for posts with Featured Videos
+	if( get_post_meta( $post->ID, 'ct_tracks_video_key', true ) ) {
+		$classes[] = 'has-video';
+	}
+
     return $classes;
 }
 add_filter( 'post_class', 'ct_tracks_post_class_update' );

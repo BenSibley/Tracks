@@ -27,7 +27,9 @@
 	    </a>
 	    <div class="excerpt-container">
 		    <div class='excerpt-header'>
-			    <h1 class='excerpt-title'><?php the_title(); ?></h1>
+			    <h1 class='excerpt-title'>
+				    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			    </h1>
 			    <i class="fa fa-arrow-circle-right"></i>
 		    </div>
 	    </div>
