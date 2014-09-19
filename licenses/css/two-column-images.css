@@ -93,6 +93,15 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   /* 21px / 16px */
   line-height: 1.143;
 }
+.two-column-images .excerpt-title a {
+  color: white;
+}
+.two-column-images .excerpt-title a:link, .two-column-images .excerpt-title a:visited {
+  color: white;
+}
+.two-column-images .excerpt-title a:hover, .two-column-images .excerpt-title a:active, .two-column-images .excerpt-title a:focus {
+  color: white;
+}
 .two-column-images .excerpt:not(.has-post-thumbnail) {
   background: #111111;
   height: 0;

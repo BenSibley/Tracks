@@ -34,7 +34,9 @@
   }
   /* Premium Layouts */
   .full-width,
-  .full-width-images {
+  .full-width-images,
+  .two-column,
+  .two-column-images {
 
     .excerpt .featured-video {
       width: 100%;
@@ -50,7 +52,10 @@
       }
     }
   }
-  .full-width-images {
+  .full-width-images.blog,
+  .full-width-images.archive,
+  .two-column-images.blog,
+  .two-column-images.archive {
 
     .excerpt.has-video {
       background: none;

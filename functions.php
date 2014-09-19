@@ -462,7 +462,16 @@ function ct_tracks_post_class_update($classes){
     }
 	// add class for posts with Featured Videos
 	if( get_post_meta( $post->ID, 'ct_tracks_video_key', true ) ) {
-		$classes[] = 'has-video';
+
+		// only add on blog/archive if enabled
+		if( is_home() || is_archive() ) {
+			// if post has video enabled on blog
+			if( get_post_meta( $post->ID, 'ct_tracks_video_display_key', true ) == 'both' ) {
+				$classes[] = 'has-video';
+			}
+		} else {
+			$classes[] = 'has-video';
+		}
 	}
 
     return $classes;
@@ -701,6 +710,7 @@ function ct_tracks_embed_video( $video_url ) {
 	// if from media manager, use HTML5 <video>
 	if (strpos( $video_url, home_url() ) !== false ) {
 		$response = '<video controls>';
+		$response .=  '<source src="' . esc_url( $video_url ) . '" type="video/webm">';
 		$response .=  '<source src="' . esc_url( $video_url ) . '" type="video/mp4">';
 		$response .= '</video>';
 	}
