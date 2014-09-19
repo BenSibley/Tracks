@@ -6,7 +6,7 @@ function ct_tracks_load_javascript_files() {
     wp_register_style( 'ct-tracks-google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700');
 
     if(! is_admin() ) {
-        wp_enqueue_script('ct-tracks-production', get_template_directory_uri() . '/js/build/production.min.js#ct_tracks_asyncload', array('jquery'),'', true);
+        wp_enqueue_script('ct-tracks-production', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'),'', true);
         wp_enqueue_style('ct-tracks-google-fonts');
         wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
         wp_enqueue_style('style', get_template_directory_uri() . 'style.min.css');

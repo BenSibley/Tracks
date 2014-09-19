@@ -132,10 +132,12 @@ jQuery(function($){
     function displayLayoutOptions(){
 
         var imageHeightOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_image_height');
+        var imageStyleOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_image_style');
         var fullPostOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_full_post');
         var contentDisplayOption = $('html', window.parent.document).find('#customize-control-premium_layouts_two_column_images_content_display');
 
         imageHeightOption.hide();
+        imageStyleOption.hide();
         fullPostOption.hide();
         contentDisplayOption.hide();
 
@@ -143,6 +145,7 @@ jQuery(function($){
         $('html', window.parent.document).find('#customize-control-premium_layouts_setting option').each(function(){
             if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width-images'){
                 imageHeightOption.show();
+                imageStyleOption.show();
             }
             if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width'){
                 fullPostOption.show();
