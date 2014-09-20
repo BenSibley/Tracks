@@ -17,7 +17,7 @@ if( is_single() ) { ?>
         elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images'){
 	        if (has_post_thumbnail( $post->ID ) ) {
 		        echo "<div class='featured-image-container'>";
-		        ct_tracks_featured_image();
+		            ct_tracks_featured_image();
 		        echo "</div>";
 	        }
         } else {
@@ -82,7 +82,9 @@ if( is_single() ) { ?>
 	    }
 	    // otherwise output Featured Image
 	    else {
-		    ct_tracks_featured_image();
+		    echo '<a class="featured-image-link" href="' . get_the_permalink() . '">';
+                ct_tracks_featured_image();
+            echo '</a>';
 	    }
 	    ?>
         <div class="excerpt-container">

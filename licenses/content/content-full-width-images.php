@@ -13,11 +13,15 @@
 		    echo '</div>';
 	    } // otherwise, output the featured image
 	    else {
-		    ct_tracks_featured_image();
+		    echo '<a class="featured-image-link" href="' . get_the_permalink() . '">';
+		        ct_tracks_featured_image();
+		    echo '</a>';
 	    }
     }
     else {
-	    ct_tracks_featured_image();
+	    echo '<a class="featured-image-link" href="' . get_the_permalink() . '">';
+	        ct_tracks_featured_image();
+	    echo '</a>';
     }
     if( get_theme_mod('premium_layouts_full_width_image_style') == 'title' ) { ?>
 	    <div class="excerpt-container">

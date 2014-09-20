@@ -14,11 +14,15 @@
 		    echo '</div>';
 	    } // otherwise, output the featured image
 	    else {
-		    ct_tracks_featured_image();
+		    echo '<a class="featured-image-link" href="' . get_the_permalink() . '">';
+		        ct_tracks_featured_image();
+		    echo '</a>';
 	    }
     }
     else {
-	    ct_tracks_featured_image();
+	    echo '<a class="featured-image-link" href="' . get_the_permalink() . '">';
+	     ct_tracks_featured_image();
+	    echo '</a>';
     }
     ?>
     <a class="overlay-link" href="<?php the_permalink(); ?>">
