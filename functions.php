@@ -391,20 +391,26 @@ function ct_tracks_add_homepage_title( $title )
 
 /* add conditional classes for premium layouts */
 function ct_tracks_body_class( $classes ) {
-    if ( ! is_front_page() ) {
+
+	$premium_layout_setting = get_theme_mod('premium_layouts_setting');
+
+	if ( ! is_front_page() ) {
         $classes[] = 'not-front';
     }
     if (get_theme_mod('ct_tracks_header_color_setting') == 'dark'){
         $classes[] = 'dark-header';
     }
-    if(get_theme_mod('premium_layouts_setting') == 'full-width'){
+	if( empty( $premium_layout_setting ) || $premium_layout_setting == 'standard') {
+		$classes[] = 'standard';
+	}
+    if( $premium_layout_setting == 'full-width'){
         $classes[] = 'full-width';
 
         if(get_theme_mod('premium_layouts_full_width_full_post') == 'yes'){
             $classes[] = 'full-post';
         }
     }
-    elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
+    elseif( $premium_layout_setting == 'full-width-images'){
         $classes[] = 'full-width-images';
 
         if(get_theme_mod('premium_layouts_full_width_image_height') == '2:1-ratio'){
@@ -414,10 +420,10 @@ function ct_tracks_body_class( $classes ) {
 		    $classes[] = 'title-below';
 	    }
     }
-    elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
+    elseif( $premium_layout_setting == 'two-column'){
         $classes[] = 'two-column';
     }
-    elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
+    elseif( $premium_layout_setting == 'two-column-images'){
         $classes[] = 'two-column-images';
     }
     if(get_theme_mod( 'ct_tracks_background_image_setting')){
