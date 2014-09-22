@@ -140,15 +140,6 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   opacity: 1;
 }
 
-.ct_tracks_video_upload_container {
-  padding: 12px 24px 24px;
-  border-bottom: solid 1px #e5e5e5;
-}
-.ct_tracks_video_upload_container label {
-  margin-right: 24px;
-  font-weight: 700;
-}
-
 .ct_tracks_video_preview_container {
   position: relative;
   padding: 24px;
@@ -217,7 +208,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   }
 }
 .ct_tracks_video_display_container {
-  padding: 12px 24px 24px;
+  padding: 0px 24px 24px;
 }
 .ct_tracks_video_display_container p {
   font-weight: 700;

@@ -4,7 +4,7 @@ jQuery(function($) {
     $('#ct_tracks_video_preview_container').fitVids();
 
     // if there is a video saved already, add has-vid class
-    if( $('#ct_tracks_video_preview_container').children('div, video').length > 0 ) {
+    if( $('#ct_tracks_video_preview_container').children('div').length > 0 ) {
         $('#ct_tracks_video_preview_container, .ct_tracks_video_input_container').addClass('has-vid');
     }
 
@@ -40,7 +40,7 @@ jQuery(function($) {
         jQuery.post(ajaxurl, data, function(response) {
 
             // remove any videos already included
-            $('#ct_tracks_video_preview_container div, #ct_tracks_video_preview_container video').remove();
+            $('#ct_tracks_video_preview_container div').remove();
 
             // if valid response
             if( response ){

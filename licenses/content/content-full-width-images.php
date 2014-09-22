@@ -9,19 +9,15 @@
 	    // if has a video, embed it instead of featured image
 	    if ( $video ) {
 		    echo '<div class="featured-video">';
-		    echo ct_tracks_embed_video( $video );
+		        echo wp_oembed_get( esc_url( $video ) );
 		    echo '</div>';
 	    } // otherwise, output the featured image
 	    else {
-		    echo '<a class="featured-image-link" href="' . get_the_permalink() . '">';
-		        ct_tracks_featured_image();
-		    echo '</a>';
+	        ct_tracks_featured_image();
 	    }
     }
     else {
-	    echo '<a class="featured-image-link" href="' . get_the_permalink() . '">';
-	        ct_tracks_featured_image();
-	    echo '</a>';
+        ct_tracks_featured_image();
     }
     if( get_theme_mod('premium_layouts_full_width_image_style') == 'title' ) { ?>
 	    <div class="excerpt-container">

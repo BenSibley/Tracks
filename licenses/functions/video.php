@@ -45,9 +45,9 @@ function ct_tracks_video_callback( $post ) {
 			_e( 'Video Preview', 'tracks' );
 		echo '</label> ';
 		if( $value ) {
-
 			// output video embed
-			echo ct_tracks_embed_video( $value );
+			echo wp_oembed_get( esc_url( $value ) );
+
 		}
 		// add loading indicator
 		echo '<span class="loading">' . ct_tracks_loading_indicator_svg() . '</span>';
@@ -62,14 +62,6 @@ function ct_tracks_video_callback( $post ) {
 			echo '<input type="text" class="regular-text" id="ct_tracks_video_url" name="ct_tracks_video_url" value="' . esc_url( $value ) . '" />';
 			echo ct_tracks_green_checkmark_svg();
 		echo '</div>';
-	echo '</div>';
-
-	// video upload button
-	echo '<div class="ct_tracks_video_upload_container">';
-		echo '<label for="ct_tracks_video_select">';
-			_e( 'Or, upload a video:', 'tracks' );
-		echo '</label> ';
-		echo '<input type="button" id="ct_tracks_video_select" name="ct_tracks_video_select" class="button-primary" value="Upload Video" />';
 	echo '</div>';
 
 	// Display option
@@ -98,7 +90,7 @@ function add_oembed_callback() {
 	if ( $video_url ) {
 
 		// output video embed
-		$response = ct_tracks_embed_video( $video_url );
+		$response = wp_oembed_get( esc_url( $video_url ) );
 
 	// else return nothing
 	} else {
@@ -151,7 +143,6 @@ function ct_tracks_video_save_data( $post_id ) {
 	if ( ! isset( $_POST['ct_tracks_video_url'] ) ) {
 		return;
 	}
-
 
 	// validate user input.
 	$my_data = esc_url_raw( $_POST['ct_tracks_video_url'] );

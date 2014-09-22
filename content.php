@@ -10,7 +10,7 @@ if( is_single() ) { ?>
         // if has a video, embed it instead of featured image
         if( $video ) {
 	        echo '<div class="featured-video">';
-	            echo ct_tracks_embed_video( $video );
+	            echo wp_oembed_get( esc_url( $video ) );
 	        echo '</div>';
         }
         // otherwise, output the featured image
@@ -76,7 +76,7 @@ if( is_single() ) { ?>
 		    // if has a video, embed it instead of featured image
 		    if ( $video ) {
 			    echo '<div class="featured-video">';
-			        echo ct_tracks_embed_video( $video );
+			        echo wp_oembed_get( esc_url( $video ) );
 			    echo '</div>';
 		    }
 	    }

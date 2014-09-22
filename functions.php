@@ -43,7 +43,6 @@ function ct_tracks_enqueue_admin_styles($hook){
 	if ( 'post.php' == $hook ) {
 		wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
 		wp_enqueue_script('admin', get_template_directory_uri() . '/js/build/admin.min.js', array('jquery'),'', true);
-		wp_enqueue_script('media-manager', get_template_directory_uri() . '/js/build/profile-uploader.min.js', array('jquery'),'', true);
 	}
     // if is user profile page
     if('profile.php' == $hook || 'user-edit.php' == $hook){
@@ -711,20 +710,4 @@ function ct_tracks_loading_indicator_svg() {
 	return $svg;
 }
 
-function ct_tracks_embed_video( $video_url ) {
-
-	// if from media manager, use HTML5 <video>
-	if (strpos( $video_url, home_url() ) !== false ) {
-		$response = '<video controls>';
-		$response .=  '<source src="' . esc_url( $video_url ) . '" type="video/mp4">';
-		$response .=  '<source src="' . esc_url( $video_url ) . '" type="video/webm">';
-		$response .= '</video>';
-	}
-	// else must be from youtube, vimeo, etc. so use oembed
-	else {
-		$response = wp_oembed_get( esc_url( $video_url ) );
-	}
-
-	return $response;
-}
 ?>
