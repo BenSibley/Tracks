@@ -5,6 +5,14 @@
  */
 function ct_tracks_add_video_meta_box() {
 
+	// query database to get license status
+	$license_status = trim( get_option( 'ct_tracks_featured_videos_license_key_status' ) );
+
+	// check license status
+	if( $license_status != 'valid' ) {
+		return false;
+	}
+
 	add_meta_box(
 		'ct_tracks_video',
 		__( 'Featured Video', 'tracks' ),
