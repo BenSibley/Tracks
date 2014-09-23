@@ -62,7 +62,7 @@ function ct_tracks_options_content(){
                 <h3>Premium Features</h3>
                 <?php
                 // array of available features
-                $features = array('background_images', 'background_textures');
+                $features = array('background_images', 'background_textures', 'featured_videos');
                 // create form for each feature
                 ct_tracks_license_form_output($features);
                 ?>
@@ -104,6 +104,9 @@ function ct_tracks_license_form_output($upgrades){
                 elseif($upgrade == 'background_textures'){
                     _e('Background Textures','tracks');
                 }
+                elseif($upgrade == 'featured_videos'){
+	                _e('Featured Videos','tracks');
+                }
                 ?>
             </h4>
             <table class="form-table">
@@ -138,6 +141,8 @@ function ct_tracks_license_form_output($upgrades){
                     <p class="valid">You can add a background image now in the "Background Image" section in the <a href="customize.php">Customizer</a></p><?php }
                 elseif($upgrade == 'background_textures'){ ?>
                     <p class="valid">You can add a background texture now in the "Background Texture" section in the <a href="customize.php">Customizer</a></p><?php }
+                elseif($upgrade == 'featured_videos'){ ?>
+	                <p class="valid">You can add a video to a post now in the Post Editor</p><?php }
                 else { ?>
                     <p class="valid">You can switch to your new layout in the "Premium Layouts" section in the <a href="customize.php">Customizer</a></p><?php }
             } ?>
@@ -187,5 +192,11 @@ add_action('admin_init', 'ct_tracks_background_images_register_option');
 function ct_tracks_background_textures_register_option() {
     // creates our settings in the options table
     register_setting('ct_tracks_background_textures_license', 'ct_tracks_background_textures_license_key', 'ct_tracks_background_textures_sanitize_license' );
+}
+add_action('admin_init', 'ct_tracks_background_textures_register_option');
+
+function ct_tracks_featured_videos_register_option() {
+	// creates our settings in the options table
+	register_setting('ct_tracks_featured_videos_license', 'ct_tracks_featured_videos_license_key', 'ct_tracks_featured_videos_sanitize_license' );
 }
 add_action('admin_init', 'ct_tracks_background_textures_register_option');
