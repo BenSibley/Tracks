@@ -199,4 +199,4 @@ function ct_tracks_featured_videos_register_option() {
 	// creates our settings in the options table
 	register_setting('ct_tracks_featured_videos_license', 'ct_tracks_featured_videos_license_key', 'ct_tracks_featured_videos_sanitize_license' );
 }
-add_action('admin_init', 'ct_tracks_background_textures_register_option');
+add_action('admin_init', 'ct_tracks_featured_videos_register_option');
