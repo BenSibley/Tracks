@@ -1963,6 +1963,8 @@ li.pingback:after {
   margin: 0 0.375em;
   color: white;
   opacity: 0.4;
+  position: relative;
+  z-index: 9;
 }
 .social-media-icons a:link, .social-media-icons a:visited {
   color: white;
