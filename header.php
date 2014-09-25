@@ -27,8 +27,8 @@
         // if search bar is on, or...
         (get_theme_mod('search_input_setting') == 'show') ||
 
-        // if the social icon setting has been entered by a user and is not 'no'
-        ( $social_icon_setting != 'no' && $social_icon_setting != NULL) ) {
+        // default is 'no', so if it is equal header & footer, or header display it
+        ( $social_icon_setting == 'header-footer' || $social_icon_setting == 'header' ) ) {
 
             echo "<div class='top-navigation'>";
 
