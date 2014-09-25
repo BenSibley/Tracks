@@ -368,11 +368,11 @@ function ct_tracks_featured_image() {
         else {
             // if lazy loading is enabled
             if(get_theme_mod('additional_options_lazy_load_settings') == 'yes'){
-                echo "<div class='featured-image lazy lazy-bg-image' data-background='$image')\"></div>";
+                echo "<div class='featured-image lazy lazy-bg-image' data-background='$image'></div>";
             }
             // if lazy loading is NOT enabled
             else {
-                echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\")></div>";
+                echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
             }
         }
     }
