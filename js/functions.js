@@ -178,6 +178,10 @@ jQuery(function($){
     $(window).on('resize', function(){
         separatePostImage();
         videoHeightAdjust();
+
+        if( $(window).width() > 799 && $('#site-header').hasClass('toggled') ) {
+            onTap();
+        }
     });
 
     /* ===== IE9 full-width image text positioning ===== */
