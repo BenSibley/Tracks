@@ -411,7 +411,7 @@ a img {
 }
 
 .title-info {
-  display: inline-block;
+  float: left;
   position: relative;
   z-index: 29;
 }
@@ -574,7 +574,6 @@ a img {
   }
 
   .title-info {
-    float: left;
     margin-top: -0.75em;
   }
 
