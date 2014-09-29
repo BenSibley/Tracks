@@ -52,7 +52,11 @@ if( is_single() ) { ?>
                 <div class="author-meta">
                     <div class="author">
                         <?php ct_tracks_profile_image_output(); ?>
-                        <span>Written by: <?php the_author_posts_link(); ?></span>
+                        <span><?php
+	                            _e( 'Written by:', 'tracks');
+	                            the_author_posts_link();
+	                          ?>
+                        </span>
                     </div>
                     <div class="bio">
                         <p><?php the_author_meta( 'description' ); ?></p>
