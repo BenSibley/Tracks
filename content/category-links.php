@@ -11,7 +11,7 @@ if( (count($categories) == 1) && ($categories[0]->name == "Uncategorized") ){
 $separator = ' ';
 $output = '';
 if($categories){
-    echo "<p><span>Categories</span>";
+    echo "<p><span>" . __('Categories', 'tracks') . "</span>";
     foreach($categories as $category) {
         $output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s", 'tracks' ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
     }
