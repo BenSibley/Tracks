@@ -124,6 +124,9 @@ function ct_tracks_theme_setup() {
     {
         include $filename;
     }
+
+	// load text domain
+	load_theme_textdomain('tracks', get_template_directory() . '/languages');
 }
 
 function ct_tracks_register_widget_areas(){
