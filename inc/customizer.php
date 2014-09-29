@@ -119,7 +119,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control
     $wp_customize->add_control( new WP_Customize_Image_Control(
         $wp_customize, 'logo_image', array(
-            'label'    => esc_html__( 'Upload custom logo.', 'tracks' ),
+            'label'    => __( 'Upload custom logo.', 'tracks' ),
             'section'  => 'ct-upload',
             'settings' => 'logo_upload',
         )
@@ -135,7 +135,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
     // section
     $wp_customize->add_section( 'ct_tracks_social_icons', array(
-        'title'          => 'Social Media Icons',
+        'title'          => __('Social Media Icons', 'tracks'),
         'priority'       => 35,
     ) );
     // setting - display
@@ -148,15 +148,15 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - display
     $wp_customize->add_control( 'social_icons_display_setting', array(
         'type' => 'radio',
-        'label' => 'Where should the icons display?',
+        'label' => __('Where should the icons display?', 'tracks'),
         'priority' => 1,
         'section' => 'ct_tracks_social_icons',
         'setting' => 'social_icons_display_setting',
         'choices' => array(
-            'header-footer' => 'Header & Footer',
-            'header' => 'Header',
-            'footer' => 'Footer',
-            'no' => 'Do not display'
+            'header-footer' => __('Header & Footer', 'tracks'),
+            'header' => __('Header', 'tracks'),
+            'footer' => __('Footer', 'tracks'),
+            'no' => __('Do not display', 'tracks')
         ),
     ) );
 
@@ -173,7 +173,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
             ) );
             // control
             $wp_customize->add_control( $social_site, array(
-                'label'   => $social_site, // brand name so no internationalization required
+                'label'   => $social_site, // brand name so i18n not required
                 'section' => 'ct_tracks_social_icons',
                 'priority'=> $priority,
             ) );
@@ -191,7 +191,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
             // control
             $wp_customize->add_control( new ct_tracks_url_input_control(
                 $wp_customize, $social_site, array(
-                    'label'   => $social_site, // brand name so no internationalization required
+                    'label'   => $social_site, // brand name so i18n not required
                     'section' => 'ct_tracks_social_icons',
                     'priority'=> $priority,
                 )
@@ -206,7 +206,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
     // section
     $wp_customize->add_section( 'ct_tracks_search_input', array(
-        'title'      => esc_html__( 'Search Bar', 'tracks' ),
+        'title'      => __( 'Search Bar', 'tracks' ),
         'priority'   => 60,
         'capability' => 'edit_theme_options'
     ) );
@@ -220,12 +220,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control
     $wp_customize->add_control( 'search_input_setting', array(
         'type' => 'radio',
-        'label' => 'Show search bar at top of site?',
+        'label' => __('Show search bar at top of site?', 'tracks'),
         'section' => 'ct_tracks_search_input',
         'setting' => 'search_input_setting',
         'choices' => array(
-            'show' => 'Show',
-            'hide' => 'Hide'
+            'show' => __('Show', 'tracks'),
+            'hide' => __('Hide', 'tracks')
         ),
     ) );
 
@@ -233,7 +233,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
     // section
     $wp_customize->add_section( 'ct_tracks_post_meta_display', array(
-        'title'      => esc_html__( 'Post Meta', 'tracks' ),
+        'title'      => __( 'Post Meta', 'tracks' ),
         'priority'   => 65,
         'capability' => 'edit_theme_options'
     ) );
@@ -247,12 +247,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - date
     $wp_customize->add_control( 'post_date_display_setting', array(
         'type' => 'radio',
-        'label' => 'Display date above post title?',
+        'label' => __('Display date above post title?', 'tracks'),
         'section' => 'ct_tracks_post_meta_display',
         'setting' => 'post_date_display_setting',
         'choices' => array(
-            'show' => 'Show',
-            'hide' => 'Hide'
+            'show' => __('Show', 'tracks'),
+            'hide' => __('Hide', 'tracks')
         ),
     ) );
     // setting - author
@@ -265,12 +265,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - author
     $wp_customize->add_control( 'post_author_display_setting', array(
         'type' => 'radio',
-        'label' => 'Display author name above post title?',
+        'label' => __('Display author name above post title?', 'tracks'),
         'section' => 'ct_tracks_post_meta_display',
         'setting' => 'post_author_display_setting',
         'choices' => array(
-            'show' => 'Show',
-            'hide' => 'Hide'
+            'show' => __('Show', 'tracks'),
+            'hide' => __('Hide', 'tracks')
         ),
     ) );
     // setting - category
@@ -283,12 +283,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - category
     $wp_customize->add_control( 'post_category_display_setting', array(
         'type' => 'radio',
-        'label' => 'Display category above post title?',
+        'label' => __('Display category above post title?', 'tracks'),
         'section' => 'ct_tracks_post_meta_display',
         'setting' => 'post_category_display_setting',
         'choices' => array(
-            'show' => 'Show',
-            'hide' => 'Hide'
+            'show' => __('Show', 'tracks'),
+            'hide' => __('Hide', 'tracks')
         ),
     ) );
 
@@ -410,10 +410,10 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - layout select
     $wp_customize->add_control( 'premium_layouts_setting', array(
         'type' => 'select',
-        'label' => 'Choose the layout for Tracks',
+        'label' => __('Choose the layout for Tracks', 'tracks'),
         'section' => 'ct_tracks_premium_layouts',
         'setting' => 'premium_layouts_setting',
-        'choices' => $available_templates,
+        'choices' => $available_templates, // no i18n b/c product names
     ) );
     // setting - full-width image height
     $wp_customize->add_setting( 'premium_layouts_full_width_image_height', array(
@@ -425,12 +425,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - full-width image height
     $wp_customize->add_control( 'premium_layouts_full_width_image_height', array(
         'type' => 'radio',
-        'label' => 'Image size on Blog',
+        'label' => __('Image size on Blog', 'tracks'),
         'section' => 'ct_tracks_premium_layouts',
         'setting' => 'premium_layouts_setting',
         'choices' => array(
-            'image' => 'size based on image size',
-            '2:1-ratio'   => '2:1 width/height ratio like posts'
+            'image' => _x('size based on image size', 'size of the featured image', 'tracks'),
+            '2:1-ratio'   => _x('2:1 width/height ratio like posts', 'size of the featured image', 'tracks')
         ),
     ) );
 	// setting - full-width image style
@@ -443,12 +443,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	// control - full-width image style
 	$wp_customize->add_control( 'premium_layouts_full_width_image_style', array(
 		'type' => 'radio',
-		'label' => 'Style',
+		'label' => __('Style', 'tracks'),
 		'section' => 'ct_tracks_premium_layouts',
 		'setting' => 'premium_layouts_setting',
 		'choices' => array(
-			'overlay' => 'Overlay',
-			'title'   => 'Title below'
+			'overlay' => __('Overlay', 'tracks'),
+			'title'   => __('Title below', 'tracks')
 		),
 	) );
     // setting - full-width full post
@@ -461,12 +461,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - full-width full post
     $wp_customize->add_control( 'premium_layouts_full_width_full_post', array(
         'type' => 'radio',
-        'label' => 'Show full posts on Blog/Archives?',
+        'label' => __('Show full posts on Blog/Archives?', 'tracks'),
         'section' => 'ct_tracks_premium_layouts',
         'setting' => 'premium_layouts_full_width_full_post',
         'choices' => array(
-            'yes' => 'Yes',
-            'no'   => 'No'
+            'yes' => __('Yes', 'tracks'),
+            'no'   => __('No', 'tracks')
         ),
     ) );
 
@@ -488,12 +488,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - return to top arrow
     $wp_customize->add_control( 'additional_options_return_top_settings', array(
         'type' => 'radio',
-        'label' => 'Show scroll-to-top arrow?',
+        'label' => __('Show scroll-to-top arrow?', 'tracks'),
         'section' => 'ct_tracks_additional_options',
         'setting' => 'additional_options_return_top_settings',
         'choices' => array(
-            'show' => 'Show',
-            'hide' => 'Hide'
+            'show' => __('Show', 'tracks'),
+            'hide' => __('Hide', 'tracks')
         ),
     ) );
     // setting - author meta
@@ -506,12 +506,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - author meta
     $wp_customize->add_control( 'additional_options_author_meta_settings', array(
         'type' => 'radio',
-        'label' => 'Show author info box after posts?',
+        'label' => __('Show author info box after posts?', 'tracks'),
         'section' => 'ct_tracks_additional_options',
         'setting' => 'additional_options_author_meta_settings',
         'choices' => array(
-            'show' => 'Show',
-            'hide' => 'Hide'
+            'show' => __('Show', 'tracks'),
+            'hide' => __('Hide', 'tracks')
         ),
     ) );
     // setting - image zoom
@@ -524,11 +524,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - image zoom
     $wp_customize->add_control( 'additional_options_image_zoom_settings', array(
         'type' => 'radio',
-        'label' => 'Zoom-in blog images on hover?',
+        'label' => __('Zoom-in blog images on hover?', 'tracks'),
         'section' => 'ct_tracks_additional_options',
         'choices' => array(
-            'zoom' => 'Zoom in',
-            'no-zoom' => 'Do not zoom in'
+            'zoom' => __('Zoom in', 'tracks'),
+            'no-zoom' => __('Do not zoom in', 'tracks')
         ),
     ) );
     // setting - lazy loading
@@ -541,11 +541,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - lazy loading
     $wp_customize->add_control( 'additional_options_lazy_load_settings', array(
         'type' => 'radio',
-        'label' => 'Lazy load images?',
+        'label' => __('Lazy load images?', 'tracks'),
         'section' => 'ct_tracks_additional_options',
         'choices' => array(
-            'yes' => 'Yes',
-            'no' => 'No'
+            'yes' => __('Yes', 'tracks'),
+            'no' => __('No', 'tracks')
         ),
     ) );
     // setting - excerpt length
@@ -558,7 +558,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control - excerpt length
     $wp_customize->add_control( new ct_tracks_number_input_control(
         $wp_customize, 'additional_options_excerpt_length_settings', array(
-            'label' => 'Word count in automatic excerpts',
+            'label' => __('Word count in automatic excerpts', 'tracks'),
             'section' => 'ct_tracks_additional_options',
             'settings' => 'additional_options_excerpt_length_settings',
             'type' => 'number',
@@ -621,12 +621,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         // control - display
         $wp_customize->add_control( 'ct_tracks_texture_display_setting', array(
             'type' => 'radio',
-            'label' => 'Enable background texture?',
+            'label' => __('Enable background texture?', 'tracks'),
             'section' => 'ct_tracks_background_texture',
             'setting' => 'ct_tracks_texture_display_setting',
             'choices' => array(
-                'yes' => 'Yes',
-                'no' => 'No',
+                'yes' => __('Yes', 'tracks'),
+                'no' => __('No', 'tracks')
             ),
         ) );
         // setting - texture
@@ -675,12 +675,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         // control
         $wp_customize->add_control( 'ct_tracks_header_color_setting', array(
             'type' => 'radio',
-            'label' => 'Light or dark header color?',
+            'label' => __('Light or dark header color?', 'tracks'),
             'section' => 'ct_tracks_header_color',
             'setting' => 'ct_tracks_header_color_setting',
             'choices' => array(
-                'light' => 'Light',
-                'dark' => 'Dark',
+                'light' => __('Light', 'tracks'),
+                'dark' => __('Dark', 'tracks')
             ),
         ) );
     }
@@ -691,9 +691,9 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 // sanitize tagline display setting
 function ct_tracks_sanitize_tagline_display($input){
     $valid = array(
-        'header-footer' => 'Header & Footer',
-        'header' => 'Header',
-        'footer' => 'Footer'
+        'header-footer' => __('Header & Footer', 'tracks'),
+        'header' => __('Header', 'tracks'),
+        'footer' => __('Footer', 'tracks')
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -715,10 +715,10 @@ function ct_tracks_sanitize_email( $input ) {
 // sanitize social icon display setting
 function ct_tracks_sanitize_social_icons_display($input){
     $valid = array(
-        'header-footer' => 'Header & Footer',
-        'header' => 'Header',
-        'footer' => 'Footer',
-        'no' => 'Do not display'
+        'header-footer' => __('Header & Footer', 'tracks'),
+        'header' => __('Header', 'tracks'),
+        'footer' => __('Footer', 'tracks'),
+        'no' => __('Do not display', 'tracks')
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -734,8 +734,8 @@ function ct_tracks_sanitize_social_icons_display($input){
  */
 function ct_tracks_sanitize_all_show_hide_settings($input){
     $valid = array(
-        'show' => 'Show',
-        'hide' => 'Hide'
+        'show' => __('Show', 'tracks'),
+        'hide' => __('Hide', 'tracks')
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -752,8 +752,8 @@ function ct_tracks_sanitize_all_show_hide_settings($input){
 function ct_tracks_all_yes_no_setting_sanitization($input){
 
     $valid = array(
-        'yes' => 'Yes',
-        'no' => 'No',
+        'yes' => __('Yes', 'tracks'),
+        'no' => __('No', 'tracks')
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -789,8 +789,8 @@ function ct_tracks_sanitize_comments_setting($input){
 // sanitize image zoom setting
 function ct_tracks_sanitize_image_zoom_settings($input){
     $valid = array(
-        'zoom' => 'Zoom',
-        'no-zoom' => 'Do not Zoom'
+        'zoom' => __('Zoom', 'tracks'),
+        'no-zoom' => __('Do not Zoom', 'tracks')
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -802,7 +802,9 @@ function ct_tracks_sanitize_image_zoom_settings($input){
 
 // sanitize premium layout setting
 function ct_tracks_sanitize_premium_layouts($input){
-    $valid = array(
+
+	// no i18n because these are product names
+	$valid = array(
         'standard' => 'Standard',
         'full-width' => 'Full-width',
         'full-width-images' => 'Full-width Images',
@@ -820,8 +822,8 @@ function ct_tracks_sanitize_premium_layouts($input){
 // sanitize full-width image height setting
 function ct_tracks_sanitize_premium_layouts_image_height($input){
     $valid = array(
-        'image' => 'size based on image size',
-        '2:1-ratio'   => '2:1 width/height ratio like posts'
+	    'image' => _x('size based on image size', 'size of the featured image', 'tracks'),
+	    '2:1-ratio'   => _x('2:1 width/height ratio like posts', 'size of the featured image', 'tracks')
     );
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -832,8 +834,8 @@ function ct_tracks_sanitize_premium_layouts_image_height($input){
 }
 function ct_tracks_sanitize_premium_layouts_image_style( $input ) {
 	$valid = array(
-		'overlay' => 'Overlay',
-		'title'   => 'Title below'
+		'overlay' => __('Overlay', 'tracks'),
+		'title'   => __('Title below', 'tracks')
 	);
 
     if ( array_key_exists( $input, $valid ) ) {
@@ -860,8 +862,8 @@ function ct_tracks_background_texture_setting_sanitization($input){
 // sanitize header color setting
 function ct_tracks_sanitize_header_color_settings($input){
     $valid = array(
-        'light' => 'Light',
-        'dark' => 'Dark',
+        'light' => __('Light', 'light'),
+        'dark' => __('Dark', 'dark')
     );
 
     if ( array_key_exists( $input, $valid ) ) {
