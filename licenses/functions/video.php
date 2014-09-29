@@ -74,7 +74,7 @@ function ct_tracks_video_callback( $post ) {
 
 	// Display option
 	echo '<div class="ct_tracks_video_display_container">';
-		echo '<p>Choose where to display the video:</p>';
+		echo '<p>' . __("Choose where to display the video:", "tracks") . '</p>';
 		echo '<label for="ct_tracks_video_display_post">';
 			echo '<input type="radio" name="ct_tracks_video_display" id="ct_tracks_video_display_post" value="post" ' . checked( $display_value, "post", false ) . '>';
 			_e( 'Display on Post', 'tracks' );
