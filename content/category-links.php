@@ -5,7 +5,7 @@
 $categories = get_the_category();
 
 // if only uncategorized, don't display
-if( (count($categories) == 1) && ($categories[0]->name == "Uncategorized") ){
+if( (count($categories) == 1) && ($categories[0]->term_id == 1) ){
     return false;
 }
 $separator = ' ';
