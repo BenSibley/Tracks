@@ -7,7 +7,9 @@ $post_category = get_theme_mod('post_category_display_setting');
 
 // has to equal 'hide' in case still unset
 if($post_date != 'hide'){ ?>
-    <span class="date"><?php echo get_the_date('F j'); ?></span><?php
+    <span class="date"><?php
+	echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'n/j/Y' ) ) );
+	?></span><?php
 }
 // if the date and either other meta item is displayed, add the separator
 if($post_date != 'hide' && ($post_author != 'hide' || $post_category != 'hide')){ ?>
