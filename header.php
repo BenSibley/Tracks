@@ -9,11 +9,10 @@
 
 </head>
 
-
 <body id="<?php print get_stylesheet(); ?>" <?php body_class('ct-body'); ?>>
 
 <div class="overflow-container">
-    <a class="skip-content" href="#main">Skip to content</a>
+    <a class="skip-content" href="#main"><?php _e('Skip to content', 'tracks'); ?></a>
 <header id="site-header" class="site-header" role="banner">
 
     <?php
