@@ -76,7 +76,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
     // section
     $wp_customize->add_section( 'ct_tracks_tagline_display', array(
-        'title'      => esc_html__( 'Tagline Display', 'tracks' ),
+        'title'      => __( 'Tagline Display', 'tracks' ),
         'priority'   => 25,
         'capability' => 'edit_theme_options'
     ) );
@@ -90,14 +90,14 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // control
     $wp_customize->add_control( 'tagline_display_setting', array(
         'type' => 'radio',
-        'label' => 'Where should the tagline display?',
+        'label' => __('Where should the tagline display?', 'tracks'),
         'default' => 'header-footer',
         'section' => 'ct_tracks_tagline_display',
         'setting' => 'tagline_display_setting',
         'choices' => array(
-            'header-footer' => 'Header & Footer',
-            'header' => 'Header',
-            'footer' => 'Footer'
+            'header-footer' => __('Header & Footer', 'tracks'),
+            'header' => __('Header', 'tracks'),
+            'footer' => __('Footer', 'tracks')
         ),
     ) );
 
