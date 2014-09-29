@@ -189,22 +189,22 @@ function ct_tracks_update_fields($fields) {
 
     $fields['author'] =
         '<p class="comment-form-author">
-            <label class="screen-reader-text">Your Name</label>
-            <input required placeholder="Your Name*" id="author" name="author" type="text" aria-required="true" value="' . esc_attr( $commenter['comment_author'] ) .
+            <label class="screen-reader-text">' . __("Your Name", "tracks") . '</label>
+            <input required placeholder="' . __("Your Name*", "tracks") . '" id="author" name="author" type="text" aria-required="true" value="' . esc_attr( $commenter['comment_author'] ) .
         '" size="30"' . $aria_req . ' />
     	</p>';
 
     $fields['email'] =
         '<p class="comment-form-email">
-            <label class="screen-reader-text">Your Email</label>
-            <input required placeholder="Your Email*" id="email" name="email" type="email" aria-required="true" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+            <label class="screen-reader-text">' . __("Your Email", "tracks") . '</label>
+            <input required placeholder="' . __("Your Email*", "tracks") . '" id="email" name="email" type="email" aria-required="true" value="' . esc_attr(  $commenter['comment_author_email'] ) .
         '" size="30"' . $aria_req . ' />
     	</p>';
 
     $fields['url'] =
         '<p class="comment-form-url">
-            <label class="screen-reader-text">Your Website URL</label>
-            <input placeholder="Your URL" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+            <label class="screen-reader-text">' . __("Your Website URL", "tracks") . '</label>
+            <input placeholder="' . __("Your URL", "tracks") . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
         '" size="30" />
             </p>';
 
@@ -216,8 +216,8 @@ function ct_tracks_update_comment_field($comment_field) {
 	
 	$comment_field =
         '<p class="comment-form-comment">
-            <label class="screen-reader-text">Your Comment</label>
-            <textarea required placeholder="Enter Your Comment&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+            <label class="screen-reader-text">' . __("Your Comment", "tracks") . '</label>
+            <textarea required placeholder="' . __("Enter Your Comment", "tracks") . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </p>';
 	
 	return $comment_field;
@@ -259,7 +259,7 @@ function ct_tracks_excerpt() {
     }
     // use the read more link if present
     elseif($ismore) {
-        the_content("Read More <span class='screen-reader-text'>" . get_the_title() . "</span>");
+        the_content( __('Read More', 'tracks') . "<span class='screen-reader-text'>" . get_the_title() . "</span>");
     }
     // otherwise the excerpt is automatic, so output it
     else {
@@ -270,7 +270,7 @@ function ct_tracks_excerpt() {
 // filter the link on excerpts
 function ct_tracks_excerpt_read_more_link($output) {
 	global $post;
-	return $output . "<p><a class='more-link' href='". get_permalink() ."'>Read the Post <span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+	return $output . "<p><a class='more-link' href='". get_permalink() ."'>" . __('Read the Post', 'tracks') . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
 }
 
 add_filter('the_excerpt', 'ct_tracks_excerpt_read_more_link');
