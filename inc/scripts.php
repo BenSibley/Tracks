@@ -53,8 +53,19 @@ function ct_tracks_enqueue_admin_styles($hook){
 	}
 	// Post Editor
 	if ( 'post.php' == $hook ) {
-		wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
-		wp_enqueue_script('admin', get_template_directory_uri() . '/js/build/admin.min.js', array('jquery'),'', true);
+
+		// query database to get featured video license status
+		$license_status = trim( get_option( 'ct_tracks_featured_videos_license_key_status' ) );
+
+		// enqueue only if license is valid
+		if( $license_status == 'valid' ) {
+
+			// enqueue fitvids
+			wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
+
+			// enqueue admin JS file
+			wp_enqueue_script('admin', get_template_directory_uri() . '/js/build/admin.min.js', array('jquery'),'', true);
+		}
 	}
 	// Profile (and edit other user)
 	if('profile.php' == $hook || 'user-edit.php' == $hook){
