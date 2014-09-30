@@ -75,7 +75,9 @@ function ct_tracks_social_array(){
         'git' => 'git_profile',
         'hacker-news' => 'hacker-news_profile',
         'steam' => 'steam_profile',
-        'steam' => 'vk_profile',
+        'vk' => 'vk_profile',
+        'weibo' => 'weibo_profile',
+        'tencent-weibo' => 'tencent_weibo_profile',
         'email' => 'email_profile'
     );
     return $social_sites;
