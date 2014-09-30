@@ -111,6 +111,7 @@ module.exports = function(grunt) {
             target: {
                 options: {
                     domainPath: '/languages',
+                    exclude: ['library/.*/.*'],
                     potFilename: 'tracks.pot',
                     type: 'wp-theme'
                 }
