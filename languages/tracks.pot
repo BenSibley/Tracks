@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.27\n"
+"Project-Id-Version: Tracks 1.28\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-09-30 14:50:18+00:00\n"
+"POT-Creation-Date: 2014-10-01 16:59:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -111,82 +111,82 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions.php:25
+#: functions.php:24
 msgid "Primary"
 msgstr ""
 
-#: functions.php:26
+#: functions.php:25
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:27 inc/customizer.php:100 inc/customizer.php:158
+#: functions.php:26 inc/customizer.php:100 inc/customizer.php:158
 #: inc/customizer.php:696 inc/customizer.php:720
 msgid "Footer"
 msgstr ""
 
-#: functions.php:57
+#: functions.php:56
 msgid "After Post Content"
 msgstr ""
 
-#: functions.php:59
+#: functions.php:58
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
 msgstr ""
 
-#: functions.php:64
+#: functions.php:63
 msgid "After Page Content"
 msgstr ""
 
-#: functions.php:66
+#: functions.php:65
 msgid "Widgets in this area will be shown after page content"
 msgstr ""
 
-#: functions.php:91
+#: functions.php:90
 msgid "Reply"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:96
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:116
+#: functions.php:115
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:116
 msgid "Your Name*"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:122
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:123
 msgid "Your Email*"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:129
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:130
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:143
+#: functions.php:142
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:144
+#: functions.php:143
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:186
+#: functions.php:185
 msgid "Read More"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:196
 msgid "Read the Post"
 msgstr ""
 
@@ -452,15 +452,15 @@ msgid ""
 "images will not be cropped."
 msgstr ""
 
-#: inc/user-profile.php:97
+#: inc/user-profile.php:99
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/user-profile.php:105
+#: inc/user-profile.php:107
 msgid "Address:"
 msgstr ""
 
-#: inc/user-profile.php:107
+#: inc/user-profile.php:109
 msgid "Profile:"
 msgstr ""
 
