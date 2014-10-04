@@ -12,13 +12,15 @@ background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0
 background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* styles for theme options page */
 #tracks-dashboard-wrap .nav-tab-wrapper {
-  padding-top: 24px;
+  padding-top: 36px;
+  margin-bottom: 24px;
 }
 
 .content {
-  margin-top: 24px;
-  padding: 12px 24px;
-  border: solid 1px #CCC;
+  margin-top: 12px;
+  padding: 12px 24px 24px;
+  border-right: solid 1px #e5e5e5;
+  border-bottom: solid 1px #e5e5e5;
 }
 .content .button-primary {
   margin: 12px 0;
@@ -26,6 +28,12 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 .content ul {
   list-style: disc;
   margin-left: 36px;
+}
+
+.content-customization,
+.content-support,
+.content-premium-upgrades {
+  background: white;
 }
 
 .content-licenses {
@@ -84,8 +92,43 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   display: block;
 }
 
+/* 600px */
+@media all and (min-width: 37.5em) {
+  .content-customization,
+  .content-support,
+  .content-premium-upgrades {
+    width: 39%;
+    float: left;
+  }
+  .content-customization p,
+  .content-support p,
+  .content-premium-upgrades p {
+    min-height: 57px;
+  }
+
+  .content-customization,
+  .content-support {
+    margin-right: 2%;
+  }
+}
 /* 1100px */
 @media all and (min-width: 68.75em) {
+  .content-customization,
+  .content-support,
+  .content-premium-upgrades {
+    width: 27%;
+  }
+  .content-customization p,
+  .content-support p,
+  .content-premium-upgrades p {
+    min-height: 57px;
+  }
+
+  .content-customization,
+  .content-support {
+    margin-right: 1%;
+  }
+
   .content-licenses h3 {
     clear: both;
   }

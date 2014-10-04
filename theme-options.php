@@ -2,7 +2,7 @@
 
 /* create theme options page */
 function ct_tracks_register_theme_page(){
-    add_theme_page( 'Theme Options', 'Theme Options', 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content');
+    add_theme_page( 'Tracks Dashboard', 'Tracks Dashboard', 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content');
 }
 add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
 
@@ -12,40 +12,33 @@ function ct_tracks_options_content(){ ?>
     <div id="tracks-dashboard-wrap" class="wrap">
         <h2><?php _e('Tracks Dashboard', 'tracks'); ?></h2>
 
-        <?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'getting-started'; ?>
+        <?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'dashboard'; ?>
 
         <h2 class="nav-tab-wrapper">
-            <a href="?page=tracks-options&tab=getting-started" class="nav-tab <?php echo $active_tab == 'getting-started' ? 'nav-tab-active' : ''; ?>"><?php _e('Getting Started', 'tracks'); ?></a>
-            <a href="?page=tracks-options&tab=support" class="nav-tab <?php echo $active_tab == 'support' ? 'nav-tab-active' : ''; ?>"><?php _e('Support', 'tracks'); ?></a>
-            <a href="?page=tracks-options&tab=premium-upgrades" class="nav-tab <?php echo $active_tab == 'premium-upgrades' ? 'nav-tab-active' : ''; ?>"><?php _e('Premium Upgrades', 'tracks'); ?></a>
+            <a href="?page=tracks-options&tab=dashboard" class="nav-tab <?php echo $active_tab == 'dashboard' ? 'nav-tab-active' : ''; ?>"><?php _e('Dashboard', 'tracks'); ?></a>
             <a href="?page=tracks-options&tab=licenses" class="nav-tab <?php echo $active_tab == 'licenses' ? 'nav-tab-active' : ''; ?>"><?php _e('Licenses', 'tracks'); ?></a>
         </h2>
         <?php
-        if($active_tab == 'getting-started'){ ?>
-            <div class="content-getting-started content">
-                <h3><?php _e('Start Customizing', 'tracks'); ?></h3>
-                <p><?php _e('Thanks for downloading Tracks!', 'tracks'); ?></p>
-                <p><?php _e('To start customizing Tracks, click the "Customize" link to the left in your menu, or use the button below to get started', 'tracks'); ?>.</p>
+        if($active_tab == 'dashboard'){ ?>
+            <div class="content-customization content">
+                <h3><?php _e('Customization', 'tracks'); ?></h3>
+                <p><?php _e('Click the "Customize" link in your menu, or use the button below to get started customizing Tracks', 'tracks'); ?>.</p>
                 <p>
                     <a class="button-primary" href="customize.php"><?php _e('Use Customizer', 'tracks') ?></a>
                 </p>
             </div>
-        <?php }
-        elseif($active_tab == 'support'){ ?>
-            <div class="content-support content">
-                <h3><?php _e('Get Support', 'tracks'); ?></h3>
-                <p><?php _e("You can find the knowledgebase, tutorials, support forum, and more in the Tracks Support Center", "tracks"); ?>.</p>
-                <p>
-                    <a target="_blank" class="button-primary" href="http://www.competethemes.com/documentation/tracks-support-center/"><?php _e('Visit Support Center', 'tracks'); ?></a>
-                </p>
-            </div>
-        <?php }
-        elseif($active_tab == 'premium-upgrades'){ ?>
-            <div class="content-premium-upgrades content">
-                <h3><?php _e('Premium Upgrades ($9-15)', 'tracks'); ?></h3>
-                <p><?php _e('New layouts, features, and more. Make your site more customizable and beautiful with Tracks premium upgrades', 'tracks');?>.</p>
-                <p><a target="_blank" class="button-primary" href="http://www.competethemes.com/tracks-theme-upgrades/"><?php _e('Visit Upgrades Gallery', 'tracks'); ?></a></p>
-            </div>
+	        <div class="content-support content">
+		        <h3><?php _e('Support', 'tracks'); ?></h3>
+		        <p><?php _e("You can find the knowledgebase, changelog, forum, and more in the Tracks Support Center", "tracks"); ?>.</p>
+		        <p>
+			        <a target="_blank" class="button-primary" href="http://www.competethemes.com/documentation/tracks-support-center/"><?php _e('Visit Support Center', 'tracks'); ?></a>
+		        </p>
+	        </div>
+	        <div class="content-premium-upgrades content">
+		        <h3><?php _e('Premium Upgrades ($9-15)', 'tracks'); ?></h3>
+		        <p><?php _e('Make your site more customizable and beautiful with premium upgrades', 'tracks');?>.</p>
+		        <p><a target="_blank" class="button-primary" href="http://www.competethemes.com/tracks-theme-upgrades/"><?php _e('Visit Upgrades Gallery', 'tracks'); ?></a></p>
+	        </div>
         <?php }
         elseif($active_tab == 'licenses'){ ?>
             <div class="content-licenses content">

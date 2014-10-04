@@ -936,7 +936,6 @@ function ct_tracks_textures_array(){
     return $textures;
 }
 
-
 function ct_tracks_customize_preview_js() { ?>
 	<script>
 		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="<?php echo esc_url('http://www.competethemes.com/tracks-theme-upgrades/');?>" target="_blank"><?php _e('Premium Upgrades Available!','tracks');?> <span>&rarr;</span></a></div>');
