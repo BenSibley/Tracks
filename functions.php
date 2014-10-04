@@ -632,4 +632,46 @@ function ct_tracks_set_date_format() {
 	}
 }
 add_action( 'init', 'ct_tracks_set_date_format' );
-?>
+
+function ct_tracks_toolbar_link( $wp_admin_bar ) {
+
+	// Create parent nod
+	$args = array(
+		'id'    => 'ct_tracks_dashboard',
+		'title' => 'Tracks Dashboard',
+		'href'  => site_url() . '/wp-admin/themes.php?page=tracks-options',
+		'meta'  => array( 'class' => 'tracks-dashboard' )
+	);
+	$wp_admin_bar->add_node( $args );
+
+	// Customize
+	$args = array(
+		'id'    => 'ct_tracks_dashboard_customize',
+		'title' => 'Customize',
+		'parent' => 'ct_tracks_dashboard',
+		'href'  => site_url() . '/wp-admin/customize.php',
+		'meta'  => array( 'class' => 'tracks-dashboard-customize' )
+	);
+	$wp_admin_bar->add_node( $args );
+
+	// Support
+	$args = array(
+		'id'    => 'ct_tracks_dashboard_support',
+		'title' => 'Support',
+		'parent' => 'ct_tracks_dashboard',
+		'href'  => 'http://www.competethemes.com/documentation/tracks-support-center/',
+		'meta'  => array( 'class' => 'tracks-dashboard-support', 'target' => '_blank' )
+	);
+	$wp_admin_bar->add_node( $args );
+
+	// Upgrades
+	$args = array(
+		'id'    => 'ct_tracks_dashboard_upgrades',
+		'title' => 'Upgrades',
+		'parent' => 'ct_tracks_dashboard',
+		'href'  => 'http://www.competethemes.com/tracks-theme-upgrades/',
+		'meta'  => array( 'class' => 'tracks-dashboard-upgrades', 'target' => '_blank' )
+	);
+	$wp_admin_bar->add_node( $args );
+}
+add_action( 'admin_bar_menu', 'ct_tracks_toolbar_link', 999 );
