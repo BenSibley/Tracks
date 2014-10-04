@@ -1,3 +1,15 @@
+/*===== Variables =====*/
+/* Theme Colors */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/* grid stuff */
+                           /* Baseline Grid
+background-image: linear-gradient(#fff 23px, #00fffc 24px, #fff 0px);
+background-size: 1px 24px; /* this is a 24px baseline grid */
+                        /* Column Grid
+background-color: gray;
+background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
+background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* Customizer Styles */
 #customize-control-ct_tracks_background_texture_setting input {
   visibility: hidden;
@@ -10,4 +22,30 @@
 }
 #customize-control-ct_tracks_background_texture_setting label:nth-child(3n + 1) {
   margin-right: 0;
+}
+
+.upgrades-ad {
+  background: #43b3c4;
+  color: white;
+  -webkit-transition: background 0.2s ease-in-out;
+          transition: background 0.2s ease-in-out;
+}
+.upgrades-ad:hover {
+  background: #3a9cab;
+}
+.upgrades-ad:hover span {
+  margin-left: 4px;
+}
+.upgrades-ad a {
+  display: block;
+  padding: 0.5em;
+  color: white;
+}
+.upgrades-ad a:link, .upgrades-ad a:visited, .upgrades-ad a:hover, .upgrades-ad a:active, .upgrades-ad a:focus {
+  color: white;
+}
+.upgrades-ad span {
+  margin-left: 0px;
+  -webkit-transition: margin-left 0.2s ease-in-out;
+          transition: margin-left 0.2s ease-in-out;
 }
