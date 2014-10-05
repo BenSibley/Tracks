@@ -1951,6 +1951,8 @@ li.pingback:after {
 .social-media-icons {
   list-style: none;
   margin: 0;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.2s ease-in-out;
+          transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 .social-media-icons li,
 .social-media-icons a {
@@ -1977,6 +1979,13 @@ li.pingback:after {
 .site-header .social-media-icons {
   float: right;
   height: 100%;
+}
+
+.search-open .site-header .social-media-icons {
+  opacity: 0;
+  -webkit-transform: translateX(12px);
+      -ms-transform: translateX(12px);
+          transform: translateX(12px);
 }
 
 @media all and (min-width: 1500px) {

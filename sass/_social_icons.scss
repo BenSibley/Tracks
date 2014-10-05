@@ -3,6 +3,7 @@
 .social-media-icons {
   list-style: none;
   margin: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
 
   li,
   a {
@@ -34,6 +35,10 @@
 .site-header .social-media-icons {
   float: right;
   height:  100%;
+}
+.search-open .site-header .social-media-icons {
+  opacity: 0;
+  transform: translateX(12px);
 }
 
 @media all and (min-width: 1500px){
