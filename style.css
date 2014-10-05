@@ -1870,7 +1870,7 @@ li.pingback:after {
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
 }
-.site-header .search-form-container button:hover i, .site-header .search-form-container button:active i, .site-header .search-form-container button:focus i {
+.site-header .search-form-container button:hover i, .site-header .search-form-container button:active i {
   opacity: 1;
 }
 .site-header .search-form-container button:hover {
