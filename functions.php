@@ -306,7 +306,7 @@ add_filter( 'wp_title', 'ct_tracks_add_homepage_title' );
 function ct_tracks_add_homepage_title( $title )
 {
     if( empty( $title ) && ( is_home() || is_front_page() ) ) {
-        return __( get_bloginfo( 'title' ), 'theme_domain' ) . ' | ' . get_bloginfo( 'description' );
+        return get_bloginfo( 'title' ) . ' | ' . get_bloginfo( 'description' );
     }
     return $title;
 }
