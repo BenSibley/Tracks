@@ -405,6 +405,16 @@ jQuery(function($){
     }
     videoHeightAdjust();
 
+    function fixedPositionImageMobileSupport() {
+
+        $(window).scroll(function() {
+            var scrolledY = $(window).scrollTop();
+            $('#template-bg-image').css('top', scrolledY + 'px');
+        });
+    }
+
+    //fixedPositionImageMobileSupport();
+
 });
 
 jQuery(window).load(function(){
