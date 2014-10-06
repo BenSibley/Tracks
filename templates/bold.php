@@ -15,6 +15,6 @@
 		</div>
 		<a class="button" href="#">Tell Me More</a>
 	</div>
-	<div class="template-bg-image"></div>
+	<div class="template-bg-image" style="background-image: url('https://unsplash.imgix.net/uploads%2F14115408840644deb16b0%2F2dc933e3?q=75&fm=jpg&auto=format&s=7f43646e4d26049c6c39890afb2e5ced');"></div>
 
 <?php get_footer() ?>
