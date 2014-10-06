@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.28\n"
+"Project-Id-Version: Tracks 1.29\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-10-01 16:59:30+00:00\n"
+"POT-Creation-Date: 2014-10-06 15:02:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -308,7 +308,7 @@ msgstr ""
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:399 theme-options.php:52
+#: inc/customizer.php:399 theme-options.php:45
 msgid "Premium Layouts"
 msgstr ""
 
@@ -438,6 +438,10 @@ msgstr ""
 msgid "Do not Zoom"
 msgstr ""
 
+#: inc/customizer.php:941
+msgid "Premium Upgrades Available!"
+msgstr ""
+
 #: inc/user-profile.php:16
 msgid "Profile image"
 msgstr ""
@@ -529,106 +533,92 @@ msgid "Tracks Dashboard"
 msgstr ""
 
 #: theme-options.php:18
-msgid "Getting Started"
+msgid "Dashboard"
 msgstr ""
 
 #: theme-options.php:19
-msgid "Support"
-msgstr ""
-
-#: theme-options.php:20
-msgid "Premium Upgrades"
-msgstr ""
-
-#: theme-options.php:21
 msgid "Licenses"
 msgstr ""
 
-#: theme-options.php:26
-msgid "Start Customizing"
+#: theme-options.php:24
+msgid "Customization"
+msgstr ""
+
+#: theme-options.php:25
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Tracks"
 msgstr ""
 
 #: theme-options.php:27
-msgid "Thanks for downloading Tracks!"
-msgstr ""
-
-#: theme-options.php:28
-msgid ""
-"To start customizing Tracks, click the \"Customize\" link to the left in "
-"your menu, or use the button below to get started"
-msgstr ""
-
-#: theme-options.php:30
 msgid "Use Customizer"
 msgstr ""
 
-#: theme-options.php:36
-msgid "Get Support"
+#: theme-options.php:31
+msgid "Support"
 msgstr ""
 
-#: theme-options.php:37
+#: theme-options.php:32
 msgid ""
-"You can find the knowledgebase, tutorials, support forum, and more in the "
-"Tracks Support Center"
+"You can find the knowledgebase, changelog, forum, and more in the Tracks "
+"Support Center"
 msgstr ""
 
-#: theme-options.php:39
+#: theme-options.php:34
 msgid "Visit Support Center"
 msgstr ""
 
-#: theme-options.php:45
+#: theme-options.php:38
 msgid "Premium Upgrades ($9-15)"
 msgstr ""
 
-#: theme-options.php:46
-msgid ""
-"New layouts, features, and more. Make your site more customizable and "
-"beautiful with Tracks premium upgrades"
+#: theme-options.php:39
+msgid "Make your site more customizable and beautiful with premium upgrades"
 msgstr ""
 
-#: theme-options.php:47
+#: theme-options.php:40
 msgid "Visit Upgrades Gallery"
 msgstr ""
 
-#: theme-options.php:59
+#: theme-options.php:52
 msgid "Premium Features"
 msgstr ""
 
-#: theme-options.php:113
+#: theme-options.php:106
 msgid "Save License"
 msgstr ""
 
-#: theme-options.php:116
+#: theme-options.php:109
 msgid "Enter your license key"
 msgstr ""
 
-#: theme-options.php:122 theme-options.php:130
+#: theme-options.php:115 theme-options.php:123
 msgid "Activate License"
 msgstr ""
 
-#: theme-options.php:127
+#: theme-options.php:120
 msgid "Deactivate License"
 msgstr ""
 
-#: theme-options.php:143
+#: theme-options.php:136
 msgid ""
 "You can now add a background image using the \"Background Image\" section "
 "in the <a href=\"%s\">Customizer</a>"
 msgstr ""
 
-#: theme-options.php:145
+#: theme-options.php:138
 msgid ""
 "You can now add a background texture using the \"Background Texture\" "
 "section in the <a href=\"%s\">Customizer</a>"
 msgstr ""
 
-#: theme-options.php:147
+#: theme-options.php:140
 msgid ""
 "You can now add videos to posts. Use the Featured Videos box under the Post "
 "Editor to get started"
 msgstr ""
 
-#: theme-options.php:149
+#: theme-options.php:142
 msgid ""
 "You can now switch to your new layout in the \"Premium Layouts\" section in "
 "the <a href=\"%s\">Customizer</a>"
