@@ -675,3 +675,73 @@ function ct_tracks_toolbar_link( $wp_admin_bar ) {
 	$wp_admin_bar->add_node( $args );
 }
 add_action( 'admin_bar_menu', 'ct_tracks_toolbar_link', 999 );
+
+//function ct_tracks_load_customizer( $wp_customize){
+//
+////	global $wp_customizer, $wp_customizer, $wp_customize_manager;
+//
+//	if( is_preview() ) {
+//		new WP_Customize_Manager();
+//		WP_Customize_Manager::setup_theme();
+//	}
+//}
+//
+//add_action( 'wp_footer', 'ct_tracks_load_customizer' );
+//
+
+function add_preview_link_to_customize_url( $url ) {
+
+	global $post;
+
+	$post_id = $_POST['post_ID'] ;
+
+	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+
+	// check for a template type
+	if ($template_file == 'page-test.php') {
+
+		// create argument array
+		$args = array();
+
+		// add url to args array
+		$args['url'] = $url;
+
+		// add the return url for when customizer closed
+		$args['return'] = get_edit_post_link( get_post()->ID, 'raw' );
+
+		// construct new url for preview
+		$url = admin_url( 'customize.php' ) . '?' . http_build_query( $args );
+	}
+	return $url;
+}
+add_filter( 'preview_post_link', 'add_preview_link_to_customize_url' );
+
+function ct_tracks_hide_editor() {
+
+	global $post;
+
+	// Get the Post ID.
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+
+	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+
+	// check for a template type
+	if ($template_file == 'page-test.php') {
+
+		// remove the editor
+		remove_post_type_support( 'page', 'editor' );
+	}
+}
+add_action( 'admin_init', 'ct_tracks_hide_editor' );
+
+function ct_tracks_remove_customizer_content( $wp_customize ) {
+
+	$wp_customize->remove_section( 'title_tagline' );
+	$wp_customize->remove_section( 'ct_tracks_tagline_display' );
+	$wp_customize->remove_section( 'ct-upload' );
+	$wp_customize->remove_section( 'ct_tracks_social_icons' );
+	$wp_customize->remove_section( 'ct_tracks_search_input' );
+	$wp_customize->remove_section( 'ct_tracks_post_meta_display' );
+
+}
+add_action( 'customize_register', 'ct_tracks_remove_customizer_content', 999 );
