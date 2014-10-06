@@ -36,7 +36,7 @@ module.exports = function(grunt) {
                 }
             },
             css: {
-                files: ['sass/*.scss', 'licenses/css/*.scss'],
+                files: ['sass/*.scss', 'sass/templates/*.scss', 'licenses/css/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'cssmin'],
                 options: {
                     livereload: true,
@@ -57,7 +57,8 @@ module.exports = function(grunt) {
                     'licenses/css/full-width.css': 'licenses/css/full-width.scss',
                     'licenses/css/full-width-images.css': 'licenses/css/full-width-images.scss',
                     'licenses/css/two-column.css': 'licenses/css/two-column.scss',
-                    'licenses/css/two-column-images.css': 'licenses/css/two-column-images.scss'
+                    'licenses/css/two-column-images.css': 'licenses/css/two-column-images.scss',
+                    'styles/templates/bold.css': 'sass/templates/bold.scss'
                 }
             }
         },
@@ -74,7 +75,8 @@ module.exports = function(grunt) {
                     'licenses/css/full-width.css': 'licenses/css/full-width.css',
                     'licenses/css/full-width-images.css': 'licenses/css/full-width-images.css',
                     'licenses/css/two-column.css': 'licenses/css/two-column.css',
-                    'licenses/css/two-column-images.css': 'licenses/css/two-column-images.css'
+                    'licenses/css/two-column-images.css': 'licenses/css/two-column-images.css',
+                    'styles/templates/bold.css': 'styles/templates/bold.css'
                 }
             }
         },
