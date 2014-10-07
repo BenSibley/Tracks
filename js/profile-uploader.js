@@ -29,6 +29,9 @@ jQuery(document).ready(function($){
             // We set multiple to false so only get one image from the uploader
             attachment = file_frame.state().get('selection').first().toJSON();
 
+            // change input's value to the attachment url
+            $(event.currentTarget).prev().val(attachment.url);
+
             // Do something with attachment.id and/or attachment.url here
             $('#user_profile_image').val(attachment.url);
 

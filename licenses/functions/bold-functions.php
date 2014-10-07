@@ -84,7 +84,7 @@ function ct_tracks_bold_save_data( $post_id ) {
 	}
 
 	// array of meta box IDs
-	$meta_boxes = array( 'ct_tracks_bold_heading', 'ct_tracks_bold_sub_heading', 'ct_tracks_bold_description', 'ct_tracks_bold_button_one', 'ct_tracks_bold_button_two' );
+	$meta_boxes = array( 'ct_tracks_bold_heading', 'ct_tracks_bold_sub_heading', 'ct_tracks_bold_description', 'ct_tracks_bold_button_one', 'ct_tracks_bold_button_two', 'ct_tracks_bold_bg_image' );
 
 	foreach( $meta_boxes as $meta_box ){
 
@@ -112,6 +112,11 @@ function ct_tracks_bold_save_data( $post_id ) {
 
 						// sanitize the button url
 						$clean_data_secondary = esc_url_raw( $_POST[ $meta_box . '_link' ]);
+
+					} elseif( $meta_box == 'ct_tracks_bold_bg_image' ) {
+
+						// sanitize user input.
+						$clean_data = esc_url_raw( $_POST[ $meta_box ] );
 
 					} else {
 
@@ -259,6 +264,4 @@ function ct_tracks_bold_bg_image_callback( $post ) {
 
 	// upload button
 	echo '<input type="button" id="bg-image-upload" class="button-primary" value="' . __( 'Upload Image', 'tracks' ) . '" />';
-
-
 }
