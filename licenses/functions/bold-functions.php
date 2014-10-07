@@ -46,6 +46,22 @@ function ct_tracks_bold_meta_boxes() {
 			'normal',
 			'high'
 		);
+		add_meta_box(
+			'ct_tracks_bold_button_two',
+			__( 'Button 2', 'tracks' ),
+			'ct_tracks_bold_button_two_callback',
+			'page',
+			'normal',
+			'high'
+		);
+		add_meta_box(
+			'ct_tracks_bold_bg_image',
+			__( 'Background Image', 'tracks' ),
+			'ct_tracks_bold_bg_image_callback',
+			'page',
+			'normal',
+			'high'
+		);
 	}
 }
 add_action( 'add_meta_boxes', 'ct_tracks_bold_meta_boxes' );
@@ -68,7 +84,7 @@ function ct_tracks_bold_save_data( $post_id ) {
 	}
 
 	// array of meta box IDs
-	$meta_boxes = array( 'ct_tracks_bold_heading', 'ct_tracks_bold_sub_heading', 'ct_tracks_bold_description', 'ct_tracks_bold_button_one' );
+	$meta_boxes = array( 'ct_tracks_bold_heading', 'ct_tracks_bold_sub_heading', 'ct_tracks_bold_description', 'ct_tracks_bold_button_one', 'ct_tracks_bold_button_two' );
 
 	foreach( $meta_boxes as $meta_box ){
 
@@ -89,7 +105,7 @@ function ct_tracks_bold_save_data( $post_id ) {
 						// sanitize user input.
 						$clean_data = esc_textarea( $_POST[ $meta_box ] );
 
-					} elseif( $meta_box == 'ct_tracks_bold_button_one' ) {
+					} elseif( $meta_box == 'ct_tracks_bold_button_one' || $meta_box == 'ct_tracks_bold_button_two' ) {
 
 						// sanitize button text
 						$clean_data = sanitize_text_field( $_POST[ $meta_box ] );
@@ -109,7 +125,7 @@ function ct_tracks_bold_save_data( $post_id ) {
 					update_post_meta( $post_id, $meta_box . '_key', $clean_data );
 
 					// update second url value in button one
-					if( $meta_box == 'ct_tracks_bold_button_one' ) {
+					if( $meta_box == 'ct_tracks_bold_button_one' || $meta_box == 'ct_tracks_bold_button_two' ) {
 						update_post_meta( $post_id, $meta_box . '_link_key', $clean_data_secondary );
 					}
 				}
@@ -171,7 +187,7 @@ function ct_tracks_bold_description_callback( $post ) {
 }
 
 /*
- * Description meta box
+ * Button One meta box
  */
 function ct_tracks_bold_button_one_callback( $post ) {
 
@@ -186,7 +202,63 @@ function ct_tracks_bold_button_one_callback( $post ) {
 
 	$link_value = get_post_meta( $post->ID, 'ct_tracks_bold_button_one_link_key', true );
 
-	echo '<input type="text" class="regular-text" id="ct_tracks_bold_button_one" name="ct_tracks_bold_button_one" value="' . sanitize_text_field( $text_value ) . '" />';
+	echo '
+		<label>Button text
+			<input type="text" class="regular-text" id="ct_tracks_bold_button_one" name="ct_tracks_bold_button_one" value="' . sanitize_text_field( $text_value ) . '" />
+		</label>';
 
-	echo '<input type="url" class="regular-text" id="ct_tracks_bold_button_one_link" name="ct_tracks_bold_button_one_link" value="' . esc_url( $link_value ) . '" />';
+	echo '
+		<label>Button URL
+			<input type="url" class="regular-text" id="ct_tracks_bold_button_one_link" name="ct_tracks_bold_button_one_link" value="' . esc_url( $link_value ) . '" />
+		</label>';
+}
+
+/*
+ * Button Two meta box
+ */
+function ct_tracks_bold_button_two_callback( $post ) {
+
+	// Add an nonce field so we can check for it later.
+	wp_nonce_field( 'ct_tracks_bold_button_two', 'ct_tracks_bold_button_two_nonce' );
+
+	/*
+	 * Use get_post_meta() to retrieve an existing value
+	 * from the database and use the value for the form.
+	 */
+	$text_value = get_post_meta( $post->ID, 'ct_tracks_bold_button_two_key', true );
+
+	$link_value = get_post_meta( $post->ID, 'ct_tracks_bold_button_two_link_key', true );
+
+	echo '
+		<label>Button text
+			<input type="text" class="regular-text" id="ct_tracks_bold_button_two" name="ct_tracks_bold_button_two" value="' . sanitize_text_field( $text_value ) . '" />
+		</label>';
+
+	echo '
+		<label>Button URL
+			<input type="url" class="regular-text" id="ct_tracks_bold_button_two_link" name="ct_tracks_bold_button_two_link" value="' . esc_url( $link_value ) . '" />
+		</label>';
+}
+
+/*
+ * Background Image meta box
+ */
+function ct_tracks_bold_bg_image_callback( $post ) {
+
+	// Add an nonce field so we can check for it later.
+	wp_nonce_field( 'ct_tracks_bold_bg_image', 'ct_tracks_bold_bg_image_nonce' );
+
+	/*
+	 * Use get_post_meta() to retrieve an existing value
+	 * from the database and use the value for the form.
+	 */
+	$value = get_post_meta( $post->ID, 'ct_tracks_bold_bg_image_key', true );
+
+	// url input
+	echo '<input type="url" class="regular-text" id="ct_tracks_bold_bg_image" name="ct_tracks_bold_bg_image" value="' . esc_url( $value ) . '" />';
+
+	// upload button
+	echo '<input type="button" id="bg-image-upload" class="button-primary" value="' . __( 'Upload Image', 'tracks' ) . '" />';
+
+
 }
