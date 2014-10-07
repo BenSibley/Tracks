@@ -30,50 +30,28 @@ function ct_tracks_bold_meta_boxes() {
 			'normal',
 			'high'
 		);
+		add_meta_box(
+			'ct_tracks_bold_description',
+			__( 'Description', 'tracks' ),
+			'ct_tracks_bold_description_callback',
+			'page',
+			'normal',
+			'high'
+		);
+		add_meta_box(
+			'ct_tracks_bold_button_one',
+			__( 'Button 1', 'tracks' ),
+			'ct_tracks_bold_button_one_callback',
+			'page',
+			'normal',
+			'high'
+		);
 	}
 }
 add_action( 'add_meta_boxes', 'ct_tracks_bold_meta_boxes' );
 
 /**
- * Prints the box content.
- *
- * @param WP_Post $post The object for the current post.
- */
-function ct_tracks_bold_heading_callback( $post ) {
-
-	// Add an nonce field so we can check for it later.
-	wp_nonce_field( 'ct_tracks_bold_heading', 'ct_tracks_bold_heading_nonce' );
-
-	/*
-	 * Use get_post_meta() to retrieve an existing value
-	 * from the database and use the value for the form.
-	 */
-	$value = get_post_meta( $post->ID, 'ct_tracks_bold_heading_key', true );
-
-	echo '<input type="text" class="regular-text" id="ct_tracks_bold_heading" name="ct_tracks_bold_heading" value="' . sanitize_text_field( $value ) . '" />';
-}
-
-/**
- * Prints the box content.
- *
- * @param WP_Post $post The object for the current post.
- */
-function ct_tracks_bold_sub_heading_callback( $post ) {
-
-	// Add an nonce field so we can check for it later.
-	wp_nonce_field( 'ct_tracks_bold_sub_heading', 'ct_tracks_bold_sub_heading_nonce' );
-
-	/*
-	 * Use get_post_meta() to retrieve an existing value
-	 * from the database and use the value for the form.
-	 */
-	$value = get_post_meta( $post->ID, 'ct_tracks_bold_sub_heading_key', true );
-
-	echo '<input type="text" class="regular-text" id="ct_tracks_bold_sub_heading" name="ct_tracks_bold_sub_heading" value="' . sanitize_text_field( $value ) . '" />';
-}
-
-/**
- * When the post is saved, saves our custom data.
+ * Saves the meta boxes
  *
  * @param int $post_id The ID of the post being saved.
  */
@@ -90,7 +68,7 @@ function ct_tracks_bold_save_data( $post_id ) {
 	}
 
 	// array of meta box IDs
-	$meta_boxes = array( 'ct_tracks_bold_heading', 'ct_tracks_bold_sub_heading' );
+	$meta_boxes = array( 'ct_tracks_bold_heading', 'ct_tracks_bold_sub_heading', 'ct_tracks_bold_description', 'ct_tracks_bold_button_one' );
 
 	foreach( $meta_boxes as $meta_box ){
 
@@ -103,15 +81,112 @@ function ct_tracks_bold_save_data( $post_id ) {
 				// Make sure heading value is set
 				if ( isset( $_POST[ $meta_box ] ) ) {
 
-					// sanitize user input.
-					$clean_data = sanitize_text_field( $_POST[ $meta_box ] );
+					/* Sanitize */
 
-					// Update the meta field in the database.
+					// if description
+					if( $meta_box == 'ct_tracks_bold_description' ) {
+
+						// sanitize user input.
+						$clean_data = esc_textarea( $_POST[ $meta_box ] );
+
+					} elseif( $meta_box == 'ct_tracks_bold_button_one' ) {
+
+						// sanitize button text
+						$clean_data = sanitize_text_field( $_POST[ $meta_box ] );
+
+						// sanitize the button url
+						$clean_data_secondary = esc_url_raw( $_POST[ $meta_box . '_link' ]);
+
+					} else {
+
+						// sanitize user input.
+						$clean_data = sanitize_text_field( $_POST[ $meta_box ] );
+					}
+
+					/* Update */
+
+					// update meta boxes
 					update_post_meta( $post_id, $meta_box . '_key', $clean_data );
+
+					// update second url value in button one
+					if( $meta_box == 'ct_tracks_bold_button_one' ) {
+						update_post_meta( $post_id, $meta_box . '_link_key', $clean_data_secondary );
+					}
 				}
 			}
 		}
 	}
-
 }
 add_action( 'save_post', 'ct_tracks_bold_save_data' );
+
+/*
+ * Heading meta box
+ */
+function ct_tracks_bold_heading_callback( $post ) {
+
+	// Add an nonce field so we can check for it later.
+	wp_nonce_field( 'ct_tracks_bold_heading', 'ct_tracks_bold_heading_nonce' );
+
+	/*
+	 * Use get_post_meta() to retrieve an existing value
+	 * from the database and use the value for the form.
+	 */
+	$value = get_post_meta( $post->ID, 'ct_tracks_bold_heading_key', true );
+
+	echo '<input type="text" class="regular-text" id="ct_tracks_bold_heading" name="ct_tracks_bold_heading" value="' . sanitize_text_field( $value ) . '" />';
+}
+
+/*
+ * Sub-heading meta box
+ */
+function ct_tracks_bold_sub_heading_callback( $post ) {
+
+	// Add an nonce field so we can check for it later.
+	wp_nonce_field( 'ct_tracks_bold_sub_heading', 'ct_tracks_bold_sub_heading_nonce' );
+
+	/*
+	 * Use get_post_meta() to retrieve an existing value
+	 * from the database and use the value for the form.
+	 */
+	$value = get_post_meta( $post->ID, 'ct_tracks_bold_sub_heading_key', true );
+
+	echo '<input type="text" class="regular-text" id="ct_tracks_bold_sub_heading" name="ct_tracks_bold_sub_heading" value="' . sanitize_text_field( $value ) . '" />';
+}
+
+/*
+ * Description meta box
+ */
+function ct_tracks_bold_description_callback( $post ) {
+
+	// Add an nonce field so we can check for it later.
+	wp_nonce_field( 'ct_tracks_bold_description', 'ct_tracks_bold_description_nonce' );
+
+	/*
+	 * Use get_post_meta() to retrieve an existing value
+	 * from the database and use the value for the form.
+	 */
+	$value = get_post_meta( $post->ID, 'ct_tracks_bold_description_key', true );
+
+	echo '<textarea id="ct_tracks_bold_description" name="ct_tracks_bold_description" rows="6">' . esc_textarea( $value ) . '</textarea>';
+}
+
+/*
+ * Description meta box
+ */
+function ct_tracks_bold_button_one_callback( $post ) {
+
+	// Add an nonce field so we can check for it later.
+	wp_nonce_field( 'ct_tracks_bold_button_one', 'ct_tracks_bold_button_one_nonce' );
+
+	/*
+	 * Use get_post_meta() to retrieve an existing value
+	 * from the database and use the value for the form.
+	 */
+	$text_value = get_post_meta( $post->ID, 'ct_tracks_bold_button_one_key', true );
+
+	$link_value = get_post_meta( $post->ID, 'ct_tracks_bold_button_one_link_key', true );
+
+	echo '<input type="text" class="regular-text" id="ct_tracks_bold_button_one" name="ct_tracks_bold_button_one" value="' . sanitize_text_field( $text_value ) . '" />';
+
+	echo '<input type="url" class="regular-text" id="ct_tracks_bold_button_one_link" name="ct_tracks_bold_button_one_link" value="' . esc_url( $link_value ) . '" />';
+}
