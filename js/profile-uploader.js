@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 // Uploading files
     var file_frame;
 
-    $('#user-profile-upload').on('click', function( event ){
+    $('#user-profile-upload, #bg-image-upload').on('click', function( event ){
 
         event.preventDefault();
 

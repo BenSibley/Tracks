@@ -71,6 +71,12 @@ function ct_tracks_enqueue_admin_styles($hook){
 			// enqueue admin JS file
 			wp_enqueue_script('admin', get_template_directory_uri() . '/js/build/admin.min.js', array('jquery'),'', true);
 		}
+
+		// Enqueues all scripts, styles, settings, and templates necessary to use media JavaScript APIs.
+		wp_enqueue_media();
+
+		// enqueue the JS needed to utilize media uploader on profile image upload
+		wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js#ct_tracks_asyncload');
 	}
 	// Profile (and edit other user)
 	if('profile.php' == $hook || 'user-edit.php' == $hook){
