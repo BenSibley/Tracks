@@ -254,3 +254,26 @@
     margin-right: 12px;
   }
 }
+
+
+/* Styles for Bold Template */
+
+#ct_tracks_bold_button_one,
+#ct_tracks_bold_button_two {
+
+  label {
+    display: block;
+    font-weight: 700;
+    margin: 12px 0;
+  }
+  input {
+    margin-left: 6px;
+    font-weight: 400;
+  }
+}
+#ct_tracks_bold_bg_image {
+
+  input {
+    margin-right: 6px;
+  }
+}

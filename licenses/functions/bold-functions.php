@@ -5,13 +5,21 @@
  */
 function ct_tracks_bold_meta_boxes() {
 
+	// get post object
 	global $post;
 
+	// if brand new page (Add New), no data in database so abort
+	if( $post->post_date_gmt == '0000-00-00 00:00:00' ) {
+		return;
+	}
+
+	// get the page id
 	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 
+	// get the template currently used by the page
 	$template_file = get_post_meta( $post_id, '_wp_page_template', TRUE );
 
-	// check for a template type
+	// if it's using the Bold template
 	if ( $template_file == 'templates/bold.php' ) {
 
 		add_meta_box(
@@ -154,7 +162,7 @@ function ct_tracks_bold_heading_callback( $post ) {
 	 */
 	$value = get_post_meta( $post->ID, 'ct_tracks_bold_heading_key', true );
 
-	echo '<input type="text" class="regular-text" id="ct_tracks_bold_heading" name="ct_tracks_bold_heading" value="' . sanitize_text_field( $value ) . '" />';
+	echo '<input type="text" class="large-text" id="ct_tracks_bold_heading" name="ct_tracks_bold_heading" value="' . sanitize_text_field( $value ) . '" />';
 }
 
 /*
@@ -171,7 +179,7 @@ function ct_tracks_bold_sub_heading_callback( $post ) {
 	 */
 	$value = get_post_meta( $post->ID, 'ct_tracks_bold_sub_heading_key', true );
 
-	echo '<input type="text" class="regular-text" id="ct_tracks_bold_sub_heading" name="ct_tracks_bold_sub_heading" value="' . sanitize_text_field( $value ) . '" />';
+	echo '<input type="text" class="large-text" id="ct_tracks_bold_sub_heading" name="ct_tracks_bold_sub_heading" value="' . sanitize_text_field( $value ) . '" />';
 }
 
 /*
@@ -188,7 +196,7 @@ function ct_tracks_bold_description_callback( $post ) {
 	 */
 	$value = get_post_meta( $post->ID, 'ct_tracks_bold_description_key', true );
 
-	echo '<textarea id="ct_tracks_bold_description" name="ct_tracks_bold_description" rows="6">' . esc_textarea( $value ) . '</textarea>';
+	echo '<textarea id="ct_tracks_bold_description" name="ct_tracks_bold_description" class="large-text" rows="6">' . esc_textarea( $value ) . '</textarea>';
 }
 
 /*
@@ -208,12 +216,12 @@ function ct_tracks_bold_button_one_callback( $post ) {
 	$link_value = get_post_meta( $post->ID, 'ct_tracks_bold_button_one_link_key', true );
 
 	echo '
-		<label>Button text
+		<label>Button text:
 			<input type="text" class="regular-text" id="ct_tracks_bold_button_one" name="ct_tracks_bold_button_one" value="' . sanitize_text_field( $text_value ) . '" />
 		</label>';
 
 	echo '
-		<label>Button URL
+		<label>Button URL:
 			<input type="url" class="regular-text" id="ct_tracks_bold_button_one_link" name="ct_tracks_bold_button_one_link" value="' . esc_url( $link_value ) . '" />
 		</label>';
 }
@@ -235,12 +243,12 @@ function ct_tracks_bold_button_two_callback( $post ) {
 	$link_value = get_post_meta( $post->ID, 'ct_tracks_bold_button_two_link_key', true );
 
 	echo '
-		<label>Button text
+		<label>Button text:
 			<input type="text" class="regular-text" id="ct_tracks_bold_button_two" name="ct_tracks_bold_button_two" value="' . sanitize_text_field( $text_value ) . '" />
 		</label>';
 
 	echo '
-		<label>Button URL
+		<label>Button URL:
 			<input type="url" class="regular-text" id="ct_tracks_bold_button_two_link" name="ct_tracks_bold_button_two_link" value="' . esc_url( $link_value ) . '" />
 		</label>';
 }

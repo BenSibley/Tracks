@@ -263,3 +263,20 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 .ct_tracks_video_display_container input {
   margin-right: 12px;
 }
+
+/* Styles for Bold Template */
+#ct_tracks_bold_button_one label,
+#ct_tracks_bold_button_two label {
+  display: block;
+  font-weight: 700;
+  margin: 12px 0;
+}
+#ct_tracks_bold_button_one input,
+#ct_tracks_bold_button_two input {
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+#ct_tracks_bold_bg_image input {
+  margin-right: 6px;
+}
