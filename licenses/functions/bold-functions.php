@@ -8,8 +8,8 @@ function ct_tracks_bold_meta_boxes() {
 	// get post object
 	global $post;
 
-	// if brand new page (Add New), no data in database so abort
-	if( $post->post_date_gmt == '0000-00-00 00:00:00' ) {
+	// if adding a new page or not a page, abort
+	if( ct_tracks_is_edit_page('new') || $post->post_type != 'page' ) {
 		return;
 	}
 
