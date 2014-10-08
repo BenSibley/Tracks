@@ -697,3 +697,49 @@ function ct_tracks_is_edit_page($new_edit = null){
 	else // check for either new or edit
 		return in_array( $pagenow, array( 'post.php', 'post-new.php' ) );
 }
+
+function ct_tracks_change_preview_button( $translation, $text ) {
+
+	if ( $text == 'Preview' ) {
+		return 'Preview & Style';
+	}
+	if ( $text == 'Preview Changes' ) {
+		return 'Preview & Style';
+	}
+
+	return $translation;
+}
+
+function ct_tracks_show_customizer_template_preview( $url ) {
+
+	// get post object
+	global $post;
+
+	// if editing a page
+	if( ct_tracks_is_edit_page('edit') && $post->post_type == 'page' ) {
+
+		// get the page id
+		$post_id = $_POST['post_ID'];
+
+		// get the template currently used by the page
+		$template_file = get_post_meta( $post_id, '_wp_page_template', true );
+
+		// if it's using the Bold template
+		if ( $template_file == 'templates/bold.php' ) {
+
+			// create argument array
+			$args = array();
+
+			// add url to args array
+			$args['url'] = $url;
+
+			// add the return url for when customizer closed
+			$args['return'] = get_edit_post_link( get_post()->ID, 'raw' );
+
+			// construct new url for preview
+			$url = admin_url( 'customize.php' ) . '?' . http_build_query( $args );
+		}
+	}
+	return $url;
+}
+add_filter( 'preview_post_link', 'ct_tracks_show_customizer_template_preview' );

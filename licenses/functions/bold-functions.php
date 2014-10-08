@@ -84,6 +84,9 @@ function ct_tracks_bold_meta_boxes() {
 
 		// remove the editor
 		remove_post_type_support( 'page', 'editor' );
+
+		// change the preview button text
+		add_filter( 'gettext', 'ct_tracks_change_preview_button', 10, 2 );
 	}
 }
 add_action( 'add_meta_boxes', 'ct_tracks_bold_meta_boxes' );
