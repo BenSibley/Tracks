@@ -22,6 +22,7 @@ function ct_tracks_bold_meta_boxes() {
 	// if it's using the Bold template
 	if ( $template_file == 'templates/bold.php' ) {
 
+		// add the required meta boxes for UGC
 		add_meta_box(
 			'ct_tracks_bold_heading',
 			__( 'Heading', 'tracks' ),
@@ -70,6 +71,19 @@ function ct_tracks_bold_meta_boxes() {
 			'normal',
 			'high'
 		);
+
+		// remove all unnecessary meta boxes to reduce clutter
+		remove_meta_box('commentstatusdiv', 'page', 'normal');
+		remove_meta_box('postimagediv', 'page', 'side');
+		remove_meta_box('postexcerpt', 'page', 'normal');
+		remove_meta_box('postcustom', 'page', 'normal');
+		remove_meta_box('commentsdiv', 'page', 'normal');
+		remove_meta_box('postimagediv', 'page', 'side');
+		remove_meta_box('slugdiv', 'page', 'normal');
+		remove_meta_box('authordiv', 'page', 'normal');
+
+		// remove the editor
+		remove_post_type_support( 'page', 'editor' );
 	}
 }
 add_action( 'add_meta_boxes', 'ct_tracks_bold_meta_boxes' );
