@@ -737,9 +737,37 @@ function ct_tracks_show_customizer_template_preview( $url ) {
 			$args['return'] = get_edit_post_link( get_post()->ID, 'raw' );
 
 			// construct new url for preview
-			$url = admin_url( 'customize.php' ) . '?' . http_build_query( $args );
+			$url = admin_url( 'customize.php' ) . '?' . http_build_query( $args ) . '?template=bold';
 		}
 	}
 	return $url;
 }
 add_filter( 'preview_post_link', 'ct_tracks_show_customizer_template_preview' );
+
+// reconstruct customizer for Bold template preview
+function ct_tracks_remove_customizer_content( $wp_customize ) {
+
+
+//	echo strpos( $_GET['return'], 'template=bold' );
+
+//	var_dump( $_GET );
+
+	/*
+	 * When coming from editing a page, the $_GET variable contains a return url
+	 * the return url contains the name of the template the page is using
+	 * template name added to url in ct_tracks_show_customizer_template_preview()
+	 */
+	if( array_key_exists( 'return', $_GET ) ) {
+
+		if ( strpos( $_GET['return'], 'template=bold' ) ) {
+
+			$wp_customize->remove_section( 'title_tagline' );
+			$wp_customize->remove_section( 'ct_tracks_tagline_display' );
+			$wp_customize->remove_section( 'ct-upload' );
+			$wp_customize->remove_section( 'ct_tracks_social_icons' );
+			$wp_customize->remove_section( 'ct_tracks_search_input' );
+			$wp_customize->remove_section( 'ct_tracks_post_meta_display' );
+		}
+	}
+}
+add_action( 'customize_register', 'ct_tracks_remove_customizer_content', 999 );
