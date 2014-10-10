@@ -744,79 +744,92 @@ function ct_tracks_show_customizer_template_preview( $url ) {
 }
 add_filter( 'preview_post_link', 'ct_tracks_show_customizer_template_preview' );
 
-// reconstruct customizer for Bold template preview
-function ct_tracks_remove_customizer_content( $wp_customize ) {
+// update the customizer on Template page previews
+function ct_tracks_customizer_check( $wp_customize ) {
 
 	/*
-	 * When coming from editing a page, the $_GET variable contains a return url
-	 * the return url contains the name of the template the page is using
-	 * template name added to url in ct_tracks_show_customizer_template_preview()
+	 * When coming from /edit.php, the $_GET variable contains a return url.
+	 * The return url may contain the name of a template being used.
+	 * The template name is added to the url by ct_tracks_show_customizer_template_preview()
 	 */
 
-	// if return key is present
-	if( array_key_exists( 'return', $_GET ) ) {
+	// if 'return' key is present
+	if( isset( $_GET['return'] ) ) {
 
-		// and is contains bold template
+		// and bold template preview
 		if ( strpos( $_GET['return'], 'template=bold' ) ) {
 
-			// remove all default and custom sections
-			$wp_customize->remove_section( 'title_tagline' );
-			$wp_customize->remove_section( 'ct_tracks_tagline_display' );
-			$wp_customize->remove_section( 'ct-upload' );
-			$wp_customize->remove_section( 'ct_tracks_social_icons' );
-			$wp_customize->remove_section( 'ct_tracks_search_input' );
-			$wp_customize->remove_section( 'ct_tracks_post_meta_display' );
-			$wp_customize->remove_section( 'ct_tracks_comments_display' );
-			$wp_customize->remove_section( 'ct-footer-text' );
-			$wp_customize->remove_section( 'ct-custom-css' );
-			$wp_customize->remove_section( 'ct_tracks_premium_layouts' );
-			$wp_customize->remove_section( 'ct_tracks_additional_options' );
-			$wp_customize->remove_section( 'ct_tracks_background_image' );
-			$wp_customize->remove_section( 'ct_tracks_background_texture' );
-			$wp_customize->remove_section( 'ct_tracks_header_color' );
-			$wp_customize->remove_section( 'nav' );
-			$wp_customize->remove_section( 'static_front_page' );
-			$wp_customize->remove_section( 'widgets' );
-			$wp_customize->remove_panel( 'widgets' );
-
-			/* Add Bold Template sections */
-
-			// section
-			$wp_customize->add_section( 'ct_tracks_bold_heading', array(
-				'title'      => __( 'Heading', 'tracks' ),
-				'priority'   => 10,
-				'capability' => 'edit_theme_options'
-			) );
-			// setting - color
-			$wp_customize->add_setting( 'ct_tracks_bold_heading_color_setting', array(
-				'type'              => 'theme_mod',
-				'capability'        => 'edit_theme_options',
-//				'sanitize_callback' => 'esc_textarea',
-			) );
-			// control - color
-			$wp_customize->add_control( new WP_Customize_Color_Control(
-				$wp_customize, 'ct_tracks_bold_heading_color_setting', array(
-					'label'          => __( 'Color', 'tracks' ),
-					'section'        => 'ct_tracks_bold_heading',
-					'settings'       => 'ct_tracks_bold_heading_color_setting'
-				)
-			) );
-			// setting - font size
-			$wp_customize->add_setting( 'ct_tracks_bold_heading_size_setting', array(
-				'type'              => 'theme_mod',
-				'capability'        => 'edit_theme_options',
-//				'sanitize_callback' => 'esc_textarea',
-			) );
-			// control - font size
-			$wp_customize->add_control( new ct_tracks_number_input_control(
-				$wp_customize, 'ct_tracks_bold_heading_size_setting', array(
-					'label' => __('Font Size', 'tracks'),
-					'section' => 'ct_tracks_bold_heading',
-					'settings' => 'ct_tracks_bold_heading_size_setting',
-					'type' => 'number',
-				)
-			) );
+			add_action( 'customize_register', 'ct_tracks_bold_update_customizer_content', 999 );
 		}
 	}
 }
-add_action( 'customize_register', 'ct_tracks_remove_customizer_content', 999 );
+add_action( 'customize_register', 'ct_tracks_customizer_check', 10 );
+
+
+function ct_tracks_bold_update_customizer_content( $wp_customize ) {
+
+	// remove all default and custom sections
+	$wp_customize->remove_section( 'title_tagline' );
+	$wp_customize->remove_section( 'ct_tracks_tagline_display' );
+	$wp_customize->remove_section( 'ct-upload' );
+	$wp_customize->remove_section( 'ct_tracks_social_icons' );
+	$wp_customize->remove_section( 'ct_tracks_search_input' );
+	$wp_customize->remove_section( 'ct_tracks_post_meta_display' );
+	$wp_customize->remove_section( 'ct_tracks_comments_display' );
+	$wp_customize->remove_section( 'ct-footer-text' );
+	$wp_customize->remove_section( 'ct-custom-css' );
+	$wp_customize->remove_section( 'ct_tracks_premium_layouts' );
+	$wp_customize->remove_section( 'ct_tracks_additional_options' );
+	$wp_customize->remove_section( 'ct_tracks_background_image' );
+	$wp_customize->remove_section( 'ct_tracks_background_texture' );
+	$wp_customize->remove_section( 'ct_tracks_header_color' );
+	$wp_customize->remove_section( 'nav' );
+	$wp_customize->remove_section( 'static_front_page' );
+	$wp_customize->remove_section( 'widgets' );
+	$wp_customize->remove_panel( 'widgets' );
+
+	/* Add Bold Template sections & controls */
+
+	// section
+	$wp_customize->add_section( 'ct_tracks_bold_heading', array(
+		'title'      => __( 'Heading', 'tracks' ),
+		'priority'   => 10,
+		'capability' => 'edit_theme_options',
+	) );
+	// setting - added in...
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'ct_tracks_bold_heading_color_control', array(
+			'label'           => __( 'Color', 'tracks' ),
+			'section'         => 'ct_tracks_bold_heading',
+			'settings'        => 'ct_tracks_bold_heading_color_setting'
+		)
+	) );
+//			// setting - font size
+//			$wp_customize->add_setting( 'ct_tracks_bold_heading_size_setting', array(
+//				'type'              => 'theme_mod',
+//				'capability'        => 'edit_theme_options',
+//				'sanitize_callback' => 'abs_int',
+//			) );
+//			// control - font size
+//			$wp_customize->add_control( new ct_tracks_number_input_control(
+//				$wp_customize, 'ct_tracks_bold_heading_size_setting', array(
+//					'label'           => __( 'Font Size', 'tracks' ),
+//					'section'         => 'ct_tracks_bold_heading',
+//					'settings'        => 'ct_tracks_bold_heading_size_setting',
+//					'type'            => 'number'
+//				)
+//			) );
+
+}
+
+// settings CANNOT be conditionally added
+function ct_trackadsfasdf( $wp_customize ) {
+
+	// setting - color
+	$wp_customize->add_setting( 'ct_tracks_bold_heading_color_setting', array(
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+}
+add_action( 'customize_register', 'ct_trackadsfasdf' );
