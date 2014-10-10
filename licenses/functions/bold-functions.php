@@ -81,6 +81,7 @@ function ct_tracks_bold_meta_boxes() {
 		remove_meta_box('postimagediv', 'page', 'side');
 		remove_meta_box('slugdiv', 'page', 'normal');
 		remove_meta_box('authordiv', 'page', 'normal');
+		remove_meta_box('revisionsdiv', 'page', 'normal');
 
 		// remove the editor
 		remove_post_type_support( 'page', 'editor' );
