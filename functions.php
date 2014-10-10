@@ -747,20 +747,19 @@ add_filter( 'preview_post_link', 'ct_tracks_show_customizer_template_preview' );
 // reconstruct customizer for Bold template preview
 function ct_tracks_remove_customizer_content( $wp_customize ) {
 
-
-//	echo strpos( $_GET['return'], 'template=bold' );
-
-//	var_dump( $_GET );
-
 	/*
 	 * When coming from editing a page, the $_GET variable contains a return url
 	 * the return url contains the name of the template the page is using
 	 * template name added to url in ct_tracks_show_customizer_template_preview()
 	 */
+
+	// if return key is present
 	if( array_key_exists( 'return', $_GET ) ) {
 
+		// and is contains bold template
 		if ( strpos( $_GET['return'], 'template=bold' ) ) {
 
+			// remove all default and custom sections
 			$wp_customize->remove_section( 'title_tagline' );
 			$wp_customize->remove_section( 'ct_tracks_tagline_display' );
 			$wp_customize->remove_section( 'ct-upload' );
@@ -779,6 +778,8 @@ function ct_tracks_remove_customizer_content( $wp_customize ) {
 			$wp_customize->remove_section( 'static_front_page' );
 			$wp_customize->remove_section( 'widgets' );
 			$wp_customize->remove_panel( 'widgets' );
+
+			/* Add Bold Template sections */
 
 			// section
 			$wp_customize->add_section( 'ct_tracks_bold_heading', array(
