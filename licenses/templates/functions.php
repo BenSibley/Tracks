@@ -19,6 +19,7 @@ function ct_tracks_is_edit_page($new_edit = null){
 		return in_array( $pagenow, array( 'post.php', 'post-new.php' ) );
 }
 
+// adds meta boxes for template pages
 function ct_tracks_meta_box_check() {
 
 	// get post object
@@ -110,7 +111,11 @@ function ct_tracks_customizer_check( $wp_customize ) {
 		// and bold template preview
 		if ( strpos( $_GET['return'], 'template=bold' ) ) {
 
+			// update the customizer content
 			add_action( 'customize_register', 'ct_tracks_bold_update_customizer_content', 999 );
+
+			// remove the Premium Upgrades ad
+			remove_action('customize_controls_print_footer_scripts', 'ct_tracks_customize_preview_js');
 		}
 	}
 }
