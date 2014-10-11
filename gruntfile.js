@@ -58,7 +58,7 @@ module.exports = function(grunt) {
                     'licenses/css/full-width-images.css': 'licenses/css/full-width-images.scss',
                     'licenses/css/two-column.css': 'licenses/css/two-column.scss',
                     'licenses/css/two-column-images.css': 'licenses/css/two-column-images.scss',
-                    'styles/templates/bold.css': 'sass/templates/bold.scss'
+                    'licenses/templates/bold/bold.css': 'sass/templates/bold.scss'
                 }
             }
         },
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
                     'licenses/css/full-width-images.css': 'licenses/css/full-width-images.css',
                     'licenses/css/two-column.css': 'licenses/css/two-column.css',
                     'licenses/css/two-column-images.css': 'licenses/css/two-column-images.css',
-                    'styles/templates/bold.css': 'styles/templates/bold.css'
+                    'licenses/templates/bold/bold.css': 'licenses/templates/bold/bold.css'
                 }
             }
         },
