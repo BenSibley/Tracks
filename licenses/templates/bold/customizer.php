@@ -109,6 +109,215 @@ function ct_tracks_bold_update_customizer_content( $wp_customize ) {
 		)
 	) );
 
+	/* Button 1 */
+
+	// section - button 1
+	$wp_customize->add_section( 'ct_tracks_bold_button_one', array(
+		'title'      => __( 'Button 1', 'tracks' ),
+		'priority'   => 40,
+		'capability' => 'edit_theme_options',
+	) );
+	// control - color
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'ct_tracks_bold_button_one_color_control', array(
+			'label'           => __( 'Color', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_one',
+			'settings'        => 'ct_tracks_bold_button_one_color_setting'
+		)
+	) );
+	// control - font size
+	$wp_customize->add_control( new ct_tracks_number_input_control(
+		$wp_customize, 'ct_tracks_bold_button_one_size_setting', array(
+			'label'           => __( 'Font Size', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_one',
+			'settings'        => 'ct_tracks_bold_button_one_size_setting',
+			'type'            => 'number'
+		)
+	) );
+	// control - background color
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'ct_tracks_bold_button_one_background_color_control', array(
+			'label'           => __( 'Background Color', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_one',
+			'settings'        => 'ct_tracks_bold_button_one_background_color_setting'
+		)
+	) );
+	// control - background opacity
+	$wp_customize->add_control( new ct_tracks_number_input_control(
+		$wp_customize, 'ct_tracks_bold_button_one_background_opacity_control', array(
+			'label'           => __( 'Background Opacity', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_one',
+			'settings'        => 'ct_tracks_bold_button_one_background_opacity_setting'
+		)
+	) );
+	// control - border color
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'ct_tracks_bold_button_one_border_color_control', array(
+			'label'           => __( 'Border Color', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_one',
+			'settings'        => 'ct_tracks_bold_button_one_border_color_setting'
+		)
+	) );
+	// control - border width
+	$wp_customize->add_control( new ct_tracks_number_input_control(
+		$wp_customize, 'ct_tracks_bold_button_one_border_width_control', array(
+			'label'           => __( 'Border Width', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_one',
+			'settings'        => 'ct_tracks_bold_button_one_border_width_setting'
+		)
+	) );
+	// control - border style
+	$wp_customize->add_control( new ct_tracks_Dropdown_Control(
+		$wp_customize, 'ct_tracks_bold_button_one_border_style_control', array(
+			'label'           => __( 'Border Style', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_one',
+			'settings'        => 'ct_tracks_bold_button_one_border_style_setting',
+			'choices'         => array(
+				'solid' => __('Solid', 'tracks'),
+				'dashed' => __('Dashed', 'tracks'),
+				'dotted' => __('Dotted', 'tracks'),
+				'double' => __('Double', 'tracks'),
+				'groove' => __('Groove', 'tracks'),
+				'ridge' => __('Ridge', 'tracks'),
+				'inset' => __('Inset', 'tracks'),
+				'outset' => __('Outset', 'tracks')
+			)
+		)
+	) );
+
+	/* Button 2 */
+
+	// section - button 2
+	$wp_customize->add_section( 'ct_tracks_bold_button_two', array(
+		'title'      => __( 'Button 2', 'tracks' ),
+		'priority'   => 50,
+		'capability' => 'edit_theme_options',
+	) );
+	// control - color
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'ct_tracks_bold_button_two_color_control', array(
+			'label'           => __( 'Color', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_two',
+			'settings'        => 'ct_tracks_bold_button_two_color_setting'
+		)
+	) );
+	// control - font size
+	$wp_customize->add_control( new ct_tracks_number_input_control(
+		$wp_customize, 'ct_tracks_bold_button_two_size_setting', array(
+			'label'           => __( 'Font Size', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_two',
+			'settings'        => 'ct_tracks_bold_button_two_size_setting',
+			'type'            => 'number'
+		)
+	) );
+	// control - background color
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'ct_tracks_bold_button_two_background_color_control', array(
+			'label'           => __( 'Background Color', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_two',
+			'settings'        => 'ct_tracks_bold_button_two_background_color_setting'
+		)
+	) );
+	// control - background opacity
+	$wp_customize->add_control( new ct_tracks_number_input_control(
+		$wp_customize, 'ct_tracks_bold_button_two_background_opacity_control', array(
+			'label'           => __( 'Background Opacity', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_two',
+			'settings'        => 'ct_tracks_bold_button_two_background_opacity_setting'
+		)
+	) );
+	// control - border color
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'ct_tracks_bold_button_two_border_color_control', array(
+			'label'           => __( 'Border Color', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_two',
+			'settings'        => 'ct_tracks_bold_button_two_border_color_setting'
+		)
+	) );
+	// control - border width
+	$wp_customize->add_control( new ct_tracks_number_input_control(
+		$wp_customize, 'ct_tracks_bold_button_two_border_width_control', array(
+			'label'           => __( 'Border Width', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_two',
+			'settings'        => 'ct_tracks_bold_button_two_border_width_setting'
+		)
+	) );
+	// control - border style
+	$wp_customize->add_control( new ct_tracks_Dropdown_Control(
+		$wp_customize, 'ct_tracks_bold_button_two_border_style_control', array(
+			'label'           => __( 'Border Style', 'tracks' ),
+			'section'         => 'ct_tracks_bold_button_two',
+			'settings'        => 'ct_tracks_bold_button_two_border_style_setting',
+			'choices'         => array(
+				'solid' => __('Solid', 'tracks'),
+				'dashed' => __('Dashed', 'tracks'),
+				'dotted' => __('Dotted', 'tracks'),
+				'double' => __('Double', 'tracks'),
+				'groove' => __('Groove', 'tracks'),
+				'ridge' => __('Ridge', 'tracks'),
+				'inset' => __('Inset', 'tracks'),
+				'outset' => __('Outset', 'tracks')
+			)
+		)
+	) );
+
+	/* Overlay */
+
+	// section - overlay
+	$wp_customize->add_section( 'ct_tracks_bold_overlay', array(
+		'title'      => __( 'Overlay', 'tracks' ),
+		'priority'   => 60,
+		'capability' => 'edit_theme_options',
+	) );
+	// control - color
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'ct_tracks_bold_overlay_color_control', array(
+			'label'           => __( 'Overlay Color', 'tracks' ),
+			'section'         => 'ct_tracks_bold_overlay',
+			'settings'        => 'ct_tracks_bold_overlay_color_setting'
+		)
+	) );
+	// control - overlay opacity
+	$wp_customize->add_control( new ct_tracks_number_input_control(
+		$wp_customize, 'ct_tracks_bold_overlay_opacity_control', array(
+			'label'           => __( 'Overlay Opacity', 'tracks' ),
+			'section'         => 'ct_tracks_bold_overlay',
+			'settings'        => 'ct_tracks_bold_overlay_opacity_setting'
+		)
+	) );
+
+	/* Background Image */
+
+	// section - background image
+	$wp_customize->add_section( 'ct_tracks_bold_background_image', array(
+		'title'      => __( 'Background Image', 'tracks' ),
+		'priority'   => 70,
+		'capability' => 'edit_theme_options',
+	) );
+	// control - position
+	$wp_customize->add_control( 'ct_tracks_bold_background_position_control', array(
+		'type'      => 'radio',
+		'label'     => __( 'Position', 'tracks' ),
+		'section'   => 'ct_tracks_bold_background_image',
+		'settings'  => 'ct_tracks_bold_background_position_setting',
+		'choices'   => array(
+			'fill'      =>  __('Fill screen', 'tracks'),
+			'fit'       =>  __('Fit to screen', 'tracks'),
+			'stretch'   =>  __('Stretch to fill screen', 'tracks')
+		),
+	) );
+	// control - effect
+	$wp_customize->add_control( 'ct_tracks_bold_background_effect_control', array(
+		'label'           => __( 'Background Effect', 'tracks' ),
+		'section'         => 'ct_tracks_bold_background_image',
+		'settings'        => 'ct_tracks_bold_background_effect_setting',
+		'type'            => 'radio',
+		'choices'         => array(
+			'none'  =>  __('none', 'tracks'),
+			'bw'    =>  __('Black & white', 'tracks'),
+			'blur'  =>  __('Blur', 'tracks')
+		)
+	) );
 }
 
 /*
@@ -124,14 +333,14 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color',
+		'sanitize_callback' => 'sanitize_hex_color'
 	) );
 	// setting - font size
 	$wp_customize->add_setting( 'ct_tracks_bold_heading_size_setting', array(
 		'default'           => '48',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int',
+		'sanitize_callback' => 'abs_int'
 	) );
 
 	/* Sub-heading */
@@ -141,14 +350,14 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color',
+		'sanitize_callback' => 'sanitize_hex_color'
 	) );
 	// setting - font size
 	$wp_customize->add_setting( 'ct_tracks_bold_sub_heading_size_setting', array(
 		'default'           => '37',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int',
+		'sanitize_callback' => 'abs_int'
 	) );
 
 	/* Description */
@@ -158,14 +367,152 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color',
+		'sanitize_callback' => 'sanitize_hex_color'
 	) );
 	// setting - font size
 	$wp_customize->add_setting( 'ct_tracks_bold_description_size_setting', array(
 		'default'           => '37',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int',
+		'sanitize_callback' => 'abs_int'
+	) );
+
+	/* Button 1 */
+
+	// setting - color
+	$wp_customize->add_setting( 'ct_tracks_bold_button_one_color_setting', array(
+		'default'           => '#ffffff',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+	// setting - font size
+	$wp_customize->add_setting( 'ct_tracks_bold_button_one_size_setting', array(
+		'default'           => '13',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'abs_int'
+	) );
+	// setting - background color
+	$wp_customize->add_setting( 'ct_tracks_bold_button_one_background_color_setting', array(
+		'default'           => '#E59E45',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+	// setting - background opacity
+	$wp_customize->add_setting( 'ct_tracks_bold_button_one_background_opacity_setting', array(
+		'default'           => '0',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'abs_int'
+	) );
+	// setting - border color
+	$wp_customize->add_setting( 'ct_tracks_bold_button_one_border_color_setting', array(
+		'default'           => '#ffffff',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+	// setting - border width
+	$wp_customize->add_setting( 'ct_tracks_bold_button_one_border_width_setting', array(
+		'default'           => '2',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'abs_int'
+	) );
+	// setting - border style
+	$wp_customize->add_setting( 'ct_tracks_bold_button_one_border_style_setting', array(
+		'default'           => 'solid',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+//		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+
+	/* Button 2 */
+
+	// setting - color
+	$wp_customize->add_setting( 'ct_tracks_bold_button_two_color_setting', array(
+		'default'           => '#ffffff',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+	// setting - font size
+	$wp_customize->add_setting( 'ct_tracks_bold_button_two_size_setting', array(
+		'default'           => '13',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'abs_int'
+	) );
+	// setting - background color
+	$wp_customize->add_setting( 'ct_tracks_bold_button_two_background_color_setting', array(
+		'default'           => '#E59E45',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+	// setting - background opacity
+	$wp_customize->add_setting( 'ct_tracks_bold_button_two_background_opacity_setting', array(
+		'default'           => '0',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'abs_int'
+	) );
+	// setting - border color
+	$wp_customize->add_setting( 'ct_tracks_bold_button_two_border_color_setting', array(
+		'default'           => '#ffffff',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+	// setting - border width
+	$wp_customize->add_setting( 'ct_tracks_bold_button_two_border_width_setting', array(
+		'default'           => '2',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'abs_int'
+	) );
+	// setting - border style
+	$wp_customize->add_setting( 'ct_tracks_bold_button_two_border_style_setting', array(
+		'default'           => 'solid',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+//		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+
+	/* Overlay */
+
+	// setting - overlay color
+	$wp_customize->add_setting( 'ct_tracks_bold_overlay_color_setting', array(
+		'default'           => '#222222',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+	// setting - overlay opacity
+	$wp_customize->add_setting( 'ct_tracks_bold_overlay_opacity_setting', array(
+		'default'           => '0.6',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'abs_int'
+	) );
+
+	/* Background Image */
+
+	// setting - background position
+	$wp_customize->add_setting( 'ct_tracks_bold_background_position_setting', array(
+		'default'           => 'fill',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options'
+//		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+	// setting - background effect
+	$wp_customize->add_setting( 'ct_tracks_bold_background_effect_setting', array(
+		'default'           => 'none',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+//		'sanitize_callback' => 'abs_int'
 	) );
 }
 add_action( 'customize_register', 'ct_tracks_bold_customizer_settings' );
