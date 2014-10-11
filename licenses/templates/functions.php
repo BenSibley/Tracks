@@ -1,27 +1,53 @@
 <?php
 
-/**
- * is_edit_page
- * function to check if the current page is a post edit page
- *
- * @param  string  $new_edit what page to check for accepts new - new post page ,edit - edit post page, null for either
- * @return boolean
- */
+// function to check if the current page is a post edit page
 function ct_tracks_is_edit_page($new_edit = null){
 
 	global $pagenow;
 
 	// make sure we are on the backend
-	if (!is_admin()) return false;
+	if (! is_admin() ) {
+		return false;
+	}
 
+	// returns what type of screen is active
 	if($new_edit == "edit")
-		return in_array( $pagenow, array( 'post.php',  ) );
-	elseif($new_edit == "new") //check for new post page
+		return in_array( $pagenow, array( 'post.php'  ) ); // post editor
+	elseif($new_edit == "new") // new post editor
 		return in_array( $pagenow, array( 'post-new.php' ) );
 	else // check for either new or edit
 		return in_array( $pagenow, array( 'post.php', 'post-new.php' ) );
 }
 
+function ct_tracks_meta_box_check() {
+
+	// get post object
+	global $post;
+
+	// if adding a new page or not a page, abort
+	if( ct_tracks_is_edit_page('new') || $post->post_type != 'page' ) {
+		return;
+	}
+
+	// get the page id
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+
+	// get the template currently used by the page
+	$template_file = get_post_meta( $post_id, '_wp_page_template', TRUE );
+
+	// if it's using the Bold template
+	if ( $template_file == 'templates/bold.php' ) {
+
+		// load Bold template meta boxes
+		add_action( 'add_meta_boxes', 'ct_tracks_bold_meta_boxes', 99 );
+
+		// change the preview button text
+		add_filter( 'gettext', 'ct_tracks_change_preview_button', 10, 2 );
+	}
+}
+add_action( 'add_meta_boxes', 'ct_tracks_meta_box_check', 1 );
+
+// changes the preview button text to say "Preview & Style"
 function ct_tracks_change_preview_button( $translation, $text ) {
 
 	if ( $text == 'Preview' ) {
@@ -34,12 +60,13 @@ function ct_tracks_change_preview_button( $translation, $text ) {
 	return $translation;
 }
 
+// Redirects page preview to load customizer in preview when preview button clicked
 function ct_tracks_show_customizer_template_preview( $url ) {
 
 	// get post object
 	global $post;
 
-	// if editing a page
+	// if editing an existing page
 	if( ct_tracks_is_edit_page('edit') && $post->post_type == 'page' ) {
 
 		// get the page id
@@ -87,4 +114,4 @@ function ct_tracks_customizer_check( $wp_customize ) {
 		}
 	}
 }
-add_action( 'customize_register', 'ct_tracks_customizer_check', 10 );
+add_action( 'customize_register', 'ct_tracks_customizer_check', 1 );

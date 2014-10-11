@@ -2,95 +2,74 @@
 
 /**
  * Adds the meta boxes for Bold Template
+ * called from ct_tracks_meta_box_check()
  */
 function ct_tracks_bold_meta_boxes() {
 
-	// get post object
-	global $post;
+	// add the required meta boxes for UGC
+	add_meta_box(
+		'ct_tracks_bold_heading',
+		__( 'Heading', 'tracks' ),
+		'ct_tracks_bold_heading_callback',
+		'page',
+		'normal',
+		'high'
+	);
+	add_meta_box(
+		'ct_tracks_bold_sub_heading',
+		__( 'Sub-heading', 'tracks' ),
+		'ct_tracks_bold_sub_heading_callback',
+		'page',
+		'normal',
+		'high'
+	);
+	add_meta_box(
+		'ct_tracks_bold_description',
+		__( 'Description', 'tracks' ),
+		'ct_tracks_bold_description_callback',
+		'page',
+		'normal',
+		'high'
+	);
+	add_meta_box(
+		'ct_tracks_bold_button_one',
+		__( 'Button 1', 'tracks' ),
+		'ct_tracks_bold_button_one_callback',
+		'page',
+		'normal',
+		'high'
+	);
+	add_meta_box(
+		'ct_tracks_bold_button_two',
+		__( 'Button 2', 'tracks' ),
+		'ct_tracks_bold_button_two_callback',
+		'page',
+		'normal',
+		'high'
+	);
+	add_meta_box(
+		'ct_tracks_bold_bg_image',
+		__( 'Background Image', 'tracks' ),
+		'ct_tracks_bold_bg_image_callback',
+		'page',
+		'normal',
+		'high'
+	);
 
-	// if adding a new page or not a page, abort
-	if( ct_tracks_is_edit_page('new') || $post->post_type != 'page' ) {
-		return;
-	}
+	// remove all unnecessary meta boxes to reduce clutter
+	remove_meta_box('commentstatusdiv', 'page', 'normal');
+	remove_meta_box('postimagediv', 'page', 'side');
+	remove_meta_box('postexcerpt', 'page', 'normal');
+	remove_meta_box('postcustom', 'page', 'normal');
+	remove_meta_box('commentsdiv', 'page', 'normal');
+	remove_meta_box('postimagediv', 'page', 'side');
+	remove_meta_box('slugdiv', 'page', 'normal');
+	remove_meta_box('authordiv', 'page', 'normal');
+	remove_meta_box('revisionsdiv', 'page', 'normal');
 
-	// get the page id
-	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-
-	// get the template currently used by the page
-	$template_file = get_post_meta( $post_id, '_wp_page_template', TRUE );
-
-	// if it's using the Bold template
-	if ( $template_file == 'templates/bold.php' ) {
-
-		// add the required meta boxes for UGC
-		add_meta_box(
-			'ct_tracks_bold_heading',
-			__( 'Heading', 'tracks' ),
-			'ct_tracks_bold_heading_callback',
-			'page',
-			'normal',
-			'high'
-		);
-		add_meta_box(
-			'ct_tracks_bold_sub_heading',
-			__( 'Sub-heading', 'tracks' ),
-			'ct_tracks_bold_sub_heading_callback',
-			'page',
-			'normal',
-			'high'
-		);
-		add_meta_box(
-			'ct_tracks_bold_description',
-			__( 'Description', 'tracks' ),
-			'ct_tracks_bold_description_callback',
-			'page',
-			'normal',
-			'high'
-		);
-		add_meta_box(
-			'ct_tracks_bold_button_one',
-			__( 'Button 1', 'tracks' ),
-			'ct_tracks_bold_button_one_callback',
-			'page',
-			'normal',
-			'high'
-		);
-		add_meta_box(
-			'ct_tracks_bold_button_two',
-			__( 'Button 2', 'tracks' ),
-			'ct_tracks_bold_button_two_callback',
-			'page',
-			'normal',
-			'high'
-		);
-		add_meta_box(
-			'ct_tracks_bold_bg_image',
-			__( 'Background Image', 'tracks' ),
-			'ct_tracks_bold_bg_image_callback',
-			'page',
-			'normal',
-			'high'
-		);
-
-		// remove all unnecessary meta boxes to reduce clutter
-		remove_meta_box('commentstatusdiv', 'page', 'normal');
-		remove_meta_box('postimagediv', 'page', 'side');
-		remove_meta_box('postexcerpt', 'page', 'normal');
-		remove_meta_box('postcustom', 'page', 'normal');
-		remove_meta_box('commentsdiv', 'page', 'normal');
-		remove_meta_box('postimagediv', 'page', 'side');
-		remove_meta_box('slugdiv', 'page', 'normal');
-		remove_meta_box('authordiv', 'page', 'normal');
-		remove_meta_box('revisionsdiv', 'page', 'normal');
-
-		// remove the editor
-		remove_post_type_support( 'page', 'editor' );
-
-		// change the preview button text
-		add_filter( 'gettext', 'ct_tracks_change_preview_button', 10, 2 );
-	}
+	// remove the editor
+	remove_post_type_support( 'page', 'editor' );
 }
-add_action( 'add_meta_boxes', 'ct_tracks_bold_meta_boxes' );
 
 /**
  * Saves the meta boxes

@@ -40,12 +40,12 @@ function ct_tracks_theme_setup() {
 	{
 		include $filename;
 	}
-	// add license/functions folder files
+	// add license/templates folder files
 	foreach (glob(trailingslashit( get_template_directory() ) . 'licenses/templates/*.php') as $filename)
 	{
 		include $filename;
 	}
-	// add license/functions folder files
+	// add license/templates/bold folder files
 	foreach (glob(trailingslashit( get_template_directory() ) . 'licenses/templates/bold/*.php') as $filename)
 	{
 		include $filename;
