@@ -31,7 +31,7 @@ function ct_tracks_meta_box_check() {
 	}
 
 	// get the page id
-	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+	$post_id = isset( $_GET['post'] ) ? $_GET['post'] : $_POST['post_ID'] ;
 
 	// get the template currently used by the page
 	$template_file = get_post_meta( $post_id, '_wp_page_template', TRUE );
@@ -71,6 +71,10 @@ function ct_tracks_show_customizer_template_preview( $url ) {
 	if( ct_tracks_is_edit_page('edit') && $post->post_type == 'page' ) {
 
 		// get the page id
+		if( ! isset($_POST['post_ID'] ) ) {
+			return;
+		}
+
 		$post_id = $_POST['post_ID'];
 
 		// get the template currently used by the page
