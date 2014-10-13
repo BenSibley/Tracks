@@ -87,7 +87,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 				<select id="dropdown-control" <?php $this->link(); ?> style="height: 100%;">
 					<?php
 					foreach ( $this->choices as $value => $label ) {
-						$selected = ( in_array( $value, $this->value() ) ) ? selected( 1, 1, false ) : '';
+						$selected = ( $value == $this->value() ) ? selected( 1, 1, false ) : '';
 						echo '<option value="' . esc_attr( $value ) . '"' . $selected . '>' . $label . '</option>';
 					}
 					?>
