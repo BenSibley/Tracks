@@ -120,3 +120,17 @@ function ct_tracks_customizer_check( $wp_customize ) {
 	}
 }
 add_action( 'customize_register', 'ct_tracks_customizer_check', 1 );
+
+function ct_tracks_hex2rgb( $colour ) {
+
+	// remove #
+	$colour = substr( $colour, 1 );
+
+	list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
+
+	$r = hexdec( $r );
+	$g = hexdec( $g );
+	$b = hexdec( $b );
+
+	return "$r, $g, $b";
+}

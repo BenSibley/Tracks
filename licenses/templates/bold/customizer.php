@@ -402,7 +402,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 	) );
 	// setting - background opacity
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_background_opacity_setting', array(
-		'default'           => '0',
+		'default'           => '1',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'ct_tracks_sanitize_float'
@@ -521,6 +521,7 @@ add_action( 'customize_register', 'ct_tracks_bold_customizer_settings' );
 
 // sanitize float
 function ct_tracks_sanitize_float( $input ) {
+
 	return floatval( $input );
 }
 

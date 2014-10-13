@@ -30,6 +30,23 @@ $description_color = ( get_theme_mod( 'ct_tracks_bold_description_color_setting'
 // set description font size (16px if not set yet)
 $description_font_size = ( get_theme_mod( 'ct_tracks_bold_description_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_description_size_setting' ) : "16";
 
+/* Button One */
+
+$button_one_size = ( get_theme_mod( 'ct_tracks_bold_button_one_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_size_setting' ) : "13";
+$button_one_color = ( get_theme_mod( 'ct_tracks_bold_button_one_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_color_setting' ) : "#fff";
+$button_one_bg_color = ( get_theme_mod( 'ct_tracks_bold_button_one_background_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_background_color_setting' ) : "#E59E45";
+
+// if it's set, use the set value (or if it's 0 allow it)
+if( get_theme_mod( 'ct_tracks_bold_button_one_background_opacity_setting') || get_theme_mod( 'ct_tracks_bold_button_one_background_opacity_setting') == 0 ) {
+	$button_one_bg_opacity = get_theme_mod( 'ct_tracks_bold_button_one_background_opacity_setting');
+} else {
+	$button_one_bg_opacity = 1;
+}
+
+$button_one_border_width = ( get_theme_mod( 'ct_tracks_bold_button_one_border_width_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_border_width_setting' ) : "0";
+$button_one_border_color = ( get_theme_mod( 'ct_tracks_bold_button_one_border_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_border_color_setting' ) : "#E59E45";
+$button_one_border_style = ( get_theme_mod( 'ct_tracks_bold_button_one_border_style_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_border_style_setting' ) : "solid";
+
 ?>
 
 .page-template-bold .site-header {
@@ -77,13 +94,17 @@ $description_font_size = ( get_theme_mod( 'ct_tracks_bold_description_size_setti
 .bold-template .button {
 	display: inline-block;
 	padding: 0.75em 1.5em;
-	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
 	font-weight: 700;
-	font-size: 0.8125em;
-	outline: solid 2px #fff;
-	opacity: 0.8;
+}
+.bold-template .button-one {
+	color: <?php echo $button_one_color; ?>;
+	font-size: <?php echo $button_one_size; ?>px;
+	background: rgba(<?php echo ct_tracks_hex2rgb( $button_one_bg_color); ?>, <?php echo $button_one_bg_opacity; ?>);
+	border-width: <?php echo $button_one_border_width; ?>px;
+	border-color: <?php echo $button_one_border_color; ?>;
+	border-style: <?php echo $button_one_border_style; ?>;
 }
 .bold-template .button:link, .bold-template .button:visited {
 	color: #fff;
