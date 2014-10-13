@@ -15,14 +15,20 @@ require_once( $path_to_wp . '/wp-load.php' );
 // set heading color (#fff if not set yet)
 $heading_color = ( get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_color_setting' ) : "#fff";
 
-// set heading color (48px if not set yet)
+// set heading font size (51px if not set yet)
 $heading_font_size = ( get_theme_mod( 'ct_tracks_bold_heading_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_size_setting' ) : "51";
 
-// set heading color (#fff if not set yet)
+// set sub-heading color (#fff if not set yet)
 $sub_heading_color = ( get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' ) : "#fff";
 
-// set heading color (48px if not set yet)
+// set sub-heading font size (37px if not set yet)
 $sub_heading_font_size = ( get_theme_mod( 'ct_tracks_bold_sub_heading_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_sub_heading_size_setting' ) : "37";
+
+// set description color (#fff if not set yet)
+$description_color = ( get_theme_mod( 'ct_tracks_bold_description_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_description_color_setting' ) : "#fff";
+
+// set description font size (16px if not set yet)
+$description_font_size = ( get_theme_mod( 'ct_tracks_bold_description_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_description_size_setting' ) : "16";
 
 ?>
 
@@ -61,6 +67,8 @@ $sub_heading_font_size = ( get_theme_mod( 'ct_tracks_bold_sub_heading_size_setti
 }
 .bold-template .description {
 	margin: 2.25em 0;
+	font-size: <?php echo $description_font_size; ?>px;
+	color: <?php echo $description_color; ?>;
 }
 .bold-template .sub-heading,
 .bold-template .description {
