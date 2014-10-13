@@ -340,7 +340,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '48',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'absint'
 	) );
 
 	/* Sub-heading */
@@ -357,7 +357,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '37',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'absint'
 	) );
 
 	/* Description */
@@ -374,7 +374,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '37',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'absint'
 	) );
 
 	/* Button 1 */
@@ -391,7 +391,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '13',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'absint'
 	) );
 	// setting - background color
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_background_color_setting', array(
@@ -405,7 +405,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '0',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'ct_tracks_sanitize_float'
 	) );
 	// setting - border color
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_border_color_setting', array(
@@ -419,14 +419,14 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '2',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'absint'
 	) );
 	// setting - border style
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_border_style_setting', array(
 		'default'           => 'solid',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-//		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'ct_tracks_sanitize_border_style'
 	) );
 
 	/* Button 2 */
@@ -443,7 +443,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '13',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'absint'
 	) );
 	// setting - background color
 	$wp_customize->add_setting( 'ct_tracks_bold_button_two_background_color_setting', array(
@@ -457,7 +457,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '0',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'ct_tracks_sanitize_float'
 	) );
 	// setting - border color
 	$wp_customize->add_setting( 'ct_tracks_bold_button_two_border_color_setting', array(
@@ -471,14 +471,14 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '2',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'absint'
 	) );
 	// setting - border style
 	$wp_customize->add_setting( 'ct_tracks_bold_button_two_border_style_setting', array(
 		'default'           => 'solid',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-//		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'ct_tracks_sanitize_border_style'
 	) );
 
 	/* Overlay */
@@ -495,7 +495,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '0.6',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'ct_tracks_sanitize_float'
 	) );
 
 	/* Background Image */
@@ -504,15 +504,75 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'ct_tracks_bold_background_position_setting', array(
 		'default'           => 'fill',
 		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options'
-//		'sanitize_callback' => 'sanitize_hex_color'
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_tracks_sanitize_background_position'
 	) );
 	// setting - background effect
 	$wp_customize->add_setting( 'ct_tracks_bold_background_effect_setting', array(
 		'default'           => 'none',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-//		'sanitize_callback' => 'abs_int'
+		'sanitize_callback' => 'ct_tracks_sanitize_background_effect'
 	) );
 }
 add_action( 'customize_register', 'ct_tracks_bold_customizer_settings' );
+
+/* Custom sanitization callbacks */
+
+// sanitize float
+function ct_tracks_sanitize_float( $input ) {
+	return floatval( $input );
+}
+
+// sanitize border style
+function ct_tracks_sanitize_border_style( $input ) {
+
+	$valid = array(
+		'solid' => __('Solid', 'tracks'),
+		'dashed' => __('Dashed', 'tracks'),
+		'dotted' => __('Dotted', 'tracks'),
+		'double' => __('Double', 'tracks'),
+		'groove' => __('Groove', 'tracks'),
+		'ridge' => __('Ridge', 'tracks'),
+		'inset' => __('Inset', 'tracks'),
+		'outset' => __('Outset', 'tracks')
+	);
+
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
+	}
+}
+
+// sanitize background position
+function ct_tracks_sanitize_background_position( $input ) {
+
+	$valid = array(
+		'fill'      =>  __('Fill screen', 'tracks'),
+		'fit'       =>  __('Fit to screen', 'tracks'),
+		'stretch'   =>  __('Stretch to fill screen', 'tracks')
+	);
+
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
+	}
+}
+
+// sanitize background effect
+function ct_tracks_sanitize_background_effect( $input ) {
+
+	$valid = array(
+		'none'  =>  __('none', 'tracks'),
+		'bw'    =>  __('Black & white', 'tracks'),
+		'blur'  =>  __('Blur', 'tracks')
+	);
+
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
+	}
+}
