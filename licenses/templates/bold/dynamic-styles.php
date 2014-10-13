@@ -13,19 +13,19 @@ $path_to_wp = $path_to_file[0];
 require_once( $path_to_wp . '/wp-load.php' );
 
 // set heading color (#fff if not set yet)
-$heading_color = ( get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_color_setting' ) : "#fff";
+$heading_color = ( get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_color_setting' ) : "#ffffff";
 
 // set heading font size (51px if not set yet)
 $heading_font_size = ( get_theme_mod( 'ct_tracks_bold_heading_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_size_setting' ) : "51";
 
 // set sub-heading color (#fff if not set yet)
-$sub_heading_color = ( get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' ) : "#fff";
+$sub_heading_color = ( get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' ) : "#ffffff";
 
 // set sub-heading font size (37px if not set yet)
 $sub_heading_font_size = ( get_theme_mod( 'ct_tracks_bold_sub_heading_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_sub_heading_size_setting' ) : "37";
 
 // set description color (#fff if not set yet)
-$description_color = ( get_theme_mod( 'ct_tracks_bold_description_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_description_color_setting' ) : "#fff";
+$description_color = ( get_theme_mod( 'ct_tracks_bold_description_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_description_color_setting' ) : "#ffffff";
 
 // set description font size (16px if not set yet)
 $description_font_size = ( get_theme_mod( 'ct_tracks_bold_description_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_description_size_setting' ) : "16";
@@ -33,7 +33,7 @@ $description_font_size = ( get_theme_mod( 'ct_tracks_bold_description_size_setti
 /* Button One */
 
 $button_one_size = ( get_theme_mod( 'ct_tracks_bold_button_one_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_size_setting' ) : "13";
-$button_one_color = ( get_theme_mod( 'ct_tracks_bold_button_one_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_color_setting' ) : "#fff";
+$button_one_color = ( get_theme_mod( 'ct_tracks_bold_button_one_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_color_setting' ) : "#ffffff";
 $button_one_bg_color = ( get_theme_mod( 'ct_tracks_bold_button_one_background_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_background_color_setting' ) : "#E59E45";
 
 // if it's set, use the set value (or if it's 0 allow it)
@@ -46,6 +46,39 @@ if( get_theme_mod( 'ct_tracks_bold_button_one_background_opacity_setting') || ge
 $button_one_border_width = ( get_theme_mod( 'ct_tracks_bold_button_one_border_width_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_border_width_setting' ) : "0";
 $button_one_border_color = ( get_theme_mod( 'ct_tracks_bold_button_one_border_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_border_color_setting' ) : "#E59E45";
 $button_one_border_style = ( get_theme_mod( 'ct_tracks_bold_button_one_border_style_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_border_style_setting' ) : "solid";
+
+/* Button Two */
+
+$button_two_size = ( get_theme_mod( 'ct_tracks_bold_button_two_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_size_setting' ) : "13";
+$button_two_color = ( get_theme_mod( 'ct_tracks_bold_button_two_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_color_setting' ) : "#ffffff";
+$button_two_bg_color = ( get_theme_mod( 'ct_tracks_bold_button_two_background_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_background_color_setting' ) : "#E59E45";
+
+// if it's set, use the set value (or if it's 0 allow it)
+if( get_theme_mod( 'ct_tracks_bold_button_two_background_opacity_setting') || get_theme_mod( 'ct_tracks_bold_button_two_background_opacity_setting') == 0 ) {
+	$button_two_bg_opacity = get_theme_mod( 'ct_tracks_bold_button_two_background_opacity_setting');
+} else {
+	$button_two_bg_opacity = 1;
+}
+
+$button_two_border_width = ( get_theme_mod( 'ct_tracks_bold_button_two_border_width_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_border_width_setting' ) : "0";
+$button_two_border_color = ( get_theme_mod( 'ct_tracks_bold_button_two_border_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_border_color_setting' ) : "#E59E45";
+$button_two_border_style = ( get_theme_mod( 'ct_tracks_bold_button_two_border_style_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_border_style_setting' ) : "solid";
+
+$overlay_color = ( get_theme_mod( 'ct_tracks_bold_overlay_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_overlay_color_setting' ) : "#222222";
+$overlay_opacity = ( get_theme_mod( 'ct_tracks_bold_overlay_opacity_setting' )) ? get_theme_mod( 'ct_tracks_bold_overlay_opacity_setting' ) : "0.8";
+
+if( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'fill' ) {
+	$background_position = "background-size: cover;";
+}
+elseif( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'fit' ) {
+	$background_position = "background-size: contain;";
+}
+elseif( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'stretch' ) {
+	$background_position = "height: 100%; width: 100%;";
+}
+else {
+	$background_position = "background-size: cover;";
+}
 
 ?>
 
@@ -87,27 +120,51 @@ $button_one_border_style = ( get_theme_mod( 'ct_tracks_bold_button_one_border_st
 	font-size: <?php echo $description_font_size; ?>px;
 	color: <?php echo $description_color; ?>;
 }
-.bold-template .sub-heading,
-.bold-template .description {
-	opacity: 0.8;
-}
 .bold-template .button {
 	display: inline-block;
 	padding: 0.75em 1.5em;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
 	font-weight: 700;
+	opacity: 0.9;
+}
+.bold-template .button:hover,
+.bold-template .button:active,
+.bold-template .button:focus {
+    opacity: 1;
 }
 .bold-template .button-one {
 	color: <?php echo $button_one_color; ?>;
 	font-size: <?php echo $button_one_size; ?>px;
 	background: rgba(<?php echo ct_tracks_hex2rgb( $button_one_bg_color); ?>, <?php echo $button_one_bg_opacity; ?>);
-	border-width: <?php echo $button_one_border_width; ?>px;
-	border-color: <?php echo $button_one_border_color; ?>;
-	border-style: <?php echo $button_one_border_style; ?>;
+	outline-width: <?php echo $button_one_border_width; ?>px;
+	outline-color: <?php echo $button_one_border_color; ?>;
+	outline-style: <?php echo $button_one_border_style; ?>;
+	outline-offset: -<?php echo $button_one_border_width; ?>px;
 }
-.bold-template .button:link, .bold-template .button:visited {
-	color: #fff;
+.bold-template .button-one:link,
+.bold-template .button-one:visited,
+.bold-template .button-one:hover,
+.bold-template .button-one:active,
+.bold-template .button-one:focus {
+  color: <?php echo $button_one_color; ?>;
+}
+.bold-template .button-two {
+	margin-left: 24px;
+	color: <?php echo $button_two_color; ?>;
+	font-size: <?php echo $button_two_size; ?>px;
+	background: rgba(<?php echo ct_tracks_hex2rgb( $button_two_bg_color); ?>, <?php echo $button_two_bg_opacity; ?>);
+	outline-width: <?php echo $button_two_border_width; ?>px;
+	outline-color: <?php echo $button_two_border_color; ?>;
+	outline-style: <?php echo $button_two_border_style; ?>;
+	outline-offset: -<?php echo $button_two_border_width; ?>px;
+}
+.bold-template .button-two:link,
+.bold-template .button-two:visited,
+.bold-template .button-two:hover,
+.bold-template .button-two:active,
+.bold-template .button-two:focus {
+	color: <?php echo $button_two_color; ?>;
 }
 .template-bg-image {
 	position: absolute;
@@ -117,8 +174,9 @@ $button_one_border_style = ( get_theme_mod( 'ct_tracks_bold_button_one_border_st
 	height: 100%;
 	z-index: 1;
 	background-position: 50%;
+	background-repeat: no-repeat;
 	-webkit-background-size: cover cover;
-	background-size: cover;
+	<?php echo $background_position; ?>
 }
 .template-bg-image:after {
 	content: '';
@@ -127,8 +185,8 @@ $button_one_border_style = ( get_theme_mod( 'ct_tracks_bold_button_one_border_st
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: #222222;
-	opacity: 0.5;
+	background: <?php echo $overlay_color; ?>;
+	opacity: <?php echo $overlay_opacity; ?>;
 }
 
 /* 600px */

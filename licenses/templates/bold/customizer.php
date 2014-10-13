@@ -306,18 +306,6 @@ function ct_tracks_bold_update_customizer_content( $wp_customize ) {
 			'stretch'   =>  __('Stretch to fill screen', 'tracks')
 		),
 	) );
-	// control - effect
-	$wp_customize->add_control( 'ct_tracks_bold_background_effect_control', array(
-		'label'           => __( 'Background Effect', 'tracks' ),
-		'section'         => 'ct_tracks_bold_background_image',
-		'settings'        => 'ct_tracks_bold_background_effect_setting',
-		'type'            => 'radio',
-		'choices'         => array(
-			'none'  =>  __('none', 'tracks'),
-			'bw'    =>  __('Black & white', 'tracks'),
-			'blur'  =>  __('Blur', 'tracks')
-		)
-	) );
 }
 
 /*
@@ -492,7 +480,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 	) );
 	// setting - overlay opacity
 	$wp_customize->add_setting( 'ct_tracks_bold_overlay_opacity_setting', array(
-		'default'           => '0.6',
+		'default'           => '0.8',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'ct_tracks_sanitize_float'
@@ -506,13 +494,6 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'ct_tracks_sanitize_background_position'
-	) );
-	// setting - background effect
-	$wp_customize->add_setting( 'ct_tracks_bold_background_effect_setting', array(
-		'default'           => 'none',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_tracks_sanitize_background_effect'
 	) );
 }
 add_action( 'customize_register', 'ct_tracks_bold_customizer_settings' );
@@ -553,22 +534,6 @@ function ct_tracks_sanitize_background_position( $input ) {
 		'fill'      =>  __('Fill screen', 'tracks'),
 		'fit'       =>  __('Fit to screen', 'tracks'),
 		'stretch'   =>  __('Stretch to fill screen', 'tracks')
-	);
-
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
-}
-
-// sanitize background effect
-function ct_tracks_sanitize_background_effect( $input ) {
-
-	$valid = array(
-		'none'  =>  __('none', 'tracks'),
-		'bw'    =>  __('Black & white', 'tracks'),
-		'blur'  =>  __('Blur', 'tracks')
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
