@@ -337,7 +337,7 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 	) );
 	// setting - font size
 	$wp_customize->add_setting( 'ct_tracks_bold_heading_size_setting', array(
-		'default'           => '48',
+		'default'           => '51',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'absint'

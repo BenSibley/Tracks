@@ -2,7 +2,7 @@
 
 // set content type to stylesheet
 header('Content-type: text/css');
-header('Cache-control: must-revalidate');
+//header('Cache-control: must-revalidate');
 
 // Setup location of WordPress
 $absolute_path = __FILE__;
@@ -12,8 +12,17 @@ $path_to_wp = $path_to_file[0];
 // Access WordPress
 require_once( $path_to_wp . '/wp-load.php' );
 
-// set heading color
-$heading_color = (get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_color_setting' ) : "#fff";
+// set heading color (#fff if not set yet)
+$heading_color = ( get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_color_setting' ) : "#fff";
+
+// set heading color (48px if not set yet)
+$heading_font_size = ( get_theme_mod( 'ct_tracks_bold_heading_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_size_setting' ) : "51";
+
+// set heading color (#fff if not set yet)
+$sub_heading_color = ( get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' ) : "#fff";
+
+// set heading color (48px if not set yet)
+$sub_heading_font_size = ( get_theme_mod( 'ct_tracks_bold_sub_heading_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_sub_heading_size_setting' ) : "37";
 
 ?>
 
@@ -40,14 +49,15 @@ $heading_color = (get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
 	font-weight: 700;
-	font-size: 1.75em;
+	font-size: <?php echo $heading_font_size * 0.583; ?>px;
 	line-height: 1.321;
 	color: <?php echo $heading_color; ?>
 }
 .bold-template .sub-heading {
-	font-size: 1.3125em;
+	font-size: <?php echo $sub_heading_font_size * 0.568; ?>px;
 	line-height: 1.143;
 	margin-bottom: 36px;
+	color: <?php echo $sub_heading_color; ?>
 }
 .bold-template .description {
 	margin: 2.25em 0;
@@ -94,21 +104,23 @@ $heading_color = (get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get
 
 /* 600px */
 @media all and (min-width: 37.5em) {
+
 	.bold-template .container {
 		padding: 4.5em 5.55% 7.5em;
 	}
 }
 /* 800px */
 @media all and (min-width: 50em) {
+
 	.bold-template .container {
 		padding-top: 6em;
 	}
 	.bold-template .heading {
-		font-size: 2.3125em;
+		font-size: <?php echo $heading_font_size * 0.771; ?>px;
 		line-height: 1.297;
 	}
 	.bold-template .sub-heading {
-		font-size: 1.75em;
+		font-size: <?php echo $sub_heading_font_size * 0.757; ?>px;
 		line-height: 1.32;
 	}
 	.bold-template .description {
@@ -117,15 +129,16 @@ $heading_color = (get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
+
 	.bold-template .container {
 		padding-top: 7.5em;
 	}
 	.bold-template .heading {
-		font-size: 3em;
+		font-size: <?php echo $heading_font_size; ?>px;
 		line-height: 1.25;
 	}
 	.bold-template .sub-heading {
-		font-size: 2.3125em;
+		font-size: <?php echo $sub_heading_font_size; ?>px;
 		line-height: 1.297;
 	}
 	.bold-template .description {
