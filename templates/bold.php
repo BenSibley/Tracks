@@ -4,14 +4,15 @@
  */
 
 $post_id = $post->ID;
-$heading = get_post_meta( $post_id, 'ct_tracks_bold_heading', true );
-$sub_heading = get_post_meta( $post_id, 'ct_tracks_bold_sub_heading', true );
-$description = get_post_meta( $post_id, 'ct_tracks_bold_description', true );
-$button_one_text = get_post_meta( $post_id, 'ct_tracks_bold_button_one', true );
-$button_one_link = get_post_meta( $post_id, 'ct_tracks_bold_button_one_link', true );
-$button_two_text = get_post_meta( $post_id, 'ct_tracks_bold_button_two', true );
-$button_two_link = get_post_meta( $post_id, 'ct_tracks_bold_button_two_link', true );
-$bg_image = get_post_meta( $post_id, 'ct_tracks_bold_bg_image', true );
+
+$heading = get_post_meta( $post_id, 'ct_tracks_bold_heading_key', true );
+$sub_heading = get_post_meta( $post_id, 'ct_tracks_bold_sub_heading_key', true );
+$description = get_post_meta( $post_id, 'ct_tracks_bold_description_key', true );
+$button_one_text = get_post_meta( $post_id, 'ct_tracks_bold_button_one_key', true );
+$button_one_link = get_post_meta( $post_id, 'ct_tracks_bold_button_one_link_key', true );
+$button_two_text = get_post_meta( $post_id, 'ct_tracks_bold_button_two_key', true );
+$button_two_link = get_post_meta( $post_id, 'ct_tracks_bold_button_two_link_key', true );
+$bg_image = get_post_meta( $post_id, 'ct_tracks_bold_bg_image_key', true );
 
 ?>
 
