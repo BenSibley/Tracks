@@ -45,11 +45,10 @@ function ct_tracks_theme_setup() {
 	{
 		include $filename;
 	}
-	// add license/templates/bold folder files
-	foreach (glob(trailingslashit( get_template_directory() ) . 'licenses/templates/bold/*.php') as $filename)
-	{
-		include $filename;
-	}
+
+	include get_template_directory() . '/licenses/templates/bold/customizer.php';
+	include get_template_directory() . '/licenses/templates/bold/meta-boxes.php';
+
     // add inc folder files
     foreach (glob(trailingslashit( get_template_directory() ) . 'inc/*.php') as $filename)
     {

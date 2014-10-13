@@ -1,5 +1,16 @@
 <?php
-header("Content-type: text/css; charset: UTF-8");
+
+header('Content-type: text/css');
+header('Cache-control: must-revalidate');
+
+// Setup location of WordPress
+$absolute_path = __FILE__;
+$path_to_file = explode( 'wp-content', $absolute_path );
+$path_to_wp = $path_to_file[0];
+
+// Access WordPress
+require_once( $path_to_wp . '/wp-load.php' );
+
 
 
 ?>

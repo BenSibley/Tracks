@@ -37,7 +37,7 @@ function ct_tracks_load_javascript_files() {
 
 		// enqueue page template stylesheet
 		if( is_page_template( 'templates/bold.php') ) {
-			wp_enqueue_style('ct-tracks-bold-template', get_template_directory_uri() . '/licenses/templates/bold/bold.css');
+			wp_enqueue_style('ct-tracks-bold-template', get_template_directory_uri() . '/licenses/templates/bold/dynamic-styles.php');
 		}
 	}
 	// enqueue the comment-reply script on posts & pages if comments open (included in WP by default)
