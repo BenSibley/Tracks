@@ -1,5 +1,6 @@
 <?php
 
+// set content type to stylesheet
 header('Content-type: text/css');
 header('Cache-control: must-revalidate');
 
@@ -11,7 +12,8 @@ $path_to_wp = $path_to_file[0];
 // Access WordPress
 require_once( $path_to_wp . '/wp-load.php' );
 
-
+// set heading color
+$heading_color = (get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_color_setting' ) : "#fff";
 
 ?>
 
@@ -25,7 +27,6 @@ require_once( $path_to_wp . '/wp-load.php' );
 .page-template-bold .site-footer {
 	display: none;
 }
-
 .bold-template {
 	position: relative;
 	z-index: 9;
@@ -41,6 +42,7 @@ require_once( $path_to_wp . '/wp-load.php' );
 	font-weight: 700;
 	font-size: 1.75em;
 	line-height: 1.321;
+	color: <?php echo $heading_color; ?>
 }
 .bold-template .sub-heading {
 	font-size: 1.3125em;
