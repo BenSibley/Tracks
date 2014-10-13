@@ -100,8 +100,7 @@ function ct_tracks_show_customizer_template_preview( $url ) {
 }
 add_filter( 'preview_post_link', 'ct_tracks_show_customizer_template_preview' );
 
-// update the customizer on Template page previews
-function ct_tracks_customizer_check( $wp_customize ) {
+function ct_tracks_bold_template_check() {
 
 	/*
 	 * When coming from /edit.php, the $_GET variable contains a return url.
@@ -110,20 +109,15 @@ function ct_tracks_customizer_check( $wp_customize ) {
 	 */
 
 	// if 'return' key is present
-	if( isset( $_GET['return'] ) ) {
+	if ( isset( $_GET['return'] ) ) {
 
 		// and bold template preview
 		if ( strpos( $_GET['return'], 'template=bold' ) ) {
-
-			// update the customizer content
-			add_action( 'customize_register', 'ct_tracks_bold_update_customizer_content', 999 );
-
-			// remove the Premium Upgrades ad
-			remove_action('customize_controls_print_footer_scripts', 'ct_tracks_customize_preview_js');
+			define( 'BOLD_TEMPLATE_PREVIEW', true );
 		}
 	}
 }
-add_action( 'customize_register', 'ct_tracks_customizer_check', 1 );
+add_action('init', 'ct_tracks_bold_template_check' );
 
 function ct_tracks_hex2rgb( $colour ) {
 

@@ -85,6 +85,7 @@ else {
 .page-template-bold .site-header {
 	background: none;
 	border: none;
+	z-index: 19;
 }
 .page-template-bold .top-navigation {
 	display: none;

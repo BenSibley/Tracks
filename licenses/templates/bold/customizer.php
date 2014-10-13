@@ -4,7 +4,14 @@
  * Updates customizer content for Bold template
  * called conditionally from ct_tracks_customizer_check()
  */
+add_action( 'customize_register', 'ct_tracks_bold_update_customizer_content', 999 );
+
 function ct_tracks_bold_update_customizer_content( $wp_customize ) {
+
+	if( ! defined('BOLD_TEMPLATE_PREVIEW') ) return;
+
+	// remove upgrade ad
+	remove_action( 'customize_controls_print_footer_scripts', 'ct_tracks_customize_preview_js' );
 
 	// remove all default and custom sections
 	$wp_customize->remove_section( 'title_tagline' );
@@ -321,7 +328,8 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - font size
 	$wp_customize->add_setting( 'ct_tracks_bold_heading_size_setting', array(
@@ -495,6 +503,11 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'ct_tracks_sanitize_background_position'
 	) );
+
+	// add js function
+	if ( $wp_customize->is_preview() && ! is_admin() ) {
+		add_action( 'wp_footer', 'ct_tracks_bold_customizer_js', 21 );
+	}
 }
 add_action( 'customize_register', 'ct_tracks_bold_customizer_settings' );
 
@@ -541,4 +554,27 @@ function ct_tracks_sanitize_background_position( $input ) {
 	} else {
 		return '';
 	}
+}
+
+function ct_tracks_bold_customizer_js() {
+
+	/*
+	 * Settings have to be loaded on customizer.
+	 * This at least prevents the javascript from running on every instance of the customizer
+	 */
+
+	if( is_page_template('templates/bold.php') ) : ?>
+
+		<script type="text/javascript">
+			console.log('happening');
+			(function ($) {
+				wp.customize('ct_tracks_bold_heading_color_setting', function (value) {
+					value.bind(function (to) {
+						$('.heading').css('color', to);
+					});
+				});
+			})(jQuery)
+		</script>
+
+	<?php endif;
 }
