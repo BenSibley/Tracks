@@ -68,9 +68,9 @@ function ct_tracks_bold_update_customizer_content( $wp_customize ) {
 
 	// section - sub-heading
 	$wp_customize->add_section( 'ct_tracks_bold_sub_heading', array(
-		'title'      => __( 'Sub-heading', 'tracks' ),
-		'priority'   => 20,
-		'capability' => 'edit_theme_options',
+		'title'       => __( 'Sub-heading', 'tracks' ),
+		'priority'    => 20,
+		'capability'  => 'edit_theme_options'
 	) );
 	// control - color
 	$wp_customize->add_control( new WP_Customize_Color_Control(
@@ -336,7 +336,8 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '51',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport'         => 'postMessage'
 	) );
 
 	/* Sub-heading */
@@ -346,14 +347,16 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - font size
 	$wp_customize->add_setting( 'ct_tracks_bold_sub_heading_size_setting', array(
 		'default'           => '37',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport'         => 'postMessage'
 	) );
 
 	/* Description */
@@ -363,14 +366,16 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - font size
 	$wp_customize->add_setting( 'ct_tracks_bold_description_size_setting', array(
 		'default'           => '37',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport'         => 'postMessage'
 	) );
 
 	/* Button 1 */
@@ -380,49 +385,56 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - font size
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_size_setting', array(
 		'default'           => '13',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport'         => 'postMessage'
 	) );
 	// setting - background color
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_background_color_setting', array(
 		'default'           => '#E59E45',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - background opacity
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_background_opacity_setting', array(
 		'default'           => '1',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_tracks_sanitize_float'
+		'sanitize_callback' => 'ct_tracks_sanitize_float',
+		'transport'         => 'postMessage'
 	) );
 	// setting - border color
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_border_color_setting', array(
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - border width
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_border_width_setting', array(
 		'default'           => '2',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport'         => 'postMessage'
 	) );
 	// setting - border style
 	$wp_customize->add_setting( 'ct_tracks_bold_button_one_border_style_setting', array(
 		'default'           => 'solid',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_tracks_sanitize_border_style'
+		'sanitize_callback' => 'ct_tracks_sanitize_border_style',
+		'transport'         => 'postMessage'
 	) );
 
 	/* Button 2 */
@@ -566,13 +578,83 @@ function ct_tracks_bold_customizer_js() {
 	if( is_page_template('templates/bold.php') ) : ?>
 
 		<script type="text/javascript">
-			console.log('happening');
 			(function ($) {
+
+				// get the customize object
+				var api = parent.wp.customize;
+
+				// Heading color
 				wp.customize('ct_tracks_bold_heading_color_setting', function (value) {
 					value.bind(function (to) {
 						$('.heading').css('color', to);
 					});
 				});
+				// Heading size
+				wp.customize('ct_tracks_bold_heading_size_setting', function (value) {
+					value.bind(function (to) {
+						$('.heading').css('font-size', to + 'px');
+					});
+				});
+				// Sub-Heading color
+				wp.customize('ct_tracks_bold_sub_heading_color_setting', function (value) {
+					value.bind(function (to) {
+						$('.sub-heading').css('color', to);
+					});
+				});
+				// Sub-Heading size
+				wp.customize('ct_tracks_bold_sub_heading_size_setting', function (value) {
+					value.bind(function (to) {
+						$('.sub-heading').css('font-size', to + 'px');
+					});
+				});
+				// Description color
+				wp.customize('ct_tracks_bold_description_color_setting', function (value) {
+					value.bind(function (to) {
+						$('.description').css('color', to);
+					});
+				});
+				// Description size
+				wp.customize('ct_tracks_bold_description_size_setting', function (value) {
+					value.bind(function (to) {
+						$('.description').css('font-size', to + 'px');
+					});
+				});
+				// Button One color
+				wp.customize('ct_tracks_bold_button_one_color_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-one').css('color', to);
+					});
+				});
+				// Button One size
+				wp.customize('ct_tracks_bold_button_one_size_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-one').css('font-size', to + 'px');
+					});
+				});
+				// Button One background color
+				wp.customize('ct_tracks_bold_button_one_background_color_setting', function (value) {
+					value.bind(function (to) {
+
+						// get current opacity
+						var bgOpacity= api.control.instance('ct_tracks_bold_button_one_background_opacity_control').setting._value;
+
+						// set new color
+						$('.button-one').css('background', 'rgba(' + hexToRgb(to) + bgOpacity + ')' );
+					});
+				});
+
+				function hexToRgb(hex) {
+					var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+					return parseInt(result[1], 16) + ', ' + parseInt(result[2], 16) + ', ' + parseInt(result[3], 16) + ', ';
+				}
+
+//				// Button One background opacity
+//				wp.customize('ct_tracks_bold_button_one_background_opacity_setting', function (value) {
+//					value.bind(function (to) {
+//						$('.button-one').css('background', to);
+//					});
+//				});
+
 			})(jQuery)
 		</script>
 
