@@ -150,11 +150,15 @@ function ct_tracks_bold_update_customizer_content( $wp_customize ) {
 		)
 	) );
 	// control - background opacity
-	$wp_customize->add_control( new ct_tracks_number_input_control(
-		$wp_customize, 'ct_tracks_bold_button_one_background_opacity_control', array(
-			'label'           => __( 'Background Opacity', 'tracks' ),
-			'section'         => 'ct_tracks_bold_button_one',
-			'settings'        => 'ct_tracks_bold_button_one_background_opacity_setting'
+	$wp_customize->add_control( 'ct_tracks_bold_button_one_background_opacity_control', array(
+		'type'            => 'range',
+		'label'           => __( 'Background Opacity', 'tracks' ),
+		'section'         => 'ct_tracks_bold_button_one',
+		'settings'        => 'ct_tracks_bold_button_one_background_opacity_setting',
+		'input_attrs'     => array(
+			'min'         => 0,
+			'max'         => 1,
+			'step'        => 0.05
 		)
 	) );
 	// control - border color
@@ -226,11 +230,15 @@ function ct_tracks_bold_update_customizer_content( $wp_customize ) {
 		)
 	) );
 	// control - background opacity
-	$wp_customize->add_control( new ct_tracks_number_input_control(
-		$wp_customize, 'ct_tracks_bold_button_two_background_opacity_control', array(
-			'label'           => __( 'Background Opacity', 'tracks' ),
-			'section'         => 'ct_tracks_bold_button_two',
-			'settings'        => 'ct_tracks_bold_button_two_background_opacity_setting'
+	$wp_customize->add_control( 'ct_tracks_bold_button_two_background_opacity_control', array(
+		'type'            => 'range',
+		'label'           => __( 'Background Opacity', 'tracks' ),
+		'section'         => 'ct_tracks_bold_button_two',
+		'settings'        => 'ct_tracks_bold_button_two_background_opacity_setting',
+		'input_attrs'     => array(
+			'min'         => 0,
+			'max'         => 1,
+			'step'        => 0.05
 		)
 	) );
 	// control - border color
@@ -285,11 +293,15 @@ function ct_tracks_bold_update_customizer_content( $wp_customize ) {
 		)
 	) );
 	// control - overlay opacity
-	$wp_customize->add_control( new ct_tracks_number_input_control(
-		$wp_customize, 'ct_tracks_bold_overlay_opacity_control', array(
-			'label'           => __( 'Overlay Opacity', 'tracks' ),
-			'section'         => 'ct_tracks_bold_overlay',
-			'settings'        => 'ct_tracks_bold_overlay_opacity_setting'
+	$wp_customize->add_control( 'ct_tracks_bold_overlay_opacity_control', array(
+		'type'            => 'range',
+		'label'           => __( 'Overlay Opacity', 'tracks' ),
+		'section'         => 'ct_tracks_bold_overlay',
+		'settings'        => 'ct_tracks_bold_overlay_opacity_setting',
+		'input_attrs'     => array(
+			'min'         => 0,
+			'max'         => 1,
+			'step'        => 0.05
 		)
 	) );
 
