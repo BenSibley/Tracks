@@ -2,7 +2,7 @@
 
 // set content type to stylesheet
 header('Content-type: text/css');
-//header('Cache-control: must-revalidate');
+header('Cache-control: must-revalidate');
 
 // Setup location of WordPress
 $absolute_path = __FILE__;
