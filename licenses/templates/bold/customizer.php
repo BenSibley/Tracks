@@ -444,49 +444,56 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - font size
 	$wp_customize->add_setting( 'ct_tracks_bold_button_two_size_setting', array(
 		'default'           => '13',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport'         => 'postMessage'
 	) );
 	// setting - background color
 	$wp_customize->add_setting( 'ct_tracks_bold_button_two_background_color_setting', array(
 		'default'           => '#E59E45',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - background opacity
 	$wp_customize->add_setting( 'ct_tracks_bold_button_two_background_opacity_setting', array(
 		'default'           => '0',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_tracks_sanitize_float'
+		'sanitize_callback' => 'ct_tracks_sanitize_float',
+		'transport'         => 'postMessage'
 	) );
 	// setting - border color
 	$wp_customize->add_setting( 'ct_tracks_bold_button_two_border_color_setting', array(
 		'default'           => '#ffffff',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - border width
 	$wp_customize->add_setting( 'ct_tracks_bold_button_two_border_width_setting', array(
 		'default'           => '2',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport'         => 'postMessage'
 	) );
 	// setting - border style
 	$wp_customize->add_setting( 'ct_tracks_bold_button_two_border_style_setting', array(
 		'default'           => 'solid',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_tracks_sanitize_border_style'
+		'sanitize_callback' => 'ct_tracks_sanitize_border_style',
+		'transport'         => 'postMessage'
 	) );
 
 	/* Overlay */
@@ -496,14 +503,16 @@ function ct_tracks_bold_customizer_settings( $wp_customize ) {
 		'default'           => '#222222',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage'
 	) );
 	// setting - overlay opacity
 	$wp_customize->add_setting( 'ct_tracks_bold_overlay_opacity_setting', array(
 		'default'           => '0.8',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_tracks_sanitize_float'
+		'sanitize_callback' => 'ct_tracks_sanitize_float',
+		'transport'         => 'postMessage'
 	) );
 
 	/* Background Image */
@@ -583,6 +592,12 @@ function ct_tracks_bold_customizer_js() {
 				// get the customize object
 				var api = parent.wp.customize;
 
+				// output: rgba(25, 174, 211,
+				function hexToRgb(hex) {
+					var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+					return parseInt(result[1], 16) + ', ' + parseInt(result[2], 16) + ', ' + parseInt(result[3], 16) + ', ';
+				}
+
 				// Heading color
 				wp.customize('ct_tracks_bold_heading_color_setting', function (value) {
 					value.bind(function (to) {
@@ -636,24 +651,108 @@ function ct_tracks_bold_customizer_js() {
 					value.bind(function (to) {
 
 						// get current opacity
-						var bgOpacity= api.control.instance('ct_tracks_bold_button_one_background_opacity_control').setting._value;
+						var bgOpacity = api.control.instance('ct_tracks_bold_button_one_background_opacity_control').setting._value;
 
 						// set new color
 						$('.button-one').css('background', 'rgba(' + hexToRgb(to) + bgOpacity + ')' );
 					});
 				});
+				// Button One background opacity
+				wp.customize('ct_tracks_bold_button_one_background_opacity_setting', function (value) {
+					value.bind(function (to) {
 
-				function hexToRgb(hex) {
-					var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-					return parseInt(result[1], 16) + ', ' + parseInt(result[2], 16) + ', ' + parseInt(result[3], 16) + ', ';
-				}
+						// get current color
+						var bgColor = api.control.instance('ct_tracks_bold_button_one_background_color_control').setting._value;
 
-//				// Button One background opacity
-//				wp.customize('ct_tracks_bold_button_one_background_opacity_setting', function (value) {
+						// set new opacity
+						$('.button-one').css('background', 'rgba(' + hexToRgb(bgColor) + to + ')' );
+					});
+				});
+				// Button One border width
+				wp.customize('ct_tracks_bold_button_one_border_width_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-one').css('outline-width', to + 'px');
+						$('.button-one').css('outline-offset', '-' + to + 'px');
+					});
+				});
+				// Button One border color
+				wp.customize('ct_tracks_bold_button_one_border_color_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-one').css('outline-color', to);
+					});
+				});
+				// Button One border style
+				wp.customize('ct_tracks_bold_button_one_border_style_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-one').css('outline-style', to);
+					});
+				});
+				// Button two color
+				wp.customize('ct_tracks_bold_button_two_color_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-two').css('color', to);
+					});
+				});
+				// Button two size
+				wp.customize('ct_tracks_bold_button_two_size_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-two').css('font-size', to + 'px');
+					});
+				});
+				// Button two background color
+				wp.customize('ct_tracks_bold_button_two_background_color_setting', function (value) {
+					value.bind(function (to) {
+
+						// get current opacity
+						var bgOpacity = api.control.instance('ct_tracks_bold_button_two_background_opacity_control').setting._value;
+
+						// set new color
+						$('.button-two').css('background', 'rgba(' + hexToRgb(to) + bgOpacity + ')' );
+					});
+				});
+				// Button two background opacity
+				wp.customize('ct_tracks_bold_button_two_background_opacity_setting', function (value) {
+					value.bind(function (to) {
+
+						// get current color
+						var bgColor = api.control.instance('ct_tracks_bold_button_two_background_color_control').setting._value;
+
+						// set new opacity
+						$('.button-two').css('background', 'rgba(' + hexToRgb(bgColor) + to + ')' );
+					});
+				});
+				// Button two border width
+				wp.customize('ct_tracks_bold_button_two_border_width_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-two').css('outline-width', to + 'px');
+						$('.button-two').css('outline-offset', '-' + to + 'px');
+					});
+				});
+				// Button two border color
+				wp.customize('ct_tracks_bold_button_two_border_color_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-two').css('outline-color', to);
+					});
+				});
+				// Button two border style
+				wp.customize('ct_tracks_bold_button_two_border_style_setting', function (value) {
+					value.bind(function (to) {
+						$('.button-two').css('outline-style', to);
+					});
+				});
+//				// Overlay color
+//				wp.customize('ct_tracks_bold_overlay_color_setting', function (value) {
 //					value.bind(function (to) {
-//						$('.button-one').css('background', to);
+//						$('#template-bg-image:after').css('background', hexToRgb(to) + '1)');
 //					});
 //				});
+//				// Overlay opacity
+//				wp.customize('ct_tracks_bold_button_two_border_style_setting', function (value) {
+//					value.bind(function (to) {
+//						$('.button-two').css('outline-style', to);
+//					});
+//				});
+
 
 			})(jQuery)
 		</script>
