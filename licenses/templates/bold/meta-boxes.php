@@ -104,13 +104,8 @@ function ct_tracks_bold_save_data( $post_id ) {
 
 					/* Sanitize */
 
-					// if description
-					if( $meta_box == 'ct_tracks_bold_description' ) {
-
-						// sanitize user input.
-						$clean_data = esc_textarea( $_POST[ $meta_box ] );
-
-					} elseif( $meta_box == 'ct_tracks_bold_button_one' || $meta_box == 'ct_tracks_bold_button_two' ) {
+					// if a button
+					if( $meta_box == 'ct_tracks_bold_button_one' || $meta_box == 'ct_tracks_bold_button_two' ) {
 
 						// sanitize button text
 						$clean_data = sanitize_text_field( $_POST[ $meta_box ] );
