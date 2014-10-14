@@ -45,6 +45,7 @@ $bg_image = get_post_meta( $post_id, 'ct_tracks_bold_bg_image_key', true );
 	if( $bg_image ) {
 		echo "<div id='template-bg-image' class='template-bg-image' style='background-image: url($bg_image)'></div>";
 	}
+	echo "<div id='template-overlay' class='template-overlay'></div>";
 	?>
 
 <?php get_footer() ?>

@@ -179,9 +179,9 @@ else {
 	-webkit-background-size: cover cover;
 	<?php echo $background_position; ?>
 }
-.template-bg-image:after {
-	content: '';
+.template-overlay {
 	position: absolute;
+	z-index: 2;
 	top: 0;
 	right: 0;
 	bottom: 0;
