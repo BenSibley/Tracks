@@ -599,6 +599,29 @@ function ct_tracks_bold_customizer_js() {
 					return parseInt(result[1], 16) + ', ' + parseInt(result[2], 16) + ', ' + parseInt(result[3], 16) + ', ';
 				}
 
+				function adjustFontSizes(heading, subHeading) {
+
+					// adjust for screen width
+					if( $(window).width() < 800 ) {
+						$('.heading').css('font-size', heading * 0.583 + 'px');
+						$('.sub-heading').css('font-size', subHeading * 0.568 + 'px');
+					}
+					if( $(window).width() < 1100 ) {
+						$('.heading').css('font-size', heading * 0.771 + 'px');
+						$('.sub-heading').css('font-size', subHeading * 0.757 + 'px');
+					}
+					else {
+						$('.heading').css('font-size', heading + 'px');
+						$('.sub-heading').css('font-size', subHeading + 'px');
+					}
+				}
+				$(window).resize(function(){
+
+					var headingSize = api.control.instance('ct_tracks_bold_heading_size_setting').setting._value;
+					var subHeadingSize = api.control.instance('ct_tracks_bold_sub_heading_size_setting').setting._value;
+					adjustFontSizes(headingSize, subHeadingSize);
+				});
+
 				// Heading color
 				wp.customize('ct_tracks_bold_heading_color_setting', function (value) {
 					value.bind(function (to) {
@@ -608,7 +631,8 @@ function ct_tracks_bold_customizer_js() {
 				// Heading size
 				wp.customize('ct_tracks_bold_heading_size_setting', function (value) {
 					value.bind(function (to) {
-						$('.heading').css('font-size', to + 'px');
+						var subHeadingSize = api.control.instance('ct_tracks_bold_sub_heading_size_setting').setting._value;
+						adjustFontSizes(to, subHeadingSize);
 					});
 				});
 				// Sub-Heading color
@@ -620,7 +644,8 @@ function ct_tracks_bold_customizer_js() {
 				// Sub-Heading size
 				wp.customize('ct_tracks_bold_sub_heading_size_setting', function (value) {
 					value.bind(function (to) {
-						$('.sub-heading').css('font-size', to + 'px');
+						var headingSize = api.control.instance('ct_tracks_bold_heading_size_setting').setting._value;
+						adjustFontSizes(headingSize, to);
 					});
 				});
 				// Description color

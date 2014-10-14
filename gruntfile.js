@@ -57,8 +57,7 @@ module.exports = function(grunt) {
                     'licenses/css/full-width.css': 'licenses/css/full-width.scss',
                     'licenses/css/full-width-images.css': 'licenses/css/full-width-images.scss',
                     'licenses/css/two-column.css': 'licenses/css/two-column.scss',
-                    'licenses/css/two-column-images.css': 'licenses/css/two-column-images.scss',
-                    'licenses/templates/bold/bold.css': 'sass/templates/bold.scss'
+                    'licenses/css/two-column-images.css': 'licenses/css/two-column-images.scss'
                 }
             }
         },
@@ -75,8 +74,7 @@ module.exports = function(grunt) {
                     'licenses/css/full-width.css': 'licenses/css/full-width.css',
                     'licenses/css/full-width-images.css': 'licenses/css/full-width-images.css',
                     'licenses/css/two-column.css': 'licenses/css/two-column.css',
-                    'licenses/css/two-column-images.css': 'licenses/css/two-column-images.css',
-                    'licenses/templates/bold/bold.css': 'licenses/templates/bold/bold.css'
+                    'licenses/css/two-column-images.css': 'licenses/css/two-column-images.css'
                 }
             }
         },
