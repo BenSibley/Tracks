@@ -75,6 +75,7 @@ function ct_tracks_show_customizer_template_preview( $url ) {
 			return;
 		}
 
+		// get the page ID
 		$post_id = $_POST['post_ID'];
 
 		// get the template currently used by the page
@@ -86,14 +87,14 @@ function ct_tracks_show_customizer_template_preview( $url ) {
 			// create argument array
 			$args = array();
 
-			// add url to args array
-			$args['url'] = $url;
+			// add url to args array with template parameter
+			$args['url'] = $url . '&preview_template=bold';
 
 			// add the return url for when customizer closed
-			$args['return'] = get_edit_post_link( get_post()->ID, 'raw' );
+			$args['return'] = get_edit_post_link( $post_id, 'raw' );
 
 			// construct new url for preview
-			$url = admin_url( 'customize.php' ) . '?' . http_build_query( $args ) . '?template=bold';
+			$url = admin_url( 'customize.php' ) . '?' . http_build_query( $args );
 		}
 	}
 	return $url;
@@ -109,10 +110,10 @@ function ct_tracks_bold_template_check() {
 	 */
 
 	// if 'return' key is present
-	if ( isset( $_GET['return'] ) ) {
+	if ( isset( $_GET['url'] ) ) {
 
 		// and bold template preview
-		if ( strpos( $_GET['return'], 'template=bold' ) ) {
+		if ( strpos( $_GET['url'], 'template=bold' ) ) {
 			define( 'BOLD_TEMPLATE_PREVIEW', true );
 		}
 	}
