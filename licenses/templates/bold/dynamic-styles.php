@@ -78,18 +78,31 @@ foreach( $setting_ids as $input ) {
 .page-template-bold .site-footer {
 	display: none;
 }
+.page-template-bold .main {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+}
 .bold-template {
+    display: table;
 	position: relative;
 	z-index: 9;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	max-width: 1280px;
 	color: #fff;
 	text-align: center;
 }
 .bold-template .container {
-	padding: 3em 5.55% 6em;
+	padding: 0 5.55%;
+	display: table-cell;
+	vertical-align: middle;
 }
 .bold-template .heading {
 	text-transform: uppercase;
-	letter-spacing: 0.06em;
+	letter-spacing: 0.04em;
 	font-weight: 700;
 	font-size: <?php echo absint( $user_input['heading_size'] * 0.583 ); ?>px;
 	line-height: 1.321;
@@ -175,19 +188,9 @@ foreach( $setting_ids as $input ) {
 	opacity: <?php echo floatval( $user_input['overlay_opacity'] ); ?>;
 }
 
-/* 600px */
-@media all and (min-width: 37.5em) {
-
-	.bold-template .container {
-		padding: 4.5em 5.55% 7.5em;
-	}
-}
 /* 800px */
 @media all and (min-width: 50em) {
 
-	.bold-template .container {
-		padding-top: 6em;
-	}
 	.bold-template .heading {
 		font-size: <?php echo absint( $user_input['heading_size'] * 0.771 ); ?>px;
 		line-height: 1.297;
@@ -200,12 +203,10 @@ foreach( $setting_ids as $input ) {
 		padding: 0 6.24%;
 	}
 }
+
 /* 1100px */
 @media all and (min-width: 68.75em) {
 
-	.bold-template .container {
-		padding-top: 7.5em;
-	}
 	.bold-template .heading {
 		font-size: <?php echo absint( $user_input['heading_size'] ); ?>px;
 		line-height: 1.25;
@@ -216,5 +217,30 @@ foreach( $setting_ids as $input ) {
 	}
 	.bold-template .description {
 		padding: 0 18.72%;
+	}
+}
+
+/* 1500px */
+@media all and (min-width: 93.75em){
+
+	.bold-template .heading {
+		font-size: <?php echo absint( $user_input['heading_size'] * 1.314 ); ?>px;
+		line-height: 1.075;
+	}
+}
+
+/* 1800px */
+@media all and (min-width: 112.5em){
+
+	.bold-template .heading {
+		font-size: <?php echo absint( $user_input['heading_size'] * 1.765 ); ?>px;
+		line-height: 1.067;
+	}
+	.bold-template .sub-heading {
+		font-size: <?php echo absint( $user_input['sub_heading_size'] * 1.297 ); ?>px;
+		line-height: 1;
+	}
+	.bold-template .description {
+		font-size: <?php echo absint( $user_input['description'] * 1.125 ); ?>px;
 	}
 }

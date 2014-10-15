@@ -623,6 +623,9 @@ function ct_tracks_bold_customizer_js() {
 						$('.heading').css('font-size', heading * 0.771 + 'px');
 						$('.sub-heading').css('font-size', subHeading * 0.757 + 'px');
 					}
+					if( $(window).width() > 1499 ) {
+						$('.heading').css('font-size', heading * 1.314 + 'px');
+					}
 					else {
 						$('.heading').css('font-size', heading + 'px');
 						$('.sub-heading').css('font-size', subHeading + 'px');
