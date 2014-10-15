@@ -48,19 +48,21 @@ foreach( $setting_ids as $input ) {
 		} else {
 			$value = 1;
 		}
-	} elseif ( $input == 'background_position' ) {
+	}
+	if ( $input == 'background_position' ) {
 		if ( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'fill' ) {
-			$value = "background-size: cover;";
+			$user_input[ $input ] = "background-size: cover;";
 		} elseif ( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'fit' ) {
-			$value = "background-size: contain;";
+			$user_input[ $input ] = "background-size: contain;";
 		} elseif ( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'stretch' ) {
-			$value = "height: 100%; width: 100%;";
+			$user_input[ $input ] = "height: 100%; width: 100%;";
 		} else {
-			$value = "background-size: cover;";
+			$user_input[ $input ] = "background-size: cover;";
 		}
+	} else {
+		$user_input[ $input ] = get_theme_mod( 'ct_tracks_bold_' . $input . '_setting' ) ? get_theme_mod( 'ct_tracks_bold_' . $input . '_setting' ) : $value;
 	}
 
-	$user_input[ $input ] = get_theme_mod( 'ct_tracks_bold_' . $input . '_setting' ) ? get_theme_mod( 'ct_tracks_bold_' . $input . '_setting' ) : $value;
 }
 
 ?>
@@ -160,7 +162,7 @@ foreach( $setting_ids as $input ) {
 	background-position: 50%;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover cover;
-	<?php echo ct_tracks_sanitize_background_position( $user_input['background_position'] ); ?>
+	<?php echo $user_input['background_position']; ?>
 }
 .template-overlay {
 	position: absolute;
