@@ -19,7 +19,7 @@ function ct_tracks_is_edit_page($new_edit = null){
 	global $pagenow;
 
 	// make sure we are on the backend
-	if (! is_admin() ) {
+	if ( ! is_admin() ) {
 		return false;
 	}
 
@@ -40,11 +40,11 @@ function ct_tracks_meta_box_check() {
 
 	// if adding a new page or not a page, abort
 	if( ct_tracks_is_edit_page('new') || $post->post_type != 'page' ) {
-		return;
+		return false;
 	}
 
 	// get the page id
-	$post_id = isset( $_GET['post'] ) ? $_GET['post'] : $_POST['post_ID'] ;
+	$post_id = isset( $_GET['post'] ) ? absint( $_GET['post'] ) : absint( $_POST['post_ID'] );
 
 	// get the template currently used by the page
 	$template_file = get_post_meta( $post_id, '_wp_page_template', TRUE );
@@ -85,11 +85,11 @@ function ct_tracks_show_customizer_template_preview( $url ) {
 
 		// get the page id
 		if( ! isset($_POST['post_ID'] ) ) {
-			return;
+			return false;
 		}
 
 		// get the page ID
-		$post_id = $_POST['post_ID'];
+		$post_id = absint( $_POST['post_ID'] );
 
 		// get the template currently used by the page
 		$template_file = get_post_meta( $post_id, '_wp_page_template', true );
