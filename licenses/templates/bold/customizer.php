@@ -611,6 +611,7 @@ function ct_tracks_bold_customizer_js() {
 					return parseInt(result[1], 16) + ', ' + parseInt(result[2], 16) + ', ' + parseInt(result[3], 16) + ', ';
 				}
 
+				// resizing fonts for different screen widths
 				function adjustFontSizes(heading, subHeading) {
 
 					// adjust for screen width
@@ -627,13 +628,12 @@ function ct_tracks_bold_customizer_js() {
 						$('.sub-heading').css('font-size', subHeading + 'px');
 					}
 				}
+				// resize fonts when screen resized
 				$(window).resize(function(){
-
 					var headingSize = api.control.instance('ct_tracks_bold_heading_size_setting').setting._value;
 					var subHeadingSize = api.control.instance('ct_tracks_bold_sub_heading_size_setting').setting._value;
 					adjustFontSizes(headingSize, subHeadingSize);
 				});
-
 				// Heading color
 				wp.customize('ct_tracks_bold_heading_color_setting', function (value) {
 					value.bind(function (to) {
