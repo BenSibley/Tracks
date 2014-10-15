@@ -119,17 +119,31 @@ foreach( $setting_ids as $input ) {
 	color: <?php echo ct_tracks_clean_color_code( $user_input['description_color'] ); ?>;
 }
 .bold-template .button {
+	position: relative;
 	display: inline-block;
 	padding: 0.75em 1.5em;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
 	font-weight: 700;
-	opacity: 0.9;
 }
-.bold-template .button:hover,
-.bold-template .button:active,
-.bold-template .button:focus {
-    opacity: 1;
+.bold-template .button:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(30, 30, 30, 0 );
+	-o-transition: background 0.2s ease-in-out;
+	-ms-transition: background 0.2s ease-in-out;
+	-moz-transition: background 0.2s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+}
+.bold-template .button:hover:after,
+.bold-template .button:active:after,
+.bold-template .button:focus:after {
+	background: rgba(30, 30, 30, 0.2 );
 }
 .bold-template .button-one {
 	color: <?php echo ct_tracks_clean_color_code( $user_input['button_one_color'] ); ?>;
