@@ -79,7 +79,6 @@ foreach( $setting_ids as $input ) {
 	display: none;
 }
 .page-template-bold .main {
-	position: absolute;
 	height: 100%;
 	width: 100%;
 	top: 0;
@@ -96,7 +95,7 @@ foreach( $setting_ids as $input ) {
 	text-align: center;
 }
 .bold-template .container {
-	padding: 0 5.55%;
+	padding: 1.5em 5.55% 4.5em;
 	display: table-cell;
 	vertical-align: middle;
 }
@@ -188,9 +187,15 @@ foreach( $setting_ids as $input ) {
 	opacity: <?php echo floatval( $user_input['overlay_opacity'] ); ?>;
 }
 
-/* 800px */
-@media all and (min-width: 50em) {
+/* 500px */
+@media all and (min-width: 31.25em) {
 
+	.page-template-bold .main {
+		position: absolute;
+	}
+	.bold-template .container {
+		padding: 0 5.55%;
+	}
 	.bold-template .heading {
 		font-size: <?php echo absint( $user_input['heading_size'] * 0.771 ); ?>px;
 		line-height: 1.297;
@@ -204,8 +209,8 @@ foreach( $setting_ids as $input ) {
 	}
 }
 
-/* 1100px */
-@media all and (min-width: 68.75em) {
+/* 900px */
+@media all and (min-width: 56.25em) {
 
 	.bold-template .heading {
 		font-size: <?php echo absint( $user_input['heading_size'] ); ?>px;
@@ -220,8 +225,8 @@ foreach( $setting_ids as $input ) {
 	}
 }
 
-/* 1500px */
-@media all and (min-width: 93.75em){
+/* 1400px */
+@media all and (min-width: 87.5em){
 
 	.bold-template .heading {
 		font-size: <?php echo absint( $user_input['heading_size'] * 1.314 ); ?>px;
@@ -229,8 +234,8 @@ foreach( $setting_ids as $input ) {
 	}
 }
 
-/* 1800px */
-@media all and (min-width: 112.5em){
+/* 1700px */
+@media all and (min-width: 106.25em){
 
 	.bold-template .heading {
 		font-size: <?php echo absint( $user_input['heading_size'] * 1.765 ); ?>px;
@@ -239,8 +244,5 @@ foreach( $setting_ids as $input ) {
 	.bold-template .sub-heading {
 		font-size: <?php echo absint( $user_input['sub_heading_size'] * 1.297 ); ?>px;
 		line-height: 1;
-	}
-	.bold-template .description {
-		font-size: <?php echo absint( $user_input['description'] * 1.125 ); ?>px;
 	}
 }

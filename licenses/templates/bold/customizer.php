@@ -615,20 +615,24 @@ function ct_tracks_bold_customizer_js() {
 				function adjustFontSizes(heading, subHeading) {
 
 					// adjust for screen width
-					if( $(window).width() < 800 ) {
+					if( $(window).width() < 500 ) {
 						$('.heading').css('font-size', heading * 0.583 + 'px');
 						$('.sub-heading').css('font-size', subHeading * 0.568 + 'px');
 					}
-					if( $(window).width() < 1100 ) {
+					if( $(window).width() < 900 ) {
 						$('.heading').css('font-size', heading * 0.771 + 'px');
 						$('.sub-heading').css('font-size', subHeading * 0.757 + 'px');
 					}
-					if( $(window).width() > 1499 ) {
-						$('.heading').css('font-size', heading * 1.314 + 'px');
-					}
-					else {
+					if( $(window).width() < 1400 ) {
 						$('.heading').css('font-size', heading + 'px');
 						$('.sub-heading').css('font-size', subHeading + 'px');
+					}
+					if( $(window).width() < 1700 ) {
+						$('.heading').css('font-size', heading * 1.314 + 'px');
+					}
+					if( $(window).width() > 1700 ) {
+						$('.heading').css('font-size', heading * 1.765 + 'px');
+						$('.sub-heading').css('font-size', subHeading * 1.297 + 'px');
 					}
 				}
 				// resize fonts when screen resized
