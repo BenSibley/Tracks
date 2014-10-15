@@ -56,8 +56,9 @@ function ct_tracks_enqueue_admin_styles($hook){
 		// admin stylesheet
 		wp_enqueue_style('style-admin', get_template_directory_uri() . '/styles/style-admin.css');
 	}
+
 	// Post Editor
-	if ( 'post.php' == $hook ) {
+	if ( 'post.php' == $hook || 'post-new.php' == $hook ) {
 
 		// query database to get featured video license status
 		$license_status = trim( get_option( 'ct_tracks_featured_videos_license_key_status' ) );
@@ -70,13 +71,13 @@ function ct_tracks_enqueue_admin_styles($hook){
 
 			// enqueue admin JS file
 			wp_enqueue_script('admin', get_template_directory_uri() . '/js/build/admin.min.js', array('jquery'),'', true);
+
+			// Enqueues all scripts, styles, settings, and templates necessary to use media JavaScript APIs.
+			wp_enqueue_media();
+
+			// enqueue the JS needed to utilize media uploader on profile image upload
+			wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js#ct_tracks_asyncload');
 		}
-
-		// Enqueues all scripts, styles, settings, and templates necessary to use media JavaScript APIs.
-		wp_enqueue_media();
-
-		// enqueue the JS needed to utilize media uploader on profile image upload
-		wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js#ct_tracks_asyncload');
 	}
 	// Profile (and edit other user)
 	if('profile.php' == $hook || 'user-edit.php' == $hook){

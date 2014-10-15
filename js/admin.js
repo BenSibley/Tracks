@@ -61,4 +61,13 @@ jQuery(function($) {
             }
         });
     }
+
+    $('#page_template').on('change', boldTemplateMessage);
+
+    function boldTemplateMessage() {
+
+        if( $(this).val() == 'templates/bold.php' ) {
+            $('.wrap h2').after('<div style="padding: 12px;" class="updated">Please save/update your page to load the new template options.</div>');
+        }
+    }
 });
