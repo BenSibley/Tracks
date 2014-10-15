@@ -1,5 +1,18 @@
 <?php
 
+// create and return array of all the input ids
+function ct_tracks_bold_template_inputs() {
+	$input_ids = array( 'heading', 'sub_heading', 'description', 'button_one', 'button_one_link', 'button_two', 'button_two_link', 'bg_image' );
+
+	return $input_ids;
+}
+
+// create and return array of all the customizer ids
+function ct_tracks_bold_template_customizer_inputs() {
+	$setting_ids = array( 'heading_color', 'heading_size', 'sub_heading_color', 'sub_heading_size', 'description_color', 'description_size', 'button_one_size', 'button_one_color', 'button_one_background_color', 'button_one_background_opacity', 'button_one_border_width', 'button_one_border_color', 'button_one_border_style', 'button_two_size', 'button_two_color', 'button_two_background_color', 'button_two_background_opacity', 'button_two_border_width', 'button_two_border_color', 'button_two_border_style', 'overlay_color', 'overlay_opacity', 'background_position' );
+
+	return $setting_ids;
+}
 // function to check if the current page is a post edit page
 function ct_tracks_is_edit_page($new_edit = null){
 

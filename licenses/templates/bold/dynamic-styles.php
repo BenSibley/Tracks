@@ -12,72 +12,55 @@ $path_to_wp = $path_to_file[0];
 // Access WordPress
 require_once( $path_to_wp . '/wp-load.php' );
 
-// set heading color (#fff if not set yet)
-$heading_color = ( get_theme_mod( 'ct_tracks_bold_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_color_setting' ) : "#ffffff";
+// get all setting ids
+$setting_ids = ct_tracks_bold_template_customizer_inputs();
 
-// set heading font size (51px if not set yet)
-$heading_font_size = ( get_theme_mod( 'ct_tracks_bold_heading_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_heading_size_setting' ) : "51";
+// create array to store user input
+$user_input = array();
 
-// set sub-heading color (#fff if not set yet)
-$sub_heading_color = ( get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_sub_heading_color_setting' ) : "#ffffff";
+// get all the values and store in array
+foreach( $setting_ids as $input ) {
 
-// set sub-heading font size (37px if not set yet)
-$sub_heading_font_size = ( get_theme_mod( 'ct_tracks_bold_sub_heading_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_sub_heading_size_setting' ) : "37";
+	if ( $input == 'heading_color' || $input == 'sub_heading_color' || $input == 'description_color' || $input == 'button_one_color' || $input == 'button_two_color' ) {
+		$value = '#ffffff';
+	} elseif ( $input == 'button_one_background_color' || $input == 'button_one_border_color' || $input == 'button_two_border_color' ) {
+		$value = '#e59e45';
+	} elseif ( $input == 'heading_size' ) {
+		$value = '51';
+	} elseif ( $input == 'button_one_size' || $input == 'button_two_size' ) {
+		$value = '13';
+	} elseif ( $input == 'button_one_border_width' || $input == 'button_two_border_width' ) {
+		$value = '0';
+	} elseif ( $input == 'button_one_border_style' || $input == 'button_two_border_style' ) {
+		$value = 'solid';
+	} elseif ( $input == 'sub_heading_size' ) {
+		$value = '37';
+	} elseif ( $input == 'description_size' ) {
+		$value = '16';
+	} elseif ( $input == 'overlay_color' ) {
+		$value = '#222222';
+	} elseif ( $input == 'overlay_opacity' ) {
+		$value = '0.8';
+	} elseif ( $input == 'button_one_background_opacity' || $input == 'button_two_background_opacity' ) {
+		// if it's set to 0, return 0 not 'false'
+		if ( get_theme_mod( 'ct_tracks_bold_' . $input . '_setting' ) == 0 ) {
+			$value = 0;
+		} else {
+			$value = 1;
+		}
+	} elseif ( $input == 'background_position' ) {
+		if ( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'fill' ) {
+			$value = "background-size: cover;";
+		} elseif ( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'fit' ) {
+			$value = "background-size: contain;";
+		} elseif ( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'stretch' ) {
+			$value = "height: 100%; width: 100%;";
+		} else {
+			$value = "background-size: cover;";
+		}
+	}
 
-// set description color (#fff if not set yet)
-$description_color = ( get_theme_mod( 'ct_tracks_bold_description_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_description_color_setting' ) : "#ffffff";
-
-// set description font size (16px if not set yet)
-$description_font_size = ( get_theme_mod( 'ct_tracks_bold_description_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_description_size_setting' ) : "16";
-
-/* Button One */
-
-$button_one_size = ( get_theme_mod( 'ct_tracks_bold_button_one_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_size_setting' ) : "13";
-$button_one_color = ( get_theme_mod( 'ct_tracks_bold_button_one_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_color_setting' ) : "#ffffff";
-$button_one_bg_color = ( get_theme_mod( 'ct_tracks_bold_button_one_background_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_background_color_setting' ) : "#E59E45";
-
-// if it's set, use the set value (or if it's 0 allow it)
-if( get_theme_mod( 'ct_tracks_bold_button_one_background_opacity_setting') || get_theme_mod( 'ct_tracks_bold_button_one_background_opacity_setting') == 0 ) {
-	$button_one_bg_opacity = get_theme_mod( 'ct_tracks_bold_button_one_background_opacity_setting');
-} else {
-	$button_one_bg_opacity = 1;
-}
-
-$button_one_border_width = ( get_theme_mod( 'ct_tracks_bold_button_one_border_width_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_border_width_setting' ) : "0";
-$button_one_border_color = ( get_theme_mod( 'ct_tracks_bold_button_one_border_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_border_color_setting' ) : "#E59E45";
-$button_one_border_style = ( get_theme_mod( 'ct_tracks_bold_button_one_border_style_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_one_border_style_setting' ) : "solid";
-
-/* Button Two */
-
-$button_two_size = ( get_theme_mod( 'ct_tracks_bold_button_two_size_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_size_setting' ) : "13";
-$button_two_color = ( get_theme_mod( 'ct_tracks_bold_button_two_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_color_setting' ) : "#ffffff";
-$button_two_bg_color = ( get_theme_mod( 'ct_tracks_bold_button_two_background_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_background_color_setting' ) : "#E59E45";
-
-// if it's set, use the set value (or if it's 0 allow it)
-if( get_theme_mod( 'ct_tracks_bold_button_two_background_opacity_setting') || get_theme_mod( 'ct_tracks_bold_button_two_background_opacity_setting') == 0 ) {
-	$button_two_bg_opacity = get_theme_mod( 'ct_tracks_bold_button_two_background_opacity_setting');
-} else {
-	$button_two_bg_opacity = 1;
-}
-
-$button_two_border_width = ( get_theme_mod( 'ct_tracks_bold_button_two_border_width_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_border_width_setting' ) : "0";
-$button_two_border_color = ( get_theme_mod( 'ct_tracks_bold_button_two_border_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_border_color_setting' ) : "#E59E45";
-$button_two_border_style = ( get_theme_mod( 'ct_tracks_bold_button_two_border_style_setting' )) ? get_theme_mod( 'ct_tracks_bold_button_two_border_style_setting' ) : "solid";
-
-$overlay_color = ( get_theme_mod( 'ct_tracks_bold_overlay_color_setting' )) ? get_theme_mod( 'ct_tracks_bold_overlay_color_setting' ) : "#222222";
-$overlay_opacity = ( get_theme_mod( 'ct_tracks_bold_overlay_opacity_setting' )) ? get_theme_mod( 'ct_tracks_bold_overlay_opacity_setting' ) : "0.8";
-
-if( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'fill' ) {
-	$background_position = "background-size: cover;";
-}
-elseif( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'fit' ) {
-	$background_position = "background-size: contain;";
-}
-elseif( get_theme_mod( 'ct_tracks_bold_background_position_setting' ) == 'stretch' ) {
-	$background_position = "height: 100%; width: 100%;";
-}
-else {
-	$background_position = "background-size: cover;";
+	$user_input[ $input ] = get_theme_mod( 'ct_tracks_bold_' . $input . '_setting' ) ? get_theme_mod( 'ct_tracks_bold_' . $input . '_setting' ) : $value;
 }
 
 ?>
@@ -106,20 +89,20 @@ else {
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
 	font-weight: 700;
-	font-size: <?php echo $heading_font_size * 0.583; ?>px;
+	font-size: <?php echo $user_input['heading_size'] * 0.583; ?>px;
 	line-height: 1.321;
-	color: <?php echo $heading_color; ?>
+	color: <?php echo $user_input['heading_color']; ?>
 }
 .bold-template .sub-heading {
-	font-size: <?php echo $sub_heading_font_size * 0.568; ?>px;
+	font-size: <?php echo $user_input['sub_heading_color'] * 0.568; ?>px;
 	line-height: 1.143;
 	margin-bottom: 36px;
-	color: <?php echo $sub_heading_color; ?>
+	color: <?php echo $user_input['sub_heading_color']; ?>
 }
 .bold-template .description {
 	margin: 2.25em 0;
-	font-size: <?php echo $description_font_size; ?>px;
-	color: <?php echo $description_color; ?>;
+	font-size: <?php echo $user_input['description_size']; ?>px;
+	color: <?php echo $user_input['description_color']; ?>;
 }
 .bold-template .button {
 	display: inline-block;
@@ -135,37 +118,37 @@ else {
     opacity: 1;
 }
 .bold-template .button-one {
-	color: <?php echo $button_one_color; ?>;
-	font-size: <?php echo $button_one_size; ?>px;
-	background: rgba(<?php echo ct_tracks_hex2rgb( $button_one_bg_color); ?>, <?php echo $button_one_bg_opacity; ?>);
-	outline-width: <?php echo $button_one_border_width; ?>px;
-	outline-color: <?php echo $button_one_border_color; ?>;
-	outline-style: <?php echo $button_one_border_style; ?>;
-	outline-offset: -<?php echo $button_one_border_width; ?>px;
+	color: <?php echo $user_input['button_one_color']; ?>;
+	font-size: <?php echo $user_input['button_one_size']; ?>px;
+	background: rgba(<?php echo ct_tracks_hex2rgb( $user_input['button_one_background_color']); ?>, <?php echo $user_input['button_one_background_opacity']; ?>);
+	outline-width: <?php echo $user_input['button_one_border_width']; ?>px;
+	outline-color: <?php echo $user_input['button_one_border_color']; ?>;
+	outline-style: <?php echo $user_input['button_one_border_style']; ?>;
+	outline-offset: -<?php echo $user_input['button_one_border_width']; ?>px;
 }
 .bold-template .button-one:link,
 .bold-template .button-one:visited,
 .bold-template .button-one:hover,
 .bold-template .button-one:active,
 .bold-template .button-one:focus {
-  color: <?php echo $button_one_color; ?>;
+  color: <?php echo $user_input['button_one_color']; ?>;
 }
 .bold-template .button-two {
 	margin-left: 24px;
-	color: <?php echo $button_two_color; ?>;
-	font-size: <?php echo $button_two_size; ?>px;
-	background: rgba(<?php echo ct_tracks_hex2rgb( $button_two_bg_color); ?>, <?php echo $button_two_bg_opacity; ?>);
-	outline-width: <?php echo $button_two_border_width; ?>px;
-	outline-color: <?php echo $button_two_border_color; ?>;
-	outline-style: <?php echo $button_two_border_style; ?>;
-	outline-offset: -<?php echo $button_two_border_width; ?>px;
+	color: <?php echo $user_input['button_two_color']; ?>;
+	font-size: <?php echo $user_input['button_two_size']; ?>px;
+	background: rgba(<?php echo ct_tracks_hex2rgb( $user_input['button_two_background_color'] ); ?>, <?php echo $user_input['button_two_background_opacity']; ?>);
+	outline-width: <?php echo $user_input['button_two_border_width']; ?>px;
+	outline-color: <?php echo $user_input['button_two_border_color']; ?>;
+	outline-style: <?php echo $user_input['button_two_border_style']; ?>;
+	outline-offset: -<?php echo $user_input['button_two_border_width']; ?>px;
 }
 .bold-template .button-two:link,
 .bold-template .button-two:visited,
 .bold-template .button-two:hover,
 .bold-template .button-two:active,
 .bold-template .button-two:focus {
-	color: <?php echo $button_two_color; ?>;
+	color: <?php echo $user_input['button_two_border_color']; ?>;
 }
 .template-bg-image {
 	position: absolute;
@@ -177,7 +160,7 @@ else {
 	background-position: 50%;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover cover;
-	<?php echo $background_position; ?>
+	<?php echo $user_input['background_position']; ?>
 }
 .template-overlay {
 	position: absolute;
@@ -186,8 +169,8 @@ else {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: <?php echo $overlay_color; ?>;
-	opacity: <?php echo $overlay_opacity; ?>;
+	background: <?php echo $user_input['overlay_color']; ?>;
+	opacity: <?php echo $user_input['overlay_opacity']; ?>;
 }
 
 /* 600px */
@@ -204,11 +187,11 @@ else {
 		padding-top: 6em;
 	}
 	.bold-template .heading {
-		font-size: <?php echo $heading_font_size * 0.771; ?>px;
+		font-size: <?php echo $user_input['heading_size'] * 0.771; ?>px;
 		line-height: 1.297;
 	}
 	.bold-template .sub-heading {
-		font-size: <?php echo $sub_heading_font_size * 0.757; ?>px;
+		font-size: <?php echo $user_input['sub_heading_size'] * 0.757; ?>px;
 		line-height: 1.32;
 	}
 	.bold-template .description {
@@ -222,11 +205,11 @@ else {
 		padding-top: 7.5em;
 	}
 	.bold-template .heading {
-		font-size: <?php echo $heading_font_size; ?>px;
+		font-size: <?php echo $user_input['heading_size']; ?>px;
 		line-height: 1.25;
 	}
 	.bold-template .sub-heading {
-		font-size: <?php echo $sub_heading_font_size; ?>px;
+		font-size: <?php echo $user_input['sub_heading_size']; ?>px;
 		line-height: 1.297;
 	}
 	.bold-template .description {

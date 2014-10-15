@@ -7,7 +7,7 @@
 $post_id = $post->ID;
 
 // meta box ids
-$input_ids = array( 'heading', 'sub_heading', 'description', 'button_one', 'button_one_link', 'button_two', 'button_two_link', 'bg_image' );
+$input_ids = ct_tracks_bold_template_inputs();
 
 // create array to store user input
 $user_input = array();
