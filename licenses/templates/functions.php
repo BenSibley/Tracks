@@ -135,6 +135,9 @@ add_action('init', 'ct_tracks_bold_template_check' );
 
 function ct_tracks_hex2rgb( $colour ) {
 
+	// make sure it's valid first
+	ct_tracks_clean_color_code( $colour );
+
 	// remove #
 	$colour = substr( $colour, 1 );
 
@@ -145,4 +148,13 @@ function ct_tracks_hex2rgb( $colour ) {
 	$b = hexdec( $b );
 
 	return "$r, $g, $b";
+}
+
+function ct_tracks_clean_color_code($input) {
+
+	if( preg_match('/#([a-f]|[A-F]|[0-9]){3}(([a-f]|[A-F]|[0-9]){3})?\b/', $input ) ) {
+		return $input;
+	} else {
+		return '';
+	}
 }

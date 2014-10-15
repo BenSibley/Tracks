@@ -89,20 +89,20 @@ foreach( $setting_ids as $input ) {
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
 	font-weight: 700;
-	font-size: <?php echo $user_input['heading_size'] * 0.583; ?>px;
+	font-size: <?php echo absint( $user_input['heading_size'] * 0.583 ); ?>px;
 	line-height: 1.321;
-	color: <?php echo $user_input['heading_color']; ?>
+	color: <?php echo ct_tracks_clean_color_code( $user_input['heading_color'] ); ?>
 }
 .bold-template .sub-heading {
-	font-size: <?php echo $user_input['sub_heading_color'] * 0.568; ?>px;
+	font-size: <?php echo absint( $user_input['sub_heading_size'] * 0.568 ); ?>px;
 	line-height: 1.143;
 	margin-bottom: 36px;
-	color: <?php echo $user_input['sub_heading_color']; ?>
+	color: <?php echo ct_tracks_clean_color_code( $user_input['sub_heading_color'] ); ?>
 }
 .bold-template .description {
 	margin: 2.25em 0;
-	font-size: <?php echo $user_input['description_size']; ?>px;
-	color: <?php echo $user_input['description_color']; ?>;
+	font-size: <?php echo absint( $user_input['description_size'] ); ?>px;
+	color: <?php echo ct_tracks_clean_color_code( $user_input['description_color'] ); ?>;
 }
 .bold-template .button {
 	display: inline-block;
@@ -118,37 +118,37 @@ foreach( $setting_ids as $input ) {
     opacity: 1;
 }
 .bold-template .button-one {
-	color: <?php echo $user_input['button_one_color']; ?>;
-	font-size: <?php echo $user_input['button_one_size']; ?>px;
-	background: rgba(<?php echo ct_tracks_hex2rgb( $user_input['button_one_background_color']); ?>, <?php echo $user_input['button_one_background_opacity']; ?>);
-	outline-width: <?php echo $user_input['button_one_border_width']; ?>px;
-	outline-color: <?php echo $user_input['button_one_border_color']; ?>;
-	outline-style: <?php echo $user_input['button_one_border_style']; ?>;
-	outline-offset: -<?php echo $user_input['button_one_border_width']; ?>px;
+	color: <?php echo ct_tracks_clean_color_code( $user_input['button_one_color'] ); ?>;
+	font-size: <?php echo absint( $user_input['button_one_size'] ); ?>px;
+	background: rgba(<?php echo ct_tracks_hex2rgb( $user_input['button_one_background_color']); ?>, <?php echo floatval( $user_input['button_one_background_opacity'] ); ?>);
+	outline-width: <?php echo absint( $user_input['button_one_border_width'] ); ?>px;
+	outline-color: <?php echo ct_tracks_clean_color_code( $user_input['button_one_border_color'] ); ?>;
+	outline-style: <?php echo ct_tracks_sanitize_border_style( $user_input['button_one_border_style'] ); ?>;
+	outline-offset: -<?php echo absint( $user_input['button_one_border_width'] ); ?>px;
 }
 .bold-template .button-one:link,
 .bold-template .button-one:visited,
 .bold-template .button-one:hover,
 .bold-template .button-one:active,
 .bold-template .button-one:focus {
-  color: <?php echo $user_input['button_one_color']; ?>;
+  color: <?php echo ct_tracks_clean_color_code( $user_input['button_one_color'] ); ?>;
 }
 .bold-template .button-two {
 	margin-left: 24px;
-	color: <?php echo $user_input['button_two_color']; ?>;
-	font-size: <?php echo $user_input['button_two_size']; ?>px;
-	background: rgba(<?php echo ct_tracks_hex2rgb( $user_input['button_two_background_color'] ); ?>, <?php echo $user_input['button_two_background_opacity']; ?>);
-	outline-width: <?php echo $user_input['button_two_border_width']; ?>px;
-	outline-color: <?php echo $user_input['button_two_border_color']; ?>;
-	outline-style: <?php echo $user_input['button_two_border_style']; ?>;
-	outline-offset: -<?php echo $user_input['button_two_border_width']; ?>px;
+	color: <?php echo ct_tracks_clean_color_code( $user_input['button_two_color'] ); ?>;
+	font-size: <?php echo absint( $user_input['button_two_size'] ); ?>px;
+	background: rgba(<?php echo ct_tracks_hex2rgb( $user_input['button_two_background_color'] ); ?>, <?php echo floatval( $user_input['button_two_background_opacity'] ); ?>);
+	outline-width: <?php echo absint( $user_input['button_two_border_width'] ); ?>px;
+	outline-color: <?php echo ct_tracks_clean_color_code( $user_input['button_two_border_color'] ); ?>;
+	outline-style: <?php echo ct_tracks_sanitize_border_style( $user_input['button_two_border_style'] ); ?>;
+	outline-offset: -<?php echo absint( $user_input['button_two_border_width'] ); ?>px;
 }
 .bold-template .button-two:link,
 .bold-template .button-two:visited,
 .bold-template .button-two:hover,
 .bold-template .button-two:active,
 .bold-template .button-two:focus {
-	color: <?php echo $user_input['button_two_border_color']; ?>;
+	color: <?php echo ct_tracks_clean_color_code( $user_input['button_two_color'] ); ?>;
 }
 .template-bg-image {
 	position: absolute;
@@ -160,7 +160,7 @@ foreach( $setting_ids as $input ) {
 	background-position: 50%;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover cover;
-	<?php echo $user_input['background_position']; ?>
+	<?php echo ct_tracks_sanitize_background_position( $user_input['background_position'] ); ?>
 }
 .template-overlay {
 	position: absolute;
@@ -169,8 +169,8 @@ foreach( $setting_ids as $input ) {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: <?php echo $user_input['overlay_color']; ?>;
-	opacity: <?php echo $user_input['overlay_opacity']; ?>;
+	background: <?php echo ct_tracks_clean_color_code( $user_input['overlay_color'] ); ?>;
+	opacity: <?php echo floatval( $user_input['overlay_opacity'] ); ?>;
 }
 
 /* 600px */
@@ -187,11 +187,11 @@ foreach( $setting_ids as $input ) {
 		padding-top: 6em;
 	}
 	.bold-template .heading {
-		font-size: <?php echo $user_input['heading_size'] * 0.771; ?>px;
+		font-size: <?php echo absint( $user_input['heading_size'] * 0.771 ); ?>px;
 		line-height: 1.297;
 	}
 	.bold-template .sub-heading {
-		font-size: <?php echo $user_input['sub_heading_size'] * 0.757; ?>px;
+		font-size: <?php echo absint( $user_input['sub_heading_size'] * 0.757 ); ?>px;
 		line-height: 1.32;
 	}
 	.bold-template .description {
@@ -205,11 +205,11 @@ foreach( $setting_ids as $input ) {
 		padding-top: 7.5em;
 	}
 	.bold-template .heading {
-		font-size: <?php echo $user_input['heading_size']; ?>px;
+		font-size: <?php echo absint( $user_input['heading_size'] ); ?>px;
 		line-height: 1.25;
 	}
 	.bold-template .sub-heading {
-		font-size: <?php echo $user_input['sub_heading_size']; ?>px;
+		font-size: <?php echo absint( $user_input['sub_heading_size'] ); ?>px;
 		line-height: 1.297;
 	}
 	.bold-template .description {
