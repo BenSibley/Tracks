@@ -583,11 +583,36 @@ add_action( 'init', 'ct_tracks_set_date_format' );
 
 function ct_tracks_toolbar_link( $wp_admin_bar ) {
 
+	global $wp;
+
+	// create argument array
+	$args = array();
+
+	// if front-end, customize and return to this page
+	if( ! is_admin() ) {
+
+		// get the current url
+		$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
+
+		// add url to args array with template parameter
+		$args['url'] = $current_url;
+
+		// add the return url for when customizer closed
+		$args['return'] = $current_url;
+
+		// construct new url for preview
+		$url = admin_url( 'customize.php' ) . '?' . http_build_query( $args );
+	} else {
+
+		// back-end, take to default customize page and return to admin
+		$url = admin_url( 'customize.php' );
+	}
+
 	// Create parent nod
 	$args = array(
 		'id'    => 'ct_tracks_dashboard',
 		'title' => 'Tracks Dashboard',
-		'href'  => site_url() . '/wp-admin/themes.php?page=tracks-options',
+		'href'  => admin_url() . 'themes.php?page=tracks-options',
 		'meta'  => array( 'class' => 'tracks-dashboard' )
 	);
 	$wp_admin_bar->add_node( $args );
@@ -597,7 +622,7 @@ function ct_tracks_toolbar_link( $wp_admin_bar ) {
 		'id'    => 'ct_tracks_dashboard_customize',
 		'title' => 'Customize',
 		'parent' => 'ct_tracks_dashboard',
-		'href'  => site_url() . '/wp-admin/customize.php',
+		'href'  => $url,
 		'meta'  => array( 'class' => 'tracks-dashboard-customize' )
 	);
 	$wp_admin_bar->add_node( $args );
