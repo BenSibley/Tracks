@@ -256,7 +256,7 @@ function ct_tracks_author_social_icons() {
                 echo "<a href='".esc_url(get_the_author_meta( $social_site))."'><i class=\"fa fa-google-plus-square\"></i></a>";
             }
             elseif($key == 'email'){
-                echo "<a href='mailto:".is_email(get_the_author_meta( $social_site))."'><i class=\"fa fa-envelope\"></i></a>";
+                echo "<a href='mailto:" . antispambot( is_email( get_the_author_meta( $social_site) ) ) . "'><i class=\"fa fa-envelope\"></i></a>";
             }
             else {
                 echo "<a href='".esc_url(get_the_author_meta( $social_site))."'><i class=\"fa fa-$key-square\"></i></a>";
@@ -478,7 +478,7 @@ function ct_tracks_customizer_social_icons_output() {
         foreach ($active_sites as $active_site) { ?>
             <li>
                 <?php if( $active_site == 'email' ) : ?>
-                    <a target="_blank" href="mailto:<?php echo is_email(get_theme_mod( $active_site )); ?>">
+                    <a target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
                 <?php else : ?>
                     <a target="_blank" href="<?php echo esc_url(get_theme_mod( $active_site )); ?>">
                 <?php endif; ?>
