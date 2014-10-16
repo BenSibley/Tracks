@@ -614,25 +614,28 @@ function ct_tracks_bold_customizer_js() {
 				// resizing fonts for different screen widths
 				function adjustFontSizes(heading, subHeading) {
 
+					var previewWidth = $('html', window.parent.document).find('#customize-preview').width();
+					var headingSelector = $('.heading');
+					var subHeadingSelector = $('.sub-heading');
+
 					// adjust for screen width
-					if( $(window).width() < 500 ) {
-						$('.heading').css('font-size', heading * 0.583 + 'px');
-						$('.sub-heading').css('font-size', subHeading * 0.568 + 'px');
+					headingSelector.css('font-size', heading * 0.583 + 'px');
+					subHeadingSelector.css('font-size', subHeading * 0.568 + 'px');
+
+					if( previewWidth > 499 ) {
+						headingSelector.css('font-size', heading * 0.771 + 'px');
+						subHeadingSelector.css('font-size', subHeading * 0.757 + 'px');
 					}
-					if( $(window).width() < 900 ) {
-						$('.heading').css('font-size', heading * 0.771 + 'px');
-						$('.sub-heading').css('font-size', subHeading * 0.757 + 'px');
+					if( previewWidth > 899 ) {
+						headingSelector.css('font-size', heading + 'px');
+						subHeadingSelector.css('font-size', subHeading + 'px');
 					}
-					if( $(window).width() < 1400 ) {
-						$('.heading').css('font-size', heading + 'px');
-						$('.sub-heading').css('font-size', subHeading + 'px');
+					if( previewWidth > 1399 ) {
+						headingSelector.css('font-size', heading * 1.314 + 'px');
 					}
-					if( $(window).width() < 1700 ) {
-						$('.heading').css('font-size', heading * 1.314 + 'px');
-					}
-					if( $(window).width() > 1700 ) {
-						$('.heading').css('font-size', heading * 1.765 + 'px');
-						$('.sub-heading').css('font-size', subHeading * 1.297 + 'px');
+					if( previewWidth > 1699 ) {
+						headingSelector.css('font-size', heading * 1.765 + 'px');
+						subHeadingSelector.css('font-size', subHeading * 1.297 + 'px');
 					}
 				}
 				// resize fonts when screen resized
