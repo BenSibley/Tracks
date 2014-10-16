@@ -51,7 +51,7 @@ add_action( 'wp_enqueue_scripts', 'ct_tracks_load_javascript_files' );
 function ct_tracks_enqueue_admin_styles($hook){
 
 	// Theme Options and Post Editor
-	if ( 'appearance_page_tracks-options' == $hook || 'post.php' == $hook ) {
+	if ( 'appearance_page_tracks-options' == $hook || 'post.php' == $hook || 'post-new.php' ) {
 
 		// admin stylesheet
 		wp_enqueue_style('style-admin', get_template_directory_uri() . '/styles/style-admin.css');
