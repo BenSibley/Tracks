@@ -116,28 +116,40 @@ function ct_tracks_customize_comments( $comment, $args, $depth ) {
 /* added HTML5 placeholders for each default field and aria-required to required */
 function ct_tracks_update_fields($fields) {
 
+	// get commenter object
     $commenter = wp_get_current_commenter();
+
+	// are name and email required?
     $req = get_option( 'require_name_email' );
-    $aria_req = ( $req ? " aria-required='true'" : '' );
+
+	// required or optional label to be added
+	if( $req == 1 ) {
+		$label = '*';
+	} else {
+		$label = ' (optional)';
+	}
+
+	// adds aria required tag if required
+	$aria_req = ( $req ? " aria-required='true'" : '' );
 
     $fields['author'] =
         '<p class="comment-form-author">
             <label class="screen-reader-text">' . __("Your Name", "tracks") . '</label>
-            <input required placeholder="' . __("Your Name*", "tracks") . '" id="author" name="author" type="text" aria-required="true" value="' . esc_attr( $commenter['comment_author'] ) .
-        '" size="30"' . $aria_req . ' />
+            <input placeholder="' . __("Your Name", "tracks") . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+        '" size="30" ' . $aria_req . ' />
     	</p>';
 
     $fields['email'] =
         '<p class="comment-form-email">
             <label class="screen-reader-text">' . __("Your Email", "tracks") . '</label>
-            <input required placeholder="' . __("Your Email*", "tracks") . '" id="email" name="email" type="email" aria-required="true" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-        '" size="30"' . $aria_req . ' />
+            <input placeholder="' . __("Your Email", "tracks") . $label . '" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+        '" size="30" ' . $aria_req . ' />
     	</p>';
 
     $fields['url'] =
         '<p class="comment-form-url">
             <label class="screen-reader-text">' . __("Your Website URL", "tracks") . '</label>
-            <input placeholder="' . __("Your URL", "tracks") . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+            <input placeholder="' . __("Your URL", "tracks") . ' (optional)" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
         '" size="30" />
             </p>';
 
