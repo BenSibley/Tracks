@@ -72,9 +72,6 @@ foreach( $setting_ids as $input ) {
 	border: none;
 	z-index: 19;
 }
-.page-template-bold .site-footer {
-	display: none;
-}
 .page-template-bold .main {
 	height: 100%;
 	width: 100%;
