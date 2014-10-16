@@ -352,21 +352,31 @@ jQuery(function($){
     // reposition the description if a logo is present
     function positionSiteDescription(){
 
-        // if screen is 800px+ wide
-        if( $(window).width() > 799 ) {
+        var logo = $('#site-header').find('.logo');
 
-            // if there is a logo
-            if( $('#site-header').find('.logo').length ) {
+            // if screen is 800px+ wide
+            if( $(window).width() > 799 ) {
 
-                // get the logo height
-                var logoHeight = $('#site-header').find('.logo').height();
+                // if there is a logo
+                if( logo.length ) {
 
-                // adjust the description placement accordingly
-                $(".site-description").css('top', logoHeight - 25 );
+                    // get the logo height
+                    var logoHeight = logo.height();
+
+                    // if logo hasn't loaded yet, wait 1000ms
+                    if( logoHeight == 0 ) {
+                        setTimeout( function(){
+                            $(".site-description").css('top', logoHeight - 25 );
+                        }, 1000 )
+                    } else {
+                        // adjust the description placement accordingly
+                        $(".site-description").css('top', logoHeight - 25 );
+                    }
+                }
             }
-        }
     }
     positionSiteDescription();
+
 
     // get videos on the blog to better fit with the standard layout
     function videoHeightAdjust() {
