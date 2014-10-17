@@ -64,14 +64,17 @@ jQuery(function($) {
         });
     }
 
-    $('#page_template').on('change', boldTemplateMessage);
+    // if not already on Bold template
+    if( $('#page_template').val() != 'templates/bold.php' ) {
+        $('#page_template').on('change', boldTemplateMessage);
+    }
 
     function boldTemplateMessage() {
 
         if( $(this).val() == 'templates/bold.php' ) {
-            $('.wrap h2').after('<div class="bold-template-message">Please save/update your page to load the new template options.</div>');
+            $('.wrap h2').after('<div style="padding: 12px;" class="updated bold-template-message">Please save/update your page to load the new template options.</div>');
         } else {
-
+            $('.bold-template-message').remove();
         }
     }
 });
