@@ -1,7 +1,9 @@
 jQuery(function($) {
 
-    // add fitvid to Post Video preview div
-    $('#ct_tracks_video_preview_container').fitVids();
+    // add fitvid to Post Video preview
+    if( typeof $.fn.fitVids === 'function' ) {
+        $('#ct_tracks_video_preview_container').fitVids();
+    }
 
     // if there is a video saved already, add has-vid class
     if( $('#ct_tracks_video_preview_container').children('div').length > 0 ) {

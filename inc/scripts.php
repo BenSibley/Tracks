@@ -67,7 +67,7 @@ function ct_tracks_enqueue_admin_styles($hook){
 			wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/fitvids.js', array( 'jquery' ), '', true );
 
 			// enqueue admin JS file
-			wp_enqueue_script( 'admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array( 'jquery' ), '', true );
+			wp_enqueue_script( 'admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array( 'jquery', 'fitvids' ), '', true );
 
 			// admin stylesheet
 			wp_enqueue_style( 'style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
