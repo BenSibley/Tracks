@@ -85,7 +85,7 @@ function ct_tracks_show_customizer_template_preview( $url ) {
 
 		// get the page id
 		if( ! isset($_POST['post_ID'] ) ) {
-			return false;
+			return $url;
 		}
 
 		// get the page ID
