@@ -137,7 +137,7 @@ foreach( $setting_ids as $input ) {
 .bold-template .button:hover:after,
 .bold-template .button:active:after,
 .bold-template .button:focus:after {
-	background: rgba(30, 30, 30, 0.2 );
+	background: rgba(30, 30, 30, 0.1 );
 }
 .bold-template .button-one {
 	color: <?php echo ct_tracks_clean_color_code( $user_input['button_one_color'] ); ?>;
