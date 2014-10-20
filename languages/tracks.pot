@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.29\n"
+"Project-Id-Version: Tracks 1.30\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-10-06 15:02:39+00:00\n"
+"POT-Creation-Date: 2014-10-20 15:07:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -105,88 +105,80 @@ msgstr ""
 msgid "Written by:"
 msgstr ""
 
-#: footer.php:33
+#: footer.php:34
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
 "Themes."
 msgstr ""
 
-#: functions.php:24
+#: functions.php:25
 msgid "Primary"
 msgstr ""
 
-#: functions.php:25
+#: functions.php:26
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:26 inc/customizer.php:100 inc/customizer.php:158
-#: inc/customizer.php:696 inc/customizer.php:720
+#: functions.php:27 inc/customizer.php:124 inc/customizer.php:182
+#: inc/customizer.php:720 inc/customizer.php:744
 msgid "Footer"
 msgstr ""
 
-#: functions.php:56
+#: functions.php:73
 msgid "After Post Content"
 msgstr ""
 
-#: functions.php:58
+#: functions.php:75
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
 msgstr ""
 
-#: functions.php:63
+#: functions.php:80
 msgid "After Page Content"
 msgstr ""
 
-#: functions.php:65
+#: functions.php:82
 msgid "Widgets in this area will be shown after page content"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:107
 msgid "Reply"
 msgstr ""
 
-#: functions.php:96
+#: functions.php:113
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:115
+#: functions.php:144 functions.php:145
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:116
-msgid "Your Name*"
-msgstr ""
-
-#: functions.php:122
+#: functions.php:151 functions.php:152
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:123
-msgid "Your Email*"
-msgstr ""
-
-#: functions.php:129
+#: functions.php:158
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:159
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:171
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:143
+#: functions.php:172
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:214
 msgid "Read More"
 msgstr ""
 
-#: functions.php:196
+#: functions.php:225
 msgid "Read the Post"
 msgstr ""
 
@@ -194,251 +186,253 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer.php:79
+#: inc/customizer.php:103
 msgid "Tagline Display"
 msgstr ""
 
-#: inc/customizer.php:93
+#: inc/customizer.php:117
 msgid "Where should the tagline display?"
 msgstr ""
 
-#: inc/customizer.php:98 inc/customizer.php:156 inc/customizer.php:694
-#: inc/customizer.php:718
+#: inc/customizer.php:122 inc/customizer.php:180 inc/customizer.php:718
+#: inc/customizer.php:742
 msgid "Header & Footer"
 msgstr ""
 
-#: inc/customizer.php:99 inc/customizer.php:157 inc/customizer.php:695
-#: inc/customizer.php:719
+#: inc/customizer.php:123 inc/customizer.php:181 inc/customizer.php:719
+#: inc/customizer.php:743
 msgid "Header"
 msgstr ""
 
-#: inc/customizer.php:108
+#: inc/customizer.php:132
 msgid "Logo Upload"
 msgstr ""
 
-#: inc/customizer.php:122
+#: inc/customizer.php:146
 msgid "Upload custom logo."
 msgstr ""
 
-#: inc/customizer.php:138
+#: inc/customizer.php:162
 msgid "Social Media Icons"
 msgstr ""
 
-#: inc/customizer.php:151
+#: inc/customizer.php:175
 msgid "Where should the icons display?"
 msgstr ""
 
-#: inc/customizer.php:159 inc/customizer.php:721
+#: inc/customizer.php:183 inc/customizer.php:745
 msgid "Do not display"
 msgstr ""
 
-#: inc/customizer.php:209
+#: inc/customizer.php:233
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:223
+#: inc/customizer.php:247
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:227 inc/customizer.php:254 inc/customizer.php:272
-#: inc/customizer.php:290 inc/customizer.php:495 inc/customizer.php:513
-#: inc/customizer.php:737
+#: inc/customizer.php:251 inc/customizer.php:278 inc/customizer.php:296
+#: inc/customizer.php:314 inc/customizer.php:519 inc/customizer.php:537
+#: inc/customizer.php:761
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:228 inc/customizer.php:255 inc/customizer.php:273
-#: inc/customizer.php:291 inc/customizer.php:496 inc/customizer.php:514
-#: inc/customizer.php:738
+#: inc/customizer.php:252 inc/customizer.php:279 inc/customizer.php:297
+#: inc/customizer.php:315 inc/customizer.php:520 inc/customizer.php:538
+#: inc/customizer.php:762
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:236
+#: inc/customizer.php:260
 msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer.php:250
+#: inc/customizer.php:274
 msgid "Display date above post title?"
 msgstr ""
 
-#: inc/customizer.php:268
+#: inc/customizer.php:292
 msgid "Display author name above post title?"
 msgstr ""
 
-#: inc/customizer.php:286
+#: inc/customizer.php:310
 msgid "Display category above post title?"
 msgstr ""
 
-#: inc/customizer.php:299
+#: inc/customizer.php:323
 msgid "Comments"
 msgstr ""
 
-#: inc/customizer.php:313
+#: inc/customizer.php:337
 msgid "Show comments on:"
 msgstr ""
 
-#: inc/customizer.php:318 inc/customizer.php:771
+#: inc/customizer.php:342 inc/customizer.php:795
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:319 inc/customizer.php:772
+#: inc/customizer.php:343 inc/customizer.php:796
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:320 inc/customizer.php:773
+#: inc/customizer.php:344 inc/customizer.php:797
 msgid "Attachments"
 msgstr ""
 
-#: inc/customizer.php:321 inc/customizer.php:774
+#: inc/customizer.php:345 inc/customizer.php:798
 msgid "Do not show"
 msgstr ""
 
-#: inc/customizer.php:330
+#: inc/customizer.php:354
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:343
+#: inc/customizer.php:367
 msgid "Edit the text in your footer"
 msgstr ""
 
-#: inc/customizer.php:353
+#: inc/customizer.php:377
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:366
+#: inc/customizer.php:390
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:399 theme-options.php:45
+#: inc/customizer.php:423 theme-options.php:45
 msgid "Premium Layouts"
 msgstr ""
 
-#: inc/customizer.php:413
+#: inc/customizer.php:437
 msgid "Choose the layout for Tracks"
 msgstr ""
 
-#: inc/customizer.php:428
+#: inc/customizer.php:452
 msgid "Image size on Blog"
 msgstr ""
 
-#: inc/customizer.php:446
+#: inc/customizer.php:470
 msgid "Style"
 msgstr ""
 
-#: inc/customizer.php:450 inc/customizer.php:837
+#: inc/customizer.php:474 inc/customizer.php:861
+#: licenses/templates/bold/customizer.php:283
 msgid "Overlay"
 msgstr ""
 
-#: inc/customizer.php:451 inc/customizer.php:838
+#: inc/customizer.php:475 inc/customizer.php:862
 msgid "Title below"
 msgstr ""
 
-#: inc/customizer.php:464
+#: inc/customizer.php:488
 msgid "Show full posts on Blog/Archives?"
 msgstr ""
 
-#: inc/customizer.php:468 inc/customizer.php:547 inc/customizer.php:628
-#: inc/customizer.php:755
+#: inc/customizer.php:492 inc/customizer.php:571 inc/customizer.php:652
+#: inc/customizer.php:779
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:469 inc/customizer.php:548 inc/customizer.php:629
-#: inc/customizer.php:756
+#: inc/customizer.php:493 inc/customizer.php:572 inc/customizer.php:653
+#: inc/customizer.php:780
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:477
+#: inc/customizer.php:501
 msgid "Additional Options"
 msgstr ""
 
-#: inc/customizer.php:491
+#: inc/customizer.php:515
 msgid "Show scroll-to-top arrow?"
 msgstr ""
 
-#: inc/customizer.php:509
+#: inc/customizer.php:533
 msgid "Show author info box after posts?"
 msgstr ""
 
-#: inc/customizer.php:527
+#: inc/customizer.php:551
 msgid "Zoom-in blog images on hover?"
 msgstr ""
 
-#: inc/customizer.php:530
+#: inc/customizer.php:554
 msgid "Zoom in"
 msgstr ""
 
-#: inc/customizer.php:531
+#: inc/customizer.php:555
 msgid "Do not zoom in"
 msgstr ""
 
-#: inc/customizer.php:544
+#: inc/customizer.php:568
 msgid "Lazy load images?"
 msgstr ""
 
-#: inc/customizer.php:561
+#: inc/customizer.php:585
 msgid "Word count in automatic excerpts"
 msgstr ""
 
-#: inc/customizer.php:578
+#: inc/customizer.php:602 licenses/templates/bold/customizer.php:312
+#: licenses/templates/bold/meta-boxes.php:52
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer.php:579
+#: inc/customizer.php:603
 msgid ""
 "Use the Header Color section above if your new background image makes the "
 "menu hard to read."
 msgstr ""
 
-#: inc/customizer.php:592
+#: inc/customizer.php:616
 msgid "Background image"
 msgstr ""
 
-#: inc/customizer.php:609
+#: inc/customizer.php:633
 msgid "Background Texture"
 msgstr ""
 
-#: inc/customizer.php:610
+#: inc/customizer.php:634
 msgid ""
 "Use the Header Color section above if your new texture makes the menu hard "
 "to read."
 msgstr ""
 
-#: inc/customizer.php:624
+#: inc/customizer.php:648
 msgid "Enable background texture?"
 msgstr ""
 
-#: inc/customizer.php:644
+#: inc/customizer.php:668
 msgid "Choose a Texture"
 msgstr ""
 
-#: inc/customizer.php:663
+#: inc/customizer.php:687
 msgid "Header Color"
 msgstr ""
 
-#: inc/customizer.php:664
+#: inc/customizer.php:688
 msgid "Change to dark if your new background makes the menu hard to read."
 msgstr ""
 
-#: inc/customizer.php:678
+#: inc/customizer.php:702
 msgid "Light or dark header color?"
 msgstr ""
 
-#: inc/customizer.php:682 inc/customizer.php:865
+#: inc/customizer.php:706 inc/customizer.php:889
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:683 inc/customizer.php:866
+#: inc/customizer.php:707 inc/customizer.php:890
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:792
+#: inc/customizer.php:816
 msgid "Zoom"
 msgstr ""
 
-#: inc/customizer.php:793
+#: inc/customizer.php:817
 msgid "Do not Zoom"
 msgstr ""
 
-#: inc/customizer.php:941
+#: inc/customizer.php:965
 msgid "Premium Upgrades Available!"
 msgstr ""
 
@@ -446,7 +440,7 @@ msgstr ""
 msgid "Profile image"
 msgstr ""
 
-#: inc/user-profile.php:23
+#: inc/user-profile.php:23 licenses/templates/bold/meta-boxes.php:266
 msgid "Upload Image"
 msgstr ""
 
@@ -502,6 +496,147 @@ msgstr ""
 
 #: licenses/functions/video.php:84
 msgid "Display on Post and Blog"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:45
+#: licenses/templates/bold/meta-boxes.php:12
+msgid "Heading"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:52
+#: licenses/templates/bold/customizer.php:78
+#: licenses/templates/bold/customizer.php:104
+#: licenses/templates/bold/customizer.php:130
+#: licenses/templates/bold/customizer.php:210
+msgid "Color"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:60
+#: licenses/templates/bold/customizer.php:86
+#: licenses/templates/bold/customizer.php:112
+#: licenses/templates/bold/customizer.php:138
+#: licenses/templates/bold/customizer.php:218
+msgid "Font Size"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:71
+#: licenses/templates/bold/meta-boxes.php:20
+msgid "Sub-heading"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:97
+#: licenses/templates/bold/meta-boxes.php:28
+msgid "Description"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:123
+#: licenses/templates/bold/meta-boxes.php:36
+msgid "Button 1"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:147
+#: licenses/templates/bold/customizer.php:227
+msgid "Background Color"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:155
+#: licenses/templates/bold/customizer.php:235
+msgid "Background Opacity"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:167
+#: licenses/templates/bold/customizer.php:247
+msgid "Border Color"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:175
+#: licenses/templates/bold/customizer.php:255
+msgid "Border Width"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:183
+#: licenses/templates/bold/customizer.php:263
+msgid "Border Style"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:187
+#: licenses/templates/bold/customizer.php:267
+#: licenses/templates/bold/customizer.php:560
+msgid "Solid"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:188
+#: licenses/templates/bold/customizer.php:268
+#: licenses/templates/bold/customizer.php:561
+msgid "Dashed"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:189
+#: licenses/templates/bold/customizer.php:269
+#: licenses/templates/bold/customizer.php:562
+msgid "Dotted"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:190
+#: licenses/templates/bold/customizer.php:270
+#: licenses/templates/bold/customizer.php:563
+msgid "Double"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:191
+#: licenses/templates/bold/customizer.php:271
+#: licenses/templates/bold/customizer.php:564
+msgid "Groove"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:192
+#: licenses/templates/bold/customizer.php:272
+#: licenses/templates/bold/customizer.php:565
+msgid "Ridge"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:193
+#: licenses/templates/bold/customizer.php:273
+#: licenses/templates/bold/customizer.php:566
+msgid "Inset"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:194
+#: licenses/templates/bold/customizer.php:274
+#: licenses/templates/bold/customizer.php:567
+msgid "Outset"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:203
+#: licenses/templates/bold/meta-boxes.php:44
+msgid "Button 2"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:290
+msgid "Overlay Color"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:298
+msgid "Overlay Opacity"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:319
+msgid "Position"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:323
+#: licenses/templates/bold/customizer.php:581
+msgid "Fill screen"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:324
+#: licenses/templates/bold/customizer.php:582
+msgid "Fit to screen"
+msgstr ""
+
+#: licenses/templates/bold/customizer.php:325
+#: licenses/templates/bold/customizer.php:583
+msgid "Stretch to fill screen"
 msgstr ""
 
 #: search.php:11
@@ -584,41 +719,51 @@ msgstr ""
 msgid "Premium Features"
 msgstr ""
 
-#: theme-options.php:106
+#: theme-options.php:59
+msgid "Premium Templates"
+msgstr ""
+
+#: theme-options.php:116
 msgid "Save License"
 msgstr ""
 
-#: theme-options.php:109
+#: theme-options.php:119
 msgid "Enter your license key"
 msgstr ""
 
-#: theme-options.php:115 theme-options.php:123
+#: theme-options.php:125 theme-options.php:133
 msgid "Activate License"
 msgstr ""
 
-#: theme-options.php:120
+#: theme-options.php:130
 msgid "Deactivate License"
 msgstr ""
 
-#: theme-options.php:136
+#: theme-options.php:146
 msgid ""
 "You can now add a background image using the \"Background Image\" section "
 "in the <a href=\"%s\">Customizer</a>"
 msgstr ""
 
-#: theme-options.php:138
+#: theme-options.php:148
 msgid ""
 "You can now add a background texture using the \"Background Texture\" "
 "section in the <a href=\"%s\">Customizer</a>"
 msgstr ""
 
-#: theme-options.php:140
+#: theme-options.php:150
 msgid ""
 "You can now add videos to posts. Use the Featured Videos box under the Post "
 "Editor to get started"
 msgstr ""
 
-#: theme-options.php:142
+#: theme-options.php:152
+msgid ""
+"You can now use the Bold template! Choose a Page and use the \"Template\" "
+"dropdown on the right-side of the screen to select the Bold template"
+msgstr ""
+
+#: theme-options.php:154
 msgid ""
 "You can now switch to your new layout in the \"Premium Layouts\" section in "
 "the <a href=\"%s\">Customizer</a>"
@@ -647,12 +792,16 @@ msgstr ""
 msgid "http://www.competethemes.com/"
 msgstr ""
 
-#: inc/customizer.php:432 inc/customizer.php:825
+#. Template Name of the plugin/theme
+msgid "Bold"
+msgstr ""
+
+#: inc/customizer.php:456 inc/customizer.php:849
 msgctxt "size of the featured image"
 msgid "size based on image size"
 msgstr ""
 
-#: inc/customizer.php:433 inc/customizer.php:826
+#: inc/customizer.php:457 inc/customizer.php:850
 msgctxt "size of the featured image"
 msgid "2:1 width/height ratio like posts"
 msgstr ""
