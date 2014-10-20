@@ -117,8 +117,7 @@ add_filter( 'preview_post_link', 'ct_tracks_show_customizer_template_preview' );
 function ct_tracks_bold_template_check() {
 
 	/*
-	 * When coming from /edit.php, the $_GET variable contains a return url.
-	 * The return url may contain the name of a template being used.
+	 * When coming from /edit.php, the $_GET variable contains a url value.
 	 * The template name is added to the url by ct_tracks_show_customizer_template_preview()
 	 */
 

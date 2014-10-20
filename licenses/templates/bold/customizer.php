@@ -35,7 +35,7 @@ function ct_tracks_bold_update_customizer_content( $wp_customize ) {
 
 	/*
 	 * Add Bold Template sections & controls
-	 * settings in ct_tracks_bold_customizer_settings()
+	 * Settings added unconditionally in ct_tracks_bold_customizer_settings()
 	 */
 
 	/* Heading */
