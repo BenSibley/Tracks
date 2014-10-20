@@ -148,6 +148,23 @@ foreach( $setting_ids as $input ) {
 	outline-style: <?php echo ct_tracks_sanitize_border_style( $user_input['button_one_border_style'] ); ?>;
 	outline-offset: -<?php echo absint( $user_input['button_one_border_width'] ); ?>px;
 }
+/* IE9 doesn't support outline-offset, so reduce the padding relative to the border width */
+.ie9 .bold-template .button-one {
+	padding: <?php echo ( 0.75 * absint( $user_input['button_one_size'] ) - absint( $user_input['button_one_border_width'] ) . "px " ) . ( 1.5 * absint( $user_input['button_one_size'] ) - absint( $user_input['button_one_border_width'] ) . "px" );  ?>
+}
+.ie9 .bold-template .button-two {
+	padding: <?php echo ( 0.75 * absint( $user_input['button_two_size'] ) - absint( $user_input['button_two_border_width'] ) . "px " ) . ( 1.5 * absint( $user_input['button_two_size'] ) - absint( $user_input['button_two_border_width'] ) . "px" );  ?>
+}
+/* IE10+ hack because they don't support outline offset, so reduce the padding relative to the border width */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.bold-template .button-one {
+		padding: <?php echo ( 0.75 * absint( $user_input['button_one_size'] ) - absint( $user_input['button_one_border_width'] ) . "px " ) . ( 1.5 * absint( $user_input['button_one_size'] ) - absint( $user_input['button_one_border_width'] ) . "px" );  ?>
+	}
+	.bold-template .button-two {
+		padding: <?php echo ( 0.75 * absint( $user_input['button_two_size'] ) - absint( $user_input['button_two_border_width'] ) . "px " ) . ( 1.5 * absint( $user_input['button_two_size'] ) - absint( $user_input['button_two_border_width'] ) . "px" );  ?>
+	}
+}
+
 .bold-template .button-one:link,
 .bold-template .button-one:visited,
 .bold-template .button-one:hover,
