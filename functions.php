@@ -671,7 +671,7 @@ add_action( 'admin_bar_menu', 'ct_tracks_toolbar_link', 999 );
 // remove page templates unless license activated
 function ct_tracks_remove_page_templates( $templates ) {
 
-	// remove bold template if not active
+	// WP will find and add the template on it's own, so remove bold template if license not active
 	if( ! defined( 'BOLD_TEMPLATE_ACTIVE' ) ) {
 		unset( $templates['templates/bold.php'] );
 	}
