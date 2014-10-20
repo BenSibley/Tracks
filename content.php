@@ -86,7 +86,7 @@ if( is_single() ) { ?>
 	    }
 	    // otherwise output Featured Image
 	    else {
-		    echo '<a class="featured-image-link" href="' . get_the_permalink() . '">';
+		    echo '<a class="featured-image-link" href="' . get_permalink() . '">';
                 ct_tracks_featured_image();
             echo '</a>';
 	    }
