@@ -149,7 +149,7 @@ function ct_tracks_license_form_output($upgrades){
                 elseif($upgrade == 'featured_videos'){ ?>
 	                <p class="valid"><?php _e('You can now add videos to posts. Use the Featured Videos box under the Post Editor to get started', 'tracks'); ?>.</p><?php }
                 elseif($upgrade == 'bold_template'){ ?>
-	                <p class="valid"><?php _e('You can now use the Bold template. Use the "Template" dropdown in the page editor to select the Bold template and get started', 'tracks'); ?>.</p><?php }
+	                <p class="valid"><?php _e('You can now use the Bold template! Choose a Page and use the "Template" dropdown on the right-side of the screen to select the Bold template', 'tracks'); ?>.</p><?php }
                 else { ?>
                     <p class="valid"><?php printf( __('You can now switch to your new layout in the "Premium Layouts" section in the <a href="%s">Customizer</a>', 'tracks'), esc_url( $customizer_url ) ); ?>.</p><?php }
             } ?>
