@@ -356,9 +356,6 @@ function ct_tracks_body_class( $classes ) {
     if(get_theme_mod( 'ct_tracks_background_image_setting')){
         $classes[] = 'background-image-active';
     }
-    if(get_theme_mod( 'ct_tracks_texture_display_setting') == 'yes'){
-        $classes[] = 'background-texture-active';
-    }
     return $classes;
 }
 add_filter( 'body_class', 'ct_tracks_body_class' );
@@ -541,23 +538,6 @@ function ct_tracks_background_image_output(){
     }
 }
 add_action('wp_enqueue_scripts','ct_tracks_background_image_output');
-
-function ct_tracks_background_texture_output(){
-
-    $background_texture = get_theme_mod( 'ct_tracks_background_texture_setting');
-    $background_texture_display = get_theme_mod('ct_tracks_texture_display_setting');
-
-    if($background_texture && $background_texture_display == 'yes'){
-
-        $background_texture_css = "
-            .overflow-container {
-                background-image: url('" . get_template_directory_uri() . "/assets/images/textures/$background_texture.png');
-            }
-        ";
-        wp_add_inline_style('style', $background_texture_css);
-    }
-}
-add_action('wp_enqueue_scripts','ct_tracks_background_texture_output');
 
 // green checkmark icon used in Post Video input
 function ct_tracks_green_checkmark_svg() {

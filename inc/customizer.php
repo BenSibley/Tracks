@@ -620,59 +620,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         ) );
     }
 
-    /***** Background Texture *****/
-
-    // get texture license status from database
-    $license = trim( get_option( 'ct_tracks_background_textures_license_key_status' ) );
-
-    // only add the background textures if license is valid
-    if($license == 'valid'){
-
-        // section
-        $wp_customize->add_section( 'ct_tracks_background_texture', array(
-            'title'      => __( 'Background Texture', 'tracks' ),
-            'description' => __('Use the Header Color section above if your new texture makes the menu hard to read.', 'tracks'),
-            'priority'   => 96,
-            'capability' => 'edit_theme_options'
-        ) );
-        // setting - display
-        $wp_customize->add_setting( 'ct_tracks_texture_display_setting', array(
-            'default'           => 'no',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_tracks_all_yes_no_setting_sanitization'
-        ) );
-        // control - display
-        $wp_customize->add_control( 'ct_tracks_texture_display_setting', array(
-            'type' => 'radio',
-            'label' => __('Enable background texture?', 'tracks'),
-            'section' => 'ct_tracks_background_texture',
-            'setting' => 'ct_tracks_texture_display_setting',
-            'choices' => array(
-                'yes' => __('Yes', 'tracks'),
-                'no' => __('No', 'tracks')
-            ),
-        ) );
-        // setting - texture
-        $wp_customize->add_setting( 'ct_tracks_background_texture_setting', array(
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'ct_tracks_background_texture_setting_sanitization',
-        ) );
-
-        // get textures (textures from subtlepatterns.com)
-        $textures = ct_tracks_textures_array();
-
-        // control - texture
-        $wp_customize->add_control( 'ct_tracks_background_texture_setting', array(
-            'label'          => __( 'Choose a Texture', 'tracks' ),
-            'section'        => 'ct_tracks_background_texture',
-            'settings'       => 'ct_tracks_background_texture_setting',
-            'type'           => 'radio',
-            'choices'        => $textures
-        ) );
-    }
-
     /***** Header Color *****/
 
     // get license statuses from databases
@@ -869,20 +816,6 @@ function ct_tracks_sanitize_premium_layouts_image_style( $input ) {
     }
 }
 
-// sanitize background texture setting
-function ct_tracks_background_texture_setting_sanitization($input){
-
-    $textures = ct_tracks_textures_array();
-
-    $valid = $textures;
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
-
 // sanitize header color setting
 function ct_tracks_sanitize_header_color_settings($input){
     $valid = array(
@@ -911,54 +844,6 @@ function ct_tracks_set_comment_display_values() {
     }
 }
 add_action( 'init', 'ct_tracks_set_comment_display_values' );
-
-// array of textures used as choices in texture setting
-function ct_tracks_textures_array(){
-
-    $textures = array(
-        'binding_dark'   => '',
-        'brickwall'   => '',
-        'congruent_outline'  => '',
-        'crossword'  => '',
-        'escheresque_ste'  => '',
-        'fabric_squares'  => '',
-        'geometry'  => '',
-        'grey_wash_wall'  => '',
-        'halftone'  => '',
-        'notebook'  => '',
-        'office'  => '',
-        'pixel_weave'  => '',
-        'sativa'  => '',
-        'shattered'  => '',
-        'skulls'  => '',
-        'snow'  => '',
-        'sos'  => '',
-        'sprinkles'  => '',
-        'squared_metal'  => '',
-        'stardust'  => '',
-        'tweed'  => '',
-        'small_steps'  => '',
-        'restaurant_icons'  => '',
-        'congruent_pentagon'  => '',
-        'photography'  => '',
-        'giftly'  => '',
-        'food'  => '',
-        'light_grey'  => '',
-        'diagonal_waves'  => '',
-        'otis_redding'  => '',
-        'wild_oliva'  => '',
-        'cream_dust'  => '',
-        'back_pattern'  => '',
-        'skelatal_weave'  => '',
-        'retina_wood'  => '',
-        'escheresque'  => '',
-        'greyfloral'  => '',
-        'diamond_upholstery'  => '',
-        'hexellence'  => ''
-    );
-
-    return $textures;
-}
 
 function ct_tracks_customize_preview_js() { ?>
 	<script>

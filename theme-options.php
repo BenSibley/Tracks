@@ -145,7 +145,7 @@ function ct_tracks_license_form_output($upgrades){
                 if($upgrade == 'background_images'){ ?>
                     <p class="valid"><?php printf( __('You can now add a background image using the "Background Image" section in the <a href="%s">Customizer</a>', 'tracks'), esc_url( $customizer_url ) ); ?>.</p><?php }
                 elseif($upgrade == 'background_textures'){ ?>
-                    <p class="valid"><?php printf( __('You can now add a background texture using the "Background Texture" section in the <a href="%s">Customizer</a>', 'tracks'), esc_url( $customizer_url ) ); ?>.</p><?php }
+                    <p class="valid"><?php printf( __("If you haven't already, please upload and activate the Background Texture plugin", 'tracks'), esc_url( $customizer_url ) ); ?>.</p><?php }
                 elseif($upgrade == 'featured_videos'){ ?>
 	                <p class="valid"><?php _e('You can now add videos to posts. Use the Featured Videos box under the Post Editor to get started', 'tracks'); ?>.</p><?php }
                 elseif($upgrade == 'bold_template'){ ?>
