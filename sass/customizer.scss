@@ -2,22 +2,6 @@
 
 /* Customizer Styles */
 
-#customize-control-ct_tracks_background_texture_setting {
-
-  input {
-    visibility: hidden;
-  }
-  label {
-    display: inline-block;
-    width: 77px;
-    height: 77px;
-    margin: 0 8px 8px 0;
-
-    &:nth-child(3n + 1){
-      margin-right: 0;
-    }
-  }
-}
 .upgrades-ad {
   background: #43b3c4;
   color: white;
