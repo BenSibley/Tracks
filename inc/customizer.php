@@ -515,6 +515,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         'label' => __('Show scroll-to-top arrow?', 'tracks'),
         'section' => 'ct_tracks_additional_options',
         'setting' => 'additional_options_return_top_settings',
+	    'priority' => 5,
         'choices' => array(
             'show' => __('Show', 'tracks'),
             'hide' => __('Hide', 'tracks')
@@ -533,11 +534,31 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         'label' => __('Show author info box after posts?', 'tracks'),
         'section' => 'ct_tracks_additional_options',
         'setting' => 'additional_options_author_meta_settings',
+        'priority' => 10,
         'choices' => array(
             'show' => __('Show', 'tracks'),
             'hide' => __('Hide', 'tracks')
         ),
     ) );
+	// setting - further reading
+	$wp_customize->add_setting( 'additional_options_further_reading_settings', array(
+		'default'           => 'show',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings',
+	) );
+	// control - further
+	$wp_customize->add_control( 'additional_options_further_reading_settings', array(
+		'type' => 'radio',
+		'label' => __('Show prev/next links after posts?', 'tracks'),
+		'section' => 'ct_tracks_additional_options',
+		'setting' => 'additional_options_further_reading_settings',
+		'priority' => 15,
+		'choices' => array(
+			'show' => __('Show', 'tracks'),
+			'hide' => __('Hide', 'tracks')
+		),
+	) );
     // setting - image zoom
     $wp_customize->add_setting( 'additional_options_image_zoom_settings', array(
         'default'           => 'zoom',
@@ -550,6 +571,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         'type' => 'radio',
         'label' => __('Zoom-in blog images on hover?', 'tracks'),
         'section' => 'ct_tracks_additional_options',
+        'priority' => 20,
         'choices' => array(
             'zoom' => __('Zoom in', 'tracks'),
             'no-zoom' => __('Do not zoom in', 'tracks')
@@ -567,6 +589,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         'type' => 'radio',
         'label' => __('Lazy load images?', 'tracks'),
         'section' => 'ct_tracks_additional_options',
+        'priority' => 25,
         'choices' => array(
             'yes' => __('Yes', 'tracks'),
             'no' => __('No', 'tracks')
@@ -586,6 +609,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
             'section' => 'ct_tracks_additional_options',
             'settings' => 'additional_options_excerpt_length_settings',
             'type' => 'number',
+            'priority' => 30,
         )
     ) );
 

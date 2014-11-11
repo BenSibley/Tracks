@@ -39,7 +39,10 @@ if( is_single() ) { ?>
             </div>
             <?php get_template_part('sidebar','after-post-content'); ?>
             <div class='entry-meta-bottom'>
-                <?php get_template_part('content/further-reading'); ?>
+                <?php
+                if( get_theme_mod('additional_options_further_reading_settings') != 'hide' ) {
+	                get_template_part('content/further-reading');
+                } ?>
                 <div class="entry-categories">
                     <?php get_template_part('content/category-links'); ?>
                 </div>
