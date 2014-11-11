@@ -171,7 +171,8 @@
 /* 1000px */
 @media all and (min-width: 62.5em) {
 
-  #sidebar-footer:not(.active-1):not(.active-2) {
+  // 3 in a row unless only 1 or 2 widgets
+  .sidebar-footer:not(.active-1):not(.active-2) {
 
     .widget {
       width: 31%;
