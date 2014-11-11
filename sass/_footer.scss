@@ -31,13 +31,37 @@
     }
   }
 }
+.sidebar-footer {
+  background: $gray-10;
+  margin-bottom: -48px;
+  padding: $baseline-height 5.55%;
+
+  .widget {
+    margin: $baseline-height * 2 0;
+
+    &:first-child {
+      margin-top: $baseline-height; // b/c already 24px of padding
+    }
+    a {
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $off-white;
+      }
+    }
+  }
+  .widget-title {
+    margin-bottom: 12px;
+  }
+}
 .design-credit {
   @extend %uppercase;
   @extend %thirteen-pixels;
   background: $gray-very-dark;
   color: $gray-dark-medium;
   padding: $baseline-height / 2 0;
-  margin-top: $baseline-height * 3;
+  margin-top: 48px;
 
   a {
     color: $gray-dark-medium;
@@ -100,8 +124,35 @@
       }
     }
   }
+  .sidebar-footer {
+    margin-bottom: -72px;
+  }
   .design-credit {
-    margin-top: $baseline-height * 4;
+    margin-top: 72px;
+  }
+}
+
+/* 700px */
+@media all and (min-width: 43.75em) {
+
+  .sidebar-footer {
+    margin-top: $baseline-height * 2;
+
+    &:after {
+      @include clearfix;
+    }
+  }
+  // 2 in a row unless only 1 widget
+  .sidebar-footer:not(.active-1) {
+
+    .widget {
+      width: 47%;
+      float: left;
+
+      &:nth-child(odd) {
+        margin-right: 3%;
+      }
+    }
   }
 }
 
@@ -113,6 +164,29 @@
     h3 {
       font-size: 2.625em;
       line-height: 1.143;
+    }
+  }
+}
+
+/* 1000px */
+@media all and (min-width: 62.5em) {
+
+  #sidebar-footer:not(.active-1):not(.active-2) {
+
+    .widget {
+      width: 31%;
+      margin-right: 0;
+      margin-top: $baseline-height;
+
+      // apply margin right to every third from 1st and 2nd
+      &:nth-child(3n - 2),
+      &:nth-child(3n - 1) {
+        margin-right: 3%;
+      }
+      // every 3rd starting with #4 clears left, so layout doesn't get messed up in FF
+      &:nth-child(3n + 4) {
+        clear: left;
+      }
     }
   }
 }

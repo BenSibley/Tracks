@@ -1440,11 +1440,29 @@ li.pingback:after {
   opacity: 0.4;
 }
 
+.sidebar-footer {
+  background: #1a1a1a;
+  margin-bottom: -48px;
+  padding: 1.5em 5.55%;
+}
+.sidebar-footer .widget {
+  margin: 3em 0;
+}
+.sidebar-footer .widget:first-child {
+  margin-top: 1.5em;
+}
+.sidebar-footer .widget a:hover, .sidebar-footer .widget a:active, .sidebar-footer .widget a:focus {
+  color: #ededed;
+}
+.sidebar-footer .widget-title {
+  margin-bottom: 12px;
+}
+
 .design-credit {
   background: #111111;
   color: #4d4d4d;
   padding: 0.75em 0;
-  margin-top: 4.5em;
+  margin-top: 48px;
 }
 .design-credit a {
   color: #4d4d4d;
@@ -1500,8 +1518,34 @@ li.pingback:after {
     top: -6px;
   }
 
+  .sidebar-footer {
+    margin-bottom: -72px;
+  }
+
   .design-credit {
-    margin-top: 6em;
+    margin-top: 72px;
+  }
+}
+/* 700px */
+@media all and (min-width: 43.75em) {
+  .sidebar-footer {
+    margin-top: 3em;
+  }
+  .sidebar-footer:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+
+  .sidebar-footer:not(.active-1) .widget {
+    width: 47%;
+    float: left;
+  }
+  .sidebar-footer:not(.active-1) .widget:nth-child(odd) {
+    margin-right: 3%;
   }
 }
 /* 900px */
@@ -1509,6 +1553,20 @@ li.pingback:after {
   .site-footer h3 {
     font-size: 2.625em;
     line-height: 1.143;
+  }
+}
+/* 1000px */
+@media all and (min-width: 62.5em) {
+  #sidebar-footer:not(.active-1):not(.active-2) .widget {
+    width: 31%;
+    margin-right: 0;
+    margin-top: 1.5em;
+  }
+  #sidebar-footer:not(.active-1):not(.active-2) .widget:nth-child(3n - 2), #sidebar-footer:not(.active-1):not(.active-2) .widget:nth-child(3n - 1) {
+    margin-right: 3%;
+  }
+  #sidebar-footer:not(.active-1):not(.active-2) .widget:nth-child(3n + 4) {
+    clear: left;
   }
 }
 /* page */
