@@ -18,6 +18,7 @@
 	            ct_tracks_customizer_social_icons_output();
 	        }
 	    ?>
+		<?php get_template_part('sidebar','footer'); ?>
 	    <div class="design-credit">
 	        <p>
 	            <?php

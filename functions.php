@@ -86,6 +86,15 @@ function ct_tracks_register_widget_areas(){
         'id'           => 'after-page-content',
         'description'  => __( 'Widgets in this area will be shown after page content', 'tracks' )
     ) );
+
+	/* register footer widget area */
+	hybrid_register_sidebar( array(
+		'name'         => __( 'Footer', 'tracks' ),
+		'id'           => 'footer',
+		'description'  => __( 'Widgets in this area will be shown in the footer', 'tracks' ),
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
+	) );
 }
 add_action('widgets_init','ct_tracks_register_widget_areas');
 
