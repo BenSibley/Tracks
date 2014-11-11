@@ -23,6 +23,13 @@
 }
 .entry-content {
   margin: $baseline-height * 2 0;
+
+  img.full-width {
+    position: relative;
+    max-width: none;
+    width: 113%;
+    left: -6.5%;
+  }
 }
 .further-reading,
 .entry-categories,
@@ -168,6 +175,13 @@
     padding-left: 5.55%;
     padding-right: 5.55%;
   }
+  .entry-content {
+
+    img.full-width {
+      width: 128.6%;
+      left: -14.3%;
+    }
+  }
 }
 
 /* 900px */
@@ -218,6 +232,10 @@
     &:after {
       @include clearfix;
     }
+    img.full-width {
+      width: 150%;
+      left: -25%;
+    }
   }
 }
 
@@ -232,6 +250,13 @@
   .entry-container {
     padding: 0 19.435%;
     position: relative;
+  }
+  .entry-content {
+
+    img.full-width {
+      width: 163.6%;
+      left: -31.8%;
+    }
   }
   .entry-meta-bottom.float {
 
@@ -260,5 +285,12 @@
 
   .entry-container {
     padding: 0 22.22%;
+  }
+  .entry-content {
+
+    img.full-width {
+      width: 179.9%;
+      left: -39.95%;
+    }
   }
 }
