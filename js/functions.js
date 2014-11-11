@@ -10,6 +10,12 @@ jQuery(function($){
         var siteHeader = $('#site-header');
         var menuPrimary = $('#menu-primary');
 
+        if($('#menu-primary-items').length){
+            var menuHeight = $('#menu-primary-items').height();
+        } else {
+            var menuHeight = $('.menu-unset').height();
+        }
+
         if (siteHeader.hasClass('toggled')) {
             siteHeader.removeClass('toggled');
             menuPrimary.css('transform', 'translateX(' + 0 + 'px)');
@@ -18,12 +24,14 @@ jQuery(function($){
             // delayed so it isn't seen
             setTimeout(function() {
                 menuPrimary.removeAttr('style');
+                $('.overflow-container').removeAttr('style');
             }, 400);
         } else {
             var menuWidth = menuPrimary.width();
             siteHeader.addClass('toggled');
             menuPrimary.css('transform', 'translateX(' + -menuWidth + 'px)');
             $('#menu-primary-tracks').css('transform', 'translateX(' + menuWidth + 'px)');
+            $('.overflow-container').css('min-height', menuHeight + 240); // if page is shorter than menu, extend to fit menu
             $(window).scroll(onScroll);
         }
     }
