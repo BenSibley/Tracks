@@ -137,10 +137,14 @@
 
     .main {
       width: 91.665%;
+      max-width: 1315px;
 
       &:after {
         @include clearfix;
       }
+    }
+    .archive-header {
+      margin-left: 1.2%;
     }
   }
   .two-column-images {
