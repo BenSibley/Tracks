@@ -919,35 +919,28 @@ a img {
     opacity: 0.8;
     -webkit-transition: opacity 0.2s ease;
             transition: opacity 0.2s ease;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
   }
   .excerpt .featured-image {
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
     /* fixes FF glitch where image focuses & unfocuses */
     width: 50%;
+    width: calc(50% + 2px);
     height: 100%;
     padding-bottom: 0;
     position: absolute;
-    right: 0;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    right: -1px;
   }
   .excerpt:hover {
     opacity: 1;
-  }
-
-  .excerpt.odd .excerpt-container {
-    width: calc(50% + 1px);
   }
 
   .excerpt.even .excerpt-container {
     float: right;
   }
   .excerpt.even .featured-image {
-    right: 50%;
-    right: calc(50% - 1px);
+    right: auto;
+    left: -1px;
   }
   .excerpt.even:after {
     content: ".";

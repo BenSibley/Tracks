@@ -18,6 +18,7 @@
   background-position: 50%;
   background-size: cover;
   backface-visibility: hidden;
+//  overflow: hidden; // stops weird 1px glitch/wiggle on Safari
   transition: transform 0.3s ease;
 }
 .featured-image-link {
@@ -189,36 +190,35 @@
     margin-bottom: $baseline-height;
     opacity: 0.8;
     transition: opacity 0.2s ease;
-    backface-visibility: hidden;
 
     .featured-image {
       transform: translateZ(0);/* fixes FF glitch where image focuses & unfocuses */
       width: 50%;
+      width: calc(50% + 2px); // to prevent black line between image and content
       height: 100%;
       padding-bottom: 0;
       position: absolute;
-      right: 0;
-      backface-visibility: hidden;
+      right: -1px;
     }
     &:hover {
       opacity: 1;
     }
   }
   // alternating solution for black line problem to keep center line consistently down the middle
-  .excerpt.odd {
-
-    .excerpt-container {
-      width: calc(50% + 1px); // +1 px to prevent black line between it and image
-    }
-  }
+//  .excerpt.odd {
+//
+//    .excerpt-container {
+//      width: calc(50% + 1px); // +1 px to prevent black line between it and image
+//    }
+//  }
   .excerpt.even {
 
     .excerpt-container {
       float: right;
     }
     .featured-image {
-      right: 50%;
-      right: calc(50% - 1px); // -px to prevent black line
+      right: auto;
+      left: -1px;
     }
     &:after {
       @include clearfix;
