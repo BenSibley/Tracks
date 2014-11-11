@@ -10,10 +10,14 @@
 
     .main {
       width: 91.665%;
+      max-width: 1315px;
 
       &:after {
         @include clearfix;
       }
+    }
+    .archive-header {
+      margin-left: 1.2%;
     }
   }
   .two-column {
@@ -48,9 +52,6 @@
     .loop-pagination {
       clear: both;
       padding-top: $baseline-height * 3;
-    }
-    .archive-header {
-      margin-left: 1.3875%;
     }
   }
 }

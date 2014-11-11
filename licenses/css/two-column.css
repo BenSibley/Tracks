@@ -16,6 +16,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   .two-column.home .main,
   .two-column.archive .main {
     width: 91.665%;
+    max-width: 1315px;
   }
   .two-column.home .main:after,
   .two-column.archive .main:after {
@@ -25,6 +26,10 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     visibility: hidden;
     line-height: 0;
     height: 0;
+  }
+  .two-column.home .archive-header,
+  .two-column.archive .archive-header {
+    margin-left: 1.2%;
   }
 
   .two-column .excerpt {
@@ -52,8 +57,5 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   .two-column .loop-pagination {
     clear: both;
     padding-top: 4.5em;
-  }
-  .two-column .archive-header {
-    margin-left: 1.3875%;
   }
 }

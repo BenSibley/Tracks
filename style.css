@@ -1515,7 +1515,7 @@ li.pingback:after {
 }
 
 .archive-header {
-  padding: 1.5em 5.55%;
+  padding: 1.5em 0;
   text-transform: uppercase;
   color: #8c8c8c;
 }
@@ -1540,10 +1540,6 @@ li.pingback:after {
 @media all and (min-width: 37.5em) {
   .search .excerpt {
     background: white;
-  }
-
-  .archive-header {
-    padding-left: 0;
   }
 }
 /* 900px */

@@ -33,7 +33,7 @@
   }
 }
 .archive-header {
-  padding: $baseline-height 5.55%;
+  padding: $baseline-height 0;
   text-transform: uppercase;
   color: $gray-medium;
 
@@ -65,9 +65,6 @@
     .excerpt {
       background: white;
     }
-  }
-  .archive-header {
-    padding-left: 0;
   }
 }
 
