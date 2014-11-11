@@ -4,9 +4,6 @@
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 new Hybrid();
 
-/* Do theme setup on the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'ct_tracks_theme_setup', 10 );
-
 function ct_tracks_theme_setup() {
 	
     /* Get action/filter hook prefix. */
@@ -51,7 +48,6 @@ function ct_tracks_theme_setup() {
 		define( 'BOLD_TEMPLATE_ACTIVE', true );
 		define( 'TEMPLATE_ACTIVE', true );
 	}
-
 	// include Bold Template files
 	if( defined( 'BOLD_TEMPLATE_ACTIVE' ) ) {
 		include get_template_directory() . '/licenses/templates/bold/meta-boxes.php';
@@ -65,6 +61,15 @@ function ct_tracks_theme_setup() {
 	// load text domain
 	load_theme_textdomain('tracks', get_template_directory() . '/languages');
 }
+add_action( 'after_setup_theme', 'ct_tracks_theme_setup', 10 );
+
+function ct_tracks_remove_cleaner_gallery() {
+
+	if( class_exists( 'Jetpack' ) && (Jetpack::is_module_active( 'carousel' ) || Jetpack::is_module_active( 'tiled-gallery' ) ) ) { 
+		remove_theme_support( 'cleaner-gallery' );
+	}
+}
+add_action( 'after_setup_theme', 'ct_tracks_remove_cleaner_gallery', 11 );
 
 function ct_tracks_register_widget_areas(){
 
