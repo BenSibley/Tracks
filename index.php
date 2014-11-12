@@ -21,10 +21,11 @@ elseif(is_tag()){ ?>
 }
 /* Author header */
 elseif(is_author()){ ?>
-    <div class='archive-header'>
-    <p><?php _e('These Posts are by:', 'tracks'); ?></p>
-    <h2><?php echo get_the_author(); ?></h2>
-    </div><?php
+	<div class='archive-header'>
+	<p><?php _e('These Posts are by:', 'tracks'); ?></p><?php
+	$author = get_userdata(get_query_var('author')); ?>
+	<h2><?php echo $author->nickname; ?></h2>
+	</div><?php
 }
 
 // The loop
