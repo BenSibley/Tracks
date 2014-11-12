@@ -672,3 +672,12 @@ function ct_tracks_remove_page_templates( $templates ) {
 	return $templates;
 }
 add_filter( 'theme_page_templates', 'ct_tracks_remove_page_templates' );
+
+function ct_tracks_wp_backwards_compatibility() {
+
+	// not using this function, simply remove it so use of "has_image_size" doesn't break < 3.9
+	if( get_bloginfo('version') < 3.9 ) {
+		remove_filter( 'image_size_names_choose', 'hybrid_image_size_names_choose' );
+	}
+}
+add_action('init', 'ct_tracks_wp_backwards_compatibility');
