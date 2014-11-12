@@ -20,7 +20,8 @@
   backface-visibility: hidden;
   transition: transform 0.3s ease;
 }
-.featured-image-link {
+// only add zoom CSS if enabled
+.zoom .featured-image-link {
   backface-visibility: hidden;
 
   &:hover,

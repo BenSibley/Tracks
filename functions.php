@@ -398,6 +398,12 @@ function ct_tracks_post_class_update($classes){
                 $classes[] = 'excerpt';
             }
         }
+
+	    // add image zoom class
+	    $setting = get_theme_mod('additional_options_image_zoom_settings');
+	    if( $setting != 'no-zoom' ) {
+		    $classes[] = 'zoom';
+	    }
     }
 	// add class for posts with Featured Videos
 	if( get_post_meta( $post->ID, 'ct_tracks_video_key', true ) ) {
@@ -442,23 +448,6 @@ function ct_tracks_odd_even_post_class( $classes ) {
     return $classes;
 }
 add_filter ( 'post_class' , 'ct_tracks_odd_even_post_class' );
-
-/* css output for hiding the scroll to top link */
-function ct_tracks_image_zoom_settings_output(){
-
-    $setting = get_theme_mod('additional_options_image_zoom_settings');
-
-    /* if 'hide' is selected, hide it */
-    if($setting == 'no-zoom') {
-        $css = "
-            .featured-image-link:hover .featured-image { -ms-transform: none; -moz-transform: none; -o-transform: none; -webkit-transform: none; transform: none;}
-            .featured-image-link:active .featured-image { -ms-transform: none; -moz-transform: none; -o-transform: none; -webkit-transform: none; transform: none;}
-            .featured-image-link:focus .featured-image { -ms-transform: none; -moz-transform: none; -o-transform: none; -webkit-transform: none; transform: none;}
-        ";
-        wp_add_inline_style('style', $css);
-    }
-}
-add_action('wp_enqueue_scripts','ct_tracks_image_zoom_settings_output');
 
 // array of social media site names
 function ct_tracks_social_site_list(){

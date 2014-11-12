@@ -761,11 +761,11 @@ a img {
           transition: transform 0.3s ease;
 }
 
-.featured-image-link {
+.zoom .featured-image-link {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-.featured-image-link:hover .featured-image, .featured-image-link:active .featured-image, .featured-image-link:focus .featured-image {
+.zoom .featured-image-link:hover .featured-image, .zoom .featured-image-link:active .featured-image, .zoom .featured-image-link:focus .featured-image {
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
