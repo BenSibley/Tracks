@@ -849,13 +849,12 @@ a img {
   right: 0;
   margin: 0 auto;
   -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+          transition: all 0.2s ease;
   -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .loop-pagination {
