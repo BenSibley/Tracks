@@ -284,7 +284,7 @@ function ct_tracks_featured_image() {
 
     if (has_post_thumbnail( $post->ID ) ) {
 
-        if( is_archive() || is_home() && $premium_layout != 'full-width' ) {
+        if( ( is_archive() || is_home() ) && $premium_layout != 'full-width' && $premium_layout != 'full-width-images' ) {
             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
         } else {
             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
@@ -295,16 +295,8 @@ function ct_tracks_featured_image() {
     if ($has_image == true) {
 
         // for layouts using img
-        if($premium_layout == 'two-column-images' || ($premium_layout == 'full-width-images' && get_theme_mod('premium_layouts_full_width_image_height') == 'image')){
-
-            // if it's an archive page and the two-column-images layout, switch to a potentially smaller version
-            if(is_archive() || is_home() && $premium_layout == 'two-column-images'){
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-                $image = $image[0];
-            }
-            ?>
-             <img class="featured-image" src='<?php echo $image; ?>' />
-            <?php
+        if($premium_layout == 'two-column-images' || ( $premium_layout == 'full-width-images' && get_theme_mod('premium_layouts_full_width_image_height') == 'image') ){ ?>
+             <img class="featured-image" src='<?php echo $image; ?>' /><?php
         }
         // otherwise, output the src as a bg image
         else {
