@@ -31,7 +31,7 @@
 	            }
 	            /* Otherwise, output the default text */
 	            else {
-	                $site_url = 'http://www.competethemes.com/tracks/';
+	                $site_url = 'https://www.competethemes.com/tracks/?utm_source=Footer%20Link&utm_medium=Referral&utm_campaign=Tracks%20Footer%20Link';
 	                $footer_text = sprintf( __( '<a target="_blank" href="%s">Tracks WordPress Theme</a> by Compete Themes.', 'tracks' ), esc_url( $site_url ) );
 	                echo $footer_text;
 	            }
