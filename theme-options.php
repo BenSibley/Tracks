@@ -31,13 +31,13 @@ function ct_tracks_options_content(){ ?>
 		        <h3><?php _e('Support', 'tracks'); ?></h3>
 		        <p><?php _e("You can find the knowledgebase, changelog, forum, and more in the Tracks Support Center", "tracks"); ?>.</p>
 		        <p>
-			        <a target="_blank" class="button-primary" href="http://www.competethemes.com/documentation/tracks-support-center/"><?php _e('Visit Support Center', 'tracks'); ?></a>
+			        <a target="_blank" class="button-primary" href="https://www.competethemes.com/documentation/tracks-support-center/"><?php _e('Visit Support Center', 'tracks'); ?></a>
 		        </p>
 	        </div>
 	        <div class="content-premium-upgrades content">
 		        <h3><?php _e('Premium Upgrades ($9-15)', 'tracks'); ?></h3>
 		        <p><?php _e('Make your site more customizable and beautiful with premium upgrades', 'tracks');?>.</p>
-		        <p><a target="_blank" class="button-primary" href="http://www.competethemes.com/tracks-theme-upgrades/"><?php _e('Visit Upgrades Gallery', 'tracks'); ?></a></p>
+		        <p><a target="_blank" class="button-primary" href="https://www.competethemes.com/tracks/tracks-theme-upgrades/"><?php _e('Visit Upgrades Gallery', 'tracks'); ?></a></p>
 	        </div>
 	        <div class="content content-resources">
 		        <h3><?php _e('WordPress Resources', 'tracks'); ?></h3>
@@ -48,7 +48,7 @@ function ct_tracks_options_content(){ ?>
 	        </div>
         <?php }
         elseif($active_tab == 'licenses'){ ?>
-            <div class="content-licenses content">
+            <div class="content-licenses">
                 <h3><?php _e('Premium Layouts', 'tracks'); ?></h3>
                 <?php
                 // array of available layouts
