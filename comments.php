@@ -20,7 +20,8 @@ if ( comments_open() ) { ?>
                     <p class="previous-comment"><?php previous_comments_link(); ?></p><p class="next-comment"><?php next_comments_link(); ?></p>
                 </nav>
             <?php } ?>
-            <?php comment_form(); ?>       
+            <?php comment_form(); ?>
+    </section><!-- #comments -->
 <?php 
 } elseif(!comments_open() && have_comments() && pings_open() ) { ?>
     <section id="comments" class="comments">
@@ -41,6 +42,7 @@ if ( comments_open() ) { ?>
             <p class="comments-closed pings-open">
                     <?php printf( __( 'Comments are closed, but <a href="%s" title="Trackback URL for this post">trackbacks</a> and pingbacks are open.', 'tracks' ), esc_url( get_trackback_url() ) ); ?>
             </p><!-- .comments-closed .pings-open -->
+    </section><!-- #comments -->
 <?php
 } elseif ( !comments_open() && have_comments() ) { ?>
     <section id="comments" class="comments">
@@ -61,6 +63,7 @@ if ( comments_open() ) { ?>
             <p class="comments-closed">
                 <?php _e( 'Comments are closed.', 'tracks' ); ?>
             </p><!-- .comments-closed -->
+    </section><!-- #comments -->
 <?php 
 } else { ?>
 
@@ -69,5 +72,3 @@ if ( comments_open() ) { ?>
     </p><!-- .comments-closed -->
 
 <?php } ?>
-  
-    </section><!-- #comments -->
