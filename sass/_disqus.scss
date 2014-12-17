@@ -3,6 +3,7 @@
 #disqus_thread {
   background: white;
   padding: $baseline-height 5.55%;
+  max-width: 1280px;
 }
 
 /* 600px */
@@ -43,5 +44,11 @@
 
   #disqus_thread {
     padding: $baseline-height 19.75% $baseline-height * 2;
+  }
+}
+@media all and (min-width: 1400px) {
+
+  #disqus_thread {
+    padding: $baseline-height 285px $baseline-height * 2;
   }
 }

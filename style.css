@@ -2527,6 +2527,7 @@ li.pingback:after {
 #disqus_thread {
   background: white;
   padding: 1.5em 5.55%;
+  max-width: 1280px;
 }
 
 /* 600px */
@@ -2558,6 +2559,11 @@ li.pingback:after {
 @media all and (min-width: 75em) {
   #disqus_thread {
     padding: 1.5em 19.75% 3em;
+  }
+}
+@media all and (min-width: 1400px) {
+  #disqus_thread {
+    padding: 1.5em 285px 3em;
   }
 }
 /* bbpress Styles */
