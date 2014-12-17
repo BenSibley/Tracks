@@ -39,6 +39,13 @@ function ct_tracks_options_content(){ ?>
 		        <p><?php _e('Make your site more customizable and beautiful with premium upgrades', 'tracks');?>.</p>
 		        <p><a target="_blank" class="button-primary" href="http://www.competethemes.com/tracks-theme-upgrades/"><?php _e('Visit Upgrades Gallery', 'tracks'); ?></a></p>
 	        </div>
+	        <div class="content content-resources">
+		        <h3><?php _e('WordPress Resources', 'tracks'); ?></h3>
+		        <p><?php _e("Save time and money searching for WordPress products by following our recommendations", "tracks"); ?>.</p>
+		        <p>
+			        <a target="_blank" class="button-primary" href="https://www.competethemes.com/wordpress-resources/"><?php _e('View Resources', 'tracks'); ?></a>
+		        </p>
+	        </div>
         <?php }
         elseif($active_tab == 'licenses'){ ?>
             <div class="content-licenses content">
