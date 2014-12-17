@@ -2317,6 +2317,7 @@ li.pingback:after {
 .background-image-active .background-image {
   -webkit-background-size: cover cover;
           background-size: cover;
+  background-position: 50%;
   position: fixed;
   z-index: -1;
   top: 0;
