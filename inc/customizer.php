@@ -994,7 +994,6 @@ function ct_tracks_assign_customizer_ad() {
         $ads_array = array(
             'Have you seen the upgrades?',
             'Upgrade Tracks',
-            'Premium Layouts and Features for Tracks',
             'Visit Tracks Upgrade Gallery',
             'Visit Premium Upgrade Gallery',
             'Tracks Theme Upgrades',
@@ -1002,7 +1001,7 @@ function ct_tracks_assign_customizer_ad() {
         );
 
         // randomly pick one
-        $ad = rand(0,6);
+        $ad = rand(0,5);
 
         // get randomly selected ad from array
         $ad = $ads_array[$ad];
