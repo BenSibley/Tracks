@@ -984,10 +984,41 @@ function ct_tracks_textures_array(){
 	return $textures;
 }
 
-function ct_tracks_customize_preview_js() { ?>
+function ct_tracks_assign_customizer_ad() {
+
+    delete_option('ct_tracks_ad_text');
+    // if the ad text isn't set already
+    if( ! get_option('ct_tracks_ad_text') ) {
+
+        // create array of ad text
+        $ads_array = array(
+            'Have you seen the upgrades?',
+            'Upgrade Tracks',
+            'Premium Layouts and Features for Tracks',
+            'Visit Tracks Upgrade Gallery',
+            'Visit Premium Upgrade Gallery',
+            'Tracks Theme Upgrades',
+            'Premium Upgrades for Tracks'
+        );
+
+        // randomly pick one
+        $ad = rand(0,6);
+
+        // get randomly selected ad from array
+        $ad = $ads_array[$ad];
+
+        // update database
+        update_option('ct_tracks_ad_text', $ad);
+    }
+}
+add_action('admin_init', 'ct_tracks_assign_customizer_ad');
+
+function ct_tracks_customize_preview_js() {
+
+    $ad = get_option('ct_tracks_ad_text');
+    ?>
 	<script>
-		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="<?php echo esc_url('http://www.competethemes.com/tracks-theme-upgrades/');?>" target="_blank"><?php _e('Premium Upgrades Available!','tracks');?> <span>&rarr;</span></a></div>');
+		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="<?php echo esc_url('https://www.competethemes.com/tracks/tracks-theme-upgrades/');?>" target="_blank"><?php echo $ad ?> <span>&rarr;</span></a></div>');
 	</script>
 <?php }
-
 add_action('customize_controls_print_footer_scripts', 'ct_tracks_customize_preview_js');
