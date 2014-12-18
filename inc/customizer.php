@@ -988,14 +988,13 @@ function ct_tracks_customizer_ad_array() {
 
     // create array of ad text
     $ads_array = array(
-        'Have you seen the upgrades?' => 'https://www.competethemes.com/?utm_source=customizer-ad&utm_medium=link&utm_content=have-you-seen-the-upgrades&utm_campaign=customizer-ads',
-        'Upgrade Tracks' => 'https://www.competethemes.com/?utm_source=customizer-ad&utm_medium=link&utm_content=upgrade-tracks&utm_campaign=customizer-ads',
-        'Visit Tracks Upgrade Gallery' => 'https://www.competethemes.com/?utm_source=customizer-ad&utm_medium=link&utm_content=visit-tracks-upgrade-gallery&utm_campaign=customizer-ads',
-        'Visit Premium Upgrade Gallery' => 'https://www.competethemes.com/?utm_source=customizer-ad&utm_medium=link&utm_content=visit-premium-upgrade-gallery&utm_campaign=customizer-ads',
-        'Tracks Theme Upgrades' => 'https://www.competethemes.com/?utm_source=customizer-ad&utm_medium=link&utm_content=tracks-theme-upgrades&utm_campaign=customizer-ads',
-        'Premium Upgrades for Tracks' => 'https://www.competethemes.com/?utm_source=customizer-ad&utm_medium=link&utm_content=premium-upgrades-for-tracks&utm_campaign=customizer-ads'
+        'Have you seen the upgrades?' => 'https://www.competethemes.com/tracks/tracks-theme-upgrades/?utm_source=customizer-ad&utm_medium=link&utm_content=have-you-seen-the-upgrades&utm_campaign=customizer-ads',
+        'Upgrade Tracks' => 'https://www.competethemes.com/tracks/tracks-theme-upgrades/?utm_source=customizer-ad&utm_medium=link&utm_content=upgrade-tracks&utm_campaign=customizer-ads',
+        'Visit Tracks Upgrade Gallery' => 'https://www.competethemes.com/tracks/tracks-theme-upgrades/?utm_source=customizer-ad&utm_medium=link&utm_content=visit-tracks-upgrade-gallery&utm_campaign=customizer-ads',
+        'Visit Premium Upgrade Gallery' => 'https://www.competethemes.com/tracks/tracks-theme-upgrades/?utm_source=customizer-ad&utm_medium=link&utm_content=visit-premium-upgrade-gallery&utm_campaign=customizer-ads',
+        'Tracks Theme Upgrades' => 'https://www.competethemes.com/tracks/tracks-theme-upgrades/?utm_source=customizer-ad&utm_medium=link&utm_content=tracks-theme-upgrades&utm_campaign=customizer-ads',
+        'Premium Upgrades for Tracks' => 'https://www.competethemes.com/tracks/tracks-theme-upgrades/?utm_source=customizer-ad&utm_medium=link&utm_content=premium-upgrades-for-tracks&utm_campaign=customizer-ads'
     );
-
     return $ads_array;
 }
 function ct_tracks_assign_customizer_ad() {
