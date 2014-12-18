@@ -591,7 +591,7 @@ function ct_tracks_set_date_format() {
 		add_option('ct_tracks_date_format_origin', 'updated');
 	}
 }
-add_action( 'init', 'ct_tracks_set_date_format' );
+add_action( 'admin_init', 'ct_tracks_set_date_format' );
 
 function ct_tracks_toolbar_link( $wp_admin_bar ) {
 
