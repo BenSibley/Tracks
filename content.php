@@ -88,9 +88,14 @@ if( is_single() ) { ?>
                 // if has a video, embed it instead of featured image
                 if ( $video ) {
                     echo '<div class="featured-video">';
-                    echo wp_oembed_get( esc_url( $video ) );
+                        echo wp_oembed_get( esc_url( $video ) );
                     echo '</div>';
                 }
+            }
+            else {
+                echo '<a class="featured-image-link" href="' . get_permalink() . '">';
+                    ct_tracks_featured_image();
+                echo '</a>';
             }
         }
 	    // otherwise output Featured Image
