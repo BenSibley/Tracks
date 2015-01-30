@@ -1240,7 +1240,7 @@ a img {
 }
 .comment-list ul {
   list-style: none;
-  margin-right: 0;
+  margin: 3em 0 1.5em 3em;
 }
 .comment-list article ul {
   list-style: disc;
@@ -1253,15 +1253,6 @@ li.pingback {
 li.comment:first-child,
 li.pingback:first-child {
   margin-top: 1.5em;
-}
-li.comment:after,
-li.pingback:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
 }
 
 .comment-author {

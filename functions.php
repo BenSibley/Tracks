@@ -131,7 +131,6 @@ function ct_tracks_customize_comments( $comment, $args, $depth ) {
                 <?php comment_text(); ?>
             </div>
         </article>
-    </li>
     <?php
 }
 

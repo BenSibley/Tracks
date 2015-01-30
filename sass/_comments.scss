@@ -18,7 +18,7 @@
 
   ul {
     list-style: none;
-    margin-right: 0;
+    margin: $baseline-height * 2 0 $baseline-height $baseline-height * 2;
   }
   article ul {
     list-style: disc;
@@ -30,9 +30,6 @@ li.pingback {
 
   &:first-child {
     margin-top: $baseline-height;
-  }
-  &:after {
-    @include clearfix;
   }
 }
 .comment-author {
