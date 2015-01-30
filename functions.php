@@ -44,21 +44,6 @@ function ct_tracks_theme_setup() {
 		include $filename;
 	}
 
-	// query database to get Bold Template license status
-	if( trim( get_option( 'ct_tracks_bold_template_license_key_status' ) ) == 'valid' ) {
-		define( 'BOLD_TEMPLATE_ACTIVE', true );
-		define( 'TEMPLATE_ACTIVE', true );
-	}
-	// include Bold Template files
-	if( defined( 'BOLD_TEMPLATE_ACTIVE' ) ) {
-		include get_template_directory() . '/licenses/templates/bold/meta-boxes.php';
-		include get_template_directory() . '/licenses/templates/bold/customizer.php';
-	}
-	// include functions.php file for templates
-	if( defined( 'TEMPLATE_ACTIVE' ) ) {
-		include get_template_directory() . '/licenses/templates/functions.php';
-	}
-
 	// load text domain
 	load_theme_textdomain('tracks', get_template_directory() . '/languages');
 }
@@ -677,18 +662,6 @@ function ct_tracks_toolbar_link( $wp_admin_bar ) {
 	$wp_admin_bar->add_node( $args );
 }
 add_action( 'admin_bar_menu', 'ct_tracks_toolbar_link', 999 );
-
-// remove page templates unless license activated
-function ct_tracks_remove_page_templates( $templates ) {
-
-	// WP will find and add the template on it's own, so remove bold template if license not active
-	if( ! defined( 'BOLD_TEMPLATE_ACTIVE' ) ) {
-		unset( $templates['templates/bold.php'] );
-	}
-
-	return $templates;
-}
-add_filter( 'theme_page_templates', 'ct_tracks_remove_page_templates' );
 
 function ct_tracks_wp_backwards_compatibility() {
 

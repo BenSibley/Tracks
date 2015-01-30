@@ -80,33 +80,6 @@ function ct_tracks_enqueue_admin_styles($hook){
 		}
 	}
 
-	// Bold Template
-	if( trim( get_option( 'ct_tracks_bold_template_license_key_status' ) ) == 'valid' ) {
-
-		// Post Editor
-		if ( 'post.php' == $hook || 'post-new.php' == $hook ) {
-
-			// admin stylesheet
-			wp_enqueue_style( 'style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
-
-			// enqueue admin JS file
-			wp_enqueue_script( 'admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array( 'jquery' ), '', true );
-
-			global $post;
-
-			// don't enqueue unless bold template is active
-			if( get_post_meta( $post->ID, '_wp_page_template', TRUE ) == 'templates/bold.php' ) {
-
-				// Enqueues all scripts, styles, settings, and templates necessary to use media JavaScript APIs.
-				wp_enqueue_media();
-
-				// enqueue the JS needed to utilize media uploader on profile image upload
-				wp_enqueue_script( 'ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js#ct_tracks_asyncload' );
-			}
-
-		}
-	}
-
 	// Profile (and edit other user)
 	if('profile.php' == $hook || 'user-edit.php' == $hook){
 
