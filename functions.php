@@ -17,6 +17,7 @@ function ct_tracks_theme_setup() {
     // from WordPress core not theme hybrid
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'automatic-feed-links' );
+    add_theme_support( 'title-tag' );
 
     register_nav_menus(array(
         'primary' => __('Primary', 'tracks'),
@@ -690,3 +691,12 @@ function ct_tracks_wp_backwards_compatibility() {
 	}
 }
 add_action('init', 'ct_tracks_wp_backwards_compatibility');
+
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
+    function ct_tracks_add_title_tag() {
+        ?>
+        <title><?php wp_title( ' | ' ); ?></title>
+    <?php
+    }
+    add_action( 'wp_head', 'ct_tracks_add_title_tag' );
+endif;
