@@ -81,16 +81,12 @@ if( is_single() ) { ?>
 
             // if post has video enabled on blog
             if ( get_post_meta( $post->ID, 'ct_tracks_video_display_key', true ) == 'both' ) {
+                $video = esc_url($video);
+                $video = wp_oembed_get($video);
 
-                // check for Featured Video
-                $video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
-
-                // if has a video, embed it instead of featured image
-                if ( $video ) {
-                    echo '<div class="featured-video">';
-                        echo wp_oembed_get( esc_url( $video ) );
-                    echo '</div>';
-                }
+                echo '<div class="featured-video">';
+                    echo $video;
+                echo '</div>';
             }
             else {
                 echo '<a class="featured-image-link" href="' . get_permalink() . '">';
