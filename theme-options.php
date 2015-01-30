@@ -63,13 +63,6 @@ function ct_tracks_options_content(){ ?>
                 // create form for each feature
                 ct_tracks_license_form_output($features);
                 ?>
-	            <h3><?php _e('Premium Templates', 'tracks'); ?></h3>
-	            <?php
-	            // array of available features
-	            $templates = array('bold_template');
-	            // create form for each feature
-	            ct_tracks_license_form_output($templates);
-	            ?>
             </div>
         <?php } ?>
     </div>
@@ -111,9 +104,6 @@ function ct_tracks_license_form_output($upgrades){
                 }
                 elseif($upgrade == 'featured_videos'){
 	                echo 'Featured Videos';
-                }
-                elseif($upgrade == 'bold_template'){
-	                echo 'Bold Template';
                 }
                 ?>
             </h4>
@@ -157,8 +147,6 @@ function ct_tracks_license_form_output($upgrades){
                     <p class="valid"><?php printf( __("If you haven't already, please upload and activate the <a href='%s'>Background Texture plugin</a>", 'tracks'), esc_url( $textures_plugin_url ) ); ?>.</p><?php }
                 elseif($upgrade == 'featured_videos'){ ?>
 	                <p class="valid"><?php _e('You can now add videos to posts. Use the Featured Videos box under the Post Editor to get started', 'tracks'); ?>.</p><?php }
-                elseif($upgrade == 'bold_template'){ ?>
-	                <p class="valid"><?php _e('You can now use the Bold template! Choose a Page and use the "Template" dropdown on the right-side of the screen to select the Bold template', 'tracks'); ?>.</p><?php }
                 else { ?>
                     <p class="valid"><?php printf( __('You can now switch to your new layout in the "Premium Layouts" section in the <a href="%s">Customizer</a>', 'tracks'), esc_url( $customizer_url ) ); ?>.</p><?php }
             } ?>
@@ -216,9 +204,3 @@ function ct_tracks_featured_videos_register_option() {
 	register_setting('ct_tracks_featured_videos_license', 'ct_tracks_featured_videos_license_key', 'ct_tracks_featured_videos_sanitize_license' );
 }
 add_action('admin_init', 'ct_tracks_featured_videos_register_option');
-
-function ct_tracks_bold_template_register_option() {
-	// creates our settings in the options table
-	register_setting('ct_tracks_bold_template_license', 'ct_tracks_bold_template_license_key', 'ct_tracks_bold_template_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_bold_template_register_option');
