@@ -419,6 +419,15 @@ function ct_tracks_post_class_update($classes){
 		}
 	}
 
+    // if 3.8 or lower
+    if( version_compare( get_bloginfo('version'), '3.9', '<') ) {
+
+        // add the has-post-thumbnail class
+        if( has_post_thumbnail() ) {
+            $classes[] = 'has-post-thumbnail';
+        }
+    }
+
     return $classes;
 }
 add_filter( 'post_class', 'ct_tracks_post_class_update' );
