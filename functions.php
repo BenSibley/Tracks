@@ -295,8 +295,13 @@ function ct_tracks_featured_image() {
     if ($has_image == true) {
 
         // for layouts using img
-        if($premium_layout == 'two-column-images' || ( $premium_layout == 'full-width-images' && get_theme_mod('premium_layouts_full_width_image_height') == 'image') ){ ?>
+        if($premium_layout == 'two-column-images'){ ?>
              <img class="featured-image" src='<?php echo $image; ?>' /><?php
+        }
+        elseif(
+        ( ( is_archive() || is_home() ) && $premium_layout == 'full-width-images' && get_theme_mod('premium_layouts_full_width_image_height') == 'image' )
+        || is_singular() && $premium_layout == 'full-width-images' && get_theme_mod('premium_layouts_full_width_image_height_post') == 'image' ) { ?>
+            <img class="featured-image" src='<?php echo $image; ?>' /><?php
         }
         // otherwise, output the src as a bg image
         else {
@@ -346,7 +351,10 @@ function ct_tracks_body_class( $classes ) {
     elseif( $premium_layout_setting == 'full-width-images'){
         $classes[] = 'full-width-images';
 
-        if(get_theme_mod('premium_layouts_full_width_image_height') == '2:1-ratio'){
+        if( ( is_home() || is_archive() ) && get_theme_mod('premium_layouts_full_width_image_height') == '2:1-ratio'){
+            $classes[] = 'ratio';
+        }
+        if( is_singular() && get_theme_mod('premium_layouts_full_width_image_height_post') == '2:1-ratio'){
             $classes[] = 'ratio';
         }
 	    if(get_theme_mod('premium_layouts_full_width_image_style') == 'title'){
