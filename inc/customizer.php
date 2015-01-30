@@ -457,6 +457,24 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
             '2:1-ratio'   => _x('2:1 width/height ratio like posts', 'size of the featured image', 'tracks')
         ),
     ) );
+    // setting - full-width image height post
+    $wp_customize->add_setting( 'premium_layouts_full_width_image_height_post', array(
+        'default'           => 'image',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_image_height'
+    ) );
+    // control - full-width image height
+    $wp_customize->add_control( 'premium_layouts_full_width_image_height_post', array(
+        'type' => 'radio',
+        'label' => __('Image size on Posts', 'tracks'),
+        'section' => 'ct_tracks_premium_layouts',
+        'setting' => 'premium_layouts_setting',
+        'choices' => array(
+            'image' => _x('size based on image size', 'size of the featured image', 'tracks'),
+            '2:1-ratio'   => _x('2:1 width/height ratio like posts', 'size of the featured image', 'tracks')
+        ),
+    ) );
 	// setting - full-width image style
 	$wp_customize->add_setting( 'premium_layouts_full_width_image_style', array(
 		'default'           => 'overlay',
