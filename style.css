@@ -283,6 +283,12 @@ img {
   color: #8c8c8c;
 }
 
+.wp-caption.aligncenter {
+  max-width: none;
+  margin: 0 auto;
+  width: auto !important;
+}
+
 /* Form styles */
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea {

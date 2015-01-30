@@ -200,6 +200,12 @@ img {
   @extend %thirteen-pixels;
   color: $gray-medium;
 }
+// fixes full-width images not working with captions
+.wp-caption.aligncenter {
+  max-width: none;
+  margin: 0 auto;
+  width: auto !important;
+}
 
 /* Form styles */
 
