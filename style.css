@@ -992,6 +992,14 @@ a img {
   width: 113%;
   left: -6.5%;
 }
+.entry-content:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
 
 .further-reading span,
 .entry-categories span,
@@ -1163,14 +1171,6 @@ a img {
 
   .entry-content {
     margin-top: 4.5em;
-  }
-  .entry-content:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
   }
   .entry-content img.full-width {
     width: 150%;

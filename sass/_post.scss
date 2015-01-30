@@ -30,6 +30,9 @@
     width: 113%;
     left: -6.5%;
   }
+  &:after {
+    @include clearfix;
+  }
 }
 .further-reading,
 .entry-categories,
@@ -229,9 +232,6 @@
   .entry-content {
     margin-top: $baseline-height * 3;
 
-    &:after {
-      @include clearfix;
-    }
     img.full-width {
       width: 150%;
       left: -25%;
