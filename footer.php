@@ -1,7 +1,7 @@
 </div> <!-- .main -->
 
 <?php if( ! is_page_template('templates/bold.php') ) : ?>
-	<footer class="site-footer" role="contentinfo">
+	<footer id="site-footer" class="site-footer" role="contentinfo">
 	    <h3>
 	        <a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('title'); ?></a>
 	    </h3>
