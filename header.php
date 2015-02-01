@@ -19,33 +19,29 @@
 
     $social_icon_setting = get_theme_mod('social_icons_display_setting');
 
-    // if bold template, don't add top-navigation
-    if( ! is_page_template('templates/bold.php') ) :
+    if( ( has_nav_menu( 'secondary' ) ) || // if secondary menu is set, or...
+        ( get_theme_mod('search_input_setting') == 'show' ) || // if search bar is on, or...
+        ( $social_icon_setting == 'header-footer' || $social_icon_setting == 'header' ) ) : // default is 'no', so if it is equal header & footer, or header display it
 
-	    if( ( has_nav_menu( 'secondary' ) ) || // if secondary menu is set, or...
-	        ( get_theme_mod('search_input_setting') == 'show' ) || // if search bar is on, or...
-	        ( $social_icon_setting == 'header-footer' || $social_icon_setting == 'header' ) ) : // default is 'no', so if it is equal header & footer, or header display it
+            echo "<div class='top-navigation'>";
 
-	            echo "<div class='top-navigation'>";
+                echo "<div class='container'>";
 
-	                echo "<div class='container'>";
+                    // add secondary menu if set
+                    get_template_part( 'menu', 'secondary' );
 
-	                    // add secondary menu if set
-	                    get_template_part( 'menu', 'secondary' );
+                    // add search input if set
+                    if(get_theme_mod('search_input_setting') == 'show'){
+                        get_search_form();
+                    }
+                    // display social icons if set
+                    if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'header')){
+                        ct_tracks_customizer_social_icons_output();
+                    }
 
-	                    // add search input if set
-	                    if(get_theme_mod('search_input_setting') == 'show'){
-	                        get_search_form();
-	                    }
-	                    // display social icons if set
-	                    if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'header')){
-	                        ct_tracks_customizer_social_icons_output();
-	                    }
+                echo "</div>";
 
-	                echo "</div>";
-
-	            echo "</div>";
-	    endif;
+            echo "</div>";
     endif; ?>
     <div class="container">
 

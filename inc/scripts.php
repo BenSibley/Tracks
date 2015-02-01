@@ -34,11 +34,6 @@ function ct_tracks_load_javascript_files() {
 		elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
 			wp_enqueue_style('ct-tracks-two-column-images', get_template_directory_uri() . '/licenses/css/two-column-images.min.css');
 		}
-
-		// enqueue page template stylesheet
-		if( is_page_template( 'templates/bold.php') ) {
-			wp_enqueue_style('ct-tracks-bold-template', get_template_directory_uri() . '/licenses/templates/bold/dynamic-styles.php');
-		}
 	}
 	// enqueue the comment-reply script on posts & pages if comments open (included in WP by default)
 	if( is_singular() && comments_open() && get_option('thread_comments') ) {

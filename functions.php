@@ -412,7 +412,7 @@ function ct_tracks_post_class_update($classes){
 		}
 	}
 
-    // if 3.8 or lower
+    // if < 3.9
     if( version_compare( get_bloginfo('version'), '3.9', '<') ) {
 
         // add the has-post-thumbnail class
