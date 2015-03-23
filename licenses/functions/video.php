@@ -13,14 +13,19 @@ function ct_tracks_add_video_meta_box() {
 		return false;
 	}
 
-	add_meta_box(
-		'ct_tracks_video',
-		__( 'Featured Video', 'tracks' ),
-		'ct_tracks_video_callback',
-		'post',
-		'normal',
-		'high'
-	);
+	$screens = array('post', 'page');
+
+	foreach( $screens as $screen ) {
+
+		add_meta_box(
+			'ct_tracks_video',
+			__( 'Featured Video', 'tracks' ),
+			'ct_tracks_video_callback',
+			$screen,
+			'normal',
+			'high'
+		);
+	}
 }
 add_action( 'add_meta_boxes', 'ct_tracks_add_video_meta_box' );
 
