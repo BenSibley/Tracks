@@ -6,6 +6,9 @@
     width: 100%;
   }
 }
+.singular-page .featured-video {
+  margin: -$baseline-height * 2 0 $baseline-height * 2;
+}
 .full-width-images.blog,
 .full-width-images.archive,
 .two-column-images.blog,

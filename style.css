@@ -2370,6 +2370,10 @@ li.pingback:first-child {
   width: 100%;
 }
 
+.singular-page .featured-video {
+  margin: -3em 0 3em;
+}
+
 .full-width-images.blog .excerpt.has-video,
 .full-width-images.archive .excerpt.has-video,
 .two-column-images.blog .excerpt.has-video,
