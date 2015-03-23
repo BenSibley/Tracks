@@ -78,17 +78,19 @@ function ct_tracks_video_callback( $post ) {
 	echo '</div>';
 
 	// Display option
-	echo '<div class="ct_tracks_video_display_container">';
-		echo '<p>' . __("Choose where to display the video:", "tracks") . '</p>';
-		echo '<label for="ct_tracks_video_display_post">';
-			echo '<input type="radio" name="ct_tracks_video_display" id="ct_tracks_video_display_post" value="post" ' . checked( $display_value, "post", false ) . '>';
-			_e( 'Display on Post', 'tracks' );
-		echo '</label> ';
-		echo '<label for="ct_tracks_video_display_both">';
-			echo '<input type="radio" name="ct_tracks_video_display" id="ct_tracks_video_display_both" value="both" ' . checked( $display_value, "both", false ) . '>';
-			_e( 'Display on Post and Blog', 'tracks' );
-		echo '</label> ';
-	echo '</div>';
+	if( $post->post_type == 'post' ) {
+		echo '<div class="ct_tracks_video_display_container">';
+			echo '<p>' . __( 'Choose where to display the video:', 'tracks' ) . '</p>';
+			echo '<label for="ct_tracks_video_display_post">';
+				echo '<input type="radio" name="ct_tracks_video_display" id="ct_tracks_video_display_post" value="post" ' . checked( $display_value, "post", false ) . '>';
+				_e( 'Display on Post', 'tracks' );
+			echo '</label> ';
+			echo '<label for="ct_tracks_video_display_both">';
+				echo '<input type="radio" name="ct_tracks_video_display" id="ct_tracks_video_display_both" value="both" ' . checked( $display_value, "both", false ) . '>';
+				_e( 'Display on Post and Blog', 'tracks' );
+			echo '</label> ';
+		echo '</div>';
+	}
 }
 
 // ajax callback to return video embed content
