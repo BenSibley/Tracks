@@ -326,7 +326,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     ) );
     // setting
     $wp_customize->add_setting( 'ct_tracks_comments_setting', array(
-        'default'           => 'none',
+        'default'           => array('post','page','attachment','none'),
         'type'              => 'theme_mod',
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_comments_setting',
@@ -940,19 +940,6 @@ function ct_tracks_sanitize_header_color_settings($input){
 }
 
 /***** Helper Functions *****/
-
-// sets comment display values on new sites or sites updating to new version with this feature
-function ct_tracks_set_comment_display_values() {
-
-    // get the current value
-    $current_settings = get_theme_mod( 'ct_tracks_comments_setting' );
-
-    // if empty, set to all
-    if( empty( $current_settings ) ) {
-        set_theme_mod( 'ct_tracks_comments_setting', array( 'posts', 'pages', 'attachments', 'none' ) );
-    }
-}
-add_action( 'init', 'ct_tracks_set_comment_display_values' );
 
 // array of textures used as choices in texture setting
 function ct_tracks_textures_array(){
