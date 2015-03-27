@@ -392,7 +392,7 @@ function ct_tracks_wp_page_menu() {
 function ct_tracks_add_editor_styles() {
     add_editor_style( 'styles/custom-editor-style.css' );
 }
-add_action( 'init', 'ct_tracks_add_editor_styles' );
+add_action( 'admin_init', 'ct_tracks_add_editor_styles' );
 
 function ct_tracks_post_class_update($classes){
 
