@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.33.1\n"
+"Project-Id-Version: Tracks 1.34\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-02-09 17:23:34+00:00\n"
+"POT-Creation-Date: 2015-03-27 15:27:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,25 +13,25 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.8\n"
 
-#: comments.php:11 comments.php:30 comments.php:51
+#: comments.php:27 comments.php:46 comments.php:67
 msgid "Be First to Comment"
 msgstr ""
 
-#: comments.php:11 comments.php:30 comments.php:51
+#: comments.php:27 comments.php:46 comments.php:67
 msgid "One Comment"
 msgstr ""
 
-#: comments.php:11 comments.php:30 comments.php:51
+#: comments.php:27 comments.php:46 comments.php:67
 msgid "% Comments"
 msgstr ""
 
-#: comments.php:43
+#: comments.php:59
 msgid ""
 "Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this "
 "post\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:64 comments.php:71
+#: comments.php:80 comments.php:87
 msgid "Comments are closed."
 msgstr ""
 
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: content-page.php:20 content.php:37
+#: content-page.php:29 content.php:37
 msgid "Pages:"
 msgstr ""
 
@@ -111,78 +111,78 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions.php:23
+#: functions.php:24
 msgid "Primary"
 msgstr ""
 
-#: functions.php:24
+#: functions.php:25
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:25 functions.php:78 inc/customizer.php:124
+#: functions.php:26 functions.php:77 inc/customizer.php:124
 #: inc/customizer.php:182 inc/customizer.php:762 inc/customizer.php:786
 msgid "Footer"
 msgstr ""
 
-#: functions.php:64
+#: functions.php:63
 msgid "After Post Content"
 msgstr ""
 
-#: functions.php:66
+#: functions.php:65
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:70
 msgid "After Page Content"
 msgstr ""
 
-#: functions.php:73
+#: functions.php:72
 msgid "Widgets in this area will be shown after page content"
 msgstr ""
 
-#: functions.php:80
+#: functions.php:79
 msgid "Widgets in this area will be shown in the footer"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:108
 msgid "Reply"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:117
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:143 functions.php:144
+#: functions.php:149 functions.php:150
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:150 functions.php:151
+#: functions.php:156 functions.php:157
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:163
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:164
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:170
+#: functions.php:178
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:179
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:213
+#: functions.php:224
 msgid "Read More"
 msgstr ""
 
-#: functions.php:224
+#: functions.php:237
 msgid "Read the Post"
 msgstr ""
 
@@ -480,39 +480,41 @@ msgstr ""
 msgid "These Posts are by:"
 msgstr ""
 
-#: licenses/functions/video.php:18
+#: licenses/functions/video.php:22
 msgid "Featured Video"
 msgstr ""
 
-#: licenses/functions/video.php:53
+#: licenses/functions/video.php:58
 msgid "Video Preview"
 msgstr ""
 
-#: licenses/functions/video.php:67
+#: licenses/functions/video.php:72
 msgid "Add video URL:"
 msgstr ""
 
-#: licenses/functions/video.php:77
+#: licenses/functions/video.php:83
 msgid "Choose where to display the video:"
 msgstr ""
 
-#: licenses/functions/video.php:80
+#: licenses/functions/video.php:86
 msgid "Display on Post"
 msgstr ""
 
-#: licenses/functions/video.php:84
+#: licenses/functions/video.php:90
 msgid "Display on Post and Blog"
 msgstr ""
 
 #: search.php:11
-msgid "%d search results for"
-msgstr ""
+msgid "%d search result for \"%s\""
+msgid_plural "%d search results for \"%s\""
+msgstr[0] ""
+msgstr[1] ""
 
 #: search.php:13
-msgid "No search results for "
+msgid "No search results for \"%s\""
 msgstr ""
 
-#: search.php:38
+#: search.php:37
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr ""
 
@@ -628,8 +630,8 @@ msgstr ""
 
 #: theme-options.php:149
 msgid ""
-"You can now add videos to posts. Use the Featured Videos box under the Post "
-"Editor to get started"
+"You can now add videos to Posts and Pages. Use the Featured Videos box "
+"under the Post Editor to get started"
 msgstr ""
 
 #: theme-options.php:151
