@@ -321,16 +321,6 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
     }
 }
 
-// puts site title & description in the title tag on front page
-add_filter( 'wp_title', 'ct_tracks_add_homepage_title' );
-function ct_tracks_add_homepage_title( $title )
-{
-    if( empty( $title ) && ( is_home() || is_front_page() ) ) {
-        return get_bloginfo( 'title' ) . ' | ' . get_bloginfo( 'description' );
-    }
-    return $title;
-}
-
 /* add conditional classes for premium layouts */
 function ct_tracks_body_class( $classes ) {
 
