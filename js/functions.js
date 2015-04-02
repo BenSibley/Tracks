@@ -6,7 +6,13 @@ jQuery(function($){
     var siteHeader = $('#site-header');
     var menuPrimary = $('#menu-primary');
     var menuPrimaryTracks = $('#menu-primary-tracks');
-    var menuPrimaryItems = $('#menu-primary-items');
+    if( $('#menu-primary-items').length){
+        var primaryMenu = $('#menu-primary-items');
+    } else {
+        var primaryMenu = $('.menu-unset');
+    }
+    var body = $('body');
+    var overflowContainer = $('#overflow-container');
 
     // bind the tap event on the menu icon
     $('#toggle-navigation').bind('click', onTap);
@@ -14,11 +20,7 @@ jQuery(function($){
     function onTap() {
 
         // get height of primary menu
-        if( menuPrimaryItems.length){
-            var menuHeight = $('#menu-primary-items').height();
-        } else {
-            var menuHeight = $('.menu-unset').height();
-        }
+        var menuHeight = primaryMenu.height();
 
         // if menu already open
         if (siteHeader.hasClass('toggled')) {
@@ -44,7 +46,7 @@ jQuery(function($){
                 // remove the remaining translateX(0px)
                 menuPrimary.removeAttr('style');
                 // remove min-height added
-                $('.overflow-container').removeAttr('style');
+                overflowContainer.removeAttr('style');
             }, 400);
 
         }
@@ -68,7 +70,7 @@ jQuery(function($){
             menuPrimaryTracks.css('transform', 'translateX(' + menuWidth + 'px)');
 
             // if page is shorter than menu, extend to fit menu
-            $('.overflow-container').css('min-height', menuHeight + 240);
+            overflowContainer.css('min-height', menuHeight + 240);
 
             // watch scroll to auto-close the menu if visitor scrolls past it
             $(window).scroll(onScroll);
@@ -76,13 +78,7 @@ jQuery(function($){
     }
     function onScroll() {
 
-        if($('#menu-primary-items').length){
-            var menuPrimaryItems = $('#menu-primary-items');
-        } else {
-            var menuPrimaryItems = $('.menu-unset');
-        }
-
-        var menuItemsBottom = menuPrimaryItems.offset().top + menuPrimaryItems.height();
+        var menuItemsBottom = primaryMenu.offset().top + primaryMenu.height();
 
         // keep updating var on scroll
         var topDistance = $(window).scrollTop();
@@ -137,8 +133,6 @@ jQuery(function($){
 
     function openSecondaryMenu() {
 
-        var body = $('body');
-
         if (body.hasClass('secondary-toggle')) {
             body.removeClass('secondary-toggle');
             $('#main, #title-info, #toggle-navigation').css('transform','translateY(0)');
@@ -154,8 +148,6 @@ jQuery(function($){
 
     function openSearchBar() {
 
-        var body = $('body');
-
         if (body.hasClass('search-open')) {
             body.removeClass('search-open');
             $('#search-icon').css('left', 0);
@@ -166,7 +158,7 @@ jQuery(function($){
             var sitePadding = body.width() * 0.0555;
 
             // get width of site padding-right
-            var searchFormWidth = $('#site-header').find('.search-form').width();
+            var searchFormWidth = siteHeader.find('.search-form').width();
 
             /* transform on a button makes it disappear in webkit, so using left.
             *  Move search-form width left minus site padding plus extra 7px space */
@@ -239,7 +231,7 @@ jQuery(function($){
     function centerContentIE(){
 
         // only if ie9 and full-width-images layout or two-column-images layout
-        if($('html').hasClass('ie9') && ($('body').hasClass('full-width-images') || $('body').hasClass('two-column-images'))){
+        if($('html').hasClass('ie9') && (body.hasClass('full-width-images') || body.hasClass('two-column-images'))){
 
             $('.excerpt-container').each(function(){
 
@@ -319,7 +311,7 @@ jQuery(function($){
     // reposition the description if a logo is present
     function positionSiteDescription(){
 
-        var logo = $('#site-header').find('.logo');
+        var logo = siteHeader.find('.logo');
 
             // if screen is 800px+ wide
             if( $(window).width() > 799 ) {
@@ -352,7 +344,7 @@ jQuery(function($){
         if( $(window).width() > 899 ) {
 
             // only if standard layout
-            if( $('body').hasClass('standard') ) {
+            if( body.hasClass('standard') ) {
 
                 // foreach excerpt with a video
                 $('.excerpt.has-video').each( function() {
@@ -387,7 +379,7 @@ jQuery(function($){
 
         var footerHeight = $('#site-footer').outerHeight();
 
-        $('body').css('height', 'calc(100% - ' + footerHeight + 'px)');
+        body.css('height', 'calc(100% - ' + footerHeight + 'px)');
     }
     adjustSiteHeight();
 
