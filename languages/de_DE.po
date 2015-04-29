@@ -1,0 +1,855 @@
+# Copyright (C) 2014 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracks 1.31\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2014-11-14 16:42:41+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-04-06 16:54+0100\n"
+"Last-Translator: iRolf <ahlborn@gmx.net>\n"
+"Language-Team: iRolf <ahlborn@gmx.net>\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: comments.php:11 comments.php:29 comments.php:49
+msgid "Be First to Comment"
+msgstr "Gib den ersten Kommentar ab"
+
+#: comments.php:11 comments.php:29 comments.php:49
+msgid "One Comment"
+msgstr "Ein Kommentar"
+
+#: comments.php:11 comments.php:29 comments.php:49
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: comments.php:42
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Kommentare sind deaktiviert, aber <a href=\"%s\" title=\"Trackback URL für "
+"diesen Beitrag\">Trackbacks</a> und Pingbacks sind zugelassen."
+
+#: comments.php:62 comments.php:68
+msgid "Comments are closed."
+msgstr "KOmmentare sind deaktiviert."
+
+#: content/category-links.php:14
+msgid "Categories"
+msgstr "Kategorien"
+
+#: content/category-links.php:16 inc/deprecated.php:17
+msgid "View all posts in %s"
+msgstr "Zeige alle Beiträge in %s"
+
+#: content/further-reading.php:12
+msgid "The Previous Post"
+msgstr "Der vorherige Beitrag"
+
+#: content/further-reading.php:17
+msgid "The Next Post"
+msgstr "nächster Beitrag"
+
+#: content/further-reading.php:24
+msgid "Previous Post"
+msgstr "vorheriger Beitrag"
+
+#: content/further-reading.php:29
+msgid "This is the oldest post"
+msgstr "Dies ist der älteste Beitrag"
+
+#: content/further-reading.php:30 content/further-reading.php:42
+msgid "Return to Blog"
+msgstr "zurück zum Blog"
+
+#: content/further-reading.php:36
+msgid "Next Post"
+msgstr "nächster Beitrag"
+
+#: content/further-reading.php:41
+msgid "This is the newest post"
+msgstr "Dies ist der aktuellste Beitrag"
+
+#: content/tag-links.php:9
+msgid "Tags"
+msgstr "getagged mit"
+
+#: content/tag-links.php:11 inc/deprecated.php:36
+msgid "View all posts tagged %s"
+msgstr "Zeige alle Beiträge die mit %s getagged sind"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: Seite konnte nihct gefunden werden"
+
+#: content-404.php:9
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"Unter dieser Adresse konnte nichts gefunden werden. Bitte prüfe, ob die URL "
+"korrekt ist oder benutze das unten stehende Suchformular."
+
+#: content-attachment.php:20
+msgid "Previous Image"
+msgstr "vorheriges Bild"
+
+#: content-attachment.php:23
+msgid "Next Image"
+msgstr "nächstes Bild"
+
+#: content-page.php:20 content.php:37
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: content.php:59
+msgid "Written by:"
+msgstr "geschrieben von:"
+
+#: footer.php:35
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> von Compete "
+"Themes."
+
+#: functions.php:22
+msgid "Primary"
+msgstr "Hauptbereich"
+
+#: functions.php:23
+msgid "Secondary"
+msgstr "Sekundärbereich"
+
+#: functions.php:24 functions.php:92 inc/customizer.php:124
+#: inc/customizer.php:182 inc/customizer.php:744 inc/customizer.php:768
+msgid "Footer"
+msgstr "Footer"
+
+#: functions.php:78
+msgid "After Post Content"
+msgstr "Nach-dem-Beitrag-Inhalt"
+
+#: functions.php:80
+msgid ""
+"Widgets in this area will be shown after post content before the prev/next "
+"post links"
+msgstr ""
+"Widgets in diesem Bereich werden nach dem Beitragsinhalt angezeigt und vor "
+"den vorher/nachher-Links"
+
+#: functions.php:85
+msgid "After Page Content"
+msgstr "Nach-der-Seite-Inhalt"
+
+#: functions.php:87
+msgid "Widgets in this area will be shown after page content"
+msgstr "Widgets in diese, bereich werden nach dem Seiteninhalt angezeigt."
+
+#: functions.php:94
+msgid "Widgets in this area will be shown in the footer"
+msgstr "Widgets in diesem Bereich werden im Footer angezeigt."
+
+#: functions.php:121
+msgid "Reply"
+msgstr "Anworten"
+
+#: functions.php:127
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wartet auf die Freigabe"
+
+#: functions.php:158 functions.php:159
+msgid "Your Name"
+msgstr "Dein Name"
+
+#: functions.php:165 functions.php:166
+msgid "Your Email"
+msgstr "Deine E-Mail"
+
+#: functions.php:172
+msgid "Your Website URL"
+msgstr "Deine Website-Adresse"
+
+#: functions.php:173
+msgid "Your URL"
+msgstr "Deine URL"
+
+#: functions.php:185
+msgid "Your Comment"
+msgstr "Dein Kommentar"
+
+#: functions.php:186
+msgid "Enter Your Comment"
+msgstr "Gib deinen Kommentar ein"
+
+#: functions.php:228
+msgid "Read More"
+msgstr "weiterlesen"
+
+#: functions.php:239
+msgid "Read the Post"
+msgstr "Beitrag lesen"
+
+#: header.php:16
+msgid "Skip to content"
+msgstr "zum Inhalt springen"
+
+#: inc/customizer.php:103
+msgid "Tagline Display"
+msgstr "Zeige den Untertitel"
+
+#: inc/customizer.php:117
+msgid "Where should the tagline display?"
+msgstr "Wo soll der Untertitel angezeigt werden"
+
+#: inc/customizer.php:122 inc/customizer.php:180 inc/customizer.php:742
+#: inc/customizer.php:766
+msgid "Header & Footer"
+msgstr "Header und Footer"
+
+#: inc/customizer.php:123 inc/customizer.php:181 inc/customizer.php:743
+#: inc/customizer.php:767
+msgid "Header"
+msgstr "Header"
+
+#: inc/customizer.php:132
+msgid "Logo Upload"
+msgstr "Logo jochladen"
+
+#: inc/customizer.php:146
+msgid "Upload custom logo."
+msgstr "Eigenes Logo hochladen."
+
+#: inc/customizer.php:162
+msgid "Social Media Icons"
+msgstr "Social Media Icons"
+
+#: inc/customizer.php:175
+msgid "Where should the icons display?"
+msgstr "Wo sollen die Icons angezeigt werden"
+
+#: inc/customizer.php:183 inc/customizer.php:769
+msgid "Do not display"
+msgstr "nicht anzeigen"
+
+#: inc/customizer.php:233
+msgid "Search Bar"
+msgstr "Suchschlitz"
+
+#: inc/customizer.php:247
+msgid "Show search bar at top of site?"
+msgstr "Soll der Suchschlitz oben auf der Seite angezeigt werden?"
+
+#: inc/customizer.php:251 inc/customizer.php:278 inc/customizer.php:296
+#: inc/customizer.php:314 inc/customizer.php:520 inc/customizer.php:539
+#: inc/customizer.php:558 inc/customizer.php:785
+msgid "Show"
+msgstr "anzeigen"
+
+#: inc/customizer.php:252 inc/customizer.php:279 inc/customizer.php:297
+#: inc/customizer.php:315 inc/customizer.php:521 inc/customizer.php:540
+#: inc/customizer.php:559 inc/customizer.php:786
+msgid "Hide"
+msgstr "verstecken"
+
+#: inc/customizer.php:260
+msgid "Post Meta"
+msgstr "Beitrags Meta-Infos"
+
+#: inc/customizer.php:274
+msgid "Display date above post title?"
+msgstr "Soll das datum über dem Beitrag angezeigt werden?"
+
+#: inc/customizer.php:292
+msgid "Display author name above post title?"
+msgstr "Soll der Autor über dem Beitrag angezeigt werden?"
+
+#: inc/customizer.php:310
+msgid "Display category above post title?"
+msgstr "Soll die Kategorie über dem Beitragstitel angezeigt werden?"
+
+#: inc/customizer.php:323
+msgid "Comments"
+msgstr "Kommentare"
+
+#: inc/customizer.php:337
+msgid "Show comments on:"
+msgstr "Zeige Kommentare auf:"
+
+#: inc/customizer.php:342 inc/customizer.php:819
+msgid "Posts"
+msgstr "Beiträgen"
+
+#: inc/customizer.php:343 inc/customizer.php:820
+msgid "Pages"
+msgstr "Seiten"
+
+#: inc/customizer.php:344 inc/customizer.php:821
+msgid "Attachments"
+msgstr "Anhängen"
+
+#: inc/customizer.php:345 inc/customizer.php:822
+msgid "Do not show"
+msgstr "nicht anzeigen"
+
+#: inc/customizer.php:354
+msgid "Footer Text"
+msgstr "Footer Text"
+
+#: inc/customizer.php:367
+msgid "Edit the text in your footer"
+msgstr "Bearbeite den Text im Footer"
+
+#: inc/customizer.php:377
+msgid "Custom CSS"
+msgstr "Eigenes CSS"
+
+#: inc/customizer.php:390
+msgid "Add Custom CSS Here:"
+msgstr "hier eigenes CSS hinzufügen:"
+
+#: inc/customizer.php:423 theme-options.php:45
+msgid "Premium Layouts"
+msgstr "Premium Layouts"
+
+#: inc/customizer.php:437
+msgid "Choose the layout for Tracks"
+msgstr "Wähle das Tracks-Layout"
+
+#: inc/customizer.php:452
+msgid "Image size on Blog"
+msgstr "Bildgröße im Blog"
+
+#: inc/customizer.php:470
+msgid "Style"
+msgstr "Stil"
+
+#: inc/customizer.php:474 inc/customizer.php:885
+#: licenses/templates/bold/customizer.php:283
+msgid "Overlay"
+msgstr "Überlagerung"
+
+#: inc/customizer.php:475 inc/customizer.php:886
+msgid "Title below"
+msgstr "Titel unterhalb"
+
+#: inc/customizer.php:488
+msgid "Show full posts on Blog/Archives?"
+msgstr "Zeige den ganzen Post im Blog und Archiven?"
+
+#: inc/customizer.php:492 inc/customizer.php:594 inc/customizer.php:676
+#: inc/customizer.php:803
+msgid "Yes"
+msgstr "Ja"
+
+#: inc/customizer.php:493 inc/customizer.php:595 inc/customizer.php:677
+#: inc/customizer.php:804
+msgid "No"
+msgstr "Nein"
+
+#: inc/customizer.php:501
+msgid "Additional Options"
+msgstr "weitere Optionen"
+
+#: inc/customizer.php:515
+msgid "Show scroll-to-top arrow?"
+msgstr "zeige Nach-oben-Pfeil?"
+
+#: inc/customizer.php:534
+msgid "Show author info box after posts?"
+msgstr "zeige Autor-Info nach dem Beitrag?"
+
+#: inc/customizer.php:553
+msgid "Show prev/next links after posts?"
+msgstr "zeige vorheriger-/nächster Link"
+
+#: inc/customizer.php:572
+msgid "Zoom-in blog images on hover?"
+msgstr "Blog-Fotos beim Mouse-over vergrößern?"
+
+#: inc/customizer.php:576
+msgid "Zoom in"
+msgstr "vergrößern"
+
+#: inc/customizer.php:577
+msgid "Do not zoom in"
+msgstr "nicht vergrößern"
+
+#: inc/customizer.php:590
+msgid "Lazy load images?"
+msgstr "Bilder träge laden? (Lazy load)"
+
+#: inc/customizer.php:608
+msgid "Word count in automatic excerpts"
+msgstr "Anzahl Wörter in automatischen Auszug"
+
+#: inc/customizer.php:626 licenses/templates/bold/customizer.php:312
+#: licenses/templates/bold/meta-boxes.php:52
+msgid "Background Image"
+msgstr "Hintergrundbild"
+
+#: inc/customizer.php:627
+msgid ""
+"Use the Header Color section above if your new background image makes the "
+"menu hard to read."
+msgstr ""
+"Benutze den obige Header Farbbereich, wenn neue Hintergrundbilder das Menü "
+"schwer lesbar machen."
+
+#: inc/customizer.php:640
+msgid "Background image"
+msgstr "Hintergrundbild"
+
+#: inc/customizer.php:657
+msgid "Background Texture"
+msgstr "Hintergrundtextur"
+
+#: inc/customizer.php:658
+msgid ""
+"Use the Header Color section above if your new texture makes the menu hard "
+"to read."
+msgstr ""
+"Benutze den obige Header Farbbereich, wenn neue Hintergrundtexturen das Menü "
+"schwer lesbar machen."
+
+#: inc/customizer.php:672
+msgid "Enable background texture?"
+msgstr "Hintergrundtexturen aktivieren?"
+
+#: inc/customizer.php:692
+msgid "Choose a Texture"
+msgstr "Hintergrundtextur wählen"
+
+#: inc/customizer.php:711
+msgid "Header Color"
+msgstr "Header Farbe"
+
+#: inc/customizer.php:712
+msgid "Change to dark if your new background makes the menu hard to read."
+msgstr ""
+"Dunkel wählen, wenn dein neuer Hintergrund das Menü schwer lesbar macht."
+
+#: inc/customizer.php:726
+msgid "Light or dark header color?"
+msgstr "Hell oder dunkle Header Farbe?"
+
+#: inc/customizer.php:730 inc/customizer.php:913
+msgid "Light"
+msgstr "hell"
+
+#: inc/customizer.php:731 inc/customizer.php:914
+msgid "Dark"
+msgstr "dunkel"
+
+#: inc/customizer.php:840
+msgid "Zoom"
+msgstr "vergrößern"
+
+#: inc/customizer.php:841
+msgid "Do not Zoom"
+msgstr "nicht vergrößern"
+
+#: inc/customizer.php:989
+msgid "Premium Upgrades Available!"
+msgstr "Premium Upgrades verfügbar!"
+
+#: inc/user-profile.php:16
+msgid "Profile image"
+msgstr "Profilbild"
+
+#: inc/user-profile.php:23 licenses/templates/bold/meta-boxes.php:266
+msgid "Upload Image"
+msgstr "Bild hochladen"
+
+#: inc/user-profile.php:24
+msgid ""
+"Upload an image here to use instead of your Gravatar. Perfectly square "
+"images will not be cropped."
+msgstr ""
+"Lade hier ein Bild hoch, statt des Gravatars. Quadratische Bilder werden "
+"nicht abgeschnitten."
+
+#: inc/user-profile.php:99
+msgid "Social Profiles"
+msgstr "Soziale Profile"
+
+#: inc/user-profile.php:107
+msgid "Address:"
+msgstr "Adresse:"
+
+#: inc/user-profile.php:109
+msgid "Profile:"
+msgstr "Profil:"
+
+#: index.php:11
+msgid "Category:"
+msgstr "Kategorie"
+
+#: index.php:18
+msgid "Tag:"
+msgstr "Tag:"
+
+#: index.php:25
+msgid "These Posts are by:"
+msgstr "Diese Beiträge sind von:"
+
+#: licenses/functions/video.php:18
+msgid "Featured Video"
+msgstr "Featured Video"
+
+#: licenses/functions/video.php:53
+msgid "Video Preview"
+msgstr "Videovorschau"
+
+#: licenses/functions/video.php:67
+msgid "Add video URL:"
+msgstr "Video URL hinzufügen:"
+
+#: licenses/functions/video.php:77
+msgid "Choose where to display the video:"
+msgstr "Wo soll das video angezeigt werden?"
+
+#: licenses/functions/video.php:80
+msgid "Display on Post"
+msgstr "in Beiträgen"
+
+#: licenses/functions/video.php:84
+msgid "Display on Post and Blog"
+msgstr "in Beiträgen und im Blog"
+
+#: licenses/templates/bold/customizer.php:45
+#: licenses/templates/bold/meta-boxes.php:12
+msgid "Heading"
+msgstr "Kopfbereich"
+
+#: licenses/templates/bold/customizer.php:52
+#: licenses/templates/bold/customizer.php:78
+#: licenses/templates/bold/customizer.php:104
+#: licenses/templates/bold/customizer.php:130
+#: licenses/templates/bold/customizer.php:210
+msgid "Color"
+msgstr "Farbe"
+
+#: licenses/templates/bold/customizer.php:60
+#: licenses/templates/bold/customizer.php:86
+#: licenses/templates/bold/customizer.php:112
+#: licenses/templates/bold/customizer.php:138
+#: licenses/templates/bold/customizer.php:218
+msgid "Font Size"
+msgstr "Schriftgröße"
+
+#: licenses/templates/bold/customizer.php:71
+#: licenses/templates/bold/meta-boxes.php:20
+msgid "Sub-heading"
+msgstr "Untertitel"
+
+#: licenses/templates/bold/customizer.php:97
+#: licenses/templates/bold/meta-boxes.php:28
+msgid "Description"
+msgstr "Beschreibung"
+
+#: licenses/templates/bold/customizer.php:123
+#: licenses/templates/bold/meta-boxes.php:36
+msgid "Button 1"
+msgstr "Button 1"
+
+#: licenses/templates/bold/customizer.php:147
+#: licenses/templates/bold/customizer.php:227
+msgid "Background Color"
+msgstr "Hintergrundfarbe"
+
+#: licenses/templates/bold/customizer.php:155
+#: licenses/templates/bold/customizer.php:235
+msgid "Background Opacity"
+msgstr "Hintergrunddeckkraft"
+
+#: licenses/templates/bold/customizer.php:167
+#: licenses/templates/bold/customizer.php:247
+msgid "Border Color"
+msgstr "Randfarbe"
+
+#: licenses/templates/bold/customizer.php:175
+#: licenses/templates/bold/customizer.php:255
+msgid "Border Width"
+msgstr "Randbreite"
+
+#: licenses/templates/bold/customizer.php:183
+#: licenses/templates/bold/customizer.php:263
+msgid "Border Style"
+msgstr "Randstil"
+
+#: licenses/templates/bold/customizer.php:187
+#: licenses/templates/bold/customizer.php:267
+#: licenses/templates/bold/customizer.php:560
+msgid "Solid"
+msgstr "durchgezogen"
+
+#: licenses/templates/bold/customizer.php:188
+#: licenses/templates/bold/customizer.php:268
+#: licenses/templates/bold/customizer.php:561
+msgid "Dashed"
+msgstr "gestrichelt"
+
+#: licenses/templates/bold/customizer.php:189
+#: licenses/templates/bold/customizer.php:269
+#: licenses/templates/bold/customizer.php:562
+msgid "Dotted"
+msgstr "gepunkted"
+
+#: licenses/templates/bold/customizer.php:190
+#: licenses/templates/bold/customizer.php:270
+#: licenses/templates/bold/customizer.php:563
+msgid "Double"
+msgstr "dooppelt"
+
+#: licenses/templates/bold/customizer.php:191
+#: licenses/templates/bold/customizer.php:271
+#: licenses/templates/bold/customizer.php:564
+msgid "Groove"
+msgstr "geriffelt"
+
+#: licenses/templates/bold/customizer.php:192
+#: licenses/templates/bold/customizer.php:272
+#: licenses/templates/bold/customizer.php:565
+msgid "Ridge"
+msgstr "erhöht"
+
+#: licenses/templates/bold/customizer.php:193
+#: licenses/templates/bold/customizer.php:273
+#: licenses/templates/bold/customizer.php:566
+msgid "Inset"
+msgstr "innen"
+
+#: licenses/templates/bold/customizer.php:194
+#: licenses/templates/bold/customizer.php:274
+#: licenses/templates/bold/customizer.php:567
+msgid "Outset"
+msgstr "außen"
+
+#: licenses/templates/bold/customizer.php:203
+#: licenses/templates/bold/meta-boxes.php:44
+msgid "Button 2"
+msgstr "Button 2"
+
+#: licenses/templates/bold/customizer.php:290
+msgid "Overlay Color"
+msgstr "Überlagerungsfarbe"
+
+#: licenses/templates/bold/customizer.php:298
+msgid "Overlay Opacity"
+msgstr "Überlagerungsdeckkraft"
+
+#: licenses/templates/bold/customizer.php:319
+msgid "Position"
+msgstr "Position"
+
+#: licenses/templates/bold/customizer.php:323
+#: licenses/templates/bold/customizer.php:581
+msgid "Fill screen"
+msgstr "Bildschirmfüllend"
+
+#: licenses/templates/bold/customizer.php:324
+#: licenses/templates/bold/customizer.php:582
+msgid "Fit to screen"
+msgstr "Bildschirmpassend"
+
+#: licenses/templates/bold/customizer.php:325
+#: licenses/templates/bold/customizer.php:583
+msgid "Stretch to fill screen"
+msgstr "strecken um den Bildschirm zu füllen"
+
+#: search.php:11
+msgid "%d search results for"
+msgstr "%d Suchergebnisse für"
+
+#: search.php:13
+msgid "No search results for "
+msgstr "Kein Treffer für"
+
+#: search.php:38
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr ""
+"Kannst du nicht finden, wonach du gesucht hast? Versuche deine Suche zu "
+"verfeinern:"
+
+#: searchform.php:6 searchform.php:7
+msgid "Search for:"
+msgstr "Suchen nach:"
+
+#: searchform.php:7
+msgid "Search"
+msgstr "Suche"
+
+#: searchform.php:8
+msgid "Go"
+msgstr "Los"
+
+#: theme-options.php:13
+msgid "Tracks Dashboard"
+msgstr "Tracks Dashboard"
+
+#: theme-options.php:18
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: theme-options.php:19
+msgid "Licenses"
+msgstr "Lizenzen"
+
+#: theme-options.php:24
+msgid "Customization"
+msgstr "Anpassungen"
+
+#: theme-options.php:25
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Tracks"
+msgstr ""
+"Klick den \"Customizer\"-Link im Menü oder benutze den folgenden Button um "
+"Tracks anzupassen."
+
+#: theme-options.php:27
+msgid "Use Customizer"
+msgstr "Customizer benutzen"
+
+#: theme-options.php:31
+msgid "Support"
+msgstr "Support"
+
+#: theme-options.php:32
+msgid ""
+"You can find the knowledgebase, changelog, forum, and more in the Tracks "
+"Support Center"
+msgstr ""
+"Du kannst die Wissensdatenbank, Changelog, Forum und mehr im Tracks Support "
+"center finden."
+
+#: theme-options.php:34
+msgid "Visit Support Center"
+msgstr "Besuch das Support Center."
+
+#: theme-options.php:38
+msgid "Premium Upgrades ($9-15)"
+msgstr "Premium Upgrades ($9-15)"
+
+#: theme-options.php:39
+msgid "Make your site more customizable and beautiful with premium upgrades"
+msgstr "Mach deine Seite anpassbarer und schöner mit den Premium Upgrades"
+
+#: theme-options.php:40
+msgid "Visit Upgrades Gallery"
+msgstr "Besuch die Upgrade-Galerie"
+
+#: theme-options.php:52
+msgid "Premium Features"
+msgstr "Premium-Funktionen"
+
+#: theme-options.php:59
+msgid "Premium Templates"
+msgstr "Premium-Templates"
+
+#: theme-options.php:116
+msgid "Save License"
+msgstr "Lizenz speichern"
+
+#: theme-options.php:119
+msgid "Enter your license key"
+msgstr "Gib deine Lienzschlüssel an"
+
+#: theme-options.php:125 theme-options.php:133
+msgid "Activate License"
+msgstr "Lizenz aktivieren"
+
+#: theme-options.php:130
+msgid "Deactivate License"
+msgstr "Lizenz deaktivieren"
+
+#: theme-options.php:148
+msgid ""
+"You can now add a background image using the \"Background Image\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"Du kannst jetzt Hintergrundbilder im \"Hintergrundbild\"-Bereich des <a href="
+"\"%s\">Customizera</a> hinzufügen."
+
+#: theme-options.php:150
+msgid ""
+"If you haven't already, please upload and activate the <a "
+"href='%s'>Background Texture plugin</a>"
+msgstr ""
+"Wenn du es noch nicht getan hast, aktivieren das <a href='%s'>Background "
+"Texture Plugin</a>"
+
+#: theme-options.php:152
+msgid ""
+"You can now add videos to posts. Use the Featured Videos box under the Post "
+"Editor to get started"
+msgstr ""
+"Du kannst jetzt Videos zu den Beiträgen hinzufügen. Benutze die Featured "
+"Video Box unter dem Beitragseditor."
+
+#: theme-options.php:154
+msgid ""
+"You can now use the Bold template! Choose a Page and use the \"Template\" "
+"dropdown on the right-side of the screen to select the Bold template"
+msgstr ""
+"Du kannst jetzt das Bold Template benutzen! Wähle eine Seite und benutze das "
+"\"Template\"-Menü auf der rechten Seite des Fensters um das Bold Template zu "
+"wählen."
+
+#: theme-options.php:156
+msgid ""
+"You can now switch to your new layout in the \"Premium Layouts\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"Du kannst jetzt zu deinem neuen Layout im \"Premium Layouts\"Bereich im <a "
+"href=\"%s\">Customizer</a> wechseln."
+
+#. Theme Name of the plugin/theme
+msgid "Tracks"
+msgstr "Tracks"
+
+#. Theme URI of the plugin/theme
+msgid "http://www.competethemes.com/tracks/"
+msgstr "http://www.competethemes.com/tracks/"
+
+#. Description of the plugin/theme
+msgid ""
+"A bold, beautiful, and responsive theme. Tracks is perfect for personal "
+"blogs, magazines, and photography websites. It includes a logo uploader, "
+"social media icons, search bar, comment display controls, premium layouts "
+"and features, and more.  See our fully-setup live demo here: http://www."
+"competethemes.com/tracks-live-demo/"
+msgstr ""
+"Ein stolzes, schönes und responsives Theme. Tracks ist perfekt für "
+"persönliche Blogs, Magazine und Fotografen-Websites. Es enthält einen Logo-"
+"Uploader, Social Media Icons, Suchschlitz, Kommentar-Kontrollmöglichkeiten, "
+"Premium Layouts und Funktionen und noch mehr. Schau die komplette Live Demo "
+"hier an: http://www.competethemes.com/tracks-live-demo/"
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr "Compete Themes"
+
+#. Author URI of the plugin/theme
+msgid "http://www.competethemes.com/"
+msgstr "http://www.competethemes.com/"
+
+#. Template Name of the plugin/theme
+msgid "Bold"
+msgstr "Fett"
+
+#: inc/customizer.php:456 inc/customizer.php:873
+msgctxt "size of the featured image"
+msgid "size based on image size"
+msgstr "Größe basiert auf der Bildgröße"
+
+#: inc/customizer.php:457 inc/customizer.php:874
+msgctxt "size of the featured image"
+msgid "2:1 width/height ratio like posts"
+msgstr "Verhältnis 2:1 Breite/Höhe wie Beiträge"
+
