@@ -63,7 +63,7 @@ if( is_single() ) { ?>
                     </div>
                     <div class="bio">
                         <p><?php the_author_meta( 'description' ); ?></p>
-                        <?php ct_tracks_author_social_icons(); ?>
+                        <?php get_template_part('content/author-social-icons'); ?>
                     </div>
                 </div>
             <?php } ?>

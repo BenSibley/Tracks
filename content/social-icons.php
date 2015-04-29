@@ -25,11 +25,11 @@ if( ! empty( $active_sites ) ) {
 			}
 			// output icon <i>
 			if( $active_site ==  "flickr" || $active_site ==  "dribbble" || $active_site ==  "instagram" || $active_site ==  "soundcloud" || $active_site ==  "spotify" || $active_site ==  "vine" || $active_site ==  "yahoo" || $active_site ==  "codepen" || $active_site ==  "delicious" || $active_site ==  "stumbleupon" || $active_site ==  "deviantart" || $active_site ==  "digg" || $active_site ==  "hacker-news" || $active_site == 'vk' || $active_site == 'weibo' || $active_site == 'tencent-weibo') {
-				echo '<i class="fa fa-' . $active_site . '"></i>';
+				echo '<i class="fa fa-' . $active_site . '" title="' . sprintf( __("%s icon", "tracks"), $active_site ) . '"></i>';
 			} elseif( $active_site == 'email' ) {
-				echo '<i class="fa fa-envelope"></i>';
+				echo '<i class="fa fa-envelope" title="' . sprintf( __("email icon", "tracks"), $active_site ) . '"></i>';
 			} else {
-				echo '<i class="fa fa-' . $active_site . '-square"></i>';
+				echo '<i class="fa fa-' . $active_site . '-square" title="' . sprintf( __("%s icon", "tracks"), $active_site ) . '"></i>';
 			}
 			echo '</a></li>';
 		}

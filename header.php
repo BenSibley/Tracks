@@ -36,7 +36,7 @@
                     }
                     // display social icons if set
                     if( (get_theme_mod('social_icons_display_setting') == 'header-footer') || (get_theme_mod('social_icons_display_setting') == 'header')){
-                        ct_tracks_customizer_social_icons_output();
+                        get_template_part('content/social-icons');
                     }
 
                 echo "</div>";
