@@ -593,19 +593,6 @@ function ct_tracks_loading_indicator_svg() {
 	return $svg;
 }
 
-// set the date format for new users
-function ct_tracks_set_date_format() {
-
-	// immediately set the date format
-	if( get_option('ct_tracks_date_format_origin') != 'updated' ) {
-		update_option('date_format', 'F j');
-
-		// add option so never updates date format again. Allows users to change format.
-		add_option('ct_tracks_date_format_origin', 'updated');
-	}
-}
-add_action( 'after_switch_theme', 'ct_tracks_set_date_format' );
-
 function ct_tracks_wp_backwards_compatibility() {
 
 	// not using this function, simply remove it so use of "has_image_size" doesn't break < 3.9
