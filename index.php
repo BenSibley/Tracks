@@ -2,9 +2,6 @@
 
 <?php
 
-// get user's comment display setting
-$comments_display = get_theme_mod('ct_tracks_comments_setting');
-
 /* Category header */
 if(is_category()){ ?>
     <div class='archive-header'>
