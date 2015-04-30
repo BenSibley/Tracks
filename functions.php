@@ -288,6 +288,9 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
 	    // set default to no image
         $has_image = false;
 
+	    // set featured image var
+	    $featured_image = '';
+
 	    // get the current layout
         $premium_layout = get_theme_mod( 'premium_layouts_setting' );
 
@@ -311,8 +314,8 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
         if ( $has_image == true ) {
 
             // always use image for two-column images layout
-            if ( $premium_layout == 'two-column-images' ) { ?>
-                <img class="featured-image" src='<?php echo $image; ?>' /><?php
+            if ( $premium_layout == 'two-column-images' ) {
+                $featured_image = '<img class="featured-image" src="' . $image . '" />';
             } elseif (
                 (   // if archive and full-width-images and image-based height set
 	                ( is_archive() || is_home() ) && $premium_layout == 'full-width-images' && get_theme_mod( 'premium_layouts_full_width_image_height' ) == 'image'
@@ -320,20 +323,26 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
                 || ( // if singular and full-width-images and image-based height set
 	                is_singular() && $premium_layout == 'full-width-images' && get_theme_mod( 'premium_layouts_full_width_image_height_post' ) == 'image'
                 )
-            ) { ?>
-                <img class="featured-image" src='<?php echo $image; ?>' /><?php
+            ) {
+                $featured_image = '<img class="featured-image" src="' . $image . '" />';
             }
             // otherwise, output the src as a bg image
             else {
                 // if lazy loading is enabled
                 if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' ) {
-                    echo "<div class='featured-image lazy lazy-bg-image' data-background='$image'></div>";
+                    $featured_image = "<div class='featured-image lazy lazy-bg-image' data-background='$image'></div>";
                 } // if lazy loading is NOT enabled
                 else {
-                    echo "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
+                    $featured_image = "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
                 }
             }
         }
+	    // allow videos to be added
+	    $featured_image = apply_filters( 'ct_tracks_featured_image', $featured_image );
+
+	    if( $featured_image ) {
+		    echo $featured_image;
+	    }
     }
 }
 
