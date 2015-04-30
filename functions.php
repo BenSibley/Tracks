@@ -297,7 +297,7 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
 	    // if the post has a featured image
         if ( has_post_thumbnail( $post->ID ) ) {
 
-			// get the large version if on archive and not one of the full-width latyous
+			// get the large version if on archive and not one of the full-width layouts
             if ( ( is_archive() || is_home() ) && $premium_layout != 'full-width' && $premium_layout != 'full-width-images' ) {
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
             }
