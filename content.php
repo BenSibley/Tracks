@@ -51,10 +51,6 @@ if( is_single() ) { ?>
         echo '</a>';
 	    ?>
         <div class="excerpt-container">
-            <?php
-            if(get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images'){ ?>
-                <div class="content-container">
-            <?php } ?>
             <div class="excerpt-meta">
                 <?php get_template_part('content/post-meta'); ?>
             </div>
@@ -68,10 +64,6 @@ if( is_single() ) { ?>
                     <?php ct_tracks_excerpt(); ?>
                 </article>
             </div>
-            <?php
-                if(get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images'){ ?>
-                </div>
-            <?php } ?>
         </div>
     </div>
 <?php
