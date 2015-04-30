@@ -2,18 +2,7 @@
 
 if( is_single() ) { ?>
     <div <?php post_class(); ?>>
-        <?php
-        // output the featured image
-        if(get_theme_mod('premium_layouts_setting') == 'full-width-images' || get_theme_mod('premium_layouts_setting') == 'two-column-images'){
-	        if (has_post_thumbnail( $post->ID ) ) {
-		        echo "<div class='featured-image-container'>";
-		            ct_tracks_featured_image();
-		        echo "</div>";
-	        }
-        } else {
-	        ct_tracks_featured_image();
-        }
-        ?>
+        <?php ct_tracks_featured_image(); ?>
         <div class="entry-meta">
             <?php get_template_part('content/post-meta'); ?>
         </div>

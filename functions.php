@@ -626,7 +626,17 @@ function ct_tracks_two_column_images_featured_image($featured_image, $image, $ha
 
 	// if there is a featured image and two column images layout is active
 	if( $has_image && get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
-		$featured_image = '<img class="featured-image" src="' . $image . '" />';
+
+		// setup vars for content surrounding image
+		$pre = '';
+		$post = '';
+
+		// if singular, add container
+		if( is_singular() ) {
+			$pre = "<div class='featured-image-container'>";
+			$post = "</div>";
+		}
+		$featured_image = $pre . '<img class="featured-image" src="' . $image . '" />' . $post;
 	}
 	return $featured_image;
 }
@@ -636,6 +646,16 @@ function ct_tracks_full_width_images_featured_image($featured_image, $image, $ha
 
 	// if there is a featured image and two column images layout is active
 	if( $has_image && get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' ) {
+
+		// setup vars for content surrounding image
+		$pre = '';
+		$post = '';
+
+		// if singular, add container
+		if( is_singular() ) {
+			$pre = "<div class='featured-image-container'>";
+			$post = "</div>";
+		}
 
 		// get image type to check if img will be needed
 		$blog_image_type = get_theme_mod( 'premium_layouts_full_width_image_height' );
@@ -648,6 +668,7 @@ function ct_tracks_full_width_images_featured_image($featured_image, $image, $ha
 		){
 			$featured_image = '<img class="featured-image" src="' . $image . '" />';
 		}
+		$featured_image = $pre . $featured_image . $post;
 	}
 	return $featured_image;
 }
