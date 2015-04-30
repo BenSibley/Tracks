@@ -282,32 +282,48 @@ function ct_tracks_post_navigation() {
 if( ! function_exists( 'ct_tracks_featured_image' ) ) {
     function ct_tracks_featured_image() {
 
+	    // get post object
         global $post;
+
+	    // set default to no image
         $has_image = false;
 
+	    // get the current layout
         $premium_layout = get_theme_mod( 'premium_layouts_setting' );
 
+	    // if the post has a featured image
         if ( has_post_thumbnail( $post->ID ) ) {
 
+			// get the large version if on archive and not one of the full-width latyous
             if ( ( is_archive() || is_home() ) && $premium_layout != 'full-width' && $premium_layout != 'full-width-images' ) {
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-            } else {
+            }
+            // otherwise get the full-size version
+            else {
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
             }
+	        // set to image URL
             $image     = $image[0];
+	        // post has an image
             $has_image = true;
         }
+	    // if the post has a featured image
         if ( $has_image == true ) {
 
-            // for layouts using img
+            // always use image for two-column images layout
             if ( $premium_layout == 'two-column-images' ) { ?>
                 <img class="featured-image" src='<?php echo $image; ?>' /><?php
             } elseif (
-                ( ( is_archive() || is_home() ) && $premium_layout == 'full-width-images' && get_theme_mod( 'premium_layouts_full_width_image_height' ) == 'image' )
-                || is_singular() && $premium_layout == 'full-width-images' && get_theme_mod( 'premium_layouts_full_width_image_height_post' ) == 'image'
+                (   // if archive and full-width-images and image-based height set
+	                ( is_archive() || is_home() ) && $premium_layout == 'full-width-images' && get_theme_mod( 'premium_layouts_full_width_image_height' ) == 'image'
+                )
+                || ( // if singular and full-width-images and image-based height set
+	                is_singular() && $premium_layout == 'full-width-images' && get_theme_mod( 'premium_layouts_full_width_image_height_post' ) == 'image'
+                )
             ) { ?>
                 <img class="featured-image" src='<?php echo $image; ?>' /><?php
-            } // otherwise, output the src as a bg image
+            }
+            // otherwise, output the src as a bg image
             else {
                 // if lazy loading is enabled
                 if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' ) {
