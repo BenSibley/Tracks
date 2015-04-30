@@ -208,4 +208,4 @@ function ct_tracks_pro_output_featured_video( $featured_image ){
 
 	return $featured_image;
 }
-add_filter( 'ct_tracks_featured_image', 'ct_tracks_pro_output_featured_video' );
+add_filter( 'ct_tracks_featured_image', 'ct_tracks_pro_output_featured_video', 20 );

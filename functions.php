@@ -288,8 +288,11 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
 	    // set default to no image
         $has_image = false;
 
-	    // set featured image var
+	    // final output
 	    $featured_image = '';
+
+	    // image url
+	    $image = '';
 
 	    // get the current layout
         $premium_layout = get_theme_mod( 'premium_layouts_setting' );
@@ -312,44 +315,16 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
         }
 	    // if the post has a featured image
         if ( $has_image == true ) {
-
-	        $image_type = 'background';
-
-            // always use image for two-column images layout
-            if ( $premium_layout == 'two-column-images' ) {
-	            $image_type = 'image';
-            }
-            // if full-width-images layout
-            elseif ( $premium_layout == 'full-width-images' ) {
-	            // if blog/archive
-	            if( is_archive() || is_home() ) {
-		            // if image based height for archives is on, use image
-		            if ( get_theme_mod( 'premium_layouts_full_width_image_height' ) == 'image' ) {
-			            $image_type = 'image';
-		            }
-	            }
-	            // if post/page
-	            elseif( is_singular() ) {
-
-		            if( get_theme_mod( 'premium_layouts_full_width_image_height_post' ) == 'image' ) {
-			            $image_type = 'image';
-		            }
-	            }
-            }
-            if( $image_type == 'image' ) {
-	            $featured_image = '<img class="featured-image" src="' . $image . '" />';
-            } else {
-	            // if lazy loading is enabled
-	            if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' ) {
-		            $featured_image = "<div class='featured-image lazy lazy-bg-image' data-background='$image'></div>";
-	            } // if lazy loading is NOT enabled
-	            else {
-		            $featured_image = "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
-	            }
+            // if lazy loading is enabled
+            if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' ) {
+	            $featured_image = "<div class='featured-image lazy lazy-bg-image' data-background='$image'></div>";
+            } // if lazy loading is NOT enabled
+            else {
+	            $featured_image = "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
             }
         }
 	    // allow videos to be added
-	    $featured_image = apply_filters( 'ct_tracks_featured_image', $featured_image );
+	    $featured_image = apply_filters( 'ct_tracks_featured_image', $featured_image, $image, $has_image );
 
 	    if( $featured_image ) {
 		    echo $featured_image;
@@ -646,3 +621,34 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
     }
     add_action( 'wp_head', 'ct_tracks_add_title_tag' );
 endif;
+
+function ct_tracks_two_column_images_featured_image($featured_image, $image, $has_image) {
+
+	// if there is a featured image and two column images layout is active
+	if( $has_image && get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
+		$featured_image = '<img class="featured-image" src="' . $image . '" />';
+	}
+	return $featured_image;
+}
+add_filter( 'ct_tracks_featured_image', 'ct_tracks_two_column_images_featured_image', 10, 3 );
+
+function ct_tracks_full_width_images_featured_image($featured_image, $image, $has_image) {
+
+	// if there is a featured image and two column images layout is active
+	if( $has_image && get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' ) {
+
+		// get image type to check if img will be needed
+		$blog_image_type = get_theme_mod( 'premium_layouts_full_width_image_height' );
+		$post_image_type = get_theme_mod( 'premium_layouts_full_width_image_height_post' );
+
+		// if blog/archive and image-based height, or post/page and image-based height
+		if(
+			( ( is_archive() || is_home() ) && $blog_image_type == 'image' )
+			|| ( is_singular() && $post_image_type == 'image' )
+		){
+			$featured_image = '<img class="featured-image" src="' . $image . '" />';
+		}
+	}
+	return $featured_image;
+}
+add_filter( 'ct_tracks_featured_image', 'ct_tracks_full_width_images_featured_image', 10, 3 );
