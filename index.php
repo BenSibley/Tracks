@@ -22,7 +22,7 @@ if ( have_posts() ) :
             }
             /* Blog - No Premium Layout */
             else {
-                get_template_part('content');
+                get_template_part('content', 'archive');
             }
         }
         /* Post */
@@ -52,7 +52,7 @@ if ( have_posts() ) :
                 }
                 /* normal archive */
                 else {
-                    get_template_part('content');
+                    get_template_part('content', 'archive');
                 }
             }
             elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
@@ -62,7 +62,7 @@ if ( have_posts() ) :
                 get_template_part('licenses/content/content-full-width-images');
             }
             else {
-                get_template_part('content');
+                get_template_part('content', 'archive');
             }
         }
         /* bbPress */
