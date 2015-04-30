@@ -1,24 +1,5 @@
-<div <?php post_class(); ?>>
-    <?php
-    // if post has video enabled on blog
-    if( get_post_meta( $post->ID, 'ct_tracks_video_display_key', true ) == 'both' ) {
-
-	     // check for Featured Video
-	    $video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
-
-	    // if has a video, embed it instead of featured image
-	    if ( $video ) {
-		    echo '<div class="featured-video">';
-		        echo wp_oembed_get( esc_url( $video ) );
-		    echo '</div>';
-	    } // otherwise, output the featured image
-	    else {
-	        ct_tracks_featured_image();
-	    }
-    }
-    else {
-        ct_tracks_featured_image();
-    }
+<div <?php post_class(); ?>> <?php
+	ct_tracks_featured_image();
     if( get_theme_mod('premium_layouts_full_width_image_style') == 'title' ) { ?>
 	    <div class="excerpt-container">
 		    <div class='excerpt-header'>
