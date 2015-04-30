@@ -313,28 +313,39 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
 	    // if the post has a featured image
         if ( $has_image == true ) {
 
+	        $image_type = 'background';
+
             // always use image for two-column images layout
             if ( $premium_layout == 'two-column-images' ) {
-                $featured_image = '<img class="featured-image" src="' . $image . '" />';
-            } elseif (
-                (   // if archive and full-width-images and image-based height set
-	                ( is_archive() || is_home() ) && $premium_layout == 'full-width-images' && get_theme_mod( 'premium_layouts_full_width_image_height' ) == 'image'
-                )
-                || ( // if singular and full-width-images and image-based height set
-	                is_singular() && $premium_layout == 'full-width-images' && get_theme_mod( 'premium_layouts_full_width_image_height_post' ) == 'image'
-                )
-            ) {
-                $featured_image = '<img class="featured-image" src="' . $image . '" />';
+	            $image_type = 'image';
             }
-            // otherwise, output the src as a bg image
-            else {
-                // if lazy loading is enabled
-                if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' ) {
-                    $featured_image = "<div class='featured-image lazy lazy-bg-image' data-background='$image'></div>";
-                } // if lazy loading is NOT enabled
-                else {
-                    $featured_image = "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
-                }
+            // if full-width-images layout
+            elseif ( $premium_layout == 'full-width-images' ) {
+	            // if blog/archive
+	            if( is_archive() || is_home() ) {
+		            // if image based height for archives is on, use image
+		            if ( get_theme_mod( 'premium_layouts_full_width_image_height' ) == 'image' ) {
+			            $image_type = 'image';
+		            }
+	            }
+	            // if post/page
+	            elseif( is_singular() ) {
+
+		            if( get_theme_mod( 'premium_layouts_full_width_image_height_post' ) == 'image' ) {
+			            $image_type = 'image';
+		            }
+	            }
+            }
+            if( $image_type == 'image' ) {
+	            $featured_image = '<img class="featured-image" src="' . $image . '" />';
+            } else {
+	            // if lazy loading is enabled
+	            if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' ) {
+		            $featured_image = "<div class='featured-image lazy lazy-bg-image' data-background='$image'></div>";
+	            } // if lazy loading is NOT enabled
+	            else {
+		            $featured_image = "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
+	            }
             }
         }
 	    // allow videos to be added
