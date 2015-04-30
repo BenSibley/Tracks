@@ -3,9 +3,7 @@
 if( is_single() ) { ?>
     <div <?php post_class(); ?>>
         <?php ct_tracks_featured_image(); ?>
-        <div class="entry-meta">
-            <?php get_template_part('content/post-meta'); ?>
-        </div>
+        <?php get_template_part('content/post-meta'); ?>
         <div class='entry-header'>
             <h1 class='entry-title'><?php the_title(); ?></h1>
         </div>
