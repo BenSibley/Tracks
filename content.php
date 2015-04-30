@@ -30,12 +30,8 @@ if( is_single() ) { ?>
             <?php get_template_part('sidebar','after-post-content'); ?>
             <div class='entry-meta-bottom'>
                 <?php get_template_part('content/further-reading'); ?>
-                <div class="entry-categories">
-                    <?php get_template_part('content/category-links'); ?>
-                </div>
-                <div class="entry-tags">
-                    <?php get_template_part('content/tag-links'); ?>
-                </div>
+                <?php get_template_part('content/category-links'); ?>
+                <?php get_template_part('content/tag-links'); ?>
             </div>
             <?php
             if(get_theme_mod('additional_options_author_meta_settings') != 'hide'){ ?>
