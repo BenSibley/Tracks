@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.34\n"
+"Project-Id-Version: Tracks 1.35\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-03-27 15:27:55+00:00\n"
+"POT-Creation-Date: 2015-05-01 15:12:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,47 +35,69 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content/category-links.php:14
+#: content/archive-header.php:6
+msgid "Category:"
+msgstr ""
+
+#: content/archive-header.php:13
+msgid "Tag:"
+msgstr ""
+
+#: content/archive-header.php:20
+msgid "These Posts are by:"
+msgstr ""
+
+#: content/author-social-icons.php:12 content/author-social-icons.php:15
+#: content/author-social-icons.php:21 content/social-icons.php:28
+#: content/social-icons.php:32
+msgid "%s icon"
+msgstr ""
+
+#: content/author-social-icons.php:18 content/social-icons.php:30
+msgid "email icon"
+msgstr ""
+
+#: content/category-links.php:15
 msgid "Categories"
 msgstr ""
 
-#: content/category-links.php:16 inc/deprecated.php:17
+#: content/category-links.php:17 inc/deprecated.php:17
 msgid "View all posts in %s"
 msgstr ""
 
-#: content/further-reading.php:12
+#: content/further-reading.php:14
 msgid "The Previous Post"
 msgstr ""
 
-#: content/further-reading.php:17
+#: content/further-reading.php:19
 msgid "The Next Post"
 msgstr ""
 
-#: content/further-reading.php:24
+#: content/further-reading.php:26
 msgid "Previous Post"
 msgstr ""
 
-#: content/further-reading.php:29
+#: content/further-reading.php:31
 msgid "This is the oldest post"
 msgstr ""
 
-#: content/further-reading.php:30 content/further-reading.php:42
+#: content/further-reading.php:32 content/further-reading.php:44
 msgid "Return to Blog"
 msgstr ""
 
-#: content/further-reading.php:36
+#: content/further-reading.php:38
 msgid "Next Post"
 msgstr ""
 
-#: content/further-reading.php:41
+#: content/further-reading.php:43
 msgid "This is the newest post"
 msgstr ""
 
-#: content/tag-links.php:9
+#: content/tag-links.php:10
 msgid "Tags"
 msgstr ""
 
-#: content/tag-links.php:11 inc/deprecated.php:36
+#: content/tag-links.php:12 inc/deprecated.php:36
 msgid "View all posts tagged %s"
 msgstr ""
 
@@ -97,11 +119,11 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: content-page.php:29 content.php:37
+#: content-page.php:29 content.php:13
 msgid "Pages:"
 msgstr ""
 
-#: content.php:59
+#: content.php:28
 msgid "Written by:"
 msgstr ""
 
@@ -468,18 +490,6 @@ msgstr ""
 msgid "Profile:"
 msgstr ""
 
-#: index.php:11
-msgid "Category:"
-msgstr ""
-
-#: index.php:18
-msgid "Tag:"
-msgstr ""
-
-#: index.php:25
-msgid "These Posts are by:"
-msgstr ""
-
 #: licenses/functions/video.php:22
 msgid "Featured Video"
 msgstr ""
@@ -504,17 +514,17 @@ msgstr ""
 msgid "Display on Post and Blog"
 msgstr ""
 
-#: search.php:11
+#: search.php:9
 msgid "%d search result for \"%s\""
 msgid_plural "%d search results for \"%s\""
 msgstr[0] ""
 msgstr[1] ""
 
-#: search.php:13
+#: search.php:11
 msgid "No search results for \"%s\""
 msgstr ""
 
-#: search.php:37
+#: search.php:36
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr ""
 
@@ -662,7 +672,7 @@ msgid "Compete Themes"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://www.competethemes.com/"
+msgid "https://www.competethemes.com"
 msgstr ""
 
 #: inc/customizer.php:456 inc/customizer.php:474 inc/customizer.php:891
