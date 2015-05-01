@@ -354,8 +354,11 @@ function ct_tracks_body_class( $classes ) {
         }
     }
     elseif( $premium_layout_setting == 'full-width-images'){
-        $classes[] = 'full-width-images';
 
+	    // maintain standard layout on search pages
+	    if( !is_search() ) {
+		    $classes[] = 'full-width-images';
+	    }
         if( ( is_home() || is_archive() ) && get_theme_mod('premium_layouts_full_width_image_height') == '2:1-ratio'){
             $classes[] = 'ratio';
         }
@@ -370,7 +373,12 @@ function ct_tracks_body_class( $classes ) {
         $classes[] = 'two-column';
     }
     elseif( $premium_layout_setting == 'two-column-images'){
-        $classes[] = 'two-column-images';
+
+	    // maintain standard layout on search pages
+	    if( !is_search() ) {
+		    $classes[] = 'two-column-images';
+	    }
+
     }
     if(get_theme_mod( 'ct_tracks_background_image_setting')){
         $classes[] = 'background-image-active';
