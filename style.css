@@ -1621,6 +1621,7 @@ li.pingback:first-child {
   margin-bottom: 1.5em;
   background: white;
   text-align: center;
+  clear: both;
 }
 .search .search-box .search-form-container {
   margin-bottom: 1.5em;
