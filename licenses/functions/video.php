@@ -112,15 +112,15 @@ function ct_tracks_video_callback( $post ) {
 		echo '<p>' . __( 'Youtube controls', 'tracks' ) . '</p>';
 		echo '<label for="ct_tracks_video_youtube_title">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_title" id="ct_tracks_video_youtube_title" value="1" ' . checked( '1', $youtube_title, false ) . '>';
-			_e( 'Show title', 'tracks' );
+			_e( 'Hide title', 'tracks' );
 		echo '</label> ';
 		echo '<label for="ct_tracks_video_youtube_related">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_related" id="ct_tracks_video_youtube_related" value="1" ' . checked( '1', $youtube_related, false ) . '>';
-			_e( 'Show related videos', 'tracks' );
+			_e( 'Hide related videos', 'tracks' );
 		echo '</label> ';
 		echo '<label for="ct_tracks_video_youtube_logo">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_logo" id="ct_tracks_video_youtube_logo" value="1" ' . checked( '1', $youtube_logo, false ) . '>';
-			_e( 'Show Youtube logo', 'tracks' );
+			_e( 'Hide Youtube logo', 'tracks' );
 		echo '</label> ';
 	echo '</div>';
 }
@@ -316,8 +316,11 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 			if( strpos($featured_video, 'youtube.com' ) ) {
 
 				// get user Youtube parameter settings
-				$youtube_title   = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true );
-				$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true );
+				// flip their value so 1 means, yes HIDE it, NOT yes SHOW it.
+				$youtube_title   = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true ) ? 0 : 1;
+				$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true ) ? 0 : 1;
+
+				// don't flip
 				$youtube_logo    = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
 
 				$youtube_parameters = array(
