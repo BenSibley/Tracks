@@ -102,15 +102,15 @@ function ct_tracks_video_callback( $post ) {
 			echo '<p>' . __( 'Youtube controls', 'tracks' ) . '</p>';
 			echo '<label for="ct_tracks_video_youtube_title">';
 				echo '<input type="checkbox" name="ct_tracks_video_youtube_title" id="ct_tracks_video_youtube_title" value="1" ' . checked( '1', $youtube_title, false ) . '>';
-				_e( 'Hide title', 'tracks' );
+				_e( 'Show title', 'tracks' );
 			echo '</label> ';
 		echo '<label for="ct_tracks_video_youtube_related">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_related" id="ct_tracks_video_youtube_related" value="1" ' . checked( '1', $youtube_related, false ) . '>';
-			_e( 'Hide related videos', 'tracks' );
+			_e( 'Show related videos', 'tracks' );
 		echo '</label> ';
 		echo '<label for="ct_tracks_video_youtube_logo">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_logo" id="ct_tracks_video_youtube_logo" value="1" ' . checked( '1', $youtube_logo, false ) . '>';
-			_e( 'Hide Youtube logo', 'tracks' );
+			_e( 'Show Youtube logo', 'tracks' );
 		echo '</label> ';
 		echo '</div>';
 	}
@@ -278,8 +278,15 @@ function ct_tracks_pro_output_featured_video( $featured_image ){
 		// get the display setting (post or blog)
 		$display_blog = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
 
+		$display_blog = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
+
 		// if is post, page, or video displays on blog, use the video
 		if( is_singular() || $display_blog == 'both' ) {
+
+			// if its a youtube video customize embed
+//			if( strpos($featured_video, 'youtube.com' ) ) {
+//				$youtube_title = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true );
+//			}
 			$featured_image = '<div class="featured-video">' . wp_oembed_get( esc_url( $featured_video ) ) . '</div>';
 		}
 	}
@@ -287,3 +294,52 @@ function ct_tracks_pro_output_featured_video( $featured_image ){
 	return $featured_image;
 }
 add_filter( 'ct_tracks_featured_image', 'ct_tracks_pro_output_featured_video', 20 );
+
+
+add_filter('oembed_result','ct_tracks_add_youtube_parameters', 10, 3);
+
+// Filter video output
+function ct_tracks_add_youtube_parameters($html, $url, $args) {
+
+	// access post object
+	global $post;
+
+	// get featured video
+	$featured_video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
+
+	// only run filter if there is a featured video
+	if( $featured_video ) {
+
+		// only run filter on featured video
+		if( $url == $featured_video ) {
+
+			// only add parameters if featured vid is a youtube vid
+			if( strpos($featured_video, 'youtube.com' ) ) {
+
+				// get user Youtube parameter settings
+				$youtube_title   = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true );
+				$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true );
+				$youtube_logo    = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
+
+				$youtube_parameters = array(
+					'showinfo'       => $youtube_title,
+					'rel'            => $youtube_related,
+					'modestbranding' => $youtube_logo
+				);
+
+				if ( is_array( $args ) ) {
+					$args = array_merge( $args, $youtube_parameters );
+				} else {
+					$args = $youtube_parameters;
+				}
+
+				$parameters = http_build_query( $args );
+
+				// Modify video parameters
+				$html = str_replace( '?feature=oembed', '?feature=oembed&' . $parameters, $html );
+			}
+		}
+	}
+
+	return $html;
+}
