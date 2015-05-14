@@ -61,7 +61,9 @@ jQuery(function($) {
                 });
 
                 // show youtube options if youtube video
-                $('.ct_tracks_video_youtube_controls_container.hide').removeClass('hide');
+                if( response.includes('youtube.com') ) {
+                    $('.ct_tracks_video_youtube_controls_container.hide').removeClass('hide');
+                }
 
             }
             // else remove the has-vid class in case already had video
