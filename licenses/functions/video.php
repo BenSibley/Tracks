@@ -278,15 +278,8 @@ function ct_tracks_pro_output_featured_video( $featured_image ){
 		// get the display setting (post or blog)
 		$display_blog = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
 
-		$display_blog = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
-
 		// if is post, page, or video displays on blog, use the video
 		if( is_singular() || $display_blog == 'both' ) {
-
-			// if its a youtube video customize embed
-//			if( strpos($featured_video, 'youtube.com' ) ) {
-//				$youtube_title = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true );
-//			}
 			$featured_image = '<div class="featured-video">' . wp_oembed_get( esc_url( $featured_video ) ) . '</div>';
 		}
 	}
