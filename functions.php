@@ -671,8 +671,10 @@ function ct_tracks_full_width_images_featured_image($featured_image, $image, $ha
 
 		// if blog/archive and image-based height, or post/page and image-based height
 		if(
-			( ( is_archive() || is_home() ) && $blog_image_type == 'image' )
-			|| ( is_singular() && $post_image_type == 'image' )
+			// if archive/blog and image type is set to image or not set yet
+			( ( is_archive() || is_home() ) && ( empty($blog_image_type) || $blog_image_type == 'image' ) )
+			// or if is post and post height type is set to image or not set yet
+			|| ( is_singular() && ( empty($post_image_type) || $post_image_type == 'image' ) )
 		){
 			$featured_image = '<img class="featured-image" src="' . $image . '" />';
 		}
