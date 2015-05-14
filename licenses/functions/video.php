@@ -320,7 +320,7 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 				$youtube_title   = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true ) ? 0 : 1;
 				$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true ) ? 0 : 1;
 
-				// don't flip
+				// don't flip. 1 means hide
 				$youtube_logo    = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
 
 				$youtube_parameters = array(
