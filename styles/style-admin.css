@@ -240,18 +240,26 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
             transform: rotate(360deg);
   }
 }
-.ct_tracks_video_display_container {
-  padding: 0px 24px 24px;
+.ct_tracks_video_display_container,
+.ct_tracks_video_youtube_controls_container {
+  padding: 0 24px 24px;
 }
-.ct_tracks_video_display_container p {
+.ct_tracks_video_display_container p,
+.ct_tracks_video_youtube_controls_container p {
   font-weight: 700;
 }
-.ct_tracks_video_display_container label {
+.ct_tracks_video_display_container label,
+.ct_tracks_video_youtube_controls_container label {
   display: block;
   margin-bottom: 6px;
 }
-.ct_tracks_video_display_container input {
+.ct_tracks_video_display_container input,
+.ct_tracks_video_youtube_controls_container input {
   margin-right: 12px;
+}
+
+.ct_tracks_video_youtube_controls_container {
+  margin-top: -24px;
 }
 
 .ct_tracks_video_youtube_controls_container.hide {

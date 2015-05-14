@@ -234,8 +234,9 @@
 @-webkit-keyframes spin { 100% { transform: rotate(360deg); } }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-.ct_tracks_video_display_container {
-  padding: 0px 24px 24px;
+.ct_tracks_video_display_container,
+.ct_tracks_video_youtube_controls_container {
+  padding: 0 24px 24px;
 
   p {
     font-weight: 700;
@@ -247,6 +248,9 @@
   input {
     margin-right: 12px;
   }
+}
+.ct_tracks_video_youtube_controls_container {
+  margin-top: -24px;
 }
 .ct_tracks_video_youtube_controls_container.hide {
   display: none;
