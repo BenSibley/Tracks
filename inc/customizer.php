@@ -339,10 +339,10 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
             'settings'       => 'ct_tracks_comments_setting',
             'type'           => 'multi-checkbox',
             'choices'        => array(
-                'posts'   => __('Posts', 'tracks'),
-                'pages'  => __('Pages', 'tracks'),
-                'attachments'  => __('Attachments', 'tracks'),
-                'none'  => __('Do not show', 'tracks')
+                'posts'       => __('Posts', 'tracks'),
+                'pages'       => __('Pages', 'tracks'),
+                'attachments' => __('Attachments', 'tracks'),
+                'none'        => __('Do not show', 'tracks')
             )
         )
     ) );
