@@ -83,7 +83,9 @@
 })( window.jQuery || window.Zepto );
 jQuery(function($){
 
-    $('.entry-content, .excerpt-content, .featured-video').fitVids();
+    $('.entry-content, .excerpt-content, .featured-video').fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"]'
+    });
 
     // set variables
     var siteHeader = $('#site-header');
