@@ -56,10 +56,16 @@ jQuery(function($) {
                 // reapply fitvids to Post Video preview div
                 $('#ct_tracks_video_preview_container').fitVids();
 
+                // show youtube options if youtube video
+                $('.ct_tracks_video_youtube_controls_container.hide').removeClass('hide');
+
             }
             // else remove the has-vid class in case already had video
             else {
                 $('#ct_tracks_video_preview_container, .ct_tracks_video_input_container').removeClass('has-vid');
+
+                // hide youtube options
+                $('.ct_tracks_video_youtube_controls_container').addClass('hide');
             }
         });
     }
