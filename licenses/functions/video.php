@@ -99,13 +99,21 @@ function ct_tracks_video_callback( $post ) {
 	}
 
 	// Youtube options
+
+	// hide class for initially hiding youtube options
+	$class = 'hide';
+
+	// if it's a youtube video, don't add the class
 	if( strpos($value, 'youtube.com' ) ) {
-		echo '<div class="ct_tracks_video_youtube_controls_container">';
-			echo '<p>' . __( 'Youtube controls', 'tracks' ) . '</p>';
-			echo '<label for="ct_tracks_video_youtube_title">';
-				echo '<input type="checkbox" name="ct_tracks_video_youtube_title" id="ct_tracks_video_youtube_title" value="1" ' . checked( '1', $youtube_title, false ) . '>';
-				_e( 'Show title', 'tracks' );
-			echo '</label> ';
+		$class = '';
+	}
+
+	echo '<div class="ct_tracks_video_youtube_controls_container ' . $class . '">';
+		echo '<p>' . __( 'Youtube controls', 'tracks' ) . '</p>';
+		echo '<label for="ct_tracks_video_youtube_title">';
+			echo '<input type="checkbox" name="ct_tracks_video_youtube_title" id="ct_tracks_video_youtube_title" value="1" ' . checked( '1', $youtube_title, false ) . '>';
+			_e( 'Show title', 'tracks' );
+		echo '</label> ';
 		echo '<label for="ct_tracks_video_youtube_related">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_related" id="ct_tracks_video_youtube_related" value="1" ' . checked( '1', $youtube_related, false ) . '>';
 			_e( 'Show related videos', 'tracks' );
@@ -114,8 +122,7 @@ function ct_tracks_video_callback( $post ) {
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_logo" id="ct_tracks_video_youtube_logo" value="1" ' . checked( '1', $youtube_logo, false ) . '>';
 			_e( 'Show Youtube logo', 'tracks' );
 		echo '</label> ';
-		echo '</div>';
-	}
+	echo '</div>';
 }
 
 // ajax callback to return video embed content

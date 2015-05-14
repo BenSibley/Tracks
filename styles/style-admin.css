@@ -253,3 +253,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 .ct_tracks_video_display_container input {
   margin-right: 12px;
 }
+
+.ct_tracks_video_youtube_controls_container.hide {
+  display: none;
+}
