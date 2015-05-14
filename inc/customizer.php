@@ -434,7 +434,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
 	$tracks_upgrades = 'https://www.competethemes.com/tracks/tracks-theme-upgrades/';
 
-	$description_layout = sprintf( __('Want more layouts? <a target="_blank" href="%s">Check out the Tracks theme upgrades</a>', 'tracks'), $tracks_upgrades );
+	$description_layout = sprintf( __('Want more layouts? Check out the <a target="_blank" href="%s">Tracks theme upgrades gallery</a>', 'tracks'), $tracks_upgrades );
 
     // control - layout select
     $wp_customize->add_control( 'premium_layouts_setting', array(

@@ -40,4 +40,7 @@ jQuery(function($){
 
     $('.ms-drop.bottom').find('li').bind('click', ctHideNoneText);
 
+    // move control descriptions for certain sections (advertisements) below the control
+    // section (Layouts) find description and append to parent li
+    $('#customize-control-premium_layouts_setting').find('.customize-control-description').appendTo( '#customize-control-premium_layouts_setting' ).css('margin-top', '12px');
 });
