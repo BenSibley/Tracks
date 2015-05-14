@@ -431,13 +431,19 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts'
     ) );
+
+	$tracks_upgrades = 'https://www.competethemes.com/tracks/tracks-theme-upgrades/';
+
+	$description_layout = sprintf( __('Want more layouts? <a target="_blank" href="%s">Check out the Tracks theme upgrades</a>', 'tracks'), $tracks_upgrades );
+
     // control - layout select
     $wp_customize->add_control( 'premium_layouts_setting', array(
-        'type' => 'select',
-        'label' => __('Choose the layout for Tracks', 'tracks'),
-        'section' => 'ct_tracks_premium_layouts',
-        'setting' => 'premium_layouts_setting',
-        'choices' => $available_templates, // no i18n b/c product names
+        'type'        => 'select',
+        'label'       => __('Choose the layout for Tracks', 'tracks'),
+	    'description' => $description_layout,
+        'section'     => 'ct_tracks_premium_layouts',
+        'setting'     => 'premium_layouts_setting',
+        'choices'     => $available_templates, // no i18n b/c product names
     ) );
     // setting - full-width image height
     $wp_customize->add_setting( 'premium_layouts_full_width_image_height', array(
