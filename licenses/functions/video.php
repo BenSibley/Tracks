@@ -47,6 +47,10 @@ function ct_tracks_video_callback( $post ) {
 
 	$display_value = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
 
+	$youtube_title = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true );
+	$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true );
+	$youtube_logo = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
+
 	// sets video to display on posts only by default
 	if( empty( $display_value ) ) {
 		$display_value = "post";
@@ -89,6 +93,25 @@ function ct_tracks_video_callback( $post ) {
 				echo '<input type="radio" name="ct_tracks_video_display" id="ct_tracks_video_display_both" value="both" ' . checked( $display_value, "both", false ) . '>';
 				_e( 'Display on Post and Blog', 'tracks' );
 			echo '</label> ';
+		echo '</div>';
+	}
+
+	// Youtube options
+	if( strpos($value, 'youtube.com' ) ) {
+		echo '<div class="ct_tracks_video_youtube_controls_container">';
+			echo '<p>' . __( 'Youtube controls', 'tracks' ) . '</p>';
+			echo '<label for="ct_tracks_video_youtube_title">';
+				echo '<input type="checkbox" name="ct_tracks_video_youtube_title" id="ct_tracks_video_youtube_title" value="1" ' . checked( '1', $youtube_title, false ) . '>';
+				_e( 'Hide title', 'tracks' );
+			echo '</label> ';
+		echo '<label for="ct_tracks_video_youtube_related">';
+			echo '<input type="checkbox" name="ct_tracks_video_youtube_related" id="ct_tracks_video_youtube_related" value="1" ' . checked( '1', $youtube_related, false ) . '>';
+			_e( 'Hide related videos', 'tracks' );
+		echo '</label> ';
+		echo '<label for="ct_tracks_video_youtube_logo">';
+			echo '<input type="checkbox" name="ct_tracks_video_youtube_logo" id="ct_tracks_video_youtube_logo" value="1" ' . checked( '1', $youtube_logo, false ) . '>';
+			_e( 'Hide Youtube logo', 'tracks' );
+		echo '</label> ';
 		echo '</div>';
 	}
 }
@@ -166,23 +189,78 @@ function ct_tracks_video_save_data( $post_id ) {
 	update_post_meta( $post_id, 'ct_tracks_video_key', $my_data );
 
 	// Make sure display setting is set
-	if ( ! isset( $_POST['ct_tracks_video_display'] ) ) {
-		return;
+	if ( isset( $_POST['ct_tracks_video_display'] ) ) {
+
+		// get user input
+		$raw_data = $_POST[ 'ct_tracks_video_display' ];
+
+		// validate user input
+		if( $raw_data == 'post' || $raw_data == 'both' ) {
+			$clean_data = $raw_data;
+
+			// Saves video display option
+			update_post_meta( $post_id, 'ct_tracks_video_display_key', $clean_data );
+		}
+	}
+
+	// Youtube title
+
+	// if not set, set to '0' to avoid undefined index error
+	if ( !isset( $_POST['ct_tracks_video_youtube_title'] ) ) {
+		$_POST['ct_tracks_video_youtube_title'] = '0';
 	}
 
 	// get user input
-	$raw_data = $_POST[ 'ct_tracks_video_display' ];
+	$raw_data = $_POST[ 'ct_tracks_video_youtube_title' ];
 
 	// validate user input
-	if( $raw_data == 'post' || $raw_data == 'both' ) {
+	if( $raw_data == '1' || $raw_data == '0' ) {
+
+		// as long as the data is equal to '1' or '0', it's clean
 		$clean_data = $raw_data;
-	} else {
-		return;
+
+		// Saves video display option
+		update_post_meta( $post_id, 'ct_tracks_video_youtube_title', $clean_data );
+	}
+	// Youtube related vids
+
+	// if not set, set to '0' to avoid undefined index error
+	if ( !isset( $_POST['ct_tracks_video_youtube_related'] ) ) {
+		$_POST['ct_tracks_video_youtube_related'] = '0';
 	}
 
-	// Saves video display option
-	update_post_meta( $post_id, 'ct_tracks_video_display_key', $clean_data );
+	// get user input
+	$raw_data = $_POST[ 'ct_tracks_video_youtube_related' ];
 
+	// validate user input
+	if( $raw_data == '1' || $raw_data == '0' ) {
+
+		// as long as the data is equal to '1' or '0', it's clean
+		$clean_data = $raw_data;
+
+		// Saves video display option
+		update_post_meta( $post_id, 'ct_tracks_video_youtube_related', $clean_data );
+	}
+
+	// Youtube logo
+
+	// if not set, set to '0' to avoid undefined index error
+	if ( !isset( $_POST['ct_tracks_video_youtube_logo'] ) ) {
+		$_POST['ct_tracks_video_youtube_logo'] = '0';
+	}
+
+	// get user input
+	$raw_data = $_POST[ 'ct_tracks_video_youtube_logo' ];
+
+	// validate user input
+	if( $raw_data == '1' || $raw_data == '0' ) {
+
+		// as long as the data is equal to '1' or '0', it's clean
+		$clean_data = $raw_data;
+
+		// Saves video display option
+		update_post_meta( $post_id, 'ct_tracks_video_youtube_logo', $clean_data );
+	}
 }
 add_action( 'save_post', 'ct_tracks_video_save_data' );
 
