@@ -45,8 +45,10 @@ function ct_tracks_video_callback( $post ) {
 	 */
 	$value = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
 
+	// post or post and blog?
 	$display_value = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
 
+	// youtube parameters
 	$youtube_title = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true );
 	$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true );
 	$youtube_logo = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
@@ -288,9 +290,6 @@ function ct_tracks_pro_output_featured_video( $featured_image ){
 }
 add_filter( 'ct_tracks_featured_image', 'ct_tracks_pro_output_featured_video', 20 );
 
-
-add_filter('oembed_result','ct_tracks_add_youtube_parameters', 10, 3);
-
 // Filter video output
 function ct_tracks_add_youtube_parameters($html, $url, $args) {
 
@@ -336,3 +335,4 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 
 	return $html;
 }
+add_filter('oembed_result','ct_tracks_add_youtube_parameters', 10, 3);
