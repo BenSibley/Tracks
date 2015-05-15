@@ -434,7 +434,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
 	$tracks_upgrades = 'https://www.competethemes.com/tracks/tracks-theme-upgrades/';
 
-	$description_layout = sprintf( __('Want more layouts? Check out the <a target="_blank" href="%s">Tracks theme upgrades gallery</a>', 'tracks'), $tracks_upgrades );
+	$description_layout = sprintf( __('Want more layouts? Check out the <a target="_blank" href="%s">Tracks Theme Upgrades</a>.', 'tracks'), $tracks_upgrades );
 
     // control - layout select
     $wp_customize->add_control( 'premium_layouts_setting', array(
@@ -998,7 +998,7 @@ function ct_tracks_textures_array(){
 function ct_tracks_customize_preview_js() { ?>
 
 	<script>
-		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/tracks/tracks-theme-upgrades/" target="_blank">Visit Tracks Upgrade Gallery <span>&rarr;</span></a></div>');
+		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/tracks/tracks-theme-upgrades/" target="_blank">View Tracks Theme Upgrades <span>&rarr;</span></a></div>');
 	</script>
 <?php }
 add_action('customize_controls_print_footer_scripts', 'ct_tracks_customize_preview_js');
