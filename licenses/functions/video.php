@@ -300,7 +300,7 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 	// only run filter if there is a featured video
 	if( $featured_video ) {
 
-		// only run filter on featured video
+		// only run filter on the featured video
 		if( $url == $featured_video ) {
 
 			// only add parameters if featured vid is a youtube vid
@@ -310,9 +310,7 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 				// flip their value so 1 means, yes HIDE it, NOT yes SHOW it.
 				$youtube_title   = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true ) ? 0 : 1;
 				$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true ) ? 0 : 1;
-
-				// don't flip. 1 means hide
-				$youtube_logo    = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
+				$youtube_logo    = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true ) ? 0 : 1;
 
 				$youtube_parameters = array(
 					'showinfo'       => $youtube_title,
