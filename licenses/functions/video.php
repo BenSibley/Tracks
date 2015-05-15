@@ -220,16 +220,13 @@ function ct_tracks_video_save_data( $post_id ) {
 	}
 
 	// get user input
-	$raw_data = $_POST[ 'ct_tracks_video_youtube_title' ];
+	$youtube_title = $_POST[ 'ct_tracks_video_youtube_title' ];
 
 	// validate user input
-	if( $raw_data == '1' || $raw_data == '0' ) {
-
-		// as long as the data is equal to '1' or '0', it's clean
-		$clean_data = $raw_data;
+	if( $youtube_title == '1' || $youtube_title == '0' ) {
 
 		// Saves video display option
-		update_post_meta( $post_id, 'ct_tracks_video_youtube_title', $clean_data );
+		update_post_meta( $post_id, 'ct_tracks_video_youtube_title', $youtube_title );
 	}
 	// Youtube related vids
 
@@ -239,16 +236,13 @@ function ct_tracks_video_save_data( $post_id ) {
 	}
 
 	// get user input
-	$raw_data = $_POST[ 'ct_tracks_video_youtube_related' ];
+	$youtube_related = $_POST[ 'ct_tracks_video_youtube_related' ];
 
 	// validate user input
-	if( $raw_data == '1' || $raw_data == '0' ) {
-
-		// as long as the data is equal to '1' or '0', it's clean
-		$clean_data = $raw_data;
+	if( $youtube_related == '1' || $youtube_related == '0' ) {
 
 		// Saves video display option
-		update_post_meta( $post_id, 'ct_tracks_video_youtube_related', $clean_data );
+		update_post_meta( $post_id, 'ct_tracks_video_youtube_related', $youtube_related );
 	}
 
 	// Youtube logo
@@ -259,16 +253,13 @@ function ct_tracks_video_save_data( $post_id ) {
 	}
 
 	// get user input
-	$raw_data = $_POST[ 'ct_tracks_video_youtube_logo' ];
+	$youtube_logo = $_POST[ 'ct_tracks_video_youtube_logo' ];
 
 	// validate user input
-	if( $raw_data == '1' || $raw_data == '0' ) {
-
-		// as long as the data is equal to '1' or '0', it's clean
-		$clean_data = $raw_data;
+	if( $youtube_logo == '1' || $youtube_logo == '0' ) {
 
 		// Saves video display option
-		update_post_meta( $post_id, 'ct_tracks_video_youtube_logo', $clean_data );
+		update_post_meta( $post_id, 'ct_tracks_video_youtube_logo', $youtube_logo );
 	}
 }
 add_action( 'save_post', 'ct_tracks_video_save_data' );
