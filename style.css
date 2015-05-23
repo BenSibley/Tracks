@@ -1540,6 +1540,7 @@ li.pingback:first-child {
   .sidebar-footer:not(.active-1) .widget {
     width: 47%;
     float: left;
+    margin-top: 1.5em;
   }
   .sidebar-footer:not(.active-1) .widget:nth-child(odd) {
     margin-right: 3%;

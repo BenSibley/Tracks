@@ -148,6 +148,7 @@
     .widget {
       width: 47%;
       float: left;
+      margin-top: $baseline-height;
 
       &:nth-child(odd) {
         margin-right: 3%;
