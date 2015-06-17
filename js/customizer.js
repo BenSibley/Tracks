@@ -1,4 +1,4 @@
-jQuery(function($){
+jQuery(document).ready(function($) {
 
     $('html', window.parent.document).find('#customize-control-ct_tracks_background_texture_setting input').each(function(){
        $(this).parent().css('background-image', 'url("../wp-content/plugins/tracks-background-textures/textures/' + $(this).val() + '.png")');

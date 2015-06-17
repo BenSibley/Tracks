@@ -71,7 +71,7 @@ function ct_tracks_enqueue_admin_styles($hook){
 			wp_enqueue_media();
 
 			// enqueue the JS needed to utilize media uploader on profile image upload
-			wp_enqueue_script( 'ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js#ct_tracks_asyncload' );
+			wp_enqueue_script( 'ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js' );
 		}
 	}
 
@@ -82,7 +82,7 @@ function ct_tracks_enqueue_admin_styles($hook){
 		wp_enqueue_media();
 
 		// enqueue the JS needed to utilize media uploader on profile image upload
-		wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js#ct_tracks_asyncload');
+		wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js');
 	}
 }
 add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
@@ -97,21 +97,9 @@ function ct_tracks_enqueue_customizer_styles(){
 	wp_enqueue_style('multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.css');
 
 	// JS for customizer
-	wp_enqueue_script('ct-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js#ct_tracks_asyncload');
+	wp_enqueue_script('ct-tracks-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
 
 	// CSS for cusotmizer
 	wp_enqueue_style('ct-customizer-css', get_template_directory_uri() . '/styles/style-customizer.css');
 }
 add_action('customize_controls_enqueue_scripts','ct_tracks_enqueue_customizer_styles');
-
-// load marked scripts asynchronously
-function ct_tracks_add_async_script($url) {
-
-	// if async parameter not present, do nothing
-	if (strpos($url, '#ct_tracks_asyncload') === false){
-		return $url;
-	}
-	// if async parameter present, add async attribute
-	return str_replace('#ct_tracks_asyncload', '', $url)."' async='async";
-}
-add_filter('clean_url', 'ct_tracks_add_async_script', 11, 1);
