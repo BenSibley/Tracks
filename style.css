@@ -180,6 +180,7 @@ pre {
   word-wrap: break-word;
   -ms-word-wrap: break-word;
   word-break: break-all;
+  white-space: pre-wrap;
   padding: 0.75em;
   background: #f5f5f5;
 }
