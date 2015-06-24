@@ -1,7 +1,7 @@
 jQuery(function($){
 
     $('.entry-content, .excerpt-content, .featured-video').fitVids({
-        customSelector: 'iframe[src*="dailymotion.com"]'
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
     });
 
     // set variables

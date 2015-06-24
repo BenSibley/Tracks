@@ -3,7 +3,7 @@ jQuery(function($) {
     // add fitvid to Post Video preview
     if( typeof $.fn.fitVids === 'function' ) {
         $('#ct_tracks_video_preview_container').fitVids({
-            customSelector: 'iframe[src*="dailymotion.com"]'
+            customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
         });
     }
 
@@ -57,7 +57,7 @@ jQuery(function($) {
 
                 // reapply fitvids to Post Video preview div
                 $('#ct_tracks_video_preview_container').fitVids({
-                    customSelector: 'iframe[src*="dailymotion.com"]'
+                    customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
                 });
 
                 // show youtube options if youtube video
