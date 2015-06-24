@@ -429,8 +429,11 @@ function ct_tracks_post_class_update($classes){
 
 		// only add on blog/archive if enabled
 		if( is_home() || is_archive() ) {
+
+			$display_setting = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
+
 			// if post has video enabled on blog
-			if( get_post_meta( $post->ID, 'ct_tracks_video_display_key', true ) == 'both' ) {
+			if( $display_setting == 'blog' || $display_setting == 'both' ) {
 				$classes[] = 'has-video';
 			}
 		} else {
