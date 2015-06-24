@@ -7,8 +7,16 @@ function ct_tracks_register_theme_page(){
 add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
 
 /* callback used to add content to options page */
-function ct_tracks_options_content(){ ?>
+function ct_tracks_options_content(){
 
+	$customizer_url = add_query_arg(
+		array(
+			'url'    => site_url(),
+			'return' => admin_url('themes.php?page=tracks-options')
+		),
+		admin_url('customize.php')
+	);
+	?>
     <div id="tracks-dashboard-wrap" class="wrap">
         <h2><?php _e('Tracks Dashboard', 'tracks'); ?></h2>
 
@@ -24,7 +32,7 @@ function ct_tracks_options_content(){ ?>
                 <h3><?php _e('Customization', 'tracks'); ?></h3>
                 <p><?php _e('Click the "Customize" link in your menu, or use the button below to get started customizing Tracks', 'tracks'); ?>.</p>
                 <p>
-                    <a class="button-primary" href="<?php echo admin_url('customize.php'); ?>"><?php _e('Use Customizer', 'tracks') ?></a>
+                    <a class="button-primary" href="<?php echo esc_url( $customizer_url ); ?>"><?php _e('Use Customizer', 'tracks') ?></a>
                 </p>
             </div>
 	        <div class="content-support content">
