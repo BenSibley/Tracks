@@ -236,7 +236,7 @@
 
 .ct_tracks_video_display_container,
 .ct_tracks_video_youtube_controls_container {
-  padding: 0 24px 24px;
+  margin: 0 24px 24px;
 
   p {
     font-weight: 700;
@@ -248,9 +248,6 @@
   input {
     margin-right: 12px;
   }
-}
-.ct_tracks_video_youtube_controls_container {
-  margin-top: -24px;
 }
 .ct_tracks_video_youtube_controls_container.hide {
   display: none;

@@ -242,7 +242,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 }
 .ct_tracks_video_display_container,
 .ct_tracks_video_youtube_controls_container {
-  padding: 0 24px 24px;
+  margin: 0 24px 24px;
 }
 .ct_tracks_video_display_container p,
 .ct_tracks_video_youtube_controls_container p {
@@ -256,10 +256,6 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 .ct_tracks_video_display_container input,
 .ct_tracks_video_youtube_controls_container input {
   margin-right: 12px;
-}
-
-.ct_tracks_video_youtube_controls_container {
-  margin-top: -24px;
 }
 
 .ct_tracks_video_youtube_controls_container.hide {
