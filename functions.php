@@ -681,3 +681,36 @@ function ct_tracks_full_width_images_featured_image($featured_image, $image, $ha
 	return $featured_image;
 }
 add_filter( 'ct_tracks_featured_image', 'ct_tracks_full_width_images_featured_image', 10, 3 );
+
+
+// show notice telling users about avatar change coming in v1.50
+function ct_tracks_delete_settings_notice() {
+
+	// if not dismissed previously, show message
+	if ( get_option( 'ct_tracks_dismiss_avatar_notice' ) != true ) {
+
+		// set link with full explanation
+		// linking to my site and redirecting as a precaution to maintain control
+		$url = 'https://www.competethemes.com/tracks-avatar-redirect/';
+		?>
+		<div id="tracks-avatar-notice" class="update-nag notice is-dismissible">
+			<p><?php printf( __( 'Custom avatars are being removed from Tracks in v1.38. Please <a target="_blank" href="%s">follow these instructions</a> before the next update', 'tracks' ), esc_url($url) ); ?>.</p>
+		</div>
+	<?php
+	}
+}
+add_action( 'admin_notices', 'ct_tracks_delete_settings_notice' );
+
+// remove the notice permanently if user clicks the "x" button
+function ct_tracks_dismiss_avatar_notice() {
+
+	// get the dismissed value
+	$dismissed = $_POST['dismissed'];
+
+	// if set to true, update option
+	if( $dismissed == true ) {
+		update_option('ct_tracks_dismiss_avatar_notice', true);
+	}
+	die();
+}
+add_action( 'wp_ajax_dismiss_tracks_avatar_notice', 'ct_tracks_dismiss_avatar_notice' );
