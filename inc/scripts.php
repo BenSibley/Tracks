@@ -6,35 +6,32 @@ function ct_tracks_load_javascript_files() {
 	// register Google Fonts
 	wp_register_style( 'ct-tracks-google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700');
 
-	// if front-end
-	if (! is_admin() ) {
+	// enqueue main JS file
+	wp_enqueue_script('ct-tracks-production', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'),'', true);
 
-		// enqueue main JS file
-		wp_enqueue_script('ct-tracks-production', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'),'', true);
+	// enqueue Google Fonts
+	wp_enqueue_style('ct-tracks-google-fonts');
 
-		// enqueue Google Fonts
-		wp_enqueue_style('ct-tracks-google-fonts');
+	// enqueue Font Awesome
+	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
 
-		// enqueue Font Awesome
-		wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
+	// enqueue the stylesheet
+	wp_enqueue_style('style', get_stylesheet_uri() );
 
-		// enqueue the stylesheet
-		wp_enqueue_style('style', get_stylesheet_uri() );
-
-		// enqueue any required layout-specific stylesheets
-		if(get_theme_mod('premium_layouts_setting') == 'full-width'){
-			wp_enqueue_style('ct-tracks-full-width', get_template_directory_uri() . '/licenses/css/full-width.min.css');
-		}
-		elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
-			wp_enqueue_style('ct-tracks-full-width-images', get_template_directory_uri() . '/licenses/css/full-width-images.min.css');
-		}
-		elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
-			wp_enqueue_style('ct-tracks-two-column', get_template_directory_uri() . '/licenses/css/two-column.min.css');
-		}
-		elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
-			wp_enqueue_style('ct-tracks-two-column-images', get_template_directory_uri() . '/licenses/css/two-column-images.min.css');
-		}
+	// enqueue any required layout-specific stylesheets
+	if(get_theme_mod('premium_layouts_setting') == 'full-width'){
+		wp_enqueue_style('ct-tracks-full-width', get_template_directory_uri() . '/licenses/css/full-width.min.css');
 	}
+	elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
+		wp_enqueue_style('ct-tracks-full-width-images', get_template_directory_uri() . '/licenses/css/full-width-images.min.css');
+	}
+	elseif(get_theme_mod('premium_layouts_setting') == 'two-column'){
+		wp_enqueue_style('ct-tracks-two-column', get_template_directory_uri() . '/licenses/css/two-column.min.css');
+	}
+	elseif(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
+		wp_enqueue_style('ct-tracks-two-column-images', get_template_directory_uri() . '/licenses/css/two-column-images.min.css');
+	}
+
 	// enqueue the comment-reply script on posts & pages if comments open (included in WP by default)
 	if( is_singular() && comments_open() && get_option('thread_comments') ) {
 		wp_enqueue_script( 'comment-reply' );
