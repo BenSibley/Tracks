@@ -103,7 +103,7 @@ if( ! function_exists( 'ct_tracks_customize_comments' ) ) {
                 ?>
                 <div>
                     <div class="author-name"><?php comment_author_link(); ?></div>
-                    <div class="comment-date"><?php comment_date( 'n/j/Y' ); ?></div>
+                    <div class="comment-date"><?php comment_date(); ?></div>
                     <?php comment_reply_link( array_merge( $args, array(
                         'reply_text' => __( 'Reply', 'tracks' ),
                         'depth'      => $depth,
