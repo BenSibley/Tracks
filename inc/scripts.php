@@ -90,9 +90,6 @@ add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
 // enqueues customizer scripts
 function ct_tracks_enqueue_customizer_styles(){
 
-	// script for Comments select dropdown functionality
-	wp_enqueue_script('multiple-select', get_template_directory_uri() . '/js/build/multiple-select.min.js',array('jquery'),'',true);
-
 	// stylesheet for Comment display option
 	wp_enqueue_style('multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.css');
 
