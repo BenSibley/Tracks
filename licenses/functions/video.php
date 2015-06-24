@@ -295,10 +295,10 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 	global $post;
 
 	// get featured video
-	$featured_video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
+	if( ! empty( $post ) ) $featured_video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
 
 	// only run filter if there is a featured video
-	if( $featured_video ) {
+	if( ! empty( $featured_video ) ) {
 
 		// only run filter on the featured video
 		if( $url == $featured_video ) {
