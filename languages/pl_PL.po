@@ -1,0 +1,1430 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracks v1.33.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-06-10 19:43:17+0000\n"
+"Last-Translator: ciastkowylab <paulina.h123@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: comments.php:11
+#: comments.php:30
+#: comments.php:51
+#@ tracks
+msgid "Be First to Comment"
+msgstr "Bądź pierwszą osobą, która zostawi swój komentarz"
+
+#: comments.php:11
+#: comments.php:30
+#: comments.php:51
+#@ tracks
+msgid "One Comment"
+msgstr "Jeden komentarz"
+
+#: comments.php:11
+#: comments.php:30
+#: comments.php:51
+#@ tracks
+msgid "% Comments"
+msgstr "Komentarze: %"
+
+#: comments.php:43
+#, php-format
+#@ tracks
+msgid "Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post\">trackbacks</a> and pingbacks are open."
+msgstr "Komentarze nie są dowolone, jednak trackbacki i pingbacki są dozwolone we wpisie: <a href=\"%s\" title=\"Trackback URL for this post\"></a>"
+
+#: comments.php:64
+#: comments.php:71
+#@ tracks
+msgid "Comments are closed."
+msgstr "Brak możliwości komentowania."
+
+#: content/category-links.php:14
+#@ tracks
+msgid "Categories"
+msgstr "Kategorie"
+
+#: content/category-links.php:16
+#: inc/deprecated.php:17
+#, php-format
+#@ tracks
+msgid "View all posts in %s"
+msgstr "Wyświetl wszystkie wpisy w %s"
+
+#: content/further-reading.php:12
+#@ tracks
+msgid "The Previous Post"
+msgstr "Poprzedni wpis"
+
+#: content/further-reading.php:17
+#@ tracks
+msgid "The Next Post"
+msgstr "Następny wpis"
+
+#: content/further-reading.php:24
+#@ tracks
+msgid "Previous Post"
+msgstr "Poprzedni wpis"
+
+#: content/further-reading.php:29
+#@ tracks
+msgid "This is the oldest post"
+msgstr "To jest najstarszy wpis"
+
+#: content/further-reading.php:30
+#: content/further-reading.php:42
+#@ tracks
+msgid "Return to Blog"
+msgstr "Powróć do bloga"
+
+#: content/further-reading.php:36
+#@ tracks
+msgid "Next Post"
+msgstr "Następny wpis"
+
+#: content/further-reading.php:41
+#@ tracks
+msgid "This is the newest post"
+msgstr "To jest najnowszy wpis"
+
+#: content/tag-links.php:9
+#@ tracks
+msgid "Tags"
+msgstr "Etykiety"
+
+#: content/tag-links.php:11
+#: inc/deprecated.php:36
+#, php-format
+#@ tracks
+msgid "View all posts tagged %s"
+msgstr "Wyświetl wszystkie posty z etykietą: %s"
+
+#: content-404.php:3
+#@ tracks
+msgid "404: Page Not Found"
+msgstr "404: strona nie została znaleziona"
+
+#: content-404.php:9
+#@ tracks
+msgid "Looks like nothing was found on this url.  Double-check that the url is correct or try the search form below to find what you were looking for."
+msgstr "Wygląda na to, że nic nie zostało znalezione pod podanym adresem url. Sprawdź poprawność adresu url lub użyj poniższej wyszukiwarki aby znaleźć interesującą Cię treść."
+
+#: content-attachment.php:20
+#@ tracks
+msgid "Previous Image"
+msgstr "Poprzednie zdjęcie"
+
+#: content-attachment.php:23
+#@ tracks
+msgid "Next Image"
+msgstr "Następne zdjęcie"
+
+#: content-page.php:20
+#: content.php:37
+#@ tracks
+msgid "Pages:"
+msgstr "Strony:"
+
+#: content.php:59
+#@ tracks
+msgid "Written by:"
+msgstr "Opublikowane przez:"
+
+#: footer.php:34
+#, php-format
+#@ tracks
+msgid "<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete Themes."
+msgstr ""
+
+#: functions.php:23
+#@ tracks
+msgid "Primary"
+msgstr "Pierwszy"
+
+#: functions.php:24
+#@ tracks
+msgid "Secondary"
+msgstr "Drugi"
+
+#: functions.php:25
+#: functions.php:78
+#: inc/customizer.php:124
+#: inc/customizer.php:182
+#: inc/customizer.php:762
+#: inc/customizer.php:786
+#@ tracks
+msgid "Footer"
+msgstr "Stopka"
+
+#: functions.php:64
+#@ tracks
+msgid "After Post Content"
+msgstr "Po treści wpisu"
+
+#: functions.php:66
+#@ tracks
+msgid "Widgets in this area will be shown after post content before the prev/next post links"
+msgstr "Widgety w tym miejscu zostaną wyświetlone po treści wpisu, a przed odnośnikami do poprzedniego/następnego wpisu"
+
+#: functions.php:71
+#@ tracks
+msgid "After Page Content"
+msgstr "Po treści strony"
+
+#: functions.php:73
+#@ tracks
+msgid "Widgets in this area will be shown after page content"
+msgstr "Widgety w tym miejscu zostaną wyświetlone po treści strony"
+
+#: functions.php:80
+#@ tracks
+msgid "Widgets in this area will be shown in the footer"
+msgstr "Widgety zostaną wyświetlone w stopce"
+
+#: functions.php:107
+#@ tracks
+msgid "Reply"
+msgstr "Odpowiedz"
+
+#: functions.php:113
+#@ tracks
+msgid "Your comment is awaiting moderation."
+msgstr "Twój komentarz czeka na zatwierdzenie."
+
+#: functions.php:143
+#: functions.php:144
+#@ tracks
+msgid "Your Name"
+msgstr "Twoje imię"
+
+#: functions.php:150
+#: functions.php:151
+#@ tracks
+msgid "Your Email"
+msgstr "Twój adres email"
+
+#: functions.php:157
+#@ tracks
+msgid "Your Website URL"
+msgstr "Twoja strona url"
+
+#: functions.php:158
+#@ tracks
+msgid "Your URL"
+msgstr "Twój adres url"
+
+#: functions.php:170
+#@ tracks
+msgid "Your Comment"
+msgstr "Twój komentarz"
+
+#: functions.php:171
+#@ tracks
+msgid "Enter Your Comment"
+msgstr "Wpisz swój komentarz"
+
+#: functions.php:213
+#@ tracks
+msgid "Read More"
+msgstr "Czytaj więcej"
+
+#: functions.php:224
+#@ tracks
+msgid "Read the Post"
+msgstr "Czytaj wpis"
+
+#: header.php:15
+#@ tracks
+msgid "Skip to content"
+msgstr "Przejdź do zawartości"
+
+#: inc/customizer.php:103
+#@ tracks
+msgid "Tagline Display"
+msgstr "Wyświetlenie wiersza etykiet"
+
+#: inc/customizer.php:117
+#@ tracks
+msgid "Where should the tagline display?"
+msgstr "Gdzie powinien zostać wyświetlony wiersz etykiet?"
+
+#: inc/customizer.php:122
+#: inc/customizer.php:180
+#: inc/customizer.php:760
+#: inc/customizer.php:784
+#@ tracks
+msgid "Header & Footer"
+msgstr "Nagłówek i stopka"
+
+#: inc/customizer.php:123
+#: inc/customizer.php:181
+#: inc/customizer.php:761
+#: inc/customizer.php:785
+#@ tracks
+msgid "Header"
+msgstr "Nagłówek"
+
+#: inc/customizer.php:132
+#@ tracks
+msgid "Logo Upload"
+msgstr "Prześlij logo"
+
+#: inc/customizer.php:146
+#@ tracks
+msgid "Upload custom logo."
+msgstr "Prześlij własne logo"
+
+#: inc/customizer.php:162
+#@ tracks
+msgid "Social Media Icons"
+msgstr "Ikony mediów społecznościowych"
+
+#: inc/customizer.php:175
+#@ tracks
+msgid "Where should the icons display?"
+msgstr "Gdzie powinny się wyświetlać ikony?"
+
+#: inc/customizer.php:183
+#: inc/customizer.php:787
+#@ tracks
+msgid "Do not display"
+msgstr "Nie pokazuj"
+
+#: inc/customizer.php:233
+#@ tracks
+msgid "Search Bar"
+msgstr "Pasek wyszukiwania"
+
+#: inc/customizer.php:247
+#@ tracks
+msgid "Show search bar at top of site?"
+msgstr "Pokaż pasek wyszukiwania na górze strony?"
+
+#: inc/customizer.php:251
+#: inc/customizer.php:278
+#: inc/customizer.php:296
+#: inc/customizer.php:314
+#: inc/customizer.php:538
+#: inc/customizer.php:557
+#: inc/customizer.php:576
+#: inc/customizer.php:803
+#@ tracks
+msgid "Show"
+msgstr "Pokaż"
+
+#: inc/customizer.php:252
+#: inc/customizer.php:279
+#: inc/customizer.php:297
+#: inc/customizer.php:315
+#: inc/customizer.php:539
+#: inc/customizer.php:558
+#: inc/customizer.php:577
+#: inc/customizer.php:804
+#@ tracks
+msgid "Hide"
+msgstr "Ukryj"
+
+#: inc/customizer.php:260
+#@ tracks
+msgid "Post Meta"
+msgstr ""
+
+#: inc/customizer.php:274
+#@ tracks
+msgid "Display date above post title?"
+msgstr "Wyświetl datę nad tytułem wpisu?"
+
+#: inc/customizer.php:292
+#@ tracks
+msgid "Display author name above post title?"
+msgstr "Wyświetl imię/nick autora nad tytułem wpisu?"
+
+#: inc/customizer.php:310
+#@ tracks
+msgid "Display category above post title?"
+msgstr "Wyświetl kategorię nad tytułem wpisu?"
+
+#: inc/customizer.php:323
+#@ tracks
+msgid "Comments"
+msgstr "Komentarze"
+
+#: inc/customizer.php:337
+#@ tracks
+msgid "Show comments on:"
+msgstr "Wyświetl komentarze:"
+
+#: inc/customizer.php:342
+#: inc/customizer.php:837
+#@ tracks
+msgid "Posts"
+msgstr "Wpisy"
+
+#: inc/customizer.php:343
+#: inc/customizer.php:838
+#@ tracks
+msgid "Pages"
+msgstr "Strony"
+
+#: inc/customizer.php:344
+#: inc/customizer.php:839
+#@ tracks
+msgid "Attachments"
+msgstr "Załączniki"
+
+#: inc/customizer.php:345
+#: inc/customizer.php:840
+#@ tracks
+msgid "Do not show"
+msgstr "Nie pokazuj"
+
+#: inc/customizer.php:354
+#@ tracks
+msgid "Footer Text"
+msgstr "Tekst stopki"
+
+#: inc/customizer.php:367
+#@ tracks
+msgid "Edit the text in your footer"
+msgstr "Edytuj tekst w stopce"
+
+#: inc/customizer.php:377
+#@ tracks
+msgid "Custom CSS"
+msgstr "Własny styl CSS"
+
+#: inc/customizer.php:390
+#@ tracks
+msgid "Add Custom CSS Here:"
+msgstr "Dodaj własny styl CSS tutaj:"
+
+#: inc/customizer.php:423
+#: theme-options.php:52
+#@ tracks
+msgid "Premium Layouts"
+msgstr "Układ graficzny premium"
+
+#: inc/customizer.php:437
+#@ tracks
+msgid "Choose the layout for Tracks"
+msgstr "Wybierz układ graficzny dla motywu Tracks"
+
+#: inc/customizer.php:452
+#@ tracks
+msgid "Image size on Blog"
+msgstr "Rozmiar obrazów na blogu"
+
+#: inc/customizer.php:456
+#: inc/customizer.php:474
+#: inc/customizer.php:891
+#@ tracks
+msgctxt "size of the featured image"
+msgid "size based on image size"
+msgstr "rozmiar na podstawie rozmiaru obrazu"
+
+#: inc/customizer.php:457
+#: inc/customizer.php:475
+#: inc/customizer.php:892
+#@ tracks
+msgctxt "size of the featured image"
+msgid "2:1 width/height ratio like posts"
+msgstr "stosunek wysokości do szerokości postów 2:1"
+
+#: inc/customizer.php:470
+#@ tracks
+msgid "Image size on Posts"
+msgstr "Rozmiar obrazów we wpisach"
+
+#: inc/customizer.php:488
+#@ tracks
+msgid "Style"
+msgstr "Styl"
+
+#: inc/customizer.php:492
+#: inc/customizer.php:903
+#: licenses/templates/bold/customizer.php:283
+#@ tracks
+msgid "Overlay"
+msgstr "Pokrycie"
+
+#: inc/customizer.php:493
+#: inc/customizer.php:904
+#@ tracks
+msgid "Title below"
+msgstr "Tytuł poniżej"
+
+#: inc/customizer.php:506
+#@ tracks
+msgid "Show full posts on Blog/Archives?"
+msgstr "Pokaż pełne posty w archiwum bloga?"
+
+#: inc/customizer.php:510
+#: inc/customizer.php:612
+#: inc/customizer.php:694
+#: inc/customizer.php:821
+#@ tracks
+msgid "Yes"
+msgstr "Tak"
+
+#: inc/customizer.php:511
+#: inc/customizer.php:613
+#: inc/customizer.php:695
+#: inc/customizer.php:822
+#@ tracks
+msgid "No"
+msgstr "Nie"
+
+#: inc/customizer.php:519
+#@ tracks
+msgid "Additional Options"
+msgstr "Dodatkowe opcje"
+
+#: inc/customizer.php:533
+#@ tracks
+msgid "Show scroll-to-top arrow?"
+msgstr "Pokaż strzałkę przenoszącą na początek strony?"
+
+#: inc/customizer.php:552
+#@ tracks
+msgid "Show author info box after posts?"
+msgstr "Pokaż informację o autorze po treści wpisu?"
+
+#: inc/customizer.php:571
+#@ tracks
+msgid "Show prev/next links after posts?"
+msgstr "Pokaż linki do poprzedniego i następnego wpisu po treści wpisu?"
+
+#: inc/customizer.php:590
+#@ tracks
+msgid "Zoom-in blog images on hover?"
+msgstr "Powiększanie zdjęć podczas najechania na nie myszą?"
+
+#: inc/customizer.php:594
+#@ tracks
+msgid "Zoom in"
+msgstr "Powiększ"
+
+#: inc/customizer.php:595
+#@ tracks
+msgid "Do not zoom in"
+msgstr "Nie powiększaj"
+
+#: inc/customizer.php:608
+#@ tracks
+msgid "Lazy load images?"
+msgstr "Lazy load images? Funkcja polega na tym, że w danym momencie ładują się jedynie obrazy widoczne na ekranie. Inne, znajdujące się poniżej będą się ładować w miarę przeglądania strony. Włączenie funkcji przyspiesza ładowanie się strony."
+
+#: inc/customizer.php:626
+#@ tracks
+msgid "Word count in automatic excerpts"
+msgstr "Liczba słów w automatycznym streszczeniu"
+
+#: inc/customizer.php:644
+#: licenses/templates/bold/customizer.php:312
+#: licenses/templates/bold/meta-boxes.php:52
+#@ tracks
+msgid "Background Image"
+msgstr "Obraz w tle"
+
+#: inc/customizer.php:645
+#@ tracks
+msgid "Use the Header Color section above if your new background image makes the menu hard to read."
+msgstr "Użyj sekcji Kolor nagłówka jeśli nowy obraz tła utrudnia odczytanie menu."
+
+#: inc/customizer.php:658
+#@ tracks
+msgid "Background image"
+msgstr "Obraz tła"
+
+#: inc/customizer.php:675
+#@ tracks
+msgid "Background Texture"
+msgstr "Tekstura tła"
+
+#: inc/customizer.php:676
+#@ tracks
+msgid "Use the Header Color section above if your new texture makes the menu hard to read."
+msgstr "Użyj sekcji Kolor nagłówka jeśli nowa tekstura tła utrudnia odczytanie menu."
+
+#: inc/customizer.php:690
+#@ tracks
+msgid "Enable background texture?"
+msgstr "Pozwól na zmianę tekstury tła?"
+
+#: inc/customizer.php:710
+#@ tracks
+msgid "Choose a Texture"
+msgstr "Wybierz teksturę"
+
+#: inc/customizer.php:729
+#@ tracks
+msgid "Header Color"
+msgstr "Kolor nagłówka"
+
+#: inc/customizer.php:730
+#@ tracks
+msgid "Change to dark if your new background makes the menu hard to read."
+msgstr "Zmień na czarny jeśli nowe tło utrudnia odczytanie menu."
+
+#: inc/customizer.php:744
+#@ tracks
+msgid "Light or dark header color?"
+msgstr "Jasny, czy ciemny kolor nagłówka?"
+
+#: inc/customizer.php:748
+#: inc/customizer.php:931
+#@ tracks
+#@ light
+msgid "Light"
+msgstr "Jasny"
+
+#: inc/customizer.php:749
+#: inc/customizer.php:932
+#@ tracks
+#@ dark
+msgid "Dark"
+msgstr "Ciemny"
+
+#: inc/customizer.php:858
+#@ tracks
+msgid "Zoom"
+msgstr "Przybliż"
+
+#: inc/customizer.php:859
+#@ tracks
+msgid "Do not Zoom"
+msgstr "Nie przybliżaj"
+
+#: inc/user-profile.php:16
+#@ tracks
+msgid "Profile image"
+msgstr "Obraz profilowy"
+
+#: inc/user-profile.php:23
+#: licenses/templates/bold/meta-boxes.php:266
+#@ tracks
+msgid "Upload Image"
+msgstr "Wrzuć obraz"
+
+#: inc/user-profile.php:24
+#@ tracks
+msgid "Upload an image here to use instead of your Gravatar. Perfectly square images will not be cropped."
+msgstr "Prześlij obraz tutaj, aby użyć zamiast swojego Gravataru. Idealnie kwadratowe zdjęcia nie zostaną przycięte."
+
+#: inc/user-profile.php:99
+#@ tracks
+msgid "Social Profiles"
+msgstr "Profile społecznościowe"
+
+#: inc/user-profile.php:107
+#@ tracks
+msgid "Address:"
+msgstr "Adres:"
+
+#: inc/user-profile.php:109
+#@ tracks
+msgid "Profile:"
+msgstr "Profil:"
+
+#: content/archive-header.php:6
+#: index.php:11
+#@ tracks
+msgid "Category:"
+msgstr "Kategoria:"
+
+#: content/archive-header.php:13
+#: index.php:18
+#@ tracks
+msgid "Tag:"
+msgstr "Etykieta:"
+
+#: content/archive-header.php:20
+#: index.php:25
+#@ tracks
+msgid "These Posts are by:"
+msgstr "Te wpisy zostały opublikowane przez:"
+
+#: library/admin/meta-box-post-template.php:48
+#@ hybrid-core
+msgid "Template"
+msgstr ""
+
+#. Translators: %s is the theme name.
+#: library/admin/theme-settings.php:134
+#: library/admin/theme-settings.php:199
+#, php-format
+#@ hybrid-core
+msgid "%s Theme Settings"
+msgstr ""
+
+#: library/admin/theme-settings.php:135
+#@ hybrid-core
+msgid "Theme Settings"
+msgstr ""
+
+#: library/classes/customize-control-background-image.php:49
+#@ hybrid-core
+msgctxt "theme customizer tab"
+msgid "Default"
+msgstr ""
+
+#. Translators: Media dimensions - 1 is width and 2 is height.
+#. Translators: Media dimensions - 1 is width and 2 is height.
+#: library/classes/hybrid-media-meta.php:154
+#: library/classes/hybrid-media-meta.php:284
+#: library/functions/template-media.php:102
+#, php-format
+#@ hybrid-core
+msgid "%1$s &#215; %2$s"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:155
+#: library/classes/hybrid-media-meta.php:284
+#@ hybrid-core
+msgid "Dimensions"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:161
+#@ hybrid-core
+msgid "Date"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:165
+#@ hybrid-core
+msgid "Camera"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:169
+#@ hybrid-core
+msgid "Aperture"
+msgstr ""
+
+#. Translators: Camera focal length.
+#: library/classes/hybrid-media-meta.php:174
+#, php-format
+#@ hybrid-core
+msgid "%s mm"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:174
+#@ hybrid-core
+msgid "Focal Length"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:180
+#@ hybrid-core
+msgid "International Organization for Standardization"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:180
+#@ hybrid-core
+msgid "ISO"
+msgstr ""
+
+#. Translators: Camera shutter speed. "sec" is an abbreviation for "seconds".
+#: library/classes/hybrid-media-meta.php:201
+#, php-format
+#@ hybrid-core
+msgid "%s sec"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:201
+#@ hybrid-core
+msgid "Shutter Speed"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:250
+#: library/classes/hybrid-media-meta.php:287
+#@ hybrid-core
+msgid "File Name"
+msgstr ""
+
+#: library/classes/hybrid-media-meta.php:258
+#: library/classes/hybrid-media-meta.php:295
+#@ hybrid-core
+msgid "File Type"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:178
+#@ breadcrumb-trail
+msgid "Browse:"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:179
+#@ breadcrumb-trail
+msgid "Home"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:180
+#: library/functions/template-general.php:513
+#@ breadcrumb-trail
+#@ hybrid-core
+msgid "404 Not Found"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:181
+#: library/functions/template-general.php:339
+#@ breadcrumb-trail
+#@ hybrid-core
+msgid "Archives"
+msgstr ""
+
+#. Translators: %s is the search query. The HTML entities are opening and closing curly quotes.
+#. Translators: %s is the search query. The HTML entities are opening and closing curly quotes.
+#: library/extensions/breadcrumb-trail.php:183
+#: library/functions/template-general.php:494
+#, php-format
+#@ breadcrumb-trail
+#@ hybrid-core
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#. Translators: %s is the page number.
+#: library/extensions/breadcrumb-trail.php:185
+#, php-format
+#@ breadcrumb-trail
+msgid "Page %s"
+msgstr ""
+
+#. Translators: Minute archive title. %s is the minute time format.
+#. Translators: Minute archive title. %s is the minute time format.
+#: library/extensions/breadcrumb-trail.php:187
+#: library/functions/template-general.php:455
+#, php-format
+#@ breadcrumb-trail
+#@ hybrid-core
+msgid "Minute %s"
+msgstr ""
+
+#. Translators: Weekly archive title. %s is the week date format.
+#: library/extensions/breadcrumb-trail.php:189
+#, php-format
+#@ breadcrumb-trail
+msgid "Week %s"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:716
+#: library/functions/template-general.php:474
+#@ breadcrumb-trail
+#@ hybrid-core
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:733
+#: library/functions/template-general.php:455
+#@ breadcrumb-trail
+#@ hybrid-core
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:750
+#: library/functions/template-general.php:435
+#@ breadcrumb-trail
+#@ hybrid-core
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:766
+#: library/extensions/breadcrumb-trail.php:795
+#: library/extensions/breadcrumb-trail.php:822
+#: library/extensions/breadcrumb-trail.php:849
+#: library/extensions/breadcrumb-trail.php:1036
+#: library/functions/template-general.php:377
+#: library/functions/template-general.php:397
+#@ breadcrumb-trail
+#@ hybrid-core
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:767
+#: library/extensions/breadcrumb-trail.php:823
+#: library/extensions/breadcrumb-trail.php:1040
+#@ breadcrumb-trail
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:768
+#: library/extensions/breadcrumb-trail.php:1044
+#@ breadcrumb-trail
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:796
+#: library/functions/template-general.php:397
+#@ breadcrumb-trail
+#@ hybrid-core
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:1135
+#: library/extensions/breadcrumb-trail.php:1171
+#: library/extensions/breadcrumb-trail.php:1188
+#: library/extensions/breadcrumb-trail.php:1219
+#@ breadcrumb-trail
+msgid "Edit"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:1163
+#@ breadcrumb-trail
+msgid "Split"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:1167
+#@ breadcrumb-trail
+msgid "Merge"
+msgstr ""
+
+#: library/extensions/post-stylesheets.php:286
+#@ post-stylesheets
+msgid "Stylesheet"
+msgstr ""
+
+#: library/extensions/random-custom-background.php:209
+#@ tracks
+msgctxt ""
+msgid "position_x"
+msgstr "pozycja x"
+
+#. Translators: Default theme layout option.
+#: library/extensions/theme-layouts.php:363
+#@ theme-layouts
+msgctxt "theme layout"
+msgid "Default"
+msgstr ""
+
+#: library/extensions/theme-layouts.php:458
+#: library/extensions/theme-layouts.php:565
+#: library/extensions/theme-layouts.php:650
+#@ theme-layouts
+msgid "Layout"
+msgstr ""
+
+#: library/extensions/theme-layouts.php:683
+#@ theme-layouts
+msgid "Global Layout"
+msgstr ""
+
+#. Translators: The %s is the sidebar name. This is used for the 'aria-label' attribute.
+#: library/functions/attr.php:195
+#, php-format
+#@ hybrid-core
+msgctxt "sidebar aria label"
+msgid "%s Sidebar"
+msgstr ""
+
+#. Translators: The %s is the menu name. This is used for the 'aria-label' attribute.
+#: library/functions/attr.php:223
+#, php-format
+#@ hybrid-core
+msgctxt "nav menu aria label"
+msgid "%s Menu"
+msgstr ""
+
+#. Translators: Post date/time "title" attribute.
+#: library/functions/attr.php:440
+#@ hybrid-core
+msgctxt "post time format"
+msgid "l, F j, Y, g:i a"
+msgstr ""
+
+#. Translators: Comment date/time "title" attribute.
+#: library/functions/attr.php:565
+#@ hybrid-core
+msgctxt "comment time format"
+msgid "l, F j, Y, g:i a"
+msgstr ""
+
+#. Translators: 1 is the page title. 2 is the page number.
+#: library/functions/head.php:149
+#, php-format
+#@ hybrid-core
+msgid "%1$s Page %2$s"
+msgstr ""
+
+#: library/functions/media.php:32
+#@ hybrid-core
+msgid "Post Thumbnail"
+msgstr ""
+
+#: library/functions/media.php:53
+#@ hybrid-core
+msgid "File Size"
+msgstr ""
+
+#: library/functions/media.php:54
+#@ hybrid-core
+msgid "Mime Type"
+msgstr ""
+
+#: library/functions/media.php:55
+#@ hybrid-core
+msgid "Run Time"
+msgstr ""
+
+#: library/functions/media.php:60
+#@ hybrid-core
+msgid "Genre"
+msgstr ""
+
+#: library/functions/media.php:61
+#@ hybrid-core
+msgid "Year"
+msgstr ""
+
+#: library/functions/media.php:62
+#@ hybrid-core
+msgid "Composer"
+msgstr ""
+
+#: library/functions/media.php:63
+#@ hybrid-core
+msgid "Track"
+msgstr ""
+
+#: library/functions/media.php:66
+#@ hybrid-core
+msgid "Lyrics"
+msgstr ""
+
+#: library/functions/template-general.php:55
+#@ hybrid-core
+msgid "State-of-the-art semantic personal publishing platform"
+msgstr ""
+
+#: library/functions/template-general.php:55
+#@ hybrid-core
+msgid "WordPress"
+msgstr ""
+
+#. Translators: Theme name.
+#: library/functions/template-general.php:82
+#: library/functions/template-general.php:115
+#, php-format
+#@ hybrid-core
+msgid "%s WordPress Theme"
+msgstr ""
+
+#: library/functions/template-general.php:305
+#, php-format
+#@ hybrid-core
+msgid "You are browsing the search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: library/functions/template-general.php:311
+#@ hybrid-core
+msgid "You are browsing the site archives by time."
+msgstr ""
+
+#: library/functions/template-general.php:314
+#: library/functions/template-general.php:317
+#: library/functions/template-general.php:320
+#, php-format
+#@ hybrid-core
+msgid "You are browsing the site archives for %s."
+msgstr ""
+
+#: library/functions/template-general.php:323
+#@ hybrid-core
+msgid "You are browsing the site archives."
+msgstr ""
+
+#. Translators: 1 is the week number and 2 is the year.
+#: library/functions/template-general.php:397
+#, php-format
+#@ hybrid-core
+msgid "Week %1$s of %2$s"
+msgstr ""
+
+#: library/functions/template-general.php:416
+#@ hybrid-core
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#. Translators: Separates tags, categories, etc. when displaying a post.
+#: library/functions/template-post.php:144
+#@ hybrid-core
+msgctxt "taxonomy terms separator"
+msgid ", "
+msgstr ""
+
+#. Translators: Used as a placeholder for untitled posts on non-singular views.
+#: library/functions/utility.php:88
+#@ hybrid-core
+msgid "(Untitled)"
+msgstr ""
+
+#: licenses/functions/video.php:18
+#@ tracks
+msgid "Featured Video"
+msgstr "Wideo"
+
+#: licenses/functions/video.php:53
+#@ tracks
+msgid "Video Preview"
+msgstr "Podgląd wideo"
+
+#: licenses/functions/video.php:67
+#@ tracks
+msgid "Add video URL:"
+msgstr "Dodaj adres URL wideo:"
+
+#: licenses/functions/video.php:77
+#@ tracks
+msgid "Choose where to display the video:"
+msgstr "Wybierz gdzie wyświetlić wideo:"
+
+#: licenses/functions/video.php:80
+#@ tracks
+msgid "Display on Post"
+msgstr "Wyświetl we wpisie"
+
+#: licenses/functions/video.php:84
+#@ tracks
+msgid "Display on Post and Blog"
+msgstr "Wyświetl we wpisie i na blogu"
+
+#: search.php:11
+#, php-format
+#@ tracks
+msgid "%d search results for"
+msgstr "%d wyników wyszukiwania dla zapytania"
+
+#: search.php:13
+#@ tracks
+msgid "No search results for "
+msgstr "Brak wyników wyszukiwania dla:"
+
+#: search.php:38
+#@ tracks
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "Nie możesz znaleźć tego, czego szukasz? Spróbuj jeszcze raz, używając innych słów kluczowych:"
+
+#: searchform.php:6
+#: searchform.php:7
+#@ tracks
+msgid "Search for:"
+msgstr "Wyszukaj:"
+
+#: searchform.php:7
+#@ tracks
+msgid "Search"
+msgstr "Wyszukaj"
+
+#: searchform.php:8
+#@ tracks
+msgid "Go"
+msgstr "Znajdź na blogu"
+
+#: theme-options.php:13
+#@ tracks
+msgid "Tracks Dashboard"
+msgstr "Pulpit motywu Tracks"
+
+#: theme-options.php:18
+#@ tracks
+msgid "Dashboard"
+msgstr "Pulpit"
+
+#: theme-options.php:19
+#@ tracks
+msgid "Licenses"
+msgstr "Licencje"
+
+#: theme-options.php:24
+#@ tracks
+msgid "Customization"
+msgstr "Dostosuj"
+
+#: theme-options.php:25
+#@ tracks
+msgid "Click the \"Customize\" link in your menu, or use the button below to get started customizing Tracks"
+msgstr "Kliknij w link \"Dostosuj\" w swoim menu, lub użyj poniższego przycisku aby rozpocząć dostosowywanie motywu Tracks do swoich wymagań."
+
+#: theme-options.php:27
+#@ tracks
+msgid "Use Customizer"
+msgstr "Dostosuj"
+
+#: theme-options.php:31
+#@ tracks
+msgid "Support"
+msgstr "Wsparcie"
+
+#: theme-options.php:32
+#@ tracks
+msgid "You can find the knowledgebase, changelog, forum, and more in the Tracks Support Center"
+msgstr "W centrum wsparcia motywu Tracks można znaleźć bazę wiedzy, listę zmian oraz forum."
+
+#: theme-options.php:34
+#@ tracks
+msgid "Visit Support Center"
+msgstr "Odwiedź centrum wsparcia"
+
+#: theme-options.php:38
+#@ tracks
+msgid "Premium Upgrades ($9-15)"
+msgstr "Motywy premium ($9-15)"
+
+#: theme-options.php:39
+#@ tracks
+msgid "Make your site more customizable and beautiful with premium upgrades"
+msgstr "Spraw aby Twoja strona była piękniejsza i stwórz sobie więcej możliwości dostosowywania jej do swoich potrzeb poprzez motywy premium"
+
+#: theme-options.php:40
+#@ tracks
+msgid "Visit Upgrades Gallery"
+msgstr "Odwiedź galerię motywów premium"
+
+#: theme-options.php:43
+#@ tracks
+msgid "WordPress Resources"
+msgstr "Zasoby WordPress"
+
+#: theme-options.php:44
+#@ tracks
+msgid "Save time and money searching for WordPress products by following our recommendations"
+msgstr "Oszczędź czas i pieniądze kierując się naszymi sugestiami w poszukiwaniu produktów dla Wordpress"
+
+#: theme-options.php:46
+#@ tracks
+msgid "View Resources"
+msgstr "Przejrzyj zasoby"
+
+#: theme-options.php:59
+#@ tracks
+msgid "Premium Features"
+msgstr "Elementy premium"
+
+#: theme-options.php:113
+#@ tracks
+msgid "Save License"
+msgstr "Zapisz licencję"
+
+#: theme-options.php:116
+#@ tracks
+msgid "Enter your license key"
+msgstr "Wprowadź swój klucz licencyjny"
+
+#: theme-options.php:122
+#: theme-options.php:130
+#@ tracks
+msgid "Activate License"
+msgstr "Aktywuj licencję"
+
+#: theme-options.php:127
+#@ tracks
+msgid "Deactivate License"
+msgstr "Deaktywuj licencję"
+
+#: theme-options.php:145
+#, php-format
+#@ tracks
+msgid "You can now add a background image using the \"Background Image\" section in the <a href=\"%s\">Customizer</a>"
+msgstr "Teraz możesz dodać obraz tła używając sekcji \"Obraz tła\" w menu <a href=\"%s\">Dostosuj</a>"
+
+#: theme-options.php:147
+#, php-format
+#@ tracks
+msgid "If you haven't already, please upload and activate the <a href='%s'>Background Texture plugin</a>"
+msgstr "Jeżeli jeszcze tego nie zrobiłeś, prześlij i aktywuj <a href='%s'>Wtyczkę tekstury tła</a>"
+
+#: theme-options.php:149
+#@ tracks
+msgid "You can now add videos to posts. Use the Featured Videos box under the Post Editor to get started"
+msgstr "Możesz teraz dodać wideo do swoich wpisów. Aby rozpocząć użyj wstawki wideo z edytora postów."
+
+#: theme-options.php:151
+#, php-format
+#@ tracks
+msgid "You can now switch to your new layout in the \"Premium Layouts\" section in the <a href=\"%s\">Customizer</a>"
+msgstr "Teraz możesz zmienić swój układ graficzny w sekcji \"Układy graficzne Premium\" w menu <a href=\"%s\">Dostosuj</a>"
+
+#: licenses/templates/bold/customizer.php:45
+#: licenses/templates/bold/meta-boxes.php:12
+#@ tracks
+msgid "Heading"
+msgstr "Nagłówek"
+
+#: licenses/templates/bold/customizer.php:52
+#: licenses/templates/bold/customizer.php:78
+#: licenses/templates/bold/customizer.php:104
+#: licenses/templates/bold/customizer.php:130
+#: licenses/templates/bold/customizer.php:210
+#@ tracks
+msgid "Color"
+msgstr "Kolor"
+
+#: licenses/templates/bold/customizer.php:60
+#: licenses/templates/bold/customizer.php:86
+#: licenses/templates/bold/customizer.php:112
+#: licenses/templates/bold/customizer.php:138
+#: licenses/templates/bold/customizer.php:218
+#@ tracks
+msgid "Font Size"
+msgstr "Rozmiar czcionki"
+
+#: licenses/templates/bold/customizer.php:71
+#: licenses/templates/bold/meta-boxes.php:20
+#@ tracks
+msgid "Sub-heading"
+msgstr "Podtytuł"
+
+#: licenses/templates/bold/customizer.php:97
+#: licenses/templates/bold/meta-boxes.php:28
+#@ tracks
+msgid "Description"
+msgstr "Opis"
+
+#: licenses/templates/bold/customizer.php:123
+#: licenses/templates/bold/meta-boxes.php:36
+#@ tracks
+msgid "Button 1"
+msgstr "Przycisk 1"
+
+#: licenses/templates/bold/customizer.php:147
+#: licenses/templates/bold/customizer.php:227
+#@ tracks
+msgid "Background Color"
+msgstr "Kolor tła"
+
+#: licenses/templates/bold/customizer.php:155
+#: licenses/templates/bold/customizer.php:235
+#@ tracks
+msgid "Background Opacity"
+msgstr "Przezroczystość tła"
+
+#: licenses/templates/bold/customizer.php:167
+#: licenses/templates/bold/customizer.php:247
+#@ tracks
+msgid "Border Color"
+msgstr "Kolor krawędzi"
+
+#: licenses/templates/bold/customizer.php:175
+#: licenses/templates/bold/customizer.php:255
+#@ tracks
+msgid "Border Width"
+msgstr "Szerokość krawędzi"
+
+#: licenses/templates/bold/customizer.php:183
+#: licenses/templates/bold/customizer.php:263
+#@ tracks
+msgid "Border Style"
+msgstr "Styl krawędzi"
+
+#: licenses/templates/bold/customizer.php:187
+#: licenses/templates/bold/customizer.php:267
+#: licenses/templates/bold/customizer.php:560
+#@ tracks
+msgid "Solid"
+msgstr "Linia ciągła"
+
+#: licenses/templates/bold/customizer.php:188
+#: licenses/templates/bold/customizer.php:268
+#: licenses/templates/bold/customizer.php:561
+#@ tracks
+msgid "Dashed"
+msgstr "Linia przerywana"
+
+#: licenses/templates/bold/customizer.php:189
+#: licenses/templates/bold/customizer.php:269
+#: licenses/templates/bold/customizer.php:562
+#@ tracks
+msgid "Dotted"
+msgstr "Linia kropkowana"
+
+#: licenses/templates/bold/customizer.php:190
+#: licenses/templates/bold/customizer.php:270
+#: licenses/templates/bold/customizer.php:563
+#@ tracks
+msgid "Double"
+msgstr "Podwójna linia"
+
+#: licenses/templates/bold/customizer.php:191
+#: licenses/templates/bold/customizer.php:271
+#: licenses/templates/bold/customizer.php:564
+#@ tracks
+msgid "Groove"
+msgstr "Linia wklęsła"
+
+#: licenses/templates/bold/customizer.php:192
+#: licenses/templates/bold/customizer.php:272
+#: licenses/templates/bold/customizer.php:565
+#@ tracks
+msgid "Ridge"
+msgstr "Linia wypukła"
+
+#: licenses/templates/bold/customizer.php:193
+#: licenses/templates/bold/customizer.php:273
+#: licenses/templates/bold/customizer.php:566
+#@ tracks
+msgid "Inset"
+msgstr "Obramowanie inset"
+
+#: licenses/templates/bold/customizer.php:194
+#: licenses/templates/bold/customizer.php:274
+#: licenses/templates/bold/customizer.php:567
+#@ tracks
+msgid "Outset"
+msgstr "Obramowanie outset"
+
+#: licenses/templates/bold/customizer.php:203
+#: licenses/templates/bold/meta-boxes.php:44
+#@ tracks
+msgid "Button 2"
+msgstr "Przycisk 2"
+
+#: licenses/templates/bold/customizer.php:290
+#@ tracks
+msgid "Overlay Color"
+msgstr "Kolor nakładki"
+
+#: licenses/templates/bold/customizer.php:298
+#@ tracks
+msgid "Overlay Opacity"
+msgstr "Przezroczystość nakładki"
+
+#: licenses/templates/bold/customizer.php:319
+#@ tracks
+msgid "Position"
+msgstr "Pozycja"
+
+#: licenses/templates/bold/customizer.php:323
+#: licenses/templates/bold/customizer.php:581
+#@ tracks
+msgid "Fill screen"
+msgstr "Wypełnij ekran"
+
+#: licenses/templates/bold/customizer.php:324
+#: licenses/templates/bold/customizer.php:582
+#@ tracks
+msgid "Fit to screen"
+msgstr "Dopasuj do ekranu"
+
+#: licenses/templates/bold/customizer.php:325
+#: licenses/templates/bold/customizer.php:583
+#@ tracks
+msgid "Stretch to fill screen"
+msgstr "Przytnij aby dopasować do ekranu"
+
