@@ -5,15 +5,11 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         concat: {
-            dist: {
-                src: [
-                    'js/*.js',
-                    '!js/profile-uploader.js',
-                    '!js/customizer.js',
-                    '!js/multiple-select.js',
-                    '!js/admin.js'
-                ],
-                dest: 'js/build/production.js'
+            basic_and_extras: {
+                files: {
+                    'js/build/production.js': ['js/fitvids.js', 'js/functions.js', 'js/placeholders.js'],
+                    'js/build/customizer.js': ['js/customizer.js', 'js/multiple-select.js']
+                }
             }
         },
         uglify: {
@@ -21,8 +17,7 @@ module.exports = function(grunt) {
                 files: {
                     'js/build/production.min.js': 'js/build/production.js',
                     'js/build/profile-uploader.min.js': 'js/profile-uploader.js',
-                    'js/build/customizer.min.js': 'js/customizer.js',
-                    'js/build/multiple-select.min.js': 'js/multiple-select.js',
+                    'js/build/customizer.min.js': 'js/build/customizer.js',
                     'js/build/admin.min.js': 'js/admin.js'
                 }
             }
