@@ -168,6 +168,8 @@ function ct_tracks_video_save_data( $post_id ) {
 	 * because the save_post action can be triggered at other times.
 	 */
 
+	global $post;
+
 	// Check if our nonce is set.
 	if ( ! isset( $_POST['ct_tracks_video_nonce'] ) ) {
 		return;
@@ -191,28 +193,30 @@ function ct_tracks_video_save_data( $post_id ) {
 	/* OK, it's safe for us to save the data now. */
 
 	// Make sure video URL is set
-	if ( ! isset( $_POST['ct_tracks_video_url'] ) ) {
-		return;
-	}
+	if ( isset( $_POST['ct_tracks_video_url'] ) ) {
 
-	// validate user input.
-	$my_data = esc_url_raw( $_POST['ct_tracks_video_url'] );
+		// validate user input.
+		$video_url = esc_url_raw( $_POST['ct_tracks_video_url'] );
 
-	// Update the meta field in the database.
-	update_post_meta( $post_id, 'ct_tracks_video_key', $my_data );
+		// Update the meta field in the database.
+		update_post_meta( $post_id, 'ct_tracks_video_key', $video_url );
 
-	// Make sure display setting is set
-	if ( isset( $_POST['ct_tracks_video_display'] ) ) {
+		// save display option for posts only
+		if( $post->post_type == 'post' ) {
 
-		// get user input
-		$raw_data = $_POST[ 'ct_tracks_video_display' ];
+			// Make sure display setting is set
+			if ( isset( $_POST['ct_tracks_video_display'] ) ) {
 
-		// validate user input
-		if( $raw_data == 'post' || $raw_data == 'both' ) {
-			$clean_data = $raw_data;
+				// get user input
+				$display_setting = esc_attr( $_POST['ct_tracks_video_display'] );
 
-			// Saves video display option
-			update_post_meta( $post_id, 'ct_tracks_video_display_key', $clean_data );
+				// validate user input
+				if ( $display_setting == 'post' || $display_setting == 'blog' || $display_setting == 'both' ) {
+
+					// Saves video display option
+					update_post_meta( $post_id, 'ct_tracks_video_display_key', $display_setting );
+				}
+			}
 		}
 	}
 
