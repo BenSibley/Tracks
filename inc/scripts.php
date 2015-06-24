@@ -90,9 +90,6 @@ add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
 // enqueues customizer scripts
 function ct_tracks_enqueue_customizer_styles(){
 
-	// stylesheet for Comment display option
-	wp_enqueue_style('multiple-select-styles', get_template_directory_uri() . '/styles/multiple-select.css');
-
 	// JS for customizer
 	wp_enqueue_script('ct-tracks-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
 
