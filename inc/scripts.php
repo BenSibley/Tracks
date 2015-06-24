@@ -86,7 +86,7 @@ function ct_tracks_enqueue_admin_styles($hook){
 	}
 
 	// enqueue admin JS file
-	wp_enqueue_script( 'admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array( 'jquery', 'fitvids' ), '', true );
+	wp_enqueue_script( 'admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array( 'jquery' ), '', true );
 }
 add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
 
