@@ -202,23 +202,21 @@ if( ! function_exists( 'ct_tracks_excerpt' ) ) {
         // make post variable available
         global $post;
 
-        // make 'read more' setting available
-        global $more;
-
         // get the 'show full post' setting
         $setting = get_theme_mod( 'premium_layouts_full_width_full_post' );
 
         // check for the more tag
         $ismore = strpos( $post->post_content, '<!--more-->' );
 
-        // if show full post is on, and full-width layout is on, show full post unless on search page
+	    // if show full post is on and not on a search results page
         if ( ( $setting == 'yes' ) && get_theme_mod( 'premium_layouts_setting' ) == 'full-width' && ! is_search() ) {
 
-            // set read more value for all posts to 'off'
-            $more = - 1;
-
-            // output the full content
-            the_content();
+	        // use the read more link if present
+	        if ( $ismore ) {
+		        the_content( __( 'Read More', 'tracks' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+	        } else {
+		        the_content();
+	        }
         } // use the read more link if present
         elseif ( $ismore ) {
             the_content( __( 'Read More', 'tracks' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span>" );
