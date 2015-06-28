@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.36\n"
+"Project-Id-Version: Tracks 1.37\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-05-15 15:01:12+00:00\n"
+"POT-Creation-Date: 2015-06-28 14:59:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -172,6 +172,10 @@ msgstr ""
 msgid "Reply"
 msgstr ""
 
+#: functions.php:112
+msgid "Edit"
+msgstr ""
+
 #: functions.php:117
 msgid "Your comment is awaiting moderation."
 msgstr ""
@@ -200,12 +204,19 @@ msgstr ""
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:224
+#: functions.php:216 functions.php:222
 msgid "Read More"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:235
 msgid "Read the Post"
+msgstr ""
+
+#: functions.php:700
+msgid ""
+"Custom avatars are being removed from Tracks in v1.38. Please <a "
+"target=\"_blank\" href=\"%s\">follow these instructions</a> before the next "
+"update"
 msgstr ""
 
 #: header.php:15
@@ -326,7 +337,7 @@ msgstr ""
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:423 theme-options.php:52
+#: inc/customizer.php:423 theme-options.php:60
 msgid "Premium Layouts"
 msgstr ""
 
@@ -513,26 +524,30 @@ msgid "Choose where to display the video:"
 msgstr ""
 
 #: licenses/functions/video.php:92
-msgid "Display on Post"
+msgid "Post"
 msgstr ""
 
 #: licenses/functions/video.php:96
-msgid "Display on Post and Blog"
+msgid "Blog"
 msgstr ""
 
-#: licenses/functions/video.php:112
+#: licenses/functions/video.php:100
+msgid "Post & Blog"
+msgstr ""
+
+#: licenses/functions/video.php:116
 msgid "Youtube controls"
 msgstr ""
 
-#: licenses/functions/video.php:115
+#: licenses/functions/video.php:119
 msgid "Hide title"
 msgstr ""
 
-#: licenses/functions/video.php:119
+#: licenses/functions/video.php:123
 msgid "Hide related videos"
 msgstr ""
 
-#: licenses/functions/video.php:123
+#: licenses/functions/video.php:127
 msgid "Hide Youtube logo"
 msgstr ""
 
@@ -562,111 +577,111 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: theme-options.php:13
+#: theme-options.php:21
 msgid "Tracks Dashboard"
 msgstr ""
 
-#: theme-options.php:18
+#: theme-options.php:26
 msgid "Dashboard"
 msgstr ""
 
-#: theme-options.php:19
+#: theme-options.php:27
 msgid "Licenses"
 msgstr ""
 
-#: theme-options.php:24
+#: theme-options.php:32
 msgid "Customization"
 msgstr ""
 
-#: theme-options.php:25
+#: theme-options.php:33
 msgid ""
 "Click the \"Customize\" link in your menu, or use the button below to get "
 "started customizing Tracks"
 msgstr ""
 
-#: theme-options.php:27
+#: theme-options.php:35
 msgid "Use Customizer"
 msgstr ""
 
-#: theme-options.php:31
+#: theme-options.php:39
 msgid "Support"
 msgstr ""
 
-#: theme-options.php:32
+#: theme-options.php:40
 msgid ""
 "You can find the knowledgebase, changelog, forum, and more in the Tracks "
 "Support Center"
 msgstr ""
 
-#: theme-options.php:34
+#: theme-options.php:42
 msgid "Visit Support Center"
 msgstr ""
 
-#: theme-options.php:38
+#: theme-options.php:46
 msgid "Premium Upgrades ($9-15)"
 msgstr ""
 
-#: theme-options.php:39
+#: theme-options.php:47
 msgid "Make your site more customizable and beautiful with premium upgrades"
 msgstr ""
 
-#: theme-options.php:40
+#: theme-options.php:48
 msgid "Visit Upgrades Gallery"
 msgstr ""
 
-#: theme-options.php:43
+#: theme-options.php:51
 msgid "WordPress Resources"
 msgstr ""
 
-#: theme-options.php:44
+#: theme-options.php:52
 msgid ""
 "Save time and money searching for WordPress products by following our "
 "recommendations"
 msgstr ""
 
-#: theme-options.php:46
+#: theme-options.php:54
 msgid "View Resources"
 msgstr ""
 
-#: theme-options.php:59
+#: theme-options.php:67
 msgid "Premium Features"
 msgstr ""
 
-#: theme-options.php:113
+#: theme-options.php:121
 msgid "Save License"
 msgstr ""
 
-#: theme-options.php:116
+#: theme-options.php:124
 msgid "Enter your license key"
 msgstr ""
 
-#: theme-options.php:122 theme-options.php:130
+#: theme-options.php:130 theme-options.php:138
 msgid "Activate License"
 msgstr ""
 
-#: theme-options.php:127
+#: theme-options.php:135
 msgid "Deactivate License"
 msgstr ""
 
-#: theme-options.php:145
+#: theme-options.php:153
 msgid ""
 "You can now add a background image using the \"Background Image\" section "
 "in the <a href=\"%s\">Customizer</a>"
 msgstr ""
 
-#: theme-options.php:147
+#: theme-options.php:155
 msgid ""
 "If you haven't already, please upload and activate the <a "
 "href='%s'>Background Texture plugin</a>"
 msgstr ""
 
-#: theme-options.php:149
+#: theme-options.php:157
 msgid ""
 "You can now add videos to Posts and Pages. Use the Featured Videos box "
 "under the Post Editor to get started"
 msgstr ""
 
-#: theme-options.php:151
+#: theme-options.php:159
 msgid ""
 "You can now switch to your new layout in the \"Premium Layouts\" section in "
 "the <a href=\"%s\">Customizer</a>"
