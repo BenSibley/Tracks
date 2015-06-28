@@ -2,7 +2,7 @@
 
 // already defined in full-width.php
 if( ! defined( 'CT_TRACKS_STORE_URL' ) ) {
-    define( 'CT_TRACKS_STORE_URL', 'http://www.competethemes.com' );
+    define( 'CT_TRACKS_STORE_URL', 'https://www.competethemes.com' );
 }
 
 // The name of your product. This should match the download name in EDD exactly

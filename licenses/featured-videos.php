@@ -2,7 +2,7 @@
 
 // This is the URL our updater / license checker pings. This should be the URL of the site with EDD installed
 if( ! defined( 'CT_TRACKS_STORE_URL' ) ) {
-	define( 'CT_TRACKS_STORE_URL', 'http://www.competethemes.com' );
+	define( 'CT_TRACKS_STORE_URL', 'https://www.competethemes.com' );
 }
 
 // The name of your product. This should match the download name in EDD exactly
