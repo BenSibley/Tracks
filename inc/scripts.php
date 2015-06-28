@@ -63,12 +63,6 @@ function ct_tracks_enqueue_admin_styles($hook){
 
 			// admin stylesheet
 			wp_enqueue_style( 'style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
-
-			// Enqueues all scripts, styles, settings, and templates necessary to use media JavaScript APIs.
-			wp_enqueue_media();
-
-			// enqueue the JS needed to utilize media uploader on profile image upload
-			wp_enqueue_script( 'ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js' );
 		}
 	}
 
