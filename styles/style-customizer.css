@@ -23,6 +23,12 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 #customize-control-ct_tracks_background_texture_setting label:nth-child(3n + 1) {
   margin-right: 0;
 }
+#customize-control-ct_tracks_background_texture_setting label:hover {
+  opacity: 0.8;
+}
+#customize-control-ct_tracks_background_texture_setting label.selected {
+  outline: solid 1px #43b3c4;
+}
 
 .upgrades-ad {
   text-align: center;

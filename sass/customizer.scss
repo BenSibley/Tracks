@@ -16,6 +16,12 @@
     &:nth-child(3n + 1){
       margin-right: 0;
     }
+    &:hover {
+      opacity: 0.8;
+    }
+    &.selected {
+      outline: solid 1px #43B3C4
+    }
   }
 }
 .upgrades-ad {
