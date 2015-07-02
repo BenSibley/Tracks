@@ -76,7 +76,7 @@ jQuery(function($) {
         });
     }
 
-    $('#tracks-avatar-notice').find('.notice-dismiss').bind('click', function(){
+    $('#tracks-avatar-notice').on('click', '.notice-dismiss', function(){
 
         // set up data object
         var data = {
