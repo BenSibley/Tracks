@@ -43,7 +43,7 @@ li.pingback {
     height: $baseline-height * 3;
     border-radius: 50%;
     float: left;
-    margin-right: $baseline-height / 2;
+    margin: 0 $baseline-height / 2 0 0;
   }
   .author-name {
     @extend %uppercase;

@@ -1268,7 +1268,7 @@ li.pingback:first-child {
   height: 4.5em;
   border-radius: 50%;
   float: left;
-  margin-right: 0.75em;
+  margin: 0 0.75em 0 0;
 }
 .comment-author .author-name a {
   text-decoration: none;
