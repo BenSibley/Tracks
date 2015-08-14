@@ -129,7 +129,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
     // section
     $wp_customize->add_section( 'ct-upload', array(
-        'title'      => __( 'Logo Upload', 'tracks' ),
+        'title'      => __( 'Logo', 'tracks' ),
         'priority'   => 30,
         'capability' => 'edit_theme_options'
     ) );
