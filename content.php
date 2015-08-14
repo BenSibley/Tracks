@@ -23,7 +23,7 @@
         if(get_theme_mod('additional_options_author_meta_settings') != 'hide'){ ?>
             <div class="author-meta">
                 <div class="author">
-                    <?php ct_tracks_profile_image_output(); ?>
+                    <?php echo get_avatar( get_the_author_meta( 'ID' ), 72, '', get_the_author() ); ?>
                     <span><?php
                             _e( 'Written by:', 'tracks');
                             the_author_posts_link();
