@@ -99,7 +99,7 @@
       float: left;
       margin: 0 $baseline-height / 2 $baseline-height 0;
       width: $baseline-height * 3;
-      height: auto;
+      height: $baseline-height * 3;
       @include border-radius(50%);
     }
     span {

@@ -40,8 +40,8 @@ li.pingback {
   }
   img {
     width: $baseline-height * 3;
-    height: auto;
-    @include border-radius(50%);
+    height: $baseline-height * 3;
+    border-radius: 50%;
     float: left;
     margin-right: $baseline-height / 2;
   }

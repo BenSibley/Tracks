@@ -1062,7 +1062,7 @@ a img {
   float: left;
   margin: 0 0.75em 1.5em 0;
   width: 4.5em;
-  height: auto;
+  height: 4.5em;
   border-radius: 50%;
 }
 .author-meta .author a {
@@ -1262,7 +1262,7 @@ li.pingback:first-child {
 }
 .comment-author img {
   width: 4.5em;
-  height: auto;
+  height: 4.5em;
   border-radius: 50%;
   float: left;
   margin-right: 0.75em;
