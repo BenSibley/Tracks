@@ -30,6 +30,9 @@
     width: 113%;
     left: -6.5%;
   }
+  iframe {
+    max-width: 100%;
+  }
   &:after {
     @include clearfix;
   }
