@@ -16,7 +16,6 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'js/build/production.min.js': 'js/build/production.js',
-                    'js/build/profile-uploader.min.js': 'js/profile-uploader.js',
                     'js/build/customizer.min.js': 'js/build/customizer.js',
                     'js/build/admin.min.js': 'js/admin.js'
                 }
