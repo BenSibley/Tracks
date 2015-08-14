@@ -61,7 +61,7 @@ jQuery(function($) {
                 });
 
                 // show youtube options if youtube video
-                if( response.includes('youtube.com') ) {
+                if( response.includes('youtube.com') || response.includes('youtu.be') ) {
                     $('.ct_tracks_video_youtube_controls_container.hide').removeClass('hide');
                 }
 

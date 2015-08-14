@@ -108,7 +108,7 @@ function ct_tracks_video_callback( $post ) {
 	$class = 'hide';
 
 	// if it's a youtube video, don't add the class
-	if( strpos($value, 'youtube.com' ) ) {
+	if( strpos($value, 'youtube.com' ) || strpos($value, 'youtu.be' ) ) {
 		$class = '';
 	}
 
@@ -316,7 +316,7 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 		if( $url == $featured_video ) {
 
 			// only add parameters if featured vid is a youtube vid
-			if( strpos($featured_video, 'youtube.com' ) ) {
+			if( strpos($featured_video, 'youtube.com' ) || strpos($featured_video, 'youtu.be' ) ) {
 
 				// get user Youtube parameter settings
 				// flip their value so 1 means, yes HIDE it, NOT yes SHOW it.
