@@ -481,10 +481,44 @@ function ct_tracks_odd_even_post_class( $classes ) {
 add_filter ( 'post_class' , 'ct_tracks_odd_even_post_class' );
 
 // array of social media site names
-function ct_tracks_social_site_list(){
+if ( !function_exists( 'ct_tracks_social_site_list' ) ) {
+    function ct_tracks_social_site_list() {
 
-    $social_sites = array('twitter', 'facebook', 'google-plus', 'flickr', 'pinterest', 'youtube', 'vimeo', 'tumblr', 'dribbble', 'rss', 'linkedin', 'instagram', 'reddit', 'soundcloud', 'spotify', 'vine','yahoo', 'behance', 'codepen', 'delicious', 'stumbleupon', 'deviantart', 'digg', 'git', 'hacker-news', 'steam', 'vk', 'weibo', 'tencent-weibo', 'email' );
-    return $social_sites;
+        $social_sites = array(
+            'twitter',
+            'facebook',
+            'google-plus',
+            'flickr',
+            'pinterest',
+            'youtube',
+            'vimeo',
+            'tumblr',
+            'dribbble',
+            'rss',
+            'linkedin',
+            'instagram',
+            'reddit',
+            'soundcloud',
+            'spotify',
+            'vine',
+            'yahoo',
+            'behance',
+            'codepen',
+            'delicious',
+            'stumbleupon',
+            'deviantart',
+            'digg',
+            'git',
+            'hacker-news',
+            'steam',
+            'vk',
+            'weibo',
+            'tencent-weibo',
+            'email'
+        );
+
+        return $social_sites;
+    }
 }
 
 // for above the post titles

@@ -46,41 +46,44 @@ function ct_tracks_save_user_profile_image( $user_id ) {
 add_action( 'personal_options_update', 'ct_tracks_save_user_profile_image' );
 add_action( 'edit_user_profile_update', 'ct_tracks_save_user_profile_image' );
 
-function ct_tracks_social_array(){
+if ( !function_exists( 'ct_tracks_social_array' ) ) {
+    function ct_tracks_social_array() {
 
-    $social_sites = array(
-        'twitter' => 'twitter_profile',
-        'facebook' => 'facebook_profile',
-        'googleplus' => 'googleplus_profile',
-        'pinterest' => 'pinterest_profile',
-        'linkedin' => 'linkedin_profile',
-        'youtube' => 'youtube_profile',
-        'vimeo' => 'vimeo_profile',
-        'tumblr' => 'tumblr_profile',
-        'instagram' => 'instagram_profile',
-        'flickr' => 'flickr_profile',
-        'dribbble' => 'dribbble_profile',
-        'rss' => 'rss_profile',
-        'reddit' => 'reddit_profile',
-        'soundcloud' => 'soundcloud_profile',
-        'spotify' => 'spotify_profile',
-        'vine' => 'vine_profile',
-        'yahoo' => 'yahoo_profile',
-        'behance' => 'behance_profile',
-        'codepen' => 'codepen_profile',
-        'delicious' => 'delicious_profile',
-        'stumbleupon' => 'stumbleupon_profile',
-        'deviantart' => 'deviantart_profile',
-        'digg' => 'digg_profile',
-        'git' => 'git_profile',
-        'hacker-news' => 'hacker-news_profile',
-        'steam' => 'steam_profile',
-        'vk' => 'vk_profile',
-        'weibo' => 'weibo_profile',
-        'tencent-weibo' => 'tencent_weibo_profile',
-        'email' => 'email_profile'
-    );
-    return $social_sites;
+        $social_sites = array(
+            'twitter'       => 'twitter_profile',
+            'facebook'      => 'facebook_profile',
+            'googleplus'    => 'googleplus_profile',
+            'pinterest'     => 'pinterest_profile',
+            'linkedin'      => 'linkedin_profile',
+            'youtube'       => 'youtube_profile',
+            'vimeo'         => 'vimeo_profile',
+            'tumblr'        => 'tumblr_profile',
+            'instagram'     => 'instagram_profile',
+            'flickr'        => 'flickr_profile',
+            'dribbble'      => 'dribbble_profile',
+            'rss'           => 'rss_profile',
+            'reddit'        => 'reddit_profile',
+            'soundcloud'    => 'soundcloud_profile',
+            'spotify'       => 'spotify_profile',
+            'vine'          => 'vine_profile',
+            'yahoo'         => 'yahoo_profile',
+            'behance'       => 'behance_profile',
+            'codepen'       => 'codepen_profile',
+            'delicious'     => 'delicious_profile',
+            'stumbleupon'   => 'stumbleupon_profile',
+            'deviantart'    => 'deviantart_profile',
+            'digg'          => 'digg_profile',
+            'git'           => 'git_profile',
+            'hacker-news'   => 'hacker-news_profile',
+            'steam'         => 'steam_profile',
+            'vk'            => 'vk_profile',
+            'weibo'         => 'weibo_profile',
+            'tencent-weibo' => 'tencent_weibo_profile',
+            'email'         => 'email_profile'
+        );
+
+        return $social_sites;
+    }
 }
 
 // add the social profile boxes to the user screen.
