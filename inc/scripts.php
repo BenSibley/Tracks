@@ -75,9 +75,6 @@ function ct_tracks_enqueue_admin_styles($hook){
 		// enqueue the JS needed to utilize media uploader on profile image upload
 		wp_enqueue_script('ct-profile-uploader', get_template_directory_uri() . '/js/build/profile-uploader.min.js');
 	}
-
-	// enqueue admin JS file
-	wp_enqueue_script( 'admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array( 'jquery' ), '', true );
 }
 add_action('admin_enqueue_scripts',	'ct_tracks_enqueue_admin_styles' );
 
