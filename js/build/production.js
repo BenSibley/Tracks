@@ -98,6 +98,7 @@ jQuery(function($){
     }
     var body = $('body');
     var overflowContainer = $('#overflow-container');
+    var titleInfo = $('#title-info');
 
     // bind the tap event on the menu icon
     $('#toggle-navigation').bind('click', onTap);
@@ -156,6 +157,9 @@ jQuery(function($){
 
             // if page is shorter than menu, extend to fit menu
             overflowContainer.css('min-height', menuHeight + 240);
+
+            menuPrimary.css('padding-top', titleInfo.height() + 48);
+            menuPrimaryTracks.css('padding-top', titleInfo.height() + 48);
 
             // watch scroll to auto-close the menu if visitor scrolls past it
             $(window).scroll(onScroll);
