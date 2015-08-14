@@ -82,7 +82,7 @@ if ( !function_exists( 'ct_tracks_social_array' ) ) {
             'email'         => 'email_profile'
         );
 
-        return $social_sites;
+        return apply_filters( 'ct_tracks_social_array_filter', $social_sites );
     }
 }
 

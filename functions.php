@@ -517,7 +517,7 @@ if ( !function_exists( 'ct_tracks_social_site_list' ) ) {
             'email'
         );
 
-        return $social_sites;
+        return apply_filters( 'ct_tracks_social_site_list_filter', $social_sites );
     }
 }
 
