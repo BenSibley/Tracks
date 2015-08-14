@@ -271,11 +271,6 @@ if( ! function_exists( 'ct_tracks_remove_more_link_scroll' ) ) {
 }
 add_filter( 'the_content_more_link', 'ct_tracks_remove_more_link_scroll' );
 
-// Adds navigation through pages in the loop
-function ct_tracks_post_navigation() {
-    if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination();
-}
-
 // for displaying featured images including mobile versions and default versions
 if( ! function_exists( 'ct_tracks_featured_image' ) ) {
     function ct_tracks_featured_image() {
