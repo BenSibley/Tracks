@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.37\n"
+"Project-Id-Version: Tracks 1.38\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-06-28 14:59:03+00:00\n"
+"POT-Creation-Date: 2015-08-17 14:13:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -168,55 +168,48 @@ msgstr ""
 msgid "Widgets in this area will be shown in the footer"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:103
 msgid "Reply"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:107
 msgid "Edit"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:112
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:149 functions.php:150
+#: functions.php:144 functions.php:145
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:156 functions.php:157
+#: functions.php:151 functions.php:152
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:158
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:159
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:173
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:174
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:216 functions.php:222
+#: functions.php:211 functions.php:217
 msgid "Read More"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:230
 msgid "Read the Post"
-msgstr ""
-
-#: functions.php:700
-msgid ""
-"Custom avatars are being removed from Tracks in v1.38. Please <a "
-"target=\"_blank\" href=\"%s\">follow these instructions</a> before the next "
-"update"
 msgstr ""
 
 #: header.php:15
@@ -242,7 +235,7 @@ msgid "Header"
 msgstr ""
 
 #: inc/customizer.php:132
-msgid "Logo Upload"
+msgid "Logo"
 msgstr ""
 
 #: inc/customizer.php:146
@@ -481,29 +474,15 @@ msgstr ""
 msgid "Do not Zoom"
 msgstr ""
 
-#: inc/user-profile.php:16
-msgid "Profile image"
-msgstr ""
-
-#: inc/user-profile.php:23
-msgid "Upload Image"
-msgstr ""
-
-#: inc/user-profile.php:24
-msgid ""
-"Upload an image here to use instead of your Gravatar. Perfectly square "
-"images will not be cropped."
-msgstr ""
-
-#: inc/user-profile.php:99
+#: inc/user-profile.php:56
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/user-profile.php:107
+#: inc/user-profile.php:64
 msgid "Address:"
 msgstr ""
 
-#: inc/user-profile.php:109
+#: inc/user-profile.php:66
 msgid "Profile:"
 msgstr ""
 
