@@ -241,7 +241,12 @@ if( ! function_exists( 'ct_tracks_custom_excerpt_length' ) ) {
         // if there is a new length set and it's not 15, change it
         if ( ! empty( $new_excerpt_length ) && $new_excerpt_length != 15 ) {
             return $new_excerpt_length;
-        } else {
+        }
+        // return 0 if user explicitly sets it to 0
+        elseif ( $new_excerpt_length === 0 ) {
+            return 0;
+        }
+        else {
             return 15;
         }
     }
@@ -251,7 +256,18 @@ add_filter( 'excerpt_length', 'ct_tracks_custom_excerpt_length', 999 );
 // switch [...] to ellipsis on automatic excerpt
 if( ! function_exists( 'ct_tracks_new_excerpt_more' ) ) {
     function ct_tracks_new_excerpt_more( $more ) {
-        return '&#8230;';
+
+        // get user set excerpt length
+        $new_excerpt_length = get_theme_mod('additional_options_excerpt_length_settings');
+
+        // if set to 0, return nothing
+        if ( $new_excerpt_length === 0 ) {
+            return '';
+        }
+        // else add the ellipsis
+        else {
+            return '&#8230;';
+        }
     }
 }
 add_filter('excerpt_more', 'ct_tracks_new_excerpt_more');
