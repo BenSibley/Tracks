@@ -304,7 +304,7 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
 	    // if the post has a featured image
         if ( $has_image == true ) {
             // if lazy loading is enabled
-            if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' ) {
+            if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' && ( is_archive() || is_home() ) ) {
 	            $featured_image = "<div class='featured-image lazy lazy-bg-image' data-background='$image'></div>";
             } // if lazy loading is NOT enabled
             else {
