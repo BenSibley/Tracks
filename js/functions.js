@@ -206,7 +206,10 @@ jQuery(function($){
             }
         });
     }
-    displayLayoutOptions();
+
+    $(window).bind("load", function() {
+        displayLayoutOptions();
+    });
 
     // ===== Full-width Images - create separation between image and post ===== //
 
