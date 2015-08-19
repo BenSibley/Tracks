@@ -1,9 +1,5 @@
 jQuery(document).ready(function($) {
 
-    $('html', window.parent.document).find('#customize-control-ct_tracks_background_texture_setting input').each(function(){
-       $(this).parent().css('background-image', 'url("../wp-content/plugins/tracks-background-textures/textures/' + $(this).val() + '.png")');
-    });
-
     // set context to customizer panel outside iframe site content is in
     var panel = $('html', window.parent.document);
 
