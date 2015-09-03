@@ -36,21 +36,24 @@ function ct_tracks_two_column_activate_license() {
         if( ! check_admin_referer( 'ct_tracks_two_column_nonce', 'ct_tracks_two_column_nonce' ) )
             return; // get out if we didn't click the Activate button
 
-        global $wp_version;
-
         $license = trim( get_option( 'ct_tracks_two_column_license_key' ) );
 
         $api_params = array(
             'edd_action' => 'activate_license',
             'license' => $license,
-            'item_name' => urlencode( CT_TRACKS_TWO_COLUMN ),
-            'url'       => home_url()
+            'item_name' => urlencode( CT_TRACKS_TWO_COLUMN )
         );
 
-        $response = wp_remote_get( add_query_arg( $api_params, CT_TRACKS_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
+        $response = wp_remote_get( add_query_arg( $api_params, CT_TRACKS_STORE_URL ), array( 'timeout' => 15, 'body' => $api_params, 'sslverify' => false ) );
 
-        if ( is_wp_error( $response ) )
-            return false;
+        if ( is_wp_error( $response ) ) {
+
+            $response = wp_remote_post( add_query_arg( $api_params, CT_TRACKS_STORE_URL ), array( 'timeout' => 15, 'body' => $api_params, 'sslverify' => false ) );
+
+            if ( is_wp_error( $response ) ) {
+                return false;
+            }
+        }
 
         $license_data = json_decode( wp_remote_retrieve_body( $response ) );
 
