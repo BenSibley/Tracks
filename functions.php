@@ -1,22 +1,11 @@
 <?php
 
-/* Load the core theme framework. */
-//require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
-//new Hybrid();
-
 if ( ! isset( $content_width ) ) {
     $content_width = 711;
 }
 
 if( ! function_exists( 'ct_tracks_theme_setup' ) ) {
     function ct_tracks_theme_setup() {
-
-        /* Get action/filter hook prefix. */
-//        $prefix = hybrid_get_prefix();
-
-        /* Theme-supported features go here. */
-//        add_theme_support( 'hybrid-core-template-hierarchy' );
-//        add_theme_support( 'loop-pagination' );
 
         // from WordPress core not theme hybrid
         add_theme_support( 'post-thumbnails' );
@@ -408,7 +397,6 @@ function ct_tracks_body_class( $classes ) {
 	    if( !is_search() ) {
 		    $classes[] = 'two-column-images';
 	    }
-
     }
     if(get_theme_mod( 'ct_tracks_background_image_setting')){
         $classes[] = 'background-image-active';
@@ -481,12 +469,6 @@ function ct_tracks_post_class_update($classes){
     return $classes;
 }
 add_filter( 'post_class', 'ct_tracks_post_class_update' );
-
-// fix for bug with Disqus saying comments are closed
-if ( function_exists( 'dsq_options' ) ) {
-    remove_filter( 'comments_template', 'dsq_comments_template' );
-    add_filter( 'comments_template', 'dsq_comments_template', 99 ); // You can use any priority higher than '10'
-}
 
 /* add a smaller size for the portfolio page */
 if( function_exists('add_image_size')){
@@ -572,7 +554,6 @@ function ct_tracks_custom_css_output(){
 }
 add_action('wp_enqueue_scripts','ct_tracks_custom_css_output');
 
-
 function ct_tracks_background_image_output(){
 
     $background_image = get_theme_mod( 'ct_tracks_background_image_setting');
@@ -631,15 +612,6 @@ function ct_tracks_loading_indicator_svg() {
 
 	return $svg;
 }
-
-function ct_tracks_wp_backwards_compatibility() {
-
-	// not using this function, simply remove it so use of "has_image_size" doesn't break < 3.9
-	if( version_compare( get_bloginfo('version'), '3.9', '<') ) {
-		remove_filter( 'image_size_names_choose', 'hybrid_image_size_names_choose' );
-	}
-}
-add_action('init', 'ct_tracks_wp_backwards_compatibility');
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
     function ct_tracks_add_title_tag() {
