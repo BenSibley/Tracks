@@ -320,17 +320,17 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
         if ( $has_image == true ) {
             // if lazy loading is enabled
             if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' && ( is_archive() || is_home() ) ) {
-	            $featured_image = "<div class='featured-image lazy lazy-bg-image' data-background='$image'></div>";
+	            $featured_image = "<div class='featured-image lazy lazy-bg-image' data-background='" . esc_url( $image ) . "'></div>";
             } // if lazy loading is NOT enabled
             else {
-	            $featured_image = "<div class='featured-image' style=\"background-image: url('" . $image . "')\"></div>";
+	            $featured_image = "<div class='featured-image' style='background-image: url(" . esc_url( $image ) . ")'></div>";
             }
         }
 	    // allow videos to be added
 	    $featured_image = apply_filters( 'ct_tracks_featured_image', $featured_image, $image, $has_image );
 
 	    if( $featured_image ) {
-		    echo $featured_image;
+            echo $featured_image;
 	    }
     }
 }
