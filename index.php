@@ -82,11 +82,11 @@ endif; ?>
 if( function_exists( 'is_bbpress' ) ) {
 
     if( ! ( is_bbpress() && is_archive() ) ) {
-        if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination();
+        echo ct_tracks_loop_pagination();
     }
 
 } else {
-    if ( current_theme_supports( 'loop-pagination' ) ) loop_pagination();
+    echo ct_tracks_loop_pagination();
 }
 
 ?>
