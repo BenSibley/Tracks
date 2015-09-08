@@ -1,0 +1,764 @@
+# Copyright (C) 2015 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracks 1.37\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2015-07-14 18:06+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-08-20 16:01+0300\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: tr\n"
+"Last-Translator: \n"
+
+#: comments.php:27 comments.php:46 comments.php:67
+msgid "Be First to Comment"
+msgstr "İlk yorumu siz yapın"
+
+#: comments.php:27 comments.php:46 comments.php:67
+msgid "One Comment"
+msgstr "Bir Yorum"
+
+#: comments.php:27 comments.php:46 comments.php:67
+msgid "% Comments"
+msgstr "% Yorum"
+
+#: comments.php:59
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Yorumlara kapalı fakat, <a href=“%s” title=“Trackback URL for this "
+"post”>geri izlemelere</a> ve geri bildirimlere açıktır."
+
+#: comments.php:80 comments.php:87
+msgid "Comments are closed."
+msgstr "Yorum yapma devre dışı."
+
+#: content/archive-header.php:6
+msgid "Category:"
+msgstr "Kategori:"
+
+#: content/archive-header.php:13
+msgid "Tag:"
+msgstr "Etiket:"
+
+#: content/archive-header.php:20
+msgid "These Posts are by:"
+msgstr "Yazar:"
+
+#: content/author-social-icons.php:12 content/author-social-icons.php:15
+#: content/author-social-icons.php:21 content/social-icons.php:28
+#: content/social-icons.php:32
+msgid "%s icon"
+msgstr "%s simgesi"
+
+#: content/author-social-icons.php:18 content/social-icons.php:30
+msgid "email icon"
+msgstr "E-posta simgesi"
+
+#: content/category-links.php:15
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: content/category-links.php:17 inc/deprecated.php:17
+msgid "View all posts in %s"
+msgstr "Tüm yazılar"
+
+#: content/further-reading.php:14
+msgid "The Previous Post"
+msgstr "Önceki Yazı"
+
+#: content/further-reading.php:19
+msgid "The Next Post"
+msgstr "Sonraki Yazı"
+
+#: content/further-reading.php:26
+msgid "Previous Post"
+msgstr "Önceki Yazı"
+
+#: content/further-reading.php:31
+msgid "This is the oldest post"
+msgstr "Bu en eski yazı"
+
+#: content/further-reading.php:32 content/further-reading.php:44
+msgid "Return to Blog"
+msgstr "Anasayfaya Dön"
+
+#: content/further-reading.php:38
+msgid "Next Post"
+msgstr "Sonraki"
+
+#: content/further-reading.php:43
+msgid "This is the newest post"
+msgstr "Bu en yeni yazı"
+
+#: content/tag-links.php:10
+msgid "Tags"
+msgstr "Tagler"
+
+#: content/tag-links.php:12 inc/deprecated.php:36
+msgid "View all posts tagged %s"
+msgstr "Bu tagli bütün yazıları bul"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: Sayfa bulunamadı"
+
+#: content-404.php:9
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"Görünüşe göre bu sayfada aradığınız şey yok. \n"
+"Url’nin doğru olduğuna emin olun veya aşağıdaki arama formundan arama yapın."
+
+#: content-attachment.php:20
+msgid "Previous Image"
+msgstr "Önceki Fotoğraf"
+
+#: content-attachment.php:23
+msgid "Next Image"
+msgstr "Sonraki Fotoğraf"
+
+#: content-page.php:29 content.php:13
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: content.php:28
+msgid "Written by:"
+msgstr "Yazar"
+
+#: footer.php:34
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+" <a target=\"_blank\" href=\"%s\">Tracks WordPress Teması</a> Compete Themes."
+
+#: functions.php:24
+msgid "Primary"
+msgstr "Birinci"
+
+#: functions.php:25
+msgid "Secondary"
+msgstr "İkinci"
+
+#: functions.php:26 functions.php:77 inc/customizer.php:124
+#: inc/customizer.php:182 inc/customizer.php:768 inc/customizer.php:792
+msgid "Footer"
+msgstr "Footer"
+
+#: functions.php:63
+msgid "After Post Content"
+msgstr "Yazıdan sonraki içerik"
+
+#: functions.php:65
+msgid ""
+"Widgets in this area will be shown after post content before the prev/next "
+"post links"
+msgstr ""
+"Bu alandaki widgetlar yazı sonrası içerik ile sonraki/önceki yazı kısmı "
+"arasında gösterilecektir."
+
+#: functions.php:70
+msgid "After Page Content"
+msgstr "Sayfa sonrası içeriği:"
+
+#: functions.php:72
+msgid "Widgets in this area will be shown after page content"
+msgstr "Bu alandaki widgetlar sayfa sonrası içerikte gösterilecektir."
+
+#: functions.php:79
+msgid "Widgets in this area will be shown in the footer"
+msgstr "Bu alandaki widgetler footer(en alt) kısımda gösterilecektir."
+
+#: functions.php:108
+msgid "Reply"
+msgstr "Cevapla"
+
+#: functions.php:112
+msgid "Edit"
+msgstr "Düzenle"
+
+#: functions.php:117
+msgid "Your comment is awaiting moderation."
+msgstr "Yorumunuz onay beklemektedir."
+
+#: functions.php:149 functions.php:150
+msgid "Your Name"
+msgstr "Adınız"
+
+#: functions.php:156 functions.php:157
+msgid "Your Email"
+msgstr "Email adresiniz"
+
+#: functions.php:163
+msgid "Your Website URL"
+msgstr "Website URLniz"
+
+#: functions.php:164
+msgid "Your URL"
+msgstr "URLniz"
+
+#: functions.php:178
+msgid "Your Comment"
+msgstr "Yorumunuz"
+
+#: functions.php:179
+msgid "Enter Your Comment"
+msgstr "Yorumunuzu giriniz."
+
+#: functions.php:216 functions.php:222
+msgid "Read More"
+msgstr "Daha fazla"
+
+#: functions.php:235
+msgid "Read the Post"
+msgstr "Yazıyı oku"
+
+#: functions.php:700
+msgid ""
+"Custom avatars are being removed from Tracks in v1.38. Please <a target="
+"\"_blank\" href=\"%s\">follow these instructions</a> before the next update"
+msgstr ""
+"Özel avatarlar Tracks’ın v1.38. sürümünde kaldırılmıştır. Lütfen <a target="
+"\"_blank\" href=\"%s\">bu yönlendirmeleri</a> yeni güncellemeden önce takip "
+"ediniz."
+
+#: header.php:15
+msgid "Skip to content"
+msgstr "İçeriğe geç"
+
+#: inc/customizer.php:103
+msgid "Tagline Display"
+msgstr "Etiketlerin Gösterimi"
+
+#: inc/customizer.php:117
+msgid "Where should the tagline display?"
+msgstr "Etiketler nerelerde gösterilsin?"
+
+#: inc/customizer.php:122 inc/customizer.php:180 inc/customizer.php:766
+#: inc/customizer.php:790
+msgid "Header & Footer"
+msgstr "Header & Footer"
+
+#: inc/customizer.php:123 inc/customizer.php:181 inc/customizer.php:767
+#: inc/customizer.php:791
+msgid "Header"
+msgstr "Header"
+
+#: inc/customizer.php:132
+msgid "Logo Upload"
+msgstr "Logo Yükle"
+
+#: inc/customizer.php:146
+msgid "Upload custom logo."
+msgstr "Özel logonu yükle"
+
+#: inc/customizer.php:162
+msgid "Social Media Icons"
+msgstr "Sosyal medya ikonları"
+
+#: inc/customizer.php:175
+msgid "Where should the icons display?"
+msgstr "İkonlar nerede gösterilsin?"
+
+#: inc/customizer.php:183 inc/customizer.php:793
+msgid "Do not display"
+msgstr "Gösterme"
+
+#: inc/customizer.php:233
+msgid "Search Bar"
+msgstr "Arama"
+
+#: inc/customizer.php:247
+msgid "Show search bar at top of site?"
+msgstr "Arama barı sitenin en üstünde gösterilsin mi?"
+
+#: inc/customizer.php:251 inc/customizer.php:278 inc/customizer.php:296
+#: inc/customizer.php:314 inc/customizer.php:544 inc/customizer.php:563
+#: inc/customizer.php:582 inc/customizer.php:809
+msgid "Show"
+msgstr "Göster"
+
+#: inc/customizer.php:252 inc/customizer.php:279 inc/customizer.php:297
+#: inc/customizer.php:315 inc/customizer.php:545 inc/customizer.php:564
+#: inc/customizer.php:583 inc/customizer.php:810
+msgid "Hide"
+msgstr "Gizle"
+
+#: inc/customizer.php:260
+msgid "Post Meta"
+msgstr "Post Meta"
+
+#: inc/customizer.php:274
+msgid "Display date above post title?"
+msgstr "Yazıların üstünde tarih göster?"
+
+#: inc/customizer.php:292
+msgid "Display author name above post title?"
+msgstr "Yazıların üstünde yazarı göster?"
+
+#: inc/customizer.php:310
+msgid "Display category above post title?"
+msgstr "Yazıların üstünde katagorileri göster?"
+
+#: inc/customizer.php:323
+msgid "Comments"
+msgstr "Yorumlar"
+
+#: inc/customizer.php:337
+msgid "Show comments on:"
+msgstr "Yorumlarını göster:"
+
+#: inc/customizer.php:342 inc/customizer.php:843
+msgid "Posts"
+msgstr "Yazılar"
+
+#: inc/customizer.php:343 inc/customizer.php:844
+msgid "Pages"
+msgstr "Sayfalar"
+
+#: inc/customizer.php:344 inc/customizer.php:845
+msgid "Attachments"
+msgstr "Ekler"
+
+#: inc/customizer.php:345 inc/customizer.php:846
+msgid "Do not show"
+msgstr "Gösterme"
+
+#: inc/customizer.php:354
+msgid "Footer Text"
+msgstr "Footer Text"
+
+#: inc/customizer.php:367
+msgid "Edit the text in your footer"
+msgstr "Footerdaki yazıyı düzenle"
+
+#: inc/customizer.php:377
+msgid "Custom CSS"
+msgstr "Custom CSS"
+
+#: inc/customizer.php:390
+msgid "Add Custom CSS Here:"
+msgstr "Custom CSS’i buraya ekleyin."
+
+#: inc/customizer.php:423 theme-options.php:60
+msgid "Premium Layouts"
+msgstr "Premium Layouts"
+
+#: inc/customizer.php:437
+msgid ""
+"Want more layouts? Check out the <a target=\"_blank\" href=\"%s\">Tracks "
+"Theme Upgrades</a>."
+msgstr ""
+"Daha tasarım mı arıyorsunuz? Şuraya göz atın <a target=\"_blank\" href=\"%s"
+"\">Tracks Tema Güncelleştirmeleri</a>."
+
+#: inc/customizer.php:442
+msgid "Choose the layout for Tracks"
+msgstr "Tracks teması için bir düzen seçin"
+
+#: inc/customizer.php:458
+msgid "Image size on Blog"
+msgstr "Blogdaki resim boyutu"
+
+#: inc/customizer.php:476
+msgid "Image size on Posts"
+msgstr "Yazılardaki resim boyutu"
+
+#: inc/customizer.php:494
+msgid "Style"
+msgstr "Stil"
+
+#: inc/customizer.php:498 inc/customizer.php:909
+msgid "Overlay"
+msgstr "Üstünü kapla"
+
+#: inc/customizer.php:499 inc/customizer.php:910
+msgid "Title below"
+msgstr "Başlık aşağıda"
+
+#: inc/customizer.php:512
+msgid "Show full posts on Blog/Archives?"
+msgstr "Blog/Arşivdeki tüm yazıyı göster?"
+
+#: inc/customizer.php:516 inc/customizer.php:618 inc/customizer.php:700
+#: inc/customizer.php:827
+msgid "Yes"
+msgstr "Evet"
+
+#: inc/customizer.php:517 inc/customizer.php:619 inc/customizer.php:701
+#: inc/customizer.php:828
+msgid "No"
+msgstr "Hayır"
+
+#: inc/customizer.php:525
+msgid "Additional Options"
+msgstr "Ek Seçenekler"
+
+#: inc/customizer.php:539
+msgid "Show scroll-to-top arrow?"
+msgstr "Yukarı çıkma okunu göstersin mi?"
+
+#: inc/customizer.php:558
+msgid "Show author info box after posts?"
+msgstr "Yazılardan sonra yazar kutusunu göstersin mi?"
+
+#: inc/customizer.php:577
+msgid "Show prev/next links after posts?"
+msgstr "Yazılardan sonra önceki/sonraki linkini göstersin mi?"
+
+#: inc/customizer.php:596
+msgid "Zoom-in blog images on hover?"
+msgstr "Blog resimlerine yakınlaşınca zoom yapsın mı?"
+
+#: inc/customizer.php:600
+msgid "Zoom in"
+msgstr "Yakınlaş"
+
+#: inc/customizer.php:601
+msgid "Do not zoom in"
+msgstr "Yakınlaşma"
+
+#: inc/customizer.php:614
+msgid "Lazy load images?"
+msgstr "Tembel resim yükleme?"
+
+#: inc/customizer.php:632
+msgid "Word count in automatic excerpts"
+msgstr "Otomatik alıntılarda sözcük sayımı"
+
+#: inc/customizer.php:650
+msgid "Background Image"
+msgstr "Arkaplan resmi"
+
+#: inc/customizer.php:651
+msgid ""
+"Use the Header Color section above if your new background image makes the "
+"menu hard to read."
+msgstr ""
+"Eğer yeni arkaplan resminiz menüyü okunması zor bir hale getiriyorsa "
+"aşağıdaki Header Rengi kısmını kullanabilirsiniz."
+
+#: inc/customizer.php:664
+msgid "Background image"
+msgstr "Arkaplan resmi"
+
+#: inc/customizer.php:681
+msgid "Background Texture"
+msgstr "Arkaplan Özellikleri"
+
+#: inc/customizer.php:682
+msgid ""
+"Use the Header Color section above if your new texture makes the menu hard "
+"to read."
+msgstr ""
+"Eğer yeni özellikleriniz menünüzü okunması zor bir hale getiriyorsa "
+"aşağıdaki Header rengi kısmını kullanabilirsiniz."
+
+#: inc/customizer.php:696
+msgid "Enable background texture?"
+msgstr "Arkaplan özelliklerini aktifleştir?"
+
+#: inc/customizer.php:716
+msgid "Choose a Texture"
+msgstr "Özellik seçiniz"
+
+#: inc/customizer.php:735
+msgid "Header Color"
+msgstr "Header Rengi"
+
+#: inc/customizer.php:736
+msgid "Change to dark if your new background makes the menu hard to read."
+msgstr ""
+"Eğer yeni arkaplanınız menüyü okumanızı zorlaştırıyorsa koyuya değiştirin"
+
+#: inc/customizer.php:750
+msgid "Light or dark header color?"
+msgstr "Açık veya koyu header rengi?"
+
+#: inc/customizer.php:754 inc/customizer.php:937
+msgid "Light"
+msgstr "Açık"
+
+#: inc/customizer.php:755 inc/customizer.php:938
+msgid "Dark"
+msgstr "Koyu"
+
+#: inc/customizer.php:864
+msgid "Zoom"
+msgstr "Zoom"
+
+#: inc/customizer.php:865
+msgid "Do not Zoom"
+msgstr "Zoom yapma"
+
+#: inc/user-profile.php:16
+msgid "Profile image"
+msgstr "Profil resmi"
+
+#: inc/user-profile.php:23
+msgid "Upload Image"
+msgstr "Resim Yükle"
+
+#: inc/user-profile.php:24
+msgid ""
+"Upload an image here to use instead of your Gravatar. Perfectly square "
+"images will not be cropped."
+msgstr ""
+"Gravatar yerine yüklenecek resmi yükleyin. Mükemmel kare olmayan resimler "
+"kırpılmayacaktır."
+
+#: inc/user-profile.php:99
+msgid "Social Profiles"
+msgstr "Sosyal Profiller"
+
+#: inc/user-profile.php:107
+msgid "Address:"
+msgstr "Adres:"
+
+#: inc/user-profile.php:109
+msgid "Profile:"
+msgstr "Profil:"
+
+#: licenses/functions/video.php:22
+msgid "Featured Video"
+msgstr "Özellikli Video"
+
+#: licenses/functions/video.php:64
+msgid "Video Preview"
+msgstr "Video önizlemesi"
+
+#: licenses/functions/video.php:78
+msgid "Add video URL:"
+msgstr "Video Url’si ekle"
+
+#: licenses/functions/video.php:89
+msgid "Choose where to display the video:"
+msgstr "Videonun nerede gösterileceğini seçin."
+
+#: licenses/functions/video.php:92
+msgid "Post"
+msgstr "Yazı"
+
+#: licenses/functions/video.php:96
+msgid "Blog"
+msgstr "Blog"
+
+#: licenses/functions/video.php:100
+msgid "Post & Blog"
+msgstr "Yazı & Blog"
+
+#: licenses/functions/video.php:116
+msgid "Youtube controls"
+msgstr "Youtube kontrolleri"
+
+#: licenses/functions/video.php:119
+msgid "Hide title"
+msgstr "Başlığı gizle"
+
+#: licenses/functions/video.php:123
+msgid "Hide related videos"
+msgstr "Benzer videoları gösterme"
+
+#: licenses/functions/video.php:127
+msgid "Hide Youtube logo"
+msgstr "Youtube logosunu sakla"
+
+#: search.php:9
+msgid "%d search result for \"%s\""
+msgid_plural "%d search results for \"%s\""
+msgstr[0] "%d Arama sonuçları”%s”"
+
+#: search.php:11
+msgid "No search results for \"%s\""
+msgstr "Hiç sonuç yok \"%s\""
+
+#: search.php:36
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "Aradığınızı bulamadınız mı? Kelimeleri değiştirmeyi deneyin:"
+
+#: searchform.php:6 searchform.php:7
+msgid "Search for:"
+msgstr "Şunu ara:"
+
+#: searchform.php:7
+msgid "Search"
+msgstr "Ara"
+
+#: searchform.php:8
+msgid "Go"
+msgstr "Git"
+
+#: theme-options.php:21
+msgid "Tracks Dashboard"
+msgstr "Tracks Kontrol Paneli"
+
+#: theme-options.php:26
+msgid "Dashboard"
+msgstr "Kontrol Paneli"
+
+#: theme-options.php:27
+msgid "Licenses"
+msgstr "Lisanslar"
+
+#: theme-options.php:32
+msgid "Customization"
+msgstr "Düzenleme"
+
+#: theme-options.php:33
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Tracks"
+msgstr ""
+"Menünüzdeki “Düzenleyici” butonuna basarak veya aşağıdaki butonu kullanarak "
+"Track temanızı düzenlemeye başlayabilirsiniz"
+
+#: theme-options.php:35
+msgid "Use Customizer"
+msgstr "Düzenleyiciyi kullan"
+
+#: theme-options.php:39
+msgid "Support"
+msgstr "Destek"
+
+#: theme-options.php:40
+msgid ""
+"You can find the knowledgebase, changelog, forum, and more in the Tracks "
+"Support Center"
+msgstr ""
+"Track Destek Merkezinden forumlara, bilgi merkezine, geliştirme günlüklerine "
+"ve daha fazlasına ulaşabilirsiniz"
+
+#: theme-options.php:42
+msgid "Visit Support Center"
+msgstr "Destek Merkezini ziyaret et"
+
+#: theme-options.php:46
+msgid "Premium Upgrades ($9-15)"
+msgstr "Premium Güncelleştirmeler ($9-15)"
+
+#: theme-options.php:47
+msgid "Make your site more customizable and beautiful with premium upgrades"
+msgstr ""
+"Sitenizi premium güncelleştirmelerle daha güzel ve daha düzenlenebilir hale "
+"getirin."
+
+#: theme-options.php:48
+msgid "Visit Upgrades Gallery"
+msgstr "Güncelleştirmeler Galerisini ziyaret edin"
+
+#: theme-options.php:51
+msgid "WordPress Resources"
+msgstr "WordPress Kaynakları"
+
+#: theme-options.php:52
+msgid ""
+"Save time and money searching for WordPress products by following our "
+"recommendations"
+msgstr ""
+"Bizim önerilerimizi dinleyerek Wordpress ürünleri arayın zaman ve paradan "
+"tasarruf edin."
+
+#: theme-options.php:54
+msgid "View Resources"
+msgstr "Kaynakları Göster"
+
+#: theme-options.php:67
+msgid "Premium Features"
+msgstr "Premium Features"
+
+#: theme-options.php:121
+msgid "Save License"
+msgstr "Lisansı kaydet"
+
+#: theme-options.php:124
+msgid "Enter your license key"
+msgstr "Lisans numaranızı girin (Licence key)"
+
+#: theme-options.php:130 theme-options.php:138
+msgid "Activate License"
+msgstr "Lisansı aktifleştir."
+
+#: theme-options.php:135
+msgid "Deactivate License"
+msgstr "Lisansı devre dışı bırak"
+
+#: theme-options.php:153
+msgid ""
+"You can now add a background image using the \"Background Image\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"Artık arka plan resmi ekleyebilirsiniz. Bunun için “Arkaplan Resmi” kısmına "
+"<a href=\"%s\">Düzenleyiciden</a> ulaşın."
+
+#: theme-options.php:155
+msgid ""
+"If you haven't already, please upload and activate the <a "
+"href='%s'>Background Texture plugin</a>"
+msgstr ""
+"Henüz yapmadıysanız lütfen  <a href='%s'>Background  Texture eklentisini</"
+"a>yükleyin ve aktive edin."
+
+#: theme-options.php:157
+msgid ""
+"You can now add videos to Posts and Pages. Use the Featured Videos box under "
+"the Post Editor to get started"
+msgstr ""
+"Artık yazılarınıza ve sayfalarınıza video ekleyebilirsiniz. Yazı Editörünün "
+"aşağısında ki Özellikli Video kutucuğundan başlayabilirsiniz."
+
+#: theme-options.php:159
+msgid ""
+"You can now switch to your new layout in the \"Premium Layouts\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"<a href=\"%s\">Düzenleyicideki</a> \"Premium Layouts\" kısmından yeni "
+"görünümünüze geçebilirsiniz."
+
+#. Theme Name of the plugin/theme
+msgid "Tracks"
+msgstr "Tracks"
+
+#. Theme URI of the plugin/theme
+msgid "https://www.competethemes.com/tracks/"
+msgstr "https://www.competethemes.com/tracks/"
+
+#. Description of the plugin/theme
+msgid ""
+"A bold, beautiful, and responsive theme. Tracks is perfect for personal "
+"blogs, magazines, and photography websites. It includes a logo uploader, "
+"social media icons, search bar, comment display controls, premium layouts "
+"and features, and more.  See our fully-setup live demo here: https://www."
+"competethemes.com/tracks-live-demo/"
+msgstr ""
+"Cesur, güzel ve her ekrana çözünürlüğe uyan bir tema. Tracks kişisel "
+"bloglar, dergiler, fotoğraf web siteleri için mükemmeldir. Logo yükleyici, "
+"sosyal medya ikonları, arama işlevi, yorumlar ve görüntü kontrolleri, "
+"premium seçenekler ve özellikler ve çok daha fazlası. Tam olarak çalışan "
+"online demomuzu şuradan görebilirsiniz: https://www.competethemes.com/tracks-"
+"live-demo/"
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr "Compete Themes"
+
+#. Author URI of the plugin/theme
+msgid "https://www.competethemes.com"
+msgstr "https://www.competethemes.com"
+
+#: inc/customizer.php:462 inc/customizer.php:480 inc/customizer.php:897
+msgctxt "size of the featured image"
+msgid "size based on image size"
+msgstr "Resim büyüklüğüne göre boyut"
+
+#: inc/customizer.php:463 inc/customizer.php:481 inc/customizer.php:898
+msgctxt "size of the featured image"
+msgid "2:1 width/height ratio like posts"
+msgstr "2:1 en/boy oranı yazılardaki gibi"
