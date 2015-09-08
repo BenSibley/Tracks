@@ -1573,7 +1573,7 @@ li.pingback:first-child {
 }
 /* page */
 .singular-page .entry,
-.error-404 .entry,
+.error404 .entry,
 .search .entry {
   padding-top: 3em;
 }
@@ -1583,11 +1583,11 @@ li.pingback:first-child {
   margin-bottom: 3em;
 }
 
-.error-404 input,
+.error404 input,
 .search input {
   margin: 0.75em 0;
 }
-.error-404 input[type="search"],
+.error404 input[type="search"],
 .search input[type="search"] {
   margin-right: 0.75em;
 }

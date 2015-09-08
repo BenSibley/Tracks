@@ -1,18 +1,18 @@
 <?php
 
 /* Load the core theme framework. */
-require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
-new Hybrid();
+//require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
+//new Hybrid();
 
 if( ! function_exists( 'ct_tracks_theme_setup' ) ) {
     function ct_tracks_theme_setup() {
 
         /* Get action/filter hook prefix. */
-        $prefix = hybrid_get_prefix();
+//        $prefix = hybrid_get_prefix();
 
         /* Theme-supported features go here. */
-        add_theme_support( 'hybrid-core-template-hierarchy' );
-        add_theme_support( 'loop-pagination' );
+//        add_theme_support( 'hybrid-core-template-hierarchy' );
+//        add_theme_support( 'loop-pagination' );
 
         // from WordPress core not theme hybrid
         add_theme_support( 'post-thumbnails' );
@@ -58,24 +58,34 @@ add_action( 'after_setup_theme', 'ct_tracks_theme_setup', 10 );
 function ct_tracks_register_widget_areas(){
 
     /* register after post content widget area */
-    hybrid_register_sidebar( array(
+    register_sidebar( array(
         'name'         => __( 'After Post Content', 'tracks' ),
         'id'           => 'after-post-content',
-        'description'  => __( 'Widgets in this area will be shown after post content before the prev/next post links', 'tracks' )
+        'description'  => __( 'Widgets in this area will be shown after post content before the prev/next post links', 'tracks' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>'
     ) );
 
     /* register after page content widget area */
-    hybrid_register_sidebar( array(
+    register_sidebar( array(
         'name'         => __( 'After Page Content', 'tracks' ),
         'id'           => 'after-page-content',
-        'description'  => __( 'Widgets in this area will be shown after page content', 'tracks' )
+        'description'  => __( 'Widgets in this area will be shown after page content', 'tracks' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>'
     ) );
 
 	/* register footer widget area */
-	hybrid_register_sidebar( array(
+	register_sidebar( array(
 		'name'         => __( 'Footer', 'tracks' ),
 		'id'           => 'footer',
 		'description'  => __( 'Widgets in this area will be shown in the footer', 'tracks' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
 	) );
@@ -338,7 +348,20 @@ if( ! function_exists( 'ct_tracks_featured_image' ) ) {
 /* add conditional classes for premium layouts */
 function ct_tracks_body_class( $classes ) {
 
+    global $post;
+
 	$premium_layout_setting = get_theme_mod('premium_layouts_setting');
+
+    if ( is_singular() ) {
+        $classes[] = 'singular';
+        if ( is_singular('page') ) {
+            $classes[] = 'singular-page';
+            $classes[] = 'singular-page-' . $post->ID;
+        } elseif ( is_singular('post') ) {
+            $classes[] = 'singular-post';
+            $classes[] = 'singular-post-' . $post->ID;
+        }
+    }
 
 	if ( ! is_front_page() ) {
         $classes[] = 'not-front';
@@ -389,6 +412,7 @@ function ct_tracks_body_class( $classes ) {
     if(get_theme_mod( 'ct_tracks_texture_display_setting') == 'yes'){
         $classes[] = 'background-texture-active';
     }
+
     return $classes;
 }
 add_filter( 'body_class', 'ct_tracks_body_class' );
@@ -410,24 +434,19 @@ function ct_tracks_post_class_update($classes){
 
 	global $post;
 
-    $remove = array();
-    $remove[] = 'entry';
-
-	// remove 'entry' class newer version of Hybrid Core adds
+	// if on blog, add excerpt class and zoom class
     if ( ! is_singular() ) {
-        foreach ( $classes as $key => $class ) {
 
-            if ( in_array( $class, $remove ) ){
-                unset( $classes[ $key ] );
-                $classes[] = 'excerpt';
-            }
-        }
+        $classes[] = 'excerpt';
 
 	    // add image zoom class
 	    $setting = get_theme_mod('additional_options_image_zoom_settings');
 	    if( $setting != 'no-zoom' ) {
 		    $classes[] = 'zoom';
 	    }
+    }
+    if ( is_singular() ) {
+        $classes[] = 'entry';
     }
 	// add class for posts with Featured Videos
 	if( get_post_meta( $post->ID, 'ct_tracks_video_key', true ) ) {
