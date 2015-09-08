@@ -59,6 +59,11 @@
   }
 }
 
+// Hide color section (bug since WP 4.3)
+#accordion-section-colors {
+  display: none !important;
+}
+
 /* Multiple select styles (for comments dropdown) */
 
 /**

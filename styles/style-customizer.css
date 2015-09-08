@@ -56,6 +56,10 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
           transition: right 0.15s ease-in-out;
 }
 
+#accordion-section-colors {
+  display: none !important;
+}
+
 /* Multiple select styles (for comments dropdown) */
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
