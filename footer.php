@@ -32,7 +32,7 @@
             else {
                 $site_url = 'https://www.competethemes.com/tracks/';
                 $footer_text = sprintf( __( '<a target="_blank" href="%s">Tracks WordPress Theme</a> by Compete Themes.', 'tracks' ), esc_url( $site_url ) );
-                echo $footer_text;
+                echo wp_kses_post( $footer_text );
             }
             ?>
         </p>
