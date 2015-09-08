@@ -4,6 +4,10 @@
 //require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 //new Hybrid();
 
+if ( ! isset( $content_width ) ) {
+    $content_width = 711;
+}
+
 if( ! function_exists( 'ct_tracks_theme_setup' ) ) {
     function ct_tracks_theme_setup() {
 
