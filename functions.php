@@ -552,7 +552,7 @@ function ct_tracks_custom_css_output(){
         wp_add_inline_style('style', $custom_css);
     }
 }
-add_action('wp_enqueue_scripts','ct_tracks_custom_css_output');
+add_action('wp_enqueue_scripts','ct_tracks_custom_css_output', 20);
 
 function ct_tracks_background_image_output(){
 
