@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.38\n"
+"Project-Id-Version: Tracks 1.40\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-08-17 14:13:56+00:00\n"
+"POT-Creation-Date: 2015-09-09 13:08:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -146,21 +146,21 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: functions.php:63
+#: functions.php:55
 msgid "After Post Content"
 msgstr ""
 
-#: functions.php:65
+#: functions.php:57
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
 msgstr ""
 
-#: functions.php:70
+#: functions.php:66
 msgid "After Page Content"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:68
 msgid "Widgets in this area will be shown after page content"
 msgstr ""
 
@@ -168,47 +168,47 @@ msgstr ""
 msgid "Widgets in this area will be shown in the footer"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:105
 msgid "Reply"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:109
 msgid "Edit"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:114
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:144 functions.php:145
+#: functions.php:146 functions.php:147
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:151 functions.php:152
+#: functions.php:153 functions.php:154
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:160
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:161
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:173
+#: functions.php:175
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:176
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:211 functions.php:217
+#: functions.php:213 functions.php:219
 msgid "Read More"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:232
 msgid "Read the Post"
 msgstr ""
 
