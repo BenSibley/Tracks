@@ -934,8 +934,8 @@ function ct_tracks_background_texture_setting_sanitization($input){
 // sanitize header color setting
 function ct_tracks_sanitize_header_color_settings($input){
     $valid = array(
-        'light' => __('Light', 'light'),
-        'dark' => __('Dark', 'dark')
+        'light' => __('Light', 'tracks'),
+        'dark' => __('Dark', 'tracks')
     );
 
     if ( array_key_exists( $input, $valid ) ) {
