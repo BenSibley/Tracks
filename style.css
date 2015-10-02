@@ -482,9 +482,9 @@ a img {
   height: 100%;
   width: 100%;
   z-index: 19;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24px, #222222), color-stop(24px, transparent), color-stop(48px, transparent));
-  background-image: -webkit-linear-gradient(#222222 24px, transparent 24px, transparent 48px);
-  background-image: linear-gradient(#222222 24px, transparent 24px, transparent 48px);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(26px, #222222), color-stop(24px, transparent), color-stop(24px, transparent));
+  background-image: -webkit-linear-gradient(#222222 26px, transparent 24px, transparent 24px);
+  background-image: linear-gradient(#222222 26px, transparent 24px, transparent 24px);
   -webkit-background-size: 1px 48px;
           background-size: 1px 48px;
   /* this is a 24px baseline grid */
