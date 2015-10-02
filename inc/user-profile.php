@@ -27,7 +27,7 @@ if ( !function_exists( 'ct_tracks_social_array' ) ) {
             'stumbleupon'   => 'stumbleupon_profile',
             'deviantart'    => 'deviantart_profile',
             'digg'          => 'digg_profile',
-            'git'           => 'git_profile',
+            'github'        => 'github_profile',
             'hacker-news'   => 'hacker-news_profile',
             'steam'         => 'steam_profile',
             'vk'            => 'vk_profile',
