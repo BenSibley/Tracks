@@ -275,6 +275,9 @@ add_action( 'save_post', 'ct_tracks_video_save_data' );
 // front-end output
 function ct_tracks_pro_output_featured_video( $featured_image ){
 
+	if ( trim( get_option( 'ct_tracks_featured_videos_license_key_status' ) ) != 'valid' )
+		return $featured_image;
+
 	// get the post object
 	global $post;
 
