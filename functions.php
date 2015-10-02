@@ -527,6 +527,7 @@ if ( !function_exists( 'ct_tracks_social_site_list' ) ) {
             'vk',
             'weibo',
             'tencent-weibo',
+            'paypal',
             'email'
         );
 

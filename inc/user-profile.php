@@ -33,6 +33,7 @@ if ( !function_exists( 'ct_tracks_social_array' ) ) {
             'vk'            => 'vk_profile',
             'weibo'         => 'weibo_profile',
             'tencent-weibo' => 'tencent_weibo_profile',
+            'paypal'        => 'paypal_profile',
             'email'         => 'email_profile'
         );
 
