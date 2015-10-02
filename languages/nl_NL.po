@@ -1,0 +1,741 @@
+# Copyright (C) 2015 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracks 1.38\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2015-09-10 11:14+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-09-10 12:23+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: comments.php:27 comments.php:46 comments.php:67
+msgid "Be First to Comment"
+msgstr "SCHRIJF ALS EERSTE EEN REACTIE"
+
+#: comments.php:27 comments.php:46 comments.php:67
+msgid "One Comment"
+msgstr "één reactie"
+
+#: comments.php:27 comments.php:46 comments.php:67
+msgid "% Comments"
+msgstr "% Reacties"
+
+#: comments.php:59
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Reacties zijn gesloten, maar <a href=“%1$s” title=“Trackback URL voor dit "
+"bericht”>trackbacks</a> en pingbacks zijn open."
+
+#: comments.php:80 comments.php:87
+msgid "Comments are closed."
+msgstr "Reacties Gesloten"
+
+#: content/archive-header.php:6
+msgid "Category:"
+msgstr "Categorie:"
+
+#: content/archive-header.php:13
+msgid "Tag:"
+msgstr "Tag:"
+
+#: content/archive-header.php:20
+msgid "These Posts are by:"
+msgstr "Deze berichten zijn geschreven door:"
+
+#: content/author-social-icons.php:12 content/author-social-icons.php:15
+#: content/author-social-icons.php:21 content/social-icons.php:28
+#: content/social-icons.php:32
+msgid "%s icon"
+msgstr "%s pictogram"
+
+#: content/author-social-icons.php:18 content/social-icons.php:30
+msgid "email icon"
+msgstr "email pictogram"
+
+#: content/category-links.php:15
+msgid "Categories"
+msgstr "Categorieën"
+
+#: content/category-links.php:17 inc/deprecated.php:17
+msgid "View all posts in %s"
+msgstr "Lees of kijk alle berichten in %"
+
+#: content/further-reading.php:14
+msgid "The Previous Post"
+msgstr "Het vorige bericht"
+
+#: content/further-reading.php:19
+msgid "The Next Post"
+msgstr "Het volgende bericht"
+
+#: content/further-reading.php:26
+msgid "Previous Post"
+msgstr "Vorig bericht"
+
+#: content/further-reading.php:31
+msgid "This is the oldest post"
+msgstr "Dit is het oudste bericht"
+
+#: content/further-reading.php:32 content/further-reading.php:44
+msgid "Return to Blog"
+msgstr "Terug naar het Blog"
+
+#: content/further-reading.php:38
+msgid "Next Post"
+msgstr "Volgend bericht"
+
+#: content/further-reading.php:43
+msgid "This is the newest post"
+msgstr "Dit is het nieuwste bericht"
+
+#: content/tag-links.php:10
+msgid "Tags"
+msgstr "Tags"
+
+#: content/tag-links.php:12 inc/deprecated.php:36
+msgid "View all posts tagged %s"
+msgstr "Lees of kijk alle berichten in %"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: Pagina niet gevonden"
+
+#: content-404.php:9
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"Het ziet er naar uit dat er niets te vinden is hier. Dubbelcheck de link of "
+"zoek hieronder verder."
+
+#: content-attachment.php:20
+msgid "Previous Image"
+msgstr "Vorige foto"
+
+#: content-attachment.php:23
+msgid "Next Image"
+msgstr "Volgende foto"
+
+#: content-page.php:29 content.php:13
+msgid "Pages:"
+msgstr "Pagina’s:"
+
+#: content.php:28
+msgid "Written by:"
+msgstr "Geschreven door:"
+
+#: footer.php:34
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> powered by "
+"Bleijsfilm"
+
+#: functions.php:24
+msgid "Primary"
+msgstr "Eerste"
+
+#: functions.php:25
+msgid "Secondary"
+msgstr "Tweede"
+
+#: functions.php:26 functions.php:77 inc/customizer.php:124
+#: inc/customizer.php:182 inc/customizer.php:768 inc/customizer.php:792
+msgid "Footer"
+msgstr "Footer"
+
+#: functions.php:63
+msgid "After Post Content"
+msgstr "Inhoud na het bericht"
+
+#: functions.php:65
+msgid ""
+"Widgets in this area will be shown after post content before the prev/next "
+"post links"
+msgstr ""
+"Widgets in dit gebied zullen na of onder de inhoud van het bericht geplaatst "
+"worden maar voor de vorige/volgende links"
+
+#: functions.php:70
+msgid "After Page Content"
+msgstr "Inhoud na de pagina"
+
+#: functions.php:72
+msgid "Widgets in this area will be shown after page content"
+msgstr ""
+"Widgets in dit gebied zullen na of onder de inhoud van de pagina geplaatst "
+"worden"
+
+#: functions.php:79
+msgid "Widgets in this area will be shown in the footer"
+msgstr "Widgets in dit gebied zullen in de footer geplaatst worden"
+
+#: functions.php:103
+msgid "Reply"
+msgstr "Beantwoord"
+
+#: functions.php:107
+msgid "Edit"
+msgstr "Aanpassen"
+
+#: functions.php:112
+msgid "Your comment is awaiting moderation."
+msgstr "Je reactie is in afwachting van moderatie"
+
+#: functions.php:144 functions.php:145
+msgid "Your Name"
+msgstr "Je naam"
+
+#: functions.php:151 functions.php:152
+msgid "Your Email"
+msgstr "Je emailadres"
+
+#: functions.php:158
+msgid "Your Website URL"
+msgstr "Je website URL"
+
+#: functions.php:159
+msgid "Your URL"
+msgstr "Je URL"
+
+#: functions.php:173
+msgid "Your Comment"
+msgstr "Je reactie"
+
+#: functions.php:174
+msgid "Enter Your Comment"
+msgstr "Schrijf hier je reactie"
+
+#: functions.php:211 functions.php:217
+msgid "Read More"
+msgstr "Lees of kijk meer"
+
+#: functions.php:230
+msgid "Read the Post"
+msgstr "Lees of bekijk het bericht"
+
+#: header.php:15
+msgid "Skip to content"
+msgstr "Ga naar de inhoud"
+
+#: inc/customizer.php:103
+msgid "Tagline Display"
+msgstr "Tagline weergave"
+
+#: inc/customizer.php:117
+msgid "Where should the tagline display?"
+msgstr "Waar wordt de tagline weergegeven"
+
+#: inc/customizer.php:122 inc/customizer.php:180 inc/customizer.php:766
+#: inc/customizer.php:790
+msgid "Header & Footer"
+msgstr "Header & Footer"
+
+#: inc/customizer.php:123 inc/customizer.php:181 inc/customizer.php:767
+#: inc/customizer.php:791
+msgid "Header"
+msgstr "Header"
+
+#: inc/customizer.php:132
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:146
+msgid "Upload custom logo."
+msgstr "Upload custom logo"
+
+#: inc/customizer.php:162
+msgid "Social Media Icons"
+msgstr "Social Media Pictogrammen"
+
+#: inc/customizer.php:175
+msgid "Where should the icons display?"
+msgstr "Waar de pictogrammen worden weergegeven?"
+
+#: inc/customizer.php:183 inc/customizer.php:793
+msgid "Do not display"
+msgstr "Niet weergeven"
+
+#: inc/customizer.php:233
+msgid "Search Bar"
+msgstr "Zoekbalk"
+
+#: inc/customizer.php:247
+msgid "Show search bar at top of site?"
+msgstr "Toon de zoekbalk bovenaan de site?"
+
+#: inc/customizer.php:251 inc/customizer.php:278 inc/customizer.php:296
+#: inc/customizer.php:314 inc/customizer.php:544 inc/customizer.php:563
+#: inc/customizer.php:582 inc/customizer.php:809
+msgid "Show"
+msgstr "Toon"
+
+#: inc/customizer.php:252 inc/customizer.php:279 inc/customizer.php:297
+#: inc/customizer.php:315 inc/customizer.php:545 inc/customizer.php:564
+#: inc/customizer.php:583 inc/customizer.php:810
+msgid "Hide"
+msgstr "Verberg"
+
+#: inc/customizer.php:260
+msgid "Post Meta"
+msgstr "Bericht Meta"
+
+#: inc/customizer.php:274
+msgid "Display date above post title?"
+msgstr "Toon de datum boven de berichten titel?"
+
+#: inc/customizer.php:292
+msgid "Display author name above post title?"
+msgstr "Toon de naam van de auteur boven de berichten titel?"
+
+#: inc/customizer.php:310
+msgid "Display category above post title?"
+msgstr "Toon de categorie boven de berichten titel?"
+
+#: inc/customizer.php:323
+msgid "Comments"
+msgstr "Reacties"
+
+#: inc/customizer.php:337
+msgid "Show comments on:"
+msgstr "Toon reacties op:"
+
+#: inc/customizer.php:342 inc/customizer.php:843
+msgid "Posts"
+msgstr "Berichten"
+
+#: inc/customizer.php:343 inc/customizer.php:844
+msgid "Pages"
+msgstr "Pagina’s"
+
+#: inc/customizer.php:344 inc/customizer.php:845
+msgid "Attachments"
+msgstr "Aanhangsels"
+
+#: inc/customizer.php:345 inc/customizer.php:846
+msgid "Do not show"
+msgstr "Niet tonen"
+
+#: inc/customizer.php:354
+msgid "Footer Text"
+msgstr "Footer Tekst"
+
+#: inc/customizer.php:367
+msgid "Edit the text in your footer"
+msgstr "Pas de tekst aan in je footer"
+
+#: inc/customizer.php:377
+msgid "Custom CSS"
+msgstr "Custom CSS"
+
+#: inc/customizer.php:390
+msgid "Add Custom CSS Here:"
+msgstr "Plaats Custom CSS hier:"
+
+#: inc/customizer.php:423 theme-options.php:60
+msgid "Premium Layouts"
+msgstr "Premium Layouts"
+
+#: inc/customizer.php:437
+msgid ""
+"Want more layouts? Check out the <a target=\"_blank\" href=\"%s\">Tracks "
+"Theme Upgrades</a>."
+msgstr ""
+"Meer opmaken? Check de <a target=\"_blank\" href=\"%s\">Tracks Theme "
+"Upgrades</a>."
+
+#: inc/customizer.php:442
+msgid "Choose the layout for Tracks"
+msgstr "Kies de opmaak voor Tracks"
+
+#: inc/customizer.php:458
+msgid "Image size on Blog"
+msgstr "Foto grootte voor Blog"
+
+#: inc/customizer.php:476
+msgid "Image size on Posts"
+msgstr "Foto grootte voor Berichten"
+
+#: inc/customizer.php:494
+msgid "Style"
+msgstr "Style"
+
+#: inc/customizer.php:498 inc/customizer.php:909
+msgid "Overlay"
+msgstr "Overlay"
+
+#: inc/customizer.php:499 inc/customizer.php:910
+msgid "Title below"
+msgstr "Titel hieronder"
+
+#: inc/customizer.php:512
+msgid "Show full posts on Blog/Archives?"
+msgstr "Toon hele berichten op Blog/Archives?"
+
+#: inc/customizer.php:516 inc/customizer.php:618 inc/customizer.php:700
+#: inc/customizer.php:827
+msgid "Yes"
+msgstr "Ja"
+
+#: inc/customizer.php:517 inc/customizer.php:619 inc/customizer.php:701
+#: inc/customizer.php:828
+msgid "No"
+msgstr "Nee"
+
+#: inc/customizer.php:525
+msgid "Additional Options"
+msgstr "Additionele Opties"
+
+#: inc/customizer.php:539
+msgid "Show scroll-to-top arrow?"
+msgstr "Toon scroll-naar-boven pijl?"
+
+#: inc/customizer.php:558
+msgid "Show author info box after posts?"
+msgstr "Toon auteurs info vak na bericht?"
+
+#: inc/customizer.php:577
+msgid "Show prev/next links after posts?"
+msgstr "Toon volgende/vorige links na bericht?"
+
+#: inc/customizer.php:596
+msgid "Zoom-in blog images on hover?"
+msgstr "Zoom-in blog beelden on hover?"
+
+#: inc/customizer.php:600
+msgid "Zoom in"
+msgstr "Zoom in"
+
+#: inc/customizer.php:601
+msgid "Do not zoom in"
+msgstr "Niet inzoomen"
+
+#: inc/customizer.php:614
+msgid "Lazy load images?"
+msgstr "Beelden gedoseerd laden?"
+
+#: inc/customizer.php:632
+msgid "Word count in automatic excerpts"
+msgstr "Aantal woorden in automatisch beknopt overzicht"
+
+#: inc/customizer.php:650
+msgid "Background Image"
+msgstr "Achtergrond foto"
+
+#: inc/customizer.php:651
+msgid ""
+"Use the Header Color section above if your new background image makes the "
+"menu hard to read."
+msgstr ""
+"Gebruik de sectie Header Kleur als de achtergrond foto het menu moeilijk "
+"leesbaar maakt."
+
+#: inc/customizer.php:664
+msgid "Background image"
+msgstr "Achtergrond foto"
+
+#: inc/customizer.php:681
+msgid "Background Texture"
+msgstr "Achtergrond structuur"
+
+#: inc/customizer.php:682
+msgid ""
+"Use the Header Color section above if your new texture makes the menu hard "
+"to read."
+msgstr ""
+"Gebruik de sectie Header Kleur als de achtergrond foto het menu moeilijk "
+"leesbaar maakt."
+
+#: inc/customizer.php:696
+msgid "Enable background texture?"
+msgstr "Activeer achtergrond structuur?"
+
+#: inc/customizer.php:716
+msgid "Choose a Texture"
+msgstr "Kies een structuur"
+
+#: inc/customizer.php:735
+msgid "Header Color"
+msgstr "Header Kleur"
+
+#: inc/customizer.php:736
+msgid "Change to dark if your new background makes the menu hard to read."
+msgstr ""
+"Verander naar donker wanneer de achtergrond het menu moeilijk leesbaar maakt."
+
+#: inc/customizer.php:750
+msgid "Light or dark header color?"
+msgstr "Lichte of donkere header kleur?"
+
+#: inc/customizer.php:754 inc/customizer.php:937
+msgid "Light"
+msgstr "Licht"
+
+#: inc/customizer.php:755 inc/customizer.php:938
+msgid "Dark"
+msgstr "Donker"
+
+#: inc/customizer.php:864
+msgid "Zoom"
+msgstr "Zoom"
+
+#: inc/customizer.php:865
+msgid "Do not Zoom"
+msgstr "Zoom niet"
+
+#: inc/user-profile.php:56
+msgid "Social Profiles"
+msgstr "Sociale profielen"
+
+#: inc/user-profile.php:64
+msgid "Address:"
+msgstr "Adres:"
+
+#: inc/user-profile.php:66
+msgid "Profile:"
+msgstr "Profiel:"
+
+#: licenses/functions/video.php:22
+msgid "Featured Video"
+msgstr "Uitgelichte Video"
+
+#: licenses/functions/video.php:64
+msgid "Video Preview"
+msgstr "Video Voorvertoning"
+
+#: licenses/functions/video.php:78
+msgid "Add video URL:"
+msgstr "Voeg Video URL toe:"
+
+#: licenses/functions/video.php:89
+msgid "Choose where to display the video:"
+msgstr "Kies waar de video wordt weergegeven:"
+
+#: licenses/functions/video.php:92
+msgid "Post"
+msgstr "Bericht"
+
+#: licenses/functions/video.php:96
+msgid "Blog"
+msgstr "Blog"
+
+#: licenses/functions/video.php:100
+msgid "Post & Blog"
+msgstr "Bericht & Blog"
+
+#: licenses/functions/video.php:116
+msgid "Youtube controls"
+msgstr "Youtube player bediening"
+
+#: licenses/functions/video.php:119
+msgid "Hide title"
+msgstr "Verberg titel"
+
+#: licenses/functions/video.php:123
+msgid "Hide related videos"
+msgstr "Verberg gerelateerde videos"
+
+#: licenses/functions/video.php:127
+msgid "Hide Youtube logo"
+msgstr "Verberg Youtube logo"
+
+#: search.php:9
+msgid "%d search result for \"%s\""
+msgid_plural "%d search results for \"%s\""
+msgstr[0] "%d zoekresultaat voor \"%s\""
+msgstr[1] "%d zoekresultaten voor \"%s\""
+
+#: search.php:11
+msgid "No search results for \"%s\""
+msgstr "Geen zoekresultaten voor \"%s\""
+
+#: search.php:36
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr ""
+"Kun je niet vinden waar je naar zoekt? Probeer je zoekopdracht te verfijnen:"
+
+#: searchform.php:6 searchform.php:7
+msgid "Search for:"
+msgstr "Zoek naar:"
+
+#: searchform.php:7
+msgid "Search"
+msgstr "Zoek"
+
+#: searchform.php:8
+msgid "Go"
+msgstr "Ga"
+
+#: theme-options.php:21
+msgid "Tracks Dashboard"
+msgstr "Tracks Dashboard"
+
+#: theme-options.php:26
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: theme-options.php:27
+msgid "Licenses"
+msgstr "Licenties"
+
+#: theme-options.php:32
+msgid "Customization"
+msgstr "Customization"
+
+#: theme-options.php:33
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Tracks"
+msgstr ""
+"Klik de \"Customize\" link in je menu, of gebruik de knop hieronder om "
+"Tracks aan te passen"
+
+#: theme-options.php:35
+msgid "Use Customizer"
+msgstr "Gebruik de Customizer"
+
+#: theme-options.php:39
+msgid "Support"
+msgstr "Support"
+
+#: theme-options.php:40
+msgid ""
+"You can find the knowledgebase, changelog, forum, and more in the Tracks "
+"Support Center"
+msgstr ""
+"Je kunt de knowledgebase, changelog, forum en meer vinden in het Tracks "
+"Support Center"
+
+#: theme-options.php:42
+msgid "Visit Support Center"
+msgstr "Visit Support Center"
+
+#: theme-options.php:46
+msgid "Premium Upgrades ($9-15)"
+msgstr "Premium Upgrades ($9-15)"
+
+#: theme-options.php:47
+msgid "Make your site more customizable and beautiful with premium upgrades"
+msgstr "Pas je site meer ‘customizable and beautiful’ aan met premium upgrades"
+
+#: theme-options.php:48
+msgid "Visit Upgrades Gallery"
+msgstr "Visit Upgrades Gallerie"
+
+#: theme-options.php:51
+msgid "WordPress Resources"
+msgstr "WordPress Resources"
+
+#: theme-options.php:52
+msgid ""
+"Save time and money searching for WordPress products by following our "
+"recommendations"
+msgstr ""
+"Bespaar tijd en geld op zoek naar WordPress producten door het volgen van "
+"onze aanbevelingen"
+
+#: theme-options.php:54
+msgid "View Resources"
+msgstr "Bekijk Resources"
+
+#: theme-options.php:67
+msgid "Premium Features"
+msgstr "Premium Features"
+
+#: theme-options.php:121
+msgid "Save License"
+msgstr "Bewaar Licentie"
+
+#: theme-options.php:124
+msgid "Enter your license key"
+msgstr "Vul je licentie key in"
+
+#: theme-options.php:130 theme-options.php:138
+msgid "Activate License"
+msgstr "Activeer Licentie"
+
+#: theme-options.php:135
+msgid "Deactivate License"
+msgstr "Deactiveer licentie"
+
+#: theme-options.php:153
+msgid ""
+"You can now add a background image using the \"Background Image\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"Je kunt nu een achtergond foto gebruiken in de achtergrond foto sectie in <a "
+"href=\"%s\">Customizer</a>"
+
+#: theme-options.php:155
+msgid ""
+"If you haven't already, please upload and activate the <a "
+"href='%s'>Background Texture plugin</a>"
+msgstr ""
+"Wanneer je het nog niet gedaan hebt, upload en activeer de <a "
+"href='%s'>Background Texture plugin</a>"
+
+#: theme-options.php:157
+msgid ""
+"You can now add videos to Posts and Pages. Use the Featured Videos box under "
+"the Post Editor to get started"
+msgstr ""
+"Je kunt nu videos toevoegen aan berichten en pagina’s. Gebruik het "
+"Uitgelichte Videos vak onder de berichten editor om te beginnen"
+
+#: theme-options.php:159
+msgid ""
+"You can now switch to your new layout in the \"Premium Layouts\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"Je kunt nu je nieuwe opmaak instellen in de \"Premium Layouts\" sectie in de "
+"<a href=\"%s\">Customizer</a>"
+
+#. Theme Name of the plugin/theme
+msgid "Tracks"
+msgstr "Tracks"
+
+#. Theme URI of the plugin/theme
+msgid "https://www.competethemes.com/tracks/"
+msgstr "https://www.competethemes.com/tracks/"
+
+#. Description of the plugin/theme
+msgid ""
+"A bold, beautiful, and responsive theme. Tracks is perfect for personal "
+"blogs, magazines, and photography websites. It includes a logo uploader, "
+"social media icons, search bar, comment display controls, premium layouts "
+"and features, and more.  See our fully-setup live demo here: https://www."
+"competethemes.com/tracks-live-demo/"
+msgstr ""
+"Een gedurfd, mooi, en responsief thema. Tracks is perfect voor persoonlijke "
+"blogs, tijdschriften, websites en fotografie. Het omvat een logo uploader, "
+"sociale media pictogrammen, zoekbalk, commentaar scherm controles, premium-"
+"outs en functies, en nog veel meer. Zie live onze volledige demo hier: "
+"https://www.competethemes.com/tracks-live-demo/"
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr "Compete Themes"
+
+#. Author URI of the plugin/theme
+msgid "https://www.competethemes.com"
+msgstr "https://www.competethemes.com"
+
+#: inc/customizer.php:462 inc/customizer.php:480 inc/customizer.php:897
+msgctxt "size of the featured image"
+msgid "size based on image size"
+msgstr "afmeting gebaseerd op fotoafmeting"
+
+#: inc/customizer.php:463 inc/customizer.php:481 inc/customizer.php:898
+msgctxt "size of the featured image"
+msgid "2:1 width/height ratio like posts"
+msgstr "2:1 breedte/hoogte ratio berichten"
