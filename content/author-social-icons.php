@@ -28,8 +28,8 @@ foreach ( $social_sites as $key => $social_site ) {
 				<i class="fa fa-envelope" title="<?php _e('email icon', 'tracks'); ?>"></i>
 			</a>
 		<?php } else { ?>
-			<a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_the_author_meta( $social_site ) ); ?>">
-				<i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'tracks'), $active_site ); ?>"></i>
+			<a class="<?php echo $key; ?>" target="_blank" href="<?php echo esc_url( get_the_author_meta( $social_site ) ); ?>">
+				<i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'tracks'), $key ); ?>"></i>
 			</a>
 		<?php
 		}
