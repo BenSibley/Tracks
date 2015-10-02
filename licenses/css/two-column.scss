@@ -30,6 +30,10 @@
       margin: 0 1.3875% $baseline-height;
       clear: none;
 
+      &.right {
+        float: right;
+      }
+
       &.even {
 
         .featured-image {

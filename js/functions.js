@@ -232,6 +232,7 @@ jQuery(function($){
     $(window).on('resize', function(){
         separatePostImage();
         videoHeightAdjust();
+        removeLayoutGaps();
 
         if( $(window).width() > 799 && $('#site-header').hasClass('toggled') ) {
             onTap();
@@ -395,48 +396,70 @@ jQuery(function($){
     }
     adjustSiteHeight();
 
-});
-
-jQuery(window).load(function(){
-
-    var $ = jQuery;
-
-    // ===== Two-Column Layout ==== //
+    removeLayoutGaps();
 
     function removeLayoutGaps(){
 
-        // if wide enough for two-column layout
-        if($(window).width() > 899){
+        if( $(window).width() > 899 ) {
 
-            if( $('body').hasClass('two-column') || $('body').hasClass('two-column-images')){
+            if( body.hasClass('two-column') || body.hasClass('two-column-images')) {
 
-                $('.excerpt').each(function(){
+                var entry = $('.excerpt');
+                var main = $('#main');
 
-                    // 40% of the screen over to be safe
-                    var windowWidth = $(window).width() * 0.4;
+                // get number of posts
+                var total = entry.length;
 
-                    // if it ends of over on the right, float it right
-                    if($(this).offset().left > windowWidth){
-                        $(this).css('float','right');
-                    } else {
-                        // to remove old float: right; on window resize
-                        $(this).css('float','left');
+                // set counter
+                var counter = 1;
+
+                // for each post...
+                entry.each(function () {
+
+                    if (counter == 2) {
+                        $(this).addClass('right');
                     }
+
+                    if (counter > 2) {
+
+                        // get prev entry
+                        var prev = $(this).prev();
+                        // if previous doesn't exist b/c is in jetpack infinite scroll container, get last post outside the container
+                        if (prev.length == 0) {
+                            if ($(this).parent().hasClass('infinite-wrap')) prev = $(this).parent().prev().prev();
+                        }
+
+                        // 2 entries ago
+                        var prevPrev = $(this).prev().prev();
+                        // if previous previous doesn't exist b/c is in jetpack infinite scroll container, get second to last post outside the container
+                        if (prevPrev.length == 0) {
+                            if ($(this).parent().hasClass('infinite-wrap')) prevPrev = $(this).parent().prev().prev().prev();
+                        }
+
+                        var prevBottom = Math.ceil(prev.offset().top + prev.outerHeight());
+                        var prevPrevBottom = Math.ceil(prevPrev.offset().top + prevPrev.outerHeight());
+
+                        if (prev.hasClass('right')) {
+                            var prevFloat = 'right';
+                            var prevPrevFloat = 'left';
+                        } else {
+                            var prevFloat = 'left';
+                            var prevPrevFloat = 'right';
+                        }
+                        // float towards previous
+                        if (prevBottom < prevPrevBottom) {
+                            $(this).addClass(prevFloat);
+                        }
+                        // float towards 2 entries ago
+                        else {
+                            $(this).addClass(prevPrevFloat);
+                        }
+                    }
+                    counter++;
                 });
             }
         }
-        // otherwise, remove inline styles in case screen shrunk from >900 to <900
-        else {
-            $('.excerpt').removeAttr('style');
-        }
     }
-    removeLayoutGaps();
-
-    // ===== Window Resize ===== //
-
-    $(window).on('resize', function(){
-        removeLayoutGaps();
-    });
 
 });
 

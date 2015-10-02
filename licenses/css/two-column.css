@@ -42,6 +42,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     margin: 0 1.3875% 1.5em;
     clear: none;
   }
+  .two-column .excerpt.right {
+    float: right;
+  }
   .two-column .excerpt.even .featured-image {
     right: 0;
   }
