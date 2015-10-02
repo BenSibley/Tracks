@@ -521,7 +521,7 @@ if ( !function_exists( 'ct_tracks_social_site_list' ) ) {
             'stumbleupon',
             'deviantart',
             'digg',
-            'git',
+            'github',
             'hacker-news',
             'steam',
             'vk',
@@ -533,6 +533,19 @@ if ( !function_exists( 'ct_tracks_social_site_list' ) ) {
         return apply_filters( 'ct_tracks_social_site_list_filter', $social_sites );
     }
 }
+
+// git icon was supposed to be for github, this is to transfer users saved data to github
+function ct_tracks_switch_git_icon() {
+
+    // if there is an icon saved for git, but not github
+    if ( !empty( get_theme_mod( 'git' ) ) && empty( get_theme_mod( 'github' ) ) ) {
+        // give the github option the same value as the git option
+        set_theme_mod( 'github', get_theme_mod( 'git' ) );
+        // erase git option
+        remove_theme_mod( 'git' );
+    }
+}
+add_action('admin_init', 'ct_tracks_switch_git_icon');
 
 // for above the post titles
 if( ! function_exists( 'ct_tracks_category_link' ) ) {
