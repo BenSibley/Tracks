@@ -5,20 +5,33 @@
 // array of social media site names
 $social_sites = ct_tracks_social_array();
 
+// icons that should use a special square icon
+$square_icons = array('linkedin', 'twitter', 'vimeo', 'youtube', 'pinterest', 'reddit', 'tumblr', 'steam', 'xing', 'github', 'google-plus', 'behance', 'facebook');
+
+
 foreach ( $social_sites as $key => $social_site ) {
 
 	if( get_the_author_meta( $social_site) ) {
-		if( $key ==  "flickr" || $key ==  "dribbble" || $key ==  "instagram" || $key ==  "soundcloud" || $key ==  "spotify" || $key ==  "vine" || $key ==  "yahoo" || $key ==  "codepen" || $key ==  "delicious" || $key ==  "stumbleupon" || $key ==  "deviantart" || $key ==  "digg" || $key ==  "hacker-news" || $key == 'vk' || $key == 'weibo' || $key == 'tencent-weibo') {
-			echo "<a href='" . esc_url( get_the_author_meta( $social_site ) ) . "'><i class=\"fa fa-$key\" title='" . sprintf( __('%s icon', 'tracks'), $key ) . "'></i></a>";
+
+		// get the square or plain class
+		if ( in_array( $key, $square_icons ) ) {
+			$class = 'fa fa-' . $key . '-square';
+		} else {
+			$class = 'fa fa-' . $key;
 		}
-		elseif( $key == 'googleplus' ){
-			echo "<a href='" . esc_url( get_the_author_meta( $social_site ) ) . "'><i class=\"fa fa-google-plus-square\" title='" . sprintf( __('%s icon', 'tracks'), $key ) . "'></i></a>";
-		}
-		elseif( $key == 'email' ){
-			echo "<a href='mailto:" . antispambot( is_email( get_the_author_meta( $social_site ) ) ) . "'><i class=\"fa fa-envelope\" title='" . sprintf( __('email icon', 'tracks'), $key ) . "'></i></a>";
-		}
-		else {
-			echo "<a href='" . esc_url( get_the_author_meta( $social_site ) ) . "'><i class=\"fa fa-$key-square\" title='" . sprintf( __('%s icon', 'tracks'), $key ) . "'></i></a>";
+
+		if ( $key == 'googleplus' ) $class = 'fa fa-google-plus';
+
+		if ( $key == 'email' ) {
+			?>
+			<a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_the_author_meta( $social_site ) ) ); ?>">
+				<i class="fa fa-envelope" title="<?php _e('email icon', 'tracks'); ?>"></i>
+			</a>
+		<?php } else { ?>
+			<a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_the_author_meta( $social_site ) ); ?>">
+				<i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'tracks'), $active_site ); ?>"></i>
+			</a>
+		<?php
 		}
 	}
 }
