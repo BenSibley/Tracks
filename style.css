@@ -1600,10 +1600,8 @@ li.pingback:first-child {
   text-transform: uppercase;
   color: #8c8c8c;
 }
-.archive-header p {
-  margin: 0;
+.archive-header span {
   letter-spacing: 0.08em;
-  display: inline-block;
 }
 .archive-header h2 {
   letter-spacing: 0.06em;
@@ -1611,6 +1609,10 @@ li.pingback:first-child {
   font-size: 1em;
   line-height: 1.5;
   display: inline-block;
+}
+.archive-header p {
+  margin: 0.75em 0;
+  text-transform: capitalize;
 }
 
 .archive .main {
