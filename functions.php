@@ -490,8 +490,20 @@ function ct_tracks_odd_even_post_class( $classes ) {
     // access the post object
     global $wp_query;
 
-    // add even/odd class
-    $classes[] = ($wp_query->current_post % 2 == 0) ? 'odd' : 'even';
+    // Jetpack starts new loops of 7 posts, so it always ends with odd leading to 2
+    // posts in a row with content on the left
+    if (
+        // if jetpack infinite scroll is active
+        class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' )
+        // and the current page is an even page (will be 1,3,5 b/c page starts with 0)
+        && get_query_var( 'paged' ) % 2 != 0
+    ) {
+        // flip the classes - start with even
+        $classes[] = ($wp_query->current_post % 2 == 0) ? 'even' : 'odd';
+    } else {
+        // add even/odd class
+        $classes[] = ($wp_query->current_post % 2 == 0) ? 'odd' : 'even';
+    }
 
     // add post # class
     $classes[] = "excerpt-" . ($wp_query->current_post + 1);
