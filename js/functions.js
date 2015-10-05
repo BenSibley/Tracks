@@ -435,7 +435,6 @@ jQuery(function($){
                     container.addClass('sorted');
                 }
 
-                console.log('running');
                 var entry = container.find('.excerpt');
 
                 // set counter
