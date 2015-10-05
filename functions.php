@@ -20,6 +20,13 @@ if( ! function_exists( 'ct_tracks_theme_setup' ) ) {
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
         ) );
 
+        // adds support for Jetpack infinite scroll feature
+        add_theme_support( 'infinite-scroll', array(
+            'container' => 'main',
+            'footer'    => 'overflow-container',
+            'render'    => 'ct_tracks_infinite_scroll_render'
+        ) );
+
         register_nav_menus( array(
             'primary'   => __( 'Primary', 'tracks' ),
             'secondary' => __( 'Secondary', 'tracks' ),
@@ -704,6 +711,10 @@ add_filter( 'ct_tracks_featured_image', 'ct_tracks_full_width_images_featured_im
 
 function ct_tracks_loop_pagination(){
 
+    // don't output if Jetpack infinite scroll is being used
+    if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) )
+        return;
+
     global $wp_query;
 
     // If there's not more than one page, return nothing.
@@ -748,3 +759,10 @@ add_action( 'wp_head', 'ct_tracks_add_meta_elements', 1 );
 /* Move the WordPress generator to a better priority. */
 remove_action( 'wp_head', 'wp_generator' );
 add_action( 'wp_head', 'wp_generator', 1 );
+
+function ct_tracks_infinite_scroll_render(){
+    while( have_posts() ) {
+        the_post();
+        get_template_part( 'content', 'archive' );
+    }
+}
