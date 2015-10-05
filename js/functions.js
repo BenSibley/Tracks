@@ -1,12 +1,5 @@
 jQuery(function($){
 
-    $('.entry-content, .excerpt-content').fitVids({
-        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
-    });
-    $('.featured-video').fitVids({
-        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
-    });
-
     // set variables
     var siteHeader = $('#site-header');
     var menuPrimary = $('#menu-primary');
@@ -19,6 +12,31 @@ jQuery(function($){
     var body = $('body');
     var overflowContainer = $('#overflow-container');
     var titleInfo = $('#title-info');
+
+    $('.entry-content, .excerpt-content').fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    });
+    $('.featured-video').fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
+    });
+
+    // Jetpack infinite scroll event that reloads posts. Reapply fitvids to new featured videos
+    $( document.body ).on( 'post-load', function () {
+
+        // reapply fitvids to new posts being loaded in
+        $('.featured-video').fitVids({
+            customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
+        });
+
+        // reapply the layout to affect newly loaded posts
+        body.trigger('layout-change');
+    } );
+
+    // rebuild layout when triggered
+    $( document.body ).on( 'layout-change', function () {
+        var pagination = $('.infinite-wrap').length;
+        removeLayoutGaps( pagination );
+    } );
 
     // bind the tap event on the menu icon
     $('#toggle-navigation').bind('click', onTap);
@@ -398,17 +416,27 @@ jQuery(function($){
 
     removeLayoutGaps();
 
-    function removeLayoutGaps(){
+    function removeLayoutGaps(view){
 
         if( $(window).width() > 899 ) {
 
             if( body.hasClass('two-column') || body.hasClass('two-column-images')) {
 
-                var entry = $('.excerpt');
-                var main = $('#main');
+                if ( view > 0 ) {
+                    var container = $('#infinite-view-' + view);
+                } else {
+                    var container = $('#main');
+                }
 
-                // get number of posts
-                var total = entry.length;
+                // prevent sections from being re-sorted
+                if ( container.hasClass('sorted') ) {
+                    return;
+                } else {
+                    container.addClass('sorted');
+                }
+
+                console.log('running');
+                var entry = container.find('.excerpt');
 
                 // set counter
                 var counter = 1;
@@ -424,17 +452,9 @@ jQuery(function($){
 
                         // get prev entry
                         var prev = $(this).prev();
-                        // if previous doesn't exist b/c is in jetpack infinite scroll container, get last post outside the container
-                        if (prev.length == 0) {
-                            if ($(this).parent().hasClass('infinite-wrap')) prev = $(this).parent().prev().prev();
-                        }
 
                         // 2 entries ago
                         var prevPrev = $(this).prev().prev();
-                        // if previous previous doesn't exist b/c is in jetpack infinite scroll container, get second to last post outside the container
-                        if (prevPrev.length == 0) {
-                            if ($(this).parent().hasClass('infinite-wrap')) prevPrev = $(this).parent().prev().prev().prev();
-                        }
 
                         var prevBottom = Math.ceil(prev.offset().top + prev.outerHeight());
                         var prevPrevBottom = Math.ceil(prevPrev.offset().top + prevPrev.outerHeight());
