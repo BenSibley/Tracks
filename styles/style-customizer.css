@@ -3,10 +3,10 @@
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /* grid stuff */
-                           /* Baseline Grid
+/* Baseline Grid
 background-image: linear-gradient(#fff 23px, #00fffc 24px, #fff 0px);
 background-size: 1px 24px; /* this is a 24px baseline grid */
-                        /* Column Grid
+/* Column Grid
 background-color: gray;
 background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
 background-size: 11.1%; /* This is at 6-columns -> just change this # */
@@ -27,7 +27,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   opacity: 0.8;
 }
 #customize-control-ct_tracks_background_texture_setting label.selected {
-  outline: solid 1px #43b3c4;
+  outline: solid 1px #43B3C4;
 }
 
 .upgrades-ad {
@@ -178,12 +178,12 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  background: white url("multiple-select.png") no-repeat 100% -22px;
+  background: #fff url("multiple-select.png") no-repeat 100% -22px;
   background: url("multiple-select.png") no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
   background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-gradient(linear, left top, left bottom, color-stop(85%, white), color-stop(99%, #eeeeee));
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(top, white 85%, #eeeeee 99%);
-  background: url("multiple-select.png") no-repeat 100% -22px, linear-gradient(top, white 85%, #eeeeee 99%);
+  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-gradient(linear, left top, left bottom, color-stop(85%, #ffffff), color-stop(99%, #eeeeee));
+  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(top, #ffffff 85%, #eeeeee 99%);
+  background: url("multiple-select.png") no-repeat 100% -22px, linear-gradient(top, #ffffff 85%, #eeeeee 99%);
 }
 
 .ms-search, .ms-search input {

@@ -4,10 +4,10 @@
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /* grid stuff */
-                           /* Baseline Grid
+/* Baseline Grid
 background-image: linear-gradient(#fff 23px, #00fffc 24px, #fff 0px);
 background-size: 1px 24px; /* this is a 24px baseline grid */
-                        /* Column Grid
+/* Column Grid
 background-color: gray;
 background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
 background-size: 11.1%; /* This is at 6-columns -> just change this # */
