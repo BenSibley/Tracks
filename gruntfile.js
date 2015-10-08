@@ -116,14 +116,14 @@ module.exports = function(grunt) {
         shell: {
             zip: {
                 command: [
-                    // delete existing copies on Desktop (if they exist)
-                    'rm -R /Users/bensibley/Desktop/tracks || true',
-                    'rm -R /Users/bensibley/Desktop/tracks.zip || true',
-                    // copy plugin folder to desktop without any project/meta files
-                    'rsync -r /Applications/MAMP/htdocs/wordpress/wp-content/themes/tracks /Users/bensibley/Desktop/ <%= excludeFiles %>',
-                    // open desktop
-                    'cd /Users/bensibley/Desktop/',
-                    // zip the chosen-pro folder on desktop
+                    // delete existing copies (if they exist)
+                    'rm -R /Users/bensibley/Documents/compete-themes/dist/tracks || true',
+                    'rm -R /Users/bensibley/Documents/compete-themes/dist/tracks.zip || true',
+                    // copy folder without any project/meta files
+                    'rsync -r /Applications/MAMP/htdocs/wordpress/wp-content/themes/tracks /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
+                    // open dist folder
+                    'cd /Users/bensibley/Documents/compete-themes/dist/',
+                    // zip the tracks folder
                     'zip -r tracks.zip tracks'
                 ].join('&&')
             }
