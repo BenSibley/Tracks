@@ -111,12 +111,6 @@ jQuery(function($){
             customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
         });
 
-        // reapply the layout to affect newly loaded posts
-        body.trigger('layout-change');
-    } );
-
-    // rebuild layout when triggered
-    $( document.body ).on( 'layout-change', function () {
         var pagination = $('.infinite-wrap').length;
         removeLayoutGaps( pagination );
     } );
