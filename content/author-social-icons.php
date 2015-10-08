@@ -20,7 +20,7 @@ foreach ( $social_sites as $key => $social_site ) {
 			$class = 'fa fa-' . $key;
 		}
 
-		if ( $key == 'googleplus' ) $class = 'fa fa-google-plus';
+		if ( $key == 'googleplus' ) $class = 'fa fa-google-plus-square';
 
 		if ( $key == 'email' ) {
 			?>
