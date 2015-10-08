@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tracks 1.40.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-09-10 11:55:57+00:00\n"
+"POT-Creation-Date: 2015-10-08 12:03:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,22 +39,20 @@ msgstr ""
 msgid "Category:"
 msgstr ""
 
-#: content/archive-header.php:13
+#: content/archive-header.php:14
 msgid "Tag:"
 msgstr ""
 
-#: content/archive-header.php:20
+#: content/archive-header.php:22
 msgid "These Posts are by:"
 msgstr ""
 
-#: content/author-social-icons.php:12 content/author-social-icons.php:15
-#: content/author-social-icons.php:21 content/social-icons.php:28
-#: content/social-icons.php:32
-msgid "%s icon"
+#: content/author-social-icons.php:28 content/social-icons.php:36
+msgid "email icon"
 msgstr ""
 
-#: content/author-social-icons.php:18 content/social-icons.php:30
-msgid "email icon"
+#: content/author-social-icons.php:32 content/social-icons.php:42
+msgid "%s icon"
 msgstr ""
 
 #: content/category-links.php:15
@@ -133,82 +131,82 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions.php:24
+#: functions.php:31
 msgid "Primary"
 msgstr ""
 
-#: functions.php:25
+#: functions.php:32
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:26 functions.php:77 inc/customizer.php:124
+#: functions.php:33 functions.php:84 inc/customizer.php:124
 #: inc/customizer.php:182 inc/customizer.php:768 inc/customizer.php:792
 msgid "Footer"
 msgstr ""
 
-#: functions.php:55
+#: functions.php:62
 msgid "After Post Content"
 msgstr ""
 
-#: functions.php:57
+#: functions.php:64
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
 msgstr ""
 
-#: functions.php:66
+#: functions.php:73
 msgid "After Page Content"
 msgstr ""
 
-#: functions.php:68
+#: functions.php:75
 msgid "Widgets in this area will be shown after page content"
 msgstr ""
 
-#: functions.php:79
+#: functions.php:86
 msgid "Widgets in this area will be shown in the footer"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:112
 msgid "Reply"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:116
 msgid "Edit"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:121
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:146 functions.php:147
+#: functions.php:153 functions.php:154
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:153 functions.php:154
+#: functions.php:160 functions.php:161
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:167
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:161
+#: functions.php:168
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:175
+#: functions.php:182
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:176
+#: functions.php:183
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:213 functions.php:219
+#: functions.php:220 functions.php:226
 msgid "Read More"
 msgstr ""
 
-#: functions.php:232
+#: functions.php:239
 msgid "Read the Post"
 msgstr ""
 
@@ -474,15 +472,15 @@ msgstr ""
 msgid "Do not Zoom"
 msgstr ""
 
-#: inc/user-profile.php:56
+#: inc/user-profile.php:66
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/user-profile.php:64
+#: inc/user-profile.php:74
 msgid "Address:"
 msgstr ""
 
-#: inc/user-profile.php:66
+#: inc/user-profile.php:76
 msgid "Profile:"
 msgstr ""
 
