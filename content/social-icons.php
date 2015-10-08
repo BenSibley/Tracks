@@ -38,7 +38,7 @@ if( ! empty( $active_sites ) ) {
 				</li>
 			<?php } else { ?>
 				<li>
-					<a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
+					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
 						<i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'tracks'), $active_site ); ?>"></i>
 					</a>
 				</li>
