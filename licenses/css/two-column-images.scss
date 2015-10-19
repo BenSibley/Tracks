@@ -172,6 +172,9 @@
           width: 100%;
         }
       }
+      &.right {
+        float: right;
+      }
     }
     .excerpt:not(.has-post-thumbnail){
       padding-bottom: 30%;

@@ -168,6 +168,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   .two-column-images .excerpt.odd .excerpt-container {
     width: 100%;
   }
+  .two-column-images .excerpt.right {
+    float: right;
+  }
   .two-column-images .excerpt:not(.has-post-thumbnail) {
     padding-bottom: 30%;
     width: 47.225%;
