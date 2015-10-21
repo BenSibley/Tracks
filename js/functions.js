@@ -10,6 +10,7 @@ jQuery(function($){
         var primaryMenu = $('.menu-unset');
     }
     var body = $('body');
+    var main = $('#main');
     var overflowContainer = $('#overflow-container');
     var titleInfo = $('#title-info');
 
@@ -28,8 +29,7 @@ jQuery(function($){
             customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
         });
 
-        var pagination = $('.infinite-wrap').length;
-        removeLayoutGaps( pagination );
+        removeLayoutGaps();
     } );
 
     // bind the tap event on the menu icon
@@ -410,32 +410,31 @@ jQuery(function($){
 
     removeLayoutGaps();
 
-    function removeLayoutGaps(view){
+    function removeLayoutGaps(){
 
         if( window.innerWidth > 899 ) {
 
             if( body.hasClass('two-column') || body.hasClass('two-column-images')) {
 
-                if ( view > 0 ) {
-                    var container = $('#infinite-view-' + view);
-                } else {
-                    var container = $('#main');
-                }
+                // move any posts in infinite wrap to main
+                $('.infinite-wrap').children('.excerpt').detach().appendTo( main );
+                $('.infinite-wrap, .infinite-loader').remove();
 
-                // prevent sections from being re-sorted
-                if ( container.hasClass('sorted') ) {
-                    return;
-                } else {
-                    container.addClass('sorted');
-                }
-
-                var entry = container.find('.excerpt');
+                var entry = main.find('.excerpt');
 
                 // set counter
                 var counter = 1;
 
                 // for each post...
                 entry.each(function () {
+
+                    // prevent entry's from being re-sorted
+                    if ( $(this).hasClass('sorted') ) {
+                        counter++;
+                        return;
+                    } else {
+                        $(this).addClass('sorted');
+                    }
 
                     if (counter == 2) {
                         $(this).addClass('right');
