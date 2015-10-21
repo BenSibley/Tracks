@@ -67,13 +67,45 @@ function ct_tracks_add_social_profile_settings($user) {
         </tr>
         <?php
         foreach($social_sites as $key => $social_site) {
+
+            $label = ucfirst( $key );
+
+            if ( $key == 'googleplus' ) {
+                $label = 'Google Plus';
+            } elseif ( $key == 'rss' ) {
+                $label = 'RSS';
+            } elseif ( $key == 'soundcloud' ) {
+                $label = 'SoundCloud';
+            } elseif ( $key == 'slideshare' ) {
+                $label = 'SlideShare';
+            } elseif ( $key == 'codepen' ) {
+                $label = 'CodePen';
+            } elseif ( $key == 'stumbleupon' ) {
+                $label = 'StumbleUpon';
+            } elseif ( $key == 'deviantart' ) {
+                $label = 'DeviantArt';
+            } elseif ( $key == 'hacker-news' ) {
+                $label = 'Hacker News';
+            } elseif ( $key == 'whatsapp' ) {
+                $label = 'WhatsApp';
+            } elseif ( $key == 'qq' ) {
+                $label = 'QQ';
+            } elseif ( $key == 'vk' ) {
+                $label = 'VK';
+            } elseif ( $key == 'wechat' ) {
+                $label = 'WeChat';
+            } elseif ( $key == 'tencent-weibo' ) {
+                $label = 'Tencent Weibo';
+            } elseif ( $key == 'paypal' ) {
+                $label = 'PayPal';
+            }
             ?>
             <tr>
                 <th>
                     <?php if( $key == 'email' ) : ?>
-                        <label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Address:', 'tracks'); ?></label>
+                        <label for="<?php echo $key; ?>-profile"><?php _e('Email Address', 'tracks'); ?></label>
                     <?php else : ?>
-                        <label for="<?php echo $key; ?>-profile"><?php echo ucfirst($key); ?> <?php _e('Profile:', 'tracks'); ?></label>
+                        <label for="<?php echo $key; ?>-profile"><?php echo $label; ?></label>
                     <?php endif; ?>
                 </th>
                 <td>
