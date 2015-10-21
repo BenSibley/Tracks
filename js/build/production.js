@@ -329,7 +329,7 @@ jQuery(function($){
         videoHeightAdjust();
         removeLayoutGaps();
 
-        if( $(window).width() > 799 && $('#site-header').hasClass('toggled') ) {
+        if( window.innerWidth > 799 && $('#site-header').hasClass('toggled') ) {
             onTap();
         }
     });
@@ -422,7 +422,7 @@ jQuery(function($){
         var logo = siteHeader.find('.logo');
 
             // if screen is 800px+ wide
-            if( $(window).width() > 799 ) {
+            if( window.innerWidth > 799 ) {
 
                 // if there is a logo
                 if( logo.length ) {
@@ -449,7 +449,7 @@ jQuery(function($){
     function videoHeightAdjust() {
 
         // only if side-by-side layout active
-        if( $(window).width() > 899 ) {
+        if( window.innerWidth > 899 ) {
 
             // only if standard layout
             if( body.hasClass('standard') ) {
@@ -495,7 +495,7 @@ jQuery(function($){
 
     function removeLayoutGaps(view){
 
-        if( $(window).width() > 899 ) {
+        if( window.innerWidth > 899 ) {
 
             if( body.hasClass('two-column') || body.hasClass('two-column-images')) {
 
