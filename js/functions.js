@@ -29,6 +29,11 @@ jQuery(function($){
             customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
         });
 
+        // on search results page, move search bar to bottom of main when new posts loaded
+        if ( body.hasClass('search-results') ) {
+            $('.search-box.bottom').detach().appendTo( main );
+        }
+
         removeLayoutGaps();
     } );
 
