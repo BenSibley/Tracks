@@ -142,9 +142,16 @@
       vertical-align: top;
       padding-right: $baseline-height * 2;
     }
+    .prev {
+      float: left;
+    }
     .next {
+      float: right;
       text-align: right;
       padding: 0 0 0 $baseline-height * 2;
+    }
+    &:after {
+      @include clearfix;
     }
   }
   .author-meta {

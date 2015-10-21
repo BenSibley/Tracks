@@ -1092,9 +1092,21 @@ a img {
     vertical-align: top;
     padding-right: 3em;
   }
+  .further-reading .prev {
+    float: left;
+  }
   .further-reading .next {
+    float: right;
     text-align: right;
     padding: 0 0 0 3em;
+  }
+  .further-reading:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
   }
 
   .author-meta .author {
