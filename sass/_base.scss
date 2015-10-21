@@ -147,22 +147,6 @@ th {
 
 /* Images */
 
-.alignleft {
-  float: left;
-  margin: 0 $baseline-height $baseline-height 0;
-}
-.alignright {
-  float: right;
-  margin: 0 0 $baseline-height $baseline-height;
-}
-.aligncenter {
-  text-align: center;
-  margin: $baseline-height auto;
-  display: block;
-}
-.alignnone {
-  margin: $baseline-height;
-}
 .alignright,
 .alignleft,
 .aligncenter,
@@ -181,6 +165,24 @@ th {
   img {
     max-width: 100%;
   }
+}
+
+.alignleft {
+  float: left;
+  margin: 0 $baseline-height $baseline-height 0;
+}
+.alignright {
+  float: right;
+  margin: 0 0 $baseline-height $baseline-height;
+}
+.aligncenter {
+  text-align: center;
+  margin: $baseline-height auto;
+  display: block;
+  max-width: 100%;
+}
+.alignnone {
+  margin: $baseline-height;
 }
 img {
   height: auto;

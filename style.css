@@ -220,26 +220,6 @@ th {
 }
 
 /* Images */
-.alignleft {
-  float: left;
-  margin: 0 1.5em 1.5em 0;
-}
-
-.alignright {
-  float: right;
-  margin: 0 0 1.5em 1.5em;
-}
-
-.aligncenter {
-  text-align: center;
-  margin: 1.5em auto;
-  display: block;
-}
-
-.alignnone {
-  margin: 1.5em;
-}
-
 .alignright,
 .alignleft,
 .aligncenter,
@@ -264,6 +244,27 @@ th {
 .size-medium img,
 .size-thumbnail img {
   max-width: 100%;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+
+.aligncenter {
+  text-align: center;
+  margin: 1.5em auto;
+  display: block;
+  max-width: 100%;
+}
+
+.alignnone {
+  margin: 1.5em;
 }
 
 img {
