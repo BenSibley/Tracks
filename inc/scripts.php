@@ -78,3 +78,15 @@ function ct_tracks_enqueue_customizer_styles(){
 	wp_enqueue_style('ct-customizer-css', get_template_directory_uri() . '/styles/style-customizer.css');
 }
 add_action('customize_controls_enqueue_scripts','ct_tracks_enqueue_customizer_styles');
+
+/*
+ * Script for live updating with customizer options. Has to be loaded separately on customize_preview_init hook
+ * transport => postMessage
+ */
+function ct_tracks_enqueue_customizer_post_message_scripts(){
+
+	// JS for live updating with customizer input
+	wp_enqueue_script('ct-tracks-post-message-js', get_template_directory_uri() . '/js/build/postMessage.min.js',array('jquery'),'',true);
+
+}
+add_action( 'customize_preview_init', 'ct_tracks_enqueue_customizer_post_message_scripts' );
