@@ -17,7 +17,8 @@ module.exports = function(grunt) {
                 files: {
                     'js/build/production.min.js': 'js/build/production.js',
                     'js/build/customizer.min.js': 'js/build/customizer.js',
-                    'js/build/admin.min.js': 'js/admin.js'
+                    'js/build/admin.min.js': 'js/admin.js',
+                    'js/build/postMessage.min.js': 'js/postMessage.js'
                 }
             }
         },
