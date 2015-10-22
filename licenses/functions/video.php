@@ -292,7 +292,7 @@ function ct_tracks_pro_output_featured_video( $featured_image ){
 		// post and setting is post or both, or if the blog and setting is blog or both, or if a page
 		if(
 			( is_singular() && ( $display_blog == 'post' || $display_blog == 'both' ) )
-			|| ( ( is_home() || is_archive() ) && ( $display_blog == 'blog' || $display_blog == 'both' ) )
+			|| ( ( is_home() || is_archive() || is_search() ) && ( $display_blog == 'blog' || $display_blog == 'both' ) )
 			|| is_singular('page')
 		) {
 			$featured_image = '<div class="featured-video">' . wp_oembed_get( esc_url( $featured_video ) ) . '</div>';
