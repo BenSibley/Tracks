@@ -1,9 +1,9 @@
 <?php
 if ( is_front_page() ) {
-    $heading_opening = "<h1 class='site-title'>";
+    $heading_opening = "<h1 id='site-title' class='site-title'>";
     $heading_closing = "</h1>";
 } else {
-    $heading_opening = "<h2 class='site-title'>";
+    $heading_opening = "<h2 id='site-title' class='site-title'>";
     $heading_closing = "</h2>";
 }
 if ( get_theme_mod( 'logo_upload') ) {
