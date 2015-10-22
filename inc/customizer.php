@@ -167,7 +167,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     $wp_customize->add_section( 'ct_tracks_social_icons', array(
         'title'       => __( 'Social Media Icons', 'tracks' ),
         'priority'    => 35,
-        'description' => __( 'Add the URL for each of your social profiles.', 'ignite' )
+        'description' => __( 'Add the URL for each of your social profiles.', 'tracks' )
     ) );
     // setting - display
     $wp_customize->add_setting( 'social_icons_display_setting', array(
