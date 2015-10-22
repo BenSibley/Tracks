@@ -11,6 +11,7 @@ jQuery(function($){
     }
     var body = $('body');
     var main = $('#main');
+    var loop = $('#loop-container');
     var overflowContainer = $('#overflow-container');
     var titleInfo = $('#title-info');
 
@@ -422,10 +423,10 @@ jQuery(function($){
             if( body.hasClass('two-column') || body.hasClass('two-column-images')) {
 
                 // move any posts in infinite wrap to main
-                $('.infinite-wrap').children('.excerpt').detach().appendTo( main );
+                $('.infinite-wrap').children('.excerpt').detach().appendTo( loop );
                 $('.infinite-wrap, .infinite-loader').remove();
 
-                var entry = main.find('.excerpt');
+                var entry = loop.find('.excerpt');
 
                 // set counter
                 var counter = 1;
