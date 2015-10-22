@@ -133,12 +133,14 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* 900px */
 @media all and (min-width: 56.25em) {
   .two-column-images.home .main,
-  .two-column-images.archive .main {
+  .two-column-images.archive .main,
+  .two-column-images.search .main {
     width: 91.665%;
     max-width: 1315px;
   }
   .two-column-images.home .main:after,
-  .two-column-images.archive .main:after {
+  .two-column-images.archive .main:after,
+  .two-column-images.search .main:after {
     content: ".";
     display: block;
     clear: both;
@@ -147,7 +149,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     height: 0;
   }
   .two-column-images.home .archive-header,
-  .two-column-images.archive .archive-header {
+  .two-column-images.archive .archive-header,
+  .two-column-images.search .archive-header {
     margin-left: 1.2%;
   }
 
