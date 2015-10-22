@@ -762,6 +762,17 @@ add_action( 'wp_head', 'wp_generator', 1 );
 function ct_tracks_infinite_scroll_render(){
     while( have_posts() ) {
         the_post();
-        get_template_part( 'content', 'archive' );
+        /* Two-column Images Layout */
+        if(get_theme_mod('premium_layouts_setting') == 'two-column-images'){
+            get_template_part('licenses/content/content-two-column-images');
+        }
+        /* Full-width Images Layout */
+        elseif(get_theme_mod('premium_layouts_setting') == 'full-width-images'){
+            get_template_part('licenses/content/content-full-width-images');
+        }
+        /* Blog - No Premium Layout */
+        else {
+            get_template_part('content', 'archive');
+        }
     }
 }
