@@ -330,6 +330,11 @@ a img {
   max-width: 1280px;
 }
 
+.infinite-loader,
+​#infinite-handle {
+  clear: both;
+}
+
 // stop iphone from zooming in on landscape view
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape)
 {
@@ -344,8 +349,4 @@ a img {
   html {
     -webkit-text-size-adjust: none;   /* none for no scaling */
   }
-}
-.infinite-loader,
-​#infinite-handle {
-  clear: both;
 }
