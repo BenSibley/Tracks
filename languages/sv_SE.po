@@ -4,16 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tracks 1.40.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-09-18 09:52+0200\n"
+"POT-Creation-Date: 2015-10-31 09:25+0100\n"
+"PO-Revision-Date: 2015-11-02 07:12+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-09-18 10:16+0200\n"
-"Language-Team: \n"
-"X-Generator: Poedit 1.8.4\n"
-"Last-Translator: \n"
+"X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: sv_SE\n"
 
 #: comments.php:27 comments.php:46 comments.php:67
 msgid "Be First to Comment"
@@ -43,23 +43,21 @@ msgstr "Kommentarerna är stängda."
 msgid "Category:"
 msgstr "Kategori:"
 
-#: content/archive-header.php:13
+#: content/archive-header.php:14
 msgid "Tag:"
 msgstr "Tagg:"
 
-#: content/archive-header.php:20
+#: content/archive-header.php:22
 msgid "These Posts are by:"
 msgstr "Dessa inlägg är av:"
 
-#: content/author-social-icons.php:12 content/author-social-icons.php:15
-#: content/author-social-icons.php:21 content/social-icons.php:28
-#: content/social-icons.php:32
-msgid "%s icon"
-msgstr "%s ikon"
-
-#: content/author-social-icons.php:18 content/social-icons.php:30
+#: content/author-social-icons.php:28 content/social-icons.php:36
 msgid "email icon"
 msgstr "E-mail ikon"
+
+#: content/author-social-icons.php:32 content/social-icons.php:42
+msgid "%s icon"
+msgstr "%s ikon"
 
 #: content/category-links.php:15
 msgid "Categories"
@@ -69,33 +67,33 @@ msgstr "Kategorier"
 msgid "View all posts in %s"
 msgstr "Se alla inlägg i %s"
 
-#: content/further-reading.php:14
-msgid "The Previous Post"
-msgstr "Föregående inlägg"
-
-#: content/further-reading.php:19
-msgid "The Next Post"
-msgstr "Nästa inlägg"
-
-#: content/further-reading.php:26
+#: content/further-reading.php:11
 msgid "Previous Post"
 msgstr "Föregående inlägg"
 
-#: content/further-reading.php:31
-msgid "This is the oldest post"
-msgstr "Detta är det äldsta inlägget"
+#: content/further-reading.php:13
+msgid "The Previous Post"
+msgstr "Föregående inlägg"
 
-#: content/further-reading.php:32 content/further-reading.php:44
+#: content/further-reading.php:20
+msgid "No Older Posts"
+msgstr "Inga Äldre Inlägg"
+
+#: content/further-reading.php:22 content/further-reading.php:48
 msgid "Return to Blog"
 msgstr "Tillbaga till bloggen"
 
-#: content/further-reading.php:38
+#: content/further-reading.php:37
 msgid "Next Post"
 msgstr "Nästa inlägg"
 
-#: content/further-reading.php:43
-msgid "This is the newest post"
-msgstr "Detta är det nyaste inlägget"
+#: content/further-reading.php:39
+msgid "The Next Post"
+msgstr "Nästa inlägg"
+
+#: content/further-reading.php:46
+msgid "No Newer Posts"
+msgstr "Inga Nyare Inlägg"
 
 #: content/tag-links.php:10
 msgid "Tags"
@@ -139,82 +137,82 @@ msgid ""
 "Themes."
 msgstr "<a target=\"_blank\" href=\"%s\"></a>"
 
-#: functions.php:24
+#: functions.php:31
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:25
+#: functions.php:32
 msgid "Secondary"
 msgstr "Sekundär"
 
-#: functions.php:26 functions.php:77 inc/customizer.php:124
-#: inc/customizer.php:182 inc/customizer.php:768 inc/customizer.php:792
+#: functions.php:33 functions.php:84 inc/customizer.php:130
+#: inc/customizer.php:189 inc/customizer.php:807 inc/customizer.php:831
 msgid "Footer"
 msgstr "Sidfot"
 
-#: functions.php:55
+#: functions.php:62
 msgid "After Post Content"
 msgstr "Innehåll efter inlägg"
 
-#: functions.php:57
+#: functions.php:64
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
 msgstr "Widgetar i detta fält visas efter postens innehåll"
 
-#: functions.php:66
+#: functions.php:73
 msgid "After Page Content"
 msgstr "Innehåll efter sida"
 
-#: functions.php:68
+#: functions.php:75
 msgid "Widgets in this area will be shown after page content"
 msgstr "Widgetar i detta fält visas efter sidans innehåll"
 
-#: functions.php:79
+#: functions.php:86
 msgid "Widgets in this area will be shown in the footer"
 msgstr "Widgetar i detta fält visas i sidfoten"
 
-#: functions.php:105
+#: functions.php:112
 msgid "Reply"
 msgstr "Svara"
 
-#: functions.php:109
+#: functions.php:116
 msgid "Edit"
 msgstr "Redigera"
 
-#: functions.php:114
+#: functions.php:121
 msgid "Your comment is awaiting moderation."
 msgstr "Din kommentar inväntar granskning."
 
-#: functions.php:146 functions.php:147
+#: functions.php:153 functions.php:154
 msgid "Your Name"
 msgstr "Namn"
 
-#: functions.php:153 functions.php:154
+#: functions.php:160 functions.php:161
 msgid "Your Email"
 msgstr "E-post"
 
-#: functions.php:160
+#: functions.php:167
 msgid "Your Website URL"
 msgstr "Hemsida"
 
-#: functions.php:161
+#: functions.php:168
 msgid "Your URL"
 msgstr "Din URL"
 
-#: functions.php:175
+#: functions.php:182
 msgid "Your Comment"
 msgstr "Kommentar"
 
-#: functions.php:176
+#: functions.php:183
 msgid "Enter Your Comment"
 msgstr "Skriv din kommentar här"
 
-#: functions.php:213 functions.php:219
+#: functions.php:220 functions.php:226
 msgid "Read More"
 msgstr "Läs mer"
 
-#: functions.php:232
+#: functions.php:239
 msgid "Read the Post"
 msgstr "Läs inlägget"
 
@@ -222,209 +220,219 @@ msgstr "Läs inlägget"
 msgid "Skip to content"
 msgstr "Hoppa till innehållet"
 
-#: inc/customizer.php:103
+#: inc/customizer.php:109
 msgid "Tagline Display"
 msgstr "Visa Taggar"
 
-#: inc/customizer.php:117
+#: inc/customizer.php:123
 msgid "Where should the tagline display?"
 msgstr "Var ska taggar visas"
 
-#: inc/customizer.php:122 inc/customizer.php:180 inc/customizer.php:766
-#: inc/customizer.php:790
+#: inc/customizer.php:128 inc/customizer.php:187 inc/customizer.php:805
+#: inc/customizer.php:829
 msgid "Header & Footer"
 msgstr "Sidhuvud & Sidfot"
 
-#: inc/customizer.php:123 inc/customizer.php:181 inc/customizer.php:767
-#: inc/customizer.php:791
+#: inc/customizer.php:129 inc/customizer.php:188 inc/customizer.php:806
+#: inc/customizer.php:830
 msgid "Header"
 msgstr "Sidhuvud"
 
-#: inc/customizer.php:132
+#: inc/customizer.php:138
 msgid "Logo"
 msgstr "Logotyp"
 
-#: inc/customizer.php:146
+#: inc/customizer.php:152
 msgid "Upload custom logo."
 msgstr "Ladda upp din logotyp"
 
-#: inc/customizer.php:162
+#: inc/customizer.php:168
 msgid "Social Media Icons"
 msgstr "Ikoner för sociala medier"
 
-#: inc/customizer.php:175
+#: inc/customizer.php:170
+msgid "Add the URL for each of your social profiles."
+msgstr "Lägg till webbadressen för alla dina sociala profiler."
+
+#: inc/customizer.php:182
 msgid "Where should the icons display?"
 msgstr "Var ska ikonerna visas?"
 
-#: inc/customizer.php:183 inc/customizer.php:793
+#: inc/customizer.php:190 inc/customizer.php:832
 msgid "Do not display"
 msgstr "Visa inte"
 
-#: inc/customizer.php:233
+#: inc/customizer.php:207 inc/user-profile.php:106
+msgid "Email Address"
+msgstr "E-postadress"
+
+#: inc/customizer.php:272
 msgid "Search Bar"
 msgstr "Sökfält"
 
-#: inc/customizer.php:247
+#: inc/customizer.php:286
 msgid "Show search bar at top of site?"
 msgstr "Visa sökfältet längst upp på sidan?"
 
-#: inc/customizer.php:251 inc/customizer.php:278 inc/customizer.php:296
-#: inc/customizer.php:314 inc/customizer.php:544 inc/customizer.php:563
-#: inc/customizer.php:582 inc/customizer.php:809
+#: inc/customizer.php:290 inc/customizer.php:317 inc/customizer.php:335
+#: inc/customizer.php:353 inc/customizer.php:583 inc/customizer.php:602
+#: inc/customizer.php:621 inc/customizer.php:848
 msgid "Show"
 msgstr "Visa"
 
-#: inc/customizer.php:252 inc/customizer.php:279 inc/customizer.php:297
-#: inc/customizer.php:315 inc/customizer.php:545 inc/customizer.php:564
-#: inc/customizer.php:583 inc/customizer.php:810
+#: inc/customizer.php:291 inc/customizer.php:318 inc/customizer.php:336
+#: inc/customizer.php:354 inc/customizer.php:584 inc/customizer.php:603
+#: inc/customizer.php:622 inc/customizer.php:849
 msgid "Hide"
 msgstr "Dölj"
 
-#: inc/customizer.php:260
+#: inc/customizer.php:299
 msgid "Post Meta"
 msgstr "Metadata för inlägg"
 
-#: inc/customizer.php:274
+#: inc/customizer.php:313
 msgid "Display date above post title?"
 msgstr "Visa datum ovan titeln?"
 
-#: inc/customizer.php:292
+#: inc/customizer.php:331
 msgid "Display author name above post title?"
 msgstr "Visa skribentens namn ovan titeln?"
 
-#: inc/customizer.php:310
+#: inc/customizer.php:349
 msgid "Display category above post title?"
 msgstr "Visa kategori ovan titeln?"
 
-#: inc/customizer.php:323
+#: inc/customizer.php:362
 msgid "Comments"
 msgstr "Kommentarer"
 
-#: inc/customizer.php:337
+#: inc/customizer.php:376
 msgid "Show comments on:"
 msgstr "Visa kommentarer för:"
 
-#: inc/customizer.php:342 inc/customizer.php:843
+#: inc/customizer.php:381 inc/customizer.php:882
 msgid "Posts"
 msgstr "Inlägg"
 
-#: inc/customizer.php:343 inc/customizer.php:844
+#: inc/customizer.php:382 inc/customizer.php:883
 msgid "Pages"
 msgstr "Sidor"
 
-#: inc/customizer.php:344 inc/customizer.php:845
+#: inc/customizer.php:383 inc/customizer.php:884
 msgid "Attachments"
 msgstr "Bilagor"
 
-#: inc/customizer.php:345 inc/customizer.php:846
+#: inc/customizer.php:384 inc/customizer.php:885
 msgid "Do not show"
 msgstr "Visa inte"
 
-#: inc/customizer.php:354
+#: inc/customizer.php:393
 msgid "Footer Text"
 msgstr "Sidfotstext"
 
-#: inc/customizer.php:367
+#: inc/customizer.php:406
 msgid "Edit the text in your footer"
 msgstr "Redigera texten i sidfoten"
 
-#: inc/customizer.php:377
+#: inc/customizer.php:416
 msgid "Custom CSS"
 msgstr "Egen CSS"
 
-#: inc/customizer.php:390
+#: inc/customizer.php:429
 msgid "Add Custom CSS Here:"
 msgstr "Lägg till egen CSS kod här:"
 
-#: inc/customizer.php:423 theme-options.php:60
+#: inc/customizer.php:462 theme-options.php:60
 msgid "Premium Layouts"
-msgstr ""
+msgstr "Premiumlayouter"
 
-#: inc/customizer.php:437
+#: inc/customizer.php:476
 msgid ""
 "Want more layouts? Check out the <a target=\"_blank\" href=\"%s\">Tracks "
 "Theme Upgrades</a>."
 msgstr ""
+"Vill du ha fler layouter? Kolla in <a target=\"_blank\" href=\"%s\">Tracks "
+"temauppgraderingar</a> ."
 
-#: inc/customizer.php:442
+#: inc/customizer.php:481
 msgid "Choose the layout for Tracks"
 msgstr "Välj layout för Tracks"
 
-#: inc/customizer.php:458
+#: inc/customizer.php:497
 msgid "Image size on Blog"
 msgstr "Bildstorlek på blogg"
 
-#: inc/customizer.php:476
+#: inc/customizer.php:515
 msgid "Image size on Posts"
 msgstr "Bildstorlek i inlägg"
 
-#: inc/customizer.php:494
+#: inc/customizer.php:533
 msgid "Style"
 msgstr "Stil"
 
-#: inc/customizer.php:498 inc/customizer.php:909
+#: inc/customizer.php:537 inc/customizer.php:948
 msgid "Overlay"
-msgstr ""
+msgstr "Överlagring"
 
-#: inc/customizer.php:499 inc/customizer.php:910
+#: inc/customizer.php:538 inc/customizer.php:949
 msgid "Title below"
 msgstr "Titel under"
 
-#: inc/customizer.php:512
+#: inc/customizer.php:551
 msgid "Show full posts on Blog/Archives?"
 msgstr "Visa hela inlägg i blogg/arkiv"
 
-#: inc/customizer.php:516 inc/customizer.php:618 inc/customizer.php:700
-#: inc/customizer.php:827
+#: inc/customizer.php:555 inc/customizer.php:657 inc/customizer.php:739
+#: inc/customizer.php:866
 msgid "Yes"
 msgstr "Ja"
 
-#: inc/customizer.php:517 inc/customizer.php:619 inc/customizer.php:701
-#: inc/customizer.php:828
+#: inc/customizer.php:556 inc/customizer.php:658 inc/customizer.php:740
+#: inc/customizer.php:867
 msgid "No"
 msgstr "Nej"
 
-#: inc/customizer.php:525
+#: inc/customizer.php:564
 msgid "Additional Options"
 msgstr "Övriga val"
 
-#: inc/customizer.php:539
+#: inc/customizer.php:578
 msgid "Show scroll-to-top arrow?"
 msgstr "Pil för att scrolla till toppen?"
 
-#: inc/customizer.php:558
+#: inc/customizer.php:597
 msgid "Show author info box after posts?"
 msgstr "Visa skribentinformation efter inlägg?"
 
-#: inc/customizer.php:577
+#: inc/customizer.php:616
 msgid "Show prev/next links after posts?"
 msgstr "Visa föregående/nästa länkar efter inlägg?"
 
-#: inc/customizer.php:596
+#: inc/customizer.php:635
 msgid "Zoom-in blog images on hover?"
 msgstr "Zooma in bilder när muspekaren är över dem?"
 
-#: inc/customizer.php:600
+#: inc/customizer.php:639
 msgid "Zoom in"
 msgstr "Zooma in"
 
-#: inc/customizer.php:601
+#: inc/customizer.php:640
 msgid "Do not zoom in"
 msgstr "Zooma inte in"
 
-#: inc/customizer.php:614
+#: inc/customizer.php:653
 msgid "Lazy load images?"
 msgstr "Lat bildladdning?"
 
-#: inc/customizer.php:632
+#: inc/customizer.php:671
 msgid "Word count in automatic excerpts"
 msgstr "Antal ord i automatisk ingress"
 
-#: inc/customizer.php:650
+#: inc/customizer.php:689
 msgid "Background Image"
 msgstr "Bakgrundsbild"
 
-#: inc/customizer.php:651
+#: inc/customizer.php:690
 msgid ""
 "Use the Header Color section above if your new background image makes the "
 "menu hard to read."
@@ -432,15 +440,15 @@ msgstr ""
 "Använd sidhuvudfärgs-sektionen ovan om din bakgrundsbild gör texten i menyn "
 "svårläst."
 
-#: inc/customizer.php:664
+#: inc/customizer.php:703
 msgid "Background image"
 msgstr "Bakgrundsbild"
 
-#: inc/customizer.php:681
+#: inc/customizer.php:720
 msgid "Background Texture"
 msgstr "Bakgrundstextur"
 
-#: inc/customizer.php:682
+#: inc/customizer.php:721
 msgid ""
 "Use the Header Color section above if your new texture makes the menu hard "
 "to read."
@@ -448,53 +456,45 @@ msgstr ""
 "Använd sidhuvudfärgs-sektionen ovan om din textur gör texten i menyn "
 "svårläst."
 
-#: inc/customizer.php:696
+#: inc/customizer.php:735
 msgid "Enable background texture?"
 msgstr "Använd bakgrundstextur?"
 
-#: inc/customizer.php:716
+#: inc/customizer.php:755
 msgid "Choose a Texture"
 msgstr "Välj textur"
 
-#: inc/customizer.php:735
+#: inc/customizer.php:774
 msgid "Header Color"
 msgstr "Sidhuvudfärg"
 
-#: inc/customizer.php:736
+#: inc/customizer.php:775
 msgid "Change to dark if your new background makes the menu hard to read."
 msgstr "Byt till mörk om din bakgrund gör menyn svårläst."
 
-#: inc/customizer.php:750
+#: inc/customizer.php:789
 msgid "Light or dark header color?"
 msgstr "Ljus eller mörk sidhuvudsfärg?"
 
-#: inc/customizer.php:754 inc/customizer.php:937
+#: inc/customizer.php:793 inc/customizer.php:976
 msgid "Light"
 msgstr "Ljus"
 
-#: inc/customizer.php:755 inc/customizer.php:938
+#: inc/customizer.php:794 inc/customizer.php:977
 msgid "Dark"
 msgstr "Mörk"
 
-#: inc/customizer.php:864
+#: inc/customizer.php:903
 msgid "Zoom"
 msgstr "Zooma"
 
-#: inc/customizer.php:865
+#: inc/customizer.php:904
 msgid "Do not Zoom"
 msgstr "Zooma inte"
 
-#: inc/user-profile.php:56
+#: inc/user-profile.php:66
 msgid "Social Profiles"
 msgstr "Social media"
-
-#: inc/user-profile.php:64
-msgid "Address:"
-msgstr "Adress:"
-
-#: inc/user-profile.php:66
-msgid "Profile:"
-msgstr "Profil:"
 
 #: licenses/functions/video.php:22
 msgid "Featured Video"
@@ -540,17 +540,17 @@ msgstr "Dölj relaterade videor"
 msgid "Hide Youtube logo"
 msgstr "Dölj YouTube logo"
 
-#: search.php:9
+#: search.php:10
 msgid "%d search result for \"%s\""
 msgid_plural "%d search results for \"%s\""
 msgstr[0] "%s sökresultat för \"%s\""
 msgstr[1] "%s sökresultat för \"%s\""
 
-#: search.php:11
+#: search.php:12
 msgid "No search results for \"%s\""
 msgstr "Inga sökresultat för \"%s\""
 
-#: search.php:36
+#: search.php:52
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr "Hittar du inte det du söker? Försök att omdefiniera din sökfråga:"
 
@@ -720,12 +720,24 @@ msgstr "Compete Themes"
 msgid "https://www.competethemes.com"
 msgstr "https://www.competethemes.com"
 
-#: inc/customizer.php:462 inc/customizer.php:480 inc/customizer.php:897
+#: inc/customizer.php:501 inc/customizer.php:519 inc/customizer.php:936
 msgctxt "size of the featured image"
 msgid "size based on image size"
 msgstr "storlek baseras på bildstorlek"
 
-#: inc/customizer.php:463 inc/customizer.php:481 inc/customizer.php:898
+#: inc/customizer.php:502 inc/customizer.php:520 inc/customizer.php:937
 msgctxt "size of the featured image"
 msgid "2:1 width/height ratio like posts"
 msgstr "2:1 bredd/höjd ratio, som på inlägg"
+
+#~ msgid "This is the oldest post"
+#~ msgstr "Detta är det äldsta inlägget"
+
+#~ msgid "This is the newest post"
+#~ msgstr "Detta är det nyaste inlägget"
+
+#~ msgid "Address:"
+#~ msgstr "Adress:"
+
+#~ msgid "Profile:"
+#~ msgstr "Profil:"
