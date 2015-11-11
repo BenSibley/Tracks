@@ -52,6 +52,7 @@ function ct_tracks_video_callback( $post ) {
 	$youtube_title = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true );
 	$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true );
 	$youtube_logo = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
+	$youtube_captions = get_post_meta( $post->ID, 'ct_tracks_video_youtube_captions', true );
 
 	// sets video to display on posts only by default
 	if( empty( $display_value ) ) {
@@ -125,6 +126,10 @@ function ct_tracks_video_callback( $post ) {
 		echo '<label for="ct_tracks_video_youtube_logo">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_logo" id="ct_tracks_video_youtube_logo" value="1" ' . checked( '1', $youtube_logo, false ) . '>';
 			_e( 'Hide Youtube logo', 'tracks' );
+		echo '</label> ';
+		echo '<label for="ct_tracks_video_youtube_captions">';
+			echo '<input type="checkbox" name="ct_tracks_video_youtube_captions" id="ct_tracks_video_youtube_captions" value="1" ' . checked( '1', $youtube_captions, false ) . '>';
+			_e( 'Show Captions by Default', 'tracks' );
 		echo '</label> ';
 	echo '</div>';
 }
@@ -269,6 +274,23 @@ function ct_tracks_video_save_data( $post_id ) {
 		// Saves video display option
 		update_post_meta( $post_id, 'ct_tracks_video_youtube_logo', $youtube_logo );
 	}
+
+	// Youtube captions
+
+	// if not set, set to '0' to avoid undefined index error
+	if ( !isset( $_POST['ct_tracks_video_youtube_captions'] ) ) {
+		$_POST['ct_tracks_video_youtube_captions'] = '0';
+	}
+
+	// get user input
+	$youtube_captions = $_POST[ 'ct_tracks_video_youtube_captions' ];
+
+	// validate user input
+	if( $youtube_captions == '1' || $youtube_captions == '0' ) {
+
+		// Saves video display option
+		update_post_meta( $post_id, 'ct_tracks_video_youtube_captions', $youtube_captions );
+	}
 }
 add_action( 'save_post', 'ct_tracks_video_save_data' );
 
@@ -323,14 +345,17 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 
 				// get user Youtube parameter settings
 				// flip their value so 1 means, yes HIDE it, NOT yes SHOW it.
-				$youtube_title   = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true ) ? 0 : 1;
-				$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true ) ? 0 : 1;
-				$youtube_logo    = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true ) ? 0 : 1;
+				$youtube_title    = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true ) ? 0 : 1;
+				$youtube_related  = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true ) ? 0 : 1;
+				$youtube_logo     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true ) ? 0 : 1;
+
+				$youtube_captions = get_post_meta( $post->ID, 'ct_tracks_video_youtube_captions', true );
 
 				$youtube_parameters = array(
 					'showinfo'       => $youtube_title,
 					'rel'            => $youtube_related,
-					'modestbranding' => $youtube_logo
+					'modestbranding' => $youtube_logo,
+					'cc_load_policy' => $youtube_captions
 				);
 
 				if ( is_array( $args ) ) {
