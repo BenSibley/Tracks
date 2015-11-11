@@ -150,21 +150,21 @@ if( ! function_exists( 'ct_tracks_update_fields' ) ) {
 
         $fields['author'] =
             '<p class="comment-form-author">
-            <label class="screen-reader-text">' . __( "Your Name", "tracks" ) . '</label>
+            <label for="author" class="screen-reader-text">' . __( "Your Name", "tracks" ) . '</label>
             <input placeholder="' . __( "Your Name", "tracks" ) . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
             '" size="30" ' . $aria_req . ' />
     	</p>';
 
         $fields['email'] =
             '<p class="comment-form-email">
-            <label class="screen-reader-text">' . __( "Your Email", "tracks" ) . '</label>
+            <label for="email" class="screen-reader-text">' . __( "Your Email", "tracks" ) . '</label>
             <input placeholder="' . __( "Your Email", "tracks" ) . $label . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
             '" size="30" ' . $aria_req . ' />
     	</p>';
 
         $fields['url'] =
             '<p class="comment-form-url">
-            <label class="screen-reader-text">' . __( "Your Website URL", "tracks" ) . '</label>
+            <label for="url" class="screen-reader-text">' . __( "Your Website URL", "tracks" ) . '</label>
             <input placeholder="' . __( "Your URL", "tracks" ) . ' (optional)" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
             '" size="30" />
             </p>';
@@ -179,7 +179,7 @@ if( ! function_exists( 'ct_tracks_update_comment_field' ) ) {
 
         $comment_field =
             '<p class="comment-form-comment">
-            <label class="screen-reader-text">' . __( "Your Comment", "tracks" ) . '</label>
+            <label for="comment" class="screen-reader-text">' . __( "Your Comment", "tracks" ) . '</label>
             <textarea required placeholder="' . __( "Enter Your Comment", "tracks" ) . '&#8230;" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </p>';
 
