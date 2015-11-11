@@ -345,3 +345,7 @@ a img {
     -webkit-text-size-adjust: none;   /* none for no scaling */
   }
 }
+.infinite-loader,
+​#infinite-handle {
+  clear: both;
+}

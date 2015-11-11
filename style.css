@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Tracks
 Theme URI: https://www.competethemes.com/tracks/
@@ -408,6 +409,11 @@ a img {
     /* none for no scaling */
   }
 }
+.infinite-loader,
+​#infinite-handle {
+  clear: both;
+}
+
 .site-header {
   padding: 0.75em 5.55%;
   background-color: #222;
