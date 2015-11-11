@@ -88,6 +88,15 @@ body {
   margin: 0 auto;
 }
 
+.loop-container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
 p {
   margin: 1.5em 0;
 }
@@ -1426,6 +1435,7 @@ li.pingback:first-child {
   text-align: center;
   padding-top: 3em;
   overflow: hidden;
+  clear: both;
 }
 .site-footer a {
   color: #8c8c8c;

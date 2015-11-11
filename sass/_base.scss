@@ -29,6 +29,12 @@ body {
   padding-bottom: $baseline-height;
   margin: 0 auto;
 }
+.loop-container {
+
+  &:after {
+    @include clearfix;
+  }
+}
 p {
   margin: $baseline-height 0;
 }
