@@ -157,11 +157,13 @@ jQuery(function($){
 
         if (body.hasClass('secondary-toggle')) {
             body.removeClass('secondary-toggle');
-            $('#main, #title-info, #toggle-navigation').css('transform','translateY(0)');
+            $('#main, #title-info, #toggle-navigation, #site-footer').css('transform','translateY(0)');
+            body.css('height', 'auto');
         } else {
             body.addClass('secondary-toggle');
             var menuHeight = $('#menu-secondary-items').height() + 48;
-            $('#main, #title-info, #toggle-navigation').css('transform','translateY(' + menuHeight + 'px)');
+            $('#main, #title-info, #toggle-navigation, #site-footer').css('transform','translateY(' + menuHeight + 'px)');
+            body.css('height', body.outerHeight() + menuHeight + 'px');
         }
     }
 
