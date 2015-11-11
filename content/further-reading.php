@@ -1,5 +1,7 @@
 <?php
 
+if( get_theme_mod('additional_options_further_reading_settings') == 'hide' ) return;
+
 global $post;
 
 // gets the previous post if it exists
