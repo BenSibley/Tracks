@@ -98,6 +98,34 @@ jQuery(function($){
     var overflowContainer = $('#overflow-container');
     var titleInfo = $('#title-info');
 
+    positionPostMeta();
+    centerContentIE();
+    lazyLoadImages();
+    positionSiteDescription();
+    videoHeightAdjust();
+    adjustSiteHeight();
+
+    $(window).load(function(){
+        removeLayoutGaps();
+    });
+
+    // wait until image loaded
+    $(window).bind('load', function() {
+        separatePostImage();
+        displayLayoutOptions();
+    });
+
+    // ===== Window Resize ===== //
+
+    $(window).on('resize', function(){
+        separatePostImage();
+        videoHeightAdjust();
+        removeLayoutGaps();
+
+        if( window.innerWidth > 799 && $('#site-header').hasClass('toggled') ) {
+            onTap();
+        }
+    });
     $('.entry-content, .excerpt-content').fitVids({
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
     });
@@ -206,7 +234,6 @@ jQuery(function($){
             $('.entry-tags').css('top', 72 + categoriesHeight);
         }
     }
-    positionPostMeta();
 
     /* allow keyboard access/visibility for dropdown menu items */
     $('.menu-item a, .page_item a').focus(function(){
@@ -305,10 +332,6 @@ jQuery(function($){
         });
     }
 
-    $(window).bind("load", function() {
-        displayLayoutOptions();
-    });
-
     // ===== Full-width Images - create separation between image and post ===== //
 
     function separatePostImage(){
@@ -319,23 +342,6 @@ jQuery(function($){
             $('.featured-image-container').css('padding-bottom', 0);
         }
     }
-
-    // wait until image loaded
-    $(window).bind('load', function() {
-        separatePostImage();
-    });
-
-    // ===== Window Resize ===== //
-
-    $(window).on('resize', function(){
-        separatePostImage();
-        videoHeightAdjust();
-        removeLayoutGaps();
-
-        if( window.innerWidth > 799 && $('#site-header').hasClass('toggled') ) {
-            onTap();
-        }
-    });
 
     /* ===== IE9 full-width image text positioning ===== */
 
@@ -364,7 +370,6 @@ jQuery(function($){
             });
         }
     }
-    centerContentIE();
 
     /* lazy load images */
     function lazyLoadImages(){
@@ -387,7 +392,6 @@ jQuery(function($){
             }
         });
     }
-    lazyLoadImages();
 
     var scrollHandling = {
         allow: true,
@@ -424,28 +428,27 @@ jQuery(function($){
 
         var logo = siteHeader.find('.logo');
 
-            // if screen is 800px+ wide
-            if( window.innerWidth > 799 ) {
+        // if screen is 800px+ wide
+        if( window.innerWidth > 799 ) {
 
-                // if there is a logo
-                if( logo.length ) {
+            // if there is a logo
+            if( logo.length ) {
 
-                    // get the logo height
-                    var logoHeight = logo.height();
+                // get the logo height
+                var logoHeight = logo.height();
 
-                    // if logo hasn't loaded yet, wait 1000ms
-                    if( logoHeight == 0 ) {
-                        setTimeout( function(){
-                            $(".site-description").css('top', logoHeight - 25 );
-                        }, 1000 )
-                    } else {
-                        // adjust the description placement accordingly
+                // if logo hasn't loaded yet, wait 1000ms
+                if( logoHeight == 0 ) {
+                    setTimeout( function(){
                         $(".site-description").css('top', logoHeight - 25 );
-                    }
+                    }, 1000 )
+                } else {
+                    // adjust the description placement accordingly
+                    $(".site-description").css('top', logoHeight - 25 );
                 }
             }
+        }
     }
-    positionSiteDescription();
 
 
     // get videos on the blog to better fit with the standard layout
@@ -483,7 +486,7 @@ jQuery(function($){
             }
         }
     }
-    videoHeightAdjust();
+
 
     // adjust height to fit footer into viewport instead of keeping it just out of view
     function adjustSiteHeight() {
@@ -492,9 +495,6 @@ jQuery(function($){
 
         body.css('height', 'calc(100% - ' + footerHeight + 'px)');
     }
-    adjustSiteHeight();
-
-    removeLayoutGaps();
 
     function removeLayoutGaps(){
 
