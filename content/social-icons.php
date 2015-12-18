@@ -33,7 +33,7 @@ if( ! empty( $active_sites ) ) {
 				?>
 				<li>
 					<a class="email" target="_blank" href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
-						<i class="fa fa-envelope" title="<?php esc_attr( _e('email icon', 'tracks') ); ?>"></i>
+						<i class="fa fa-envelope" title="<?php esc_attr_e('email', 'tracks'); ?>"></i>
 					</a>
 				</li>
 			<?php } else { ?>
