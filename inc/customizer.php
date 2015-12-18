@@ -570,6 +570,18 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         'type'     => 'number',
         'priority' => 30
     ) );
+    // Read More text - setting
+    $wp_customize->add_setting( 'read_more_text', array(
+        'default'           => __( 'Read the Post', 'tracks' ),
+        'sanitize_callback' => 'ct_tracks_sanitize_text'
+    ) );
+    // Read More text - control
+    $wp_customize->add_control( 'read_more_text', array(
+        'label'    => __( 'Read More link text', 'tracks' ),
+        'section'  => 'ct_tracks_additional_options',
+        'settings' => 'read_more_text',
+        'type'     => 'text'
+    ) );
 
     /***** Background Image *****/
 
@@ -866,6 +878,10 @@ function ct_tracks_sanitize_header_color_settings($input){
     } else {
         return '';
     }
+}
+
+function ct_tracks_sanitize_text( $input ) {
+    return wp_kses_post( force_balance_tags( $input ) );
 }
 
 /***** Helper Functions *****/
