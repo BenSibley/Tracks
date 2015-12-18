@@ -30,8 +30,7 @@
             }
             /* Otherwise, output the default text */
             else {
-                $site_url = 'https://www.competethemes.com/tracks/';
-                $footer_text = sprintf( __( '<a target="_blank" href="%s">Tracks WordPress Theme</a> by Compete Themes.', 'tracks' ), esc_url( $site_url ) );
+                $footer_text = sprintf( __( '<a target="_blank" href="%s">Tracks WordPress Theme</a> by Compete Themes.', 'tracks' ), 'https://www.competethemes.com/tracks/' );
                 echo wp_kses_post( $footer_text );
             }
             ?>

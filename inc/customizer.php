@@ -472,9 +472,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts'
     ) );
 
-	$tracks_upgrades = 'https://www.competethemes.com/tracks/tracks-theme-upgrades/';
-
-	$description_layout = sprintf( __('Want more layouts? Check out the <a target="_blank" href="%s">Tracks Theme Upgrades</a>.', 'tracks'), $tracks_upgrades );
+	$description_layout = sprintf( __('Want more layouts? Check out the <a target="_blank" href="%s">Tracks Theme Upgrades</a>.', 'tracks'), 'https://www.competethemes.com/tracks/tracks-theme-upgrades/' );
 
     // control - layout select
     $wp_customize->add_control( 'premium_layouts_setting', array(
