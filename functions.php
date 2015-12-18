@@ -585,7 +585,7 @@ function ct_tracks_custom_css_output(){
     /* output custom css */
     if($custom_css) {
         $custom_css = wp_filter_nohtml_kses( $custom_css );
-        wp_add_inline_style('style', $custom_css);
+        wp_add_inline_style('ct-tracks-style', $custom_css);
     }
 }
 add_action('wp_enqueue_scripts','ct_tracks_custom_css_output', 20);
@@ -601,7 +601,7 @@ function ct_tracks_background_image_output(){
                 background-image: url('$background_image');
             }
         ";
-        wp_add_inline_style('style', $background_image_css);
+        wp_add_inline_style('ct-tracks-style', $background_image_css);
     }
 }
 add_action('wp_enqueue_scripts','ct_tracks_background_image_output', 20);
@@ -618,7 +618,7 @@ function ct_tracks_background_texture_output(){
                 background-image: url('" . plugins_url() . "/tracks-background-textures/textures/$background_texture.png');
             }
         ";
-        wp_add_inline_style('style', $background_texture_css);
+        wp_add_inline_style('ct-tracks-style', $background_texture_css);
     }
 }
 add_action('wp_enqueue_scripts','ct_tracks_background_texture_output', 20);
