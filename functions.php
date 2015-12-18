@@ -702,33 +702,6 @@ function ct_tracks_full_width_images_featured_image($featured_image, $image, $ha
 }
 add_filter( 'ct_tracks_featured_image', 'ct_tracks_full_width_images_featured_image', 10, 3 );
 
-function ct_tracks_loop_pagination(){
-
-    // don't output if Jetpack infinite scroll is being used
-    if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) )
-        return;
-
-    global $wp_query;
-
-    // If there's not more than one page, return nothing.
-    if ( 1 >= $wp_query->max_num_pages ) {
-        return;
-    }
-
-    /* Set up some default arguments for the paginate_links() function. */
-    $defaults = array(
-        'base'         => add_query_arg( 'paged', '%#%' ),
-        'format'       => '',
-        'mid_size'     => 1
-    );
-
-    $loop_pagination = '<nav class="pagination loop-pagination">';
-    $loop_pagination .= paginate_links( $defaults );
-    $loop_pagination .= '</nav>';
-
-    return $loop_pagination;
-}
-
 // Adds useful meta tags
 function ct_tracks_add_meta_elements() {
 

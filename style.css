@@ -21,7 +21,7 @@ Tracks is distributed under the terms of the GNU GPL
   line-height: 1.85;
 }
 
-.wp-caption-text, .excerpt-meta, .entry-meta, .more-link, .loop-pagination, .further-reading span,
+.wp-caption-text, .excerpt-meta, .entry-meta, .more-link, .pagination, .further-reading span,
 .further-reading a,
 .entry-categories span,
 .entry-categories a,
@@ -36,7 +36,7 @@ Tracks is distributed under the terms of the GNU GPL
 }
 
 .site-title, .menu-unset > ul a,
-.menu-primary-items a, .excerpt-meta, .entry-meta, .excerpt-title, .entry-title, .more-link, .loop-pagination, .further-reading,
+.menu-primary-items a, .excerpt-meta, .entry-meta, .excerpt-title, .entry-title, .more-link, .pagination, .further-reading,
 .entry-categories,
 .entry-tags, .author-meta .author span, .comments-number h3, .comment-author .author-name, .site-footer h3, .design-credit, .widget-title, .widget li, .menu-footer-items a, .menu-secondary-items a {
   text-transform: uppercase;
@@ -877,21 +877,21 @@ a img {
           backface-visibility: hidden;
 }
 
-.loop-pagination {
+.pagination {
   text-align: center;
   padding: 1.5em;
   margin-bottom: -1.5em;
 }
-.loop-pagination a,
-.loop-pagination span {
+.pagination a,
+.pagination span {
   margin: 0 0.375em;
   color: #8c8c8c;
 }
-.loop-pagination a:link,
-.loop-pagination a:visited {
+.pagination a:link,
+.pagination a:visited {
   color: #8c8c8c;
 }
-.loop-pagination a:hover, .loop-pagination:active, .loop-pagination:focus {
+.pagination a:hover, .pagination:active, .pagination:focus {
   color: #aaaaaa;
 }
 
@@ -910,7 +910,7 @@ a img {
     padding: 0 6.2%;
   }
 
-  .loop-pagination {
+  .pagination {
     padding: 0.75em 1.5em 3em;
   }
 

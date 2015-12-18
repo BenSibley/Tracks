@@ -128,7 +128,7 @@
     backface-visibility: hidden;
   }
 }
-.loop-pagination {
+.pagination {
   @extend %uppercase;
   @extend %thirteen-pixels;
   text-align: center;
@@ -166,7 +166,7 @@
     background: white;
     padding: 0 6.2%;
   }
-  .loop-pagination {
+  .pagination {
     padding: $baseline-height / 2 $baseline-height $baseline-height * 2;
   }
   .excerpt-title {

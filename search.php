@@ -41,7 +41,7 @@
 
 	</div>
 
-	<?php echo ct_tracks_loop_pagination(); ?>
+	<?php the_posts_pagination(); ?>
 
 	<?php
 	// only display bottom search bar if there are search results

@@ -19,10 +19,10 @@
 if( function_exists( 'is_bbpress' ) ) {
 
     if( ! ( is_bbpress() && is_archive() ) ) {
-        echo ct_tracks_loop_pagination();
+        the_posts_pagination();
     }
 } else {
-    echo ct_tracks_loop_pagination();
+    the_posts_pagination();
 }
 
 get_footer();
