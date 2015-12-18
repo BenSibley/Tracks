@@ -64,14 +64,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct_tracks_tagline_display', array(
         'title'      => __( 'Tagline Display', 'tracks' ),
-        'priority'   => 25,
-        'capability' => 'edit_theme_options'
+        'priority'   => 25
     ) );
     // setting
     $wp_customize->add_setting( 'tagline_display_setting', array(
         'default'           => 'header-footer',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_tagline_display'
     ) );
     // control
@@ -93,22 +90,18 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct-upload', array(
         'title'      => __( 'Logo', 'tracks' ),
-        'priority'   => 30,
-        'capability' => 'edit_theme_options'
+        'priority'   => 30
     ) );
     // setting
     $wp_customize->add_setting( 'logo_upload', array(
-        'default'           => '',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'esc_url_raw'
     ) );
     // control
     $wp_customize->add_control( new WP_Customize_Image_Control(
         $wp_customize, 'logo_image', array(
             'label'    => __( 'Upload custom logo.', 'tracks' ),
             'section'  => 'ct-upload',
-            'settings' => 'logo_upload',
+            'settings' => 'logo_upload'
         )
     ) );
 
@@ -128,9 +121,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     ) );
     // setting - display
     $wp_customize->add_setting( 'social_icons_display_setting', array(
-        'type'              => 'theme_mod',
         'default'           => 'no',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_social_icons_display'
     ) );
     // control - display
@@ -154,9 +145,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         if( $social_site == 'email' ) {
 
             // setting
-            $wp_customize->add_setting( "$social_site", array(
-                'type'              => 'theme_mod',
-                'capability'        => 'edit_theme_options',
+            $wp_customize->add_setting( $social_site, array(
                 'sanitize_callback' => 'ct_tracks_sanitize_email'
             ) );
             // control
@@ -204,8 +193,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
             // setting
             $wp_customize->add_setting( $social_site, array(
-                'type'              => 'theme_mod',
-                'capability'        => 'edit_theme_options',
                 'sanitize_callback' => 'esc_url_raw'
             ) );
             // control
@@ -226,14 +213,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct_tracks_search_input', array(
         'title'      => __( 'Search Bar', 'tracks' ),
-        'priority'   => 60,
-        'capability' => 'edit_theme_options'
+        'priority'   => 60
     ) );
     // setting
     $wp_customize->add_setting( 'search_input_setting', array(
         'default'           => 'hide',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings'
     ) );
     // control
@@ -253,14 +237,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct_tracks_post_meta_display', array(
         'title'      => __( 'Post Meta', 'tracks' ),
-        'priority'   => 65,
-        'capability' => 'edit_theme_options'
+        'priority'   => 65
     ) );
     // setting - date
     $wp_customize->add_setting( 'post_date_display_setting', array(
         'default'           => 'show',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings'
     ) );
     // control - date
@@ -277,8 +258,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // setting - author
     $wp_customize->add_setting( 'post_author_display_setting', array(
         'default'           => 'show',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings'
     ) );
     // control - author
@@ -295,8 +274,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // setting - category
     $wp_customize->add_setting( 'post_category_display_setting', array(
         'default'           => 'show',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings'
     ) );
     // control - category
@@ -316,14 +293,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct_tracks_comments_display', array(
         'title'      => __( 'Comments', 'tracks' ),
-        'priority'   => 70,
-        'capability' => 'edit_theme_options'
+        'priority'   => 70
     ) );
     // setting
     $wp_customize->add_setting( 'ct_tracks_comments_setting', array(
         'default'           => array('post','page','attachment','none'),
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_comments_setting',
     ) );
     // control
@@ -347,21 +321,18 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct-footer-text', array(
         'title'      => __( 'Footer Text', 'tracks' ),
-        'priority'   => 75,
-        'capability' => 'edit_theme_options'
+        'priority'   => 75
     ) );
     // setting
     $wp_customize->add_setting( 'ct_tracks_footer_text_setting', array(
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'wp_kses_post',
+        'sanitize_callback' => 'wp_kses_post'
     ) );
     // control
     $wp_customize->add_control( 'ct_tracks_footer_text_setting', array(
         'type'     => 'textarea',
         'label'    => __( 'Edit the text in your footer', 'tracks' ),
         'section'  => 'ct-footer-text',
-        'settings' => 'ct_tracks_footer_text_setting',
+        'settings' => 'ct_tracks_footer_text_setting'
     ) );
 
     /***** Custom CSS *****/
@@ -369,13 +340,10 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct-custom-css', array(
         'title'      => __( 'Custom CSS', 'tracks' ),
-        'priority'   => 80,
-        'capability' => 'edit_theme_options'
+        'priority'   => 80
     ) );
     // setting
     $wp_customize->add_setting( 'ct_tracks_custom_css_setting', array(
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'wp_filter_nohtml_kses',
         'transport'         => 'postMessage'
     ) );
@@ -384,7 +352,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         'type'     => 'textarea',
         'label'    => __( 'Add Custom CSS Here:', 'tracks' ),
         'section'  => 'ct-custom-css',
-        'settings' => 'ct_tracks_custom_css_setting',
+        'settings' => 'ct_tracks_custom_css_setting'
     ) );
 
     /***** Premium Layout *****/
@@ -415,14 +383,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct_tracks_premium_layouts',array(
         'title'      => __( 'Premium Layouts', 'tracks' ),
-        'priority'   => 85,
-        'capability' => 'edit_theme_options'
+        'priority'   => 85
     ) );
     // setting - layout select
     $wp_customize->add_setting( 'premium_layouts_setting', array(
         'default'           => 'standard',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts'
     ) );
 
@@ -440,8 +405,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // setting - full-width image height
     $wp_customize->add_setting( 'premium_layouts_full_width_image_height', array(
         'default'           => 'image',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_image_height'
     ) );
     // control - full-width image height
@@ -458,8 +421,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // setting - full-width image height post
     $wp_customize->add_setting( 'premium_layouts_full_width_image_height_post', array(
         'default'           => 'image',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_image_height'
     ) );
     // control - full-width image height
@@ -476,8 +437,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	// setting - full-width image style
 	$wp_customize->add_setting( 'premium_layouts_full_width_image_style', array(
 		'default'           => 'overlay',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts_image_style'
 	) );
 	// control - full-width image style
@@ -494,8 +453,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // setting - full-width full post
     $wp_customize->add_setting( 'premium_layouts_full_width_full_post', array(
         'default'           => 'no',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_all_yes_no_setting_sanitization'
     ) );
     // control - full-width full post
@@ -515,14 +472,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // section
     $wp_customize->add_section( 'ct_tracks_additional_options', array(
         'title'      => __( 'Additional Options', 'tracks' ),
-        'priority'   => 90,
-        'capability' => 'edit_theme_options'
+        'priority'   => 90
     ) );
     // setting - return to top arrow
     $wp_customize->add_setting( 'additional_options_return_top_settings', array(
         'default'           => 'show',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings',
     ) );
     // control - return to top arrow
@@ -540,9 +494,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // setting - author meta
     $wp_customize->add_setting( 'additional_options_author_meta_settings', array(
         'default'           => 'show',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings',
+        'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings'
     ) );
     // control - author meta
     $wp_customize->add_control( 'additional_options_author_meta_settings', array(
@@ -559,9 +511,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	// setting - further reading
 	$wp_customize->add_setting( 'additional_options_further_reading_settings', array(
 		'default'           => 'show',
-		'type'              => 'theme_mod',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings',
+		'sanitize_callback' => 'ct_tracks_sanitize_all_show_hide_settings'
 	) );
 	// control - further
 	$wp_customize->add_control( 'additional_options_further_reading_settings', array(
@@ -578,9 +528,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // setting - image zoom
     $wp_customize->add_setting( 'additional_options_image_zoom_settings', array(
         'default'           => 'zoom',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_tracks_sanitize_image_zoom_settings',
+        'sanitize_callback' => 'ct_tracks_sanitize_image_zoom_settings'
     ) );
     // control - image zoom
     $wp_customize->add_control( 'additional_options_image_zoom_settings', array(
@@ -596,9 +544,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // setting - lazy loading
     $wp_customize->add_setting( 'additional_options_lazy_load_settings', array(
         'default'           => 'no',
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'ct_tracks_all_yes_no_setting_sanitization',
+        'sanitize_callback' => 'ct_tracks_all_yes_no_setting_sanitization'
     ) );
     // control - lazy loading
     $wp_customize->add_control( 'additional_options_lazy_load_settings', array(
@@ -614,9 +560,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
     // setting - excerpt length
     $wp_customize->add_setting( 'additional_options_excerpt_length_settings', array(
         'default'           => 15,
-        'type'              => 'theme_mod',
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'absint',
+        'sanitize_callback' => 'absint'
     ) );
     // control - excerpt length
     $wp_customize->add_control( 'additional_options_excerpt_length_settings', array(
@@ -639,14 +583,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         $wp_customize->add_section( 'ct_tracks_background_image', array(
             'title'      => __( 'Background Image', 'tracks' ),
             'description' => __('Use the Header Color section above if your new background image makes the menu hard to read.', 'tracks'),
-            'priority'   => 95,
-            'capability' => 'edit_theme_options'
+            'priority'   => 95
         ) );
         // setting
         $wp_customize->add_setting( 'ct_tracks_background_image_setting', array(
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_url_raw',
+            'sanitize_callback' => 'esc_url_raw'
         ) );
         // control
         $wp_customize->add_control( new WP_Customize_Image_Control(
@@ -670,14 +611,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		$wp_customize->add_section( 'ct_tracks_background_texture', array(
 			'title'      => __( 'Background Texture', 'tracks' ),
 			'description' => __('Use the Header Color section above if your new texture makes the menu hard to read.', 'tracks'),
-			'priority'   => 96,
-			'capability' => 'edit_theme_options'
+			'priority'   => 96
 		) );
 		// setting - display
 		$wp_customize->add_setting( 'ct_tracks_texture_display_setting', array(
 			'default'           => 'no',
-			'type'              => 'theme_mod',
-			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'ct_tracks_all_yes_no_setting_sanitization'
 		) );
 		// control - display
@@ -693,8 +631,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		) );
 		// setting - texture
 		$wp_customize->add_setting( 'ct_tracks_background_texture_setting', array(
-			'type'              => 'theme_mod',
-			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'ct_tracks_background_texture_setting_sanitization',
 		) );
 
@@ -724,14 +660,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         $wp_customize->add_section( 'ct_tracks_header_color', array(
             'title'      => __( 'Header Color', 'tracks' ),
             'description' => __('Change to dark if your new background makes the menu hard to read.', 'tracks'),
-            'priority'   => 99,
-            'capability' => 'edit_theme_options'
+            'priority'   => 99
         ) );
         // setting
         $wp_customize->add_setting( 'ct_tracks_header_color_setting', array(
             'default'           => 'light',
-            'type'              => 'theme_mod',
-            'capability'        => 'edit_theme_options',
             'sanitize_callback' => 'ct_tracks_sanitize_header_color_settings'
         ) );
         // control
