@@ -1036,7 +1036,7 @@ function ct_tracks_textures_array(){
 function ct_tracks_customize_preview_js() { ?>
 
 	<script>
-		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/tracks/tracks-theme-upgrades/" target="_blank">View Tracks Theme Upgrades <span>&rarr;</span></a></div>');
+		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/tracks/tracks-theme-upgrades/" target="_blank"><?php _e( 'View Tracks Theme Upgrades', 'tracks' ); ?> <span>&rarr;</span></a></div>');
 	</script>
 <?php }
 add_action('customize_controls_print_footer_scripts', 'ct_tracks_customize_preview_js');
