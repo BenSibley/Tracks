@@ -7,25 +7,10 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
     /***** Add PostMessage Support *****/
 
-    // Add postMessage support for site title and description.
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
     /***** Add Custom Controls *****/
-
-    // create url input control
-    class ct_tracks_url_input_control extends WP_Customize_Control {
-        public $type = 'url';
-
-        public function render_content() {
-            ?>
-            <label>
-                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-                <input type="url" <?php $this->link(); ?> value="<?php echo esc_url_raw( $this->value() ); ?>" />
-            </label>
-        <?php
-        }
-    }
 
     // create number input control
     class ct_tracks_number_input_control extends WP_Customize_Control {
@@ -252,12 +237,11 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
                 'sanitize_callback' => 'esc_url_raw'
             ) );
             // control
-            $wp_customize->add_control( new ct_tracks_url_input_control(
-                $wp_customize, $social_site, array(
-                    'label'   => $label, // brand name so i18n not required
-                    'section' => 'ct_tracks_social_icons',
-                    'priority'=> $priority,
-                )
+            $wp_customize->add_control( $social_site, array(
+                'type'    => 'url',
+                'label'   => $label, // brand name so i18n not required
+                'section' => 'ct_tracks_social_icons',
+                'priority'=> $priority
             ) );
 
             // increment priority to retain order
