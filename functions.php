@@ -236,7 +236,7 @@ if( ! function_exists( 'ct_tracks_excerpt_read_more_link' ) ) {
     function ct_tracks_excerpt_read_more_link( $output ) {
         global $post;
 
-        return $output . "<p><a class='more-link' href='" . get_permalink() . "'>" . __( 'Read the Post', 'tracks' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+        return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read the Post', 'tracks' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
     }
 }
 add_filter('the_excerpt', 'ct_tracks_excerpt_read_more_link');
@@ -563,7 +563,7 @@ if( ! function_exists( 'ct_tracks_category_link' ) ) {
         $category      = get_the_category();
         $category_link = get_category_link( $category[0]->term_id );
         $category_name = $category[0]->cat_name;
-        $html          = "<a href='" . $category_link . "'>" . $category_name . "</a>";
+        $html          = "<a href='" . esc_url( $category_link ) . "'>" . esc_attr( $category_name ) . "</a>";
         echo $html;
     }
 }
