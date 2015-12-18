@@ -12,20 +12,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
     /***** Add Custom Controls *****/
 
-    // create number input control
-    class ct_tracks_number_input_control extends WP_Customize_Control {
-        public $type = 'number';
-
-        public function render_content() {
-            ?>
-            <label>
-                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-                <input type="number" <?php $this->link(); ?> value="<?php echo $this->value(); ?>" />
-            </label>
-        <?php
-        }
-    }
-
     // create textarea control
     class ct_tracks_Textarea_Control extends WP_Customize_Control {
         public $type = 'textarea';
@@ -649,14 +635,12 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
         'sanitize_callback' => 'absint',
     ) );
     // control - excerpt length
-    $wp_customize->add_control( new ct_tracks_number_input_control(
-        $wp_customize, 'additional_options_excerpt_length_settings', array(
-            'label' => __('Word count in automatic excerpts', 'tracks'),
-            'section' => 'ct_tracks_additional_options',
-            'settings' => 'additional_options_excerpt_length_settings',
-            'type' => 'number',
-            'priority' => 30,
-        )
+    $wp_customize->add_control( 'additional_options_excerpt_length_settings', array(
+        'label'    => __( 'Word count in automatic excerpts', 'tracks' ),
+        'section'  => 'ct_tracks_additional_options',
+        'settings' => 'additional_options_excerpt_length_settings',
+        'type'     => 'number',
+        'priority' => 30
     ) );
 
     /***** Background Image *****/
