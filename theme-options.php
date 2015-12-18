@@ -2,7 +2,7 @@
 
 /* create theme options page */
 function ct_tracks_register_theme_page(){
-    add_theme_page( 'Tracks Dashboard', 'Tracks Dashboard', 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content');
+    add_theme_page( __( 'Tracks Dashboard', 'tracks' ), __( 'Tracks Dashboard', 'tracks' ), 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content');
 }
 add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
 
