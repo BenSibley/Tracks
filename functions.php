@@ -203,27 +203,32 @@ add_action('comment_form_defaults', 'ct_tracks_remove_comments_notes_after');
 if( ! function_exists( 'ct_tracks_excerpt' ) ) {
     function ct_tracks_excerpt() {
 
-        // make post variable available
         global $post;
-
-        // get the 'show full post' setting
-        $setting = get_theme_mod( 'premium_layouts_full_width_full_post' );
+        $setting        = get_theme_mod( 'premium_layouts_full_width_full_post' );
+        $read_more_text = get_theme_mod( 'read_more_text' );
 
         // check for the more tag
         $ismore = strpos( $post->post_content, '<!--more-->' );
 
 	    // if show full post is on and not on a search results page
         if ( ( $setting == 'yes' ) && get_theme_mod( 'premium_layouts_setting' ) == 'full-width' && ! is_search() ) {
-
-	        // use the read more link if present
 	        if ( $ismore ) {
-		        the_content( __( 'Read More', 'tracks' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+                // Has to be written this way because i18n text CANNOT be stored in a variable
+                if ( ! empty( $read_more_text ) ) {
+                    the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+                } else {
+                    the_content( __( 'Read the Post', 'tracks' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+                }
 	        } else {
 		        the_content();
 	        }
         } // use the read more link if present
         elseif ( $ismore ) {
-            the_content( __( 'Read More', 'tracks' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span>" );
+            if ( ! empty( $read_more_text ) ) {
+                the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+            } else {
+                the_content( __( 'Read the Post', 'tracks' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+            }
         } // otherwise the excerpt is automatic, so output it
         else {
             the_excerpt();
@@ -235,8 +240,13 @@ if( ! function_exists( 'ct_tracks_excerpt' ) ) {
 if( ! function_exists( 'ct_tracks_excerpt_read_more_link' ) ) {
     function ct_tracks_excerpt_read_more_link( $output ) {
         global $post;
+        $read_more_text = get_theme_mod( 'read_more_text' );
 
-        return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read the Post', 'tracks' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+        if ( ! empty( $read_more_text ) ) {
+            return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . $read_more_text . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+        } else {
+            return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read the Post', 'tracks' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+        }
     }
 }
 add_filter('the_excerpt', 'ct_tracks_excerpt_read_more_link');
