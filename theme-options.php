@@ -12,7 +12,7 @@ function ct_tracks_options_content(){
 	$customizer_url = add_query_arg(
 		array(
 			'url'    => site_url(),
-			'return' => admin_url('themes.php?page=tracks-options')
+            'return' => add_query_arg( 'page', 'tracks-options', admin_url( 'themes.php' ) )
 		),
 		admin_url('customize.php')
 	);
