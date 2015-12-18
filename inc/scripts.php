@@ -14,7 +14,7 @@ function ct_tracks_load_javascript_files() {
 	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
 
 	// enqueue the stylesheet
-	wp_enqueue_style('style', get_stylesheet_uri() );
+	wp_enqueue_style('ct-tracks-style', get_stylesheet_uri() );
 
 	// enqueue any required layout-specific stylesheets
 	if(get_theme_mod('premium_layouts_setting') == 'full-width'){
@@ -44,7 +44,7 @@ function ct_tracks_enqueue_admin_styles($hook){
 	if ( 'appearance_page_tracks-options' == $hook ) {
 
 		// admin stylesheet
-		wp_enqueue_style('style-admin', get_template_directory_uri() . '/styles/style-admin.css');
+		wp_enqueue_style('ct-tracks-style-admin', get_template_directory_uri() . '/styles/style-admin.css');
 	}
 
 	// Featured Videos
@@ -57,10 +57,10 @@ function ct_tracks_enqueue_admin_styles($hook){
 			wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/fitvids.js', array( 'jquery' ), '', true );
 
 			// enqueue admin JS file
-			wp_enqueue_script( 'admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array( 'jquery', 'fitvids' ), '', true );
+			wp_enqueue_script( 'ct-tracks-admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array( 'jquery', 'fitvids' ), '', true );
 
 			// admin stylesheet
-			wp_enqueue_style( 'style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
+			wp_enqueue_style( 'ct-tracks-style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
 		}
 	}
 }
@@ -73,7 +73,7 @@ function ct_tracks_enqueue_customizer_styles(){
 	wp_enqueue_script('ct-tracks-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js',array('jquery'),'',true);
 
 	// CSS for cusotmizer
-	wp_enqueue_style('ct-customizer-css', get_template_directory_uri() . '/styles/style-customizer.css');
+	wp_enqueue_style('ct-tracks-customizer-css', get_template_directory_uri() . '/styles/style-customizer.css');
 }
 add_action('customize_controls_enqueue_scripts','ct_tracks_enqueue_customizer_styles');
 
