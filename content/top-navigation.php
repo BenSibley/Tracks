@@ -1,10 +1,11 @@
 <?php
 
-$social_icon_setting = get_theme_mod('social_icons_display_setting');
+$social_icon_setting = get_theme_mod( 'social_icons_display_setting' );
 
-if( ( has_nav_menu( 'secondary' ) ) ||
-    ( get_theme_mod('search_input_setting') == 'show' ) ||
-    ( $social_icon_setting == 'header-footer' || $social_icon_setting == 'header' ) ) {
+if ( ( has_nav_menu( 'secondary' ) ) ||
+     ( get_theme_mod( 'search_input_setting' ) == 'show' ) ||
+     ( $social_icon_setting == 'header-footer' || $social_icon_setting == 'header' )
+) {
 
 	echo "<div class='top-navigation'><div class='container'>";
 
