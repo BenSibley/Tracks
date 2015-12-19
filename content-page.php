@@ -1,6 +1,5 @@
 <div class='entry'>
 	<?php
-	// check for Featured Video
 	$video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
 
 	// if has a video, embed it instead of featured image

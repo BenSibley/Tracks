@@ -50,12 +50,10 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 	}
 }
 
-// add the social profile boxes to the user screen.
 function ct_tracks_add_social_profile_settings( $user ) {
 
 	$social_sites = ct_tracks_social_array();
-
-	$user_id = get_current_user_id();
+	$user_id      = get_current_user_id();
 
 	// only added for contributors and above
 	if ( ! current_user_can( 'edit_posts', $user_id ) ) {
@@ -126,7 +124,6 @@ function ct_tracks_add_social_profile_settings( $user ) {
 	</table>
 	<?php
 }
-
 add_action( 'show_user_profile', 'ct_tracks_add_social_profile_settings' );
 add_action( 'edit_user_profile', 'ct_tracks_add_social_profile_settings' );
 
@@ -151,6 +148,5 @@ function ct_tracks_save_social_profiles( $user_id ) {
 		}
 	}
 }
-
 add_action( 'personal_options_update', 'ct_tracks_save_social_profiles' );
 add_action( 'edit_user_profile_update', 'ct_tracks_save_social_profiles' );

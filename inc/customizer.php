@@ -1,6 +1,5 @@
 <?php
 
-/* Add customizer panels, sections, settings, and controls */
 add_action( 'customize_register', 'ct_tracks_add_customizer_content' );
 
 function ct_tracks_add_customizer_content( $wp_customize ) {
@@ -11,6 +10,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 	/***** Add Custom Controls *****/
+
 	// create multi-checkbox/select control
 	class ct_tracks_Multi_Checkbox_Control extends WP_Customize_Control {
 		public $type = 'multi-checkbox';
@@ -696,7 +696,6 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
 /***** Custom Sanitization Functions *****/
 
-// sanitize tagline display setting
 function ct_tracks_sanitize_tagline_display( $input ) {
 	$valid = array(
 		'header-footer' => __( 'Header & Footer', 'tracks' ),
@@ -716,7 +715,6 @@ function ct_tracks_sanitize_email( $input ) {
 	return sanitize_email( $input );
 }
 
-// sanitize social icon display setting
 function ct_tracks_sanitize_social_icons_display( $input ) {
 	$valid = array(
 		'header-footer' => __( 'Header & Footer', 'tracks' ),
@@ -755,7 +753,6 @@ function ct_tracks_all_yes_no_setting_sanitization( $input ) {
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
-// sanitize comment display multi-check
 function ct_tracks_sanitize_comments_setting( $input ) {
 
 	$valid = array(
@@ -770,7 +767,6 @@ function ct_tracks_sanitize_comments_setting( $input ) {
 	}
 }
 
-// sanitize image zoom setting
 function ct_tracks_sanitize_image_zoom_settings( $input ) {
 
 	$valid = array(
@@ -781,7 +777,6 @@ function ct_tracks_sanitize_image_zoom_settings( $input ) {
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
-// sanitize premium layout setting
 function ct_tracks_sanitize_premium_layouts( $input ) {
 
 	// no i18n because these are product names
@@ -796,7 +791,6 @@ function ct_tracks_sanitize_premium_layouts( $input ) {
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
-// sanitize full-width image height setting
 function ct_tracks_sanitize_premium_layouts_image_height( $input ) {
 	$valid = array(
 		'image'     => _x( 'size based on image size', 'size of the featured image', 'tracks' ),
@@ -815,7 +809,6 @@ function ct_tracks_sanitize_premium_layouts_image_style( $input ) {
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
-// sanitize background texture setting
 function ct_tracks_background_texture_setting_sanitization( $input ) {
 
 	$textures = ct_tracks_textures_array();
@@ -825,7 +818,6 @@ function ct_tracks_background_texture_setting_sanitization( $input ) {
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
-// sanitize header color setting
 function ct_tracks_sanitize_header_color_settings( $input ) {
 	$valid = array(
 		'light' => __( 'Light', 'tracks' ),
@@ -841,7 +833,6 @@ function ct_tracks_sanitize_text( $input ) {
 
 /***** Helper Functions *****/
 
-// array of textures used as choices in texture setting
 function ct_tracks_textures_array() {
 
 	$textures = array(
@@ -895,5 +886,4 @@ function ct_tracks_customize_preview_js() { ?>
 		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/tracks/tracks-theme-upgrades/" target="_blank"><?php _e( 'View Tracks Theme Upgrades', 'tracks' ); ?> <span>&rarr;</span></a></div>');
 	</script>
 <?php }
-
 add_action( 'customize_controls_print_footer_scripts', 'ct_tracks_customize_preview_js' );

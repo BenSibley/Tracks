@@ -1,19 +1,15 @@
 <?php
 
-// register and enqueue all front-end scripts used by Tracks
+// Front-end
 function ct_tracks_load_javascript_files() {
 
-	// register Google Fonts
 	wp_register_style( 'ct-tracks-google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700' );
 	wp_enqueue_style( 'ct-tracks-google-fonts' );
 
-	// enqueue main JS file
 	wp_enqueue_script( 'ct-tracks-production', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 
-	// enqueue Font Awesome
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
 
-	// enqueue the stylesheet
 	wp_enqueue_style( 'ct-tracks-style', get_stylesheet_uri() );
 
 	// enqueue any required layout-specific stylesheets
@@ -32,16 +28,12 @@ function ct_tracks_load_javascript_files() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_tracks_load_javascript_files' );
 
-// enqueue back-end scripts
+// Back-end
 function ct_tracks_enqueue_admin_styles( $hook ) {
 
-	// Theme Options and Post Editor
-	if ( 'appearance_page_tracks-options' == $hook ) {
-
-		// admin stylesheet
+	if ( $hook == 'appearance_page_tracks-options' ) {
 		wp_enqueue_style( 'ct-tracks-style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
 	}
 
@@ -49,35 +41,23 @@ function ct_tracks_enqueue_admin_styles( $hook ) {
 	if ( trim( get_option( 'ct_tracks_featured_videos_license_key_status' ) ) == 'valid' ) {
 
 		// Post Editor
-		if ( 'post.php' == $hook || 'post-new.php' == $hook ) {
-
-			// enqueue fitvids
+		if ( $hook == 'post.php' || $hook == 'post-new.php' ) {
 			wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/fitvids.js', array( 'jquery' ), '', true );
-
-			// enqueue admin JS file
 			wp_enqueue_script( 'ct-tracks-admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array(
 				'jquery',
 				'fitvids'
 			), '', true );
-
-			// admin stylesheet
 			wp_enqueue_style( 'ct-tracks-style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
 		}
 	}
 }
-
 add_action( 'admin_enqueue_scripts', 'ct_tracks_enqueue_admin_styles' );
 
-// enqueues customizer scripts
+// Customizer
 function ct_tracks_enqueue_customizer_styles() {
-
-	// JS for customizer
 	wp_enqueue_script( 'ct-tracks-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js', array( 'jquery' ), '', true );
-
-	// CSS for cusotmizer
 	wp_enqueue_style( 'ct-tracks-customizer-css', get_template_directory_uri() . '/styles/style-customizer.css' );
 }
-
 add_action( 'customize_controls_enqueue_scripts', 'ct_tracks_enqueue_customizer_styles' );
 
 /*
@@ -85,10 +65,6 @@ add_action( 'customize_controls_enqueue_scripts', 'ct_tracks_enqueue_customizer_
  * transport => postMessage
  */
 function ct_tracks_enqueue_customizer_post_message_scripts() {
-
-	// JS for live updating with customizer input
 	wp_enqueue_script( 'ct-tracks-post-message-js', get_template_directory_uri() . '/js/build/postMessage.min.js', array( 'jquery' ), '', true );
-
 }
-
 add_action( 'customize_preview_init', 'ct_tracks_enqueue_customizer_post_message_scripts' );

@@ -6,7 +6,6 @@ if ( ( has_nav_menu( 'secondary' ) ) ||
      ( get_theme_mod( 'search_input_setting' ) == 'show' ) ||
      ( $social_icon_setting == 'header-footer' || $social_icon_setting == 'header' )
 ) {
-
 	echo "<div class='top-navigation'><div class='container'>";
 
 	get_template_part( 'menu', 'secondary' );
