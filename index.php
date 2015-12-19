@@ -17,7 +17,6 @@
 
 // include loop pagination except for on bbPress Forum root
 if( function_exists( 'is_bbpress' ) ) {
-
     if( ! ( is_bbpress() && is_archive() ) ) {
         the_posts_pagination();
     }

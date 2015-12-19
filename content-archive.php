@@ -1,6 +1,5 @@
 <div <?php post_class(); ?>>
 	<?php
-	// output Featured Image
 	echo '<a class="featured-image-link" href="' . esc_url( get_permalink() ) . '">';
 		ct_tracks_featured_image();
 	echo '</a>';

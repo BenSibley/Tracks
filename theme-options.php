@@ -1,12 +1,10 @@
 <?php
 
-/* create theme options page */
 function ct_tracks_register_theme_page(){
     add_theme_page( __( 'Tracks Dashboard', 'tracks' ), __( 'Tracks Dashboard', 'tracks' ), 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content');
 }
 add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
 
-/* callback used to add content to options page */
 function ct_tracks_options_content(){
 
 	$customizer_url = add_query_arg(
@@ -19,9 +17,7 @@ function ct_tracks_options_content(){
 	?>
     <div id="tracks-dashboard-wrap" class="wrap">
         <h2><?php _e('Tracks Dashboard', 'tracks'); ?></h2>
-
         <?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'dashboard'; ?>
-
         <h2 class="nav-tab-wrapper">
             <a href="?page=tracks-options&tab=dashboard" class="nav-tab <?php echo $active_tab == 'dashboard' ? 'nav-tab-active' : ''; ?>"><?php _e('Dashboard', 'tracks'); ?></a>
             <a href="?page=tracks-options&tab=licenses" class="nav-tab <?php echo $active_tab == 'licenses' ? 'nav-tab-active' : ''; ?>"><?php _e('Licenses', 'tracks'); ?></a>
