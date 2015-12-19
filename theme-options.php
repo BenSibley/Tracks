@@ -140,8 +140,13 @@ function ct_tracks_license_form_output($upgrades){
             </table>
             <?php if( $status !== false && $status == 'valid' ) {
 
-	            // set variable for customizer url
-	            $customizer_url = 'customize.php';
+                $customizer_url = add_query_arg(
+                    array(
+                        'url'    => site_url(),
+                        'return' => add_query_arg( 'page', 'tracks-options', admin_url( 'themes.php' ) )
+                    ),
+                    admin_url('customize.php')
+                );
 
                 if($upgrade == 'background_images'){ ?>
                     <p class="valid"><?php printf( __('You can now add a background image using the "Background Image" section in the <a href="%s">Customizer</a>', 'tracks'), esc_url( $customizer_url ) ); ?>.</p><?php }
