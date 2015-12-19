@@ -143,12 +143,10 @@ function ct_tracks_license_form_output($upgrades){
 	            // set variable for customizer url
 	            $customizer_url = 'customize.php';
 
-	            $textures_plugin_url = 'http://www.competethemes.com/wp-content/uploads/plugins/tracks-background-textures.zip';
-
                 if($upgrade == 'background_images'){ ?>
                     <p class="valid"><?php printf( __('You can now add a background image using the "Background Image" section in the <a href="%s">Customizer</a>', 'tracks'), esc_url( $customizer_url ) ); ?>.</p><?php }
                 elseif($upgrade == 'background_textures'){ ?>
-                    <p class="valid"><?php printf( __("If you haven't already, please upload and activate the <a href='%s'>Background Texture plugin</a>", 'tracks'), esc_url( $textures_plugin_url ) ); ?>.</p><?php }
+                    <p class="valid"><?php printf( __("If you haven't already, please upload and activate the <a href='%s'>Background Texture plugin</a>", 'tracks'), 'http://www.competethemes.com/wp-content/uploads/plugins/tracks-background-textures.zip' ); ?>.</p><?php }
                 elseif($upgrade == 'featured_videos'){ ?>
 	                <p class="valid"><?php _e('You can now add videos to Posts and Pages. Use the Featured Videos box under the Post Editor to get started', 'tracks'); ?>.</p><?php }
                 else { ?>
