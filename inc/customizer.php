@@ -703,11 +703,7 @@ function ct_tracks_sanitize_tagline_display($input){
         'footer' => __('Footer', 'tracks')
     );
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /*
@@ -728,11 +724,7 @@ function ct_tracks_sanitize_social_icons_display($input){
         'no' => __('Do not display', 'tracks')
     );
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /*
@@ -745,11 +737,7 @@ function ct_tracks_sanitize_all_show_hide_settings($input){
         'hide' => __('Hide', 'tracks')
     );
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /*
@@ -763,17 +751,12 @@ function ct_tracks_all_yes_no_setting_sanitization($input){
         'no' => __('No', 'tracks')
     );
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 // sanitize comment display multi-check
 function ct_tracks_sanitize_comments_setting($input){
 
-    // valid data
     $valid = array(
         'posts'   => __('Posts', 'tracks'),
         'pages'  => __('Pages', 'tracks'),
@@ -781,30 +764,20 @@ function ct_tracks_sanitize_comments_setting($input){
         'none'  => __('Do not show', 'tracks')
     );
 
-    // loop through array
     foreach( $input as $selection ) {
-
-        // if it's in the valid data, return it
-        if ( array_key_exists( $selection, $valid ) ) {
-            return $input;
-        } else {
-            return '';
-        }
+        return array_key_exists( $selection, $valid ) ? $input : '';
     }
 }
 
 // sanitize image zoom setting
 function ct_tracks_sanitize_image_zoom_settings($input){
+
     $valid = array(
         'zoom' => __('Zoom', 'tracks'),
         'no-zoom' => __('Do not Zoom', 'tracks')
     );
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 // sanitize premium layout setting
@@ -819,11 +792,7 @@ function ct_tracks_sanitize_premium_layouts($input){
         'two-column-images' => 'Two-Column Images',
     );
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 // sanitize full-width image height setting
@@ -833,11 +802,7 @@ function ct_tracks_sanitize_premium_layouts_image_height($input){
 	    '2:1-ratio'   => _x('2:1 width/height ratio like posts', 'size of the featured image', 'tracks')
     );
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 function ct_tracks_sanitize_premium_layouts_image_style( $input ) {
 	$valid = array(
@@ -845,11 +810,7 @@ function ct_tracks_sanitize_premium_layouts_image_style( $input ) {
 		'title'   => __('Title below', 'tracks')
 	);
 
-    if ( array_key_exists( $input, $valid ) ) {
-	    return $input;
-    } else {
-	    return '';
-    }
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 // sanitize background texture setting
@@ -859,11 +820,7 @@ function ct_tracks_background_texture_setting_sanitization($input){
 
 	$valid = $textures;
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 // sanitize header color setting
@@ -873,11 +830,7 @@ function ct_tracks_sanitize_header_color_settings($input){
         'dark' => __('Dark', 'tracks')
     );
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
+    return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 function ct_tracks_sanitize_text( $input ) {
