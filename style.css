@@ -402,6 +402,22 @@ a img {
   clear: both;
 }
 
+#breadcrumbs {
+  margin: 1.5em auto;
+  width: 88.88%;
+  max-width: 1280px;
+  color: #aaaaaa;
+}
+#breadcrumbs a {
+  color: #fff;
+}
+
+.blog #breadcrumbs,
+.archive #breadcrumbs,
+.search #breadcrumbs {
+  width: 100%;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
   html {
     -webkit-text-size-adjust: none;

@@ -19,3 +19,6 @@
             </div>
         </header>
         <div id="main" class="main" role="main">
+            <?php if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<p id="breadcrumbs">' , '</p>' );
+            } ?>

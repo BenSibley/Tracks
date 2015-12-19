@@ -335,6 +335,26 @@ a img {
   clear: both;
 }
 
+// Yoast breadcrumbs
+#breadcrumbs {
+  margin: $baseline-height auto;
+  width: 88.88%;
+  max-width: 1280px;
+  color: $gray-light;
+
+  a {
+    color: #fff;
+  }
+}
+.blog,
+.archive,
+.search {
+
+  #breadcrumbs {
+    width: 100%;
+  }
+}
+
 // stop iphone from zooming in on landscape view
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape)
 {
