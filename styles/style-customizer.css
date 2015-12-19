@@ -56,6 +56,21 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
           transition: right 0.15s ease-in-out;
 }
 
+#customize-control-premium_layouts_full_width_image_height,
+#customize-control-premium_layouts_full_width_image_height_post,
+#customize-control-premium_layouts_full_width_image_style,
+#customize-control-premium_layouts_full_width_full_post,
+#customize-control-premium_layouts_two_column_images_content_display {
+  display: none !important;
+}
+#customize-control-premium_layouts_full_width_image_height.show,
+#customize-control-premium_layouts_full_width_image_height_post.show,
+#customize-control-premium_layouts_full_width_image_style.show,
+#customize-control-premium_layouts_full_width_full_post.show,
+#customize-control-premium_layouts_two_column_images_content_display.show {
+  display: list-item !important;
+}
+
 #accordion-section-colors {
   display: none !important;
 }

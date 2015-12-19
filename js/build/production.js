@@ -112,7 +112,6 @@ jQuery(function($){
     // wait until image loaded
     $(window).bind('load', function() {
         separatePostImage();
-        displayLayoutOptions();
     });
 
     // ===== Window Resize ===== //
@@ -298,38 +297,6 @@ jQuery(function($){
             *  Move search-form width left minus site padding plus extra 7px space */
             $('#search-icon').css('left', -searchFormWidth + sitePadding - 5);
         }
-    }
-
-    // ===== Show/Hide Customizer Options ==== //
-
-    function displayLayoutOptions(){
-
-        var imageHeightOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_image_height');
-        var imageHeightPostOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_image_height_post');
-        var imageStyleOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_image_style');
-        var fullPostOption = $('html', window.parent.document).find('#customize-control-premium_layouts_full_width_full_post');
-        var contentDisplayOption = $('html', window.parent.document).find('#customize-control-premium_layouts_two_column_images_content_display');
-
-        imageHeightOption.hide();
-        imageHeightPostOption.hide();
-        imageStyleOption.hide();
-        fullPostOption.hide();
-        contentDisplayOption.hide();
-
-        // if the layout is set to full-width images, display the image height option
-        $('html', window.parent.document).find('#customize-control-premium_layouts_setting option').each(function(){
-            if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width-images'){
-                imageHeightOption.show();
-                imageStyleOption.show();
-                imageHeightPostOption.show();
-            }
-            if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width'){
-                fullPostOption.show();
-            }
-            if($(this).attr('selected') == 'selected' && $(this).val() == 'two-column-images'){
-                contentDisplayOption.show();
-            }
-        });
     }
 
     // ===== Full-width Images - create separation between image and post ===== //

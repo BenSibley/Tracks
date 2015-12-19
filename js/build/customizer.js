@@ -78,6 +78,40 @@ jQuery(document).ready(function($) {
     // move control descriptions for certain sections (advertisements) below the control
     // section (Layouts) find description and append to parent li
     $('#customize-control-premium_layouts_setting').find('.customize-control-description').appendTo( '#customize-control-premium_layouts_setting' ).css('margin-top', '12px');
+
+    displayLayoutOptions();
+
+    panel.find('#customize-control-premium_layouts_setting').find('select').bind('change', displayLayoutOptions );
+
+    function displayLayoutOptions(){
+
+        var imageHeightOption = panel.find('#customize-control-premium_layouts_full_width_image_height');
+        var imageHeightPostOption = panel.find('#customize-control-premium_layouts_full_width_image_height_post');
+        var imageStyleOption = panel.find('#customize-control-premium_layouts_full_width_image_style');
+        var fullPostOption = panel.find('#customize-control-premium_layouts_full_width_full_post');
+        var contentDisplayOption = panel.find('#customize-control-premium_layouts_two_column_images_content_display');
+
+        imageHeightOption.removeClass('show');
+        imageStyleOption.removeClass('show');
+        imageHeightPostOption.removeClass('show');
+        fullPostOption.removeClass('show');
+        contentDisplayOption.removeClass('show');
+
+        // if the layout is set to full-width images, display the image height option
+        panel.find('#customize-control-premium_layouts_setting option').each(function(){
+            if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width-images'){
+                imageHeightOption.addClass('show');
+                imageStyleOption.addClass('show');
+                imageHeightPostOption.addClass('show');
+            }
+            if($(this).attr('selected') == 'selected' && $(this).val() == 'full-width'){
+                fullPostOption.addClass('show');
+            }
+            if($(this).attr('selected') == 'selected' && $(this).val() == 'two-column-images'){
+                contentDisplayOption.addClass('show');
+            }
+        });
+    }
 });
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>

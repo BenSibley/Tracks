@@ -59,6 +59,18 @@
   }
 }
 
+#customize-control-premium_layouts_full_width_image_height,
+#customize-control-premium_layouts_full_width_image_height_post,
+#customize-control-premium_layouts_full_width_image_style,
+#customize-control-premium_layouts_full_width_full_post,
+#customize-control-premium_layouts_two_column_images_content_display {
+  display: none !important;
+
+  &.show {
+    display: list-item !important;
+  }
+}
+
 // Hide color section (bug since WP 4.3)
 #accordion-section-colors {
   display: none !important;
