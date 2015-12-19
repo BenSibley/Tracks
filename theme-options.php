@@ -170,44 +170,13 @@ function ct_tracks_license_form_output($upgrades){
 
 /* Register the options so licenses can be saved to db */
 
-function ct_tracks_full_width_register_option() {
-    // creates our settings in the options table
+function ct_tracks_register_all_license_options() {
     register_setting('ct_tracks_full_width_license', 'ct_tracks_full_width_license_key', 'ct_tracks_full_width_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_full_width_register_option');
-
-function ct_tracks_full_width_images_register_option() {
-    // creates our settings in the options table
     register_setting('ct_tracks_full_width_images_license', 'ct_tracks_full_width_images_license_key', 'ct_tracks_full_width_images_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_full_width_images_register_option');
-
-function ct_tracks_two_column_register_option() {
-    // creates our settings in the options table
     register_setting('ct_tracks_two_column_license', 'ct_tracks_two_column_license_key', 'ct_tracks_two_column_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_two_column_register_option');
-
-function ct_tracks_two_column_images_register_option() {
-    // creates our settings in the options table
     register_setting('ct_tracks_two_column_images_license', 'ct_tracks_two_column_images_license_key', 'ct_tracks_two_column_images_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_two_column_images_register_option');
-
-function ct_tracks_background_images_register_option() {
-    // creates our settings in the options table
     register_setting('ct_tracks_background_images_license', 'ct_tracks_background_images_license_key', 'ct_tracks_background_images_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_background_images_register_option');
-
-function ct_tracks_background_textures_register_option() {
-    // creates our settings in the options table
     register_setting('ct_tracks_background_textures_license', 'ct_tracks_background_textures_license_key', 'ct_tracks_background_textures_sanitize_license' );
+    register_setting('ct_tracks_featured_videos_license', 'ct_tracks_featured_videos_license_key', 'ct_tracks_featured_videos_sanitize_license' );
 }
-add_action('admin_init', 'ct_tracks_background_textures_register_option');
-
-function ct_tracks_featured_videos_register_option() {
-	// creates our settings in the options table
-	register_setting('ct_tracks_featured_videos_license', 'ct_tracks_featured_videos_license_key', 'ct_tracks_featured_videos_sanitize_license' );
-}
-add_action('admin_init', 'ct_tracks_featured_videos_register_option');
+add_action('admin_init', 'ct_tracks_register_all_license_options');
