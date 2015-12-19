@@ -3,7 +3,6 @@
 function ct_tracks_register_theme_page() {
 	add_theme_page( __( 'Tracks Dashboard', 'tracks' ), __( 'Tracks Dashboard', 'tracks' ), 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content' );
 }
-
 add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
 
 function ct_tracks_options_content() {
@@ -29,10 +28,8 @@ function ct_tracks_options_content() {
 		if ( $active_tab == 'dashboard' ) { ?>
 			<div class="content-customization content">
 				<h3><?php _e( 'Customization', 'tracks' ); ?></h3>
-
 				<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Tracks', 'tracks' ); ?>
 					.</p>
-
 				<p>
 					<a class="button-primary"
 					   href="<?php echo esc_url( $customizer_url ); ?>"><?php _e( 'Use Customizer', 'tracks' ) ?></a>
@@ -40,10 +37,8 @@ function ct_tracks_options_content() {
 			</div>
 			<div class="content-support content">
 				<h3><?php _e( 'Support', 'tracks' ); ?></h3>
-
 				<p><?php _e( "You can find the knowledgebase, changelog, forum, and more in the Tracks Support Center", "tracks" ); ?>
 					.</p>
-
 				<p>
 					<a target="_blank" class="button-primary"
 					   href="https://www.competethemes.com/documentation/tracks-support-center/"><?php _e( 'Visit Support Center', 'tracks' ); ?></a>
@@ -51,19 +46,15 @@ function ct_tracks_options_content() {
 			</div>
 			<div class="content-premium-upgrades content">
 				<h3><?php _e( 'Premium Upgrades ($9-15)', 'tracks' ); ?></h3>
-
 				<p><?php _e( 'Make your site more customizable and beautiful with premium upgrades', 'tracks' ); ?>.</p>
-
 				<p><a target="_blank" class="button-primary"
 				      href="https://www.competethemes.com/tracks/tracks-theme-upgrades/"><?php _e( 'Visit Upgrades Gallery', 'tracks' ); ?></a>
 				</p>
 			</div>
 			<div class="content content-resources">
 				<h3><?php _e( 'WordPress Resources', 'tracks' ); ?></h3>
-
 				<p><?php _e( "Save time and money searching for WordPress products by following our recommendations", "tracks" ); ?>
 					.</p>
-
 				<p>
 					<a target="_blank" class="button-primary"
 					   href="https://www.competethemes.com/wordpress-resources/"><?php _e( 'View Resources', 'tracks' ); ?></a>
@@ -73,14 +64,12 @@ function ct_tracks_options_content() {
 			<div class="content-licenses">
 				<h3><?php _e( 'Premium Layouts', 'tracks' ); ?></h3>
 				<?php
-				// array of available layouts
 				$layouts = array( 'two_column', 'two_column_images', 'full_width', 'full_width_images' );
 				// create form for each layout
 				ct_tracks_license_form_output( $layouts );
 				?>
 				<h3><?php _e( 'Premium Features', 'tracks' ); ?></h3>
 				<?php
-				// array of available features
 				$features = array( 'background_images', 'background_textures', 'featured_videos' );
 				// create form for each feature
 				ct_tracks_license_form_output( $features );
@@ -186,7 +175,6 @@ function ct_tracks_license_form_output( $upgrades ) {
 }
 
 /* Register the options so licenses can be saved to db */
-
 function ct_tracks_register_all_license_options() {
 	register_setting( 'ct_tracks_full_width_license', 'ct_tracks_full_width_license_key', 'ct_tracks_full_width_sanitize_license' );
 	register_setting( 'ct_tracks_full_width_images_license', 'ct_tracks_full_width_images_license_key', 'ct_tracks_full_width_images_sanitize_license' );
@@ -196,5 +184,4 @@ function ct_tracks_register_all_license_options() {
 	register_setting( 'ct_tracks_background_textures_license', 'ct_tracks_background_textures_license_key', 'ct_tracks_background_textures_sanitize_license' );
 	register_setting( 'ct_tracks_featured_videos_license', 'ct_tracks_featured_videos_license_key', 'ct_tracks_featured_videos_sanitize_license' );
 }
-
 add_action( 'admin_init', 'ct_tracks_register_all_license_options' );

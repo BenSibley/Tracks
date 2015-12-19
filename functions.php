@@ -7,15 +7,9 @@ if ( ! isset( $content_width ) ) {
 if ( ! function_exists( 'ct_tracks_theme_setup' ) ) {
 	function ct_tracks_theme_setup() {
 
-		// from WordPress core not theme hybrid
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'title-tag' );
-
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
 		add_theme_support( 'html5', array(
 			'search-form',
 			'comment-form',
@@ -23,13 +17,22 @@ if ( ! function_exists( 'ct_tracks_theme_setup' ) ) {
 			'gallery',
 			'caption'
 		) );
-
-		// adds support for Jetpack infinite scroll feature
 		add_theme_support( 'infinite-scroll', array(
 			'container' => 'loop-container',
 			'footer'    => 'overflow-container',
 			'render'    => 'ct_tracks_infinite_scroll_render'
 		) );
+
+		require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
+		foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $filename ) {
+			include $filename;
+		}
+		foreach ( glob( trailingslashit( get_template_directory() ) . 'licenses/*.php' ) as $filename ) {
+			include $filename;
+		}
+		foreach ( glob( trailingslashit( get_template_directory() ) . 'licenses/functions/*.php' ) as $filename ) {
+			include $filename;
+		}
 
 		register_nav_menus( array(
 			'primary'   => __( 'Primary', 'tracks' ),
@@ -37,23 +40,6 @@ if ( ! function_exists( 'ct_tracks_theme_setup' ) ) {
 			'footer'    => __( 'Footer', 'tracks' )
 		) );
 
-		// adds theme options page
-		require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
-
-		// add inc folder files
-		foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $filename ) {
-			include $filename;
-		}
-		// add license folder files
-		foreach ( glob( trailingslashit( get_template_directory() ) . 'licenses/*.php' ) as $filename ) {
-			include $filename;
-		}
-		// add license/functions folder files
-		foreach ( glob( trailingslashit( get_template_directory() ) . 'licenses/functions/*.php' ) as $filename ) {
-			include $filename;
-		}
-
-		// load text domain
 		load_theme_textdomain( 'tracks', get_template_directory() . '/languages' );
 	}
 }
@@ -61,7 +47,7 @@ add_action( 'after_setup_theme', 'ct_tracks_theme_setup', 10 );
 
 function ct_tracks_register_widget_areas() {
 
-	/* register after post content widget area */
+	// after post content
 	register_sidebar( array(
 		'name'          => __( 'After Post Content', 'tracks' ),
 		'id'            => 'after-post-content',
@@ -72,7 +58,7 @@ function ct_tracks_register_widget_areas() {
 		'after_title'   => '</h2>'
 	) );
 
-	/* register after page content widget area */
+	// after page content
 	register_sidebar( array(
 		'name'          => __( 'After Page Content', 'tracks' ),
 		'id'            => 'after-page-content',
@@ -83,7 +69,7 @@ function ct_tracks_register_widget_areas() {
 		'after_title'   => '</h2>'
 	) );
 
-	/* register footer widget area */
+	// footer
 	register_sidebar( array(
 		'name'          => __( 'Footer', 'tracks' ),
 		'id'            => 'footer',
@@ -94,15 +80,12 @@ function ct_tracks_register_widget_areas() {
 		'after_title'   => '</h4>'
 	) );
 }
-
 add_action( 'widgets_init', 'ct_tracks_register_widget_areas' );
 
-/* added to customize the comments. Same as default except -> added use of gravatar images for comment authors */
 if ( ! function_exists( 'ct_tracks_customize_comments' ) ) {
 	function ct_tracks_customize_comments( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		global $post;
-
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
@@ -133,7 +116,6 @@ if ( ! function_exists( 'ct_tracks_customize_comments' ) ) {
 	}
 }
 
-/* added HTML5 placeholders for each default field and aria-required to required */
 if ( ! function_exists( 'ct_tracks_update_fields' ) ) {
 	function ct_tracks_update_fields( $fields ) {
 
@@ -148,14 +130,12 @@ if ( ! function_exists( 'ct_tracks_update_fields' ) ) {
             <input placeholder="' . __( "Your Name", "tracks" ) . $label . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
     	</p>';
-
 		$fields['email'] =
 			'<p class="comment-form-email">
             <label for="email" class="screen-reader-text">' . __( "Your Email", "tracks" ) . '</label>
             <input placeholder="' . __( "Your Email", "tracks" ) . $label . '" id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
     	</p>';
-
 		$fields['url'] =
 			'<p class="comment-form-url">
             <label for="url" class="screen-reader-text">' . __( "Your Website URL", "tracks" ) . '</label>
@@ -182,27 +162,21 @@ if ( ! function_exists( 'ct_tracks_update_comment_field' ) ) {
 }
 add_filter( 'comment_form_field_comment', 'ct_tracks_update_comment_field' );
 
-// remove allowed tags text after comment form
 if ( ! function_exists( 'ct_tracks_remove_comments_notes_after' ) ) {
 	function ct_tracks_remove_comments_notes_after( $defaults ) {
-
 		$defaults['comment_notes_after'] = '';
-
 		return $defaults;
 	}
 }
 add_action( 'comment_form_defaults', 'ct_tracks_remove_comments_notes_after' );
 
-// excerpt handling
 if ( ! function_exists( 'ct_tracks_excerpt' ) ) {
 	function ct_tracks_excerpt() {
 
 		global $post;
 		$setting        = get_theme_mod( 'premium_layouts_full_width_full_post' );
 		$read_more_text = get_theme_mod( 'read_more_text' );
-
-		// check for the more tag
-		$ismore = strpos( $post->post_content, '<!--more-->' );
+		$ismore         = strpos( $post->post_content, '<!--more-->' );
 
 		// if show full post is on and not on a search results page
 		if ( ( $setting == 'yes' ) && get_theme_mod( 'premium_layouts_setting' ) == 'full-width' && ! is_search() ) {
@@ -216,21 +190,18 @@ if ( ! function_exists( 'ct_tracks_excerpt' ) ) {
 			} else {
 				the_content();
 			}
-		} // use the read more link if present
-		elseif ( $ismore ) {
+		} elseif ( $ismore ) {
 			if ( ! empty( $read_more_text ) ) {
 				the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
 			} else {
 				the_content( __( 'Read the Post', 'tracks' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
 			}
-		} // otherwise the excerpt is automatic, so output it
-		else {
+		} else {
 			the_excerpt();
 		}
 	}
 }
 
-// filter the link on excerpts
 if ( ! function_exists( 'ct_tracks_excerpt_read_more_link' ) ) {
 	function ct_tracks_excerpt_read_more_link( $output ) {
 		global $post;
@@ -245,7 +216,6 @@ if ( ! function_exists( 'ct_tracks_excerpt_read_more_link' ) ) {
 }
 add_filter( 'the_excerpt', 'ct_tracks_excerpt_read_more_link' );
 
-// change the length of the excerpts
 if ( ! function_exists( 'ct_tracks_custom_excerpt_length' ) ) {
 	function ct_tracks_custom_excerpt_length( $length ) {
 
@@ -262,7 +232,6 @@ if ( ! function_exists( 'ct_tracks_custom_excerpt_length' ) ) {
 }
 add_filter( 'excerpt_length', 'ct_tracks_custom_excerpt_length', 999 );
 
-// switch [...] to ellipsis on automatic excerpt
 if ( ! function_exists( 'ct_tracks_new_excerpt_more' ) ) {
 	function ct_tracks_new_excerpt_more( $more ) {
 
@@ -274,11 +243,9 @@ if ( ! function_exists( 'ct_tracks_new_excerpt_more' ) ) {
 }
 add_filter( 'excerpt_more', 'ct_tracks_new_excerpt_more' );
 
-// turns of the automatic scrolling to the read more link
 if ( ! function_exists( 'ct_tracks_remove_more_link_scroll' ) ) {
 	function ct_tracks_remove_more_link_scroll( $link ) {
 		$link = preg_replace( '|#more-[0-9]+|', '', $link );
-
 		return $link;
 	}
 }
@@ -288,47 +255,35 @@ add_filter( 'the_content_more_link', 'ct_tracks_remove_more_link_scroll' );
 if ( ! function_exists( 'ct_tracks_featured_image' ) ) {
 	function ct_tracks_featured_image() {
 
-		// get post object
 		global $post;
-
-		// set default to no image
-		$has_image = false;
-
-		// final output
+		$has_image      = false;
 		$featured_image = '';
-
-		// image url
-		$image = '';
+		$image          = '';
 
 		// get the current layout
 		$premium_layout = get_theme_mod( 'premium_layouts_setting' );
 
-		// if the post has a featured image
 		if ( has_post_thumbnail( $post->ID ) ) {
-
 			// get the large version if on archive and not one of the full-width layouts
 			if ( ( is_archive() || is_home() ) && $premium_layout != 'full-width' && $premium_layout != 'full-width-images' ) {
 				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-			} // otherwise get the full-size version
-			else {
+			} else {
 				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 			}
-			// set to image URL
-			$image = $image[0];
-			// post has an image
+
+			$image     = $image[0];
 			$has_image = true;
 		}
-		// if the post has a featured image
+
 		if ( $has_image == true ) {
 			// if lazy loading is enabled
 			if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' && ( is_archive() || is_home() ) ) {
 				$featured_image = "<div class='featured-image lazy lazy-bg-image' data-background='" . esc_url( $image ) . "'></div>";
-			} // if lazy loading is NOT enabled
-			else {
+			} else {
 				$featured_image = "<div class='featured-image' style='background-image: url(" . esc_url( $image ) . ")'></div>";
 			}
 		}
-		// allow videos to be added
+
 		$featured_image = apply_filters( 'ct_tracks_featured_image', $featured_image, $image, $has_image );
 
 		if ( $featured_image ) {
@@ -337,11 +292,9 @@ if ( ! function_exists( 'ct_tracks_featured_image' ) ) {
 	}
 }
 
-/* add conditional classes for premium layouts */
 function ct_tracks_body_class( $classes ) {
 
 	global $post;
-
 	$premium_layout_setting = get_theme_mod( 'premium_layouts_setting' );
 
 	if ( is_singular() ) {
@@ -400,10 +353,8 @@ function ct_tracks_body_class( $classes ) {
 
 	return $classes;
 }
-
 add_filter( 'body_class', 'ct_tracks_body_class' );
 
-// calls pages for menu if menu not set
 function ct_tracks_wp_page_menu() {
 	wp_page_menu( array(
 			"menu_class" => "menu-unset"
@@ -414,36 +365,31 @@ function ct_tracks_wp_page_menu() {
 function ct_tracks_add_editor_styles() {
 	add_editor_style( 'styles/custom-editor-style.css' );
 }
-
 add_action( 'admin_init', 'ct_tracks_add_editor_styles' );
 
 function ct_tracks_post_class_update( $classes ) {
 
 	global $post;
 
-	// if on blog, add excerpt class and zoom class
 	if ( ! is_singular() ) {
+
+		$setting = get_theme_mod( 'additional_options_image_zoom_settings' );
 
 		$classes[] = 'excerpt';
 
-		// add image zoom class
-		$setting = get_theme_mod( 'additional_options_image_zoom_settings' );
 		if ( $setting != 'no-zoom' ) {
 			$classes[] = 'zoom';
 		}
-	}
-	if ( is_singular() ) {
+	} else {
 		$classes[] = 'entry';
 	}
-	// add class for posts with Featured Videos
+
 	if ( get_post_meta( $post->ID, 'ct_tracks_video_key', true ) ) {
 
-		// only add on blog/archive if enabled
 		if ( is_home() || is_archive() ) {
 
 			$display_setting = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
 
-			// if post has video enabled on blog
 			if ( $display_setting == 'blog' || $display_setting == 'both' ) {
 				$classes[] = 'has-video';
 			}
@@ -452,28 +398,16 @@ function ct_tracks_post_class_update( $classes ) {
 		}
 	}
 
-	// if < 3.9
-	if ( version_compare( get_bloginfo( 'version' ), '3.9', '<' ) ) {
-
-		// add the has-post-thumbnail class
-		if ( has_post_thumbnail() ) {
-			$classes[] = 'has-post-thumbnail';
-		}
-	}
-
 	return $classes;
 }
-
 add_filter( 'post_class', 'ct_tracks_post_class_update' );
 
-/* add a smaller size for the portfolio page */
 if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'blog', 700, 350 );
 }
 
 function ct_tracks_odd_even_post_class( $classes ) {
 
-	// access the post object
 	global $wp_query;
 
 	// Jetpack starts new loops of 7 posts, so it always ends with odd leading to 2
@@ -496,10 +430,8 @@ function ct_tracks_odd_even_post_class( $classes ) {
 
 	return $classes;
 }
-
 add_filter( 'post_class', 'ct_tracks_odd_even_post_class' );
 
-// array of social media site names
 if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 	function ct_tracks_social_site_list() {
 
@@ -565,13 +497,11 @@ function ct_tracks_custom_css_output() {
 
 	$custom_css = get_theme_mod( 'ct_tracks_custom_css_setting' );
 
-	/* output custom css */
 	if ( $custom_css ) {
 		$custom_css = wp_filter_nohtml_kses( $custom_css );
 		wp_add_inline_style( 'ct-tracks-style', $custom_css );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_tracks_custom_css_output', 20 );
 
 function ct_tracks_background_image_output() {
@@ -588,7 +518,6 @@ function ct_tracks_background_image_output() {
 		wp_add_inline_style( 'ct-tracks-style', $background_image_css );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'ct_tracks_background_image_output', 20 );
 
 function ct_tracks_background_texture_output() {
@@ -647,14 +576,11 @@ endif;
 
 function ct_tracks_two_column_images_featured_image( $featured_image, $image, $has_image ) {
 
-	// if there is a featured image and two column images layout is active
 	if ( $has_image && get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
 
-		// setup vars for content surrounding image
 		$pre  = '';
 		$post = '';
 
-		// if singular, add container
 		if ( is_singular() ) {
 			$pre  = "<div class='featured-image-container'>";
 			$post = "</div>";
@@ -664,25 +590,20 @@ function ct_tracks_two_column_images_featured_image( $featured_image, $image, $h
 
 	return $featured_image;
 }
-
 add_filter( 'ct_tracks_featured_image', 'ct_tracks_two_column_images_featured_image', 10, 3 );
 
 function ct_tracks_full_width_images_featured_image( $featured_image, $image, $has_image ) {
 
-	// if there is a featured image and two column images layout is active
 	if ( $has_image && get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' ) {
 
-		// setup vars for content surrounding image
 		$pre  = '';
 		$post = '';
 
-		// if singular, add container
 		if ( is_singular() ) {
 			$pre  = "<div class='featured-image-container'>";
 			$post = "</div>";
 		}
 
-		// get image type to check if img will be needed
 		$blog_image_type = get_theme_mod( 'premium_layouts_full_width_image_height' );
 		$post_image_type = get_theme_mod( 'premium_layouts_full_width_image_height_post' );
 
@@ -700,44 +621,37 @@ function ct_tracks_full_width_images_featured_image( $featured_image, $image, $h
 
 	return $featured_image;
 }
-
 add_filter( 'ct_tracks_featured_image', 'ct_tracks_full_width_images_featured_image', 10, 3 );
 
-// Adds useful meta tags
 function ct_tracks_add_meta_elements() {
 
 	$meta_elements = '';
 
-	/* Charset */
 	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", get_bloginfo( 'charset' ) );
-
-	/* Viewport */
 	$meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
 
-	/* Theme name and current version */
 	$theme    = wp_get_theme( get_template() );
 	$template = sprintf( '<meta name="template" content="%s %s" />' . "\n", esc_attr( $theme->get( 'Name' ) ), esc_attr( $theme->get( 'Version' ) ) );
 	$meta_elements .= $template;
 
 	echo $meta_elements;
 }
-
 add_action( 'wp_head', 'ct_tracks_add_meta_elements', 1 );
 
-/* Move the WordPress generator to a better priority. */
+// Move the WordPress generator to a better priority.
 remove_action( 'wp_head', 'wp_generator' );
 add_action( 'wp_head', 'wp_generator', 1 );
 
 function ct_tracks_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
-		/* Two-column Images Layout */
+		// Two-column Images Layout
 		if ( get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
 			get_template_part( 'licenses/content/content-two-column-images' );
-		} /* Full-width Images Layout */
+		} // Full-width Images Layout
 		elseif ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' ) {
 			get_template_part( 'licenses/content/content-full-width-images' );
-		} /* Blog - No Premium Layout */
+		} // Blog - No Premium Layout
 		else {
 			get_template_part( 'content', 'archive' );
 		}
