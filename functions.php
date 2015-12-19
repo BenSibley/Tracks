@@ -132,21 +132,10 @@ if( ! function_exists( 'ct_tracks_customize_comments' ) ) {
 if( ! function_exists( 'ct_tracks_update_fields' ) ) {
     function ct_tracks_update_fields( $fields ) {
 
-        // get commenter object
         $commenter = wp_get_current_commenter();
-
-        // are name and email required?
         $req = get_option( 'require_name_email' );
-
-        // required or optional label to be added
-        if ( $req == 1 ) {
-            $label = '*';
-        } else {
-            $label = ' (optional)';
-        }
-
-        // adds aria required tag if required
-        $aria_req = ( $req ? " aria-required='true'" : '' );
+        $label     = $req ? '*' : ' ' . __( '(optional)', 'tracks' );
+        $aria_req  = $req ? "aria-required='true'" : '';
 
         $fields['author'] =
             '<p class="comment-form-author">
@@ -165,7 +154,7 @@ if( ! function_exists( 'ct_tracks_update_fields' ) ) {
         $fields['url'] =
             '<p class="comment-form-url">
             <label for="url" class="screen-reader-text">' . __( "Your Website URL", "tracks" ) . '</label>
-            <input placeholder="' . __( "Your URL", "tracks" ) . ' (optional)" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+            <input placeholder="' . __( "Your URL", "tracks" ) . '" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
             '" size="30" />
             </p>';
 
@@ -257,15 +246,11 @@ if( ! function_exists( 'ct_tracks_custom_excerpt_length' ) ) {
 
         $new_excerpt_length = get_theme_mod( 'additional_options_excerpt_length_settings' );
 
-        // if there is a new length set and it's not 15, change it
         if ( ! empty( $new_excerpt_length ) && $new_excerpt_length != 15 ) {
             return $new_excerpt_length;
-        }
-        // return 0 if user explicitly sets it to 0
-        elseif ( $new_excerpt_length === 0 ) {
+        } elseif ( $new_excerpt_length === 0 ) {
             return 0;
-        }
-        else {
+        } else {
             return 15;
         }
     }
@@ -276,17 +261,10 @@ add_filter( 'excerpt_length', 'ct_tracks_custom_excerpt_length', 999 );
 if( ! function_exists( 'ct_tracks_new_excerpt_more' ) ) {
     function ct_tracks_new_excerpt_more( $more ) {
 
-        // get user set excerpt length
         $new_excerpt_length = get_theme_mod('additional_options_excerpt_length_settings');
+        $excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230;';
 
-        // if set to 0, return nothing
-        if ( $new_excerpt_length === 0 ) {
-            return '';
-        }
-        // else add the ellipsis
-        else {
-            return '&#8230;';
-        }
+        return $excerpt_more;
     }
 }
 add_filter('excerpt_more', 'ct_tracks_new_excerpt_more');
@@ -370,7 +348,7 @@ function ct_tracks_body_class( $classes ) {
         } elseif ( is_singular('post') ) {
             $classes[] = 'singular-post';
             $classes[] = 'singular-post-' . $post->ID;
-        }  elseif ( is_singular('attachment') ) {
+        } elseif ( is_singular('attachment') ) {
             $classes[] = 'singular-attachment';
             $classes[] = 'singular-attachment-' . $post->ID;
         }

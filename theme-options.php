@@ -160,11 +160,7 @@ function ct_tracks_license_form_output($upgrades){
             <?php submit_button('Save License'); ?>
         </form>
         <?php
-        if($class == 'odd'){
-            $class = 'even';
-        } else {
-            $class = 'odd';
-        }
+        $class = ( $class == 'odd' ) ? 'even' : 'odd';
     }
 }
 
