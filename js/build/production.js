@@ -454,12 +454,9 @@ jQuery(function($){
         }
     }
 
-
     // adjust height to fit footer into viewport instead of keeping it just out of view
     function adjustSiteHeight() {
-
         var footerHeight = $('#site-footer').outerHeight();
-
         body.css('height', 'calc(100% - ' + footerHeight + 'px)');
     }
 
