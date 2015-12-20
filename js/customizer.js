@@ -3,7 +3,29 @@ jQuery(document).ready(function($) {
     // set context to customizer panel outside iframe site content is in
     var panel = $('html', window.parent.document);
 
+    // add multiple select styling
+    $('#comment-display-control').multipleSelect({
+        selectAll: false
+    });
+
+    // hide the display none option
+    $.each($('.ms-drop.bottom').find('li'), function(){
+
+        if( $(this).find('input').val() == 'none' ) {
+            $(this).hide();
+        }
+    });
+
     addLayoutThumbnails();
+    ctHideNoneText();
+    displayLayoutOptions();
+
+    panel.find('#customize-control-premium_layouts_setting').find('select').bind('change', displayLayoutOptions );
+
+    $('.ms-drop.bottom').find('li').bind('click', ctHideNoneText);
+
+    // move control descriptions for certain sections (advertisements) below the control
+    $('#customize-control-premium_layouts_setting').find('.customize-control-description').appendTo( '#customize-control-premium_layouts_setting' ).css('margin-top', '12px');
 
     // replaces radio buttons with images
     function addLayoutThumbnails() {
@@ -39,19 +61,6 @@ jQuery(document).ready(function($) {
         }
     }
 
-    // add multiple select styling
-    $('#comment-display-control').multipleSelect({
-        selectAll: false
-    });
-
-    // hide the display none option
-    $.each($('.ms-drop.bottom').find('li'), function(){
-
-        if( $(this).find('input').val() == 'none' ) {
-            $(this).hide();
-        }
-    });
-
     // Don't show the do not show text
     function ctHideNoneText() {
 
@@ -71,17 +80,6 @@ jQuery(document).ready(function($) {
             }
         });
     }
-    ctHideNoneText();
-
-    $('.ms-drop.bottom').find('li').bind('click', ctHideNoneText);
-
-    // move control descriptions for certain sections (advertisements) below the control
-    // section (Layouts) find description and append to parent li
-    $('#customize-control-premium_layouts_setting').find('.customize-control-description').appendTo( '#customize-control-premium_layouts_setting' ).css('margin-top', '12px');
-
-    displayLayoutOptions();
-
-    panel.find('#customize-control-premium_layouts_setting').find('select').bind('change', displayLayoutOptions );
 
     function displayLayoutOptions(){
 

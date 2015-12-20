@@ -87,10 +87,9 @@ jQuery(function($){
     var siteHeader = $('#site-header');
     var menuPrimary = $('#menu-primary');
     var menuPrimaryTracks = $('#menu-primary-tracks');
+    var primaryMenu = $('.menu-unset');
     if( $('#menu-primary-items').length){
-        var primaryMenu = $('#menu-primary-items');
-    } else {
-        var primaryMenu = $('.menu-unset');
+        primaryMenu = $('#menu-primary-items');
     }
     var body = $('body');
     var main = $('#main');
@@ -107,14 +106,8 @@ jQuery(function($){
 
     $(window).load(function(){
         removeLayoutGaps();
-    });
-
-    // wait until image loaded
-    $(window).bind('load', function() {
         separatePostImage();
     });
-
-    // ===== Window Resize ===== //
 
     $(window).on('resize', function(){
         separatePostImage();
@@ -125,6 +118,7 @@ jQuery(function($){
             onTap();
         }
     });
+
     $('.entry-content, .excerpt-content').fitVids({
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
     });
@@ -135,11 +129,9 @@ jQuery(function($){
     // Jetpack infinite scroll event that reloads posts. Reapply fitvids to new featured videos
     $( document.body ).on( 'post-load', function () {
 
-        // reapply fitvids to new posts being loaded in
         $('.featured-video').fitVids({
             customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="vine.co"], iframe[src*="wordpress.tv"], iframe[src*="soundcloud.com"]'
         });
-
         removeLayoutGaps();
     } );
 
@@ -219,6 +211,7 @@ jQuery(function($){
             onTap();
         }
     }
+
     function positionPostMeta() {
         /* give space for vertical margins, 'categories', and 'tags' */
         var minHeight = 168;
@@ -375,20 +368,6 @@ jQuery(function($){
             setTimeout(scrollHandling.reallow, scrollHandling.delay);
         }
     });
-
-    // reapply closed class for touch device usage
-    // doesn't have any impact unless 'touchstart' fired
-    function reApplyClosedClass(e) {
-
-        var container = $('.menu-item-has-children');
-
-        if (!container.is(e.target) // if the target of the click isn't the container...
-            && container.has(e.target).length === 0) // ... nor a descendant of the container
-        {
-            container.addClass('closed');
-        }
-    }
-    $(document).on('click', reApplyClosedClass);
 
     // reposition the description if a logo is present
     function positionSiteDescription(){
@@ -597,7 +576,6 @@ window.addEventListener("hashchange", function(event) {
     }
 
 }, false);
-
 /* 
  * The MIT License
  *
