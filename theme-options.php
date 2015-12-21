@@ -45,7 +45,7 @@ function ct_tracks_options_content() {
 				</p>
 			</div>
 			<div class="content-premium-upgrades content">
-				<h3><?php _e( 'Premium Upgrades ($9-15)', 'tracks' ); ?></h3>
+				<h3><?php _e( 'Premium Upgrades', 'tracks' ); ?></h3>
 				<p><?php _e( 'Make your site more customizable and beautiful with premium upgrades', 'tracks' ); ?>.</p>
 				<p><a target="_blank" class="button-primary"
 				      href="https://www.competethemes.com/tracks/tracks-theme-upgrades/"><?php _e( 'Visit Upgrades Gallery', 'tracks' ); ?></a>
