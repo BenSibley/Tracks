@@ -298,7 +298,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	) );
 	// setting
 	$wp_customize->add_setting( 'ct_tracks_comments_setting', array(
-		'default'           => array( 'post', 'page', 'attachment', 'none' ),
+		'default'           => array( 'posts', 'pages', 'attachments', 'none' ),
 		'sanitize_callback' => 'ct_tracks_sanitize_comments_setting',
 	) );
 	// control
