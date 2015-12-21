@@ -1741,6 +1741,10 @@ li.pingback:first-child {
   margin-bottom: 3em;
 }
 
+.widget_categories select {
+  margin-top: 1.5em;
+}
+
 /* Footer menu styles */
 .menu-footer-items {
   list-style: none;
