@@ -581,7 +581,8 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		'label'    => __( 'Read More link text', 'tracks' ),
 		'section'  => 'ct_tracks_additional_options',
 		'settings' => 'read_more_text',
-		'type'     => 'text'
+		'type'     => 'text',
+		'priority' => 35
 	) );
 
 	/***** Background Image *****/
