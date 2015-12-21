@@ -1704,10 +1704,14 @@ li.pingback:first-child {
 /* Widget Area Styles */
 .sidebar-after-post-content,
 .sidebar-after-page-content {
-  padding: 3em 0 1.5em;
+  padding: 3em 0 0.75em;
   border-top: solid 1px #ededed;
   border-bottom: solid 1px #ededed;
   margin-bottom: 1.5em;
+}
+.sidebar-after-post-content .widget,
+.sidebar-after-page-content .widget {
+  margin-bottom: 2.25em;
 }
 
 /* Widget Styles */

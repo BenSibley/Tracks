@@ -2,8 +2,12 @@
 
 .sidebar-after-post-content,
 .sidebar-after-page-content {
-  padding: $baseline-height * 2 0 $baseline-height;
+  padding: $baseline-height * 2 0 $baseline-height / 2;
   border-top: solid 1px $off-white;
   border-bottom: solid 1px $off-white;
   margin-bottom: $baseline-height;
+
+  .widget {
+    margin-bottom: $baseline-height * 1.5;
+  }
 }
