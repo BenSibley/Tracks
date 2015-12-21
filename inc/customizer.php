@@ -596,7 +596,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		// section
 		$wp_customize->add_section( 'ct_tracks_background_image', array(
 			'title'       => __( 'Background Image', 'tracks' ),
-			'description' => __( 'Use the Header Color section above if your new background image makes the menu hard to read.', 'tracks' ),
+			'description' => __( 'Use the Header Color section if your new background image makes the menu hard to read.', 'tracks' ),
 			'priority'    => 95
 		) );
 		// setting
@@ -624,7 +624,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		// section
 		$wp_customize->add_section( 'ct_tracks_background_texture', array(
 			'title'       => __( 'Background Texture', 'tracks' ),
-			'description' => __( 'Use the Header Color section above if your new texture makes the menu hard to read.', 'tracks' ),
+			'description' => __( 'Use the Header Color section if your new texture makes the menu hard to read.', 'tracks' ),
 			'priority'    => 96
 		) );
 		// setting - display
