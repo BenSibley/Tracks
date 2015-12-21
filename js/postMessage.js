@@ -15,6 +15,7 @@
             if( siteTitle.find('img').length == 0 ) {
                 siteTitle.children('a').text( to );
             }
+            footer.children('h3').text( to );
         } );
     } );
 
