@@ -34,6 +34,8 @@
 	</button>
 <?php }
 
+do_action( 'tracks_overflow_bottom' );
+
 if ( get_theme_mod( 'ct_tracks_background_image_setting' ) ) {
 	echo "<div class='background-image'></div>";
 }
