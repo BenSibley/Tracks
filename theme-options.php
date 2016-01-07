@@ -62,6 +62,7 @@ function ct_tracks_options_content() {
 			</div>
 		<?php } elseif ( $active_tab == 'licenses' ) { ?>
 			<div class="content-licenses">
+				<?php do_action( 'tracks_before_licenses' ); ?>
 				<h3><?php _e( 'Premium Layouts', 'tracks' ); ?></h3>
 				<?php
 				$layouts = array( 'two_column', 'two_column_images', 'full_width', 'full_width_images' );
