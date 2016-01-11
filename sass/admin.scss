@@ -2,80 +2,83 @@
 
 /* styles for theme options page */
 
-#tracks-dashboard-wrap .nav-tab-wrapper {
-  padding-top: 36px;
-  margin-bottom: 24px;
-}
-.content {
-  margin-top: 12px;
-  padding: 12px 24px 24px;
-  border: solid 1px #e5e5e5;
-  background: white;
+#tracks-dashboard-wrap {
 
-  .button-primary {
-    margin: 12px 0;
-  }
-  ul {
-    list-style: disc;
-    margin-left: 36px;
-  }
-}
-.content-licenses {
-  border: none;
-  padding: 0;
-
-  form {
-    padding: 0 24px;
+  .nav-tab-wrapper {
+    padding-top: 36px;
     margin-bottom: 24px;
-    border: solid 1px #ccc;
+  }
+  .content {
+    margin-top: 12px;
+    padding: 12px 24px 24px;
+    border: solid 1px #e5e5e5;
     background: white;
 
-    h4  {
-      padding: 12px 24px;
-      margin: 0 12px 12px -24px;
-      width: 100%;
-      background: #f5f5f5;
-      border-bottom: solid 1px #ccc;
-      font-weight: 600;
-      font-size: 16px;
+    .button-primary {
+      margin: 12px 0;
     }
-    span {
+    ul {
+      list-style: disc;
+      margin-left: 36px;
+    }
+  }
+  .content-licenses {
+    border: none;
+    padding: 0;
+
+    form {
+      padding: 0 24px;
+      margin-bottom: 24px;
+      border: solid 1px #ccc;
+      background: white;
+
+      h4 {
+        padding: 12px 24px;
+        margin: 0 12px 12px -24px;
+        width: 100%;
+        background: #f5f5f5;
+        border-bottom: solid 1px #ccc;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      span {
+        display: block;
+      }
+    }
+    label {
       display: block;
     }
-  }
-  label {
-    display: block;
-  }
-  .invalid {
-    background: #E54C56;
-  }
-  .valid {
-    background: #3FBF5D;
-    color: white;
-    padding: 12px;
-
-    a {
+    .invalid {
+      background: #E54C56;
+    }
+    .valid {
+      background: #3FBF5D;
       color: white;
-    }
-  }
-  .form-table {
-    margin: 12px 0;
-    display: block;
-
-    td, th {
-      border: solid 1px #e5e5e5;
-      display: block;
-      width: 100%;
-      width: calc(100% - 24px);
       padding: 12px;
+
+      a {
+        color: white;
+      }
     }
-    th {
-      background: #f5f5f5;
-      border-bottom: none;
-    }
-    tr {
+    .form-table {
       margin: 12px 0;
       display: block;
+
+      td, th {
+        border: solid 1px #e5e5e5;
+        display: block;
+        width: 100%;
+        width: calc(100% - 24px);
+        padding: 12px;
+      }
+      th {
+        background: #f5f5f5;
+        border-bottom: none;
+      }
+      tr {
+        margin: 12px 0;
+        display: block;
+      }
     }
   }
 }
@@ -83,52 +86,58 @@
 /* 600px */
 @media all and (min-width: 37.5em) {
 
-  .content {
-    width: 39%;
-    float: left;
+  #tracks-dashboard-wrap {
 
-    p {
-      min-height: 57px;
+    .content {
+      width: 39%;
+      float: left;
+
+      p {
+        min-height: 57px;
+      }
     }
-  }
-  .content-customization,
-  .content-premium-upgrades {
-    margin-right: 2%;
+    .content-customization,
+    .content-premium-upgrades {
+      margin-right: 2%;
+    }
   }
 }
 
 /* 1100px */
 @media all and (min-width: 68.75em){
 
-  .content {
-    width: 27%;
+  #tracks-dashboard-wrap {
 
-    &:nth-child(3n + 3) {
-      clear: left;
-    }
-  }
-  .content-customization,
-  .content-support {
-    margin-right: 1%;
-  }
-  .content-premium-upgrades {
-    margin-right: 0;
-  }
-  .content-licenses  {
+    .content {
+      width: 27%;
 
-    h3 {
-      clear: both;
-    }
-    form {
-      width: 43%;
-      float: left;
-
-      &.odd {
-        margin-right: 2%;
+      &.content-resources {
         clear: left;
       }
-      &:after {
-        @include clearfix;
+    }
+    .content-customization,
+    .content-support {
+      margin-right: 1%;
+    }
+    .content-premium-upgrades {
+      margin-right: 0;
+    }
+    .content-licenses {
+
+      h3 {
+        clear: both;
+      }
+      form {
+        width: 43%;
+        float: left;
+
+        &.odd {
+          margin-right: 2%;
+          clear: left;
+        }
+        &:after {
+          @include clearfix;
+        }
       }
     }
   }
