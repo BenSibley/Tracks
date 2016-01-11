@@ -150,6 +150,9 @@
     color: $gray-light;
   }
 }
+.infinite-scroll .pagination {
+  display: none;
+}
 
 /* 600 */
 @media all and (min-width: 37.5em) {
