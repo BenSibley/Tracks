@@ -1656,7 +1656,7 @@ li.pingback:first-child {
 }
 .archive-header p {
   margin: 0.75em 0;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .archive .main {
