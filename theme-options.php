@@ -28,8 +28,7 @@ function ct_tracks_options_content() {
 		if ( $active_tab == 'dashboard' ) { ?>
 			<div class="content-customization content">
 				<h3><?php _e( 'Customization', 'tracks' ); ?></h3>
-				<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Tracks', 'tracks' ); ?>
-					.</p>
+				<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Tracks.', 'tracks' ); ?></p>
 				<p>
 					<a class="button-primary"
 					   href="<?php echo esc_url( $customizer_url ); ?>"><?php _e( 'Use Customizer', 'tracks' ) ?></a>
@@ -37,8 +36,7 @@ function ct_tracks_options_content() {
 			</div>
 			<div class="content-support content">
 				<h3><?php _e( 'Support', 'tracks' ); ?></h3>
-				<p><?php _e( "You can find the knowledgebase, changelog, forum, and more in the Tracks Support Center", "tracks" ); ?>
-					.</p>
+				<p><?php _e( "You can find the knowledgebase, changelog, forum, and more in the Tracks Support Center.", "tracks" ); ?></p>
 				<p>
 					<a target="_blank" class="button-primary"
 					   href="https://www.competethemes.com/documentation/tracks-support-center/"><?php _e( 'Visit Support Center', 'tracks' ); ?></a>
@@ -53,8 +51,7 @@ function ct_tracks_options_content() {
 			</div>
 			<div class="content content-resources">
 				<h3><?php _e( 'WordPress Resources', 'tracks' ); ?></h3>
-				<p><?php _e( "Save time and money searching for WordPress products by following our recommendations", "tracks" ); ?>
-					.</p>
+				<p><?php _e( "Save time and money searching for WordPress products by following our recommendations.", "tracks" ); ?></p>
 				<p>
 					<a target="_blank" class="button-primary"
 					   href="https://www.competethemes.com/wordpress-resources/"><?php _e( 'View Resources', 'tracks' ); ?></a>
