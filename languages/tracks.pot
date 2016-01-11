@@ -1,14 +1,14 @@
-# Copyright (C) 2015 Compete Themes
+# Copyright (C) 2016 Compete Themes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.43\n"
+"Project-Id-Version: Tracks 1.44\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-12-21 15:11:29+00:00\n"
+"POT-Creation-Date: 2016-01-11 14:44:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.8\n"
@@ -202,7 +202,7 @@ msgstr ""
 msgid "Read the Post"
 msgstr ""
 
-#: header.php:13
+#: header.php:14
 msgid "Skip to content"
 msgstr ""
 
@@ -328,7 +328,7 @@ msgstr ""
 msgid "Add Custom CSS Here:"
 msgstr ""
 
-#: inc/customizer.php:386 theme-options.php:65
+#: inc/customizer.php:386 theme-options.php:63
 msgid "Premium Layouts"
 msgstr ""
 
@@ -577,92 +577,92 @@ msgstr ""
 #: theme-options.php:31
 msgid ""
 "Click the \"Customize\" link in your menu, or use the button below to get "
-"started customizing Tracks"
+"started customizing Tracks."
 msgstr ""
 
-#: theme-options.php:35
+#: theme-options.php:34
 msgid "Use Customizer"
 msgstr ""
 
-#: theme-options.php:39
+#: theme-options.php:38
 msgid "Support"
 msgstr ""
 
-#: theme-options.php:40
+#: theme-options.php:39
 msgid ""
 "You can find the knowledgebase, changelog, forum, and more in the Tracks "
-"Support Center"
+"Support Center."
 msgstr ""
 
-#: theme-options.php:44
+#: theme-options.php:42
 msgid "Visit Support Center"
 msgstr ""
 
-#: theme-options.php:48
+#: theme-options.php:46
 msgid "Premium Upgrades"
 msgstr ""
 
-#: theme-options.php:49
+#: theme-options.php:47
 msgid "Make your site more customizable and beautiful with premium upgrades"
 msgstr ""
 
-#: theme-options.php:51
+#: theme-options.php:49
 msgid "Visit Upgrades Gallery"
 msgstr ""
 
-#: theme-options.php:55
+#: theme-options.php:53
 msgid "WordPress Resources"
 msgstr ""
 
-#: theme-options.php:56
+#: theme-options.php:54
 msgid ""
 "Save time and money searching for WordPress products by following our "
-"recommendations"
+"recommendations."
 msgstr ""
 
-#: theme-options.php:60
+#: theme-options.php:57
 msgid "View Resources"
 msgstr ""
 
-#: theme-options.php:71
+#: theme-options.php:69
 msgid "Premium Features"
 msgstr ""
 
-#: theme-options.php:118
+#: theme-options.php:116
 msgid "Save License"
 msgstr ""
 
-#: theme-options.php:125
+#: theme-options.php:123
 msgid "Enter your license key"
 msgstr ""
 
-#: theme-options.php:131 theme-options.php:143
+#: theme-options.php:129 theme-options.php:141
 msgid "Activate License"
 msgstr ""
 
-#: theme-options.php:138
+#: theme-options.php:136
 msgid "Deactivate License"
 msgstr ""
 
-#: theme-options.php:161
+#: theme-options.php:159
 msgid ""
 "You can now add a background image using the \"Background Image\" section "
 "in the <a href=\"%s\">Customizer</a>"
 msgstr ""
 
-#: theme-options.php:163
+#: theme-options.php:161
 msgid ""
 "If you haven't already, please upload and activate the <a "
 "href='%s'>Background Texture plugin</a>"
 msgstr ""
 
-#: theme-options.php:165
+#: theme-options.php:163
 msgid ""
 "You can now add videos to Posts and Pages. Use the Featured Videos box "
 "under the Post Editor to get started"
 msgstr ""
 
-#: theme-options.php:167
+#: theme-options.php:165
 msgid ""
 "You can now switch to your new layout in the \"Premium Layouts\" section in "
 "the <a href=\"%s\">Customizer</a>"
