@@ -498,7 +498,7 @@ function ct_tracks_custom_css_output() {
 	$custom_css = get_theme_mod( 'ct_tracks_custom_css_setting' );
 
 	if ( $custom_css ) {
-		$custom_css = wp_filter_nohtml_kses( $custom_css );
+		$custom_css = ct_tracks_sanitize_css( $custom_css );
 		wp_add_inline_style( 'ct-tracks-style', $custom_css );
 	}
 }
@@ -515,6 +515,9 @@ function ct_tracks_background_image_output() {
                 background-image: url('$background_image');
             }
         ";
+
+		$background_image_css = ct_tracks_sanitize_css( $background_image_css );
+
 		wp_add_inline_style( 'ct-tracks-style', $background_image_css );
 	}
 }
@@ -532,6 +535,9 @@ function ct_tracks_background_texture_output() {
                 background-image: url('" . plugins_url() . "/tracks-background-textures/textures/$background_texture.png');
             }
         ";
+
+		$background_texture_css = ct_tracks_sanitize_css( $background_texture_css );
+
 		wp_add_inline_style( 'ct-tracks-style', $background_texture_css );
 	}
 }
