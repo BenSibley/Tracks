@@ -2,19 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tracks\n"
 "POT-Creation-Date: 2014-09-29 15:40-0500\n"
-"PO-Revision-Date: 2014-09-29 16:04-0500\n"
+"PO-Revision-Date: 2016-01-17 21:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -33,11 +32,11 @@ msgstr "% commentaires"
 #: comments.php:42
 #, php-format
 msgid ""
-"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
-"\">trackbacks</a> and pingbacks are open."
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post\">trackbacks</a> and pingbacks are "
+"open."
 msgstr ""
-"Les commentaires dont fermés, cependant les <a href=\"%s\" title=\"Trackback "
-"URL for this post\">trackbacks</a> et les pingbacks sont ouverts."
+"Les commentaires sont fermés, cependant les <a href=\"%s\" title=\"Trackback URL for this post\">trackbacks</a> "
+"et les pingbacks sont ouverts."
 
 #: comments.php:62 comments.php:68
 msgid "Comments are closed."
@@ -45,16 +44,13 @@ msgstr "Les commentaires sont fermés."
 
 #: content-404.php:3
 msgid "404: Page Not Found"
-msgstr "404: Page non trouvée"
+msgstr "Erreur 404 : Cette page est introuvable."
 
 #: content-404.php:9
 msgid ""
-"Looks like nothing was found on this url.  Double-check that the url is "
-"correct or try the search form below to find what you were looking for."
-msgstr ""
-"On dirait que rien n'a pu être trouvé avec cette URL. Vérifiez que l'URL est "
-"correcte ou utilisez le formulaire ci-dessous afin d'obtenir des résultats "
-"relatifs à votre recherche."
+"Looks like nothing was found on this url.  Double-check that the url is correct or try the search form below to "
+"find what you were looking for."
+msgstr "Apparemment, rien n’a été trouvé à cette adresse. Essayez avec une recherche ?"
 
 #: content-attachment.php:20
 msgid "Previous Image"
@@ -66,14 +62,13 @@ msgstr "Image suivante"
 
 #: content-page.php:20 content.php:37
 msgid "Pages:"
-msgstr "Pages:"
+msgstr "Pages :"
 
 #: content.php:56
 msgid "Written by:"
-msgstr "Écris par"
+msgstr "Écrit par :"
 
-#: content/category-links.php:14 library/classes/widget-categories.php:55
-#: library/classes/widget-categories.php:62
+#: content/category-links.php:14 library/classes/widget-categories.php:55 library/classes/widget-categories.php:62
 msgid "Categories"
 msgstr "Catégories"
 
@@ -100,7 +95,7 @@ msgstr "Ceci est l'article le plus ancien"
 
 #: content/further-reading.php:30 content/further-reading.php:42
 msgid "Return to Blog"
-msgstr "Revenir au Blog"
+msgstr "Revenir au blog"
 
 #: content/further-reading.php:36
 msgid "Next Post"
@@ -110,47 +105,41 @@ msgstr "Article suivant"
 msgid "This is the newest post"
 msgstr "Ceci est l'article le plus récent"
 
-#: content/tag-links.php:9 library/classes/widget-tags.php:55
-#: library/classes/widget-tags.php:64
+#: content/tag-links.php:9 library/classes/widget-tags.php:55 library/classes/widget-tags.php:64
 msgid "Tags"
-msgstr ""
+msgstr "Étiquettes"
 
 #: content/tag-links.php:11 inc/deprecated.php:36
 #, php-format
 msgid "View all posts tagged %s"
-msgstr "Afficher tous les articles taggés %s"
+msgstr "Afficher tous les articles avec l'étiquette %s"
 
 #: footer.php:33
 #, php-format
-msgid ""
-"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
-"Themes."
-msgstr ""
-"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> par Compete "
-"Themes."
+msgid "<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete Themes."
+msgstr "<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> par Compete Themes."
 
 #: functions.php:25
 msgid "Primary"
-msgstr "Primaire"
+msgstr "Principal"
 
 #: functions.php:26
 msgid "Secondary"
 msgstr "Secondaire"
 
-#: functions.php:27 inc/customizer.php:100 inc/customizer.php:158
-#: inc/customizer.php:696 inc/customizer.php:720
+#: functions.php:27 inc/customizer.php:100 inc/customizer.php:158 inc/customizer.php:696 inc/customizer.php:720
 msgid "Footer"
 msgstr "Pied de page"
 
 #: functions.php:57
 msgid "After Post Content"
-msgstr "Contenu post-article"
+msgstr "Contenu après l'article"
 
 #: functions.php:59
-msgid ""
-"Widgets in this area will be shown after post content before the prev/next "
-"post links"
+msgid "Widgets in this area will be shown after post content before the prev/next post links"
 msgstr ""
+"Les widgets de cette zone s'afficheront après le contenu de l'article et avant les liens Article Précédent/"
+"Suivant"
 
 #: functions.php:64
 msgid "After Page Content"
@@ -166,7 +155,7 @@ msgstr "Répondre"
 
 #: functions.php:97
 msgid "Your comment is awaiting moderation."
-msgstr "Votre commentaire est en cours de relecture."
+msgstr "Votre commentaire est en attente de modération."
 
 #: functions.php:116
 msgid "Your Name"
@@ -174,23 +163,23 @@ msgstr "Votre nom"
 
 #: functions.php:117
 msgid "Your Name*"
-msgstr "Votre Nom*"
+msgstr "Votre nom*"
 
 #: functions.php:123
 msgid "Your Email"
-msgstr "Votre adresse mail"
+msgstr "Votre adresse de courriel"
 
 #: functions.php:124
 msgid "Your Email*"
-msgstr "Votre adresse mail*"
+msgstr "Votre adresse de courriel*"
 
 #: functions.php:130
 msgid "Your Website URL"
-msgstr "L'URL de votre site"
+msgstr "L'adresse de votre site"
 
 #: functions.php:131
 msgid "Your URL"
-msgstr "Votre URL"
+msgstr "Votre adresse"
 
 #: functions.php:143
 msgid "Your Comment"
@@ -198,7 +187,7 @@ msgstr "Votre commentaire"
 
 #: functions.php:144
 msgid "Enter Your Comment"
-msgstr "Saisissez votre commentaire"
+msgstr "Saisir votre commentaire"
 
 #: functions.php:186
 msgid "Read More"
@@ -206,11 +195,11 @@ msgstr "Continuer la lecture"
 
 #: functions.php:197
 msgid "Read the Post"
-msgstr "Lire le post"
+msgstr "Lire l'article"
 
 #: header.php:15
 msgid "Skip to content"
-msgstr "Aller au commentaire"
+msgstr "Aller au contenu"
 
 #: inc/customizer.php:79
 msgid "Tagline Display"
@@ -218,33 +207,31 @@ msgstr "Afficher le slogan"
 
 #: inc/customizer.php:93
 msgid "Where should the tagline display?"
-msgstr "Ou doit s'afficher le slogan ?"
+msgstr "Où doit s'afficher le slogan ?"
 
-#: inc/customizer.php:98 inc/customizer.php:156 inc/customizer.php:694
-#: inc/customizer.php:718
+#: inc/customizer.php:98 inc/customizer.php:156 inc/customizer.php:694 inc/customizer.php:718
 msgid "Header & Footer"
-msgstr ""
+msgstr "En-tête et pied de page"
 
-#: inc/customizer.php:99 inc/customizer.php:157 inc/customizer.php:695
-#: inc/customizer.php:719
+#: inc/customizer.php:99 inc/customizer.php:157 inc/customizer.php:695 inc/customizer.php:719
 msgid "Header"
-msgstr ""
+msgstr "En-tête"
 
 #: inc/customizer.php:108
 msgid "Logo Upload"
-msgstr "Upload du logo"
+msgstr "Téléchargement du logo"
 
 #: inc/customizer.php:122
 msgid "Upload custom logo."
-msgstr "Téléchargez le logo personnalisé"
+msgstr "Télécharger le logo personnalisé."
 
 #: inc/customizer.php:138
 msgid "Social Media Icons"
-msgstr "Icônes Réseaux Sociaux"
+msgstr "Icônes des réseaux sociaux"
 
 #: inc/customizer.php:151
 msgid "Where should the icons display?"
-msgstr "Ou doivent s'afficher les icônes"
+msgstr "Où doivent s'afficher les icônes ?"
 
 #: inc/customizer.php:159 inc/customizer.php:721
 msgid "Do not display"
@@ -258,33 +245,31 @@ msgstr "Barre de recherche"
 msgid "Show search bar at top of site?"
 msgstr "Afficher la barre de recherche en haut du site ?"
 
-#: inc/customizer.php:227 inc/customizer.php:254 inc/customizer.php:272
-#: inc/customizer.php:290 inc/customizer.php:495 inc/customizer.php:513
-#: inc/customizer.php:737
+#: inc/customizer.php:227 inc/customizer.php:254 inc/customizer.php:272 inc/customizer.php:290
+#: inc/customizer.php:495 inc/customizer.php:513 inc/customizer.php:737
 msgid "Show"
 msgstr "Afficher"
 
-#: inc/customizer.php:228 inc/customizer.php:255 inc/customizer.php:273
-#: inc/customizer.php:291 inc/customizer.php:496 inc/customizer.php:514
-#: inc/customizer.php:738
+#: inc/customizer.php:228 inc/customizer.php:255 inc/customizer.php:273 inc/customizer.php:291
+#: inc/customizer.php:496 inc/customizer.php:514 inc/customizer.php:738
 msgid "Hide"
 msgstr "Masquer"
 
 #: inc/customizer.php:236
 msgid "Post Meta"
-msgstr ""
+msgstr "Métadonnées de l'article"
 
 #: inc/customizer.php:250
 msgid "Display date above post title?"
-msgstr "Afficher la date au dessus du titre du post ?"
+msgstr "Afficher la date au dessus du titre de l'article ?"
 
 #: inc/customizer.php:268
 msgid "Display author name above post title?"
-msgstr "Afficher le nom de l'auteur au dessus du titre du post ?"
+msgstr "Afficher le nom de l'auteur au dessus du titre de l'article ?"
 
 #: inc/customizer.php:286
 msgid "Display category above post title?"
-msgstr "Afficher la catégorie au dessus du titre du post"
+msgstr "Afficher la catégorie au dessus du titre de l'article ?"
 
 #: inc/customizer.php:299
 msgid "Comments"
@@ -296,16 +281,16 @@ msgstr "Montrer les commentaires sur :"
 
 #: inc/customizer.php:318 inc/customizer.php:771
 msgid "Posts"
-msgstr ""
+msgstr "Articles"
 
-#: inc/customizer.php:319 inc/customizer.php:772
-#: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
+#: inc/customizer.php:319 inc/customizer.php:772 library/classes/widget-pages.php:55
+#: library/classes/widget-pages.php:62
 msgid "Pages"
-msgstr ""
+msgstr "Pages"
 
 #: inc/customizer.php:320 inc/customizer.php:773
 msgid "Attachments"
-msgstr ""
+msgstr "Pièces jointes"
 
 #: inc/customizer.php:321 inc/customizer.php:774
 msgid "Do not show"
@@ -317,7 +302,7 @@ msgstr "Texte du pied de page"
 
 #: inc/customizer.php:343
 msgid "Edit the text in your footer"
-msgstr "Modifiez le text du pied de page"
+msgstr "Modifier le texte du pied de page"
 
 #: inc/customizer.php:353
 msgid "Custom CSS"
@@ -325,15 +310,15 @@ msgstr "CSS personnalisé"
 
 #: inc/customizer.php:366
 msgid "Add Custom CSS Here:"
-msgstr "Ajoutez du CSS personnalisé ici"
+msgstr "Ajouter du CSS personnalisé ici :"
 
 #: inc/customizer.php:399 theme-options.php:52
 msgid "Premium Layouts"
-msgstr "Mises en page premium"
+msgstr "Mises en page Premium"
 
 #: inc/customizer.php:413
 msgid "Choose the layout for Tracks"
-msgstr "Choisissez la mise en page pour Tracks"
+msgstr "Choisir la mise en page pour Tracks"
 
 #: inc/customizer.php:428
 msgid "Image size on Blog"
@@ -347,31 +332,29 @@ msgstr "Taille des images mises en avant"
 #: inc/customizer.php:433 inc/customizer.php:826
 msgctxt "size of the featured image"
 msgid "2:1 width/height ratio like posts"
-msgstr "Ratio largeur / hauteur 2:1 des articles"
+msgstr "Ratio largeur/hauteur 2:1 des articles"
 
 #: inc/customizer.php:446
 msgid "Style"
-msgstr ""
+msgstr "Style"
 
 #: inc/customizer.php:450 inc/customizer.php:837
 msgid "Overlay"
-msgstr ""
+msgstr "Superposition"
 
 #: inc/customizer.php:451 inc/customizer.php:838
 msgid "Title below"
-msgstr "Titre au dessus"
+msgstr "Titre en dessous"
 
 #: inc/customizer.php:464
 msgid "Show full posts on Blog/Archives?"
 msgstr "Afficher l'article entier dans le blog / les archives ?"
 
-#: inc/customizer.php:468 inc/customizer.php:547 inc/customizer.php:628
-#: inc/customizer.php:755
+#: inc/customizer.php:468 inc/customizer.php:547 inc/customizer.php:628 inc/customizer.php:755
 msgid "Yes"
 msgstr "Oui"
 
-#: inc/customizer.php:469 inc/customizer.php:548 inc/customizer.php:629
-#: inc/customizer.php:756
+#: inc/customizer.php:469 inc/customizer.php:548 inc/customizer.php:629 inc/customizer.php:756
 msgid "No"
 msgstr "Non"
 
@@ -381,15 +364,15 @@ msgstr "Options additionnelles"
 
 #: inc/customizer.php:491
 msgid "Show scroll-to-top arrow?"
-msgstr "Afficher le bouton scroll-to-top ?"
+msgstr "Afficher le bouton Retour en haut ?"
 
 #: inc/customizer.php:509
 msgid "Show author info box after posts?"
-msgstr "Afficher les infos de l'auteur après les articles ?"
+msgstr "Afficher la biographie de l'auteur après les articles ?"
 
 #: inc/customizer.php:527
 msgid "Zoom-in blog images on hover?"
-msgstr "Faire un zoom sur les images des articles au hover ?"
+msgstr "Faire un zoom sur les images des articles au passage de la souris ?"
 
 #: inc/customizer.php:530
 msgid "Zoom in"
@@ -405,68 +388,59 @@ msgstr "Charger les images en lazy-load ?"
 
 #: inc/customizer.php:561
 msgid "Word count in automatic excerpts"
-msgstr "Compteur de mots dans les extraits d'articles"
+msgstr "Nombre de mots des extraits automatiques"
 
 #: inc/customizer.php:578
 msgid "Background Image"
-msgstr "Image d'arrière plan"
+msgstr "Image d'arrière-plan"
 
 #: inc/customizer.php:579
-msgid ""
-"Use the Header Color section above if your new background image makes the "
-"menu hard to read."
-msgstr ""
-msgstr "Utilisez la section de couleur du header si votre image d'arrière plan rend la"
-msgstr "lecture du menu difficile"
+msgid "Use the Header Color section above if your new background image makes the menu hard to read."
+msgstr "Utilisez la section Couleur d'en-tête si votre nouvelle image de fond rend le menu difficile à lire."
 
 #: inc/customizer.php:592
 msgid "Background image"
-msgstr ""
+msgstr "Image d'arrière-plan"
 
 #: inc/customizer.php:609
 msgid "Background Texture"
-msgstr "Image d'arrière plan"
+msgstr "Motif d'arrière-plan"
 
 #: inc/customizer.php:610
-msgid ""
-"Use the Header Color section above if your new texture makes the menu hard "
-"to read."
-msgstr ""
-msgstr ""
-msgstr "Utilisez la section de couleur du header si votre image d'arrière plan rend la"
-msgstr "lecture du menu difficile"
+msgid "Use the Header Color section above if your new texture makes the menu hard to read."
+msgstr "Utilisez la section Couleur d'en-tête si votre nouveau motif de fond rend le menu difficile à lire."
 
 #: inc/customizer.php:624
 msgid "Enable background texture?"
-msgstr "Activer les textures pour l'arrière plan"
+msgstr "Activer un motif d'arrière-plan ?"
 
 #: inc/customizer.php:644
 msgid "Choose a Texture"
-msgstr "Choisissez une texture"
+msgstr "Choisir un motif"
 
 #: inc/customizer.php:663
 msgid "Header Color"
-msgstr "Couleur du header"
+msgstr "Couleur d'en-tête"
 
 #: inc/customizer.php:664
 msgid "Change to dark if your new background makes the menu hard to read."
-msgstr "Changez au profit du noir si votre arrière plan rends le menu difficile à lire."
+msgstr "Changer en foncé si votre arrière-plan rend le menu difficile à lire."
 
 #: inc/customizer.php:678
 msgid "Light or dark header color?"
-msgstr "Couleur du header clair ou sombre ?"
+msgstr "Couleur d'en-tête claire ou foncée ?"
 
 #: inc/customizer.php:682 inc/customizer.php:865
 msgid "Light"
-msgstr "Clair"
+msgstr "Claire"
 
 #: inc/customizer.php:683 inc/customizer.php:866
 msgid "Dark"
-msgstr "Sombre"
+msgstr "Foncée"
 
 #: inc/customizer.php:792
 msgid "Zoom"
-msgstr ""
+msgstr "Zoomer"
 
 #: inc/customizer.php:793
 msgid "Do not Zoom"
@@ -478,15 +452,12 @@ msgstr "Image de profil"
 
 #: inc/user-profile.php:23
 msgid "Upload Image"
-msgstr ""
+msgstr "Télécharger l'image"
 
 #: inc/user-profile.php:24
-msgid ""
-"Upload an image here to use instead of your Gravatar. Perfectly square "
-"images will not be cropped."
+msgid "Upload an image here to use instead of your Gravatar. Perfectly square images will not be cropped."
 msgstr ""
-"Uploadez une image ici à la place de votre Gravatar. Doit être carré "
-"L'image ne sera pas recadrée."
+"Télécharger une image ici pour remplacer votre Gravatar. Les images parfaitement carrées ne seront pas recadrées."
 
 #: inc/user-profile.php:97
 msgid "Social Profiles"
@@ -494,19 +465,19 @@ msgstr "Profils sociaux"
 
 #: inc/user-profile.php:105
 msgid "Address:"
-msgstr "Adresse"
+msgstr "Adresse :"
 
 #: inc/user-profile.php:107
 msgid "Profile:"
-msgstr "Profil"
+msgstr "Profil :"
 
 #: index.php:11
 msgid "Category:"
-msgstr "Catégorie"
+msgstr "Catégorie :"
 
 #: index.php:18
 msgid "Tag:"
-msgstr ""
+msgstr "Etiquettes :"
 
 #: index.php:25
 msgid "These Posts are by:"
@@ -514,42 +485,39 @@ msgstr "Ces articles sont de :"
 
 #: library/admin/meta-box-post-template.php:48
 msgid "Template"
-msgstr ""
+msgstr "Modèle"
 
 #: library/admin/theme-settings.php:134 library/admin/theme-settings.php:199
 #, php-format
 msgid "%s Theme Settings"
-msgstr "%s paramètres du Thème"
+msgstr "%s paramètres du thème"
 
 #: library/admin/theme-settings.php:135
 msgid "Theme Settings"
-msgstr "Paramètres du Thème"
+msgstr "Paramètres du thème"
 
 #: library/classes/customize-control-background-image.php:49
 msgctxt "theme customizer tab"
 msgid "Default"
-msgstr ""
+msgstr "Défaut"
 
-#: library/classes/hybrid-media-meta.php:154
-#: library/classes/hybrid-media-meta.php:282
+#: library/classes/hybrid-media-meta.php:154 library/classes/hybrid-media-meta.php:282
 #: library/functions/template-media.php:102
 #, php-format
 msgid "%1$s &#215; %2$s"
-msgstr ""
+msgstr "%1$s &#215; %2$s"
 
-#: library/classes/hybrid-media-meta.php:155
-#: library/classes/hybrid-media-meta.php:282
+#: library/classes/hybrid-media-meta.php:155 library/classes/hybrid-media-meta.php:282
 msgid "Dimensions"
-msgstr ""
+msgstr "Dimensions"
 
-#: library/classes/hybrid-media-meta.php:161
-#: library/classes/widget-pages.php:191
+#: library/classes/hybrid-media-meta.php:161 library/classes/widget-pages.php:191
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: library/classes/hybrid-media-meta.php:165
 msgid "Camera"
-msgstr ""
+msgstr "Appareil photo"
 
 #: library/classes/hybrid-media-meta.php:169
 msgid "Aperture"
@@ -558,51 +526,43 @@ msgstr "Ouverture"
 #: library/classes/hybrid-media-meta.php:174
 #, php-format
 msgid "%s mm"
-msgstr ""
+msgstr "%s mm"
 
 #: library/classes/hybrid-media-meta.php:174
 msgid "Focal Length"
-msgstr "Distance Focale"
+msgstr "Distance focale"
 
 #: library/classes/hybrid-media-meta.php:180
 msgid "International Organization for Standardization"
-msgstr ""
+msgstr "Organisation internationale de normalisation"
 
 #: library/classes/hybrid-media-meta.php:180
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #: library/classes/hybrid-media-meta.php:199
 #, php-format
 msgid "%s sec"
-msgstr ""
+msgstr "%s sec"
 
 #: library/classes/hybrid-media-meta.php:199
 msgid "Shutter Speed"
 msgstr "Vitesse d'obturation"
 
-#: library/classes/hybrid-media-meta.php:248
-#: library/classes/hybrid-media-meta.php:285
+#: library/classes/hybrid-media-meta.php:248 library/classes/hybrid-media-meta.php:285
 msgid "File Name"
 msgstr "Nom du fichier"
 
-#: library/classes/hybrid-media-meta.php:256
-#: library/classes/hybrid-media-meta.php:293
+#: library/classes/hybrid-media-meta.php:256 library/classes/hybrid-media-meta.php:293
 msgid "File Type"
 msgstr "Type du fichier"
 
 #: library/classes/widget-archives.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"archives."
-msgstr ""
-"Un Widget avancé qui vous donne un contrôle complet de la restitution de vos "
-"archives"
+msgid "An advanced widget that gives you total control over the output of your archives."
+msgstr "Un Widget avancé qui vous donne un contrôle complet de l'affichage de vos archives."
 
-#: library/classes/widget-archives.php:55
-#: library/classes/widget-archives.php:62
-#: library/extensions/breadcrumb-trail.php:181
-#: library/functions/template-general.php:339
+#: library/classes/widget-archives.php:55 library/classes/widget-archives.php:62
+#: library/extensions/breadcrumb-trail.php:181 library/functions/template-general.php:339
 msgid "Archives"
 msgstr "Archives"
 
@@ -612,7 +572,7 @@ msgstr "Sélectionner l'année"
 
 #: library/classes/widget-archives.php:108
 msgid "Select Month"
-msgstr "Sélectionner la mois"
+msgstr "Sélectionner le mois"
 
 #: library/classes/widget-archives.php:111
 msgid "Select Week"
@@ -650,18 +610,14 @@ msgstr "Hebdomadaire"
 msgid "Yearly"
 msgstr "Annuel"
 
-#: library/classes/widget-archives.php:204
-#: library/classes/widget-authors.php:181
-#: library/classes/widget-bookmarks.php:220
-#: library/classes/widget-categories.php:210
+#: library/classes/widget-archives.php:204 library/classes/widget-authors.php:181
+#: library/classes/widget-bookmarks.php:220 library/classes/widget-categories.php:210
 #: library/classes/widget-pages.php:185 library/classes/widget-tags.php:227
 msgid "Ascending"
 msgstr "Ascendant"
 
-#: library/classes/widget-archives.php:205
-#: library/classes/widget-authors.php:182
-#: library/classes/widget-bookmarks.php:221
-#: library/classes/widget-categories.php:211
+#: library/classes/widget-archives.php:205 library/classes/widget-authors.php:182
+#: library/classes/widget-bookmarks.php:221 library/classes/widget-categories.php:211
 #: library/classes/widget-pages.php:186 library/classes/widget-tags.php:228
 msgid "Descending"
 msgstr "Descendant"
@@ -678,29 +634,20 @@ msgstr "HTML"
 msgid "Option"
 msgstr "Option"
 
-#: library/classes/widget-archives.php:218
-#: library/classes/widget-authors.php:205
-#: library/classes/widget-bookmarks.php:250
-#: library/classes/widget-calendar.php:137
-#: library/classes/widget-categories.php:234
-#: library/classes/widget-nav-menu.php:173
-#: library/classes/widget-pages.php:211 library/classes/widget-search.php:128
-#: library/classes/widget-tags.php:248
+#: library/classes/widget-archives.php:218 library/classes/widget-authors.php:205
+#: library/classes/widget-bookmarks.php:250 library/classes/widget-calendar.php:137
+#: library/classes/widget-categories.php:234 library/classes/widget-nav-menu.php:173
+#: library/classes/widget-pages.php:211 library/classes/widget-search.php:128 library/classes/widget-tags.php:248
 msgid "Title:"
 msgstr "Titre :"
 
-#: library/classes/widget-archives.php:262
-#: library/classes/widget-authors.php:261
+#: library/classes/widget-archives.php:262 library/classes/widget-authors.php:261
 msgid "Show post count?"
-msgstr "Afficher le nombre d'articles?"
+msgstr "Afficher le nombre d'articles ?"
 
 #: library/classes/widget-authors.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"author lists."
-msgstr ""
-"Un Widget avancé vous donnant un contrôle total de l'affichage de votre "
-"liste d'auteurs"
+msgid "An advanced widget that gives you total control over the output of your author lists."
+msgstr "Un Widget avancé qui vous donne un contrôle complet de l'affichage de vos listes d'auteurs."
 
 #: library/classes/widget-authors.php:55 library/classes/widget-authors.php:62
 msgid "Authors"
@@ -712,19 +659,17 @@ msgstr "Nom d'affichage"
 
 #: library/classes/widget-authors.php:187
 msgid "Email"
-msgstr "Email"
+msgstr "Adresse de courriel"
 
-#: library/classes/widget-authors.php:188
-#: library/classes/widget-bookmarks.php:226
-#: library/classes/widget-bookmarks.php:232
-#: library/classes/widget-categories.php:216
+#: library/classes/widget-authors.php:188 library/classes/widget-bookmarks.php:226
+#: library/classes/widget-bookmarks.php:232 library/classes/widget-categories.php:216
 #: library/classes/widget-pages.php:192
 msgid "ID"
 msgstr "ID"
 
 #: library/classes/widget-authors.php:189
 msgid "Nice Name"
-msgstr "Nom agréable"
+msgstr "Surnom"
 
 #: library/classes/widget-authors.php:190
 msgid "Post Count"
@@ -734,8 +679,7 @@ msgstr "Nombre d'articles"
 msgid "Registered"
 msgstr "Enregistré"
 
-#: library/classes/widget-authors.php:192
-#: library/classes/widget-bookmarks.php:244
+#: library/classes/widget-authors.php:192 library/classes/widget-bookmarks.php:244
 msgid "URL"
 msgstr "URL"
 
@@ -743,67 +687,55 @@ msgstr "URL"
 msgid "Login"
 msgstr "Login"
 
-#: library/classes/widget-authors.php:197
-#: library/classes/widget-categories.php:205
+#: library/classes/widget-authors.php:197 library/classes/widget-categories.php:205
 #: library/classes/widget-tags.php:223
 msgid "List"
 msgstr "Liste"
 
-#: library/classes/widget-authors.php:198
-#: library/classes/widget-categories.php:206
+#: library/classes/widget-authors.php:198 library/classes/widget-categories.php:206
 msgid "None"
 msgstr "Aucun"
 
 #: library/classes/widget-authors.php:257
 msgid "<acronym title=\"Hypertext Markup Language\">HTML</acronym>?"
-msgstr "<acronym title=\"Hypertext Markup Language\">HTML</acronym>?"
+msgstr "<acronym title=\"Hypertext Markup Language\">HTML</acronym> ?"
 
 #: library/classes/widget-authors.php:265
 msgid "Exclude admin?"
-msgstr "Exclure l'admin?"
+msgstr "Exclure l'administrateur ?"
 
 #: library/classes/widget-authors.php:269
 msgid "Show full name?"
-msgstr "Afficher le nom complet?"
+msgstr "Afficher le nom complet ?"
 
-#: library/classes/widget-authors.php:273
-#: library/classes/widget-categories.php:337
+#: library/classes/widget-authors.php:273 library/classes/widget-categories.php:337
 #: library/classes/widget-tags.php:367
 msgid "Hide empty?"
-msgstr "Masquer si vide?"
+msgstr "Masquer si vide ?"
 
 #: library/classes/widget-bookmarks.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"bookmarks (links)."
-msgstr ""
-"Un Widget avancé qui vous donne un contrôle complet de l'affichage de vos "
-"bookmarks (liens)."
+msgid "An advanced widget that gives you total control over the output of your bookmarks (links)."
+msgstr "Un Widget avancé qui vous donne un contrôle complet de l'affichage de vos favoris (liens)."
 
-#: library/classes/widget-bookmarks.php:55
-#: library/classes/widget-bookmarks.php:62
+#: library/classes/widget-bookmarks.php:55 library/classes/widget-bookmarks.php:62
 #: library/classes/widget-bookmarks.php:127
 msgid "Bookmarks"
 msgstr "Favoris"
 
-#: library/classes/widget-bookmarks.php:225
-#: library/classes/widget-categories.php:215
+#: library/classes/widget-bookmarks.php:225 library/classes/widget-categories.php:215
 #: library/classes/widget-tags.php:233
 msgid "Count"
 msgstr "Nombre"
 
-#: library/classes/widget-bookmarks.php:227
-#: library/classes/widget-bookmarks.php:235
-#: library/classes/widget-categories.php:217
-#: library/classes/widget-tags.php:234
+#: library/classes/widget-bookmarks.php:227 library/classes/widget-bookmarks.php:235
+#: library/classes/widget-categories.php:217 library/classes/widget-tags.php:234
 msgid "Name"
 msgstr "Nom"
 
-#: library/classes/widget-bookmarks.php:228
-#: library/classes/widget-categories.php:218
+#: library/classes/widget-bookmarks.php:228 library/classes/widget-categories.php:218
 #: library/classes/widget-pages.php:195
 msgid "Slug"
-msgstr "Url simplifiée (slug)"
+msgstr "URL simplifiée"
 
 #: library/classes/widget-bookmarks.php:233
 msgid "Description"
@@ -821,8 +753,7 @@ msgstr "Notes"
 msgid "Owner"
 msgstr "Propriétaire"
 
-#: library/classes/widget-bookmarks.php:238
-#: library/classes/widget-tags.php:229
+#: library/classes/widget-bookmarks.php:238 library/classes/widget-tags.php:229
 msgid "Random"
 msgstr "Aléatoire"
 
@@ -834,14 +765,13 @@ msgstr "Notation"
 msgid "Rel"
 msgstr "Rel"
 
-#: library/classes/widget-bookmarks.php:241
-#: library/classes/widget-categories.php:226
+#: library/classes/widget-bookmarks.php:241 library/classes/widget-categories.php:226
 msgid "RSS"
 msgstr "RSS"
 
 #: library/classes/widget-bookmarks.php:242
 msgid "Target"
-msgstr "Target"
+msgstr "Cible"
 
 #: library/classes/widget-bookmarks.php:243
 msgid "Updated"
@@ -849,19 +779,19 @@ msgstr "Mis à jour"
 
 #: library/classes/widget-bookmarks.php:352
 msgid "Categorize?"
-msgstr "Catégorisé?"
+msgstr "Catégoriser ?"
 
 #: library/classes/widget-bookmarks.php:356
 msgid "Show description?"
-msgstr "Afficher la description?"
+msgstr "Afficher la description ?"
 
 #: library/classes/widget-bookmarks.php:360
 msgid "Hide invisible?"
-msgstr "Masquer invisible?"
+msgstr "Masquer si invisible ?"
 
 #: library/classes/widget-bookmarks.php:364
 msgid "Show rating?"
-msgstr "Afficher la notation?"
+msgstr "Afficher la notation ?"
 
 #: library/classes/widget-bookmarks.php:368
 msgid "Show updated?"
@@ -877,32 +807,23 @@ msgstr "Afficher le nom ?"
 
 #: library/classes/widget-bookmarks.php:380
 msgid "Show private?"
-msgstr "Afficher les droits"
+msgstr "Afficher les droits ?"
 
 #: library/classes/widget-calendar.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"calendar."
-msgstr ""
-"Un Widget avancé qui vous donne un contrôle complet de la restitution de vos "
-"calendrier"
+msgid "An advanced widget that gives you total control over the output of your calendar."
+msgstr "Un Widget avancé qui vous donne un contrôle complet de l'affichage de votre calendrier."
 
-#: library/classes/widget-calendar.php:55
-#: library/classes/widget-calendar.php:62
+#: library/classes/widget-calendar.php:55 library/classes/widget-calendar.php:62
 msgid "Calendar"
 msgstr "Calendrier"
 
 #: library/classes/widget-calendar.php:142
 msgid "One-letter abbreviation?"
-msgstr "Abbréviation en une lettre"
+msgstr "Abréviation en une lettre ?"
 
 #: library/classes/widget-categories.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"category links."
-msgstr ""
-"Un Widget avancé qui vous donne un contrôle complet de la restitution de vos "
-"liens de catégorie"
+msgid "An advanced widget that gives you total control over the output of your category links."
+msgstr "Un Widget avancé qui vous donne un contrôle complet de l'affichage de vos liens de catégorie."
 
 #: library/classes/widget-categories.php:219
 msgid "Term Group"
@@ -910,36 +831,31 @@ msgstr "Groupes de mots"
 
 #: library/classes/widget-categories.php:224
 msgid "Atom"
-msgstr ""
+msgstr "Atom"
 
 #: library/classes/widget-categories.php:225
 msgid "RDF"
-msgstr ""
+msgstr "RDF"
 
 #: library/classes/widget-categories.php:227
 msgid "RSS 2.0"
-msgstr ""
+msgstr "RSS 2.0"
 
-#: library/classes/widget-categories.php:325
-#: library/classes/widget-pages.php:310
+#: library/classes/widget-categories.php:325 library/classes/widget-pages.php:310
 msgid "Hierarchical?"
 msgstr "Par hiérarchie ?"
 
 #: library/classes/widget-categories.php:329
 msgid "Use description?"
-msgstr "Utiliser la description"
+msgstr "Utiliser la description ?"
 
 #: library/classes/widget-categories.php:333
 msgid "Show count?"
 msgstr "Afficher le nombre de catégorie ?"
 
 #: library/classes/widget-nav-menu.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"menus."
-msgstr ""
-"Un Widget avancé qui vous donne un contrôle complet de la restitution de vos "
-"menus."
+msgid "An advanced widget that gives you total control over the output of your menus."
+msgstr "Un Widget avancé qui vous donne un contrôle complet de l'affichage de vos menus."
 
 #: library/classes/widget-nav-menu.php:55
 msgid "Navigation Menu"
@@ -947,15 +863,11 @@ msgstr "Menu de navigation"
 
 #: library/classes/widget-nav-menu.php:62
 msgid "Navigation"
-msgstr ""
+msgstr "Navigation"
 
 #: library/classes/widget-pages.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your page "
-"links."
-msgstr ""
-"Un Widget avancé qui vous donne un contrôle complet de la restitution de vos "
-"liens de page"
+msgid "An advanced widget that gives you total control over the output of your page links."
+msgstr "Un Widget avancé qui vous donne un contrôle complet de l'affichage de vos liens de page."
 
 #: library/classes/widget-pages.php:190
 msgid "Author"
@@ -975,136 +887,115 @@ msgstr "Titre"
 
 #: library/classes/widget-pages.php:201
 msgid "Created"
-msgstr "Crée"
+msgstr "Créé"
 
 #: library/classes/widget-search.php:44
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"search form."
-msgstr ""
-"Un Widget avancé qui vous donne un contrôle complet de la restitution de votre "
-"formulaire de recherche"
+msgid "An advanced widget that gives you total control over the output of your search form."
+msgstr "Un Widget avancé qui vous donne un contrôle complet de l'affichage de votre formulaire de recherche."
 
-#: library/classes/widget-search.php:56 library/classes/widget-search.php:63
-#: searchform.php:7
+#: library/classes/widget-search.php:56 library/classes/widget-search.php:63 searchform.php:7
 msgid "Search"
 msgstr "Rechercher"
 
 #: library/classes/widget-tags.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your tags."
-msgstr ""
-"Un Widget avancé qui vous donne un contrôle complet de la restitution de vos tags"
+msgid "An advanced widget that gives you total control over the output of your tags."
+msgstr "Un Widget avancé qui vous donne un contrôle complet de l'affichage de vos étiquettes."
 
 #: library/classes/widget-tags.php:61
 #, php-format
 msgid "%s topic"
 msgid_plural "%s topics"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s sujet"
+msgstr[1] "%s sujets"
 
 #: library/classes/widget-tags.php:217
 msgid "View"
 msgstr "Consulter"
 
-#: library/classes/widget-tags.php:218
-#: library/extensions/breadcrumb-trail.php:1135
-#: library/extensions/breadcrumb-trail.php:1171
-#: library/extensions/breadcrumb-trail.php:1188
+#: library/classes/widget-tags.php:218 library/extensions/breadcrumb-trail.php:1135
+#: library/extensions/breadcrumb-trail.php:1171 library/extensions/breadcrumb-trail.php:1188
 #: library/extensions/breadcrumb-trail.php:1219
 msgid "Edit"
 msgstr "Modifier"
 
 #: library/classes/widget-tags.php:222
 msgid "Flat"
-msgstr ""
+msgstr "Plat"
 
 #: library/classes/widget-tags.php:363
 msgid "Pad counts?"
-msgstr ""
+msgstr "Nombre de blocs ?"
 
 #: library/extensions/breadcrumb-trail.php:178
 msgid "Browse:"
-msgstr "Parcourir"
+msgstr "Parcourir :"
 
 #: library/extensions/breadcrumb-trail.php:179
 msgid "Home"
 msgstr "Accueil"
 
-#: library/extensions/breadcrumb-trail.php:180
-#: library/functions/template-general.php:494
+#: library/extensions/breadcrumb-trail.php:180 library/functions/template-general.php:494
 msgid "404 Not Found"
 msgstr "404 non trouvé"
 
-#: library/extensions/breadcrumb-trail.php:183
-#: library/functions/template-general.php:475
+#: library/extensions/breadcrumb-trail.php:183 library/functions/template-general.php:475
 #, php-format
 msgid "Search results for &#8220;%s&#8221;"
-msgstr "Résultats pour &#8220;%s&#8221"
+msgstr "Résultats de recherche pour &#8220;%s&#8221;"
 
 #: library/extensions/breadcrumb-trail.php:185
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "Page %s"
 
-#: library/extensions/breadcrumb-trail.php:187
-#: library/functions/template-general.php:436
+#: library/extensions/breadcrumb-trail.php:187 library/functions/template-general.php:436
 #, php-format
 msgid "Minute %s"
-msgstr ""
+msgstr "Minute %s"
 
 #: library/extensions/breadcrumb-trail.php:189
 #, php-format
 msgid "Week %s"
 msgstr "Semaine %s"
 
-#: library/extensions/breadcrumb-trail.php:716
-#: library/functions/template-general.php:455
+#: library/extensions/breadcrumb-trail.php:716 library/functions/template-general.php:455
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
-msgstr ""
+msgstr "g:i a"
 
-#: library/extensions/breadcrumb-trail.php:733
-#: library/functions/template-general.php:436
+#: library/extensions/breadcrumb-trail.php:733 library/functions/template-general.php:436
 msgctxt "minute archives time format"
 msgid "i"
-msgstr ""
+msgstr "i"
 
-#: library/extensions/breadcrumb-trail.php:750
-#: library/functions/template-general.php:416
+#: library/extensions/breadcrumb-trail.php:750 library/functions/template-general.php:416
 msgctxt "hour archives time format"
 msgid "g a"
-msgstr ""
+msgstr "g a"
 
-#: library/extensions/breadcrumb-trail.php:766
-#: library/extensions/breadcrumb-trail.php:795
-#: library/extensions/breadcrumb-trail.php:822
-#: library/extensions/breadcrumb-trail.php:849
-#: library/extensions/breadcrumb-trail.php:1036
-#: library/functions/template-general.php:358
+#: library/extensions/breadcrumb-trail.php:766 library/extensions/breadcrumb-trail.php:795
+#: library/extensions/breadcrumb-trail.php:822 library/extensions/breadcrumb-trail.php:849
+#: library/extensions/breadcrumb-trail.php:1036 library/functions/template-general.php:358
 #: library/functions/template-general.php:378
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
-#: library/extensions/breadcrumb-trail.php:767
-#: library/extensions/breadcrumb-trail.php:823
+#: library/extensions/breadcrumb-trail.php:767 library/extensions/breadcrumb-trail.php:823
 #: library/extensions/breadcrumb-trail.php:1040
 msgctxt "monthly archives date format"
 msgid "F"
-msgstr ""
+msgstr "F"
 
-#: library/extensions/breadcrumb-trail.php:768
-#: library/extensions/breadcrumb-trail.php:1044
+#: library/extensions/breadcrumb-trail.php:768 library/extensions/breadcrumb-trail.php:1044
 msgctxt "daily archives date format"
 msgid "j"
-msgstr ""
+msgstr "j"
 
-#: library/extensions/breadcrumb-trail.php:796
-#: library/functions/template-general.php:378
+#: library/extensions/breadcrumb-trail.php:796 library/functions/template-general.php:378
 msgctxt "weekly archives date format"
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #: library/extensions/breadcrumb-trail.php:1163
 msgid "Split"
@@ -1116,7 +1007,7 @@ msgstr "Fusionner"
 
 #: library/extensions/featured-header.php:208
 msgid "Featured Header"
-msgstr "Header mis en avant"
+msgstr "Featured Header"
 
 #: library/extensions/post-stylesheets.php:286
 msgid "Stylesheet"
@@ -1131,51 +1022,46 @@ msgctxt "theme layout"
 msgid "Default"
 msgstr "Défaut"
 
-#: library/extensions/theme-layouts.php:458
-#: library/extensions/theme-layouts.php:567
+#: library/extensions/theme-layouts.php:458 library/extensions/theme-layouts.php:567
 #: library/extensions/theme-layouts.php:652
 msgid "Layout"
-msgstr ""
+msgstr "Mise en page"
 
 #: library/extensions/theme-layouts.php:483
 msgid "Layout is a theme-specific structure for the single view of the post."
-msgstr "Layout est spécifique à la structure du thème pour la vue d'un article"
+msgstr "La mise en page est une structure spécifique du thème pour la vue d'un article."
 
 #: library/extensions/theme-layouts.php:685
 msgid "Global Layout"
-msgstr "Layout global"
+msgstr "Mise en page globale"
 
 #: library/functions/attr.php:414
 msgctxt "post time format"
 msgid "l, F j, Y, g:i a"
-msgstr ""
+msgstr "l, F j, Y, g:i a"
 
 #: library/functions/attr.php:535
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
-msgstr ""
+msgstr "l, F j, Y, g:i a"
 
 #: library/functions/deprecated.php:432 library/functions/deprecated.php:520
 msgid "Permalink"
-msgstr ""
+msgstr "Permalien"
 
 #: library/functions/deprecated.php:857
 #, php-format
-msgid ""
-"<code>%1$s</code> &mdash; This function has been removed or replaced by "
-"another function."
-msgstr ""
-"<code>%1$s</code> &mdash; Cette fonction a été supprimée ou remplacée par "
-"une autre fonction."
+msgid "<code>%1$s</code> &mdash; This function has been removed or replaced by another function."
+msgstr "<code>%1$s</code> &mdash; Cette fonction a été supprimée ou remplacée par une autre fonction."
 
 #: library/functions/head.php:149
 #, php-format
 msgid "%1$s Page %2$s"
-msgstr ""
+msgstr "%1$s Page %2$s"
 
 #: library/functions/media.php:32
 msgid "Post Thumbnail"
-msgstr ""
+msgstr "Vignette d'article"
 
 #: library/functions/media.php:53
 msgid "File Size"
@@ -1183,15 +1069,15 @@ msgstr "Poids du fichier"
 
 #: library/functions/media.php:54
 msgid "Mime Type"
-msgstr ""
+msgstr "Type MIME"
 
 #: library/functions/media.php:55
 msgid "Run Time"
-msgstr ""
+msgstr "Temps d’exécution"
 
 #: library/functions/media.php:60
 msgid "Genre"
-msgstr ""
+msgstr "Genre"
 
 #: library/functions/media.php:61
 msgid "Year"
@@ -1199,11 +1085,11 @@ msgstr "Année"
 
 #: library/functions/media.php:62
 msgid "Composer"
-msgstr ""
+msgstr "Compositeur"
 
 #: library/functions/media.php:63
 msgid "Track"
-msgstr ""
+msgstr "Piste"
 
 #: library/functions/media.php:66
 msgid "Lyrics"
@@ -1211,29 +1097,27 @@ msgstr "Paroles"
 
 #: library/functions/template-general.php:55
 msgid "State-of-the-art semantic personal publishing platform"
-msgstr ""
+msgstr "Plateforme de publication personnelle sémantique d'avant-garde"
 
 #: library/functions/template-general.php:55
 msgid "WordPress"
-msgstr ""
+msgstr "WordPress"
 
-#: library/functions/template-general.php:82
-#: library/functions/template-general.php:115
+#: library/functions/template-general.php:82 library/functions/template-general.php:115
 #, php-format
 msgid "%s WordPress Theme"
-msgstr ""
+msgstr "%s WordPress Theme"
 
 #: library/functions/template-general.php:305
 #, php-format
 msgid "You are browsing the search results for &#8220;%s&#8221;"
-msgstr "Vous regardez les résultats de recherche pour &#8220;%s&#8221;"
+msgstr "Vous consultez les résultats de recherche pour &#8220;%s&#8221;"
 
 #: library/functions/template-general.php:311
 msgid "You are browsing the site archives by time."
-msgstr "Vous consultez les archives par date"
+msgstr "Vous consultez les archives par date."
 
-#: library/functions/template-general.php:314
-#: library/functions/template-general.php:317
+#: library/functions/template-general.php:314 library/functions/template-general.php:317
 #: library/functions/template-general.php:320
 #, php-format
 msgid "You are browsing the site archives for %s."
@@ -1241,7 +1125,7 @@ msgstr "Vous consultez les archives pour %s."
 
 #: library/functions/template-general.php:323
 msgid "You are browsing the site archives."
-msgstr "Vous consultez les archives"
+msgstr "Vous consultez les archives."
 
 #: library/functions/template-general.php:378
 #, php-format
@@ -1251,20 +1135,20 @@ msgstr "Semaine %1$s de %2$s"
 #: library/functions/template-general.php:397
 msgctxt "daily archives date format"
 msgid "F j, Y"
-msgstr ""
+msgstr "F j, Y"
 
 #: library/functions/template-post.php:144
 msgctxt "taxonomy terms separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: library/functions/utility.php:86
 msgid "(Untitled)"
-msgstr ""
+msgstr "(Sans titre)"
 
 #: licenses/functions/video.php:18
 msgid "Featured Video"
-msgstr "Vidéo mise en avant"
+msgstr "Featured Video"
 
 #: licenses/functions/video.php:53
 msgid "Video Preview"
@@ -1272,19 +1156,19 @@ msgstr "Aperçu de la vidéo"
 
 #: licenses/functions/video.php:67
 msgid "Add video URL:"
-msgstr "Ajouter l'URL de la vidéo"
+msgstr "Ajouter l'adresse de la vidéo"
 
 #: licenses/functions/video.php:77
 msgid "Choose where to display the video:"
-msgstr "Choisir ou afficher la vidéo"
+msgstr "Choisir où afficher la vidéo :"
 
 #: licenses/functions/video.php:80
 msgid "Display on Post"
-msgstr "Afficher sur les articles"
+msgstr "Afficher dans l'article"
 
 #: licenses/functions/video.php:84
 msgid "Display on Post and Blog"
-msgstr "Afficher sur les articles et le blog"
+msgstr "Afficher dans l'article et le blog"
 
 #: node_modules/grunt-wp-i18n/test/fixtures/basic-theme/exclude/file.php:3
 #: node_modules/grunt-wp-i18n/test/fixtures/plugin-include/plugin-include.php:6
@@ -1299,28 +1183,28 @@ msgstr "Inclure"
 #: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:2
 #: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:3
 msgid "String"
-msgstr "Chaine de caractère"
+msgstr "Chaîne de caractère"
 
 #: search.php:11
 #, php-format
 msgid "%d search results for"
-msgstr "%d résultats pour"
+msgstr "%d résultats de recherche pour"
 
 #: search.php:13
 msgid "No search results for "
-msgstr "Aucun résultat pour"
+msgstr "Aucun résultat de recherche pour"
 
 #: search.php:38
 msgid "Can't find what you're looking for?  Try refining your search:"
-msgstr "Aucun résultat pour votre recherche? Tentez d'affiner votre recherche:"
+msgstr "Aucun résultat pour votre recherche ? Tentez d'affiner votre recherche :"
 
 #: searchform.php:6 searchform.php:7
 msgid "Search for:"
-msgstr "Recherche:"
+msgstr "Rechercher pour :"
 
 #: searchform.php:8
 msgid "Go"
-msgstr "Allons-y!"
+msgstr "Allons-y !"
 
 #: theme-options.php:13
 msgid "Tracks Dashboard"
@@ -1328,7 +1212,7 @@ msgstr "Tableau de bord Tracks"
 
 #: theme-options.php:18
 msgid "Getting Started"
-msgstr "Pour bien commencer"
+msgstr "Pour commencer"
 
 #: theme-options.php:19
 msgid "Support"
@@ -1336,11 +1220,11 @@ msgstr "Support"
 
 #: theme-options.php:20
 msgid "Premium Upgrades"
-msgstr "Mises-à-jour Premium"
+msgstr "Mises à jour Premium"
 
 #: theme-options.php:21
 msgid "Licenses"
-msgstr ""
+msgstr "Licences"
 
 #: theme-options.php:26
 msgid "Start Customizing"
@@ -1348,103 +1232,96 @@ msgstr "Commencer la personnalisation"
 
 #: theme-options.php:27
 msgid "Thanks for downloading Tracks!"
-msgstr "Merci d'avoir téléchargé Tracks !"
+msgstr "Merci pour le téléchargement de Tracks !"
 
 #: theme-options.php:28
 msgid ""
-"To start customizing Tracks, click the \"Customize\" link to the left in "
-"your menu, or use the button below to get started"
+"To start customizing Tracks, click the \"Customize\" link to the left in your menu, or use the button below to "
+"get started"
 msgstr ""
-"Pour commencer à personnaliser Tracks, cliquez sur le lien \"Personnaliser\"" "
-"your menu, or use the button below to get started"
+"Pour commencer à personnaliser Tracks, cliquez sur le lien \"Personnaliser\" dans votre menu à gauche, ou "
+"utiliser le bouton en dessous pour commencer"
 
 #: theme-options.php:30
 msgid "Use Customizer"
-msgstr "Utiliser la personnalisation"
+msgstr "Utiliser le module Personnaliser"
 
 #: theme-options.php:36
 msgid "Get Support"
 msgstr "Obtenir un support"
 
 #: theme-options.php:37
-msgid ""
-"You can find the knowledgebase, tutorials, support forum, and more in the "
-"Tracks Support Center"
+msgid "You can find the knowledgebase, tutorials, support forum, and more in the Tracks Support Center"
 msgstr ""
-"Vous pouvez trouver une base de donnée d'aide, des tutoriaux, un forum d'entraide et plus dans le "
-"Centre de support Tracks"
+"Vous pouvez trouver une base de connaissances, des tutoriaux, un forum d'entraide et plus dans le Centre de "
+"support Tracks"
 
 #: theme-options.php:39
 msgid "Visit Support Center"
-msgstr "Visiter le centre de support"
+msgstr "Visiter le Centre de support"
 
 #: theme-options.php:45
 msgid "Premium Upgrades ($9-15)"
-msgstr "Mises-à-jours Premium (9$-15$)"
+msgstr "Mises à jour Premium (9$-15$)"
 
 #: theme-options.php:46
 msgid ""
-"New layouts, features, and more. Make your site more customizable and "
-"beautiful with Tracks premium upgrades"
+"New layouts, features, and more. Make your site more customizable and beautiful with Tracks premium upgrades"
 msgstr ""
-"Nouveaux layouts, fonctionnalités, et plus. Rendez votre site plus personnalisable et "
-"design avec les mises-à-jour Premium de Tracks"
+"Nouvelles mises en page, fonctionnalités, et plus. Rendez votre site plus personnalisable et splendide avec les "
+"mises à jour Premium de Tracks"
 
 #: theme-options.php:47
 msgid "Visit Upgrades Gallery"
-msgstr "Visiter la gallerie de mise-à-jour"
+msgstr "Visiter la galerie des mises à jour"
 
 #: theme-options.php:59
 msgid "Premium Features"
-msgstr "Fonctionnalités premiums"
+msgstr "Fonctionnalités Premium"
 
 #: theme-options.php:113
 msgid "Save License"
-msgstr "Enregister la license"
+msgstr "Enregistrer la licence"
 
 #: theme-options.php:116
 msgid "Enter your license key"
-msgstr "Entrez votre clef de license"
+msgstr "Entrer votre clef de licence"
 
 #: theme-options.php:122 theme-options.php:130
 msgid "Activate License"
-msgstr "Activer la license"
+msgstr "Activer la licence"
 
 #: theme-options.php:127
 msgid "Deactivate License"
-msgstr "Désactiver la license"
+msgstr "Désactiver la licence"
 
 #: theme-options.php:143
 #, php-format
 msgid ""
-"You can now add a background image using the \"Background Image\" section in "
-"the <a href=\"%s\">Customizer</a>"
+"You can now add a background image using the \"Background Image\" section in the <a href=\"%s\">Customizer</a>"
 msgstr ""
-"Vous pouvez maintenant ajouter une image d'arrière-plan en utiliser la section \"Image d'arrière plan\" dans "
-"la <a href=\"%s\">personnalisation</a> de Tracks"
+"Vous pouvez maintenant ajouter une image d'arrière-plan en utilisant la section \"Image d'arrière-plan\" dans <a "
+"href=\"%s\">Personnaliser</a>"
 
 #: theme-options.php:145
 #, php-format
 msgid ""
-"You can now add a background texture using the \"Background Texture\" "
-"section in the <a href=\"%s\">Customizer</a>"
+"You can now add a background texture using the \"Background Texture\" section in the <a href=\"%s\">Customizer</"
+"a>"
 msgstr ""
-"Vous pouvez maintenant ajouter une texture d'arrière-plan en utiliser la section \"Texture d'arrière plan\" dans "
-"la <a href=\"%s\">personnalisation</a> de Tracks"
+"Vous pouvez maintenant ajouter un motif d'arrière-plan en utilisant la section \"Motif d'arrière-plan\" dans <a "
+"href=\"%s\">Personnaliser</a>"
 
 #: theme-options.php:147
-msgid ""
-"You can now add videos to posts. Use the Featured Videos box under the Post "
-"Editor to get started"
+msgid "You can now add videos to posts. Use the Featured Videos box under the Post Editor to get started"
 msgstr ""
-"Vous pouvez maintenant ajouter des vidéos aux articles. Utiliser la zone de vidéo mise en avant en dessous de "
-"l'éditeur dans la page de création des articles"
+"Vous pouvez maintenant ajouter des vidéos aux articles. Utiliser la zone Featured Videos en dessous de l'éditeur "
+"d'articles pour commencer."
 
 #: theme-options.php:149
 #, php-format
 msgid ""
-"You can now switch to your new layout in the \"Premium Layouts\" section in "
-"the <a href=\"%s\">Customizer</a>"
+"You can now switch to your new layout in the \"Premium Layouts\" section in the <a href=\"%s\">Customizer</a>"
 msgstr ""
-"Vous pouvez maintenant basculer sur votre nouveau layout dans la section \"Layouts premium\" dans"
-"la <a href=\"%s\">Personnalisation</a>"
+"Vous pouvez maintenant basculer sur votre nouvelle mise en page dans la section \"Mises en page Premium\" dans "
+"<a href=\"%s\">Personnaliser</a>"
