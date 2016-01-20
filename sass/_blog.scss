@@ -192,7 +192,6 @@
     padding: 0;
     margin-bottom: $baseline-height;
     opacity: 0.8;
-    transition: opacity 0.2s ease;
 
     .featured-image {
       transform: translateZ(0);/* fixes FF glitch where image focuses & unfocuses */

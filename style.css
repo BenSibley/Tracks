@@ -954,8 +954,6 @@ a img {
     padding: 0;
     margin-bottom: 1.5em;
     opacity: 0.8;
-    -webkit-transition: opacity 0.2s ease;
-            transition: opacity 0.2s ease;
   }
   .excerpt .featured-image {
     -webkit-transform: translateZ(0);
