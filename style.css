@@ -994,7 +994,7 @@ a img {
     padding-bottom: 3em;
   }
 
-  .full-without-featured:not(.has-post-thumbnail) .excerpt-container {
+  .full-without-featured:not(.has-post-thumbnail):not(.has-video):not(.has-featured-slider) .excerpt-container {
     width: 100%;
   }
 }

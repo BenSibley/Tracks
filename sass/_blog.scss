@@ -232,7 +232,7 @@
   .excerpt-content {
     padding-bottom: $baseline-height * 2;
   }
-  .full-without-featured:not(.has-post-thumbnail) {
+  .full-without-featured:not(.has-post-thumbnail):not(.has-video):not(.has-featured-slider) {
 
     .excerpt-container {
       width: 100%;
