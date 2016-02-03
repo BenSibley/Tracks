@@ -392,7 +392,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		'sanitize_callback' => 'ct_tracks_sanitize_premium_layouts'
 	) );
 
-	$description_layout = sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%s">Tracks Theme Upgrades</a>.', 'tracks' ), 'https://www.competethemes.com/tracks/tracks-theme-upgrades/' );
+	$description_layout = sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%s">Tracks Pro Plugin</a>.', 'tracks' ), 'https://www.competethemes.com/tracks-pro/' );
 
 	// control - layout select
 	$wp_customize->add_control( 'premium_layouts_setting', array(
@@ -932,7 +932,7 @@ function ct_tracks_sanitize_css( $css ) {
 function ct_tracks_customize_preview_js() { ?>
 
 	<script>
-		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/tracks/tracks-theme-upgrades/" target="_blank"><?php _e( 'View Tracks Theme Upgrades', 'tracks' ); ?> <span>&rarr;</span></a></div>');
+		jQuery('#customize-info').prepend('<div class="upgrades-ad"><a href="https://www.competethemes.com/tracks-pro/" target="_blank"><?php _e( 'View the Tracks Pro Plugin', 'tracks' ); ?> <span>&rarr;</span></a></div>');
 	</script>
 <?php }
 add_action( 'customize_controls_print_footer_scripts', 'ct_tracks_customize_preview_js' );
