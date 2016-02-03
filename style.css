@@ -993,6 +993,10 @@ a img {
   .excerpt-content {
     padding-bottom: 3em;
   }
+
+  .full-without-featured:not(.has-post-thumbnail) .excerpt-container {
+    width: 100%;
+  }
 }
 .entry {
   background: white;

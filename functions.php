@@ -398,6 +398,12 @@ function ct_tracks_post_class_update( $classes ) {
 		}
 	}
 
+	$featured_image_fallback = get_theme_mod( 'additional_options_no_featured_image' );
+
+	if ( $featured_image_fallback == 'full' || empty( $featured_image_fallback ) ) {
+		$classes[] = 'full-without-featured';
+	}
+
 	return $classes;
 }
 add_filter( 'post_class', 'ct_tracks_post_class_update' );

@@ -232,4 +232,10 @@
   .excerpt-content {
     padding-bottom: $baseline-height * 2;
   }
+  .full-without-featured:not(.has-post-thumbnail) {
+
+    .excerpt-container {
+      width: 100%;
+    }
+  }
 }
