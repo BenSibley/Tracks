@@ -493,6 +493,19 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 			'fallback' => __( 'Fallback image', 'tracks' )
 		),
 	) );
+	// setting - fallback image
+	$wp_customize->add_setting( 'additional_options_fallback_featured_image', array(
+		'sanitize_callback' => 'esc_url_raw'
+	) );
+	// control - fallback image
+	$wp_customize->add_control( new WP_Customize_Image_Control(
+		$wp_customize, 'additional_options_fallback_featured_image', array(
+			'label'    => __( 'Upload a fallback image', 'tracks' ),
+			'section'  => 'ct_tracks_additional_options',
+			'priority' => 6,
+			'settings' => 'additional_options_fallback_featured_image'
+		)
+	) );
 	// setting - return to top arrow
 	$wp_customize->add_setting( 'additional_options_return_top_settings', array(
 		'default'           => 'show',
@@ -504,7 +517,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		'label'    => __( 'Show scroll-to-top arrow?', 'tracks' ),
 		'section'  => 'ct_tracks_additional_options',
 		'setting'  => 'additional_options_return_top_settings',
-		'priority' => 5,
+		'priority' => 19,
 		'choices'  => array(
 			'show' => __( 'Show', 'tracks' ),
 			'hide' => __( 'Hide', 'tracks' )
