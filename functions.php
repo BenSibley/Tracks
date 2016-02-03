@@ -275,6 +275,18 @@ if ( ! function_exists( 'ct_tracks_featured_image' ) ) {
 			$has_image = true;
 		}
 
+		// if no featured image, try fallback
+		if ( $has_image == false ) {
+
+			if ( get_theme_mod( 'additional_options_no_featured_image' ) == 'fallback' ) {
+				$image = get_theme_mod( 'additional_options_fallback_featured_image' );
+
+				if ( $image ) {
+					$has_image = true;
+				}
+			}
+		}
+
 		if ( $has_image == true ) {
 			// if lazy loading is enabled
 			if ( get_theme_mod( 'additional_options_lazy_load_settings' ) == 'yes' && ( is_archive() || is_home() ) ) {
