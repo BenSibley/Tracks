@@ -43,10 +43,10 @@ function ct_tracks_options_content() {
 				</p>
 			</div>
 			<div class="content-premium-upgrades content">
-				<h3><?php _e( 'Premium Upgrades', 'tracks' ); ?></h3>
-				<p><?php _e( 'Make your site more customizable and beautiful with premium upgrades', 'tracks' ); ?>.</p>
+				<h3><?php _e( 'Tracks Pro Plugin', 'tracks' ); ?></h3>
+				<p><?php _e( 'Make your site more customizable and beautiful with Tracks Pro', 'tracks' ); ?>.</p>
 				<p><a target="_blank" class="button-primary"
-				      href="https://www.competethemes.com/tracks/tracks-theme-upgrades/"><?php _e( 'Visit Upgrades Gallery', 'tracks' ); ?></a>
+				      href="https://www.competethemes.com/tracks-pro/"><?php _e( 'Visit Tracks Pro', 'tracks' ); ?></a>
 				</p>
 			</div>
 			<div class="content content-resources">
