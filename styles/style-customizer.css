@@ -75,6 +75,13 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   display: none !important;
 }
 
+#customize-control-additional_options_fallback_featured_image {
+  display: none !important;
+}
+#customize-control-additional_options_fallback_featured_image.show {
+  display: list-item !important;
+}
+
 /* Multiple select styles (for comments dropdown) */
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>

@@ -76,6 +76,16 @@
   display: none !important;
 }
 
+// Featured Image fallback image control
+#customize-control-additional_options_fallback_featured_image {
+  display: none !important;
+
+  &.show {
+    display: list-item !important;
+  }
+}
+
+
 /* Multiple select styles (for comments dropdown) */
 
 /**

@@ -19,7 +19,12 @@ jQuery(document).ready(function($) {
     addLayoutThumbnails();
     ctHideNoneText();
     displayLayoutOptions();
+    hideFallbackImageControl();
 
+    // show/hide additional layout options
+    panel.find('#customize-control-additional_options_no_featured_image').find('input').bind('change', hideFallbackImageControl );
+
+    // show/hide fallback featured image control
     panel.find('#customize-control-premium_layouts_setting').find('select').bind('change', displayLayoutOptions );
 
     $('.ms-drop.bottom').find('li').bind('click', ctHideNoneText);
@@ -109,6 +114,18 @@ jQuery(document).ready(function($) {
                 contentDisplayOption.addClass('show');
             }
         });
+    }
+
+    function hideFallbackImageControl() {
+
+        var selected = panel.find('#customize-control-additional_options_no_featured_image').find('input:checked');
+        var fallbackControl = panel.find('#customize-control-additional_options_fallback_featured_image');
+
+        if ( selected.val() == 'fallback' ) {
+            fallbackControl.addClass('show');
+        } else {
+            fallbackControl.removeClass('show');
+        }
     }
 });
 /**
