@@ -475,6 +475,24 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		'title'    => __( 'Additional Options', 'tracks' ),
 		'priority' => 90
 	) );
+	// setting - no featured image
+	$wp_customize->add_setting( 'additional_options_no_featured_image', array(
+		'default'           => 'full',
+		'sanitize_callback' => 'ct_tracks_sanitize_no_featured_image',
+	) );
+	// control - no featured image
+	$wp_customize->add_control( 'additional_options_no_featured_image', array(
+		'type'     => 'radio',
+		'label'    => __( 'Posts without Featured Images should display:', 'tracks' ),
+		'section'  => 'ct_tracks_additional_options',
+		'setting'  => 'additional_options_no_featured_image',
+		'priority' => 5,
+		'choices'  => array(
+			'empty'    => __( 'Empty half', 'tracks' ),
+			'full'     => __( 'Full-width text', 'tracks' ),
+			'fallback' => __( 'Fallback image', 'tracks' )
+		),
+	) );
 	// setting - return to top arrow
 	$wp_customize->add_setting( 'additional_options_return_top_settings', array(
 		'default'           => 'show',
@@ -830,6 +848,16 @@ function ct_tracks_sanitize_header_color_settings( $input ) {
 
 function ct_tracks_sanitize_text( $input ) {
 	return wp_kses_post( force_balance_tags( $input ) );
+}
+
+function ct_tracks_sanitize_no_featured_image( $input ) {
+	$valid = array(
+		'empty'    => __( 'Empty half', 'tracks' ),
+		'full'     => __( 'Full-width text', 'tracks' ),
+		'fallback' => __( 'Fallback image', 'tracks' )
+	);
+
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /***** Helper Functions *****/
