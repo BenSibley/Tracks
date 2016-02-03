@@ -17,7 +17,6 @@ if ( is_array( $comments_display ) ) {
 }
 
 if ( comments_open() ) { ?>
-
 	<section id="comments" class="comments">
 		<div class="comments-number">
 			<h3>
@@ -82,7 +81,9 @@ if ( comments_open() ) { ?>
 	</section>
 	<?php
 } else { ?>
-	<p class="comments-closed">
-		<?php _e( 'Comments are closed.', 'tracks' ); ?>
-	</p>
+	<section id="comments" class="comments">
+		<p class="comments-closed">
+			<?php _e( 'Comments are closed.', 'tracks' ); ?>
+		</p>
+	</section>
 <?php }
