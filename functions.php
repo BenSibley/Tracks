@@ -493,7 +493,8 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'weibo',
 			'tencent-weibo',
 			'paypal',
-			'email'
+			'email',
+			'email-form'
 		);
 
 		return apply_filters( 'ct_tracks_social_site_list_filter', $social_sites );

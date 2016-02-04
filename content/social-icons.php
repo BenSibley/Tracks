@@ -45,7 +45,15 @@ if ( ! empty( $active_sites ) ) {
 						<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'tracks' ); ?>"></i>
 					</a>
 				</li>
-			<?php } elseif ( $active_site == 'skype') { ?>
+			<?php } elseif ( $active_site == 'email-form' ) {
+				?>
+				<li>
+					<a class="contact-form" target="_blank"
+					   href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
+						<i class="fa fa-envelope-o" title="<?php esc_attr_e( 'contact form', 'tracks' ); ?>"></i>
+					</a>
+				</li>
+			<?php }  elseif ( $active_site == 'skype') { ?>
 				<li>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'http', 'https', 'skype' ) ); ?>">
