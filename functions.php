@@ -412,6 +412,7 @@ function ct_tracks_post_class_update( $classes ) {
 
 	$featured_image_fallback = get_theme_mod( 'additional_options_no_featured_image' );
 
+	// if full or not set b/c full is the default (and Customizer doesn't save by default)
 	if ( $featured_image_fallback == 'full' || empty( $featured_image_fallback ) ) {
 		$classes[] = 'full-without-featured';
 	}
