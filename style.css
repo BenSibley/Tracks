@@ -625,6 +625,7 @@ a img {
     background: none;
     position: static;
     width: 100%;
+    height: auto;
     padding: 0;
     margin: 0;
     text-align: right;
