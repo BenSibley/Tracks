@@ -684,59 +684,61 @@ function ct_tracks_infinite_scroll_render() {
 	}
 }
 
-function ct_tracks_get_content_template() {
+if ( ! function_exists( 'ct_tracks_get_content_template' ) ) {
+	function ct_tracks_get_content_template() {
 
-	/* Blog */
-	if ( is_home() ) {
+		/* Blog */
+		if ( is_home() ) {
 
-		/* Two-column Images Layout */
-		if ( get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
-			get_template_part( 'licenses/content/content-two-column-images' );
-		} /* Full-width Images Layout */
-		elseif ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' ) {
-			get_template_part( 'licenses/content/content-full-width-images' );
-		} /* Blog - No Premium Layout */
-		else {
-			get_template_part( 'content', 'archive' );
-		}
-	} /* Post */
-	elseif ( is_singular( 'post' ) ) {
-		get_template_part( 'content' );
-		comments_template();
-	} /* Page */
-	elseif ( is_page() ) {
-		get_template_part( 'content', 'page' );
-		comments_template();
-	} /* Attachment */
-	elseif ( is_attachment() ) {
-		get_template_part( 'content', 'attachment' );
-		comments_template();
-	} /* Archive */
-	elseif ( is_archive() ) {
-
-		/* check if bbPress is active */
-		if ( function_exists( 'is_bbpress' ) ) {
-
-			/* if is bbPress forum list */
-			if ( is_bbpress() ) {
-				get_template_part( 'content/bbpress' );
-			} /* normal archive */
+			/* Two-column Images Layout */
+			if ( get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
+				get_template_part( 'licenses/content/content-two-column-images' );
+			} /* Full-width Images Layout */
+			elseif ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' ) {
+				get_template_part( 'licenses/content/content-full-width-images' );
+			} /* Blog - No Premium Layout */
 			else {
 				get_template_part( 'content', 'archive' );
 			}
-		} elseif ( get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
-			get_template_part( 'licenses/content/content-two-column-images' );
-		} elseif ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' ) {
-			get_template_part( 'licenses/content/content-full-width-images' );
-		} else {
-			get_template_part( 'content', 'archive' );
+		} /* Post */
+		elseif ( is_singular( 'post' ) ) {
+			get_template_part( 'content' );
+			comments_template();
+		} /* Page */
+		elseif ( is_page() ) {
+			get_template_part( 'content', 'page' );
+			comments_template();
+		} /* Attachment */
+		elseif ( is_attachment() ) {
+			get_template_part( 'content', 'attachment' );
+			comments_template();
+		} /* Archive */
+		elseif ( is_archive() ) {
+
+			/* check if bbPress is active */
+			if ( function_exists( 'is_bbpress' ) ) {
+
+				/* if is bbPress forum list */
+				if ( is_bbpress() ) {
+					get_template_part( 'content/bbpress' );
+				} /* normal archive */
+				else {
+					get_template_part( 'content', 'archive' );
+				}
+			} elseif ( get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
+				get_template_part( 'licenses/content/content-two-column-images' );
+			} elseif ( get_theme_mod( 'premium_layouts_setting' ) == 'full-width-images' ) {
+				get_template_part( 'licenses/content/content-full-width-images' );
+			} else {
+				get_template_part( 'content', 'archive' );
+			}
+		} /* bbPress */
+		elseif ( function_exists( 'is_bbpress' ) && is_bbpress() ) {
+			get_template_part( 'content/bbpress' );
+		} /* Custom Post Types */
+		else {
+			get_template_part( 'content' );
 		}
-	} /* bbPress */
-	elseif ( function_exists( 'is_bbpress' ) && is_bbpress() ) {
-		get_template_part( 'content/bbpress' );
-	} /* Custom Post Types */
-	else {
-		get_template_part( 'content' );
 	}
 }
 
