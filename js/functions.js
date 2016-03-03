@@ -90,7 +90,7 @@ jQuery(function($){
             // if page is shorter than menu, extend to fit menu
             overflowContainer.css('min-height', menuHeight + 240);
 
-            menuPrimary.css('padding-top', titleInfo.height() + 48);
+            menuPrimary.css('padding-top', titleInfo.height() + titleInfo.position().top );
             menuPrimaryTracks.css('padding-top', $('#title-info').height() + 48);
 
             // watch scroll to auto-close the menu if visitor scrolls past it
