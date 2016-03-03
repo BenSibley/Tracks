@@ -96,8 +96,15 @@
         min-height: 57px;
       }
     }
+    .content-review {
+
+      p {
+        min-height: 75px;
+      }
+    }
     .content-customization,
-    .content-premium-upgrades {
+    .content-premium-upgrades,
+    .content-review {
       margin-right: 2%;
     }
   }
@@ -110,13 +117,14 @@
 
     .content {
       width: 27%;
-
-      &.content-resources {
-        clear: left;
-      }
+    }
+    .content-resources {
+      clear: left;
     }
     .content-customization,
-    .content-support {
+    .content-support,
+    .content-resources,
+    .content-review {
       margin-right: 1%;
     }
     .content-premium-upgrades {

@@ -93,8 +93,12 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   #tracks-dashboard-wrap .content p {
     min-height: 57px;
   }
+  #tracks-dashboard-wrap .content-review p {
+    min-height: 75px;
+  }
   #tracks-dashboard-wrap .content-customization,
-  #tracks-dashboard-wrap .content-premium-upgrades {
+  #tracks-dashboard-wrap .content-premium-upgrades,
+  #tracks-dashboard-wrap .content-review {
     margin-right: 2%;
   }
 }
@@ -103,11 +107,13 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   #tracks-dashboard-wrap .content {
     width: 27%;
   }
-  #tracks-dashboard-wrap .content.content-resources {
+  #tracks-dashboard-wrap .content-resources {
     clear: left;
   }
   #tracks-dashboard-wrap .content-customization,
-  #tracks-dashboard-wrap .content-support {
+  #tracks-dashboard-wrap .content-support,
+  #tracks-dashboard-wrap .content-resources,
+  #tracks-dashboard-wrap .content-review {
     margin-right: 1%;
   }
   #tracks-dashboard-wrap .content-premium-upgrades {

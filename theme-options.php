@@ -57,6 +57,11 @@ function ct_tracks_options_content() {
 					   href="https://www.competethemes.com/wordpress-resources/"><?php _e( 'View Resources', 'tracks' ); ?></a>
 				</p>
 			</div>
+			<div class="content content-review">
+				<h3><?php _e( 'Leave a Review', 'tracks' ); ?></h3>
+				<p><?php _e( 'Help others find tracks by leaving a review on wordpress.org.', 'tracks' ); ?></p>
+				<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/tracks"><?php _e( 'Leave a Review', 'tracks' ); ?></a>
+			</div>
 		<?php } elseif ( $active_tab == 'licenses' ) { ?>
 			<div class="content-licenses">
 				<?php do_action( 'tracks_before_licenses' ); ?>
