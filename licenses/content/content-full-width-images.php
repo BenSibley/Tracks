@@ -1,5 +1,7 @@
 <div <?php post_class(); ?>> <?php
-	ct_tracks_featured_image();
+	echo '<a class="full-width-featured-image" href="' . esc_url( get_permalink() ) . '">';
+		ct_tracks_featured_image();
+	echo '</a>';
     if( get_theme_mod('premium_layouts_full_width_image_style') == 'title' ) { ?>
 	    <div class="excerpt-container">
 		    <div class='excerpt-header'>
