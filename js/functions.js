@@ -66,16 +66,6 @@ jQuery(function($){
             // remove class
             siteHeader.removeClass('toggled');
 
-            // slide menu bg out of view
-            // vendor prefixes added for improved reliability
-            menuPrimary.css('-webkit-transform', 'translateX(' + 0 + 'px)');
-            menuPrimary.css('-ms-transform', 'translateX(' + 0 + 'px)');
-            menuPrimary.css('transform', 'translateX(' + 0 + 'px)');
-
-            menuPrimaryTracks.css('-webkit-transform', 'translateX(' + 0 + 'px)');
-            menuPrimaryTracks.css('-ms-transform', 'translateX(' + 0 + 'px)');
-            menuPrimaryTracks.css('transform', 'translateX(' + 0 + 'px)');
-
             // stop watching scroll to auto-close menu
             $(window).unbind('scroll');
 
@@ -96,16 +86,6 @@ jQuery(function($){
 
             // add class
             siteHeader.addClass('toggled');
-
-            // slide menu bg into view
-            // vendor prefixes added for improved reliability
-            menuPrimary.css('-webkit-transform', 'translateX(' + -menuWidth + 'px)');
-            menuPrimary.css('-ms-transform', 'translateX(' + -menuWidth + 'px)');
-            menuPrimary.css('transform', 'translateX(' + -menuWidth + 'px)');
-
-            menuPrimaryTracks.css('-webkit-transform', 'translateX(' + menuWidth + 'px)');
-            menuPrimaryTracks.css('-ms-transform', 'translateX(' + menuWidth + 'px)');
-            menuPrimaryTracks.css('transform', 'translateX(' + menuWidth + 'px)');
 
             // if page is shorter than menu, extend to fit menu
             overflowContainer.css('min-height', menuHeight + 240);

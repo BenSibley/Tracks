@@ -591,6 +591,10 @@ a img {
   -webkit-transition: opacity 0.3s 0.3s ease;
           transition: opacity 0.3s 0.3s ease;
 }
+.site-header.toggled .menu-primary, .site-header.toggled .menu-primary-tracks,
+.site-header.toggled .menu-primary-tracks {
+  left: 0;
+}
 .site-header.toggled .menu-unset > ul,
 .site-header.toggled .menu-primary-items {
   opacity: 1;

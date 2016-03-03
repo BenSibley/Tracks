@@ -145,6 +145,10 @@
   .site-description {
     transition: opacity 0.3s 0.3s ease;
   }
+  .menu-primary,
+  .menu-primary-tracks {
+    left: 0;
+  }
   .menu-unset > ul,
   .menu-primary-items {
     opacity: 1;
