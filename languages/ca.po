@@ -1,0 +1,712 @@
+# Copyright (C) 2015 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracks 1.33.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2015-02-09 17:23:34+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-02-26 13:18+0100\n"
+"X-Generator: Poedit 1.8.1\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ca\n"
+
+#: comments.php:11 comments.php:30 comments.php:51
+msgid "Be First to Comment"
+msgstr "Comentari"
+
+#: comments.php:11 comments.php:30 comments.php:51
+msgid "One Comment"
+msgstr "Comentari"
+
+#: comments.php:11 comments.php:30 comments.php:51
+msgid "% Comments"
+msgstr "﻿% Comentaris"
+
+#: comments.php:43
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr "Els comentaris estan tancats"
+
+#: comments.php:64 comments.php:71
+msgid "Comments are closed."
+msgstr "Els comentaris estan tancats."
+
+#: content/category-links.php:14
+msgid "Categories"
+msgstr "Categories"
+
+#: content/category-links.php:16 inc/deprecated.php:17
+msgid "View all posts in %s"
+msgstr "Visualitza totes les publicacions a %s"
+
+#: content/further-reading.php:12
+msgid "The Previous Post"
+msgstr "Publicació anterior"
+
+#: content/further-reading.php:17
+msgid "The Next Post"
+msgstr "Publicació següent"
+
+#: content/further-reading.php:24
+msgid "Previous Post"
+msgstr "Publicació anterior"
+
+#: content/further-reading.php:29
+msgid "This is the oldest post"
+msgstr "Aquesta és la publicació més antiga"
+
+#: content/further-reading.php:30 content/further-reading.php:42
+msgid "Return to Blog"
+msgstr "Tornar al Blog"
+
+#: content/further-reading.php:36
+msgid "Next Post"
+msgstr "Publicació següent"
+
+#: content/further-reading.php:41
+msgid "This is the newest post"
+msgstr "Aquesta és la publicació més nova"
+
+#: content/tag-links.php:9
+msgid "Tags"
+msgstr "Etiquetes"
+
+#: content/tag-links.php:11 inc/deprecated.php:36
+msgid "View all posts tagged %s"
+msgstr "Veure totes les publicacions amb les etiquetes %s"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: No hem trobat la pàgina"
+
+#: content-404.php:9
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"No hem trobat res en aquesta url. Torna a comprovar que la url és correcte o "
+"prova de trobar el que busques en el formulari de sota."
+
+#: content-attachment.php:20
+msgid "Previous Image"
+msgstr "Imatge anterior"
+
+#: content-attachment.php:23
+msgid "Next Image"
+msgstr "Següent imatge"
+
+#: content-page.php:20 content.php:37
+msgid "Pages:"
+msgstr "Pàgines:"
+
+#: content.php:59
+msgid "Written by:"
+msgstr "Escrit per:"
+
+#: footer.php:34
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Tracks Tema de WordPress</a> per Compete "
+"Themes."
+
+#: functions.php:23
+msgid "Primary"
+msgstr "Primari"
+
+#: functions.php:24
+msgid "Secondary"
+msgstr "Secundari"
+
+#: functions.php:25 functions.php:78 inc/customizer.php:124
+#: inc/customizer.php:182 inc/customizer.php:762 inc/customizer.php:786
+msgid "Footer"
+msgstr "Peu de pàgina"
+
+#: functions.php:64
+msgid "After Post Content"
+msgstr "Després del contingut de la publicació"
+
+#: functions.php:66
+msgid ""
+"Widgets in this area will be shown after post content before the prev/next "
+"post links"
+msgstr ""
+"Els ginys en aquesta àrea seran mostrats després del contingut de la "
+"publicació i abans dels enllaços d'anterior i següent publicació"
+
+#: functions.php:71
+msgid "After Page Content"
+msgstr "Després del contingut de la pàgina"
+
+#: functions.php:73
+msgid "Widgets in this area will be shown after page content"
+msgstr ""
+"Els ginys en aquesta àrea seran mostrats després del contingut de la pàgina"
+
+#: functions.php:80
+msgid "Widgets in this area will be shown in the footer"
+msgstr "Els ginys en aquesta àrea seran mostrats en el peu de pàgina"
+
+#: functions.php:107
+msgid "Reply"
+msgstr "Respondre"
+
+#: functions.php:113
+msgid "Your comment is awaiting moderation."
+msgstr "El seu comentari està pendent de moderació."
+
+#: functions.php:143 functions.php:144
+msgid "Your Name"
+msgstr "El teu nom"
+
+#: functions.php:150 functions.php:151
+msgid "Your Email"
+msgstr "El teu Email"
+
+#: functions.php:157
+msgid "Your Website URL"
+msgstr "La URL del teu lloc web"
+
+#: functions.php:158
+msgid "Your URL"
+msgstr "La teva URL"
+
+#: functions.php:170
+msgid "Your Comment"
+msgstr "El teu comentari"
+
+#: functions.php:171
+msgid "Enter Your Comment"
+msgstr "Introdueix el teu comentari"
+
+#: functions.php:213
+msgid "Read More"
+msgstr "Seguir llegint"
+
+#: functions.php:224
+msgid "Read the Post"
+msgstr "Llegir la publicació"
+
+#: header.php:15
+msgid "Skip to content"
+msgstr "Anar al contingut"
+
+#: inc/customizer.php:103
+msgid "Tagline Display"
+msgstr "Mostrar lema"
+
+#: inc/customizer.php:117
+msgid "Where should the tagline display?"
+msgstr "On hauria de mostrar-se el lema?"
+
+#: inc/customizer.php:122 inc/customizer.php:180 inc/customizer.php:760
+#: inc/customizer.php:784
+msgid "Header & Footer"
+msgstr "Capçalera i peu de pàgina"
+
+#: inc/customizer.php:123 inc/customizer.php:181 inc/customizer.php:761
+#: inc/customizer.php:785
+msgid "Header"
+msgstr "Capçalera"
+
+#: inc/customizer.php:132
+msgid "Logo Upload"
+msgstr "Pujar Logo"
+
+#: inc/customizer.php:146
+msgid "Upload custom logo."
+msgstr "Pujar Logo personalitzat."
+
+#: inc/customizer.php:162
+msgid "Social Media Icons"
+msgstr "Icones de Xarxes Socials"
+
+#: inc/customizer.php:175
+msgid "Where should the icons display?"
+msgstr "On s'haurien de mostrar les icones?"
+
+#: inc/customizer.php:183 inc/customizer.php:787
+msgid "Do not display"
+msgstr "No mostrar"
+
+#: inc/customizer.php:233
+msgid "Search Bar"
+msgstr "Barra de cerca"
+
+#: inc/customizer.php:247
+msgid "Show search bar at top of site?"
+msgstr "Mostrar barra de cerca a la part superior de la pàgina?"
+
+#: inc/customizer.php:251 inc/customizer.php:278 inc/customizer.php:296
+#: inc/customizer.php:314 inc/customizer.php:538 inc/customizer.php:557
+#: inc/customizer.php:576 inc/customizer.php:803
+msgid "Show"
+msgstr "Mostrar"
+
+#: inc/customizer.php:252 inc/customizer.php:279 inc/customizer.php:297
+#: inc/customizer.php:315 inc/customizer.php:539 inc/customizer.php:558
+#: inc/customizer.php:577 inc/customizer.php:804
+msgid "Hide"
+msgstr "Amagar"
+
+#: inc/customizer.php:260
+msgid "Post Meta"
+msgstr "Publicar Meta"
+
+#: inc/customizer.php:274
+msgid "Display date above post title?"
+msgstr "Mostrar la data sobre el títol de l'entrada?"
+
+#: inc/customizer.php:292
+msgid "Display author name above post title?"
+msgstr "Mostrar el nom de l'autor sobre el títol de l'entrada?"
+
+#: inc/customizer.php:310
+msgid "Display category above post title?"
+msgstr "Mostrar categoria sobre el títol de l'entrada?"
+
+#: inc/customizer.php:323
+msgid "Comments"
+msgstr "Comentaris"
+
+#: inc/customizer.php:337
+msgid "Show comments on:"
+msgstr "Mostrar comentaris a:"
+
+#: inc/customizer.php:342 inc/customizer.php:837
+msgid "Posts"
+msgstr "Publicacions"
+
+#: inc/customizer.php:343 inc/customizer.php:838
+msgid "Pages"
+msgstr "Pàgines"
+
+#: inc/customizer.php:344 inc/customizer.php:839
+msgid "Attachments"
+msgstr "Adjunts"
+
+#: inc/customizer.php:345 inc/customizer.php:840
+msgid "Do not show"
+msgstr "No mostrar"
+
+#: inc/customizer.php:354
+msgid "Footer Text"
+msgstr "Text del peu de pàgina"
+
+#: inc/customizer.php:367
+msgid "Edit the text in your footer"
+msgstr "Edita el text del teu peu de pàgina"
+
+#: inc/customizer.php:377
+msgid "Custom CSS"
+msgstr "CSS personalitzat"
+
+#: inc/customizer.php:390
+msgid "Add Custom CSS Here:"
+msgstr "Afegir CSS personalitzat aquí:"
+
+#: inc/customizer.php:423 theme-options.php:52
+msgid "Premium Layouts"
+msgstr "Plantilles Premium"
+
+#: inc/customizer.php:437
+msgid "Choose the layout for Tracks"
+msgstr "Escollir la plantilla del Tracks"
+
+#: inc/customizer.php:452
+msgid "Image size on Blog"
+msgstr "mida de la imatge en el Bloc"
+
+#: inc/customizer.php:470
+msgid "Image size on Posts"
+msgstr "mida de la imatge en les entrades"
+
+#: inc/customizer.php:488
+msgid "Style"
+msgstr "Estil"
+
+#: inc/customizer.php:492 inc/customizer.php:903
+msgid "Overlay"
+msgstr "Superposar"
+
+#: inc/customizer.php:493 inc/customizer.php:904
+msgid "Title below"
+msgstr "Títol a sota"
+
+#: inc/customizer.php:506
+msgid "Show full posts on Blog/Archives?"
+msgstr "Mostrar entrades completes al Blog/Arxius?"
+
+#: inc/customizer.php:510 inc/customizer.php:612 inc/customizer.php:694
+#: inc/customizer.php:821
+msgid "Yes"
+msgstr "Si"
+
+#: inc/customizer.php:511 inc/customizer.php:613 inc/customizer.php:695
+#: inc/customizer.php:822
+msgid "No"
+msgstr "No"
+
+#: inc/customizer.php:519
+msgid "Additional Options"
+msgstr "Opcions addicionals"
+
+#: inc/customizer.php:533
+msgid "Show scroll-to-top arrow?"
+msgstr "Mostrar fletxa de desplaçament-fins-a-dalt?"
+
+#: inc/customizer.php:552
+msgid "Show author info box after posts?"
+msgstr "Mostrar requadre d'informació de l'autor després de les entrades?"
+
+#: inc/customizer.php:571
+msgid "Show prev/next links after posts?"
+msgstr "Mostrar enllaços d'anterior/següent després de les entrades?"
+
+#: inc/customizer.php:590
+msgid "Zoom-in blog images on hover?"
+msgstr "Augmentar les imatges del blog al passar el cursor per sobre?"
+
+#: inc/customizer.php:594
+msgid "Zoom in"
+msgstr "Augmentar"
+
+#: inc/customizer.php:595
+msgid "Do not zoom in"
+msgstr "No augmentar"
+
+#: inc/customizer.php:608
+msgid "Lazy load images?"
+msgstr "Càrrega retardada d'imatges?"
+
+#: inc/customizer.php:626
+msgid "Word count in automatic excerpts"
+msgstr "Recompte de paraules en extractes automàtics"
+
+#: inc/customizer.php:644
+msgid "Background Image"
+msgstr "Imatge de fons"
+
+#: inc/customizer.php:645
+msgid ""
+"Use the Header Color section above if your new background image makes the "
+"menu hard to read."
+msgstr ""
+"Utilitzar la secció de Color de Capçalera de dalt si la nova imatge de fons "
+"dificulta la lectura del menú."
+
+#: inc/customizer.php:658
+msgid "Background image"
+msgstr "Imatge de fons"
+
+#: inc/customizer.php:675
+msgid "Background Texture"
+msgstr "Textura de fons"
+
+#: inc/customizer.php:676
+msgid ""
+"Use the Header Color section above if your new texture makes the menu hard "
+"to read."
+msgstr ""
+"Utilitzar la secció de Color de Capçalera de dalt si la nova textura "
+"dificulta la lectura del menú."
+
+#: inc/customizer.php:690
+msgid "Enable background texture?"
+msgstr "Habilitar textura de fons?"
+
+#: inc/customizer.php:710
+msgid "Choose a Texture"
+msgstr "Escollir una textura"
+
+#: inc/customizer.php:729
+msgid "Header Color"
+msgstr "Color de capçalera"
+
+#: inc/customizer.php:730
+msgid "Change to dark if your new background makes the menu hard to read."
+msgstr ""
+"Canviar a fosc si la nova imatge de fons dificulta la lectura del menú."
+
+#: inc/customizer.php:744
+msgid "Light or dark header color?"
+msgstr "Color de capçalera clar o fosc?"
+
+#: inc/customizer.php:748 inc/customizer.php:931
+msgid "Light"
+msgstr "Clar"
+
+#: inc/customizer.php:749 inc/customizer.php:932
+msgid "Dark"
+msgstr "Fosc"
+
+#: inc/customizer.php:858
+msgid "Zoom"
+msgstr "Augmentar"
+
+#: inc/customizer.php:859
+msgid "Do not Zoom"
+msgstr "No augmentar"
+
+#: inc/user-profile.php:16
+msgid "Profile image"
+msgstr "Imatge de perfil"
+
+#: inc/user-profile.php:23
+msgid "Upload Image"
+msgstr "Pujar imatge"
+
+#: inc/user-profile.php:24
+msgid ""
+"Upload an image here to use instead of your Gravatar. Perfectly square "
+"images will not be cropped."
+msgstr ""
+"Pujar una imatge aquí per utilitzar enlloc del Gravatar. Les imatges "
+"perfectament quadrades no es retallaran."
+
+#: inc/user-profile.php:99
+msgid "Social Profiles"
+msgstr "Perfils Socials"
+
+#: inc/user-profile.php:107
+msgid "Address:"
+msgstr "Direcció:"
+
+#: inc/user-profile.php:109
+msgid "Profile:"
+msgstr "Perfil:"
+
+#: index.php:11
+msgid "Category:"
+msgstr "Categoria:"
+
+#: index.php:18
+msgid "Tag:"
+msgstr "Etiqueta:"
+
+#: index.php:25
+msgid "These Posts are by:"
+msgstr "Aquestes entrades són de:"
+
+#: licenses/functions/video.php:18
+msgid "Featured Video"
+msgstr "Vídeo destacat"
+
+#: licenses/functions/video.php:53
+msgid "Video Preview"
+msgstr "Vista prèvia del vídeo"
+
+#: licenses/functions/video.php:67
+msgid "Add video URL:"
+msgstr "Afegir URL del vídeo"
+
+#: licenses/functions/video.php:77
+msgid "Choose where to display the video:"
+msgstr "Escollir a on mostrar el vídeo:"
+
+#: licenses/functions/video.php:80
+msgid "Display on Post"
+msgstr "Mostrar a l'entrada"
+
+#: licenses/functions/video.php:84
+msgid "Display on Post and Blog"
+msgstr "Mostrar a l'entrada i al Blog"
+
+#: search.php:11
+msgid "%d search results for"
+msgstr "%d resultats de cerca per"
+
+#: search.php:13
+msgid "No search results for "
+msgstr "No hi ha resultats de cerca per"
+
+#: search.php:38
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "No trobes el que busques? Prova a canviar els criteris de la cerca:"
+
+#: searchform.php:6 searchform.php:7
+msgid "Search for:"
+msgstr "Buscar:"
+
+#: searchform.php:7
+msgid "Search"
+msgstr "Buscar"
+
+#: searchform.php:8
+msgid "Go"
+msgstr "Vés"
+
+#: theme-options.php:13
+msgid "Tracks Dashboard"
+msgstr "Tauler de control de Tracks"
+
+#: theme-options.php:18
+msgid "Dashboard"
+msgstr "Tauler de control"
+
+#: theme-options.php:19
+msgid "Licenses"
+msgstr "Llicències"
+
+#: theme-options.php:24
+msgid "Customization"
+msgstr "Personalització"
+
+#: theme-options.php:25
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Tracks"
+msgstr ""
+"Prémer l'enllaç de \"Personalitzar\" del menú, o utilitza el botó de sota "
+"per començar a personalitzar Tracks"
+
+#: theme-options.php:27
+msgid "Use Customizer"
+msgstr "Utilitzar el personalitzador"
+
+#: theme-options.php:31
+msgid "Support"
+msgstr "Suport"
+
+#: theme-options.php:32
+msgid ""
+"You can find the knowledgebase, changelog, forum, and more in the Tracks "
+"Support Center"
+msgstr ""
+"Pots trobar la base de coneixements, historial de canvis, fòrum, i més en el "
+"Centre de Suport de Tracks"
+
+#: theme-options.php:34
+msgid "Visit Support Center"
+msgstr "Visitar el Centre de Suport"
+
+#: theme-options.php:38
+msgid "Premium Upgrades ($9-15)"
+msgstr "Actualitzacions Premium ($9-15)"
+
+#: theme-options.php:39
+msgid "Make your site more customizable and beautiful with premium upgrades"
+msgstr ""
+"Fes la teva pàgina més personalitzable i bonica amb les actualitzacions "
+"premium"
+
+#: theme-options.php:40
+msgid "Visit Upgrades Gallery"
+msgstr "Visitar la Galeria d'Actualitzacions"
+
+#: theme-options.php:43
+msgid "WordPress Resources"
+msgstr "Recursos de WordPress"
+
+#: theme-options.php:44
+msgid ""
+"Save time and money searching for WordPress products by following our "
+"recommendations"
+msgstr ""
+"Estalvia temps i diners buscant producte de WordPress seguint les nostres "
+"recomanacions"
+
+#: theme-options.php:46
+msgid "View Resources"
+msgstr "Veure Recursos"
+
+#: theme-options.php:59
+msgid "Premium Features"
+msgstr "Opcions Premium"
+
+#: theme-options.php:113
+msgid "Save License"
+msgstr "Guardar Llicència"
+
+#: theme-options.php:116
+msgid "Enter your license key"
+msgstr "Introdueix la teva clau de llicència"
+
+#: theme-options.php:122 theme-options.php:130
+msgid "Activate License"
+msgstr "Activar Llicència"
+
+#: theme-options.php:127
+msgid "Deactivate License"
+msgstr "Desactivar Llicència"
+
+#: theme-options.php:145
+msgid ""
+"You can now add a background image using the \"Background Image\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"Ara pots afegir una imatge de fons fent servir la secció &quot;Imatge de "
+"fons&quot; del <a href=\"%s\">Personalitzador</a>"
+
+#: theme-options.php:147
+msgid ""
+"If you haven't already, please upload and activate the <a "
+"href='%s'>Background Texture plugin</a>"
+msgstr ""
+"Si encara no ho has fet, puja i activa el <a href='%s'>plugin de textura de "
+"fons</a>"
+
+#: theme-options.php:149
+msgid ""
+"You can now add videos to posts. Use the Featured Videos box under the Post "
+"Editor to get started"
+msgstr ""
+"Ara pots afegir vídeos a les entrades. Fes servir el requadre de Vídeos "
+"Destacats de sota de l'Editor de l'Entrada per començar"
+
+#: theme-options.php:151
+msgid ""
+"You can now switch to your new layout in the \"Premium Layouts\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"Ara pots canviar a la nova plantilla a la secció &quot;Plantilles "
+"Premium&quot; del <a href=\"%s\">Personalitzador</a>"
+
+#. Theme Name of the plugin/theme
+msgid "Tracks"
+msgstr "Tracks"
+
+#. Theme URI of the plugin/theme
+msgid "https://www.competethemes.com/tracks/"
+msgstr "https://www.competethemes.com/tracks/"
+
+#. Description of the plugin/theme
+msgid ""
+"A bold, beautiful, and responsive theme. Tracks is perfect for personal "
+"blogs, magazines, and photography websites. It includes a logo uploader, "
+"social media icons, search bar, comment display controls, premium layouts "
+"and features, and more.  See our fully-setup live demo here: https://www."
+"competethemes.com/tracks-live-demo/"
+msgstr ""
+"Un tema audaç, bonic i responsive. Tracks és perfecte per a blocs personals, "
+"revistes i pàgines web de fotografia. Inclou la opció de carregar un "
+"logotip, icones de xarxes socials, barra de cerca, control per mostrar "
+"comentaris, dissenys i característiques premium, i més. Vegeu la nostra "
+"demostració totalment configurable en viu aquí: https://www.competethemes."
+"com/tracks-live-demo/"
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr "Compete Themes"
+
+#. Author URI of the plugin/theme
+msgid "https://www.competethemes.com/"
+msgstr "https://www.competethemes.com/"
+
+#: inc/customizer.php:456 inc/customizer.php:474 inc/customizer.php:891
+msgctxt "size of the featured image"
+msgid "size based on image size"
+msgstr "mida en funció de la mida de la imatge"
+
+#: inc/customizer.php:457 inc/customizer.php:475 inc/customizer.php:892
+msgctxt "size of the featured image"
+msgid "2:1 width/height ratio like posts"
+msgstr "2:1 relació d'amplada/altura de les entrades"
