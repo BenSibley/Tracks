@@ -199,20 +199,27 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 				$wp_customize->add_setting( $social_site, array(
 					'sanitize_callback' => 'ct_tracks_sanitize_skype'
 				) );
+				// control
+				$wp_customize->add_control( $social_site, array(
+					'type'        => 'url',
+					'label'       => $label, // brand name so i18n not required
+					'description' => sprintf( __( 'Accepts Skype link protocol (<a href="%s" target="_blank">learn more</a>)', 'tracks' ), 'https://www.competethemes.com/blog/skype-links-wordpress/' ),
+					'section'     => 'ct_tracks_social_icons',
+					'priority'    => $priority
+				) );
 			} else {
 				// setting
 				$wp_customize->add_setting( $social_site, array(
 					'sanitize_callback' => 'esc_url_raw'
 				) );
+				// control
+				$wp_customize->add_control( $social_site, array(
+					'type'     => 'url',
+					'label'    => $label, // brand name so i18n not required
+					'section'  => 'ct_tracks_social_icons',
+					'priority' => $priority
+				) );
 			}
-
-			// control
-			$wp_customize->add_control( $social_site, array(
-				'type'     => 'url',
-				'label'    => $label, // brand name so i18n not required
-				'section'  => 'ct_tracks_social_icons',
-				'priority' => $priority
-			) );
 
 			// increment priority to retain order
 			$priority = $priority + 5;
