@@ -93,8 +93,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   #tracks-dashboard-wrap .content p {
     min-height: 57px;
   }
-  #tracks-dashboard-wrap .content-review p {
-    min-height: 75px;
+  #tracks-dashboard-wrap .content-review {
+    min-height: 191px;
   }
   #tracks-dashboard-wrap .content-customization,
   #tracks-dashboard-wrap .content-premium-upgrades,
