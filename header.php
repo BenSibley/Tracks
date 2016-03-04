@@ -22,7 +22,7 @@
 			</div>
 		</header>
 		<div id="main" class="main" role="main">
-			<?php do_action( 'tracks_main_top' ); ?>
 			<?php if ( function_exists( 'yoast_breadcrumb' ) ) {
 				yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
 			}
+			do_action( 'tracks_main_top' );
