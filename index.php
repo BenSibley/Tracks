@@ -18,10 +18,16 @@
 // include loop pagination except for on bbPress Forum root
 if ( function_exists( 'is_bbpress' ) ) {
 	if ( ! ( is_bbpress() && is_archive() ) ) {
-		the_posts_pagination();
+		the_posts_pagination( array(
+			'prev_text' => __( 'Previous', 'tracks' ),
+			'next_text' => __( 'Next', 'tracks' )
+		) );
 	}
 } else {
-	the_posts_pagination();
+	the_posts_pagination( array(
+		'prev_text' => __( 'Previous', 'tracks' ),
+		'next_text' => __( 'Next', 'tracks' )
+	) );
 }
 
 get_footer();
