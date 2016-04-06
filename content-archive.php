@@ -9,9 +9,9 @@
 			<?php get_template_part( 'content/post-meta' ); ?>
 		</div>
 		<div class='excerpt-header'>
-			<h1 class='excerpt-title'>
+			<h2 class='excerpt-title'>
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			</h1>
+			</h2>
 		</div>
 		<div class='excerpt-content'>
 			<article>

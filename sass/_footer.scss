@@ -8,7 +8,7 @@
   a {
     color: $gray-medium;
   }
-  h3 {
+  h1 {
     @extend %uppercase;
     letter-spacing: 0.06em;
     opacity: 0.4;
@@ -163,7 +163,7 @@
 
   .site-footer {
 
-    h3 {
+    h1 {
       font-size: 2.625em;
       line-height: 1.143;
     }

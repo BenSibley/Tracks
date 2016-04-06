@@ -25,7 +25,7 @@ Tracks is distributed under the terms of the GNU GPL
 .entry-categories span,
 .entry-categories a,
 .entry-tags span,
-.entry-tags a, .author-meta .author span, .comments-number h3, .comment-author div, .design-credit, .singular-attachment .attachment-caption, .widget li, .menu-footer-items a, .menu-secondary-items a {
+.entry-tags a, .author-meta .author span, .comments-number h2, .comment-author div, .design-credit, .singular-attachment .attachment-caption, .widget li, .menu-footer-items a, .menu-secondary-items a {
   font-size: 0.813em;
   line-height: 1.85;
 }
@@ -37,7 +37,7 @@ Tracks is distributed under the terms of the GNU GPL
 .site-title, .menu-unset > ul a,
 .menu-primary-items a, .excerpt-meta, .entry-meta, .excerpt-title, .entry-title, .more-link, .pagination, .further-reading,
 .entry-categories,
-.entry-tags, .author-meta .author span, .comments-number h3, .comment-author .author-name, .site-footer h3, .design-credit, .widget-title, .widget li, .menu-footer-items a, .menu-secondary-items a {
+.entry-tags, .author-meta .author span, .comments-number h2, .comment-author .author-name, .site-footer h1, .design-credit, .widget-title, .widget li, .menu-footer-items a, .menu-secondary-items a {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -1475,13 +1475,13 @@ li.pingback:first-child {
 .site-footer a {
   color: #8c8c8c;
 }
-.site-footer h3 {
+.site-footer h1 {
   letter-spacing: 0.06em;
   opacity: 0.4;
   -webkit-transition: opacity 0.2s ease;
           transition: opacity 0.2s ease;
 }
-.site-footer h3:hover, .site-footer h3:active, .site-footer h3:focus {
+.site-footer h1:hover, .site-footer h1:active, .site-footer h1:focus {
   opacity: 0.9;
 }
 .site-footer p {
@@ -1606,7 +1606,7 @@ li.pingback:first-child {
 }
 /* 900px */
 @media all and (min-width: 56.25em) {
-  .site-footer h3 {
+  .site-footer h1 {
     font-size: 2.625em;
     line-height: 1.143;
   }
