@@ -991,6 +991,10 @@ a img {
     height: 0;
   }
 
+  .rtl .excerpt.odd .excerpt-container {
+    float: left;
+  }
+
   .excerpt-meta, .entry-meta {
     padding-top: 3.69004em;
   }
@@ -1809,6 +1813,10 @@ li.pingback:first-child {
   visibility: hidden;
   line-height: 0;
   height: 0;
+}
+
+.rtl .top-navigation {
+  right: -6%;
 }
 
 /* 600px */

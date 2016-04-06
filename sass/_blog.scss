@@ -206,13 +206,6 @@
       opacity: 1;
     }
   }
-  // alternating solution for black line problem to keep center line consistently down the middle
-//  .excerpt.odd {
-//
-//    .excerpt-container {
-//      width: calc(50% + 1px); // +1 px to prevent black line between it and image
-//    }
-//  }
   .excerpt.even {
 
     .excerpt-container {
@@ -224,6 +217,12 @@
     }
     &:after {
       @include clearfix;
+    }
+  }
+  .rtl .excerpt.odd {
+
+    .excerpt-container {
+      float: left;
     }
   }
   .excerpt-meta {
