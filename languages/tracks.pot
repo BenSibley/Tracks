@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.47\n"
+"Project-Id-Version: Tracks 1.48\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-03-04 13:37:22+00:00\n"
+"POT-Creation-Date: 2016-04-07 15:05:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,6 +33,10 @@ msgstr ""
 
 #: comments.php:79 comments.php:86
 msgid "Comments are closed."
+msgstr ""
+
+#: content/archive-header.php:4 inc/customizer.php:329 inc/customizer.php:806
+msgid "Posts"
 msgstr ""
 
 #: content/author-meta.php:11
@@ -83,11 +87,11 @@ msgstr ""
 msgid "No Newer Posts"
 msgstr ""
 
-#: content/social-icons.php:44
+#: content/social-icons.php:44 content/social-icons.php:45
 msgid "email"
 msgstr ""
 
-#: content/social-icons.php:51
+#: content/social-icons.php:52 content/social-icons.php:53
 msgid "contact form"
 msgstr ""
 
@@ -109,11 +113,11 @@ msgid ""
 "correct or try the search form below to find what you were looking for."
 msgstr ""
 
-#: content-attachment.php:19
+#: content-attachment.php:26
 msgid "Previous Image"
 msgstr ""
 
-#: content-attachment.php:23
+#: content-attachment.php:30
 msgid "Next Image"
 msgstr ""
 
@@ -304,10 +308,6 @@ msgstr ""
 
 #: inc/customizer.php:324
 msgid "Show comments on:"
-msgstr ""
-
-#: inc/customizer.php:329 inc/customizer.php:806
-msgid "Posts"
 msgstr ""
 
 #: inc/customizer.php:330 inc/customizer.php:807
@@ -512,6 +512,14 @@ msgstr ""
 
 #: inc/user-profile.php:66
 msgid "Social Profiles"
+msgstr ""
+
+#: index.php:22 index.php:28
+msgid "Previous"
+msgstr ""
+
+#: index.php:23 index.php:29
+msgid "Next"
 msgstr ""
 
 #: licenses/functions/video.php:22
