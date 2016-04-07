@@ -10,6 +10,6 @@ if ( ! is_archive() ) {
 ?>
 
 <div class='archive-header'>
-	<h2><?php the_archive_title(); ?></h2>
+	<h1><?php the_archive_title(); ?></h1>
 	<?php the_archive_description(); ?>
 </div>
