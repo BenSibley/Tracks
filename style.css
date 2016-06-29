@@ -2086,6 +2086,11 @@ li.pingback:first-child {
   opacity: 1;
 }
 
+.rtl .site-header .search-form-container input.search-field {
+  width: calc(100% - 120px) !important;
+  right: 120px;
+}
+
 /* 600px */
 @media all and (min-width: 37.5em) {
   .search-open .site-header .search-form-container button {
