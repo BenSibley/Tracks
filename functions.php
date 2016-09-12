@@ -1,8 +1,13 @@
 <?php
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 711;
+if ( ! function_exists( ( 'ct_tracks_set_content_width' ) ) ) {
+	function ct_tracks_set_content_width() {
+		if ( ! isset( $content_width ) ) {
+			$content_width = 711;
+		}
+	}
 }
+add_action( 'after_setup_theme', 'ct_tracks_set_content_width', 0 );
 
 if ( ! function_exists( 'ct_tracks_theme_setup' ) ) {
 	function ct_tracks_theme_setup() {
