@@ -2,6 +2,60 @@
 
 /* Customizer Styles */
 
+// Tracks Pro section
+#accordion-section-ct_tracks_pro {
+
+  .accordion-section-title {
+    color: #fff;
+    background: #43b3c4;
+
+    &:after {
+      color: #fff;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background: #3EA7B8 !important;
+      color: #fff !important;
+
+      &:after {
+        color: #fff !important;
+      }
+    }
+  }
+}
+#customize-control-tracks_pro {
+
+  ul {
+    list-style: disc;
+    padding-left: 15px;
+  }
+  .bold {
+    font-weight: 600;
+  }
+  .button-wrapper {
+    text-align: center;
+  }
+  .tracks-pro-button {
+    display: inline-block;
+    font-size: 14px;
+    padding: 12px 24px;
+    background: #F4923A;
+    color: #fff;
+    border-radius: 3px;
+    border-left: solid 2px #CC8437;
+    border-right: solid 2px #CC8437;
+    border-bottom: solid 4px #CC8437;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: #ff9233;
+    }
+  }
+}
+
 #customize-control-ct_tracks_background_texture_setting {
 
   input {
@@ -22,14 +76,6 @@
     &.selected {
       outline: solid 1px #43B3C4
     }
-  }
-}
-.upgrades-ad {
-  background: white;
-  padding: 0 15px 15px;
-
-  a {
-
   }
 }
 

@@ -11,6 +11,47 @@ background-color: gray;
 background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
 background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* Customizer Styles */
+#accordion-section-ct_tracks_pro .accordion-section-title {
+  color: #fff;
+  background: #43b3c4;
+}
+#accordion-section-ct_tracks_pro .accordion-section-title:after {
+  color: #fff;
+}
+#accordion-section-ct_tracks_pro .accordion-section-title:hover, #accordion-section-ct_tracks_pro .accordion-section-title:active, #accordion-section-ct_tracks_pro .accordion-section-title:focus {
+  background: #3EA7B8 !important;
+  color: #fff !important;
+}
+#accordion-section-ct_tracks_pro .accordion-section-title:hover:after, #accordion-section-ct_tracks_pro .accordion-section-title:active:after, #accordion-section-ct_tracks_pro .accordion-section-title:focus:after {
+  color: #fff !important;
+}
+
+#customize-control-tracks_pro ul {
+  list-style: disc;
+  padding-left: 15px;
+}
+#customize-control-tracks_pro .bold {
+  font-weight: 600;
+}
+#customize-control-tracks_pro .button-wrapper {
+  text-align: center;
+}
+#customize-control-tracks_pro .tracks-pro-button {
+  display: inline-block;
+  font-size: 14px;
+  padding: 12px 24px;
+  background: #F4923A;
+  color: #fff;
+  border-radius: 3px;
+  border-left: solid 2px #CC8437;
+  border-right: solid 2px #CC8437;
+  border-bottom: solid 4px #CC8437;
+  text-decoration: none;
+}
+#customize-control-tracks_pro .tracks-pro-button:hover, #customize-control-tracks_pro .tracks-pro-button:active, #customize-control-tracks_pro .tracks-pro-button:focus {
+  background: #ff9233;
+}
+
 #customize-control-ct_tracks_background_texture_setting input {
   visibility: hidden;
 }
@@ -28,11 +69,6 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 }
 #customize-control-ct_tracks_background_texture_setting label.selected {
   outline: solid 1px #43B3C4;
-}
-
-.upgrades-ad {
-  background: white;
-  padding: 0 15px 15px;
 }
 
 #customize-control-premium_layouts_full_width_image_height,

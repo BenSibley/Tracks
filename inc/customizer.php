@@ -60,6 +60,45 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		<?php }
 	}
 
+	/***** Tracks Pro Control *****/
+
+	class ct_tracks_pro_ad extends WP_Customize_Control {
+		public function render_content() {
+			$link = 'https://www.competethemes.com/tracks-pro/';
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Tracks Pro</a> is the plugin that makes advanced customization simple - and fun too.', 'tracks'), $link) . "</p>";
+			echo "<ul>
+					<li>" . __('Custom Colors', 'tracks') . "</li>
+					<li>" . __('New Layouts', 'tracks') . "</li>
+					<li>" . __('Background Images', 'tracks') . "</li>
+					<li>" . __('+ 5 more features', 'tracks') . "</li>
+				  </ul>";
+			echo "<p>" . __('Download the Tracks Pro Plugin to get started now.', 'tracks') . "</p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='tracks-pro-button' href='" . $link . "'>" . __('Get Tracks Pro', 'tracks') . "</a></p>";
+		}
+	}
+
+	/***** Tracks Pro Section *****/
+
+	// don't add if Tracks Pro is active
+	if ( !function_exists( 'ct_tracks_pro_init' ) ) {
+		// section
+		$wp_customize->add_section( 'ct_tracks_pro', array(
+			'title'    => __( 'Tracks Pro', 'tracks' ),
+			'priority' => 1
+		) );
+		// Upload - setting
+		$wp_customize->add_setting( 'tracks_pro', array(
+			'sanitize_callback' => 'absint'
+		) );
+		// Upload - control
+		$wp_customize->add_control( new ct_tracks_pro_ad(
+			$wp_customize, 'tracks_pro', array(
+				'section'  => 'ct_tracks_pro',
+				'settings' => 'tracks_pro'
+			)
+		) );
+	}
+
 	/***** Tagline Display *****/
 
 	// section
@@ -947,11 +986,3 @@ function ct_tracks_sanitize_css( $css ) {
 
 	return $css;
 }
-
-function ct_tracks_customize_preview_js() { ?>
-
-	<script>
-		jQuery('#customize-info').append('<div class="upgrades-ad"><a href="https://www.competethemes.com/tracks-pro/" class="button-primary" target="_blank"><?php _e( 'Get the Tracks Pro Plugin', 'tracks' ); ?></a></div>');
-	</script>
-<?php }
-add_action( 'customize_controls_print_footer_scripts', 'ct_tracks_customize_preview_js' );
