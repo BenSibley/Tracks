@@ -138,12 +138,12 @@ function ct_tracks_license_form_output( $upgrades ) {
 								<?php wp_nonce_field( 'ct_tracks_' . $upgrade . '_nonce', 'ct_tracks_' . $upgrade . '_nonce' ); ?>
 								<input type="submit" class="button-secondary"
 								       name="ct_tracks_<?php echo $upgrade; ?>_license_deactivate"
-								       value="<?php _e( 'Deactivate License', 'tracks' ); ?>"/>
+								       value="<?php esc_attr_e( 'Deactivate License', 'tracks' ); ?>"/>
 							<?php } else { ?>
 								<?php wp_nonce_field( 'ct_tracks_' . $upgrade . '_nonce', 'ct_tracks_' . $upgrade . '_nonce' ); ?>
 								<input type="submit" class="button-secondary"
 								       name="ct_tracks_<?php echo $upgrade; ?>_license_activate"
-								       value="<?php _e( 'Activate License', 'tracks' ); ?>"/>
+								       value="<?php esc_attr_e( 'Activate License', 'tracks' ); ?>"/>
 							<?php } ?>
 						</td>
 					</tr>

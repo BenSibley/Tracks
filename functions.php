@@ -188,18 +188,18 @@ if ( ! function_exists( 'ct_tracks_excerpt' ) ) {
 			if ( $ismore ) {
 				// Has to be written this way because i18n text CANNOT be stored in a variable
 				if ( ! empty( $read_more_text ) ) {
-					the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+					the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 				} else {
-					the_content( __( 'Read the Post', 'tracks' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+					the_content( __( 'Read the Post', 'tracks' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 				}
 			} else {
 				the_content();
 			}
 		} elseif ( $ismore ) {
 			if ( ! empty( $read_more_text ) ) {
-				the_content( $read_more_text . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 			} else {
-				the_content( __( 'Read the Post', 'tracks' ) . " <span class='screen-reader-text'>" . get_the_title() . "</span>" );
+				the_content( __( 'Read the Post', 'tracks' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
 			}
 		} else {
 			the_excerpt();
@@ -213,9 +213,9 @@ if ( ! function_exists( 'ct_tracks_excerpt_read_more_link' ) ) {
 		$read_more_text = get_theme_mod( 'read_more_text' );
 
 		if ( ! empty( $read_more_text ) ) {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . $read_more_text . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . esc_html( $read_more_text ) . "<span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
 		} else {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read the Post', 'tracks' ) . "<span class='screen-reader-text'>" . get_the_title() . "</span></a></p>";
+			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read the Post', 'tracks' ) . "<span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
 		}
 	}
 }
@@ -513,7 +513,7 @@ if ( ! function_exists( 'ct_tracks_category_link' ) ) {
 		$category      = get_the_category();
 		$category_link = get_category_link( $category[0]->term_id );
 		$category_name = $category[0]->cat_name;
-		$html          = "<a href='" . esc_url( $category_link ) . "'>" . esc_attr( $category_name ) . "</a>";
+		$html          = "<a href='" . esc_url( $category_link ) . "'>" . esc_html( $category_name ) . "</a>";
 		echo $html;
 	}
 }
@@ -658,7 +658,7 @@ function ct_tracks_add_meta_elements() {
 
 	$meta_elements = '';
 
-	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", get_bloginfo( 'charset' ) );
+	$meta_elements .= sprintf( '<meta charset="%s" />' . "\n", esc_attr( get_bloginfo( 'charset' ) ) );
 	$meta_elements .= '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
 
 	$theme    = wp_get_theme( get_template() );

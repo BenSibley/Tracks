@@ -6,7 +6,7 @@
 	</h1>
 	<?php if ( get_bloginfo( 'description' ) && ( get_theme_mod( 'tagline_display_setting' ) == 'header-footer' ) || ( get_theme_mod( 'tagline_display_setting' ) == 'footer' ) ) { ?>
 		<p class="site-description">
-			<?php bloginfo( 'description' ); ?>
+			<?php esc_html( bloginfo( 'description' ) ); ?>
 		</p>
 	<?php }
 	get_template_part( 'menu', 'footer' );

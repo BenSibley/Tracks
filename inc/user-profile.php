@@ -103,19 +103,19 @@ function ct_tracks_add_social_profile_settings( $user ) {
 			<tr>
 				<th>
 					<?php if ( $key == 'email' ) : ?>
-						<label for="<?php echo $key; ?>-profile"><?php _e( 'Email Address', 'tracks' ); ?></label>
+						<label for="<?php echo esc_attr( $key ); ?>-profile"><?php _e( 'Email Address', 'tracks' ); ?></label>
 					<?php else : ?>
-						<label for="<?php echo $key; ?>-profile"><?php echo $label; ?></label>
+						<label for="<?php echo esc_attr( $key ); ?>-profile"><?php echo esc_html( $label ); ?></label>
 					<?php endif; ?>
 				</th>
 				<td>
 					<?php if ( $key == 'email' ) : ?>
-						<input type='text' id='<?php echo $key; ?>-profile' class='regular-text'
-						       name='<?php echo $key; ?>-profile'
+						<input type='text' id='<?php echo esc_attr( $key ); ?>-profile' class='regular-text'
+						       name='<?php echo esc_attr( $key ); ?>-profile'
 						       value='<?php echo is_email( get_the_author_meta( $social_site, $user->ID ) ); ?>'/>
 					<?php else : ?>
-						<input type='url' id='<?php echo $key; ?>-profile' class='regular-text'
-						       name='<?php echo $key; ?>-profile'
+						<input type='url' id='<?php echo esc_attr( $key ); ?>-profile' class='regular-text'
+						       name='<?php echo esc_attr( $key ); ?>-profile'
 						       value='<?php echo esc_url( get_the_author_meta( $social_site, $user->ID ) ); ?>'/>
 					<?php endif; ?>
 				</td>

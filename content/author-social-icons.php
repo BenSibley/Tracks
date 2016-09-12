@@ -35,13 +35,13 @@ foreach ( $social_sites as $key => $social_site ) {
 		if ( $key == 'email' ) { ?>
 			<a class="email" target="_blank"
 			   href="mailto:<?php echo antispambot( is_email( get_the_author_meta( $social_site ) ) ); ?>">
-				<i class="fa fa-envelope" title="<?php _e( 'email icon', 'tracks' ); ?>"></i>
+				<i class="fa fa-envelope" title="<?php esc_attr_e( 'email icon', 'tracks' ); ?>"></i>
 			</a>
 		<?php } else { ?>
 			<a class="<?php echo esc_attr( $key ); ?>" target="_blank"
 			   href="<?php echo esc_url( get_the_author_meta( $social_site ) ); ?>">
 				<i class="<?php echo esc_attr( $class ); ?>"
-				   title="<?php printf( __( '%s icon', 'tracks' ), $key ); ?>"></i>
+				   title="<?php printf( esc_attr__( '%s icon', 'tracks' ), $key ); ?>"></i>
 			</a>
 			<?php
 		}
