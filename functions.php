@@ -595,16 +595,6 @@ function ct_tracks_loading_indicator_svg() {
 	return $svg;
 }
 
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
-	function ct_tracks_add_title_tag() {
-		?>
-		<title><?php wp_title( ' | ' ); ?></title>
-		<?php
-	}
-
-	add_action( 'wp_head', 'ct_tracks_add_title_tag' );
-endif;
-
 function ct_tracks_two_column_images_featured_image( $featured_image, $image, $has_image ) {
 
 	if ( $has_image && get_theme_mod( 'premium_layouts_setting' ) == 'two-column-images' ) {
