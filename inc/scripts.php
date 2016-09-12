@@ -3,8 +3,13 @@
 // Front-end
 function ct_tracks_load_javascript_files() {
 
-	wp_register_style( 'ct-tracks-google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700' );
-	wp_enqueue_style( 'ct-tracks-google-fonts' );
+	$font_args = array(
+		'family' => urlencode( 'Raleway:400,700' ),
+		'subset' => urlencode( 'latin,latin-ext' )
+	);
+	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+
+	wp_enqueue_style( 'ct-tracks-google-fonts', $fonts_url );
 
 	wp_enqueue_script( 'ct-tracks-production', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 
