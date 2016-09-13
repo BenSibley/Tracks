@@ -437,9 +437,7 @@ if ( ! function_exists( 'ct_tracks_post_class_update' ) ) {
 add_filter( 'post_class', 'ct_tracks_post_class_update' );
 
 if ( ! function_exists( 'add_image_size' ) ) {
-	if ( function_exists( 'add_image_size' ) ) {
-		add_image_size( 'blog', 700, 350 );
-	}
+	add_image_size( 'blog', 700, 350 );
 }
 
 if ( ! function_exists( 'ct_tracks_odd_even_post_class' ) ) {
