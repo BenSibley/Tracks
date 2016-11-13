@@ -775,3 +775,16 @@ if ( ! function_exists( 'ct_tracks_allow_skype_protocol' ) ) {
 	}
 }
 add_filter( 'kses_allowed_protocols' , 'ct_tracks_allow_skype_protocol' );
+
+// trigger theme switch on link click and send to Appearance menu
+function ct_tracks_welcome_redirect() {
+
+	$welcome_url = add_query_arg(
+		array(
+			'page' => 'tracks-options'
+		),
+		admin_url( 'themes.php' )
+	);
+	wp_redirect( esc_url( $welcome_url ) );
+}
+add_action( 'after_switch_theme', 'ct_tracks_welcome_redirect' );

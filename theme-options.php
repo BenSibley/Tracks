@@ -14,9 +14,17 @@ function ct_tracks_options_content() {
 		),
 		admin_url( 'customize.php' )
 	);
+	$support_url = 'https://www.competethemes.com/documentation/tracks-support-center/';
 	?>
 	<div id="tracks-dashboard-wrap" class="wrap">
 		<h2><?php _e( 'Tracks Dashboard', 'tracks' ); ?></h2>
+		<div class="welcome">
+			<h3><?php _e( 'Thanks for Choosing Tracks!', 'tracks' ); ?></h3>
+			<p>
+				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a href="%s">Tracks Support Center</a>.', 'tracks' ), $support_url ); ?>
+				<?php printf( __( 'Otherwise, you can dive right in with the <a href="%s">Customizer</a>.', 'tracks' ), esc_url($customizer_url) ); ?>
+			</p>
+		</div>
 		<?php $active_tab = isset( $_GET['tab'] ) ? $_GET['tab'] : 'dashboard'; ?>
 		<h2 class="nav-tab-wrapper">
 			<a href="?page=tracks-options&tab=dashboard"

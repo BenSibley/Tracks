@@ -28,6 +28,12 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   list-style: disc;
   margin-left: 36px;
 }
+#tracks-dashboard-wrap .welcome {
+  margin-top: 12px;
+  padding: 12px 24px 24px;
+  border: solid 1px #e5e5e5;
+  background: #E0FBFF;
+}
 #tracks-dashboard-wrap .content-licenses {
   border: none;
   padding: 0;
