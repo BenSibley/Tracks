@@ -222,12 +222,6 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   visibility: visible;
   opacity: 1;
 }
-@-ms-keyframes spin {
-  100% {
-    -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-  }
-}
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);

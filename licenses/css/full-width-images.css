@@ -44,14 +44,11 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   margin: auto;
   padding: 0 11.11%;
   background: none;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
+  -webkit-box-align: center;
           align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
+  -webkit-box-pack: center;
           justify-content: center;
 }
 .full-width-images .overlay-link {

@@ -44,14 +44,11 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   margin: auto;
   padding: 0 11.11%;
   background: none;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
+  -webkit-box-align: center;
           align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
+  -webkit-box-pack: center;
           justify-content: center;
 }
 .two-column-images .overlay-link {
@@ -72,8 +69,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   opacity: 1;
 }
 .two-column-images .excerpt-header {
-  -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
           flex: 0 1 auto;
 }
 .two-column-images .excerpt-header i {
