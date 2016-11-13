@@ -383,11 +383,20 @@ a img {
   color: #ffffff;
 }
 
+.search .sticky {
+  background: white;
+}
+
 .blog .main,
 .archive .main,
 .search .main {
   width: 88.89%;
   max-width: 1280px;
+}
+.blog #breadcrumbs,
+.archive #breadcrumbs,
+.search #breadcrumbs {
+  width: 100%;
 }
 
 .entry {
@@ -407,12 +416,6 @@ a img {
 }
 #breadcrumbs a {
   color: #fff;
-}
-
-.blog #breadcrumbs,
-.archive #breadcrumbs,
-.search #breadcrumbs {
-  width: 100%;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {

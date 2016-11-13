@@ -316,7 +316,12 @@ a img {
     color: #ffffff;
   }
 }
+.search {
 
+  .sticky {
+    background: white;
+  }
+}
 .blog,
 .archive,
 .search {
@@ -324,6 +329,9 @@ a img {
   .main {
     width: 88.89%;
     max-width: 1280px;
+  }
+  #breadcrumbs {
+    width: 100%;
   }
 }
 .entry {
@@ -343,14 +351,6 @@ a img {
 
   a {
     color: #fff;
-  }
-}
-.blog,
-.archive,
-.search {
-
-  #breadcrumbs {
-    width: 100%;
   }
 }
 
