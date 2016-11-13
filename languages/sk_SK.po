@@ -1,0 +1,767 @@
+# Copyright (C) 2016 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracks 1.52\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2016-09-24 13:11+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-09-24 14:01+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.9\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Language: sk_SK\n"
+
+#: comments.php:23 comments.php:43 comments.php:65
+msgid "Be First to Comment"
+msgstr "Prvý komentár"
+
+#: comments.php:23 comments.php:43 comments.php:65
+msgid "One Comment"
+msgstr "Jeden komentár"
+
+#: comments.php:23 comments.php:43 comments.php:65
+msgid "% Comments"
+msgstr "% Komentárov"
+
+#: comments.php:57
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Komentáre sú uzavreté, ale <a href=\"%s\" title=\"Trackback URL pre tento "
+"post\">Spätné odkazy</a> a Pingbacks sú otvorené."
+
+#: comments.php:79 comments.php:86
+msgid "Comments are closed."
+msgstr "Komentáre sú uzavreté."
+
+#: content/archive-header.php:4 inc/customizer.php:368 inc/customizer.php:845
+msgid "Posts"
+msgstr "Články"
+
+#: content/author-meta.php:11
+msgid "Written by:"
+msgstr "Autorom článku je:"
+
+#: content/author-social-icons.php:38
+msgid "email icon"
+msgstr "Ikona emailu"
+
+#: content/author-social-icons.php:44
+msgid "%s icon"
+msgstr "%s ikona"
+
+#: content/category-links.php:14
+msgid "Categories"
+msgstr "Kategórie"
+
+#: content/category-links.php:16 inc/deprecated.php:17
+msgid "View all posts in %s"
+msgstr "Ukáž všetky články v %s"
+
+#: content/further-reading.php:12
+msgid "Previous Post"
+msgstr "Predošlý článok"
+
+#: content/further-reading.php:13
+msgid "The Previous Post"
+msgstr "Predošlý článok"
+
+#: content/further-reading.php:16
+msgid "No Older Posts"
+msgstr "Žiadne staršie články"
+
+#: content/further-reading.php:17 content/further-reading.php:31
+msgid "Return to Blog"
+msgstr "Návrat domov"
+
+#: content/further-reading.php:26
+msgid "Next Post"
+msgstr "Ďalší článok"
+
+#: content/further-reading.php:27
+msgid "The Next Post"
+msgstr "Ďalší článok"
+
+#: content/further-reading.php:30
+msgid "No Newer Posts"
+msgstr "Žiadne novšie články"
+
+#: content/social-icons.php:44 content/social-icons.php:45
+msgid "email"
+msgstr "email"
+
+#: content/social-icons.php:52 content/social-icons.php:53
+msgid "contact form"
+msgstr "Kontaktný formulár"
+
+#: content/tag-links.php:9
+msgid "Tags"
+msgstr "Tagy"
+
+#: content/tag-links.php:11 inc/deprecated.php:36
+msgid "View all posts tagged %s"
+msgstr "Ukáž všetky označené články %s"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: Stránka nebola nájdená"
+
+#: content-404.php:9
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+
+#: content-attachment.php:26
+msgid "Previous Image"
+msgstr "Predošlý obrázok"
+
+#: content-attachment.php:30
+msgid "Next Image"
+msgstr "Ďalší obrázok"
+
+#: content-page.php:11 content.php:14
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: footer.php:23
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+
+#: functions.php:43
+msgid "Primary"
+msgstr ""
+
+#: functions.php:44
+msgid "Secondary"
+msgstr ""
+
+#: functions.php:45 functions.php:80 inc/customizer.php:124
+#: inc/customizer.php:177 inc/customizer.php:789 inc/customizer.php:808
+msgid "Footer"
+msgstr ""
+
+#: functions.php:58
+msgid "After Post Content"
+msgstr ""
+
+#: functions.php:60
+msgid ""
+"Widgets in this area will be shown after post content before the prev/next "
+"post links"
+msgstr ""
+
+#: functions.php:69
+msgid "After Page Content"
+msgstr ""
+
+#: functions.php:71
+msgid "Widgets in this area will be shown after page content"
+msgstr ""
+
+#: functions.php:82
+msgid "Widgets in this area will be shown in the footer"
+msgstr ""
+
+#: functions.php:107
+msgid "Reply"
+msgstr "Odpovedať"
+
+#: functions.php:111
+msgid "Edit"
+msgstr "Editovať"
+
+#: functions.php:116
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:131
+msgid "(optional)"
+msgstr "(volitelné)"
+
+#: functions.php:136 functions.php:137
+msgid "Your Name"
+msgstr "Meno"
+
+#: functions.php:142 functions.php:143
+msgid "Your Email"
+msgstr "Emailová adresa"
+
+#: functions.php:148
+msgid "Your Website URL"
+msgstr "URL stránky"
+
+#: functions.php:149
+msgid "Your URL"
+msgstr "URL"
+
+#: functions.php:163
+msgid "Your Comment"
+msgstr "Tvoj komentár"
+
+#: functions.php:164
+msgid "Enter Your Comment"
+msgstr "Zadaj komentár"
+
+#: functions.php:195 functions.php:204 functions.php:220 inc/customizer.php:661
+msgid "Read the Post"
+msgstr "Čítaj článok"
+
+#: header.php:14
+msgid "Skip to content"
+msgstr "Preskoč obsah"
+
+#: inc/customizer.php:68
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Tracks Pro</a> is the plugin that makes "
+"advanced customization simple - and fun too."
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "Custom Colors"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "New Layouts"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Background Images"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "+ 5 more features"
+msgstr ""
+
+#: inc/customizer.php:75
+msgid "Download the Tracks Pro Plugin to get started now."
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "Get Tracks Pro"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "Tracks Pro"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "Tagline Display"
+msgstr ""
+
+#: inc/customizer.php:117
+msgid "Where should the tagline display?"
+msgstr ""
+
+#: inc/customizer.php:122 inc/customizer.php:175 inc/customizer.php:787
+#: inc/customizer.php:806
+msgid "Header & Footer"
+msgstr ""
+
+#: inc/customizer.php:123 inc/customizer.php:176 inc/customizer.php:788
+#: inc/customizer.php:807
+msgid "Header"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:142
+msgid "Upload custom logo."
+msgstr ""
+
+#: inc/customizer.php:158
+msgid "Social Media Icons"
+msgstr ""
+
+#: inc/customizer.php:160
+msgid "Add the URL for each of your social profiles."
+msgstr ""
+
+#: inc/customizer.php:170
+msgid "Where should the icons display?"
+msgstr ""
+
+#: inc/customizer.php:178 inc/customizer.php:809
+msgid "Do not display"
+msgstr ""
+
+#: inc/customizer.php:193 inc/user-profile.php:106
+msgid "Email Address"
+msgstr "Emailová adresa"
+
+#: inc/customizer.php:245
+msgid ""
+"Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn more</a>)"
+msgstr ""
+
+#: inc/customizer.php:272
+msgid "Search Bar"
+msgstr "Vyhľadávač"
+
+#: inc/customizer.php:283
+msgid "Show search bar at top of site?"
+msgstr ""
+
+#: inc/customizer.php:287 inc/customizer.php:311 inc/customizer.php:327
+#: inc/customizer.php:343 inc/customizer.php:576 inc/customizer.php:593
+#: inc/customizer.php:610 inc/customizer.php:821
+msgid "Show"
+msgstr "Ukáž"
+
+#: inc/customizer.php:288 inc/customizer.php:312 inc/customizer.php:328
+#: inc/customizer.php:344 inc/customizer.php:577 inc/customizer.php:594
+#: inc/customizer.php:611 inc/customizer.php:822
+msgid "Hide"
+msgstr "Skryť"
+
+#: inc/customizer.php:296
+msgid "Post Meta"
+msgstr ""
+
+#: inc/customizer.php:307
+msgid "Display date above post title?"
+msgstr ""
+
+#: inc/customizer.php:323
+msgid "Display author name above post title?"
+msgstr ""
+
+#: inc/customizer.php:339
+msgid "Display category above post title?"
+msgstr ""
+
+#: inc/customizer.php:352
+msgid "Comments"
+msgstr "Komentáre"
+
+#: inc/customizer.php:363
+msgid "Show comments on:"
+msgstr ""
+
+#: inc/customizer.php:369 inc/customizer.php:846
+msgid "Pages"
+msgstr "Stránky"
+
+#: inc/customizer.php:370 inc/customizer.php:847
+msgid "Attachments"
+msgstr ""
+
+#: inc/customizer.php:371 inc/customizer.php:848
+msgid "Do not show"
+msgstr ""
+
+#: inc/customizer.php:380
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:390
+msgid "Edit the text in your footer"
+msgstr ""
+
+#: inc/customizer.php:399
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/customizer.php:410
+msgid "Add Custom CSS Here:"
+msgstr ""
+
+#: inc/customizer.php:442 theme-options.php:68
+msgid "Premium Layouts"
+msgstr ""
+
+#: inc/customizer.php:454
+msgid "Choose the layout for Tracks"
+msgstr ""
+
+#: inc/customizer.php:455
+msgid ""
+"Want more layouts? Check out the <a target=\"_blank\" href=\"%s\">Tracks Pro "
+"Plugin</a>."
+msgstr ""
+
+#: inc/customizer.php:468
+msgid "Image size on Blog"
+msgstr ""
+
+#: inc/customizer.php:484
+msgid "Image size on Posts"
+msgstr ""
+
+#: inc/customizer.php:500
+msgid "Style"
+msgstr ""
+
+#: inc/customizer.php:504 inc/customizer.php:891
+msgid "Overlay"
+msgstr ""
+
+#: inc/customizer.php:505 inc/customizer.php:892
+msgid "Title below"
+msgstr ""
+
+#: inc/customizer.php:516
+msgid "Show full posts on Blog/Archives?"
+msgstr ""
+
+#: inc/customizer.php:520 inc/customizer.php:642 inc/customizer.php:727
+#: inc/customizer.php:835
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:521 inc/customizer.php:643 inc/customizer.php:728
+#: inc/customizer.php:836
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:529
+msgid "Additional Options"
+msgstr ""
+
+#: inc/customizer.php:540
+msgid "Posts without Featured Images should display:"
+msgstr ""
+
+#: inc/customizer.php:545 inc/customizer.php:922
+msgid "Empty half"
+msgstr ""
+
+#: inc/customizer.php:546 inc/customizer.php:923
+msgid "Full-width text"
+msgstr ""
+
+#: inc/customizer.php:547 inc/customizer.php:924
+msgid "Fallback image"
+msgstr ""
+
+#: inc/customizer.php:557
+msgid "Upload a fallback image"
+msgstr ""
+
+#: inc/customizer.php:571
+msgid "Show scroll-to-top arrow?"
+msgstr ""
+
+#: inc/customizer.php:588
+msgid "Show author info box after posts?"
+msgstr ""
+
+#: inc/customizer.php:605
+msgid "Show prev/next links after posts?"
+msgstr ""
+
+#: inc/customizer.php:622
+msgid "Zoom-in blog images on hover?"
+msgstr ""
+
+#: inc/customizer.php:626
+msgid "Zoom in"
+msgstr ""
+
+#: inc/customizer.php:627
+msgid "Do not zoom in"
+msgstr ""
+
+#: inc/customizer.php:638
+msgid "Lazy load images?"
+msgstr ""
+
+#: inc/customizer.php:653
+msgid "Word count in automatic excerpts"
+msgstr ""
+
+#: inc/customizer.php:666
+msgid "Read More link text"
+msgstr ""
+
+#: inc/customizer.php:683
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer.php:684
+msgid ""
+"Use the Header Color section if your new background image makes the menu "
+"hard to read."
+msgstr ""
+
+#: inc/customizer.php:694
+msgid "Background image"
+msgstr ""
+
+#: inc/customizer.php:711
+msgid "Background Texture"
+msgstr ""
+
+#: inc/customizer.php:712
+msgid ""
+"Use the Header Color section if your new texture makes the menu hard to read."
+msgstr ""
+
+#: inc/customizer.php:723
+msgid "Enable background texture?"
+msgstr ""
+
+#: inc/customizer.php:741
+msgid "Choose a Texture"
+msgstr ""
+
+#: inc/customizer.php:760
+msgid "Header Color"
+msgstr ""
+
+#: inc/customizer.php:761
+msgid "Change to dark if your new background makes the menu hard to read."
+msgstr ""
+
+#: inc/customizer.php:772
+msgid "Light or dark header color?"
+msgstr ""
+
+#: inc/customizer.php:776 inc/customizer.php:909
+msgid "Light"
+msgstr ""
+
+#: inc/customizer.php:777 inc/customizer.php:910
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:859
+msgid "Zoom"
+msgstr ""
+
+#: inc/customizer.php:860
+msgid "Do not Zoom"
+msgstr ""
+
+#: inc/user-profile.php:66
+msgid "Social Profiles"
+msgstr ""
+
+#: index.php:22 index.php:28
+msgid "Previous"
+msgstr "Predošlý"
+
+#: index.php:23 index.php:29
+msgid "Next"
+msgstr "Ďalší"
+
+#: licenses/functions/video.php:22
+msgid "Featured Video"
+msgstr ""
+
+#: licenses/functions/video.php:65
+msgid "Video Preview"
+msgstr ""
+
+#: licenses/functions/video.php:79
+msgid "Add video URL:"
+msgstr ""
+
+#: licenses/functions/video.php:90
+msgid "Choose where to display the video:"
+msgstr ""
+
+#: licenses/functions/video.php:93
+msgid "Post"
+msgstr "Článok"
+
+#: licenses/functions/video.php:97
+msgid "Blog"
+msgstr "Blog"
+
+#: licenses/functions/video.php:101
+msgid "Post & Blog"
+msgstr "Článok & Blog"
+
+#: licenses/functions/video.php:117
+msgid "Youtube controls"
+msgstr ""
+
+#: licenses/functions/video.php:120
+msgid "Hide title"
+msgstr ""
+
+#: licenses/functions/video.php:124
+msgid "Hide related videos"
+msgstr ""
+
+#: licenses/functions/video.php:128
+msgid "Hide Youtube logo"
+msgstr ""
+
+#: licenses/functions/video.php:132
+msgid "Show Captions by Default"
+msgstr ""
+
+#: search.php:9
+msgid "%d search result for \"%s\""
+msgid_plural "%d search results for \"%s\""
+msgstr[0] "%d vyhľadaný výsledok pre \"%s\""
+msgstr[1] "%d vyhľadaných výsledkov pre \"%s\""
+msgstr[2] "%d vyhľadaných výsledkov pre \"%s\""
+
+#: search.php:11
+msgid "No search results for \"%s\""
+msgstr "Nenašiel sa žiaden výsledok pre \"%s\""
+
+#: search.php:44
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr "Nevieš nájsť to čo hľadáš? Skús to napísať inak:"
+
+#: searchform.php:6 searchform.php:8
+msgid "Search for:"
+msgstr "Vyhľadávanie"
+
+#: searchform.php:7
+msgid "Search"
+msgstr "Vyhľadaj"
+
+#: searchform.php:9
+msgid "Go"
+msgstr "Poď"
+
+#: theme-options.php:4 theme-options.php:19
+msgid "Tracks Dashboard"
+msgstr ""
+
+#: theme-options.php:23
+msgid "Dashboard"
+msgstr ""
+
+#: theme-options.php:25
+msgid "Licenses"
+msgstr ""
+
+#: theme-options.php:30
+msgid "Customization"
+msgstr ""
+
+#: theme-options.php:31
+msgid ""
+"Click the \"Customize\" link in your menu, or use the button below to get "
+"started customizing Tracks."
+msgstr ""
+
+#: theme-options.php:34
+msgid "Use Customizer"
+msgstr ""
+
+#: theme-options.php:38
+msgid "Support"
+msgstr ""
+
+#: theme-options.php:39
+msgid ""
+"You can find the knowledgebase, changelog, forum, and more in the Tracks "
+"Support Center."
+msgstr ""
+
+#: theme-options.php:42
+msgid "Visit Support Center"
+msgstr ""
+
+#: theme-options.php:46
+msgid "Tracks Pro Plugin"
+msgstr ""
+
+#: theme-options.php:47
+msgid "Make your site more customizable and beautiful with Tracks Pro"
+msgstr ""
+
+#: theme-options.php:49
+msgid "Visit Tracks Pro"
+msgstr ""
+
+#: theme-options.php:53
+msgid "WordPress Resources"
+msgstr ""
+
+#: theme-options.php:54
+msgid ""
+"Save time and money searching for WordPress products by following our "
+"recommendations."
+msgstr ""
+
+#: theme-options.php:57
+msgid "View Resources"
+msgstr ""
+
+#: theme-options.php:61 theme-options.php:63
+msgid "Leave a Review"
+msgstr ""
+
+#: theme-options.php:62
+msgid "Help others find tracks by leaving a review on wordpress.org."
+msgstr ""
+
+#: theme-options.php:74
+msgid "Premium Features"
+msgstr ""
+
+#: theme-options.php:121
+msgid "Save License"
+msgstr ""
+
+#: theme-options.php:128
+msgid "Enter your license key"
+msgstr ""
+
+#: theme-options.php:134 theme-options.php:146
+msgid "Activate License"
+msgstr ""
+
+#: theme-options.php:141
+msgid "Deactivate License"
+msgstr ""
+
+#: theme-options.php:164
+msgid ""
+"You can now add a background image using the \"Background Image\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+
+#: theme-options.php:166
+msgid ""
+"If you haven't already, please upload and activate the <a "
+"href='%s'>Background Texture plugin</a>"
+msgstr ""
+
+#: theme-options.php:168
+msgid ""
+"You can now add videos to Posts and Pages. Use the Featured Videos box under "
+"the Post Editor to get started"
+msgstr ""
+
+#: theme-options.php:170
+msgid ""
+"You can now switch to your new layout in the \"Premium Layouts\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A bold, beautiful, and responsive theme. Tracks is perfect for personal "
+"blogs, magazines, and photography websites. It includes a logo uploader, "
+"social media icons, search bar, comment display controls, premium layouts "
+"and features, and more.  See our fully-setup live demo here: https://www."
+"competethemes.com/tracks-live-demo/"
+msgstr ""
+
+#: inc/customizer.php:472 inc/customizer.php:488 inc/customizer.php:882
+msgctxt "size of the featured image"
+msgid "size based on image size"
+msgstr ""
+
+#: inc/customizer.php:473 inc/customizer.php:489 inc/customizer.php:883
+msgctxt "size of the featured image"
+msgid "2:1 width/height ratio like posts"
+msgstr ""
