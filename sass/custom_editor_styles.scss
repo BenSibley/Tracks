@@ -1,3 +1,5 @@
+@import "variables";
+
 body#tinymce.wp-editor {
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 1em;
@@ -28,6 +30,16 @@ body#tinymce.wp-editor {
   h6 {
     font-size: 1em;
     line-height: 1.5;
+  }
+  blockquote {
+    margin: $baseline-height 0;
+    padding: 0 $baseline-height;
+    border-left: solid $baseline-height / 2 $gray-dark;
+
+    cite {
+      display: block;
+      text-align: right;
+    }
   }
 }
 body#tinymce.wp-editor a {

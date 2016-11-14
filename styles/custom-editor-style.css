@@ -1,3 +1,15 @@
+/*===== Variables =====*/
+/* Theme Colors */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/* grid stuff */
+/* Baseline Grid
+background-image: linear-gradient(#fff 23px, #00fffc 24px, #fff 0px);
+background-size: 1px 24px; /* this is a 24px baseline grid */
+/* Column Grid
+background-color: gray;
+background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
+background-size: 11.1%; /* This is at 6-columns -> just change this # */
 body#tinymce.wp-editor {
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 1em;
@@ -33,6 +45,15 @@ body#tinymce.wp-editor h5 {
 body#tinymce.wp-editor h6 {
   font-size: 1em;
   line-height: 1.5;
+}
+body#tinymce.wp-editor blockquote {
+  margin: 1.5em 0;
+  padding: 0 1.5em;
+  border-left: solid 0.75em #222;
+}
+body#tinymce.wp-editor blockquote cite {
+  display: block;
+  text-align: right;
 }
 
 body#tinymce.wp-editor a {
