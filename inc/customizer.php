@@ -65,15 +65,16 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	class ct_tracks_pro_ad extends WP_Customize_Control {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/tracks-pro/';
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Tracks Pro</a> is the plugin that makes advanced customization simple - and fun too.', 'tracks'), $link) . "</p>";
+			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/tracks-pro.png' /></a>";
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Tracks Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'tracks'), $link) . "</p>";
+			echo "<p>" . __('Tracks Pro adds the following features to Tracks:', 'tracks') . "</p>";
 			echo "<ul>
 					<li>" . __('Custom Colors', 'tracks') . "</li>
-					<li>" . __('New Layouts', 'tracks') . "</li>
-					<li>" . __('Background Images', 'tracks') . "</li>
+					<li>" . __('4 New layouts', 'tracks') . "</li>
+					<li>" . __('Featured Videos', 'tracks') . "</li>
 					<li>" . __('+ 5 more features', 'tracks') . "</li>
 				  </ul>";
-			echo "<p>" . __('Download the Tracks Pro Plugin to get started now.', 'tracks') . "</p>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='tracks-pro-button' href='" . $link . "'>" . __('Get Tracks Pro', 'tracks') . "</a></p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='tracks-pro-button' href='" . $link . "'>" . __('View Tracks Pro', 'tracks') . "</a></p>";
 		}
 	}
 
@@ -83,7 +84,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	if ( !function_exists( 'ct_tracks_pro_init' ) ) {
 		// section
 		$wp_customize->add_section( 'ct_tracks_pro', array(
-			'title'    => __( 'Tracks Pro', 'tracks' ),
+			'title'    => __( 'Customize More', 'tracks' ),
 			'priority' => 1
 		) );
 		// Upload - setting
