@@ -21,7 +21,7 @@ function ct_tracks_options_content() {
 		<div class="welcome">
 			<h3><?php _e( 'Thanks for Choosing Tracks!', 'tracks' ); ?></h3>
 			<p>
-				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a href="%s">Tracks Support Center</a>.', 'tracks' ), $support_url ); ?>
+				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a target="_blank" href="%s">Tracks Support Center</a>.', 'tracks' ), $support_url ); ?>
 				<?php printf( __( 'Otherwise, you can dive right in with the <a href="%s">Customizer</a>.', 'tracks' ), esc_url($customizer_url) ); ?>
 			</p>
 		</div>
