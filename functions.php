@@ -499,6 +499,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'slideshare',
 			'skype',
 			'whatsapp',
+			'snapchat',
 			'bandcamp',
 			'etsy',
 			'quora',

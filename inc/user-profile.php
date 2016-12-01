@@ -31,6 +31,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'slideshare'    => 'slideshare_profile',
 			'skype'         => 'skype_profile',
 			'whatsapp'      => 'whatsapp_profile',
+			'snapchat'      => 'snapchat_profile',
 			'bandcamp'      => 'bandcamp_profile',
 			'etsy'          => 'etsy_profile',
 			'quora'         => 'quora_profile',
