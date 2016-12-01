@@ -335,3 +335,5 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 	return $html;
 }
 add_filter('oembed_result','ct_tracks_add_youtube_parameters', 10, 3);
+
+wp_oembed_add_provider( '/https?:\/\/(.+)?(wistia.com|wi.st)\/(medias|embed)\/.*/', 'http://fast.wistia.com/oembed', true);
