@@ -18,13 +18,6 @@ function ct_tracks_options_content() {
 	?>
 	<div id="tracks-dashboard-wrap" class="wrap">
 		<h2><?php _e( 'Tracks Dashboard', 'tracks' ); ?></h2>
-		<div class="welcome">
-			<h3><?php _e( 'Thanks for Choosing Tracks!', 'tracks' ); ?></h3>
-			<p>
-				<?php printf( __( 'If you need help getting started, there are detailed tutorials in the <a target="_blank" href="%s">Tracks Support Center</a>.', 'tracks' ), $support_url ); ?>
-				<?php printf( __( 'Otherwise, you can dive right in with the <a href="%s">Customizer</a>.', 'tracks' ), esc_url($customizer_url) ); ?>
-			</p>
-		</div>
 		<?php $active_tab = isset( $_GET['tab'] ) ? $_GET['tab'] : 'dashboard'; ?>
 		<h2 class="nav-tab-wrapper">
 			<a href="?page=tracks-options&tab=dashboard"
@@ -34,41 +27,29 @@ function ct_tracks_options_content() {
 		</h2>
 		<?php
 		if ( $active_tab == 'dashboard' ) { ?>
-			<div class="content-customization content">
-				<h3><?php _e( 'Customization', 'tracks' ); ?></h3>
-				<p><?php _e( 'Click the "Customize" link in your menu, or use the button below to get started customizing Tracks.', 'tracks' ); ?></p>
-				<p>
-					<a class="button-primary"
-					   href="<?php echo esc_url( $customizer_url ); ?>"><?php _e( 'Use Customizer', 'tracks' ) ?></a>
-				</p>
-			</div>
-			<div class="content-support content">
-				<h3><?php _e( 'Support', 'tracks' ); ?></h3>
-				<p><?php _e( "You can find the knowledgebase, changelog, forum, and more in the Tracks Support Center.", "tracks" ); ?></p>
-				<p>
-					<a target="_blank" class="button-primary"
-					   href="https://www.competethemes.com/documentation/tracks-support-center/"><?php _e( 'Visit Support Center', 'tracks' ); ?></a>
-				</p>
-			</div>
-			<div class="content-premium-upgrades content">
-				<h3><?php _e( 'Tracks Pro Plugin', 'tracks' ); ?></h3>
-				<p><?php _e( 'Make your site more customizable and beautiful with Tracks Pro', 'tracks' ); ?>.</p>
-				<p><a target="_blank" class="button-primary"
-				      href="https://www.competethemes.com/tracks-pro/"><?php _e( 'Visit Tracks Pro', 'tracks' ); ?></a>
-				</p>
-			</div>
-			<div class="content content-resources">
-				<h3><?php _e( 'WordPress Resources', 'tracks' ); ?></h3>
-				<p><?php _e( "Save time and money searching for WordPress products by following our recommendations.", "tracks" ); ?></p>
-				<p>
-					<a target="_blank" class="button-primary"
-					   href="https://www.competethemes.com/wordpress-resources/"><?php _e( 'View Resources', 'tracks' ); ?></a>
-				</p>
-			</div>
-			<div class="content content-review">
-				<h3><?php _e( 'Leave a Review', 'tracks' ); ?></h3>
-				<p><?php _e( 'Help others find tracks by leaving a review on wordpress.org.', 'tracks' ); ?></p>
-				<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/tracks"><?php _e( 'Leave a Review', 'tracks' ); ?></a>
+			<div class="content-boxes">
+				<div class="content content-support">
+					<h3><?php _e( 'Get Started', 'tracks' ); ?></h3>
+					<p><?php _e( "Not sure where to start? The <strong>Tracks Getting Started Guide</strong> will take you step-by-step through every feature in Tracks.", "tracks" ); ?></p>
+					<p>
+						<a target="_blank" class="button-primary"
+						   href="https://www.competethemes.com/help/getting-started-tracks/"><?php _e( 'View Guide', 'tracks' ); ?></a>
+					</p>
+				</div>
+				<?php if ( !function_exists( 'ct_tracks_pro_init' ) ) : ?>
+					<div class="content-premium-upgrades content">
+						<h3><?php _e( 'Tracks Pro Plugin', 'tracks' ); ?></h3>
+						<p><?php _e( 'Make your site more customizable and beautiful with Tracks Pro', 'tracks' ); ?>.</p>
+						<p><a target="_blank" class="button-primary"
+						      href="https://www.competethemes.com/tracks-pro/"><?php _e( 'Visit Tracks Pro', 'tracks' ); ?></a>
+						</p>
+					</div>
+				<?php endif; ?>
+				<div class="content content-review">
+					<h3><?php _e( 'Leave a Review', 'tracks' ); ?></h3>
+					<p><?php _e( 'Help others find tracks by leaving a review on wordpress.org.', 'tracks' ); ?></p>
+					<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/tracks"><?php _e( 'Leave a Review', 'tracks' ); ?></a>
+				</div>
 			</div>
 		<?php } elseif ( $active_tab == 'licenses' ) { ?>
 			<div class="content-licenses">

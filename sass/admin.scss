@@ -9,24 +9,20 @@
     margin-bottom: 24px;
   }
   .content {
+    box-sizing: border-box;
     margin-top: 12px;
     padding: 12px 24px 24px;
     border: solid 1px #e5e5e5;
     background: white;
 
-    .button-primary {
+    .button-primary,
+    #delete {
       margin: 12px 0;
     }
     ul {
       list-style: disc;
       margin-left: 36px;
     }
-  }
-  .welcome {
-    margin-top: 12px;
-    padding: 12px 24px 24px;
-    border: solid 1px #e5e5e5;
-    background: #E0FBFF;
   }
   .content-licenses {
     border: none;
@@ -95,20 +91,17 @@
   #tracks-dashboard-wrap {
 
     .content {
-      width: 39%;
+      width: 49%;
       float: left;
+      margin-right: 2%;
+      min-height: 250px;
 
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
       p {
         min-height: 57px;
       }
-    }
-    .content-review {
-      min-height: 191px;
-    }
-    .content-customization,
-    .content-premium-upgrades,
-    .content-review {
-      margin-right: 2%;
     }
   }
 }
@@ -119,19 +112,17 @@
   #tracks-dashboard-wrap {
 
     .content {
-      width: 27%;
-    }
-    .content-resources {
-      clear: left;
-    }
-    .content-customization,
-    .content-support,
-    .content-resources,
-    .content-review {
-      margin-right: 1%;
-    }
-    .content-premium-upgrades {
-      margin-right: 0;
+      width: 32%;
+
+      &:nth-child(2n) {
+        margin-right: 2%;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-child(4n) {
+        clear: left;
+      }
     }
     .content-licenses {
 
