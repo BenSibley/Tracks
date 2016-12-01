@@ -49,10 +49,11 @@ function ct_tracks_video_callback( $post ) {
 	$display_value = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
 
 	// youtube parameters
-	$youtube_title = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true );
-	$youtube_related = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true );
-	$youtube_logo = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
+	$youtube_title    = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true );
+	$youtube_related  = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true );
+	$youtube_logo     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
 	$youtube_captions = get_post_meta( $post->ID, 'ct_tracks_video_youtube_captions', true );
+	$youtube_autoplay = get_post_meta( $post->ID, 'ct_tracks_video_youtube_autoplay', true );
 
 	// sets video to display on posts only by default
 	if( empty( $display_value ) ) {
@@ -130,6 +131,10 @@ function ct_tracks_video_callback( $post ) {
 		echo '<label for="ct_tracks_video_youtube_captions">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_captions" id="ct_tracks_video_youtube_captions" value="1" ' . checked( '1', $youtube_captions, false ) . '>';
 			_e( 'Show Captions by Default', 'tracks' );
+		echo '</label> ';
+		echo '<label for="ct_tracks_video_youtube_autoplay">';
+			echo '<input type="checkbox" name="ct_tracks_video_youtube_autoplay" id="ct_tracks_video_youtube_autoplay" value="1" ' . checked( '1', $youtube_autoplay, false ) . '>';
+			_e( 'Autoplay video', 'tracks' );
 		echo '</label> ';
 	echo '</div>';
 }
@@ -225,71 +230,24 @@ function ct_tracks_video_save_data( $post_id ) {
 		}
 	}
 
-	// Youtube title
+	$youtube_IDs = array(
+		'ct_tracks_video_youtube_title',
+		'ct_tracks_video_youtube_related',
+		'ct_tracks_video_youtube_logo',
+		'ct_tracks_video_youtube_captions',
+		'ct_tracks_video_youtube_autoplay'
+	);
 
-	// if not set, set to '0' to avoid undefined index error
-	if ( !isset( $_POST['ct_tracks_video_youtube_title'] ) ) {
-		$_POST['ct_tracks_video_youtube_title'] = '0';
-	}
+	foreach ( $youtube_IDs as $youtube_option ) {
 
-	// get user input
-	$youtube_title = $_POST[ 'ct_tracks_video_youtube_title' ];
+		if ( ! isset( $_POST[ $youtube_option ] ) ) {
+			$_POST[ $youtube_option ] = '0';
+		}
+		$youtube_option_data = $_POST[ $youtube_option ];
 
-	// validate user input
-	if( $youtube_title == '1' || $youtube_title == '0' ) {
-
-		// Saves video display option
-		update_post_meta( $post_id, 'ct_tracks_video_youtube_title', $youtube_title );
-	}
-	// Youtube related vids
-
-	// if not set, set to '0' to avoid undefined index error
-	if ( !isset( $_POST['ct_tracks_video_youtube_related'] ) ) {
-		$_POST['ct_tracks_video_youtube_related'] = '0';
-	}
-
-	// get user input
-	$youtube_related = $_POST[ 'ct_tracks_video_youtube_related' ];
-
-	// validate user input
-	if( $youtube_related == '1' || $youtube_related == '0' ) {
-
-		// Saves video display option
-		update_post_meta( $post_id, 'ct_tracks_video_youtube_related', $youtube_related );
-	}
-
-	// Youtube logo
-
-	// if not set, set to '0' to avoid undefined index error
-	if ( !isset( $_POST['ct_tracks_video_youtube_logo'] ) ) {
-		$_POST['ct_tracks_video_youtube_logo'] = '0';
-	}
-
-	// get user input
-	$youtube_logo = $_POST[ 'ct_tracks_video_youtube_logo' ];
-
-	// validate user input
-	if( $youtube_logo == '1' || $youtube_logo == '0' ) {
-
-		// Saves video display option
-		update_post_meta( $post_id, 'ct_tracks_video_youtube_logo', $youtube_logo );
-	}
-
-	// Youtube captions
-
-	// if not set, set to '0' to avoid undefined index error
-	if ( !isset( $_POST['ct_tracks_video_youtube_captions'] ) ) {
-		$_POST['ct_tracks_video_youtube_captions'] = '0';
-	}
-
-	// get user input
-	$youtube_captions = $_POST[ 'ct_tracks_video_youtube_captions' ];
-
-	// validate user input
-	if( $youtube_captions == '1' || $youtube_captions == '0' ) {
-
-		// Saves video display option
-		update_post_meta( $post_id, 'ct_tracks_video_youtube_captions', $youtube_captions );
+		if ( $youtube_option_data == '1' || $youtube_option_data == '0' ) {
+			update_post_meta( $post_id, $youtube_option, $youtube_option_data );
+		}
 	}
 }
 add_action( 'save_post', 'ct_tracks_video_save_data' );
@@ -350,12 +308,14 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 				$youtube_logo     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true ) ? 0 : 1;
 
 				$youtube_captions = get_post_meta( $post->ID, 'ct_tracks_video_youtube_captions', true );
+				$youtube_autoplay = get_post_meta( $post->ID, 'ct_tracks_video_youtube_autoplay', true );
 
 				$youtube_parameters = array(
 					'showinfo'       => $youtube_title,
 					'rel'            => $youtube_related,
 					'modestbranding' => $youtube_logo,
-					'cc_load_policy' => $youtube_captions
+					'cc_load_policy' => $youtube_captions,
+					'autoplay'       => $youtube_autoplay
 				);
 
 				if ( is_array( $args ) ) {
