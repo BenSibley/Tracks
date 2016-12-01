@@ -541,7 +541,11 @@ if ( ! function_exists( 'ct_tracks_category_link' ) ) {
 if ( ! function_exists( 'ct_tracks_custom_css_output' ) ) {
 	function ct_tracks_custom_css_output() {
 
-		$custom_css = get_theme_mod( 'ct_tracks_custom_css_setting' );
+		if ( function_exists( 'wp_get_custom_css' ) ) {
+			$custom_css = wp_get_custom_css();
+		} else {
+			$custom_css = get_theme_mod( 'ct_tracks_custom_css_setting' );
+		}
 
 		if ( $custom_css ) {
 			$custom_css = ct_tracks_sanitize_css( $custom_css );

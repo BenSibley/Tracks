@@ -41,7 +41,13 @@
     // Custom CSS
 
     // get current Custom CSS
+    var setting = 'ct_tracks_custom_css_setting';
     var customCSS = panel.find('#customize-control-ct_tracks_custom_css_setting').find('textarea').val();
+
+    if ( panel.find('#sub-accordion-section-custom_css').length ) {
+        setting = 'custom_css[tracks]';
+        customCSS = panel.find('#customize-control-custom_css').find('textarea').val();
+    }
 
     // get the CSS in the inline element
     var allCSS = inlineStyles.text();
@@ -56,7 +62,7 @@
     body.append('<style id="style-inline-custom-css" type="text/css">' + customCSS + '</style>');
 
     // Custom CSS
-    wp.customize( 'ct_tracks_custom_css_setting', function( value ) {
+    wp.customize( setting, function( value ) {
         value.bind( function( to ) {
             $('#style-inline-custom-css').remove();
             if ( to != '' ) {
