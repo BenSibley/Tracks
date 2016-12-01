@@ -40,7 +40,12 @@ jQuery(document).ready(function($) {
 
         // add the appropriate image to each label
         textureInputs.each( function() {
-            $(this).parent().css('background-image', 'url("../wp-content/plugins/tracks-background-textures/textures/' + $(this).val() + '.png")');
+
+            if ( $('#accordion-panel-ct_tracks_pro_colors_panel').length ) {
+                $(this).parent().css('background-image', 'url("../wp-content/plugins/tracks-pro/assets/images/textures/' + $(this).val() + '.png")');
+            } else {
+                $(this).parent().css('background-image', 'url("../wp-content/plugins/tracks-background-textures/textures/' + $(this).val() + '.png")');
+            }
 
             // add initial 'selected' class
             if ($(this).prop('checked')) {
