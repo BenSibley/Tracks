@@ -793,11 +793,12 @@ function ct_tracks_welcome_redirect() {
 
 	$welcome_url = add_query_arg(
 		array(
-			'page' => 'tracks-options'
+			'page'          => 'tracks-options',
+			'tracks_status' => 'activated'
 		),
 		admin_url( 'themes.php' )
 	);
-	wp_redirect( esc_url( $welcome_url ) );
+	wp_safe_redirect( esc_url_raw( $welcome_url ) );
 }
 add_action( 'after_switch_theme', 'ct_tracks_welcome_redirect' );
 
@@ -805,3 +806,20 @@ if ( function_exists( 'ct_tracks_pro_plugin_updater' ) ) {
 	remove_action( 'admin_init', 'ct_tracks_pro_plugin_updater', 0 );
 	add_action( 'admin_init', 'ct_tracks_pro_plugin_updater', 0 );
 }
+
+if ( ! function_exists( ( 'ct_tracks_settings_notice' ) ) ) {
+	function ct_tracks_settings_notice() {
+
+		if ( isset( $_GET['tracks_status'] ) ) {
+
+			if ( $_GET['tracks_status'] == 'activated' ) {
+				?>
+				<div class="updated">
+					<p><?php _e( 'Thanks for activating Tracks!', 'tracks' ); ?></p>
+				</div>
+				<?php
+			}
+		}
+	}
+}
+add_action( 'admin_notices', 'ct_tracks_settings_notice' );
