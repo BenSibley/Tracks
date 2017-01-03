@@ -1,0 +1,789 @@
+# Copyright (C) 2016 Compete Themes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracks 1.53\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2016-12-07 18:03+0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-12-07 21:29+0700\n"
+"Language-Team: AnimesLoversFS <tdtvbkt432@gmail.com>\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: vi_VN\n"
+
+#: comments.php:23 comments.php:43 comments.php:65
+msgid "Be First to Comment"
+msgstr "Hãy là người đầu tiên Bình luận"
+
+#: comments.php:23 comments.php:43 comments.php:65
+msgid "One Comment"
+msgstr "Có 1 Bình luận"
+
+#: comments.php:23 comments.php:43 comments.php:65
+msgid "% Comments"
+msgstr "Có % Bình Luận"
+
+#: comments.php:57
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Bình luận đã bị đóng, nhưng <a href=\"%s\" title=URL Trackback cho bài viết "
+"này\">trackbacks</a> và pingbacks vẫn được mở."
+
+#: comments.php:79 comments.php:86
+msgid "Comments are closed."
+msgstr "Đã đóng bình luận."
+
+#: content/archive-header.php:4 inc/customizer.php:369 inc/customizer.php:859
+msgid "Posts"
+msgstr "Các bài viết"
+
+#: content/author-meta.php:11
+msgid "Written by:"
+msgstr "Được viết bởi:"
+
+#: content/author-social-icons.php:38
+msgid "email icon"
+msgstr "biểu tượng thư điện tử"
+
+#: content/author-social-icons.php:44
+msgid "%s icon"
+msgstr "biểu tượng %s"
+
+#: content/category-links.php:14
+msgid "Categories"
+msgstr "Các thể loại/loại bài viết"
+
+#: content/category-links.php:16 inc/deprecated.php:17
+msgid "View all posts in %s"
+msgstr "Xem tất cả các bài viết trong %s"
+
+#: content/further-reading.php:12
+msgid "Previous Post"
+msgstr "Về bài viết trước"
+
+#: content/further-reading.php:13
+msgid "The Previous Post"
+msgstr "Bài viết trước"
+
+#: content/further-reading.php:16
+msgid "No Older Posts"
+msgstr "Không còn bài viết nào cũ hơn cả bạn ơi >_<"
+
+#: content/further-reading.php:17 content/further-reading.php:31
+msgid "Return to Blog"
+msgstr "Trở về Trang chủ Blog."
+
+#: content/further-reading.php:26
+msgid "Next Post"
+msgstr "Tới bài viết sau"
+
+#: content/further-reading.php:27
+msgid "The Next Post"
+msgstr "Bài viết tiếp theo"
+
+#: content/further-reading.php:30
+msgid "No Newer Posts"
+msgstr "Không còn bài viết nào mới hơn nữa bạn ơi >_<"
+
+#: content/social-icons.php:44 content/social-icons.php:45
+msgid "email"
+msgstr "thư điện tử"
+
+#: content/social-icons.php:52 content/social-icons.php:53
+msgid "contact form"
+msgstr "mẫu đơn liên lạc"
+
+#: content/tag-links.php:9
+msgid "Tags"
+msgstr "Các nhãn"
+
+#: content/tag-links.php:11 inc/deprecated.php:36
+msgid "View all posts tagged %s"
+msgstr "Xem tất cả các bài viết trong nhãn %s"
+
+#: content-404.php:3
+msgid "404: Page Not Found"
+msgstr "404: Hẳm tìm thấy Trang này rồi bạn ơi >_<"
+
+#: content-404.php:9
+msgid ""
+"Looks like nothing was found on this url.  Double-check that the url is "
+"correct or try the search form below to find what you were looking for."
+msgstr ""
+"Hình như hăm có gì trong liên kết này bạn ơi. Vui lòng kiểm tra lại xem liên "
+"kết này có bị lỗi hăm hoặc thử tìm lại ở khung Tìm kiếm bên dưới này >.<."
+
+#: content-attachment.php:26
+msgid "Previous Image"
+msgstr "Ảnh trước"
+
+#: content-attachment.php:30
+msgid "Next Image"
+msgstr "Ảnh tiếp theo"
+
+#: content-page.php:11 content.php:14
+msgid "Pages:"
+msgstr "Số trang:"
+
+#: footer.php:23
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
+"Themes."
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> của Compete "
+"Themes."
+
+#: functions.php:43
+msgid "Primary"
+msgstr "Phần chính (Tiêu đề / Header)"
+
+#: functions.php:44
+msgid "Secondary"
+msgstr "Phần phụ (2 bên trang / Content)"
+
+#: functions.php:45 functions.php:80 inc/customizer.php:125
+#: inc/customizer.php:178 inc/customizer.php:803 inc/customizer.php:822
+msgid "Footer"
+msgstr "Phần cuối (Cuối Bài viết/Trang/Blog; Footer)"
+
+#: functions.php:58
+msgid "After Post Content"
+msgstr "Dưới nội dung Bài viết"
+
+#: functions.php:60
+msgid ""
+"Widgets in this area will be shown after post content before the prev/next "
+"post links"
+msgstr ""
+"Các tiện ích nằm trong vùng này sẽ được hiển thị phía dưới nội dung bài viết "
+"và ngay trên liên kết Lùi/Tiến của bài viết. "
+
+#: functions.php:69
+msgid "After Page Content"
+msgstr "Dưới nội dung Trang"
+
+#: functions.php:71
+msgid "Widgets in this area will be shown after page content"
+msgstr ""
+"Các tiện ích nằm trong vùng này sẽ được hiển thị dưới nội dung của Trang"
+
+#: functions.php:82
+msgid "Widgets in this area will be shown in the footer"
+msgstr ""
+"Các tiện ích nằm trong vùng này sẽ được hiển thị trong phần cuối Trang "
+"(Footer)."
+
+#: functions.php:107
+msgid "Reply"
+msgstr "Trả lời"
+
+#: functions.php:111
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+#: functions.php:116
+msgid "Your comment is awaiting moderation."
+msgstr "Bình luận của bạn đang được giữ lại chờ để kiểm duyệt."
+
+#: functions.php:131
+msgid "(optional)"
+msgstr "(Không bắt buộc)"
+
+#: functions.php:136 functions.php:137
+msgid "Your Name"
+msgstr "Tên của bạn"
+
+#: functions.php:142 functions.php:143
+msgid "Your Email"
+msgstr "Địa chỉ thư điện tử của bạn"
+
+#: functions.php:148
+msgid "Your Website URL"
+msgstr "Liên kết trang web của bạn"
+
+#: functions.php:149
+msgid "Your URL"
+msgstr "Liên kết của bạn"
+
+#: functions.php:163
+msgid "Your Comment"
+msgstr "Bình luận của bạn"
+
+#: functions.php:164
+msgid "Enter Your Comment"
+msgstr "Vui lòng nhập bình luận của bạn"
+
+#: functions.php:195 functions.php:204 functions.php:220 inc/customizer.php:675
+msgid "Read the Post"
+msgstr "Đọc bài viết"
+
+#: functions.php:818
+msgid "Thanks for activating Tracks!"
+msgstr "(ノ*゜▽゜*) Cảm ơn bạn rất nhiều vì đã kích hoạt Tracks! o(≧∇≦o)"
+
+#: header.php:14
+msgid "Skip to content"
+msgstr "Nhảy tới nội dung"
+
+#: inc/customizer.php:69
+msgid ""
+"<a target=\"_blank\" href=\"%s\">Tracks Pro</a> is the plugin that makes "
+"advanced customization simple - and fun too!"
+msgstr ""
+"<a target=\"_blank\" href=\"%s\">Tracks Chuyên nghiệp</a> là một Plugin giúp "
+"cho việc tùy biến nâng cao thật dễ dàng - và còn vui hơn nữa!"
+
+#: inc/customizer.php:70
+msgid "Tracks Pro adds the following features to Tracks:"
+msgstr "Tracks Chuyên nghiệp thêm vào Tracks những tính năng như sau:"
+
+#: inc/customizer.php:72
+msgid "Custom Colors"
+msgstr "Tùy chỉnh màu của các thành phần Blog."
+
+#: inc/customizer.php:73
+msgid "4 New layouts"
+msgstr "4 Bố cục mới"
+
+#: inc/customizer.php:74
+msgid "Featured Videos"
+msgstr "Nhúng Video"
+
+#: inc/customizer.php:75
+msgid "+ 5 more features"
+msgstr "và còn thêm 5 tính năng khác nữa"
+
+#: inc/customizer.php:77
+msgid "View Tracks Pro"
+msgstr "Xem Tracks Chuyên nghiệp"
+
+#: inc/customizer.php:87
+msgid "Tracks Pro"
+msgstr "Tracks Chuyên nghiệp"
+
+#: inc/customizer.php:107
+msgid "Tagline Display"
+msgstr "Hiển thị câu giới thiệu, khẩu hiệu"
+
+#: inc/customizer.php:118
+msgid "Where should the tagline display?"
+msgstr "Bạn muốn hiển thị câu giới thiệu, khẩu hiệu ở đâu?"
+
+#: inc/customizer.php:123 inc/customizer.php:176 inc/customizer.php:801
+#: inc/customizer.php:820
+msgid "Header & Footer"
+msgstr "Tiêu đề & Cuối (Header & Footer)"
+
+#: inc/customizer.php:124 inc/customizer.php:177 inc/customizer.php:802
+#: inc/customizer.php:821
+msgid "Header"
+msgstr "Tiêu Đề (Header)"
+
+#: inc/customizer.php:133
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:143
+msgid "Upload custom logo."
+msgstr "Tải lên Logo tùy chỉnh."
+
+#: inc/customizer.php:159
+msgid "Social Media Icons"
+msgstr "Biểu tượng của các trang MXH"
+
+#: inc/customizer.php:161
+msgid "Add the URL for each of your social profiles."
+msgstr "Thêm liên kết cho mỗi tài khoản MXH của bạn."
+
+#: inc/customizer.php:171
+msgid "Where should the icons display?"
+msgstr "Bạn muốn hiển thị các biểu tượng này ở đâu?"
+
+#: inc/customizer.php:179 inc/customizer.php:823
+msgid "Do not display"
+msgstr "Đừng hiển thị (Ẩn)"
+
+#: inc/customizer.php:194 inc/user-profile.php:114
+msgid "Email Address"
+msgstr "Địa chỉ thư điện tử"
+
+#: inc/customizer.php:246
+msgid ""
+"Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn more</a>)"
+msgstr ""
+"Chấp nhận link Skype (<a href=\"%s\" target=\"_blank\">Tìm hiểu thêm</a>)"
+
+#: inc/customizer.php:273
+msgid "Search Bar"
+msgstr "Thanh tìm kiếm"
+
+#: inc/customizer.php:284
+msgid "Show search bar at top of site?"
+msgstr "Hiển thị thanh tìm kiếm ở đầu trang?"
+
+#: inc/customizer.php:288 inc/customizer.php:312 inc/customizer.php:328
+#: inc/customizer.php:344 inc/customizer.php:590 inc/customizer.php:607
+#: inc/customizer.php:624 inc/customizer.php:835
+msgid "Show"
+msgstr "Hiển thị"
+
+#: inc/customizer.php:289 inc/customizer.php:313 inc/customizer.php:329
+#: inc/customizer.php:345 inc/customizer.php:591 inc/customizer.php:608
+#: inc/customizer.php:625 inc/customizer.php:836
+msgid "Hide"
+msgstr "Ẩn"
+
+#: inc/customizer.php:297
+msgid "Post Meta"
+msgstr "Giới thiệu về bài viết"
+
+#: inc/customizer.php:308
+msgid "Display date above post title?"
+msgstr "Hiển thị ngày phía trên tựa đề bài viết?"
+
+#: inc/customizer.php:324
+msgid "Display author name above post title?"
+msgstr "Hiển thị tên tác giả phía trên tựa đề bài viết?"
+
+#: inc/customizer.php:340
+msgid "Display category above post title?"
+msgstr "Hiển thị thể loại phía trên tựa đề bài viết?"
+
+#: inc/customizer.php:353
+msgid "Comments"
+msgstr "Bình luận"
+
+#: inc/customizer.php:364
+msgid "Show comments on:"
+msgstr "Hiển thị hộp bình luận trên:"
+
+#: inc/customizer.php:370 inc/customizer.php:860
+msgid "Pages"
+msgstr "Các trang"
+
+#: inc/customizer.php:371 inc/customizer.php:861
+msgid "Attachments"
+msgstr "Các tập đính kèm"
+
+#: inc/customizer.php:372 inc/customizer.php:862
+msgid "Do not show"
+msgstr "Đừng hiển thị"
+
+#: inc/customizer.php:381
+msgid "Footer Text"
+msgstr "Hiển thị dòng chữ ở phần Cuối (Footer)"
+
+#: inc/customizer.php:391
+msgid "Edit the text in your footer"
+msgstr "Chỉnh sửa đoạn văn ở phần Cuối (Footer) của bạn"
+
+#: inc/customizer.php:412
+msgid "Custom CSS"
+msgstr "Tùy biến CSS"
+
+#: inc/customizer.php:423
+msgid "Add Custom CSS Here:"
+msgstr "Thêm CCS tùy biến ở đây:"
+
+#: inc/customizer.php:456 theme-options.php:57
+msgid "Premium Layouts"
+msgstr "Các bố cục cao cấp"
+
+#: inc/customizer.php:468
+msgid "Choose the layout for Tracks"
+msgstr "Chọn bố cục cho Tracks"
+
+#: inc/customizer.php:469
+msgid ""
+"Want more layouts? Check out the <a target=\"_blank\" href=\"%s\">Tracks Pro "
+"Plugin</a>."
+msgstr ""
+"Muốn các Bố cục khác? Hãy thử <a target=\"_blank\" href=\"%s\">Plugin Tracks "
+"Chuyên nghiệp</a>."
+
+#: inc/customizer.php:482
+msgid "Image size on Blog"
+msgstr "Kích cỡ hình ảnh trên Blog"
+
+#: inc/customizer.php:498
+msgid "Image size on Posts"
+msgstr "Kích cỡ hình ảnh trên Bài viết."
+
+#: inc/customizer.php:514
+msgid "Style"
+msgstr ""
+
+#: inc/customizer.php:518 inc/customizer.php:905
+msgid "Overlay"
+msgstr "Phủ lên"
+
+#: inc/customizer.php:519 inc/customizer.php:906
+msgid "Title below"
+msgstr "Phía dưới tiêu đề"
+
+#: inc/customizer.php:530
+msgid "Show full posts on Blog/Archives?"
+msgstr "Hiển thị cả Bài viết trên Blog/Lưu trữ?"
+
+#: inc/customizer.php:534 inc/customizer.php:656 inc/customizer.php:741
+#: inc/customizer.php:849
+msgid "Yes"
+msgstr "Có"
+
+#: inc/customizer.php:535 inc/customizer.php:657 inc/customizer.php:742
+#: inc/customizer.php:850
+msgid "No"
+msgstr "Không"
+
+#: inc/customizer.php:543
+msgid "Additional Options"
+msgstr "Các tùy chọn khác"
+
+#: inc/customizer.php:554
+msgid "Posts without Featured Images should display:"
+msgstr "Nên hiển thị những Bài viết không có Hình Giới thiệu:"
+
+#: inc/customizer.php:559 inc/customizer.php:936
+msgid "Empty half"
+msgstr "Trống một nửa (một khung trắng thay thế cho hình ảnh)"
+
+#: inc/customizer.php:560 inc/customizer.php:937
+msgid "Full-width text"
+msgstr ""
+"Chỉ văn bản (Nội dung bài viết hoặc phần giới thiệu nguyên khung, bỏ khung "
+"trắng)"
+
+#: inc/customizer.php:561 inc/customizer.php:938
+msgid "Fallback image"
+msgstr "Ảnh khác"
+
+#: inc/customizer.php:571
+msgid "Upload a fallback image"
+msgstr "Tải lên ảnh khác"
+
+#: inc/customizer.php:585
+msgid "Show scroll-to-top arrow?"
+msgstr "Hiển thị mũi tên lên đầu trang?"
+
+#: inc/customizer.php:602
+msgid "Show author info box after posts?"
+msgstr "Hiển thị hộp thông tin tác giả phía dưới mỗi Bài viết?"
+
+#: inc/customizer.php:619
+msgid "Show prev/next links after posts?"
+msgstr "Hiển thị liên kết Về/tiến phía dưới mỗi Bài viết?"
+
+#: inc/customizer.php:636
+msgid "Zoom-in blog images on hover?"
+msgstr ""
+"Phóng to hình ảnh khi rê chuột vào? (Hình giới thiệu nằm bên cạnh bài viết ở "
+"Blog)"
+
+#: inc/customizer.php:640
+msgid "Zoom in"
+msgstr "Phóng to"
+
+#: inc/customizer.php:641
+msgid "Do not zoom in"
+msgstr "Đừng phóng to"
+
+#: inc/customizer.php:652
+msgid "Lazy load images?"
+msgstr "Tải lười các hình ảnh?"
+
+#: inc/customizer.php:667
+msgid "Word count in automatic excerpts"
+msgstr "Số từ nên nằm trong các đoạn trích tự động"
+
+#: inc/customizer.php:680
+msgid "Read More link text"
+msgstr "Tên hiển thị cho liên kết Đọc Thêm "
+
+#: inc/customizer.php:697
+msgid "Background Image"
+msgstr "Ảnh nền (Blog)"
+
+#: inc/customizer.php:698
+msgid ""
+"Use the Header Color section if your new background image makes the menu "
+"hard to read."
+msgstr ""
+"Hãy dùng mục tùy chỉnh Màu Tiêu đề (Header Color) nếu Ảnh nền mới của bạn "
+"làm phần Menu khó để đọc."
+
+#: inc/customizer.php:708
+msgid "Background image"
+msgstr "Ảnh nền"
+
+#: inc/customizer.php:725
+msgid "Background Texture"
+msgstr "Nền Kiểu chữ"
+
+#: inc/customizer.php:726
+msgid ""
+"Use the Header Color section if your new texture makes the menu hard to read."
+msgstr ""
+"Hãy dùng mục tùy chỉnh Màu Tiêu đề (Header Color) nếu kiểu chữ mới của bạn "
+"làm phần Menu khó để đọc."
+
+#: inc/customizer.php:737
+msgid "Enable background texture?"
+msgstr "Kích hoạt nền kiểu chữ?"
+
+#: inc/customizer.php:755
+msgid "Choose a Texture"
+msgstr "Chọn một Kiểu chữ"
+
+#: inc/customizer.php:774
+msgid "Header Color"
+msgstr "Màu Tiêu đề"
+
+#: inc/customizer.php:775
+msgid "Change to dark if your new background makes the menu hard to read."
+msgstr "Chỉnh sang Tối nếu màu nền mới của bạn khiến Menu khó để đọc."
+
+#: inc/customizer.php:786
+msgid "Light or dark header color?"
+msgstr "Bạn muốn màu Sáng hay Tối cho Tiêu đề?"
+
+#: inc/customizer.php:790 inc/customizer.php:923
+msgid "Light"
+msgstr "Sáng"
+
+#: inc/customizer.php:791 inc/customizer.php:924
+msgid "Dark"
+msgstr "Tối"
+
+#: inc/customizer.php:873
+msgid "Zoom"
+msgstr "Phóng to"
+
+#: inc/customizer.php:874
+msgid "Do not Zoom"
+msgstr "Đừng Phóng to"
+
+#: inc/user-profile.php:74
+msgid "Social Profiles"
+msgstr "Các tài khoản MXH"
+
+#: index.php:22 index.php:28
+msgid "Previous"
+msgstr "Về trước"
+
+#: index.php:23 index.php:29
+msgid "Next"
+msgstr "Tiếp theo"
+
+#: licenses/functions/video.php:22
+msgid "Featured Video"
+msgstr "Nhúng Video"
+
+#: licenses/functions/video.php:66
+msgid "Video Preview"
+msgstr "Xem trước Video"
+
+#: licenses/functions/video.php:80
+msgid "Add video URL:"
+msgstr "Thêm liên kết Video:"
+
+#: licenses/functions/video.php:91
+msgid "Choose where to display the video:"
+msgstr "Chọn nơi để hiển thị video:"
+
+#: licenses/functions/video.php:94
+msgid "Post"
+msgstr "Bài viết"
+
+#: licenses/functions/video.php:98
+msgid "Blog"
+msgstr "Blog"
+
+#: licenses/functions/video.php:102
+msgid "Post & Blog"
+msgstr "Bài viết & Blog"
+
+#: licenses/functions/video.php:118
+msgid "Youtube controls"
+msgstr "Các điều khiển Youtube"
+
+#: licenses/functions/video.php:121
+msgid "Hide title"
+msgstr "Ẩn tiêu đề"
+
+#: licenses/functions/video.php:125
+msgid "Hide related videos"
+msgstr "Ẩn các video tương tự"
+
+#: licenses/functions/video.php:129
+msgid "Hide Youtube logo"
+msgstr "Ẩn Logo Youtube"
+
+#: licenses/functions/video.php:133
+msgid "Show Captions by Default"
+msgstr "Mặc định hiển thị Phụ đề."
+
+#: licenses/functions/video.php:137
+msgid "Autoplay video"
+msgstr "Tự động chơi video"
+
+#: search.php:9
+msgid "%1$d search result for \"%2$s\""
+msgid_plural "%1$d search results for \"%2$s\""
+msgstr[0] "Các kết quả tìm kiếm %1$d cho \"%2$s\"\v"
+
+#: search.php:11
+msgid "No search results for \"%s\""
+msgstr "Không tìm thấy kết quả nào cho \"%s\""
+
+#: search.php:44
+msgid "Can't find what you're looking for?  Try refining your search:"
+msgstr ""
+"Không thể tìm thấy thứ mà bạn muốn tìm? Hãy thử lọc lại tìm kiếm của bạn:"
+
+#: searchform.php:6 searchform.php:8
+msgid "Search for:"
+msgstr "Tìm kiếm về:"
+
+#: searchform.php:7
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: searchform.php:9
+msgid "Go"
+msgstr "Đi"
+
+#: theme-options.php:4 theme-options.php:20
+msgid "Tracks Dashboard"
+msgstr "Bảng điều khiển Tracks"
+
+#: theme-options.php:24
+msgid "Dashboard"
+msgstr "Bảng điều khiển"
+
+#: theme-options.php:26
+msgid "Licenses"
+msgstr "Bản quyền"
+
+#: theme-options.php:32
+msgid "Get Started"
+msgstr "Bắt đầu"
+
+#: theme-options.php:33
+msgid ""
+"Not sure where to start? The <strong>Tracks Getting Started Guide</strong> "
+"will take you step-by-step through every feature in Tracks."
+msgstr ""
+"Không biết nên bắt đầu từ đâu? <strong>Hướng dẫn bắt đầu cho Tracks</strong> "
+"sẽ dẫn bạn qua-từng-bước qua toàn bộ tính năng của Tracks."
+
+#: theme-options.php:36
+msgid "View Guide"
+msgstr "Xem Hướng dẫn"
+
+#: theme-options.php:41
+msgid "Tracks Pro Plugin"
+msgstr "Plugin Tracks Chuyên nghiệp"
+
+#: theme-options.php:42
+msgid "Make your site more customizable and beautiful with Tracks Pro"
+msgstr ""
+"Làm cho trang web của bạn tùy chỉnh được nhiều hơn và đẹp mắt hơn với Tracks "
+"Chuyên nghiệp."
+
+#: theme-options.php:44
+msgid "Visit Tracks Pro"
+msgstr "Thăm Tracks Chuyên nghiệp."
+
+#: theme-options.php:49 theme-options.php:51
+msgid "Leave a Review"
+msgstr "Để lại một Đánh giá"
+
+#: theme-options.php:50
+msgid "Help others find tracks by leaving a review on wordpress.org."
+msgstr ""
+"Giúp những người dùng khác tìm đến Tracks bằng cách để lại một đánh giá trên "
+"Wordpress.org."
+
+#: theme-options.php:63
+msgid "Premium Features"
+msgstr "Các tính năng Cao cấp"
+
+#: theme-options.php:110
+msgid "Save License"
+msgstr "Lưu Giấy phép"
+
+#: theme-options.php:117
+msgid "Enter your license key"
+msgstr "Nhập khóa giấy phép của bạn"
+
+#: theme-options.php:123 theme-options.php:135
+msgid "Activate License"
+msgstr "Kích hoạt Giấy phép"
+
+#: theme-options.php:130
+msgid "Deactivate License"
+msgstr "Hủy kích hoạt Giấy phép"
+
+#: theme-options.php:153
+msgid ""
+"You can now add a background image using the \"Background Image\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"Bây giờ bạn đã có thể thêm ảnh nền qua mục \"Ảnh nền\" trong <a href=\"%s"
+"\">Tùy biến</a>"
+
+#: theme-options.php:155
+msgid ""
+"If you haven't already, please upload and activate the <a "
+"href='%s'>Background Texture plugin</a>"
+msgstr ""
+"Vui lòng tải lên và kích hoạt <a href='%s'>Plugin Nền kiểu chữ</a> nếu bạn "
+"chưa làm."
+
+#: theme-options.php:157
+msgid ""
+"You can now add videos to Posts and Pages. Use the Featured Videos box under "
+"the Post Editor to get started"
+msgstr ""
+"Bây giờ bạn đã có thể thêm video vào các Bài viết và Trang. Sử dụng hộp "
+"Nhúng Video phía dưới phần Soạn thảo Bài viết để bắt đầu"
+
+#: theme-options.php:159
+msgid ""
+"You can now switch to your new layout in the \"Premium Layouts\" section in "
+"the <a href=\"%s\">Customizer</a>"
+msgstr ""
+"Bây giờ bạn đã có thể chuyển sang bố cục mới trong phần \"Bố cục Cao cấp\" ở "
+"trong <a href=\"%s\">Tùy biến</a>"
+
+#. Description of the plugin/theme
+msgid ""
+"A bold, beautiful, and responsive theme. Tracks is perfect for personal "
+"blogs, magazines, and photography websites. It includes a logo uploader, "
+"social media icons, search bar, comment display controls, premium layouts "
+"and features, and more.  Preview on desktop, tablets, and mobile with our "
+"interactive live demo: https://www.competethemes.com/demos/?theme=tracks"
+msgstr ""
+"Một theme đẹp, sinh động điểm nhấn, và nhanh nhạy. Tracks là một lựa chọn "
+"tuyệt vời cho Blog của các cá nhân, tạp chí, và ngay cả các trang web cho "
+"nhiếp ảnh gia. Tracks bao gồm tải lên logo, Biểu tượng các trang MXH, thanh "
+"tìm kiếm, các điều khiển hiển thị bình luận, các bố cục cao cấp và tính "
+"năng, và hơn nữa. Xem thử trên máy tính, các loại máy tính bảng, và điện "
+"thoại với trang xem thử tương tác: https://www.competethemes.com/demos/?"
+"theme=tracks"
+
+#: inc/customizer.php:486 inc/customizer.php:502 inc/customizer.php:896
+msgctxt "size of the featured image"
+msgid "size based on image size"
+msgstr "kích cỡ dựa trên kích cỡ ảnh"
+
+#: inc/customizer.php:487 inc/customizer.php:503 inc/customizer.php:897
+msgctxt "size of the featured image"
+msgid "2:1 width/height ratio like posts"
+msgstr "2:1 tỉ lệ chiều ngang/cao như các bài viết"
