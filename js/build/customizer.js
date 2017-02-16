@@ -42,9 +42,9 @@ jQuery(document).ready(function($) {
         textureInputs.each( function() {
 
             if ( $('#accordion-panel-ct_tracks_pro_colors_panel').length ) {
-                $(this).parent().css('background-image', 'url("../wp-content/plugins/tracks-pro/assets/images/textures/' + $(this).val() + '.png")');
+                $(this).parent().css('background-image', 'url("' + ct_tracks_objectL10n.PLUGINS_URL + '/tracks-pro/assets/images/textures/' + $(this).val() + '.png")');
             } else {
-                $(this).parent().css('background-image', 'url("../wp-content/plugins/tracks-background-textures/textures/' + $(this).val() + '.png")');
+                $(this).parent().css('background-image', 'url("' + ct_tracks_objectL10n.PLUGINS_URL + '/tracks-background-textures/textures/' + $(this).val() + '.png")');
             }
 
             // add initial 'selected' class

@@ -62,6 +62,10 @@ add_action( 'admin_enqueue_scripts', 'ct_tracks_enqueue_admin_styles' );
 function ct_tracks_enqueue_customizer_styles() {
 	wp_enqueue_script( 'ct-tracks-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js', array( 'jquery' ), '', true );
 	wp_enqueue_style( 'ct-tracks-customizer-css', get_template_directory_uri() . '/styles/style-customizer.css' );
+
+	wp_localize_script( 'ct-tracks-customizer-js', 'ct_tracks_objectL10n', array(
+		'PLUGINS_URL' => plugins_url()
+	) );
 }
 add_action( 'customize_controls_enqueue_scripts', 'ct_tracks_enqueue_customizer_styles' );
 
