@@ -93,7 +93,7 @@ li.pingback {
 }
 .bypostauthor {
 
-  .author-name {
+  >article .author-name {
 
     &:after {
       content: ' (author)';

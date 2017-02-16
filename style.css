@@ -1359,7 +1359,7 @@ li.pingback:first-child {
   margin: 1.5em 0;
 }
 
-.bypostauthor .author-name:after {
+.bypostauthor > article .author-name:after {
   content: ' (author)';
   text-transform: none;
   font-weight: 400;
