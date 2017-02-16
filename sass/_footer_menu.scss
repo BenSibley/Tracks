@@ -4,6 +4,10 @@
   list-style: none;
   margin: $baseline-height / 2 0 $baseline-height;
 
+  li {
+    position: relative;
+    display: block;
+  }
   a {
     @extend %uppercase;
     @extend %thirteen-pixels;
@@ -19,10 +23,37 @@
     &:focus {
       color: $gray-medium;
       opacity: 0.9;
+
+      + ul {
+        bottom: 24px;
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
   ul {
     list-style: none;
+  }
+  .sub-menu {
+    position: absolute;
+    background: $gray-10;
+    text-align: center;
+    min-width: 100%;
+    max-width: 220px;
+    left: -100%;
+    right: -100%;
+    bottom: -9999px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.95);
+
+    &:hover {
+      bottom: 24px;
+      opacity: 1;
+      transform: scale(1);
+    }
+    a {
+      padding: 0.75em 1.5em;
+    }
   }
 }
 
