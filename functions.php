@@ -104,11 +104,11 @@ if ( ! function_exists( 'ct_tracks_customize_comments' ) ) {
 					<div class="author-name"><?php comment_author_link(); ?></div>
 					<div class="comment-date"><?php comment_date(); ?></div>
 					<?php comment_reply_link( array_merge( $args, array(
-						'reply_text' => __( 'Reply', 'tracks' ),
+						'reply_text' => _x( 'Reply', 'verb: reply to this comment', 'tracks' ),
 						'depth'      => $depth,
 						'max_depth'  => $args['max_depth']
 					) ) ); ?>
-					<?php edit_comment_link( __( 'Edit', 'tracks' ) ); ?>
+					<?php edit_comment_link( _x( 'Edit', 'verb: edit this comment', 'tracks' ) ); ?>
 				</div>
 			</div>
 			<div class="comment-content">
