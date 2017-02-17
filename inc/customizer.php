@@ -216,6 +216,8 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 				$label = 'StumbleUpon';
 			} elseif ( $social_site == 'deviantart' ) {
 				$label = 'DeviantArt';
+			} elseif ( $social_site == 'google-wallet' ) {
+				$label = 'Google Wallet';
 			} elseif ( $social_site == 'hacker-news' ) {
 				$label = 'Hacker News';
 			} elseif ( $social_site == 'whatsapp' ) {
