@@ -177,51 +177,56 @@ if ( ! function_exists( 'ct_tracks_remove_comments_notes_after' ) ) {
 }
 add_action( 'comment_form_defaults', 'ct_tracks_remove_comments_notes_after' );
 
+if ( ! function_exists( 'ct_tracks_filter_read_more_link' ) ) {
+	function ct_tracks_filter_read_more_link() {
+		global $post;
+		$ismore             = strpos( $post->post_content, '<!--more-->' );
+		$read_more_text     = get_theme_mod( 'read_more_text' );
+		$new_excerpt_length = get_theme_mod( 'additional_options_excerpt_length_settings' );
+		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230;';
+		$output = '';
+
+		// add ellipsis for automatic excerpts
+		if ( empty( $ismore ) ) {
+			$output .= $excerpt_more;
+		}
+		// Because i18n text cannot be stored in a variable
+		if ( empty( $read_more_text ) ) {
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . __( 'Read the post', 'tracks' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+		} else {
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+		}
+		return $output;
+	}
+}
+add_filter( 'the_content_more_link', 'ct_tracks_filter_read_more_link' ); // more tags
+add_filter( 'excerpt_more', 'ct_tracks_filter_read_more_link', 10 ); // automatic excerpts
+
+// handle manual excerpts
+if ( ! function_exists( 'ct_tracks_filter_manual_excerpts' ) ) {
+	function ct_tracks_filter_manual_excerpts( $excerpt ) {
+		$excerpt_more = '';
+		if ( has_excerpt() ) {
+			$excerpt_more = ct_tracks_filter_read_more_link();
+		}
+		return $excerpt . $excerpt_more;
+	}
+}
+add_filter( 'get_the_excerpt', 'ct_tracks_filter_manual_excerpts' );
+
 if ( ! function_exists( 'ct_tracks_excerpt' ) ) {
 	function ct_tracks_excerpt() {
-
 		global $post;
-		$setting        = get_theme_mod( 'premium_layouts_full_width_full_post' );
-		$read_more_text = get_theme_mod( 'read_more_text' );
+		$show_full_post = get_theme_mod( 'premium_layouts_full_width_full_post' );
 		$ismore         = strpos( $post->post_content, '<!--more-->' );
 
-		// if show full post is on and not on a search results page
-		if ( ( $setting == 'yes' ) && get_theme_mod( 'premium_layouts_setting' ) == 'full-width' && ! is_search() ) {
-			if ( $ismore ) {
-				// Has to be written this way because i18n text CANNOT be stored in a variable
-				if ( ! empty( $read_more_text ) ) {
-					the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
-				} else {
-					the_content( __( 'Read the Post', 'tracks' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
-				}
-			} else {
-				the_content();
-			}
-		} elseif ( $ismore ) {
-			if ( ! empty( $read_more_text ) ) {
-				the_content( esc_html( $read_more_text ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
-			} else {
-				the_content( __( 'Read the Post', 'tracks' ) . " <span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span>" );
-			}
+		if ( $show_full_post === 'yes' || $ismore ) {
+			the_content();
 		} else {
 			the_excerpt();
 		}
 	}
 }
-
-if ( ! function_exists( 'ct_tracks_excerpt_read_more_link' ) ) {
-	function ct_tracks_excerpt_read_more_link( $output ) {
-		global $post;
-		$read_more_text = get_theme_mod( 'read_more_text' );
-
-		if ( ! empty( $read_more_text ) ) {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . esc_html( $read_more_text ) . "<span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
-		} else {
-			return $output . "<p><a class='more-link' href='" . esc_url( get_permalink() ) . "'>" . __( 'Read the Post', 'tracks' ) . "<span class='screen-reader-text'>" . esc_html( get_the_title() ) . "</span></a></p>";
-		}
-	}
-}
-add_filter( 'the_excerpt', 'ct_tracks_excerpt_read_more_link' );
 
 if ( ! function_exists( 'ct_tracks_custom_excerpt_length' ) ) {
 	function ct_tracks_custom_excerpt_length( $length ) {
@@ -238,17 +243,6 @@ if ( ! function_exists( 'ct_tracks_custom_excerpt_length' ) ) {
 	}
 }
 add_filter( 'excerpt_length', 'ct_tracks_custom_excerpt_length', 999 );
-
-if ( ! function_exists( 'ct_tracks_new_excerpt_more' ) ) {
-	function ct_tracks_new_excerpt_more( $more ) {
-
-		$new_excerpt_length = get_theme_mod( 'additional_options_excerpt_length_settings' );
-		$excerpt_more       = ( $new_excerpt_length === 0 ) ? '' : '&#8230;';
-
-		return $excerpt_more;
-	}
-}
-add_filter( 'excerpt_more', 'ct_tracks_new_excerpt_more' );
 
 if ( ! function_exists( 'ct_tracks_remove_more_link_scroll' ) ) {
 	function ct_tracks_remove_more_link_scroll( $link ) {
