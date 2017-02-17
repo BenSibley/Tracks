@@ -39,6 +39,9 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'meetup'        => 'meetup_profile',
 			'telegram'      => 'telegram_profile',
 			'podcast'       => 'podcast_profile',
+			'yelp'          => 'yelp_profile',
+			'amazone'       => 'amazon_profile',
+			'google-wallet' => 'google_wallet_profile',
 			'qq'            => 'qq_profile',
 			'wechat'        => 'wechat_profile',
 			'xing'          => 'xing_profile',
@@ -92,6 +95,8 @@ function ct_tracks_add_social_profile_settings( $user ) {
 				$label = 'StumbleUpon';
 			} elseif ( $key == 'deviantart' ) {
 				$label = 'DeviantArt';
+			} elseif ( $key == 'google-wallet' ) {
+				$label = 'Google Wallet';
 			} elseif ( $key == 'hacker-news' ) {
 				$label = 'Hacker News';
 			} elseif ( $key == 'whatsapp' ) {
