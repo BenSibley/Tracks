@@ -40,7 +40,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'telegram'      => 'telegram_profile',
 			'podcast'       => 'podcast_profile',
 			'yelp'          => 'yelp_profile',
-			'amazone'       => 'amazon_profile',
+			'amazon'        => 'amazon_profile',
 			'google-wallet' => 'google_wallet_profile',
 			'qq'            => 'qq_profile',
 			'wechat'        => 'wechat_profile',
