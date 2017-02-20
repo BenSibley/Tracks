@@ -60,8 +60,8 @@
       margin: 0;
       min-width: 100%;
       max-width: 220px;
-      left: -100%;
-      right: -100%;
+      left: auto;
+      right: auto;
       bottom: -9999px;
       transition: opacity 0.3s ease, transform 0.3s ease;
       transform: scale(0.95);
