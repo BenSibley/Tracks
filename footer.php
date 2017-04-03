@@ -1,3 +1,4 @@
+<?php do_action( 'tracks_main_bottom' ); ?>
 </div> <!-- .main -->
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
