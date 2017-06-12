@@ -38,8 +38,12 @@ jQuery(document).ready(function($) {
         // get layout inputs
         var textureInputs = panel.find('#customize-control-ct_tracks_background_texture_setting').find('input');
 
+        var counter = 0;
+
         // add the appropriate image to each label
         textureInputs.each( function() {
+
+            counter++;
 
             if ( $('#accordion-panel-ct_tracks_pro_colors_panel').length ) {
                 $(this).parent().css('background-image', 'url("' + ct_tracks_objectL10n.PLUGINS_URL + '/tracks-pro/assets/images/textures/' + $(this).val() + '.png")');
@@ -50,6 +54,9 @@ jQuery(document).ready(function($) {
             // add initial 'selected' class
             if ($(this).prop('checked')) {
                 $(this).parent().addClass('selected');
+            }
+            if ( counter % 3 == 0) {
+                $(this).parent().addClass('no-margin');
             }
         });
 

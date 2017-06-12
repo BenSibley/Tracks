@@ -81,11 +81,16 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 }
 #customize-control-ct_tracks_background_texture_setting label {
   display: inline-block;
-  width: 77px;
-  height: 77px;
-  margin: 0 8px 8px 0;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0 8px 10px 0;
+  color: transparent;
+  border: solid 1px transparent;
+  -webkit-transition: opacity 0.2s ease;
+          transition: opacity 0.2s ease;
 }
-#customize-control-ct_tracks_background_texture_setting label:nth-child(3n + 1) {
+#customize-control-ct_tracks_background_texture_setting label.no-margin {
   margin-right: 0;
 }
 #customize-control-ct_tracks_background_texture_setting label:hover {

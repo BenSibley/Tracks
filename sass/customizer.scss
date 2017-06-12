@@ -83,11 +83,15 @@
   }
   label {
     display: inline-block;
-    width: 77px;
-    height: 77px;
-    margin: 0 8px 8px 0;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    margin: 0 8px 10px 0;
+    color: transparent;
+    border: solid 1px transparent;
+    transition: opacity 0.2s ease;
 
-    &:nth-child(3n + 1){
+    &.no-margin {
       margin-right: 0;
     }
     &:hover {
