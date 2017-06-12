@@ -38,6 +38,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'ravelry'       => 'ravelry_profile',
 			'meetup'        => 'meetup_profile',
 			'telegram'      => 'telegram_profile',
+			'twitch'        => 'twitch_profile',
 			'podcast'       => 'podcast_profile',
 			'yelp'          => 'yelp_profile',
 			'amazon'        => 'amazon_profile',

@@ -500,6 +500,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'ravelry',
 			'meetup',
 			'telegram',
+			'twitch',
 			'podcast',
 			'yelp',
 			'amazon',
