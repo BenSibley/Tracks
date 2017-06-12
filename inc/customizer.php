@@ -66,15 +66,15 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/tracks-pro/';
 			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/tracks-pro.png' srcset='" . get_template_directory_uri() . "/assets/images/tracks-pro-2x.png 2x' /></a>";
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Tracks Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'tracks'), $link) . "</p>";
-			echo "<p>" . __('Tracks Pro adds the following features to Tracks:', 'tracks') . "</p>";
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%1$s">%2$s Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'tracks'), $link, wp_get_theme( get_template() ) ) . "</p>";
+			echo "<p>" . sprintf( __('%s Pro adds the following features to Tracks:', 'tracks'), wp_get_theme( get_template() ) ) . "</p>";
 			echo "<ul>
 					<li>" . __('Custom Colors', 'tracks') . "</li>
 					<li>" . __('4 New layouts', 'tracks') . "</li>
 					<li>" . __('Featured Videos', 'tracks') . "</li>
 					<li>" . __('+ 5 more features', 'tracks') . "</li>
 				  </ul>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='tracks-pro-button' href='" . $link . "'>" . __('View Tracks Pro', 'tracks') . "</a></p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='tracks-pro-button' href='" . $link . "'>" . sprintf( __('View %s Pro', 'tracks'), wp_get_theme( get_template() ) ) . "</a></p>";
 		}
 	}
 
@@ -84,7 +84,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	if ( !function_exists( 'ct_tracks_pro_init' ) ) {
 		// section
 		$wp_customize->add_section( 'ct_tracks_pro', array(
-			'title'    => __( 'Tracks Pro', 'tracks' ),
+			'title'    => sprintf( __( '%s Pro', 'tracks' ), wp_get_theme( get_template() ) ),
 			'priority' => 1
 		) );
 		// Upload - setting
@@ -467,8 +467,8 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	// control - layout select
 	$wp_customize->add_control( 'premium_layouts_setting', array(
 		'type'        => 'select',
-		'label'       => __( 'Choose the layout for Tracks', 'tracks' ),
-		'description' => sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%s">Tracks Pro Plugin</a>.', 'tracks' ), 'https://www.competethemes.com/tracks-pro/' ),
+		'label'       => sprintf( __( 'Choose the layout for %s', 'tracks' ), wp_get_theme( get_template() ) ),
+		'description' => sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%1$s">%2$s Pro Plugin</a>.', 'tracks' ), 'https://www.competethemes.com/tracks-pro/', wp_get_theme( get_template() ) ),
 		'section'     => 'ct_tracks_premium_layouts',
 		'setting'     => 'premium_layouts_setting',
 		'choices'     => $available_templates, // no i18n b/c product names

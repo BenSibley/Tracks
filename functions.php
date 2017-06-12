@@ -812,7 +812,7 @@ if ( ! function_exists( ( 'ct_tracks_settings_notice' ) ) ) {
 			if ( $_GET['tracks_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Thanks for activating Tracks!', 'tracks' ); ?></p>
+					<p><?php printf( __( 'Thanks for activating %s!', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}

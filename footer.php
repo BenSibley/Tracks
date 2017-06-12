@@ -21,7 +21,7 @@
 			<?php
 			$footer_text = get_theme_mod( 'ct_tracks_footer_text_setting' );
 			if ( empty( $footer_text ) ) {
-				$footer_text = sprintf( __( '<a target="_blank" href="%s">Tracks WordPress Theme</a> by Compete Themes.', 'tracks' ), 'https://www.competethemes.com/tracks/' );
+				$footer_text = sprintf( __( '<a target="_blank" href="%1$s">%2$s WordPress Theme</a> by Compete Themes.', 'tracks' ), 'https://www.competethemes.com/tracks/', wp_get_theme( get_template() ) );
 			}
 			echo wp_kses_post( $footer_text );
 			?>

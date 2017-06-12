@@ -1,7 +1,7 @@
 <?php
 
 function ct_tracks_register_theme_page() {
-	add_theme_page( __( 'Tracks Dashboard', 'tracks' ), __( 'Tracks Dashboard', 'tracks' ), 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content' );
+	add_theme_page( sprintf( __( '%s Dashboard', 'tracks' ), wp_get_theme( get_template() ) ), sprintf( __( '%s Dashboard', 'tracks' ), wp_get_theme( get_template() ) ), 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content' );
 }
 add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
 
@@ -17,7 +17,7 @@ function ct_tracks_options_content() {
 	$support_url = 'https://www.competethemes.com/documentation/tracks-support-center/';
 	?>
 	<div id="tracks-dashboard-wrap" class="wrap">
-		<h2><?php _e( 'Tracks Dashboard', 'tracks' ); ?></h2>
+		<h2><?php printf( __( '%s Dashboard', 'tracks' ), wp_get_theme( get_template() ) ); ?></h2>
 		<?php $active_tab = isset( $_GET['tab'] ) ? $_GET['tab'] : 'dashboard'; ?>
 		<h2 class="nav-tab-wrapper">
 			<a href="?page=tracks-options&tab=dashboard"
@@ -30,7 +30,7 @@ function ct_tracks_options_content() {
 			<div class="content-boxes">
 				<div class="content content-support">
 					<h3><?php _e( 'Get Started', 'tracks' ); ?></h3>
-					<p><?php _e( "Not sure where to start? The <strong>Tracks Getting Started Guide</strong> will take you step-by-step through every feature in Tracks.", "tracks" ); ?></p>
+					<p><?php printf( __( "Not sure where to start? The <strong>%1$s Getting Started Guide</strong> will take you step-by-step through every feature in %1$s.", "tracks" ), wp_get_theme( get_template() ) ); ?></p>
 					<p>
 						<a target="_blank" class="button-primary"
 						   href="https://www.competethemes.com/help/getting-started-tracks/"><?php _e( 'View Guide', 'tracks' ); ?></a>
@@ -38,16 +38,16 @@ function ct_tracks_options_content() {
 				</div>
 				<?php if ( !function_exists( 'ct_tracks_pro_init' ) ) : ?>
 					<div class="content-premium-upgrades content">
-						<h3><?php _e( 'Tracks Pro Plugin', 'tracks' ); ?></h3>
-						<p><?php _e( 'Make your site more customizable and beautiful with Tracks Pro', 'tracks' ); ?>.</p>
+						<h3><?php printf( __( '%s Pro Plugin', 'tracks' ), wp_get_theme( get_template() ) ); ?></h3>
+						<p><?php printf( __( 'Make your site more customizable and beautiful with %s Pro', 'tracks' ), wp_get_theme( get_template() ) ); ?>.</p>
 						<p><a target="_blank" class="button-primary"
-						      href="https://www.competethemes.com/tracks-pro/"><?php _e( 'Visit Tracks Pro', 'tracks' ); ?></a>
+						      href="https://www.competethemes.com/tracks-pro/"><?php printf( __( 'Visit %s Pro', 'tracks' ), wp_get_theme( get_template() ) ); ?></a>
 						</p>
 					</div>
 				<?php endif; ?>
 				<div class="content content-review">
 					<h3><?php _e( 'Leave a Review', 'tracks' ); ?></h3>
-					<p><?php _e( 'Help others find tracks by leaving a review on wordpress.org.', 'tracks' ); ?></p>
+					<p><?php printf( __( 'Help others find %s by leaving a review on wordpress.org.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
 					<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/tracks/reviews/"><?php _e( 'Leave a Review', 'tracks' ); ?></a>
 				</div>
 			</div>
