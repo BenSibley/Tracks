@@ -50,6 +50,11 @@ function ct_tracks_options_content() {
 					<p><?php printf( __( 'Help others find %s by leaving a review on wordpress.org.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
 					<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/tracks/reviews/"><?php _e( 'Leave a Review', 'tracks' ); ?></a>
 				</div>
+				<div class="content content-presspad">
+					<h3><?php printf( __( 'Turn %s into a Mobile App', 'tracks' ), wp_get_theme( get_template() ) ); ?></h3>
+					<p><?php printf( __( '%s can be converted into a mobile app and listed on the App Store with the help of PressPad News. Read our tutorial to learn more.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
+					<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-tracks/"><?php _e( 'Read Tutorial', 'tracks' ); ?></a>
+				</div>
 			</div>
 		<?php } elseif ( $active_tab == 'licenses' ) { ?>
 			<div class="content-licenses">
