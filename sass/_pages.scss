@@ -76,6 +76,19 @@
     }
   }
 }
+
+.page-template-full-width {
+
+  .entry {
+    width: 100%;
+    max-width: none;
+  }
+  .entry-container {
+    padding: 0 5%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
 /* 900px */
 @media all and (min-width: 56.25em) {
 
