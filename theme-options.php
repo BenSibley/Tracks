@@ -1,7 +1,7 @@
 <?php
 
 function ct_tracks_register_theme_page() {
-	add_theme_page( sprintf( __( '%s Dashboard', 'tracks' ), wp_get_theme( get_template() ) ), sprintf( __( '%s Dashboard', 'tracks' ), wp_get_theme( get_template() ) ), 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content' );
+	add_theme_page( sprintf( esc_attr__( '%s Dashboard', 'tracks' ), wp_get_theme( get_template() ) ), sprintf( esc_attr__( '%s Dashboard', 'tracks' ), wp_get_theme( get_template() ) ), 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content' );
 }
 add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
 
@@ -17,19 +17,19 @@ function ct_tracks_options_content() {
 	$support_url = 'https://www.competethemes.com/documentation/tracks-support-center/';
 	?>
 	<div id="tracks-dashboard-wrap" class="wrap">
-		<h2><?php printf( __( '%s Dashboard', 'tracks' ), wp_get_theme( get_template() ) ); ?></h2>
+		<h2><?php printf( esc_html__( '%s Dashboard', 'tracks' ), wp_get_theme( get_template() ) ); ?></h2>
 		<?php $active_tab = isset( $_GET['tab'] ) ? $_GET['tab'] : 'dashboard'; ?>
 		<h2 class="nav-tab-wrapper">
 			<a href="?page=tracks-options&tab=dashboard"
-			   class="nav-tab <?php echo $active_tab == 'dashboard' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Dashboard', 'tracks' ); ?></a>
+			   class="nav-tab <?php echo $active_tab == 'dashboard' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e( 'Dashboard', 'tracks' ); ?></a>
 			<a href="?page=tracks-options&tab=licenses"
-			   class="nav-tab <?php echo $active_tab == 'licenses' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Licenses', 'tracks' ); ?></a>
+			   class="nav-tab <?php echo $active_tab == 'licenses' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e( 'Licenses', 'tracks' ); ?></a>
 		</h2>
 		<?php
 		if ( $active_tab == 'dashboard' ) { ?>
 			<div class="content-boxes">
 				<div class="content content-support">
-					<h3><?php _e( 'Get Started', 'tracks' ); ?></h3>
+					<h3><?php esc_html_e( 'Get Started', 'tracks' ); ?></h3>
 					<p><?php printf( __( 'Not sure where to start? The <strong>%1$s Getting Started Guide</strong> will take you step-by-step through every feature in %1$s.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
 					<p>
 						<a target="_blank" class="button-primary"
@@ -38,34 +38,34 @@ function ct_tracks_options_content() {
 				</div>
 				<?php if ( !function_exists( 'ct_tracks_pro_init' ) ) : ?>
 					<div class="content-premium-upgrades content">
-						<h3><?php printf( __( '%s Pro Plugin', 'tracks' ), wp_get_theme( get_template() ) ); ?></h3>
-						<p><?php printf( __( 'Make your site more customizable and beautiful with %s Pro', 'tracks' ), wp_get_theme( get_template() ) ); ?>.</p>
+						<h3><?php printf( esc_html__( '%s Pro Plugin', 'tracks' ), wp_get_theme( get_template() ) ); ?></h3>
+						<p><?php printf( esc_html__( 'Make your site more customizable and beautiful with %s Pro', 'tracks' ), wp_get_theme( get_template() ) ); ?>.</p>
 						<p><a target="_blank" class="button-primary"
 						      href="https://www.competethemes.com/tracks-pro/"><?php printf( __( 'Visit %s Pro', 'tracks' ), wp_get_theme( get_template() ) ); ?></a>
 						</p>
 					</div>
 				<?php endif; ?>
 				<div class="content content-review">
-					<h3><?php _e( 'Leave a Review', 'tracks' ); ?></h3>
-					<p><?php printf( __( 'Help others find %s by leaving a review on wordpress.org.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
+					<h3><?php esc_html_e( 'Leave a Review', 'tracks' ); ?></h3>
+					<p><?php printf( esc_html__( 'Help others find %s by leaving a review on wordpress.org.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
 					<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/tracks/reviews/"><?php _e( 'Leave a Review', 'tracks' ); ?></a>
 				</div>
 				<div class="content content-presspad">
-					<h3><?php printf( __( 'Turn %s into a Mobile App', 'tracks' ), wp_get_theme( get_template() ) ); ?></h3>
-					<p><?php printf( __( '%s can be converted into a mobile app and listed on the App Store and Google Play Store with the help of PressPad News. Read our tutorial to learn more.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
-					<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-tracks/"><?php _e( 'Read Tutorial', 'tracks' ); ?></a>
+					<h3><?php printf( esc_html__( 'Turn %s into a Mobile App', 'tracks' ), wp_get_theme( get_template() ) ); ?></h3>
+					<p><?php printf( esc_html__( '%s can be converted into a mobile app and listed on the App Store and Google Play Store with the help of PressPad News. Read our tutorial to learn more.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
+					<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-tracks/"><?php esc_html_e( 'Read Tutorial', 'tracks' ); ?></a>
 				</div>
 			</div>
 		<?php } elseif ( $active_tab == 'licenses' ) { ?>
 			<div class="content-licenses">
 				<?php do_action( 'tracks_before_licenses' ); ?>
-				<h3><?php _e( 'Premium Layouts', 'tracks' ); ?></h3>
+				<h3><?php esc_html_e( 'Premium Layouts', 'tracks' ); ?></h3>
 				<?php
 				$layouts = array( 'two_column', 'two_column_images', 'full_width', 'full_width_images' );
 				// create form for each layout
 				ct_tracks_license_form_output( $layouts );
 				?>
-				<h3><?php _e( 'Premium Features', 'tracks' ); ?></h3>
+				<h3><?php esc_html_e( 'Premium Features', 'tracks' ); ?></h3>
 				<?php
 				$features = array( 'background_images', 'background_textures', 'featured_videos' );
 				// create form for each feature
@@ -112,7 +112,7 @@ function ct_tracks_license_form_output( $upgrades ) {
 			<table class="form-table">
 				<tbody>
 				<tr valign="top">
-					<th scope="row" valign="top"><?php _e( 'Save License', 'tracks' ); ?></th>
+					<th scope="row" valign="top"><?php esc_html_e( 'Save License', 'tracks' ); ?></th>
 					<td>
 						<input id="ct_tracks_<?php echo $upgrade; ?>_license_key"
 						       name="ct_tracks_<?php echo $upgrade; ?>_license_key" type="text" class="regular-text"
@@ -125,7 +125,7 @@ function ct_tracks_license_form_output( $upgrades ) {
 				<?php if ( false !== $license ) { ?>
 					<tr valign="top">
 						<th scope="row" valign="top">
-							<?php _e( 'Activate License', 'tracks' ); ?>
+							<?php esc_html_e( 'Activate License', 'tracks' ); ?>
 						</th>
 						<td>
 							<?php if ( $status !== false && $status == 'valid' ) { ?>
@@ -159,7 +159,7 @@ function ct_tracks_license_form_output( $upgrades ) {
 					.</p><?php } elseif ( $upgrade == 'background_textures' ) { ?>
 					<p class="valid"><?php printf( __( "If you haven't already, please upload and activate the <a href='%s'>Background Texture plugin</a>", 'tracks' ), 'http://www.competethemes.com/wp-content/uploads/plugins/tracks-background-textures.zip' ); ?>
 					.</p><?php } elseif ( $upgrade == 'featured_videos' ) { ?>
-					<p class="valid"><?php _e( 'You can now add videos to Posts and Pages. Use the Featured Videos box under the Post Editor to get started', 'tracks' ); ?>
+					<p class="valid"><?php esc_html_e( 'You can now add videos to Posts and Pages. Use the Featured Videos box under the Post Editor to get started', 'tracks' ); ?>
 					.</p><?php } else { ?>
 					<p class="valid"><?php printf( __( 'You can now switch to your new layout in the "Premium Layouts" section in the <a href="%s">Customizer</a>', 'tracks' ), esc_url( $customizer_url ) ); ?>
 					.</p><?php }
