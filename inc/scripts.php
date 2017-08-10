@@ -53,6 +53,14 @@ function ct_tracks_enqueue_admin_styles( $hook ) {
 				'fitvids'
 			), '', true );
 			wp_enqueue_style( 'ct-tracks-style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
+
+			$font_args = array(
+				'family' => urlencode( 'Raleway:400,700' ),
+				'subset' => urlencode( 'latin,latin-ext' )
+			);
+			$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+
+			wp_enqueue_style( 'ct-tracks-google-fonts', $fonts_url );
 		}
 	}
 }
