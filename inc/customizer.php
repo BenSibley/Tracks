@@ -65,7 +65,7 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 	class ct_tracks_pro_ad extends WP_Customize_Control {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/tracks-pro/';
-			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/tracks-pro.png' srcset='" . get_template_directory_uri() . "/assets/images/tracks-pro-2x.png 2x' /></a>";
+			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/tracks-pro.gif' /></a>";
 			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%1$s">%2$s Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'tracks'), $link, wp_get_theme( get_template() ) ) . "</p>";
 			echo "<p>" . sprintf( __('%s Pro adds the following features to Tracks:', 'tracks'), wp_get_theme( get_template() ) ) . "</p>";
 			echo "<ul>
