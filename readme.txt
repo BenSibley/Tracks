@@ -1,6 +1,6 @@
 === Tracks ===
 Contributors: bensibley
-Tags: two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, flexible-header, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news
+Tags: one-column, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
 Requires at least: 4.5
 Tested up to: 4.8
 Stable tag: 1.10
