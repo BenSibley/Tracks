@@ -295,7 +295,13 @@ img {
 }
 
 /* Form styles */
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
 textarea {
   padding: 0.8em;
   width: 100%;
@@ -320,7 +326,7 @@ textarea {
 input[type="submit"] {
   background: #222;
   color: white;
-  max-width: 22.2em !important;
+  max-width: 22.2em;
   min-width: 11.1em;
   padding: 0.8em;
   min-height: 45px;
@@ -1749,10 +1755,35 @@ li.pingback:first-child {
   margin-bottom: 3em;
 }
 
+.site-footer .widget_search .search-field {
+  max-width: none;
+}
+.site-footer .widget_search .search-submit {
+  background: #4d4d4d;
+  width: 100%;
+  max-width: none;
+  min-width: none;
+}
+
 .widget_categories select {
   margin-top: 1.5em;
 }
 
+@media all and (min-width: 50em) {
+  .site-footer .widget_search .search-form {
+    display: -webkit-box;
+    display: flex;
+  }
+  .site-footer .widget_search .search-field,
+  .site-footer .widget_search .search-submit {
+    width: auto;
+  }
+  .site-footer .widget_search .search-field {
+    margin-right: 0;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+  }
+}
 /* Footer menu styles */
 .menu-footer-items {
   list-style: none;

@@ -213,8 +213,13 @@ img {
 }
 
 /* Form styles */
-
-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
 textarea {
   padding: 0.8em;
   width: 100%;
@@ -236,7 +241,7 @@ textarea {
 input[type="submit"] {
   background: $gray-dark;
   color: white;
-  max-width: $baseline-height * 8 * 1.85 !important;
+  max-width: $baseline-height * 8 * 1.85;
   min-width: $baseline-height * 4 * 1.85;
   padding: 0.8em;
   min-height: 45px; // fix for IEs not handling padding well

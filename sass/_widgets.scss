@@ -37,9 +37,44 @@
     margin-bottom: $baseline-height * 2;
   }
 }
+.site-footer {
+
+  .widget_search {
+
+    .search-field {
+      max-width: none;
+    }
+    .search-submit {
+      background: $gray-dark-medium;
+      width: 100%;
+      max-width: none;
+      min-width: none;
+    }
+  }
+}
 .widget_categories {
 
   select {
     margin-top: $baseline-height;
+  }
+}
+@media all and (min-width: 50em) {
+
+  .site-footer {
+
+    .widget_search {
+
+      .search-form {
+        display: flex;
+      }
+      .search-field,
+      .search-submit {
+        width: auto;
+      }
+      .search-field {
+        margin-right: 0;
+        flex-grow: 1;
+      }
+    }
   }
 }
