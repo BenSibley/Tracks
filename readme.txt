@@ -5,11 +5,11 @@ Requires at least: 4.5
 Tested up to: 4.8
 Stable tag: 1.10
 
-Tracks is a bold, beautiful, and responsive blogging theme.
+Tracks is a bold, beautiful, and responsive theme.
 
 == Description ==
 
-A bold, beautiful, and responsive theme. Tracks is perfect for personal blogs, magazines, and photography websites. It includes a logo uploader, social media icons, search bar, comment display controls, premium layouts and features, and more.  Preview on desktop, tablets, and mobile with our interactive live demo: https://www.competethemes.com/demos/?theme=tracks
+Tracks is perfect for personal blogs, magazines, and photography websites. It includes a logo uploader, over 50+ social media icons, search bar, comment display controls, premium layouts, and more. Tracks has a dark, simple, and minimalist design that makes it great for publish both text and image based content. Use it for a travel blog, online newspaper, video site, or podcast. As a free theme, you can use Tracks for as many projects as you’d like.
 
 **Live Demo**
 
