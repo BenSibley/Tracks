@@ -841,3 +841,18 @@ if ( ! function_exists( ( 'ct_tracks_settings_notice' ) ) ) {
 	}
 }
 add_action( 'admin_notices', 'ct_tracks_settings_notice' );
+
+//----------------------------------------------------------------------------------
+// Add paragraph tags for author bio displayed in content/archive-header.php.
+// the_archive_description includes paragraph tags for tag and category descriptions, but not the author bio.
+//----------------------------------------------------------------------------------
+if ( ! function_exists( 'ct_tracks_modify_archive_descriptions' ) ) {
+	function ct_tracks_modify_archive_descriptions( $description ) {
+
+		if ( is_author() ) {
+			$description = wpautop( $description );
+		}
+		return $description;
+	}
+}
+add_filter( 'get_the_archive_description', 'ct_tracks_modify_archive_descriptions' );
