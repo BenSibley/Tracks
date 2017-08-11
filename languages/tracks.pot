@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.57\n"
+"Project-Id-Version: Tracks 1.58\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-06-13 14:49:24+00:00\n"
+"POT-Creation-Date: 2017-08-11 13:37:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -105,7 +105,7 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: content-page.php:11 content.php:14
+#: content-page.php:11 content.php:14 templates/full-width.php:21
 msgid "Pages:"
 msgstr ""
 
@@ -115,78 +115,85 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions.php:43
+#: functions.php:18
+msgid ""
+"Hey! Sorry to interrupt, but you've been using Tracks for a little while "
+"now. If you're happy with this theme, could you take a minute to leave a "
+"review? <i>You won't see this notice again after closing it.</i>"
+msgstr ""
+
+#: functions.php:51
 msgid "Primary"
 msgstr ""
 
-#: functions.php:44
+#: functions.php:52
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:45 functions.php:80 inc/customizer.php:125
+#: functions.php:53 functions.php:88 inc/customizer.php:125
 #: inc/customizer.php:178 inc/customizer.php:805 inc/customizer.php:824
 msgid "Footer"
 msgstr ""
 
-#: functions.php:58
+#: functions.php:66
 msgid "After Post Content"
 msgstr ""
 
-#: functions.php:60
+#: functions.php:68
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
 msgstr ""
 
-#: functions.php:69
+#: functions.php:77
 msgid "After Page Content"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:79
 msgid "Widgets in this area will be shown after page content"
 msgstr ""
 
-#: functions.php:82
+#: functions.php:90
 msgid "Widgets in this area will be shown in the footer"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:124
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:131
+#: functions.php:139
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:136 functions.php:137
+#: functions.php:144 functions.php:145
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:142 functions.php:143
+#: functions.php:150 functions.php:151
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:148
+#: functions.php:156
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:157
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:171
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:172
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:195
+#: functions.php:203 functions.php:267
 msgid "Read the post"
 msgstr ""
 
-#: functions.php:816
+#: functions.php:836
 msgid "Thanks for activating %s!"
 msgstr ""
 
@@ -516,6 +523,10 @@ msgstr ""
 msgid "View all posts in %s"
 msgstr ""
 
+#: inc/review.php:113
+msgid "Click here to leave your review"
+msgstr ""
+
 #: inc/user-profile.php:78
 msgid "Social Profiles"
 msgstr ""
@@ -532,44 +543,48 @@ msgstr ""
 msgid "Featured Video"
 msgstr ""
 
-#: licenses/functions/video.php:66
+#: licenses/functions/video.php:67
 msgid "Video Preview"
 msgstr ""
 
-#: licenses/functions/video.php:80
+#: licenses/functions/video.php:81
 msgid "Add video URL:"
 msgstr ""
 
-#: licenses/functions/video.php:91
+#: licenses/functions/video.php:92
 msgid "Choose where to display the video:"
 msgstr ""
 
-#: licenses/functions/video.php:102
+#: licenses/functions/video.php:103
 msgid "Post & Blog"
 msgstr ""
 
-#: licenses/functions/video.php:118
+#: licenses/functions/video.php:119
 msgid "Youtube controls"
 msgstr ""
 
-#: licenses/functions/video.php:121
+#: licenses/functions/video.php:122
 msgid "Hide title"
 msgstr ""
 
-#: licenses/functions/video.php:125
+#: licenses/functions/video.php:126
 msgid "Hide related videos"
 msgstr ""
 
-#: licenses/functions/video.php:129
+#: licenses/functions/video.php:130
 msgid "Hide Youtube logo"
 msgstr ""
 
-#: licenses/functions/video.php:133
+#: licenses/functions/video.php:134
 msgid "Show Captions by Default"
 msgstr ""
 
-#: licenses/functions/video.php:137
+#: licenses/functions/video.php:138
 msgid "Autoplay video"
+msgstr ""
+
+#: licenses/functions/video.php:142
+msgid "Loop video"
 msgstr ""
 
 #: search.php:9
@@ -650,8 +665,9 @@ msgstr ""
 
 #: theme-options.php:55
 msgid ""
-"%s can be converted into a mobile app and listed on the App Store with the "
-"help of PressPad News. Read our tutorial to learn more."
+"%s can be converted into a mobile app and listed on the App Store and "
+"Google Play Store with the help of PressPad News. Read our tutorial to "
+"learn more."
 msgstr ""
 
 #: theme-options.php:56
@@ -706,9 +722,17 @@ msgstr ""
 msgid ""
 "A bold, beautiful, and responsive theme. Tracks is perfect for personal "
 "blogs, magazines, and photography websites. It includes a logo uploader, "
-"social media icons, search bar, comment display controls, premium layouts "
-"and features, and more.  Preview on desktop, tablets, and mobile with our "
-"interactive live demo: https://www.competethemes.com/demos/?theme=tracks"
+"over 50+ social media icons, search bar, comment display controls, premium "
+"layouts, and more. Tracks has a dark, simple, and minimalist design that "
+"makes it great for publish both text and image based content. Use it for a "
+"travel blog, online newspaper, video site, or podcast. As a free theme, you "
+"can use Tracks for as many projects as you’d like. Preview Tracks now on "
+"desktop, tablets, and mobile devices with the interactive live demo: "
+"https://www.competethemes.com/demos/?theme=tracks"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
 msgstr ""
 
 #: comments.php:23 comments.php:43 comments.php:65
@@ -726,12 +750,12 @@ msgctxt "noun"
 msgid "email"
 msgstr ""
 
-#: licenses/functions/video.php:94
+#: licenses/functions/video.php:95
 msgctxt "noun"
 msgid "Post"
 msgstr ""
 
-#: licenses/functions/video.php:98
+#: licenses/functions/video.php:99
 msgctxt "noun"
 msgid "Blog"
 msgstr ""
@@ -741,12 +765,12 @@ msgctxt "View all posts in post category"
 msgid "View all posts in %s"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:115
 msgctxt "verb: reply to this comment"
 msgid "Reply"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:119
 msgctxt "verb: edit this comment"
 msgid "Edit"
 msgstr ""
