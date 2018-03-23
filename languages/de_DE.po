@@ -4,30 +4,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tracks 1.34\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-03-27 15:27:55+00:00\n"
+"POT-Creation-Date: 2017-08-11 13:37:42+00:00\n"
+"PO-Revision-Date: 2017-09-25 17:17+0200\n"
+"Last-Translator: Dominik Clemenz <dominik@clemenz.de>\n"
+"Language-Team: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-05-02 13:26-0500\n"
-"X-Generator: Poedit 1.7.6\n"
-"Last-Translator: Dominik Clemenz <dominik@clemenz.de>\n"
-"Language-Team: \n"
+"X-Generator: Poedit 2.0.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de_DE\n"
 
-#: comments.php:27 comments.php:46 comments.php:67
+#: comments.php:23 comments.php:43 comments.php:65
 msgid "Be First to Comment"
 msgstr "Schreibe den ersten Kommentar"
 
-#: comments.php:27 comments.php:46 comments.php:67
+#: comments.php:23 comments.php:43 comments.php:65
 msgid "One Comment"
 msgstr "Ein Kommentar"
 
-#: comments.php:27 comments.php:46 comments.php:67
-msgid "% Comments"
-msgstr "% Kommentare"
-
-#: comments.php:59
+#: comments.php:57
 msgid ""
 "Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
 "\">trackbacks</a> and pingbacks are open."
@@ -35,45 +31,57 @@ msgstr ""
 "Die Kommentare sind geschlossen, aber <a href=\"%s\" title=\"Trackback URL "
 "for this post\">Trackbacks</a>und Pingbacks sind erlaubt."
 
-#: comments.php:80 comments.php:87
+#: comments.php:79 comments.php:86
 msgid "Comments are closed."
 msgstr "Die Kommentare sind geschlossen"
+
+#: content/author-meta.php:11
+msgid "Written by:"
+msgstr "Verfasst von:"
+
+#: content/author-social-icons.php:38
+msgid "email icon"
+msgstr ""
+
+#: content/author-social-icons.php:44
+msgid "%s icon"
+msgstr ""
 
 #: content/category-links.php:14
 msgid "Categories"
 msgstr "Kategorien"
 
-#: content/category-links.php:16 inc/deprecated.php:17
-msgid "View all posts in %s"
-msgstr "Zeige alle Beiträge in %s"
-
 #: content/further-reading.php:12
-msgid "The Previous Post"
-msgstr "Der vorherige Beitrag"
-
-#: content/further-reading.php:17
-msgid "The Next Post"
-msgstr "Der nächste Beitrag"
-
-#: content/further-reading.php:24
 msgid "Previous Post"
 msgstr "vorheriger Beitrag"
 
-#: content/further-reading.php:29
-msgid "This is the oldest post"
-msgstr "Dies ist der älteste Beitrag"
+#: content/further-reading.php:13
+msgid "The Previous Post"
+msgstr "Der vorherige Beitrag"
 
-#: content/further-reading.php:30 content/further-reading.php:42
+#: content/further-reading.php:16
+msgid "No Older Posts"
+msgstr "Kein älterer Beitrag"
+
+#: content/further-reading.php:17 content/further-reading.php:31
 msgid "Return to Blog"
-msgstr "zurück zum Blog"
+msgstr "zurück zur Startseite"
 
-#: content/further-reading.php:36
+#: content/further-reading.php:26
 msgid "Next Post"
 msgstr "nächster Beitrag"
 
-#: content/further-reading.php:41
-msgid "This is the newest post"
-msgstr "Dies ist der neuste Beitrag"
+#: content/further-reading.php:27
+msgid "The Next Post"
+msgstr "Der nächste Beitrag"
+
+#: content/further-reading.php:30
+msgid "No Newer Posts"
+msgstr "Kein neuerer Beitrag"
+
+#: content/social-icons.php:52 content/social-icons.php:53
+msgid "contact form"
+msgstr ""
 
 #: content/tag-links.php:9
 msgid "Tags"
@@ -95,48 +103,55 @@ msgstr ""
 "Unter diesem Link wurde nichts gefunden! Überprüfen Sie die korrektheit der "
 "URL oder benutzen sie die Suche, um findig zu werden."
 
-#: content-attachment.php:20
+#: content-attachment.php:26
 msgid "Previous Image"
 msgstr "vorheriges Bild"
 
-#: content-attachment.php:23
+#: content-attachment.php:30
 msgid "Next Image"
 msgstr "nächstes Bild"
 
-#: content-page.php:29 content.php:37
+#: content-page.php:11 content.php:14 templates/full-width.php:21
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: content.php:59
-msgid "Written by:"
-msgstr "Verfasst von:"
-
-#: footer.php:34
+#: footer.php:24
+#, fuzzy
+#| msgid ""
+#| "<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
+#| "Themes."
 msgid ""
-"<a target=\"_blank\" href=\"%s\">Tracks WordPress Theme</a> by Compete "
+"<a target=\"_blank\" href=\"%1$s\">%2$s WordPress Theme</a> by Compete "
 "Themes."
 msgstr ""
 "<a target=\"_blank\" href=\"%s\">Tracks WordPress Design</a> von Compete "
 "Themes."
 
-#: functions.php:24
+#: functions.php:18
+msgid ""
+"Hey! Sorry to interrupt, but you've been using Tracks for a little while "
+"now. If you're happy with this theme, could you take a minute to leave a "
+"review? <i>You won't see this notice again after closing it.</i>"
+msgstr ""
+
+#: functions.php:51
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:25
+#: functions.php:52
 msgid "Secondary"
 msgstr "Sekundär"
 
-#: functions.php:26 functions.php:77 inc/customizer.php:124
-#: inc/customizer.php:182 inc/customizer.php:762 inc/customizer.php:786
+#: functions.php:53 functions.php:88 inc/customizer.php:125
+#: inc/customizer.php:178 inc/customizer.php:805 inc/customizer.php:824
 msgid "Footer"
 msgstr "Fußzeile"
 
-#: functions.php:63
+#: functions.php:66
 msgid "After Post Content"
 msgstr "Inhalt nach dem Beitrag"
 
-#: functions.php:65
+#: functions.php:68
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
@@ -144,400 +159,468 @@ msgstr ""
 "Widgets in diesem Bereich werden nach den vorheriger/nächster Beitrag link "
 "angezeigt"
 
-#: functions.php:70
+#: functions.php:77
 msgid "After Page Content"
 msgstr "Inhalt nach dem Beitragsinhalt"
 
-#: functions.php:72
-msgid "Widgets in this area will be shown after page content"
-msgstr "Widgets in diesem Berich werden nach dem Beitragsinhalt angezeigt"
-
 #: functions.php:79
+msgid "Widgets in this area will be shown after page content"
+msgstr "Widgets in diesem Bereich werden nach dem Beitragsinhalt angezeigt"
+
+#: functions.php:90
 msgid "Widgets in this area will be shown in the footer"
 msgstr "Widgets in diesem Bereich werden in der Fußzeile angezeigt"
 
-#: functions.php:108
-msgid "Reply"
-msgstr "Antworten"
-
-#: functions.php:117
+#: functions.php:124
 msgid "Your comment is awaiting moderation."
 msgstr "Der Kommentar wartet auf seine Überprüfung"
 
-#: functions.php:149 functions.php:150
+#: functions.php:139
+msgid "(optional)"
+msgstr ""
+
+#: functions.php:144 functions.php:145
 msgid "Your Name"
 msgstr "Ihr Name"
 
-#: functions.php:156 functions.php:157
+#: functions.php:150 functions.php:151
 msgid "Your Email"
 msgstr "Ihre Email"
 
-#: functions.php:163
+#: functions.php:156
 msgid "Your Website URL"
 msgstr "Webseiten URL"
 
-#: functions.php:164
+#: functions.php:157
 msgid "Your URL"
 msgstr "Ihre Website"
 
-#: functions.php:178
+#: functions.php:171
 msgid "Your Comment"
 msgstr "Ihr Kommentar"
 
-#: functions.php:179
+#: functions.php:172
 msgid "Enter Your Comment"
 msgstr "Geben Sie ihren Kommentar ein"
 
-#: functions.php:224
-msgid "Read More"
-msgstr "Weiter lesen"
-
-#: functions.php:237
-msgid "Read the Post"
+#: functions.php:203 functions.php:267
+msgid "Read the post"
 msgstr "Beitrag lesen"
 
-#: header.php:15
+#: functions.php:836
+msgid "Thanks for activating %s!"
+msgstr ""
+
+#: header.php:14
 msgid "Skip to content"
 msgstr "Inhalt überspringen"
 
-#: inc/customizer.php:103
+#: inc/customizer.php:69
+msgid ""
+"<a target=\"_blank\" href=\"%1$s\">%2$s Pro</a> is the plugin that makes "
+"advanced customization simple - and fun too!"
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "%s Pro adds the following features to Tracks:"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Custom Colors"
+msgstr "Eigenes CSS"
+
+#: inc/customizer.php:73
+msgid "4 New layouts"
+msgstr ""
+
+#: inc/customizer.php:74
+msgid "Featured Videos"
+msgstr ""
+
+#: inc/customizer.php:75
+msgid "+ 5 more features"
+msgstr "Premium Funktionen"
+
+#: inc/customizer.php:77
+msgid "View %s Pro"
+msgstr ""
+
+#: inc/customizer.php:87
+msgid "%s Pro"
+msgstr ""
+
+#: inc/customizer.php:107
 msgid "Tagline Display"
 msgstr "Anzeige des Slogans"
 
-#: inc/customizer.php:117
+#: inc/customizer.php:118
 msgid "Where should the tagline display?"
 msgstr "Wo soll der Slogan angezeigt werden?"
 
-#: inc/customizer.php:122 inc/customizer.php:180 inc/customizer.php:760
-#: inc/customizer.php:784
+#: inc/customizer.php:123 inc/customizer.php:176 inc/customizer.php:803
+#: inc/customizer.php:822
 msgid "Header & Footer"
 msgstr "Kopf- und Fußzeile"
 
-#: inc/customizer.php:123 inc/customizer.php:181 inc/customizer.php:761
-#: inc/customizer.php:785
+#: inc/customizer.php:124 inc/customizer.php:177 inc/customizer.php:804
+#: inc/customizer.php:823
 msgid "Header"
 msgstr "Kopfzeile"
 
-#: inc/customizer.php:132
-msgid "Logo Upload"
-msgstr "Logo hochladen"
+#: inc/customizer.php:133
+msgid "Logo"
+msgstr ""
 
-#: inc/customizer.php:146
+#: inc/customizer.php:143
 msgid "Upload custom logo."
 msgstr "eigenes Logo hochladen"
 
-#: inc/customizer.php:162
+#: inc/customizer.php:159
 msgid "Social Media Icons"
 msgstr "Social Media Symbole"
 
-#: inc/customizer.php:175
+#: inc/customizer.php:161
+msgid "Add the URL for each of your social profiles."
+msgstr ""
+
+#: inc/customizer.php:171
 msgid "Where should the icons display?"
 msgstr "Wo sollen die Symbole angezeigt werden?"
 
-#: inc/customizer.php:183 inc/customizer.php:787
+#: inc/customizer.php:179 inc/customizer.php:825
 msgid "Do not display"
 msgstr "Nicht anzeigen"
 
-#: inc/customizer.php:233
+#: inc/customizer.php:194 inc/user-profile.php:120
+msgid "Email Address"
+msgstr "E-Mail-Adresse"
+
+#: inc/customizer.php:248
+msgid ""
+"Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn more</a>)"
+msgstr ""
+
+#: inc/customizer.php:275
 msgid "Search Bar"
 msgstr "Suche"
 
-#: inc/customizer.php:247
+#: inc/customizer.php:286
 msgid "Show search bar at top of site?"
 msgstr "Suche an der Spitze der Seite anzeigen?"
 
-#: inc/customizer.php:251 inc/customizer.php:278 inc/customizer.php:296
-#: inc/customizer.php:314 inc/customizer.php:538 inc/customizer.php:557
-#: inc/customizer.php:576 inc/customizer.php:803
+#: inc/customizer.php:290 inc/customizer.php:314 inc/customizer.php:330
+#: inc/customizer.php:346 inc/customizer.php:592 inc/customizer.php:609
+#: inc/customizer.php:626 inc/customizer.php:837
 msgid "Show"
 msgstr "Zeigen"
 
-#: inc/customizer.php:252 inc/customizer.php:279 inc/customizer.php:297
-#: inc/customizer.php:315 inc/customizer.php:539 inc/customizer.php:558
-#: inc/customizer.php:577 inc/customizer.php:804
+#: inc/customizer.php:291 inc/customizer.php:315 inc/customizer.php:331
+#: inc/customizer.php:347 inc/customizer.php:593 inc/customizer.php:610
+#: inc/customizer.php:627 inc/customizer.php:838
 msgid "Hide"
 msgstr "Verstecken"
 
-#: inc/customizer.php:260
+#: inc/customizer.php:299
 msgid "Post Meta"
 msgstr "Meta-Daten des Beitrags"
 
-#: inc/customizer.php:274
+#: inc/customizer.php:310
 msgid "Display date above post title?"
 msgstr "Datum über dem Beitrag anzeigen?"
 
-#: inc/customizer.php:292
+#: inc/customizer.php:326
 msgid "Display author name above post title?"
 msgstr "Name des Authors über dem Beitrag anzeigen?"
 
-#: inc/customizer.php:310
+#: inc/customizer.php:342
 msgid "Display category above post title?"
 msgstr "Kategorie über dem Beitrag anzeigen?"
 
-#: inc/customizer.php:323
+#: inc/customizer.php:355
 msgid "Comments"
 msgstr "Kommentare"
 
-#: inc/customizer.php:337
+#: inc/customizer.php:366
 msgid "Show comments on:"
 msgstr "Kommentare zeigen bei:"
 
-#: inc/customizer.php:342 inc/customizer.php:837
-msgid "Posts"
-msgstr "Beiträgen"
-
-#: inc/customizer.php:343 inc/customizer.php:838
+#: inc/customizer.php:372 inc/customizer.php:862
 msgid "Pages"
 msgstr "Seiten"
 
-#: inc/customizer.php:344 inc/customizer.php:839
+#: inc/customizer.php:373 inc/customizer.php:863
 msgid "Attachments"
 msgstr "Anhänge"
 
-#: inc/customizer.php:345 inc/customizer.php:840
+#: inc/customizer.php:374 inc/customizer.php:864
 msgid "Do not show"
 msgstr "Nicht anzeigen"
 
-#: inc/customizer.php:354
+#: inc/customizer.php:383
 msgid "Footer Text"
 msgstr "Fußzeilen Text"
 
-#: inc/customizer.php:367
+#: inc/customizer.php:393
 msgid "Edit the text in your footer"
 msgstr "Bearbeite den Text in der Fußzeile"
 
-#: inc/customizer.php:377
+#: inc/customizer.php:414
 msgid "Custom CSS"
 msgstr "Eigenes CSS"
 
-#: inc/customizer.php:390
+#: inc/customizer.php:425
 msgid "Add Custom CSS Here:"
 msgstr "Eigenes CSS hier einfügen:"
 
-#: inc/customizer.php:423 theme-options.php:52
+#: inc/customizer.php:458 theme-options.php:62
 msgid "Premium Layouts"
 msgstr "Premium Layouts"
 
-#: inc/customizer.php:437
-msgid "Choose the layout for Tracks"
+#: inc/customizer.php:470
+msgid "Choose the layout for %s"
 msgstr "Wähle das Layout für Tracks"
 
-#: inc/customizer.php:452
+#: inc/customizer.php:471
+msgid ""
+"Want more layouts? Check out the <a target=\"_blank\" href=\"%1$s\">%2$s Pro "
+"Plugin</a>."
+msgstr ""
+
+#: inc/customizer.php:484
 msgid "Image size on Blog"
 msgstr "Bildgröße im Blog"
 
-#: inc/customizer.php:470
+#: inc/customizer.php:500
 msgid "Image size on Posts"
 msgstr "Bildgröße in Beiträgen"
 
-#: inc/customizer.php:488
-msgid "Style"
-msgstr "Stil"
-
-#: inc/customizer.php:492 inc/customizer.php:903
-msgid "Overlay"
-msgstr "Overlay"
-
-#: inc/customizer.php:493 inc/customizer.php:904
+#: inc/customizer.php:521 inc/customizer.php:908
 msgid "Title below"
 msgstr "Überschrift darunter"
 
-#: inc/customizer.php:506
+#: inc/customizer.php:532
 msgid "Show full posts on Blog/Archives?"
 msgstr "Zeige ganze Beiträge im Blog/Archiv?"
 
-#: inc/customizer.php:510 inc/customizer.php:612 inc/customizer.php:694
-#: inc/customizer.php:821
+#: inc/customizer.php:536 inc/customizer.php:658 inc/customizer.php:743
+#: inc/customizer.php:851
 msgid "Yes"
 msgstr "Ja"
 
-#: inc/customizer.php:511 inc/customizer.php:613 inc/customizer.php:695
-#: inc/customizer.php:822
+#: inc/customizer.php:537 inc/customizer.php:659 inc/customizer.php:744
+#: inc/customizer.php:852
 msgid "No"
 msgstr "Nein"
 
-#: inc/customizer.php:519
+#: inc/customizer.php:545
 msgid "Additional Options"
 msgstr "zusätzliche Optionen"
 
-#: inc/customizer.php:533
+#: inc/customizer.php:556
+msgid "Posts without Featured Images should display:"
+msgstr ""
+
+#: inc/customizer.php:562 inc/customizer.php:939
+msgid "Full-width text"
+msgstr ""
+
+#: inc/customizer.php:563 inc/customizer.php:940
+msgid "Fallback image"
+msgstr "Hintergrundbild"
+
+#: inc/customizer.php:573
+msgid "Upload a fallback image"
+msgstr "Bild hochladen"
+
+#: inc/customizer.php:587
 msgid "Show scroll-to-top arrow?"
 msgstr "Zeige nach-oben-Scrollen Pfeil?"
 
-#: inc/customizer.php:552
+#: inc/customizer.php:604
 msgid "Show author info box after posts?"
 msgstr "Zeige Authoren Info-Box nach Beiträgen?"
 
-#: inc/customizer.php:571
+#: inc/customizer.php:621
 msgid "Show prev/next links after posts?"
 msgstr "Zeige \"vorheriger/nächster Beitrag\" Links nach Beiträgen?"
 
-#: inc/customizer.php:590
+#: inc/customizer.php:638
 msgid "Zoom-in blog images on hover?"
 msgstr "Bilder bei Mauskontakt vergrößern?"
 
-#: inc/customizer.php:594
+#: inc/customizer.php:642
 msgid "Zoom in"
 msgstr "vergrößern"
 
-#: inc/customizer.php:595
+#: inc/customizer.php:643
 msgid "Do not zoom in"
 msgstr "nicht vergrößern"
 
-#: inc/customizer.php:608
+#: inc/customizer.php:654
 msgid "Lazy load images?"
 msgstr "Bilder erst beim anzeigen Laden?"
 
-#: inc/customizer.php:626
+#: inc/customizer.php:669
 msgid "Word count in automatic excerpts"
 msgstr "Wortanzahl in automatischen Auszügen"
 
-#: inc/customizer.php:644
+#: inc/customizer.php:677
+msgid "Read the Post"
+msgstr "Beitrag lesen"
+
+#: inc/customizer.php:682
+msgid "Read More link text"
+msgstr "Weiterlesen"
+
+#: inc/customizer.php:699
 msgid "Background Image"
 msgstr "Hintergrundbild"
 
-#: inc/customizer.php:645
+#: inc/customizer.php:700
 msgid ""
-"Use the Header Color section above if your new background image makes the "
-"menu hard to read."
+"Use the Header Color section if your new background image makes the menu "
+"hard to read."
 msgstr ""
 "Verwende die Farbanpassung der Kopfzeile oben, wenn das neue Hintergrundbild "
 "das Menü unleserlich macht."
 
-#: inc/customizer.php:658
+#: inc/customizer.php:710
 msgid "Background image"
 msgstr "Hintergrundbild"
 
-#: inc/customizer.php:675
+#: inc/customizer.php:727
 msgid "Background Texture"
 msgstr "Hintergrund Textur"
 
-#: inc/customizer.php:676
+#: inc/customizer.php:728
 msgid ""
-"Use the Header Color section above if your new texture makes the menu hard "
-"to read."
+"Use the Header Color section if your new texture makes the menu hard to read."
 msgstr ""
 "Verwende die Farbanpassung der Kopfzeile oben, wenn die neue Textur das Menü "
 "unleserlich macht."
 
-#: inc/customizer.php:690
+#: inc/customizer.php:739
 msgid "Enable background texture?"
 msgstr "Hintergrund Textur aktivieren?"
 
-#: inc/customizer.php:710
+#: inc/customizer.php:757
 msgid "Choose a Texture"
 msgstr "Wähle eine Textur"
 
-#: inc/customizer.php:729
+#: inc/customizer.php:776
 msgid "Header Color"
 msgstr "Farbe der Kopfzeile"
 
-#: inc/customizer.php:730
+#: inc/customizer.php:777
 msgid "Change to dark if your new background makes the menu hard to read."
 msgstr ""
 "Wechsle zum dunklen Design, wenn das neue Hintergrundbild das Menü "
 "unleserlich macht."
 
-#: inc/customizer.php:744
+#: inc/customizer.php:788
 msgid "Light or dark header color?"
 msgstr "Helle oder dunkle Kofzeilen Farbe?"
 
-#: inc/customizer.php:748 inc/customizer.php:931
+#: inc/customizer.php:792 inc/customizer.php:925
 msgid "Light"
 msgstr "hell"
 
-#: inc/customizer.php:749 inc/customizer.php:932
+#: inc/customizer.php:793 inc/customizer.php:926
 msgid "Dark"
 msgstr "dunkel"
 
-#: inc/customizer.php:858
+#: inc/customizer.php:875
 msgid "Zoom"
 msgstr "Zoomen"
 
-#: inc/customizer.php:859
+#: inc/customizer.php:876
 msgid "Do not Zoom"
 msgstr "nicht Zoomen"
 
-#: inc/user-profile.php:16
-msgid "Profile image"
-msgstr "Profilbild"
+#: inc/deprecated.php:17
+msgid "View all posts in %s"
+msgstr "Zeige alle Beiträge in %s"
 
-#: inc/user-profile.php:23
-msgid "Upload Image"
-msgstr "Bild hochladen"
-
-#: inc/user-profile.php:24
-msgid ""
-"Upload an image here to use instead of your Gravatar. Perfectly square "
-"images will not be cropped."
+#: inc/review.php:113
+msgid "Click here to leave your review"
 msgstr ""
-"Bild hochlanden das anstelle des Gravatars genutzt wird. Perfekt "
-"Quadratische Bilder werden nicht zugeschnitten."
 
-#: inc/user-profile.php:99
+#: inc/user-profile.php:78
 msgid "Social Profiles"
 msgstr "soziale Profile"
 
-#: inc/user-profile.php:107
-msgid "Address:"
-msgstr "Link:"
+#: index.php:22 index.php:28
+msgid "Previous"
+msgstr "vorheriger Beitrag"
 
-#: inc/user-profile.php:109
-msgid "Profile:"
-msgstr "Profil:"
-
-#: index.php:11
-msgid "Category:"
-msgstr "Kategorie:"
-
-#: index.php:18
-msgid "Tag:"
-msgstr "Tag:"
-
-#: index.php:25
-msgid "These Posts are by:"
-msgstr "Diese Beiträge sind von:"
+#: index.php:23 index.php:29
+msgid "Next"
+msgstr "nächster Beitrag"
 
 #: licenses/functions/video.php:22
 msgid "Featured Video"
 msgstr ""
 
-#: licenses/functions/video.php:58
+#: licenses/functions/video.php:67
 msgid "Video Preview"
 msgstr "Video Vorschau"
 
-#: licenses/functions/video.php:72
+#: licenses/functions/video.php:81
 msgid "Add video URL:"
 msgstr "Video URL hinzufügen:"
 
-#: licenses/functions/video.php:83
+#: licenses/functions/video.php:92
 msgid "Choose where to display the video:"
-msgstr "Wähle wo das Video angezeigt werden soll:"
+msgstr "Wähle, wo das Video angezeigt werden soll:"
 
-#: licenses/functions/video.php:86
-msgid "Display on Post"
-msgstr "Zeige in Beitrag"
+#: licenses/functions/video.php:103
+msgid "Post & Blog"
+msgstr ""
 
-#: licenses/functions/video.php:90
-msgid "Display on Post and Blog"
-msgstr "Zeige in Beitrag und Blog"
+#: licenses/functions/video.php:119
+msgid "Youtube controls"
+msgstr ""
 
-#: search.php:11
-msgid "%d search result for \"%s\""
-msgid_plural "%d search results for \"%s\""
+#: licenses/functions/video.php:122
+msgid "Hide title"
+msgstr ""
+
+#: licenses/functions/video.php:126
+msgid "Hide related videos"
+msgstr ""
+
+#: licenses/functions/video.php:130
+msgid "Hide Youtube logo"
+msgstr ""
+
+#: licenses/functions/video.php:134
+msgid "Show Captions by Default"
+msgstr ""
+
+#: licenses/functions/video.php:138
+msgid "Autoplay video"
+msgstr ""
+
+#: licenses/functions/video.php:142
+msgid "Loop video"
+msgstr ""
+
+#: search.php:9
+msgid "%1$d search result for \"%2$s\""
+msgid_plural "%1$d search results for \"%2$s\""
 msgstr[0] "%d Suchergebnisse für \"%s\""
 msgstr[1] "%d Suchergebnisse für \"%s\""
 
-#: search.php:13
+#: search.php:11
 msgid "No search results for \"%s\""
-msgstr "Keine Suchergenisse für \"%s\""
+msgstr "Keine Suchergebnisse für \"%s\""
 
-#: search.php:37
+#: search.php:44
 msgid "Can't find what you're looking for?  Try refining your search:"
 msgstr ""
 "Sie finden nicht was Sie suchen? Versuchen Sie die Suche zu verfeinern:"
 
-#: searchform.php:6 searchform.php:7
+#: searchform.php:6 searchform.php:8
 msgid "Search for:"
 msgstr "Suchen nach:"
 
@@ -545,105 +628,97 @@ msgstr "Suchen nach:"
 msgid "Search"
 msgstr "Suche"
 
-#: searchform.php:8
+#: searchform.php:9
 msgid "Go"
-msgstr "Los"
+msgstr "Senden"
 
-#: theme-options.php:13
-msgid "Tracks Dashboard"
-msgstr "Tracks Dashboard"
+#: theme-options.php:4 theme-options.php:20
+#, fuzzy
+#| msgid "Dashboard"
+msgid "%s Dashboard"
+msgstr "Dashboard"
 
-#: theme-options.php:18
+#: theme-options.php:24
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: theme-options.php:19
+#: theme-options.php:26
 msgid "Licenses"
 msgstr "Lizenzen"
 
-#: theme-options.php:24
-msgid "Customization"
-msgstr "Personalisierung"
-
-#: theme-options.php:25
-msgid ""
-"Click the \"Customize\" link in your menu, or use the button below to get "
-"started customizing Tracks"
-msgstr ""
-"Klicke auf \"Anpassen\" im Menü oder Benutze den unteren Knopf um mit dem "
-"Personalisieren von Tracks zu beginnen"
-
-#: theme-options.php:27
-msgid "Use Customizer"
-msgstr "Zur Anpassung von Tracks"
-
-#: theme-options.php:31
-msgid "Support"
-msgstr "Support"
-
 #: theme-options.php:32
-msgid ""
-"You can find the knowledgebase, changelog, forum, and more in the Tracks "
-"Support Center"
+msgid "Get Started"
 msgstr ""
-"Du findest die Wissensdatenbank, den Changelog, das Forum und vieles mehr im "
-"Tracks Support Center"
 
-#: theme-options.php:34
-msgid "Visit Support Center"
-msgstr "Besuche das Support Center"
+#: theme-options.php:33
+msgid ""
+"Not sure where to start? The <strong>%1$s Getting Started Guide</strong> "
+"will take you step-by-step through every feature in %1$s."
+msgstr ""
 
-#: theme-options.php:38
-msgid "Premium Upgrades ($9-15)"
-msgstr "Premium Upgrades ($9-15)"
+#: theme-options.php:36
+msgid "View Guide"
+msgstr ""
 
-#: theme-options.php:39
-msgid "Make your site more customizable and beautiful with premium upgrades"
+#: theme-options.php:41
+msgid "%s Pro Plugin"
+msgstr ""
+
+#: theme-options.php:42
+#, fuzzy
+#| msgid "Make your site more customizable and beautiful with premium upgrades"
+msgid "Make your site more customizable and beautiful with %s Pro"
 msgstr ""
 "Mache deine Seite mithilfe von Premium Upgrades personalisierbarer und "
 "schöner"
 
-#: theme-options.php:40
-msgid "Visit Upgrades Gallery"
-msgstr "Besuche die Upgrade Gallerie"
-
-#: theme-options.php:43
-msgid "WordPress Resources"
-msgstr "WordPress Plugins"
-
 #: theme-options.php:44
-msgid ""
-"Save time and money searching for WordPress products by following our "
-"recommendations"
+msgid "Visit %s Pro"
 msgstr ""
-"Spare beim suchen von WordPress Plugins Zeit und Geld in dem du unseren "
-"Empfehlungen folgst"
 
-#: theme-options.php:46
-msgid "View Resources"
-msgstr "Zeige Empfehlungen"
+#: theme-options.php:49 theme-options.php:51
+msgid "Leave a Review"
+msgstr ""
 
-#: theme-options.php:59
+#: theme-options.php:50
+msgid "Help others find %s by leaving a review on wordpress.org."
+msgstr ""
+
+#: theme-options.php:54
+msgid "Turn %s into a Mobile App"
+msgstr ""
+
+#: theme-options.php:55
+msgid ""
+"%s can be converted into a mobile app and listed on the App Store and Google "
+"Play Store with the help of PressPad News. Read our tutorial to learn more."
+msgstr ""
+
+#: theme-options.php:56
+msgid "Read Tutorial"
+msgstr "Weiterlesen"
+
+#: theme-options.php:68
 msgid "Premium Features"
 msgstr "Premium Funktionen"
 
-#: theme-options.php:113
+#: theme-options.php:115
 msgid "Save License"
 msgstr "Speichere Lizenz"
 
-#: theme-options.php:116
+#: theme-options.php:122
 msgid "Enter your license key"
 msgstr "Gib deine Lizenznummer ein"
 
-#: theme-options.php:122 theme-options.php:130
+#: theme-options.php:128 theme-options.php:140
 msgid "Activate License"
 msgstr "Aktiviere die Lizenz"
 
-#: theme-options.php:127
+#: theme-options.php:135
 msgid "Deactivate License"
 msgstr "Deaktiviere die Lizenz"
 
-#: theme-options.php:145
+#: theme-options.php:158
 msgid ""
 "You can now add a background image using the \"Background Image\" section in "
 "the <a href=\"%s\">Customizer</a>"
@@ -651,7 +726,7 @@ msgstr ""
 "Du kannst nun ein Hintergrundbild hinzufügen indem du die \"Background Image"
 "\" Sektion im <a href=\"%s\">Customizer</a> benutzt."
 
-#: theme-options.php:147
+#: theme-options.php:160
 msgid ""
 "If you haven't already, please upload and activate the <a "
 "href='%s'>Background Texture plugin</a>"
@@ -659,7 +734,7 @@ msgstr ""
 "Wenn du es noch nicht getan hast, lade bitte das <a href='%s'>Background "
 "Texture plugin</a> hoch und aktiviere es"
 
-#: theme-options.php:149
+#: theme-options.php:162
 msgid ""
 "You can now add videos to Posts and Pages. Use the Featured Videos box under "
 "the Post Editor to get started"
@@ -667,7 +742,7 @@ msgstr ""
 "Du kannst nun Videos zu Beiträgen und Seiten hinzufügen. Benutze die "
 "Featured Videos box unter dem Beitragseditor um loszulegen"
 
-#: theme-options.php:151
+#: theme-options.php:164
 msgid ""
 "You can now switch to your new layout in the \"Premium Layouts\" section in "
 "the <a href=\"%s\">Customizer</a>"
@@ -675,21 +750,24 @@ msgstr ""
 "Du kannst nun in der \"Premium Layouts\" Sektion im <a href=\"%s"
 "\">Customizer</a> zu deinem neuen Layout wechseln"
 
-#. Theme Name of the plugin/theme
-msgid "Tracks"
-msgstr "Tracks"
-
-#. Theme URI of the plugin/theme
-msgid "https://www.competethemes.com/tracks/"
-msgstr "https://www.competethemes.com/tracks/"
-
 #. Description of the plugin/theme
+#, fuzzy
+#| msgid ""
+#| "A bold, beautiful, and responsive theme. Tracks is perfect for personal "
+#| "blogs, magazines, and photography websites. It includes a logo uploader, "
+#| "social media icons, search bar, comment display controls, premium layouts "
+#| "and features, and more.  See our fully-setup live demo here: https://www."
+#| "competethemes.com/tracks-live-demo/"
 msgid ""
 "A bold, beautiful, and responsive theme. Tracks is perfect for personal "
 "blogs, magazines, and photography websites. It includes a logo uploader, "
-"social media icons, search bar, comment display controls, premium layouts "
-"and features, and more.  See our fully-setup live demo here: https://www."
-"competethemes.com/tracks-live-demo/"
+"over 50+ social media icons, search bar, comment display controls, premium "
+"layouts, and more. Tracks has a dark, simple, and minimalist design that "
+"makes it great for publish both text and image based content. Use it for a "
+"travel blog, online newspaper, video site, or podcast. As a free theme, you "
+"can use Tracks for as many projects as you’d like. Preview Tracks now on "
+"desktop, tablets, and mobile devices with the interactive live demo: https://"
+"www.competethemes.com/demos/?theme=tracks"
 msgstr ""
 "Ein stolzes, schönes und responsives Theme. Tracks ist perfekt für "
 "persönliche Blogs, Magazine und Fotografen-Websites. Es enthält einen Logo-"
@@ -697,20 +775,173 @@ msgstr ""
 "Premium Layouts und Funktionen und noch mehr. Schau die komplette Live Demo "
 "hier an: http://www.competethemes.com/tracks-live-demo/"
 
-#. Author of the plugin/theme
-msgid "Compete Themes"
-msgstr "Compete Themes"
+#. Template Name of the plugin/theme
+msgid "Full-width"
+msgstr ""
 
-#. Author URI of the plugin/theme
-msgid "https://www.competethemes.com/"
-msgstr "https://www.competethemes.com/"
+#: comments.php:23 comments.php:43 comments.php:65
+msgctxt "noun: 5 comments"
+msgid "% Comments"
+msgstr "% Kommentare"
 
-#: inc/customizer.php:456 inc/customizer.php:474 inc/customizer.php:891
+#: content/archive-header.php:4 inc/customizer.php:371
+msgctxt "noun"
+msgid "Posts"
+msgstr "Beiträge"
+
+#: content/social-icons.php:44 content/social-icons.php:45
+msgctxt "noun"
+msgid "email"
+msgstr ""
+
+#: licenses/functions/video.php:95
+msgctxt "noun"
+msgid "Post"
+msgstr "Beitrag"
+
+#: licenses/functions/video.php:99
+msgctxt "noun"
+msgid "Blog"
+msgstr ""
+
+#: content/category-links.php:16
+msgctxt "View all posts in post category"
+msgid "View all posts in %s"
+msgstr "Zeige alle Beiträge in %s"
+
+#: functions.php:115
+msgctxt "verb: reply to this comment"
+msgid "Reply"
+msgstr "Antworten"
+
+#: functions.php:119
+msgctxt "verb: edit this comment"
+msgid "Edit"
+msgstr "Ändern"
+
+#: inc/customizer.php:488 inc/customizer.php:504 inc/customizer.php:898
 msgctxt "size of the featured image"
 msgid "size based on image size"
-msgstr "Größenabhänging von der Bildgröße"
+msgstr "abhänging von der Bildgröße"
 
-#: inc/customizer.php:457 inc/customizer.php:475 inc/customizer.php:892
+#: inc/customizer.php:489 inc/customizer.php:505 inc/customizer.php:899
 msgctxt "size of the featured image"
 msgid "2:1 width/height ratio like posts"
-msgstr "2:1 breiten/längen Verhältnis wie die Beiträge"
+msgstr "2:1 Breiten-/Längenverhältnis wie die Beiträge"
+
+#: inc/customizer.php:516
+msgctxt "noun: pick a style"
+msgid "Style"
+msgstr "Stil"
+
+#: inc/customizer.php:520 inc/customizer.php:907
+msgctxt "noun: the overlay style"
+msgid "Overlay"
+msgstr "Overlay"
+
+#: inc/customizer.php:561 inc/customizer.php:938
+msgctxt "noun: display an empty half"
+msgid "Empty half"
+msgstr ""
+
+#: inc/customizer.php:861
+msgctxt "nount"
+msgid "Posts"
+msgstr "Beiträge"
+
+#~ msgid "This is the oldest post"
+#~ msgstr "Dies ist der älteste Beitrag"
+
+#~ msgid "This is the newest post"
+#~ msgstr "Dies ist der neuste Beitrag"
+
+#~ msgid "Logo Upload"
+#~ msgstr "Logo hochladen"
+
+#~ msgid "Profile image"
+#~ msgstr "Profilbild"
+
+#~ msgid ""
+#~ "Upload an image here to use instead of your Gravatar. Perfectly square "
+#~ "images will not be cropped."
+#~ msgstr ""
+#~ "Bild hochlanden das anstelle des Gravatars genutzt wird. Perfekt "
+#~ "Quadratische Bilder werden nicht zugeschnitten."
+
+#~ msgid "Profile:"
+#~ msgstr "Profil:"
+
+#~ msgid "Category:"
+#~ msgstr "Kategorie:"
+
+#~ msgid "Tag:"
+#~ msgstr "Tag:"
+
+#~ msgid "These Posts are by:"
+#~ msgstr "Diese Beiträge sind von:"
+
+#~ msgid "Display on Post"
+#~ msgstr "Zeige in Beitrag"
+
+#~ msgid "Display on Post and Blog"
+#~ msgstr "Zeige in Beitrag und Blog"
+
+#~ msgid "Tracks Dashboard"
+#~ msgstr "Tracks Dashboard"
+
+#~ msgid "Customization"
+#~ msgstr "Personalisierung"
+
+#~ msgid ""
+#~ "Click the \"Customize\" link in your menu, or use the button below to get "
+#~ "started customizing Tracks"
+#~ msgstr ""
+#~ "Klicke auf \"Anpassen\" im Menü oder Benutze den unteren Knopf um mit dem "
+#~ "Personalisieren von Tracks zu beginnen"
+
+#~ msgid "Use Customizer"
+#~ msgstr "Zur Anpassung von Tracks"
+
+#~ msgid "Support"
+#~ msgstr "Support"
+
+#~ msgid ""
+#~ "You can find the knowledgebase, changelog, forum, and more in the Tracks "
+#~ "Support Center"
+#~ msgstr ""
+#~ "Du findest die Wissensdatenbank, den Changelog, das Forum und vieles mehr "
+#~ "im Tracks Support Center"
+
+#~ msgid "Visit Support Center"
+#~ msgstr "Besuche das Support Center"
+
+#~ msgid "Premium Upgrades ($9-15)"
+#~ msgstr "Premium Upgrades ($9-15)"
+
+#~ msgid "Visit Upgrades Gallery"
+#~ msgstr "Besuche die Upgrade Gallerie"
+
+#~ msgid "WordPress Resources"
+#~ msgstr "WordPress Plugins"
+
+#~ msgid ""
+#~ "Save time and money searching for WordPress products by following our "
+#~ "recommendations"
+#~ msgstr ""
+#~ "Spare beim suchen von WordPress Plugins Zeit und Geld in dem du unseren "
+#~ "Empfehlungen folgst"
+
+#~ msgid "View Resources"
+#~ msgstr "Zeige Empfehlungen"
+
+#~ msgid "Tracks"
+#~ msgstr "Tracks"
+
+#~ msgid "https://www.competethemes.com/tracks/"
+#~ msgstr "https://www.competethemes.com/tracks/"
+
+#~ msgid "Compete Themes"
+#~ msgstr "Compete Themes"
+
+#~ msgid "https://www.competethemes.com/"
+#~ msgstr "https://www.competethemes.com/"
