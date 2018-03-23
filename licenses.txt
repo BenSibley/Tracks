@@ -1,4 +1,4 @@
-Tracks WordPress Theme, Copyright 2017 Compete Themes
+Tracks WordPress Theme, Copyright 2018 Compete Themes
 Tracks is distributed under the terms of the GNU GPL
 
 License: GNU General Public License v2 or later
