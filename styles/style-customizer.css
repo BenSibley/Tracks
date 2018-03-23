@@ -79,6 +79,11 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 #customize-control-ct_tracks_background_texture_setting input {
   visibility: hidden;
 }
+#customize-control-ct_tracks_background_texture_setting .customize-inside-control-row {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
 #customize-control-ct_tracks_background_texture_setting label {
   display: inline-block;
   width: 80px;

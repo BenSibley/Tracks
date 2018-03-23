@@ -46,17 +46,17 @@ jQuery(document).ready(function($) {
             counter++;
 
             if ( $('#accordion-panel-ct_tracks_pro_colors_panel').length ) {
-                $(this).parent().css('background-image', 'url("' + ct_tracks_objectL10n.PLUGINS_URL + '/tracks-pro/assets/images/textures/' + $(this).val() + '.png")');
+                $(this).next().css('background-image', 'url("' + ct_tracks_objectL10n.PLUGINS_URL + '/tracks-pro/assets/images/textures/' + $(this).val() + '.png")');
             } else {
-                $(this).parent().css('background-image', 'url("' + ct_tracks_objectL10n.PLUGINS_URL + '/tracks-background-textures/textures/' + $(this).val() + '.png")');
+                $(this).next().css('background-image', 'url("' + ct_tracks_objectL10n.PLUGINS_URL + '/tracks-background-textures/textures/' + $(this).val() + '.png")');
             }
 
             // add initial 'selected' class
             if ($(this).prop('checked')) {
-                $(this).parent().addClass('selected');
+                $(this).next().addClass('selected');
             }
             if ( counter % 3 == 0) {
-                $(this).parent().addClass('no-margin');
+                $(this).next().addClass('no-margin');
             }
         });
 
@@ -70,11 +70,11 @@ jQuery(document).ready(function($) {
     function addSelectedLayoutClass(inputs, target) {
 
         // remove 'selected' class from all labels
-        inputs.parent().removeClass('selected');
+        inputs.next().removeClass('selected');
 
         // apply 'selected' class to :checked input
         if (target.prop('checked')) {
-            target.parent().addClass('selected');
+            target.next().addClass('selected');
         }
     }
 
