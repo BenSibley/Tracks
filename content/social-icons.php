@@ -33,6 +33,8 @@ if ( ! empty( $active_sites ) ) {
 
 			if ( in_array( $active_site, $square_icons ) ) {
 				$class = 'fa fa-' . $active_site . '-square';
+			} elseif ( $active_site == 'ok-ru') {
+				$class = 'fa fa-odnoklassniki';
 			} else {
 				$class = 'fa fa-' . $active_site;
 			}
