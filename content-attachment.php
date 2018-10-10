@@ -23,11 +23,10 @@
 			</article>
 			<nav class='further-reading'>
 				<p class='prev'>
-					<span><?php previous_image_link( false, __( 'Previous Image', 'tracks' ) ); ?></span>
+					<span><?php previous_image_link( false, esc_html__( 'Previous Image', 'tracks' ) ); ?></span>
 				</p>
-
 				<p class='next'>
-					<span><?php next_image_link( false, __( 'Next Image', 'tracks' ) ); ?></span>
+					<span><?php next_image_link( false, esc_html__( 'Next Image', 'tracks' ) ); ?></span>
 				</p>
 			</nav>
 		</div>

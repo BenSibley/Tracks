@@ -75,7 +75,7 @@ function ct_tracks_add_social_profile_settings( $user ) {
 	?>
 	<table class="form-table">
 		<tr>
-			<th><h3><?php _e( 'Social Profiles', 'tracks' ); ?></h3></th>
+			<th><h3><?php esc_html_e( 'Social Profiles', 'tracks' ); ?></h3></th>
 		</tr>
 		<?php
 		foreach ( $social_sites as $key => $social_site ) {
@@ -117,7 +117,7 @@ function ct_tracks_add_social_profile_settings( $user ) {
 			<tr>
 				<th>
 					<?php if ( $key == 'email' ) : ?>
-						<label for="<?php echo esc_attr( $key ); ?>-profile"><?php _e( 'Email Address', 'tracks' ); ?></label>
+						<label for="<?php echo esc_attr( $key ); ?>-profile"><?php esc_html_e( 'Email Address', 'tracks' ); ?></label>
 					<?php else : ?>
 						<label for="<?php echo esc_attr( $key ); ?>-profile"><?php echo esc_html( $label ); ?></label>
 					<?php endif; ?>

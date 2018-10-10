@@ -33,7 +33,7 @@ function ct_tracks_options_content() {
 					<p><?php printf( __( 'Not sure where to start? The <strong>%1$s Getting Started Guide</strong> will take you step-by-step through every feature in %1$s.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
 					<p>
 						<a target="_blank" class="button-primary"
-						   href="https://www.competethemes.com/help/getting-started-tracks/"><?php _e( 'View Guide', 'tracks' ); ?></a>
+						   href="https://www.competethemes.com/help/getting-started-tracks/"><?php esc_html_e( 'View Guide', 'tracks' ); ?></a>
 					</p>
 				</div>
 				<?php if ( !function_exists( 'ct_tracks_pro_init' ) ) : ?>
@@ -41,14 +41,14 @@ function ct_tracks_options_content() {
 						<h3><?php printf( esc_html__( '%s Pro Plugin', 'tracks' ), wp_get_theme( get_template() ) ); ?></h3>
 						<p><?php printf( esc_html__( 'Make your site more customizable and beautiful with %s Pro', 'tracks' ), wp_get_theme( get_template() ) ); ?>.</p>
 						<p><a target="_blank" class="button-primary"
-						      href="https://www.competethemes.com/tracks-pro/"><?php printf( __( 'Visit %s Pro', 'tracks' ), wp_get_theme( get_template() ) ); ?></a>
+						      href="https://www.competethemes.com/tracks-pro/"><?php printf( esc_html__( 'Visit %s Pro', 'tracks' ), wp_get_theme( get_template() ) ); ?></a>
 						</p>
 					</div>
 				<?php endif; ?>
 				<div class="content content-review">
 					<h3><?php esc_html_e( 'Leave a Review', 'tracks' ); ?></h3>
 					<p><?php printf( esc_html__( 'Help others find %s by leaving a review on wordpress.org.', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
-					<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/tracks/reviews/"><?php _e( 'Leave a Review', 'tracks' ); ?></a>
+					<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/tracks/reviews/"><?php esc_html_e( 'Leave a Review', 'tracks' ); ?></a>
 				</div>
 				<div class="content content-presspad">
 					<h3><?php printf( esc_html__( 'Turn %s into a Mobile App', 'tracks' ), wp_get_theme( get_template() ) ); ?></h3>
@@ -119,7 +119,7 @@ function ct_tracks_license_form_output( $upgrades ) {
 						       placeholder="ex. 1d58ag920zf5e551bab24aa3d18e2c79"
 						       value="<?php echo esc_attr( $license ); ?>"/>
 						<label class="description"
-						       for="ct_tracks_<?php echo $upgrade; ?>_license_key"><?php _e( 'Enter your license key', 'tracks' ); ?></label>
+						       for="ct_tracks_<?php echo $upgrade; ?>_license_key"><?php esc_html_e( 'Enter your license key', 'tracks' ); ?></label>
 					</td>
 				</tr>
 				<?php if ( false !== $license ) { ?>

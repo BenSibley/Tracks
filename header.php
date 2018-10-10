@@ -11,7 +11,7 @@
 <body id="<?php print get_stylesheet(); ?>" <?php body_class( 'ct-body' ); ?>>
 	<?php do_action( 'tracks_body_top' ); ?>
 	<div id="overflow-container" class="overflow-container">
-		<a class="skip-content" href="#main"><?php _e( 'Skip to content', 'tracks' ); ?></a>
+		<a class="skip-content" href="#main"><?php esc_html_e( 'Skip to content', 'tracks' ); ?></a>
 		<header id="site-header" class="site-header" role="banner">
 			<?php get_template_part( 'content/top-navigation' ); ?>
 			<div class="container">

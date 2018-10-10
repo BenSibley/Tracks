@@ -19,14 +19,14 @@
 if ( function_exists( 'is_bbpress' ) ) {
 	if ( ! ( is_bbpress() && is_archive() ) ) {
 		the_posts_pagination( array(
-			'prev_text' => __( 'Previous', 'tracks' ),
-			'next_text' => __( 'Next', 'tracks' )
+			'prev_text' => esc_html__( 'Previous', 'tracks' ),
+			'next_text' => esc_html__( 'Next', 'tracks' )
 		) );
 	}
 } else {
 	the_posts_pagination( array(
-		'prev_text' => __( 'Previous', 'tracks' ),
-		'next_text' => __( 'Next', 'tracks' )
+		'prev_text' => esc_html__( 'Previous', 'tracks' ),
+		'next_text' => esc_html__( 'Next', 'tracks' )
 	) );
 }
 
