@@ -1,15 +1,28 @@
 <?php
-
+//----------------------------------------------------------------------------------
+//	Include all required files
+//----------------------------------------------------------------------------------
 require_once( trailingslashit( get_template_directory() ) . 'theme-options.php' );
-foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $filename ) {
-	include $filename;
-}
-foreach ( glob( trailingslashit( get_template_directory() ) . 'licenses/*.php' ) as $filename ) {
-	include $filename;
-}
-foreach ( glob( trailingslashit( get_template_directory() ) . 'licenses/functions/*.php' ) as $filename ) {
-	include $filename;
-}
+// inc
+require_once( trailingslashit( get_template_directory() ) . 'inc/customizer.php' );
+require_once( trailingslashit( get_template_directory() ) . 'inc/deprecated.php' );
+require_once( trailingslashit( get_template_directory() ) . 'inc/review.php' );
+require_once( trailingslashit( get_template_directory() ) . 'inc/scripts.php' );
+require_once( trailingslashit( get_template_directory() ) . 'inc/user-profile.php' );
+// licenses
+require_once( trailingslashit( get_template_directory() ) . 'licenses/background-images.php' );
+require_once( trailingslashit( get_template_directory() ) . 'licenses/background-textures.php' );
+require_once( trailingslashit( get_template_directory() ) . 'licenses/featured-videos.php' );
+require_once( trailingslashit( get_template_directory() ) . 'licenses/full-width-images.php' );
+require_once( trailingslashit( get_template_directory() ) . 'licenses/full-width.php' );
+require_once( trailingslashit( get_template_directory() ) . 'licenses/two-column-images.php' );
+require_once( trailingslashit( get_template_directory() ) . 'licenses/two-column.php' );
+// licenses/functions
+require_once( trailingslashit( get_template_directory() ) . 'licenses/functions/video.php' );
+
+//----------------------------------------------------------------------------------
+//	Include review request
+//----------------------------------------------------------------------------------
 require_once( trailingslashit( get_template_directory() ) . 'dnh/handler.php' );
 new WP_Review_Me( array(
 		'days_after' => 14,
