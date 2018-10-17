@@ -23,15 +23,15 @@ jQuery(function($) {
     function oEmbedAjax() {
 
         // trigger loading icon when ajax starts
-        $(document).bind("ajaxStart.mine", function() {
+        $(document).on("ajaxStart.mine", function() {
             videoPreview.addClass('ajax-loading');
         });
         // turn off loading icon when ajax stops
-        $(document).bind("ajaxStop.mine", function() {
+        $(document).on("ajaxStop.mine", function() {
             videoPreview.removeClass('ajax-loading');
 
             // unind ajax to prevent other ajax on page from triggering loading indicator
-            $(document).unbind(".mine");
+            $(document).off(".mine");
         });
 
         // get the URL in the input

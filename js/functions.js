@@ -21,7 +21,7 @@ jQuery(function($){
     videoHeightAdjust();
     adjustSiteHeight();
 
-    $(window).load(function(){
+    $(window).on('load', function(){
         removeLayoutGaps();
         separatePostImage();
     });
@@ -53,7 +53,7 @@ jQuery(function($){
     } );
 
     // bind the tap event on the menu icon
-    $('#toggle-navigation').bind('click', onTap);
+    $('#toggle-navigation').on('click', onTap);
 
     function onTap() {
 
@@ -67,7 +67,7 @@ jQuery(function($){
             siteHeader.removeClass('toggled');
 
             // stop watching scroll to auto-close menu
-            $(window).unbind('scroll');
+            $(window).off('scroll');
 
             // delayed so it isn't seen
             setTimeout(function() {
@@ -94,7 +94,7 @@ jQuery(function($){
             menuPrimaryTracks.css('padding-top', $('#title-info').height() + 48);
 
             // watch scroll to auto-close the menu if visitor scrolls past it
-            $(window).scroll(onScroll);
+            $(window).on('scroll', onScroll);
         }
     }
     function onScroll() {
@@ -104,7 +104,7 @@ jQuery(function($){
         // keep updating var on scroll
         var topDistance = $(window).scrollTop();
         if (topDistance > menuItemsBottom) {
-            $(window).unbind('scroll');
+            $(window).off('scroll');
             onTap();
         }
     }
@@ -125,32 +125,32 @@ jQuery(function($){
     }
 
     /* allow keyboard access/visibility for dropdown menu items */
-    $('.menu-item a, .page_item a').focus(function(){
+    $('.menu-item a, .page_item a').on('focus',function(){
         $(this).parent('li').addClass('focused');
         $(this).parents('ul').addClass('focused');
     });
-    $('.menu-item a, .page_item a').focusout(function(){
+    $('.menu-item a, .page_item a').on('focusout', function(){
         $(this).parent('li').removeClass('focused');
         $(this).parents('ul').removeClass('focused');
     });
 
     // ===== Scroll to Top ==== //
 
-    $(window).scroll(function() {
+    $(window).on('scroll', function() {
         if ($(this).scrollTop() >= 600) {        // If page is scrolled more than 50px
             $('#return-top').addClass('visible');    // Fade in the arrow
         } else {
             $('#return-top').removeClass('visible');   // Else fade out the arrow
         }
     });
-    $('#return-top').click(function(e) {      // When arrow is clicked
+    $('#return-top').on('click', function(e) {      // When arrow is clicked
         $('body,html').animate({
             scrollTop : 0                       // Scroll to top of body
         }, 800);
     });
 
     // bind the click event on the secondary menu icon
-    $('#toggle-secondary-navigation').bind('click', openSecondaryMenu);
+    $('#toggle-secondary-navigation').on('click', openSecondaryMenu);
 
     function openSecondaryMenu() {
 
@@ -167,7 +167,7 @@ jQuery(function($){
     }
 
     // bind the click event on the search icon
-    $('#search-icon').bind('click', openSearchBar);
+    $('#search-icon').on('click', openSearchBar);
 
     function openSearchBar() {
 
@@ -257,7 +257,7 @@ jQuery(function($){
         },
         delay: 100 //(milliseconds) adjust to the highest acceptable value
     };
-    $(window).scroll(function() {
+    $(window).on('scroll', function() {
 
         if(scrollHandling.allow) {
             lazyLoadImages();
