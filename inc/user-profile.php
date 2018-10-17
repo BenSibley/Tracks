@@ -82,36 +82,40 @@ function ct_tracks_add_social_profile_settings( $user ) {
 
 			$label = ucfirst( $key );
 
-			if ( $key == 'googleplus' ) {
-				$label = 'Google Plus';
+			if ( $key == 'google-plus' ) {
+				$label = __('Google Plus', 'tracks');
 			} elseif ( $key == 'rss' ) {
-				$label = 'RSS';
+				$label = __('RSS', 'tracks');
 			} elseif ( $key == 'soundcloud' ) {
-				$label = 'SoundCloud';
+				$label = __('SoundCloud', 'tracks');
 			} elseif ( $key == 'slideshare' ) {
-				$label = 'SlideShare';
+				$label = __('SlideShare', 'tracks');
 			} elseif ( $key == 'codepen' ) {
-				$label = 'CodePen';
+				$label = __('CodePen', 'tracks');
 			} elseif ( $key == 'stumbleupon' ) {
-				$label = 'StumbleUpon';
+				$label = __('StumbleUpon', 'tracks');
 			} elseif ( $key == 'deviantart' ) {
-				$label = 'DeviantArt';
+				$label = __('DeviantArt', 'tracks');
 			} elseif ( $key == 'google-wallet' ) {
-				$label = 'Google Wallet';
+				$label = __('Google Wallet', 'tracks');
 			} elseif ( $key == 'hacker-news' ) {
-				$label = 'Hacker News';
+				$label = __('Hacker News', 'tracks');
 			} elseif ( $key == 'whatsapp' ) {
-				$label = 'WhatsApp';
+				$label = __('WhatsApp', 'tracks');
 			} elseif ( $key == 'qq' ) {
-				$label = 'QQ';
+				$label = __('QQ', 'tracks');
 			} elseif ( $key == 'vk' ) {
-				$label = 'VK';
+				$label = __('VK', 'tracks');
+			} elseif ( $key == 'ok-ru' ) {
+				$label = __('OK.ru', 'tracks');
 			} elseif ( $key == 'wechat' ) {
-				$label = 'WeChat';
+				$label = __('WeChat', 'tracks');
 			} elseif ( $key == 'tencent-weibo' ) {
-				$label = 'Tencent Weibo';
+				$label = __('Tencent Weibo', 'tracks');
 			} elseif ( $key == 'paypal' ) {
-				$label = 'PayPal';
+				$label = __('PayPal', 'tracks');
+			} elseif ( $key == 'email-form' ) {
+				$label = __('Contact Form', 'tracks');
 			}
 			?>
 			<tr>
