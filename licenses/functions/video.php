@@ -259,33 +259,35 @@ function ct_tracks_video_save_data( $post_id ) {
 add_action( 'save_post', 'ct_tracks_video_save_data' );
 
 // front-end output
-function ct_tracks_pro_output_featured_video( $featured_image ){
+if ( ! function_exists( ( 'ct_tracks_pro_output_featured_video' ) ) ) {
+	function ct_tracks_pro_output_featured_video( $featured_image ){
 
-	if ( trim( get_option( 'ct_tracks_featured_videos_license_key_status' ) ) != 'valid' )
-		return $featured_image;
+		if ( trim( get_option( 'ct_tracks_featured_videos_license_key_status' ) ) != 'valid' )
+			return $featured_image;
 
-	// get the post object
-	global $post;
+		// get the post object
+		global $post;
 
-	// check for a featured video
-	$featured_video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
+		// check for a featured video
+		$featured_video = get_post_meta( $post->ID, 'ct_tracks_video_key', true );
 
-	if( $featured_video ) {
+		if( $featured_video ) {
 
-		// get the display setting (post or blog)
-		$display_blog = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
+			// get the display setting (post or blog)
+			$display_blog = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
 
-		// post and setting is post or both, or if the blog and setting is blog or both, or if a page
-		if(
-			( is_singular() && ( $display_blog == 'post' || $display_blog == 'both' ) )
-			|| ( ( is_home() || is_archive() || is_search() ) && ( $display_blog == 'blog' || $display_blog == 'both' ) )
-			|| is_singular('page')
-		) {
-			$featured_image = '<div class="featured-video">' . wp_oembed_get( esc_url( $featured_video ) ) . '</div>';
+			// post and setting is post or both, or if the blog and setting is blog or both, or if a page
+			if(
+				( is_singular() && ( $display_blog == 'post' || $display_blog == 'both' ) )
+				|| ( ( is_home() || is_archive() || is_search() ) && ( $display_blog == 'blog' || $display_blog == 'both' ) )
+				|| is_singular('page')
+			) {
+				$featured_image = '<div class="featured-video">' . wp_oembed_get( esc_url( $featured_video ) ) . '</div>';
+			}
 		}
-	}
 
-	return $featured_image;
+		return $featured_image;
+	}
 }
 add_filter( 'ct_tracks_featured_image', 'ct_tracks_pro_output_featured_video', 20 );
 
