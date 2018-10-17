@@ -10,7 +10,12 @@ background-size: 1px 24px; /* this is a 24px baseline grid */
 background-color: gray;
 background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
 background-size: 11.1%; /* This is at 6-columns -> just change this # */
-/* Customizer Styles */
+#sub-accordion-section-ct_tracks_social_icons #customize-control-email-form {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: solid 1px #d5d5d5;
+}
+
 #accordion-section-ct_tracks_pro .accordion-section-title {
   color: #fff;
   background: #05B0E7;
