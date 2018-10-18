@@ -998,8 +998,8 @@ function ct_tracks_textures_array() {
 	return $textures;
 }
 
-if ( ! function_exists( 'ct_tracks_background_texture_output' ) ) {
-	function ct_tracks_background_texture_output( $css ) {
+if ( ! function_exists( 'ct_tracks_sanitize_css' ) ) {
+	function ct_tracks_sanitize_css( $css ) {
 		$css = wp_kses( $css, array( '\'', '\"' ) );
 		$css = str_replace( '&gt;', '>', $css );
 
