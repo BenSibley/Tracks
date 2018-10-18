@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tracks 1.60\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-03-23 18:38:36+00:00\n"
+"POT-Creation-Date: 2018-10-18 13:00:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +27,7 @@ msgid ""
 "post\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:79 comments.php:86
+#: comments.php:79 comments.php:96
 msgid "Comments are closed."
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Previous Image"
 msgstr ""
 
-#: content-attachment.php:30
+#: content-attachment.php:29
 msgid "Next Image"
 msgstr ""
 
@@ -115,85 +115,85 @@ msgid ""
 "Themes."
 msgstr ""
 
-#: functions.php:18
+#: functions.php:31
 msgid ""
 "Hey! Sorry to interrupt, but you've been using Tracks for a little while "
 "now. If you're happy with this theme, could you take a minute to leave a "
 "review? <i>You won't see this notice again after closing it.</i>"
 msgstr ""
 
-#: functions.php:51
+#: functions.php:64
 msgid "Primary"
 msgstr ""
 
-#: functions.php:52
+#: functions.php:65
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:53 functions.php:88 inc/customizer.php:125
+#: functions.php:66 functions.php:108 inc/customizer.php:125
 #: inc/customizer.php:178 inc/customizer.php:807 inc/customizer.php:826
 msgid "Footer"
 msgstr ""
 
-#: functions.php:66
+#: functions.php:86
 msgid "After Post Content"
 msgstr ""
 
-#: functions.php:68
+#: functions.php:88
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
 msgstr ""
 
-#: functions.php:77
+#: functions.php:97
 msgid "After Page Content"
 msgstr ""
 
-#: functions.php:79
+#: functions.php:99
 msgid "Widgets in this area will be shown after page content"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:110
 msgid "Widgets in this area will be shown in the footer"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:144
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:139
+#: functions.php:159
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:144 functions.php:145
+#: functions.php:164 functions.php:165
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:150 functions.php:151
+#: functions.php:170 functions.php:171
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:156
+#: functions.php:176
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:177
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:198
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:172
+#: functions.php:199
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:203 functions.php:267
+#: functions.php:230 functions.php:294
 msgid "Read the post"
 msgstr ""
 
-#: functions.php:838
+#: functions.php:844
 msgid "Thanks for activating %s!"
 msgstr ""
 
@@ -277,8 +277,76 @@ msgstr ""
 msgid "Do not display"
 msgstr ""
 
-#: inc/customizer.php:194 inc/user-profile.php:120
+#: inc/customizer.php:194 inc/user-profile.php:127
 msgid "Email Address"
+msgstr ""
+
+#: inc/customizer.php:206 inc/user-profile.php:89
+msgid "Google Plus"
+msgstr ""
+
+#: inc/customizer.php:208 inc/user-profile.php:91
+msgid "RSS"
+msgstr ""
+
+#: inc/customizer.php:210 inc/user-profile.php:93
+msgid "SoundCloud"
+msgstr ""
+
+#: inc/customizer.php:212 inc/user-profile.php:95
+msgid "SlideShare"
+msgstr ""
+
+#: inc/customizer.php:214 inc/user-profile.php:97
+msgid "CodePen"
+msgstr ""
+
+#: inc/customizer.php:216 inc/user-profile.php:99
+msgid "StumbleUpon"
+msgstr ""
+
+#: inc/customizer.php:218 inc/user-profile.php:101
+msgid "DeviantArt"
+msgstr ""
+
+#: inc/customizer.php:220 inc/user-profile.php:103
+msgid "Google Wallet"
+msgstr ""
+
+#: inc/customizer.php:222 inc/user-profile.php:105
+msgid "Hacker News"
+msgstr ""
+
+#: inc/customizer.php:224 inc/user-profile.php:107
+msgid "WhatsApp"
+msgstr ""
+
+#: inc/customizer.php:226 inc/user-profile.php:109
+msgid "QQ"
+msgstr ""
+
+#: inc/customizer.php:228 inc/user-profile.php:111
+msgid "VK"
+msgstr ""
+
+#: inc/customizer.php:230 inc/user-profile.php:113
+msgid "OK.ru"
+msgstr ""
+
+#: inc/customizer.php:232 inc/user-profile.php:115
+msgid "WeChat"
+msgstr ""
+
+#: inc/customizer.php:234 inc/user-profile.php:117
+msgid "Tencent Weibo"
+msgstr ""
+
+#: inc/customizer.php:236 inc/user-profile.php:119
+msgid "PayPal"
+msgstr ""
+
+#: inc/customizer.php:238 inc/user-profile.php:121
+msgid "Contact Form"
 msgstr ""
 
 #: inc/customizer.php:250
@@ -527,7 +595,7 @@ msgstr ""
 msgid "Click here to leave your review"
 msgstr ""
 
-#: inc/user-profile.php:78
+#: inc/user-profile.php:81
 msgid "Social Profiles"
 msgstr ""
 
@@ -765,12 +833,12 @@ msgctxt "View all posts in post category"
 msgid "View all posts in %s"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:135
 msgctxt "verb: reply to this comment"
 msgid "Reply"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:139
 msgctxt "verb: edit this comment"
 msgid "Edit"
 msgstr ""
