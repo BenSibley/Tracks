@@ -554,6 +554,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'snapchat',
 			'soundcloud',
 			'spotify',
+			'stack-overflow',
 			'steam',
 			'stumbleupon',
 			'telegram',

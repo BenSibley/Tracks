@@ -234,6 +234,8 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 				$label = __('Tencent Weibo', 'tracks');
 			} elseif ( $social_site == 'paypal' ) {
 				$label = __('PayPal', 'tracks');
+			} elseif ( $social_site == 'stack-overflow' ) {
+				$label = __('Stack Overflow', 'tracks');
 			} elseif ( $social_site == 'email-form' ) {
 				$label = __('Contact Form', 'tracks');
 			}

@@ -45,6 +45,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'soundcloud'    => 'soundcloud_profile',
 			'spotify'       => 'spotify_profile',
 			'snapchat'      => 'snapchat_profile',
+			'stack-overflow' => 'stack_overflow_profile',
 			'steam'         => 'steam_profile',
 			'stumbleupon'   => 'stumbleupon_profile',
 			'telegram'      => 'telegram_profile',
@@ -119,6 +120,8 @@ function ct_tracks_add_social_profile_settings( $user ) {
 				$label = __('Tencent Weibo', 'tracks');
 			} elseif ( $key == 'paypal' ) {
 				$label = __('PayPal', 'tracks');
+			} elseif ( $key == 'stack-overflow' ) {
+				$label = __('Stack Overflow', 'tracks');
 			} elseif ( $key == 'email-form' ) {
 				$label = __('Contact Form', 'tracks');
 			}
