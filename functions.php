@@ -540,6 +540,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'google-plus',
 			'google-wallet',
 			'hacker-news',
+			'medium',
 			'meetup',
 			'mixcloud',
 			'ok-ru',
