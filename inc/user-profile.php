@@ -35,6 +35,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'meetup'        => 'meetup_profile',
 			'mixcloud'      => 'mixcloud_profile',
 			'ok-ru'         => 'ok_ru_profile',
+			'patreon'       => 'patreon_profile',
 			'paypal'        => 'paypal_profile',
 			'podcast'       => 'podcast_profile',
 			'qq'            => 'qq_profile',

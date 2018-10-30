@@ -544,6 +544,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'meetup',
 			'mixcloud',
 			'ok-ru',
+			'patreon',
 			'paypal',
 			'podcast',
 			'qq',
