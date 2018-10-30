@@ -31,6 +31,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'google-wallet' => 'google_wallet_profile',
 			'hacker-news'   => 'hacker-news_profile',
 			'meetup'        => 'meetup_profile',
+			'mixcloud'      => 'mixcloud_profile',
 			'ok-ru'         => 'ok_ru_profile',
 			'paypal'        => 'paypal_profile',
 			'podcast'       => 'podcast_profile',
