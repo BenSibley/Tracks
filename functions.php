@@ -532,6 +532,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'delicious',
 			'deviantart',
 			'digg',
+			'discord',
 			'dribbble',
 			'flickr',
 			'foursquare',

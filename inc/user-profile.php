@@ -22,6 +22,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'delicious'     => 'delicious_profile',
 			'deviantart'    => 'deviantart_profile',
 			'digg'          => 'digg_profile',
+			'discord'       => 'discord_profile',
 			'dribbble'      => 'dribbble_profile',
 			'etsy'          => 'etsy_profile',
 			'flickr'        => 'flickr_profile',
