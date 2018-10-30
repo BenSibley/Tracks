@@ -19,7 +19,7 @@
 			    <h1 class='excerpt-title'>
 				    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			    </h1>
-			    <i class="fa fa-arrow-circle-right"></i>
+			    <i class="fas fa-arrow-circle-right"></i>
 		    </div>
 	    </div>
 	    <div class="overlay"></div>

@@ -1,6 +1,6 @@
 <?php if ( has_nav_menu( 'secondary' ) ) : ?>
 	<div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
-		<button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+		<button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fas fa-plus"></i></button>
 		<?php wp_nav_menu(
 			array(
 				'theme_location'  => 'secondary',

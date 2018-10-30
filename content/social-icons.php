@@ -3,12 +3,10 @@
 $social_sites = ct_tracks_social_site_list();
 
 $square_icons = array(
-	'linkedin',
 	'twitter',
 	'vimeo',
 	'youtube',
 	'pinterest',
-	'rss',
 	'reddit',
 	'tumblr',
 	'steam',
@@ -32,18 +30,28 @@ if ( ! empty( $active_sites ) ) {
 		foreach ( $active_sites as $active_site ) {
 
 			if ( in_array( $active_site, $square_icons ) ) {
-				$class = 'fa fa-' . $active_site . '-square';
-			} elseif ( $active_site == 'ok-ru') {
-				$class = 'fa fa-odnoklassniki';
+				$class = 'fab fa-' . $active_site . '-square';
+			} elseif ( $active_site == 'email-form' ) {
+				$class = 'far fa-envelope';
+			} elseif ( $active_site == 'rss' ) {
+				$class = 'fas fa-rss';
+			} elseif ( $active_site == 'podcast' ) {
+				$class = 'fas fa-podcast';
+			} elseif ( $active_site == 'wechat' ) {
+				$class = 'fab fa-weixin';
+			} elseif ( $active_site == 'ok-ru' ) {
+				$class = 'fab fa-odnoklassniki';
+			} elseif ( $active_site == 'phone' ) {
+				$class = 'fas fa-phone';
 			} else {
-				$class = 'fa fa-' . $active_site;
+				$class = 'fab fa-' . $active_site;
 			}
 
 			if ( $active_site == 'email' ) { ?>
 				<li>
 					<a class="email" target="_blank"
 					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $active_site ) ) ); ?>">
-						<i class="fa fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'tracks' ); ?>"></i>
+						<i class="fas fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'tracks' ); ?>"></i>
 						<span class="screen-reader-text"><?php echo esc_html_x( 'email', 'noun', 'tracks' ); ?></span>
 					</a>
 				</li>
@@ -51,7 +59,7 @@ if ( ! empty( $active_sites ) ) {
 				<li>
 					<a class="contact-form" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
-						<i class="fa fa-envelope-o" title="<?php esc_attr_e( 'contact form', 'tracks' ); ?>"></i>
+						<i class="far fa-envelope" title="<?php esc_attr_e( 'contact form', 'tracks' ); ?>"></i>
 						<span class="screen-reader-text"><?php esc_html_e( 'contact form', 'tracks' ); ?></span>
 					</a>
 				</li>

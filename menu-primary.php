@@ -1,5 +1,5 @@
 <button id="toggle-navigation" class="toggle-navigation">
-	<i class="fa fa-bars"></i>
+	<i class="fas fa-bars"></i>
 </button>
 
 <div id="menu-primary-tracks" class="menu-primary-tracks"></div>

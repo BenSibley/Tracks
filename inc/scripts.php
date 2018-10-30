@@ -13,7 +13,7 @@ function ct_tracks_load_javascript_files() {
 
 	wp_enqueue_script( 'ct-tracks-production', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'ct-tracks-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/all.min.css' );
 
 	wp_enqueue_style( 'ct-tracks-style', get_stylesheet_uri() );
 

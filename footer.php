@@ -31,7 +31,7 @@
 
 <?php if ( get_theme_mod( 'additional_options_return_top_settings' ) != 'hide' ) { ?>
 	<button id="return-top" class="return-top">
-		<i class="fa fa-arrow-up"></i>
+		<i class="fas fa-arrow-up"></i>
 	</button>
 <?php }
 
