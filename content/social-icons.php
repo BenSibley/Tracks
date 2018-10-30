@@ -55,14 +55,12 @@ if ( ! empty( $active_sites ) ) {
 						<span class="screen-reader-text"><?php echo esc_html_x( 'email', 'noun', 'tracks' ); ?></span>
 					</a>
 				</li>
-			<?php } elseif ( $active_site == 'email-form' ) { ?>
-				<li>
-					<a class="contact-form" target="_blank"
-					   href="<?php echo esc_url( get_theme_mod( $active_site ) ); ?>">
-						<i class="far fa-envelope" title="<?php esc_attr_e( 'contact form', 'tracks' ); ?>"></i>
-						<span class="screen-reader-text"><?php esc_html_e( 'contact form', 'tracks' ); ?></span>
-					</a>
-				</li>
+			<?php } elseif ( $active_site == 'phone' ) { ?>
+				<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+						href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
+					<i class="<?php echo esc_attr( $class ); ?>"></i>
+					<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
+				</a>
 			<?php }  elseif ( $active_site == 'skype') { ?>
 				<li>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"

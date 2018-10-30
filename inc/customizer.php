@@ -251,6 +251,18 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 					'section'     => 'ct_tracks_social_icons',
 					'priority'    => $priority
 				) );
+			} else if ( $social_site == 'phone' ) {
+				// setting
+				$wp_customize->add_setting( $social_site, array(
+					'sanitize_callback' => 'ct_tracks_sanitize_phone'
+				) );
+				// control
+				$wp_customize->add_control( $social_site, array(
+					'type'        => 'text',
+					'label'       => $label,
+					'section'     => 'ct_tracks_social_icons',
+					'priority'    => $priority
+				) );
 			} else {
 				// setting
 				$wp_customize->add_setting( $social_site, array(
@@ -1004,5 +1016,13 @@ if ( ! function_exists( 'ct_tracks_sanitize_css' ) ) {
 		$css = str_replace( '&gt;', '>', $css );
 
 		return $css;
+	}
+}
+
+function ct_tracks_sanitize_phone( $input ) {
+	if ( $input != '' ) {
+		return esc_url_raw( 'tel:' . $input, array( 'tel' ) );
+	} else {
+		return '';
 	}
 }

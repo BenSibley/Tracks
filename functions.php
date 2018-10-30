@@ -521,6 +521,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'youtube',
 			'rss',
 			'email',
+			'phone',
 			'email-form',
 			'amazon',
 			'bandcamp',

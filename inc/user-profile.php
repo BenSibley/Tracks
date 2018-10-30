@@ -12,6 +12,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'youtube'       => 'youtube_profile',
 			'rss'           => 'rss_profile',
 			'email'         => 'email_profile',
+			'phone'         => 'phone_profile',
 			'email-form'    => 'email_form_profile',
 			'amazon'        => 'amazon_profile',
 			'bandcamp'      => 'bandcamp_profile',
@@ -134,6 +135,10 @@ function ct_tracks_add_social_profile_settings( $user ) {
 						<input type='text' id='<?php echo esc_attr( $key ); ?>-profile' class='regular-text'
 						       name='<?php echo esc_attr( $key ); ?>-profile'
 						       value='<?php echo is_email( get_the_author_meta( $social_site, $user->ID ) ); ?>'/>
+					<?php elseif ( $key == 'phone' ) : ?>
+						<input type='url' id='<?php echo esc_attr( $key ); ?>-profile' class='regular-text'
+						       name='<?php echo esc_attr( $key ); ?>-profile'
+						       value='<?php echo is_email( get_the_author_meta( $social_site, $user->ID ), array( 'tel' ) ); ?>'/>
 					<?php else : ?>
 						<input type='url' id='<?php echo esc_attr( $key ); ?>-profile' class='regular-text'
 						       name='<?php echo esc_attr( $key ); ?>-profile'
