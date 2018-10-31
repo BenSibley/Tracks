@@ -56,11 +56,13 @@ if ( ! empty( $active_sites ) ) {
 					</a>
 				</li>
 			<?php } elseif ( $active_site == 'phone' ) { ?>
-				<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
-						href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
-					<i class="<?php echo esc_attr( $class ); ?>"></i>
-					<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
-				</a>
+				<li>
+					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+							href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
+						<i class="<?php echo esc_attr( $class ); ?>"></i>
+						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
+					</a>
+				</li>
 			<?php }  elseif ( $active_site == 'skype') { ?>
 				<li>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"

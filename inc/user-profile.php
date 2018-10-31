@@ -145,7 +145,7 @@ function ct_tracks_add_social_profile_settings( $user ) {
 					<?php elseif ( $key == 'phone' ) : ?>
 						<input type='url' id='<?php echo esc_attr( $key ); ?>-profile' class='regular-text'
 						       name='<?php echo esc_attr( $key ); ?>-profile'
-						       value='<?php echo is_email( get_the_author_meta( $social_site, $user->ID ), array( 'tel' ) ); ?>'/>
+						       value='<?php echo esc_url( get_the_author_meta( $social_site, $user->ID ), array( 'tel' ) ); ?>'/>
 					<?php else : ?>
 						<input type='url' id='<?php echo esc_attr( $key ); ?>-profile' class='regular-text'
 						       name='<?php echo esc_attr( $key ); ?>-profile'
@@ -173,6 +173,15 @@ function ct_tracks_save_social_profiles( $user_id ) {
 			// if email, only accept 'mailto' protocol
 			if ( isset( $_POST["$key-profile"] ) ) {
 				update_user_meta( $user_id, $social_site, sanitize_email( $_POST["$key-profile"] ) );
+			}
+		} elseif ( $key == 'phone' ) {
+			// if phone, only accept 'tel' protocol
+			if ( isset( $_POST["$key-profile"] ) ) {
+				if ( $_POST["$key-profile"] == '' ) {
+					update_user_meta( $user_id, $social_site, '' );
+				} else {
+					update_user_meta( $user_id, $social_site, esc_url_raw( 'tel:' . $_POST["$key-profile"], array( 'tel' ) ) );
+				}
 			}
 		} else {
 			if ( isset( $_POST["$key-profile"] ) ) {
