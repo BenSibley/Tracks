@@ -844,7 +844,13 @@ if ( ! function_exists( ( 'ct_tracks_settings_notice' ) ) ) {
 
 		if ( isset( $_GET['tracks_status'] ) ) {
 
-			if ( $_GET['tracks_status'] == 'activated' ) {
+			if ( $_GET['tracks_status'] == 'deleted' ) {
+				?>
+				<div class="updated">
+					<p><?php esc_html_e( 'Customizer settings deleted.', 'tracks' ); ?></p>
+				</div>
+				<?php
+			} else if ( $_GET['tracks_status'] == 'activated' ) {
 				?>
 				<div class="updated">
 					<p><?php printf( esc_html__( 'Thanks for activating %s!', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
@@ -870,3 +876,72 @@ if ( ! function_exists( 'ct_tracks_modify_archive_descriptions' ) ) {
 	}
 }
 add_filter( 'get_the_archive_description', 'ct_tracks_modify_archive_descriptions' );
+
+if ( ! function_exists( 'ct_tracks_reset_customizer_options' ) ) {
+	function ct_tracks_reset_customizer_options() {
+
+		if ( empty( $_POST['tracks_reset_customizer'] ) || 'tracks_reset_customizer_settings' !== $_POST['tracks_reset_customizer'] ) {
+			return;
+		}
+
+		if ( ! wp_verify_nonce( $_POST['tracks_reset_customizer_nonce'], 'tracks_reset_customizer_nonce' ) ) {
+			return;
+		}
+
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			return;
+		}
+
+		$mods_array = array(
+			'tagline_display_setting',
+			'logo_upload',
+			'social_icons_display_setting',
+			'search_input_setting',
+			'post_date_display_setting',
+			'post_author_display_setting',
+			'post_category_display_setting',
+			'ct_tracks_comments_setting',
+			'ct_tracks_footer_text_setting',
+			'ct_tracks_custom_css_setting',
+			'premium_layouts_setting',
+			'premium_layouts_full_width_image_height',
+			'premium_layouts_full_width_image_height_post',
+			'premium_layouts_full_width_image_style',
+			'premium_layouts_full_width_full_post',
+			'additional_options_no_featured_image',
+			'additional_options_fallback_featured_image',
+			'additional_options_return_top_settings',
+			'additional_options_author_meta_settings',
+			'additional_options_further_reading_settings',
+			'additional_options_image_zoom_settings',
+			'additional_options_lazy_load_settings',
+			'additional_options_excerpt_length_settings',
+			'read_more_text',
+			'ct_tracks_background_image_setting',
+			'ct_tracks_texture_display_setting',
+			'ct_tracks_background_texture_setting',
+			'ct_tracks_header_color_setting'
+		);
+
+		$social_sites = ct_tracks_social_site_list();
+
+		// add social site settings to mods array
+		foreach ( $social_sites as $social_site ) {
+			$mods_array[] = $social_site;
+		}
+
+		$mods_array = apply_filters( 'ct_tracks_mods_to_remove', $mods_array );
+
+		foreach ( $mods_array as $theme_mod ) {
+			remove_theme_mod( $theme_mod );
+		}
+
+		$redirect = admin_url( 'themes.php?page=tracks-options' );
+		$redirect = add_query_arg( 'tracks_status', 'deleted', $redirect );
+
+		// safely redirect
+		wp_safe_redirect( $redirect );
+		exit;
+	}
+}
+add_action( 'admin_init', 'ct_tracks_reset_customizer_options' );
