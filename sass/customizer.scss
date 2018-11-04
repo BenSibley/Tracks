@@ -9,76 +9,19 @@
   }
 }
 
-// Tracks Pro section
-#accordion-section-ct_tracks_pro {
-
-  .accordion-section-title {
-    color: #fff;
+.upgrades-ad {
+  
+  a {
+    display: block;
+    padding: 12px 24px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
     background: #05B0E7;
     transition: background 0.2s;
 
-    &:after {
-      color: #fff;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      background: #3A96B5 !important;
-      color: #fff !important;
-
-      &:after {
-        color: #fff !important;
-      }
-    }
-  }
-}
-#customize-control-tracks_pro {
-  background: white;
-  border: solid 1px #D8D8D8;
-  padding: 6px 24px;
-  box-sizing: border-box;
-
-  ul {
-    list-style: disc;
-    padding-left: 15px;
-  }
-  img {
-    position: relative;
-    max-width: none;
-    width: 273px;
-    top: -6px;
-    left: -24px;
-    border-bottom: solid 1px #D8D8D8;
-  }
-  .bold {
-    font-weight: 600;
-    font-size: 16px;
-  }
-  .button-wrapper {
-    text-align: center;
-  }
-  .tracks-pro-button {
-    display: inline-block;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    margin: 12px auto;
-    padding: 15px 24px;
-    background: #FF7A05;
-    color: #fff;
-    text-decoration: none;
-    transition: background 0.2s;
-
-    &:before {
-      content: '\f06e';
-      font-family: 'FontAwesome';
-      margin-right: 6px;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      background: #FF8A23;
+    &:hover {
+      background: #3FBEE8;  
     }
   }
 }
