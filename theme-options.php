@@ -19,6 +19,7 @@ function ct_tracks_options_content() {
 	<div id="tracks-dashboard-wrap" class="wrap tracks-dashboard-wrap">
 		<h2><?php printf( esc_html__( '%s Dashboard', 'tracks' ), wp_get_theme() ); ?></h2>
 		<?php do_action( 'theme_options_before' ); ?>
+		<?php do_action( 'tracks_before_licenses' ); ?>
 		<div class="main">
 			<?php if ( function_exists( 'ct_tracks_pro_init' ) ) : ?>
 			<div class="thanks-upgrading" style="background-image: url(<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/bg-texture.png'; ?>)">
