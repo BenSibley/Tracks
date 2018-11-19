@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.63\n"
+"Project-Id-Version: Tracks 1.64\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-11-05 14:17:25+00:00\n"
+"POT-Creation-Date: 2018-11-19 16:33:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -126,74 +126,106 @@ msgstr ""
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:66 functions.php:108 inc/customizer.php:85
+#: functions.php:66 functions.php:143 inc/customizer.php:85
 #: inc/customizer.php:138 inc/customizer.php:781 inc/customizer.php:800
 msgid "Footer"
 msgstr ""
 
 #: functions.php:86
+msgid "small"
+msgstr ""
+
+#: functions.php:87
+msgid "S"
+msgstr ""
+
+#: functions.php:92
+msgid "regular"
+msgstr ""
+
+#: functions.php:93
+msgid "M"
+msgstr ""
+
+#: functions.php:98
+msgid "large"
+msgstr ""
+
+#: functions.php:99
+msgid "L"
+msgstr ""
+
+#: functions.php:104
+msgid "larger"
+msgstr ""
+
+#: functions.php:105
+msgid "XL"
+msgstr ""
+
+#: functions.php:121
 msgid "After Post Content"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:123
 msgid ""
 "Widgets in this area will be shown after post content before the prev/next "
 "post links"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:132
 msgid "After Page Content"
 msgstr ""
 
-#: functions.php:99
+#: functions.php:134
 msgid "Widgets in this area will be shown after page content"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:145
 msgid "Widgets in this area will be shown in the footer"
 msgstr ""
 
-#: functions.php:144
+#: functions.php:179
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:159
+#: functions.php:194
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:164 functions.php:165
+#: functions.php:199 functions.php:200
 msgid "Your Name"
 msgstr ""
 
-#: functions.php:170 functions.php:171
+#: functions.php:205 functions.php:206
 msgid "Your Email"
 msgstr ""
 
-#: functions.php:176
+#: functions.php:211
 msgid "Your Website URL"
 msgstr ""
 
-#: functions.php:177
+#: functions.php:212
 msgid "Your URL"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:233
 msgid "Your Comment"
 msgstr ""
 
-#: functions.php:199
+#: functions.php:234
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:230 functions.php:294
+#: functions.php:265 functions.php:329
 msgid "Read the post"
 msgstr ""
 
-#: functions.php:850
+#: functions.php:885
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:856
+#: functions.php:891
 msgid "Thanks for activating %s!"
 msgstr ""
 
@@ -662,9 +694,11 @@ msgid ""
 "over 50+ social media icons, search bar, comment display controls, premium "
 "layouts, and more. Tracks has a dark, simple, and minimalist design that "
 "makes it great for publish both text and image based content. Use it for a "
-"travel blog, online newspaper, video site, or podcast. As a free theme, you "
-"can use Tracks for as many projects as you’d like. Preview Tracks now on "
-"desktop, tablets, and mobile devices with the interactive live demo: "
+"travel blog, online newspaper, video site, podcast, or even an eCommerce "
+"store thanks to its WooCommerce compatibility. As a free theme, you can use "
+"Tracks for as many projects as you’d like. Now fully compatible with the "
+"new Gutenberg post editor. Preview Tracks now on desktop, tablets, and "
+"mobile devices with the interactive live demo: "
 "https://www.competethemes.com/demos/?theme=tracks"
 msgstr ""
 
@@ -702,12 +736,12 @@ msgctxt "View all posts in post category"
 msgid "View all posts in %s"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:170
 msgctxt "verb: reply to this comment"
 msgid "Reply"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:174
 msgctxt "verb: edit this comment"
 msgid "Edit"
 msgstr ""
