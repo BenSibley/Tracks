@@ -78,14 +78,14 @@ article a {
   text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .editor-post-title textarea, h2, h3, h4, h5, h6 {
   font-family: "raleway", sans-serif;
   margin: 0;
   padding: 0;
   font-weight: 400;
 }
 
-h1 {
+h1, .editor-post-title textarea {
   font-size: 2.625em;
   /* 42px / 16px */
   line-height: 1.143;
@@ -406,4 +406,64 @@ a img {
   max-width: 759px;
   -webkit-font-smoothing: antialiased !important;
   background: #fff;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+}
+
+.wp-block {
+  max-width: 734px;
+}
+
+.editor-post-title textarea {
+  color: #1A1A1A;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  outline: none;
+}
+
+.wp-block[data-align="wide"],
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.wp-block-quote.is-large {
+  padding-left: 0;
+  border-left: none;
+}
+
+.wp-block-embed {
+  margin: 1.5em 0;
+}
+
+.wp-block-code textarea {
+  outline: none;
+}
+
+.has-small-font-size {
+  font-size: 13px;
+}
+
+.has-regular-font-size {
+  font-size: 16px;
+}
+
+.has-large-font-size {
+  font-size: 21px;
+}
+
+.has-extra-large-font-size {
+  font-size: 30px;
+}
+
+@media all and (min-width: 1100px) {
+  .editor-post-title textarea {
+    font-size: 2.25em;
+    line-height: 1.5;
+  }
 }
