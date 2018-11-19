@@ -80,6 +80,34 @@ if ( ! function_exists( 'ct_tracks_theme_setup' ) ) {
 		// Gutenberg - add support for editor styles
 		add_theme_support('editor-styles');
 
+		// Gutenberg - modify the font sizes
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+					'name' => __( 'small', 'tracks' ),
+					'shortName' => __( 'S', 'tracks' ),
+					'size' => 13,
+					'slug' => 'small'
+			),
+			array(
+					'name' => __( 'regular', 'tracks' ),
+					'shortName' => __( 'M', 'tracks' ),
+					'size' => 16,
+					'slug' => 'regular'
+			),
+			array(
+					'name' => __( 'large', 'tracks' ),
+					'shortName' => __( 'L', 'tracks' ),
+					'size' => 21,
+					'slug' => 'large'
+			),
+			array(
+					'name' => __( 'larger', 'tracks' ),
+					'shortName' => __( 'XL', 'tracks' ),
+					'size' => 30,
+					'slug' => 'larger'
+			)
+	) );
+
 		load_theme_textdomain( 'tracks', get_template_directory() . '/languages' );
 	}
 }
