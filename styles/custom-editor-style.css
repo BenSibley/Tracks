@@ -1,5 +1,10 @@
 /*===== Variables =====*/
 /* Theme Colors */
+.wp-caption-text {
+  font-size: 0.813em;
+  line-height: 1.85;
+}
+
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /* grid stuff */
@@ -10,53 +15,395 @@ background-size: 1px 24px; /* this is a 24px baseline grid */
 background-color: gray;
 background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
 background-size: 11.1%; /* This is at 6-columns -> just change this # */
-body#tinymce.wp-editor {
-  font-family: Raleway, Arial, Helvetica, sans-serif;
-  font-size: 1em;
+/*===== Basic Styles =====*/
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "raleway", sans-serif;
   line-height: 1.5;
   color: #4d4d4d;
-  margin: 24px;
+  background: #222;
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
 }
-body#tinymce.wp-editor h1 {
+
+.overflow-container {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  min-height: 100%;
+}
+
+.main {
+  background: #222;
+  padding-bottom: 1.5em;
+  margin: 0 auto;
+}
+
+.loop-container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+p {
+  margin: 1.5em 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+a:link {
+  color: #222;
+}
+a:visited, a:hover, a:active, a:focus {
+  color: black;
+}
+
+article a {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+h1 {
   font-size: 2.625em;
   /* 42px / 16px */
   line-height: 1.143;
 }
-body#tinymce.wp-editor h2 {
+
+h2 {
   font-size: 2.25em;
   /* 36px / 16px */
   line-height: 1.34;
 }
-body#tinymce.wp-editor h3 {
+
+h3 {
   font-size: 1.625em;
   /* 26px / 16px */
   line-height: 1.85;
 }
-body#tinymce.wp-editor h4 {
+
+h4 {
   font-size: 1.313em;
   /* 21px / 16px */
   line-height: 1.143;
 }
-body#tinymce.wp-editor h5 {
+
+h5 {
   font-size: 1.125em;
   /* 18px / 16px */
   line-height: 1.34;
 }
-body#tinymce.wp-editor h6 {
+
+h6 {
   font-size: 1em;
   line-height: 1.5;
 }
-body#tinymce.wp-editor blockquote {
+
+ul,
+ol {
+  font-size: 1em;
+  padding: 0;
+  margin: 1.5em;
+}
+ul ul, ul ol,
+ol ul,
+ol ol {
+  margin: 0 1.5em;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul,
+li li {
+  font-size: 1em;
+}
+
+/* Markup styles */
+pre {
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+  padding: 0.75em;
+  background: #f5f5f5;
+}
+
+code {
+  padding: 0 0.375em;
+  background: #f5f5f5;
+}
+
+blockquote {
   margin: 1.5em 0;
   padding: 0 1.5em;
   border-left: solid 0.75em #222;
 }
-body#tinymce.wp-editor blockquote cite {
+blockquote cite {
   display: block;
   text-align: right;
 }
 
-body#tinymce.wp-editor a {
-  color: #222222;
-  text-decoration: underline;
+hr {
+  margin: 0.69em 0;
+}
+
+/* Table styles */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+td {
+  padding: 0.5em 0.75em;
+  border: solid 1px #4d4d4d;
+  line-height: 1.5;
+}
+
+th {
+  padding: 0.5em 0.75em;
+  border: solid 1px #4d4d4d;
+  line-height: 1.5;
+}
+
+/* Images */
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  height: auto;
+  line-height: 0;
+  max-width: 100%;
+  max-width: calc(100% - 48px);
+}
+.alignright img,
+.alignleft img,
+.aligncenter img,
+.alignnone img,
+.size-auto img,
+.size-full img,
+.size-large img,
+.size-medium img,
+.size-thumbnail img {
+  max-width: 100%;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+
+.aligncenter {
+  text-align: center;
+  margin: 1.5em auto;
+  display: block;
+  max-width: 100%;
+}
+
+.alignnone {
+  margin: 1.5em;
+}
+
+img {
+  height: auto;
+  line-height: 0;
+}
+
+.singular-attachment img {
+  max-width: 100%;
+}
+
+.wp-caption-text {
+  margin: 0;
+  color: #8c8c8c;
+}
+
+.wp-caption.aligncenter {
+  max-width: none;
+  margin: 0 auto;
+  width: auto !important;
+}
+
+/* Form styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  padding: 0.8em;
+  width: 100%;
+  max-width: 27.75em;
+  min-height: 45px;
+  outline: solid 1px #000;
+  border: none;
+  font-family: "raleway", sans-serif;
+  font-size: 0.813em;
+  line-height: 1.85;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+textarea {
+  max-width: 41.625em;
+  overflow: auto;
+}
+
+input[type="submit"] {
+  background: #222;
+  color: white;
+  max-width: 22.2em;
+  min-width: 11.1em;
+  padding: 0.8em;
+  min-height: 45px;
+  outline: none;
+  border: none;
+  font-family: "raleway", sans-serif;
+  font-size: 0.813em;
+  line-height: 1.85;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+  cursor: pointer;
+  background: black;
+}
+
+input[type="search"] {
+  margin-right: 1.5em;
+  padding-right: 0.375em;
+  /* so safari 'x' doesn't get cut off */
+}
+
+/* sticky */
+.excerpt.sticky .excerpt-container {
+  background: wheat;
+}
+
+/* ie image border fix */
+a img {
+  border: none;
+}
+
+.screen-reader-text {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+.skip-content {
+  position: absolute;
+  width: 100%;
+  background: #111;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 0.375em;
+  top: -4.5em;
+  z-index: 19;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.skip-content:active, .skip-content:focus {
+  top: 0;
+  color: #ffffff;
+}
+
+.search .sticky {
+  background: white;
+}
+
+.blog .main,
+.archive .main,
+.search .main {
+  width: 88.89%;
+  max-width: 1280px;
+}
+.blog #breadcrumbs,
+.archive #breadcrumbs,
+.search #breadcrumbs {
+  width: 100%;
+}
+
+.entry {
+  max-width: 1280px;
+}
+
+.infinite-loader,
+#infinite-handle {
+  clear: both;
+}
+
+#breadcrumbs {
+  margin: 1.5em auto;
+  width: 88.88%;
+  max-width: 1280px;
+  color: #aaaaaa;
+}
+#breadcrumbs a {
+  color: #fff;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  html {
+    -webkit-text-size-adjust: none;
+    /* none for no scaling */
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  html {
+    -webkit-text-size-adjust: none;
+    /* none for no scaling */
+  }
+}
+.mce-content-body.wp-editor {
+  margin: 0 auto;
+  padding: 0 24px !important;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 759px;
+  -webkit-font-smoothing: antialiased !important;
+  background: #fff;
 }
