@@ -55,6 +55,21 @@ body {
 .has-extra-large-font-size {
   font-size: 30px;
 }
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+
+  .wp-caption-dt,
+  .wp-caption-dd {
+    line-height: 1.5;
+  }
+}
 
 @media all and (min-width: 1100px) {
 
