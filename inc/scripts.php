@@ -42,27 +42,31 @@ function ct_tracks_enqueue_admin_styles( $hook ) {
 		wp_enqueue_style( 'ct-tracks-style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
 	}
 
-	// Featured Videos
-	if ( trim( get_option( 'ct_tracks_featured_videos_license_key_status' ) ) == 'valid' ) {
+	// Post Editor
+	if ( $hook == 'post.php' || $hook == 'post-new.php' ) {
 
-		// Post Editor
-		if ( $hook == 'post.php' || $hook == 'post-new.php' ) {
+		// Load Google Fonts
+		$font_args = array(
+			'family' => urlencode( 'Raleway:400,700' ),
+			'subset' => urlencode( 'latin,latin-ext' )
+		);
+		$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+
+		wp_enqueue_style( 'ct-tracks-google-fonts', $fonts_url );
+
+		// Featured Videos
+		if ( trim( get_option( 'ct_tracks_featured_videos_license_key_status' ) ) == 'valid' ) {
+
 			wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/fitvids.js', array( 'jquery' ), '', true );
 			wp_enqueue_script( 'ct-tracks-admin-js', get_template_directory_uri() . '/js/build/admin.min.js', array(
 				'jquery',
 				'fitvids'
 			), '', true );
 			wp_enqueue_style( 'ct-tracks-style-admin', get_template_directory_uri() . '/styles/style-admin.css' );
-
-			$font_args = array(
-				'family' => urlencode( 'Raleway:400,700' ),
-				'subset' => urlencode( 'latin,latin-ext' )
-			);
-			$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
-
-			wp_enqueue_style( 'ct-tracks-google-fonts', $fonts_url );
 		}
 	}
+
+	
 }
 add_action( 'admin_enqueue_scripts', 'ct_tracks_enqueue_admin_styles' );
 
