@@ -572,6 +572,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'flickr',
 			'foursquare',
 			'github',
+			'goodreads',
 			'google-plus',
 			'google-wallet',
 			'hacker-news',
