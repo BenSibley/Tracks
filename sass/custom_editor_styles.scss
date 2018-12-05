@@ -1,5 +1,8 @@
 @import "variables";
-@import "base";
+
+//------------------------------------------------------
+// Classic editor styles
+//------------------------------------------------------
 
 .mce-content-body.wp-editor {
   margin: 0 auto;
@@ -11,11 +14,178 @@
   background: #fff;
 }
 
-// Gutenberg
+//------------------------------------------------------
+// Basic styles for Gutenberg
+//------------------------------------------------------
+
 body {
   font-size: 16px;
   line-height: 1.5;
-  background: #fff;
+  font-family: $primary-font-stack;
+  color: $primary-gray;
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+}
+p {
+  margin: $baseline-height 0;
+}
+a {
+  color: $gray-dark;
+  @include transition(all 0.2s ease);
+
+  &:link {
+    color: $gray-dark;
+  }
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    color: black;
+  }
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: $primary-font-stack;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+h1 {
+  font-size: 2.625em; /* 42px / 16px */
+  line-height: 1.143;
+}
+h2 {
+  font-size: 2.25em; /* 36px / 16px */
+  line-height: 1.34;
+}
+h3 {
+  font-size: 1.625em; /* 26px / 16px */
+  line-height: 1.85;
+}
+h4 {
+  font-size: 1.313em; /* 21px / 16px */
+  line-height: 1.143;
+}
+h5 {
+  font-size: 1.125em; /* 18px / 16px */
+  line-height: 1.34;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+ul,
+ol {
+  font-size: 1em;
+  padding: 0;
+  margin: $baseline-height;
+
+  ul,ol {
+    margin: 0 $baseline-height;
+  }
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul,
+li li {
+  font-size: 1em;
+}
+
+/* Markup styles */
+
+pre {
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+  padding: $baseline-height / 2;
+  background: #f5f5f5;
+}
+code {
+  padding: 0 $baseline-height / 4;
+  background: #f5f5f5;
+}
+blockquote {
+  margin: $baseline-height 0;
+  padding: 0 $baseline-height;
+  border-left: solid $baseline-height / 2 $gray-dark;
+
+  cite {
+    display: block;
+    text-align: right;
+  }
+}
+hr {
+  margin: $baseline-height * 0.46 0;
+}
+
+/* Table styles */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: $baseline-height 0;
+}
+td {
+  padding: 0.5em 0.75em;
+  border: solid 1px $primary-gray;
+  line-height: 1.5;
+}
+th {
+  padding: 0.5em 0.75em;
+  border: solid 1px $primary-gray;
+  line-height: 1.5;
+}
+
+/* Images */
+
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  height: auto;
+  line-height: 0;
+  max-width: 100%;
+  max-width: calc(100% - 48px);
+
+  // in case there is a containing div given the class
+  img {
+    max-width: 100%;
+  }
+}
+
+.alignleft {
+  float: left;
+  margin: 0 $baseline-height $baseline-height 0;
+}
+.alignright {
+  float: right;
+  margin: 0 0 $baseline-height $baseline-height;
+}
+.aligncenter {
+  text-align: center;
+  margin: $baseline-height auto;
+  display: block;
+  max-width: 100%;
+}
+.alignnone {
+  margin: $baseline-height;
+}
+.wp-caption-text {
+  margin: 0;
+  @extend %thirteen-pixels;
+  color: $gray-medium;
+}
+// fixes full-width images not working with captions
+.wp-caption.aligncenter {
+  max-width: none;
+  margin: 0 auto;
+  width: auto !important;
 }
 .wp-block {
   max-width: 734px;
