@@ -1,6 +1,6 @@
 <div class='entry'>
 	<div class="entry-meta">
-		<span class="date"><?php echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'r' ) ) ); ?> / </span>
+		<span class="date"><?php echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'c' ) ) ); ?> / </span>
 		<span class="author"><?php the_author_posts_link(); ?></span>
 	</div>
 	<div class='entry-header'>

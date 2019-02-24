@@ -6,7 +6,7 @@ $post_category = get_theme_mod( 'post_category_display_setting' );
 
 if ( $post_date != 'hide' ) { ?>
 	<span class="date"><?php
-		echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'r' ) ) );
+		echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'c' ) ) );
 	?></span><?php
 }
 if ( $post_date != 'hide' && ( $post_author != 'hide' || $post_category != 'hide' ) ) { ?>
