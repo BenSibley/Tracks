@@ -14,6 +14,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'email'         => 'email_profile',
 			'phone'         => 'phone_profile',
 			'email-form'    => 'email_form_profile',
+			'artstation'    => 'artstation_profile',
 			'amazon'        => 'amazon_profile',
 			'bandcamp'      => 'bandcamp_profile',
 			'behance'       => 'behance_profile',
@@ -128,6 +129,8 @@ function ct_tracks_add_social_profile_settings( $user ) {
 				$label = __('Stack Overflow', 'tracks');
 			} elseif ( $key == 'email-form' ) {
 				$label = __('Contact Form', 'tracks');
+			} elseif ( $key == 'artstation' ) {
+				$label = __('ArtStation', 'tracks');
 			}
 			?>
 			<tr>

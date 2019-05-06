@@ -559,6 +559,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'phone',
 			'email-form',
 			'amazon',
+			'artstation',
 			'bandcamp',
 			'behance',
 			'bitbucket',

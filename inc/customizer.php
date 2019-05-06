@@ -198,6 +198,8 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 				$label = __('Stack Overflow', 'tracks');
 			} elseif ( $social_site == 'email-form' ) {
 				$label = __('Contact Form', 'tracks');
+			} elseif ( $social_site == 'artstation' ) {
+				$label = __('ArtStation', 'tracks');
 			}
 
 			if ( $social_site == 'skype' ) {
