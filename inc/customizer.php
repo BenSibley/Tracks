@@ -637,6 +637,22 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 			'no'  => __( 'No', 'tracks' )
 		),
 	) );
+	// setting - last updated
+	$wp_customize->add_setting( 'last_updated', array(
+		'default'           => 'no',
+		'sanitize_callback' => 'ct_tracks_all_yes_no_setting_sanitization'
+	) );
+	// control - last updated
+	$wp_customize->add_control( 'last_updated', array(
+		'label'    => __( 'Display the date each post was last updated?', 'tracks' ),
+		'section'  => 'ct_tracks_additional_options',
+		'settings' => 'last_updated',
+		'type'     => 'radio',
+		'choices'  => array(
+			'yes' => __( 'Yes', 'tracks' ),
+			'no'  => __( 'No', 'tracks' )
+		)
+	) );
 	// setting - excerpt length
 	$wp_customize->add_setting( 'additional_options_excerpt_length_settings', array(
 		'default'           => 15,

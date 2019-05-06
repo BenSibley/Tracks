@@ -1141,6 +1141,10 @@ a img {
   background: none;
 }
 
+.last-updated {
+  font-style: italic;
+}
+
 /* 600px */
 @media all and (min-width: 37.5em) {
   .entry {

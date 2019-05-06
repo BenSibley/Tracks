@@ -9,6 +9,7 @@
 	<div class="entry-container">
 		<div class="entry-content">
 			<article>
+				<?php ct_tracks_output_last_updated_date(); ?>
 				<?php the_content(); ?>
 				<?php wp_link_pages( array(
 					'before' => '<p class="singular-pagination">' . esc_html__( 'Pages:', 'tracks' ),
