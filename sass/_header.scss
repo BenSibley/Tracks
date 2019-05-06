@@ -253,6 +253,7 @@
     ul {
       position: absolute;
       top: -9999px;
+      z-index: 9;
       opacity: 0;
       left: -70%;
       right: -70%;
