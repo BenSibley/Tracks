@@ -23,7 +23,7 @@
 			if ( empty( $footer_text ) ) {
 				$footer_text = sprintf( __( '<a target="_blank" href="%1$s">%2$s WordPress Theme</a> by Compete Themes.', 'tracks' ), 'https://www.competethemes.com/tracks/', wp_get_theme( get_template() ) );
 			}
-			echo wp_kses_post( $footer_text );
+			echo do_shortcode( wp_kses_post( $footer_text ) );
 			?>
 		</p>
 	</div>
