@@ -858,20 +858,6 @@ if ( ! function_exists( 'ct_tracks_allow_skype_protocol' ) ) {
 }
 add_filter( 'kses_allowed_protocols' , 'ct_tracks_allow_skype_protocol' );
 
-// trigger theme switch on link click and send to Appearance menu
-function ct_tracks_welcome_redirect() {
-
-	$welcome_url = add_query_arg(
-		array(
-			'page'          => 'tracks-options',
-			'tracks_status' => 'activated'
-		),
-		admin_url( 'themes.php' )
-	);
-	wp_safe_redirect( esc_url_raw( $welcome_url ) );
-}
-add_action( 'after_switch_theme', 'ct_tracks_welcome_redirect' );
-
 if ( function_exists( 'ct_tracks_pro_plugin_updater' ) ) {
 	remove_action( 'admin_init', 'ct_tracks_pro_plugin_updater', 0 );
 	add_action( 'admin_init', 'ct_tracks_pro_plugin_updater', 0 );
@@ -886,12 +872,6 @@ if ( ! function_exists( ( 'ct_tracks_settings_notice' ) ) ) {
 				?>
 				<div class="updated">
 					<p><?php esc_html_e( 'Customizer settings deleted.', 'tracks' ); ?></p>
-				</div>
-				<?php
-			} else if ( $_GET['tracks_status'] == 'activated' ) {
-				?>
-				<div class="updated">
-					<p><?php printf( esc_html__( 'Thanks for activating %s!', 'tracks' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}
