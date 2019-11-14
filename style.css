@@ -253,6 +253,17 @@ th {
 .size-thumbnail img {
   max-width: 100%;
 }
+.alignright figcaption,
+.alignleft figcaption,
+.aligncenter figcaption,
+.alignnone figcaption,
+.size-auto figcaption,
+.size-full figcaption,
+.size-large figcaption,
+.size-medium figcaption,
+.size-thumbnail figcaption {
+  line-height: 1.5;
+}
 
 .alignleft {
   float: left;
