@@ -178,6 +178,9 @@ th {
     color: $gray-medium;
   }
 }
+.wp-block-image {
+  margin: 0;
+}
 .wp-block-image figcaption {
   @extend %thirteen-pixels;
   line-height: 1.5;

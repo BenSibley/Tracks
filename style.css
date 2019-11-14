@@ -275,6 +275,10 @@ th {
   color: #8c8c8c;
 }
 
+.wp-block-image {
+  margin: 0;
+}
+
 .wp-block-image figcaption {
   line-height: 1.5;
   margin: 0;
