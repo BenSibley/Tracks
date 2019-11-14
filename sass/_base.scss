@@ -172,10 +172,18 @@ th {
     max-width: 100%;
   }
   figcaption {
+    @extend %thirteen-pixels;
     line-height: 1.5;
+    margin: 0;
+    color: $gray-medium;
   }
 }
-
+.wp-block-image figcaption {
+  @extend %thirteen-pixels;
+  line-height: 1.5;
+  margin: 0;
+  color: $gray-medium;
+}
 .alignleft {
   float: left;
   margin: 0 $baseline-height $baseline-height 0;
@@ -189,6 +197,12 @@ th {
   margin: $baseline-height auto;
   display: block;
   max-width: 100%;
+
+  figcaption {
+    max-width: none;
+    margin: 0 auto;
+    width: auto !important;
+  }
 }
 .alignnone {
   margin: $baseline-height;

@@ -21,7 +21,15 @@ Tracks is distributed under the terms of the GNU GPL
   line-height: 1.85;
 }
 
-.wp-caption-text, .excerpt-meta, .entry-meta, .more-link, .pagination, .further-reading span,
+.alignright figcaption,
+.alignleft figcaption,
+.aligncenter figcaption,
+.alignnone figcaption,
+.size-auto figcaption,
+.size-full figcaption,
+.size-large figcaption,
+.size-medium figcaption,
+.size-thumbnail figcaption, .wp-block-image figcaption, .wp-caption-text, .excerpt-meta, .entry-meta, .more-link, .pagination, .further-reading span,
 .further-reading a,
 .entry-categories span,
 .entry-categories a,
@@ -263,6 +271,14 @@ th {
 .size-medium figcaption,
 .size-thumbnail figcaption {
   line-height: 1.5;
+  margin: 0;
+  color: #8c8c8c;
+}
+
+.wp-block-image figcaption {
+  line-height: 1.5;
+  margin: 0;
+  color: #8c8c8c;
 }
 
 .alignleft {
@@ -280,6 +296,11 @@ th {
   margin: 1.5em auto;
   display: block;
   max-width: 100%;
+}
+.aligncenter figcaption {
+  max-width: none;
+  margin: 0 auto;
+  width: auto !important;
 }
 
 .alignnone {
