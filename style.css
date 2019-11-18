@@ -25,6 +25,8 @@ Tracks is distributed under the terms of the GNU GPL
 .alignleft figcaption,
 .aligncenter figcaption,
 .alignnone figcaption,
+.alignwide figcaption,
+.alignfull figcaption,
 .size-auto figcaption,
 .size-full figcaption,
 .size-large figcaption,
@@ -240,6 +242,8 @@ th {
 .alignleft,
 .aligncenter,
 .alignnone,
+.alignwide,
+.alignfull,
 .size-auto,
 .size-full,
 .size-large,
@@ -254,6 +258,8 @@ th {
 .alignleft img,
 .aligncenter img,
 .alignnone img,
+.alignwide img,
+.alignfull img,
 .size-auto img,
 .size-full img,
 .size-large img,
@@ -265,23 +271,27 @@ th {
 .alignleft figcaption,
 .aligncenter figcaption,
 .alignnone figcaption,
+.alignwide figcaption,
+.alignfull figcaption,
 .size-auto figcaption,
 .size-full figcaption,
 .size-large figcaption,
 .size-medium figcaption,
 .size-thumbnail figcaption {
   line-height: 1.5;
-  margin: 0;
+  margin: 3px 0 0 0;
   color: #8c8c8c;
+  text-align: center;
 }
 
 .wp-block-image {
   margin: 0;
+  line-height: 0;
 }
 
 .wp-block-image figcaption {
   line-height: 1.5;
-  margin: 0;
+  margin: 3px 0 0 0;
   color: #8c8c8c;
 }
 
@@ -301,11 +311,6 @@ th {
   display: block;
   max-width: 100%;
 }
-.aligncenter figcaption {
-  max-width: none;
-  margin: 0 auto;
-  width: auto !important;
-}
 
 .alignnone {
   margin: 1.5em;
@@ -321,14 +326,8 @@ img {
 }
 
 .wp-caption-text {
-  margin: 0;
+  margin: 3px 0 0 0;
   color: #8c8c8c;
-}
-
-.wp-caption.aligncenter {
-  max-width: none;
-  margin: 0 auto;
-  width: auto !important;
 }
 
 /* Form styles */

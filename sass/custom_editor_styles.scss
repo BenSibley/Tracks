@@ -157,8 +157,24 @@ th {
   img {
     max-width: 100%;
   }
+  figcaption {
+    @extend %thirteen-pixels;
+    line-height: 1.5;
+    margin: 3px 0 0 0;
+    color: $gray-medium;
+    text-align: center;
+  }
 }
-
+.wp-block-image {
+  margin: 0;
+  line-height: 0;
+}
+.wp-block-image figcaption {
+  @extend %thirteen-pixels;
+  line-height: 1.5;
+  margin: 3px 0 0 0;
+  color: $gray-medium;
+}
 .alignleft {
   float: left;
   margin: 0 $baseline-height $baseline-height 0;
@@ -176,16 +192,20 @@ th {
 .alignnone {
   margin: $baseline-height;
 }
+img {
+  height: auto;
+  line-height: 0;
+}
+.singular-attachment {
+
+  img {
+    max-width: 100%;
+  }
+}
 .wp-caption-text {
-  margin: 0;
+  margin: 3px 0 0 0;
   @extend %thirteen-pixels;
   color: $gray-medium;
-}
-// fixes full-width images not working with captions
-.wp-caption.aligncenter {
-  max-width: none;
-  margin: 0 auto;
-  width: auto !important;
 }
 .wp-block {
   max-width: 734px;

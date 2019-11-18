@@ -1,6 +1,14 @@
 /*===== Variables =====*/
 /* Theme Colors */
-.wp-caption-text {
+.alignright figcaption,
+.alignleft figcaption,
+.aligncenter figcaption,
+.alignnone figcaption,
+.size-auto figcaption,
+.size-full figcaption,
+.size-large figcaption,
+.size-medium figcaption,
+.size-thumbnail figcaption, .wp-block-image figcaption, .wp-caption-text {
   font-size: 0.813em;
   line-height: 1.85;
 }
@@ -187,6 +195,31 @@ th {
 .size-thumbnail img {
   max-width: 100%;
 }
+.alignright figcaption,
+.alignleft figcaption,
+.aligncenter figcaption,
+.alignnone figcaption,
+.size-auto figcaption,
+.size-full figcaption,
+.size-large figcaption,
+.size-medium figcaption,
+.size-thumbnail figcaption {
+  line-height: 1.5;
+  margin: 3px 0 0 0;
+  color: #8c8c8c;
+  text-align: center;
+}
+
+.wp-block-image {
+  margin: 0;
+  line-height: 0;
+}
+
+.wp-block-image figcaption {
+  line-height: 1.5;
+  margin: 3px 0 0 0;
+  color: #8c8c8c;
+}
 
 .alignleft {
   float: left;
@@ -209,15 +242,18 @@ th {
   margin: 1.5em;
 }
 
-.wp-caption-text {
-  margin: 0;
-  color: #8c8c8c;
+img {
+  height: auto;
+  line-height: 0;
 }
 
-.wp-caption.aligncenter {
-  max-width: none;
-  margin: 0 auto;
-  width: auto !important;
+.singular-attachment img {
+  max-width: 100%;
+}
+
+.wp-caption-text {
+  margin: 3px 0 0 0;
+  color: #8c8c8c;
 }
 
 .wp-block {

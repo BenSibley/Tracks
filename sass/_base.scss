@@ -157,6 +157,8 @@ th {
 .alignleft,
 .aligncenter,
 .alignnone,
+.alignwide,
+.alignfull,
 .size-auto,
 .size-full,
 .size-large,
@@ -174,17 +176,19 @@ th {
   figcaption {
     @extend %thirteen-pixels;
     line-height: 1.5;
-    margin: 0;
+    margin: 3px 0 0 0;
     color: $gray-medium;
+    text-align: center;
   }
 }
 .wp-block-image {
   margin: 0;
+  line-height: 0;
 }
 .wp-block-image figcaption {
   @extend %thirteen-pixels;
   line-height: 1.5;
-  margin: 0;
+  margin: 3px 0 0 0;
   color: $gray-medium;
 }
 .alignleft {
@@ -200,12 +204,6 @@ th {
   margin: $baseline-height auto;
   display: block;
   max-width: 100%;
-
-  figcaption {
-    max-width: none;
-    margin: 0 auto;
-    width: auto !important;
-  }
 }
 .alignnone {
   margin: $baseline-height;
@@ -221,15 +219,9 @@ img {
   }
 }
 .wp-caption-text {
-  margin: 0;
+  margin: 3px 0 0 0;
   @extend %thirteen-pixels;
   color: $gray-medium;
-}
-// fixes full-width images not working with captions
-.wp-caption.aligncenter {
-  max-width: none;
-  margin: 0 auto;
-  width: auto !important;
 }
 
 /* Form styles */
