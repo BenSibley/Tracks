@@ -584,6 +584,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'ok-ru',
 			'patreon',
 			'paypal',
+			'pocket',
 			'podcast',
 			'qq',
 			'quora',

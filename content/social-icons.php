@@ -41,6 +41,8 @@ if ( ! empty( $active_sites ) ) {
 				$class = 'fab fa-weixin';
 			} elseif ( $active_site == 'ok-ru' ) {
 				$class = 'fab fa-odnoklassniki';
+			} elseif ( $active_site == 'pocket' ) {
+				$class = 'fab fa-get-pocket';
 			} elseif ( $active_site == 'phone' ) {
 				$class = 'fas fa-phone';
 			} else {
