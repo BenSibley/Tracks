@@ -1,7 +1,13 @@
 <?php
 
 function ct_tracks_register_theme_page() {
-	add_theme_page( sprintf( esc_html__( '%s Dashboard', 'tracks' ), wp_get_theme() ), sprintf( esc_html__( '%s Dashboard', 'tracks' ), wp_get_theme() ), 'edit_theme_options', 'tracks-options', 'ct_tracks_options_content', 'ct_tracks_options_content' );
+	add_theme_page( 
+		sprintf( esc_html__( '%s Dashboard', 'tracks' ), wp_get_theme() ), 
+		sprintf( esc_html__( '%s Dashboard', 'tracks' ), wp_get_theme() ), 
+		'edit_theme_options', 
+		'tracks-options', 
+		'ct_tracks_options_content'
+	);
 }
 add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
 
