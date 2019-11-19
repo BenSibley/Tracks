@@ -176,7 +176,7 @@ th {
   figcaption {
     @extend %thirteen-pixels;
     line-height: 1.5;
-    margin: 3px 0 0 0;
+    margin: 6px 0 0 0;
     color: $gray-medium;
     text-align: center;
   }
@@ -188,7 +188,7 @@ th {
 .wp-block-image figcaption {
   @extend %thirteen-pixels;
   line-height: 1.5;
-  margin: 3px 0 0 0;
+  margin: 6px 0 0 0;
   color: $gray-medium;
 }
 .alignleft {
@@ -219,7 +219,7 @@ img {
   }
 }
 .wp-caption-text {
-  margin: 3px 0 0 0;
+  margin: 6px 0 0 0;
   @extend %thirteen-pixels;
   color: $gray-medium;
 }
