@@ -101,6 +101,13 @@
   list-style: none;
   opacity: 0;
 
+  li.current-menu-item,
+  li.current_page_item {
+
+    a {
+      opacity: 1;
+    }
+  }
   a {
     @extend %uppercase;
     display: block;

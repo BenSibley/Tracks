@@ -576,6 +576,12 @@ a img {
   list-style: none;
   opacity: 0;
 }
+.menu-unset > ul li.current-menu-item a,
+.menu-unset > ul li.current_page_item a,
+.menu-primary-items li.current-menu-item a,
+.menu-primary-items li.current_page_item a {
+  opacity: 1;
+}
 .menu-unset > ul a,
 .menu-primary-items a {
   display: block;
