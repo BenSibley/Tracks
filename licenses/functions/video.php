@@ -63,7 +63,11 @@ function ct_tracks_video_callback( $post ) {
 	}
 
 	// video preview
-	echo '<div class="ct_tracks_video_preview_container" id="ct_tracks_video_preview_container">';
+	$container_classes = 'ct_tracks_video_preview_container';
+	if ( strpos( $video_url, 'youtube-nocookie.com' ) !== false ) {
+		$container_classes .= ' youtube-nocookie';
+	}
+	echo '<div class="'. $container_classes .'" id="ct_tracks_video_preview_container">';
 		echo '<label for="ct_tracks_video_url">';
 			esc_html_e( 'Video Preview', 'tracks' );
 		echo '</label> ';
@@ -269,6 +273,11 @@ if ( ! function_exists( ( 'ct_tracks_pro_output_featured_video' ) ) ) {
 
 		if( $featured_video ) {
 
+			$container_classes = 'featured-video';
+			if ( strpos( $featured_video, 'youtube-nocookie.com' ) !== false ) {
+				$container_classes .= ' youtube-nocookie';
+			}
+
 			// get the display setting (post or blog)
 			$display_blog = get_post_meta( $post->ID, 'ct_tracks_video_display_key', true );
 
@@ -278,7 +287,7 @@ if ( ! function_exists( ( 'ct_tracks_pro_output_featured_video' ) ) ) {
 				|| ( ( is_home() || is_archive() || is_search() ) && ( $display_blog == 'blog' || $display_blog == 'both' ) )
 				|| is_singular('page')
 			) {
-				$featured_image = '<div class="featured-video">' . wp_oembed_get( esc_url( $featured_video ) ) . '</div>';
+				$featured_image = '<div class="'. esc_attr($container_classes) .'">' . wp_oembed_get( esc_url( $featured_video ) ) . '</div>';
 			}
 		}
 

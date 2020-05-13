@@ -242,6 +242,9 @@
   border-bottom: solid 1px #e5e5e5;
   background: none;
 }
+.ct_tracks_video_preview_container.youtube-nocookie .fluid-width-video-wrapper {
+  padding-top: 56.25% !important;
+}
 .ct_tracks_video_preview_container .loading {
   position: absolute;
   top: 0;

@@ -299,6 +299,12 @@
     border-bottom: solid 1px #e5e5e5;
     background: none;
   }
+  &.youtube-nocookie {
+
+    .fluid-width-video-wrapper {
+      padding-top: 56.25% !important;
+    }
+  }
   .loading {
     position: absolute;
     top: 0;

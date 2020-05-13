@@ -65,10 +65,16 @@ jQuery(function($) {
                     youtubeControls.removeClass('hide');
                 }
 
+                // add class for youtube-nocookie
+                if ( response.includes('youtube-nocookie.com') ) {
+                    videoPreview.addClass('youtube-nocookie');
+                }
+
             } // else remove the has-vid class in case already had video
             else {
                 videoPreviewAndInput.removeClass('has-vid');
                 youtubeControls.addClass('hide');
+                videoPreview.removeClass('youtube-nocookie');
             }
         });
     }
