@@ -1000,6 +1000,8 @@ a img {
     padding: 0;
     margin-bottom: 1.5em;
     opacity: 0.8;
+    -webkit-transition: opacity 0.2s;
+            transition: opacity 0.2s;
   }
   .excerpt .featured-image {
     -webkit-transform: translateZ(0);
