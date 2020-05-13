@@ -4,8 +4,9 @@
 function ct_tracks_load_javascript_files() {
 
 	$font_args = array(
-		'family' => urlencode( 'Raleway:400,700' ),
-		'subset' => urlencode( 'latin,latin-ext' )
+		'family'  => urlencode( 'Raleway:400,700' ),
+		'subset'  => urlencode( 'latin,latin-ext' ),
+		'display' => 'swap'
 	);
 	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
 
