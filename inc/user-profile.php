@@ -30,7 +30,6 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'foursquare'    => 'foursquare_profile',
 			'github'        => 'github_profile',
 			'goodreads'			=> 'goodreads_profile',
-			'google-plus'   => 'googleplus_profile',
 			'google-wallet' => 'google_wallet_profile',
 			'hacker-news'   => 'hacker-news_profile',
 			'medium'        => 'medium_profile',
