@@ -1,6 +1,6 @@
 /*===== Variables =====*/
 /* Theme Colors */
-.alignright figcaption,
+.wp-block-table figcaption, .alignright figcaption,
 .alignleft figcaption,
 .aligncenter figcaption,
 .alignnone figcaption,
@@ -170,6 +170,35 @@ th {
   padding: 0.5em 0.75em;
   border: solid 1px #4d4d4d;
   line-height: 1.5;
+}
+
+.wp-block-table {
+  margin: 0;
+}
+.wp-block-table thead {
+  background: #ededed;
+}
+.wp-block-table td,
+.wp-block-table th {
+  border-color: #aaaaaa;
+}
+
+.wp-block-table.is-style-stripes {
+  border-bottom: none;
+}
+.wp-block-table.is-style-stripes thead {
+  background: none;
+}
+.wp-block-table.is-style-stripes td,
+.wp-block-table.is-style-stripes th {
+  border-color: #aaaaaa;
+}
+
+.wp-block-table figcaption {
+  line-height: 1.5;
+  margin: -1em 0 0 0;
+  color: #8c8c8c;
+  text-align: center;
 }
 
 /* Images */

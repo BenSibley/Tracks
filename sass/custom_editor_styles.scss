@@ -136,6 +136,36 @@ th {
   border: solid 1px $primary-gray;
   line-height: 1.5;
 }
+.wp-block-table {
+  margin: 0;
+
+  thead {
+    background: $off-white;
+  }
+  td,
+  th {
+    border-color: $gray-light;
+  }
+}
+.wp-block-table.is-style-stripes {
+  border-bottom: none;
+  
+  thead {
+    background: none;
+  }
+  td,
+  th {
+    border-color: $gray-light;
+  }
+}
+.wp-block-table figcaption {
+  @extend %thirteen-pixels;
+  line-height: 1.5;
+  margin: -1em 0 0 0;
+  color: $gray-medium;
+  text-align: center;
+}
+
 
 /* Images */
 
