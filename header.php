@@ -12,6 +12,10 @@
 	<?php do_action( 'tracks_body_top' ); ?>
 	<div id="overflow-container" class="overflow-container">
 		<a class="skip-content" href="#main"><?php esc_html_e( 'Skip to content', 'tracks' ); ?></a>
+		<?php
+			// Elementor `header` location
+			if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) :
+		?>
 		<header id="site-header" class="site-header" role="banner">
 			<?php get_template_part( 'content/top-navigation' ); ?>
 			<?php do_action( 'tracks_after_top_navigation' ); ?>
@@ -22,6 +26,7 @@
 				<?php get_template_part( 'menu', 'primary' ); ?>
 			</div>
 		</header>
+		<?php endif; ?>
 		<?php do_action( 'tracks_after_header' ); ?>
 		<div id="main" class="main" role="main">
 			<?php if ( function_exists( 'yoast_breadcrumb' ) ) {

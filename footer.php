@@ -1,6 +1,10 @@
 <?php do_action( 'tracks_main_bottom' ); ?>
 </div> <!-- .main -->
 
+<?php 
+// Elementor `footer` location
+if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) :
+?>
 <footer id="site-footer" class="site-footer" role="contentinfo">
 	<h1>
 		<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'title' ); ?></a>
@@ -28,6 +32,7 @@
 		</p>
 	</div>
 </footer>
+<?php endif; ?>
 
 <?php if ( get_theme_mod( 'additional_options_return_top_settings' ) != 'hide' ) { ?>
 	<button id="return-top" class="return-top">
