@@ -223,6 +223,9 @@ img {
   @extend %thirteen-pixels;
   color: $gray-medium;
 }
+.wp-block-social-links a {
+  color: #fff;
+}
 
 /* Form styles */
 input[type="text"],
