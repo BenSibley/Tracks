@@ -118,14 +118,6 @@ function ct_tracks_video_callback( $post ) {
 
 	echo '<div class="ct_tracks_video_youtube_controls_container ' . $class . '">';
 		echo '<p>' . esc_html__( 'Youtube controls', 'tracks' ) . '</p>';
-		echo '<label for="ct_tracks_video_youtube_title">';
-			echo '<input type="checkbox" name="ct_tracks_video_youtube_title" id="ct_tracks_video_youtube_title" value="1" ' . checked( '1', $youtube_title, false ) . '>';
-			esc_html_e( 'Hide title', 'tracks' );
-		echo '</label> ';
-		echo '<label for="ct_tracks_video_youtube_related">';
-			echo '<input type="checkbox" name="ct_tracks_video_youtube_related" id="ct_tracks_video_youtube_related" value="1" ' . checked( '1', $youtube_related, false ) . '>';
-			esc_html_e( 'Hide related videos', 'tracks' );
-		echo '</label> ';
 		echo '<label for="ct_tracks_video_youtube_logo">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_logo" id="ct_tracks_video_youtube_logo" value="1" ' . checked( '1', $youtube_logo, false ) . '>';
 			esc_html_e( 'Hide Youtube logo', 'tracks' );
@@ -241,8 +233,6 @@ function ct_tracks_video_save_data( $post_id ) {
 	}
 
 	$youtube_IDs = array(
-		'ct_tracks_video_youtube_title',
-		'ct_tracks_video_youtube_related',
 		'ct_tracks_video_youtube_logo',
 		'ct_tracks_video_youtube_captions',
 		'ct_tracks_video_youtube_autoplay',
@@ -316,11 +306,7 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 			if( strpos($featured_video, 'youtube.com' ) || strpos($featured_video, 'youtu.be' ) ) {
 
 				// get user Youtube parameter settings
-				// flip their value so 1 means, yes HIDE it, NOT yes SHOW it.
-				$youtube_title    = get_post_meta( $post->ID, 'ct_tracks_video_youtube_title', true ) ? 0 : 1;
-				$youtube_related  = get_post_meta( $post->ID, 'ct_tracks_video_youtube_related', true ) ? 0 : 1;
-				$youtube_logo     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true ) ? 0 : 1;
-
+				$youtube_logo     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_logo', true );
 				$youtube_captions = get_post_meta( $post->ID, 'ct_tracks_video_youtube_captions', true );
 				$youtube_autoplay = get_post_meta( $post->ID, 'ct_tracks_video_youtube_autoplay', true );
 				$youtube_loop     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_loop', true );
