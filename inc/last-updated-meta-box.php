@@ -25,7 +25,7 @@ function ct_tracks_last_updated_callback( $post ) {
 
   ?>
 	<p>
-		<select name="tracks-last-updated" id="tracks-last-updated" class="widefat">
+		<select name="tracks-last-updated" id="tracks-last-updated" style="box-sizing: border-box; width: 100%;">
 			<option value="default"><?php esc_html_e( 'Use Customizer setting', 'tracks' ); ?></option>
 			<option value="yes" <?php if ( $display == 'yes' ) {
 				echo 'selected';
