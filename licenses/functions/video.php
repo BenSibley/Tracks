@@ -55,6 +55,7 @@ function ct_tracks_video_callback( $post ) {
 	$youtube_captions = get_post_meta( $post->ID, 'ct_tracks_video_youtube_captions', true );
 	$youtube_autoplay = get_post_meta( $post->ID, 'ct_tracks_video_youtube_autoplay', true );
 	$youtube_loop     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_loop', true );
+	$youtube_mute     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_mute', true );
 
 	// sets video to display on posts only by default
 	if( empty( $display_value ) ) {
@@ -140,6 +141,10 @@ function ct_tracks_video_callback( $post ) {
 		echo '<label for="ct_tracks_video_youtube_loop">';
 			echo '<input type="checkbox" name="ct_tracks_video_youtube_loop" id="ct_tracks_video_youtube_loop" value="1" ' . checked( '1', $youtube_loop, false ) . '>';
 			esc_html_e( 'Loop video', 'tracks' );
+		echo '</label> ';
+		echo '<label for="ct_tracks_video_youtube_mute">';
+			echo '<input type="checkbox" name="ct_tracks_video_youtube_mute" id="ct_tracks_video_youtube_mute" value="1" ' . checked( '1', $youtube_mute, false ) . '>';
+			esc_html_e( 'Auto-mute video', 'tracks' );
 		echo '</label> ';
 	echo '</div>';
 }
@@ -241,7 +246,8 @@ function ct_tracks_video_save_data( $post_id ) {
 		'ct_tracks_video_youtube_logo',
 		'ct_tracks_video_youtube_captions',
 		'ct_tracks_video_youtube_autoplay',
-		'ct_tracks_video_youtube_loop'
+		'ct_tracks_video_youtube_loop',
+		'ct_tracks_video_youtube_mute'
 	);
 
 	foreach ( $youtube_IDs as $youtube_option ) {
@@ -318,6 +324,7 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 				$youtube_captions = get_post_meta( $post->ID, 'ct_tracks_video_youtube_captions', true );
 				$youtube_autoplay = get_post_meta( $post->ID, 'ct_tracks_video_youtube_autoplay', true );
 				$youtube_loop     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_loop', true );
+				$youtube_mute     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_mute', true );
 
 				$youtube_parameters = array(
 					'showinfo'       => $youtube_title,
@@ -325,7 +332,8 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 					'modestbranding' => $youtube_logo,
 					'cc_load_policy' => $youtube_captions,
 					'autoplay'       => $youtube_autoplay,
-					'loop'           => $youtube_loop
+					'loop'           => $youtube_loop,
+					'mute'					 => $youtube_mute
 				);
 
 				if ( $youtube_loop == 1 ) {
