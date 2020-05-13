@@ -238,7 +238,7 @@ if ( ! function_exists( 'ct_tracks_update_comment_field' ) ) {
 		return $comment_field;
 	}
 }
-add_filter( 'comment_form_field_comment', 'ct_tracks_update_comment_field' );
+add_filter( 'comment_form_field_comment', 'ct_tracks_update_comment_field', 7 );
 
 if ( ! function_exists( 'ct_tracks_remove_comments_notes_after' ) ) {
 	function ct_tracks_remove_comments_notes_after( $defaults ) {
