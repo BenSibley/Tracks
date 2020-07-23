@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tracks 1.71\n"
+"Project-Id-Version: Tracks 1.72\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2020-05-14 19:37:14+00:00\n"
+"POT-Creation-Date: 2020-07-23 15:35:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -217,19 +217,19 @@ msgstr ""
 msgid "Enter Your Comment"
 msgstr ""
 
-#: functions.php:266 functions.php:330
+#: functions.php:269 functions.php:333
 msgid "Read the post"
 msgstr ""
 
-#: functions.php:874
+#: functions.php:873
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:981
+#: functions.php:980
 msgid "Last updated on"
 msgstr ""
 
-#: header.php:14
+#: header.php:20
 msgid "Skip to content"
 msgstr ""
 
@@ -675,39 +675,39 @@ msgstr ""
 msgid "Video Preview"
 msgstr ""
 
-#: licenses/functions/video.php:86
+#: licenses/functions/video.php:85
 msgid "Add video URL:"
 msgstr ""
 
-#: licenses/functions/video.php:97
+#: licenses/functions/video.php:96
 msgid "Choose where to display the video:"
 msgstr ""
 
-#: licenses/functions/video.php:108
+#: licenses/functions/video.php:107
 msgid "Post & Blog"
 msgstr ""
 
-#: licenses/functions/video.php:124
+#: licenses/functions/video.php:123
 msgid "Youtube controls"
 msgstr ""
 
-#: licenses/functions/video.php:127
+#: licenses/functions/video.php:126
 msgid "Hide Youtube logo"
 msgstr ""
 
-#: licenses/functions/video.php:131
+#: licenses/functions/video.php:130
 msgid "Show Captions by Default"
 msgstr ""
 
-#: licenses/functions/video.php:135
+#: licenses/functions/video.php:134
 msgid "Autoplay video"
 msgstr ""
 
-#: licenses/functions/video.php:139
+#: licenses/functions/video.php:138
 msgid "Loop video"
 msgstr ""
 
-#: licenses/functions/video.php:143
+#: licenses/functions/video.php:142
 msgid "Auto-mute video"
 msgstr ""
 
@@ -775,12 +775,12 @@ msgctxt "noun"
 msgid "email"
 msgstr ""
 
-#: licenses/functions/video.php:100
+#: licenses/functions/video.php:99
 msgctxt "noun"
 msgid "Post"
 msgstr ""
 
-#: licenses/functions/video.php:104
+#: licenses/functions/video.php:103
 msgctxt "noun"
 msgid "Blog"
 msgstr ""
