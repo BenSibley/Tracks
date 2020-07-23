@@ -64,17 +64,16 @@ function ct_tracks_video_callback( $post ) {
 
 	// video preview
 	$container_classes = 'ct_tracks_video_preview_container';
-	if ( strpos( $video_url, 'youtube-nocookie.com' ) !== false ) {
+	if ( strpos( $value, 'youtube-nocookie.com' ) !== false ) {
 		$container_classes .= ' youtube-nocookie';
 	}
 	echo '<div class="'. $container_classes .'" id="ct_tracks_video_preview_container">';
 		echo '<label for="ct_tracks_video_url">';
 			esc_html_e( 'Video Preview', 'tracks' );
 		echo '</label> ';
-		if( $value ) {
+		if ( $value ) {
 			// output video embed
-			echo wp_oembed_get( esc_url( $value ) );
-
+			echo ct_tracks_pro_output_video_backend( $value );
 		}
 		// add loading indicator
 		echo '<span class="loading">' . ct_tracks_loading_indicator_svg() . '</span>';
@@ -322,8 +321,6 @@ function ct_tracks_add_youtube_parameters($html, $url, $args) {
 				$youtube_mute     = get_post_meta( $post->ID, 'ct_tracks_video_youtube_mute', true );
 
 				$youtube_parameters = array(
-					'showinfo'       => $youtube_title,
-					'rel'            => $youtube_related,
 					'modestbranding' => $youtube_logo,
 					'cc_load_policy' => $youtube_captions,
 					'autoplay'       => $youtube_autoplay,
