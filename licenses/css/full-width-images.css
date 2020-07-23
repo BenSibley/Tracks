@@ -163,7 +163,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     text-align: center;
   }
   .full-width-images .excerpt-container,
-  .full-width-images .overlay {
+.full-width-images .overlay {
     opacity: 0;
     -webkit-transition: opacity 0.3s ease;
             transition: opacity 0.3s ease;

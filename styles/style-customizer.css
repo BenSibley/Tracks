@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*===== Variables =====*/
 /* Theme Colors */
 /* Social Media Brand Colors */
@@ -73,8 +74,8 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
           transition: background 0.2s;
 }
 #customize-control-tracks_pro .tracks-pro-button:before {
-  content: '\f06e';
-  font-family: 'FontAwesome';
+  content: "";
+  font-family: "FontAwesome";
   margin-right: 6px;
 }
 #customize-control-tracks_pro .tracks-pro-button:hover, #customize-control-tracks_pro .tracks-pro-button:active, #customize-control-tracks_pro .tracks-pro-button:focus {
@@ -278,7 +279,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 }
 
 .ms-drop ul > li .disabled {
-  opacity: .35;
+  opacity: 0.35;
   filter: Alpha(Opacity=35);
 }
 
@@ -309,7 +310,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   font-weight: bold;
 }
 
-.ms-drop input[type="checkbox"] {
+.ms-drop input[type=checkbox] {
   vertical-align: middle;
 }
 

@@ -34,7 +34,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     padding: 0 11.11%;
   }
   .full-width.full-post .excerpt-header,
-  .full-width.full-post .excerpt-meta {
+.full-width.full-post .excerpt-meta {
     position: relative;
     left: -25%;
     width: 150%;
@@ -76,7 +76,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     padding: 0 19.435%;
   }
   .full-width.full-post .excerpt-header,
-  .full-width.full-post .excerpt-meta {
+.full-width.full-post .excerpt-meta {
     left: -31.8%;
     width: 163.6%;
     padding-left: 18.175%;
@@ -89,7 +89,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     padding: 0 22.22%;
   }
   .full-width.full-post .excerpt-header,
-  .full-width.full-post .excerpt-meta {
+.full-width.full-post .excerpt-meta {
     left: -40%;
     width: 180%;
     padding-left: 18.175%;

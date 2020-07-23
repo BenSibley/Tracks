@@ -41,10 +41,6 @@ module.exports = function(grunt) {
         },
         sass: {
             dist: {
-                options: {
-                    style: 'expanded',
-                    sourcemap: 'none'
-                },
                 files: {
                     'style.css': 'sass/style.scss',
                     'styles/custom-editor-style.css': 'sass/custom_editor_styles.scss',
