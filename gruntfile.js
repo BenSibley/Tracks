@@ -141,7 +141,7 @@ module.exports = function(grunt) {
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/tracks || true',
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/tracks.zip || true',
                     // copy folder without any project/meta files
-                    'rsync -r "/Users/bensibley/Local Sites/tracks/app/public/wp-content/themes/tracks" /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Sites/tracks/wp-content/themes/tracks" /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
                     // open dist folder
                     'cd /Users/bensibley/Documents/compete-themes/dist/',
                     // zip the tracks folder
