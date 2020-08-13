@@ -181,7 +181,10 @@ th {
 }
 
 /* Images */
-
+.wp-block-image {
+  margin: 0 auto;
+  line-height: 0;
+}
 .alignright,
 .alignleft,
 .aligncenter,
@@ -209,10 +212,6 @@ th {
     color: $gray-medium;
     text-align: center;
   }
-}
-.wp-block-image {
-  margin: 0;
-  line-height: 0;
 }
 .wp-block-image figcaption {
   @extend %thirteen-pixels;

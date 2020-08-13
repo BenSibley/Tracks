@@ -183,12 +183,7 @@ th {
   height: auto;
   line-height: 0;
   max-width: 100%;
-  max-width: calc(100% - 48px);
 
-  // in case there is a containing div given the class
-  img {
-    max-width: 100%;
-  }
   figcaption {
     @extend %thirteen-pixels;
     line-height: 1.5;
@@ -198,8 +193,8 @@ th {
   }
 }
 .wp-block-image {
-  margin: 0;
   line-height: 0;
+  margin: 0 auto;
 }
 .wp-block-image figcaption {
   @extend %thirteen-pixels;

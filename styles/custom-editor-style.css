@@ -216,20 +216,6 @@ th {
   height: auto;
   line-height: 0;
   max-width: 100%;
-  max-width: calc(100% - 48px);
-}
-.alignright img,
-.alignleft img,
-.aligncenter img,
-.alignnone img,
-.alignwide img,
-.alignfull img,
-.size-auto img,
-.size-full img,
-.size-large img,
-.size-medium img,
-.size-thumbnail img {
-  max-width: 100%;
 }
 .alignright figcaption,
 .alignleft figcaption,
@@ -249,8 +235,8 @@ th {
 }
 
 .wp-block-image {
-  margin: 0;
   line-height: 0;
+  margin: 0 auto;
 }
 
 .wp-block-image figcaption {
