@@ -260,6 +260,12 @@ img {
 .wp-block-media-text.alignwide {
   max-width: 100%;
 }
+.wp-block-group.alignwide,
+.wp-block-group .alignwide,
+.wp-block-group.alignfull,
+.wp-block-group .alignfull {
+  line-height: 1.5;
+}
 
 /* Form styles */
 input[type="text"],
