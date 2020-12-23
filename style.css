@@ -365,6 +365,14 @@ img {
   color: #fff;
 }
 
+.wp-block-media-text .wp-block-media-text__content {
+  line-height: 1.5;
+}
+
+.wp-block-media-text.alignwide {
+  max-width: 100%;
+}
+
 /* Form styles */
 input[type=text],
 input[type=email],
