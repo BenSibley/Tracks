@@ -120,6 +120,9 @@ code {
   padding: 0 $baseline-height / 4;
   background: #f5f5f5;
 }
+pre code {
+  padding: 0;
+}
 blockquote {
   margin: $baseline-height 0;
   padding: 0 $baseline-height;
