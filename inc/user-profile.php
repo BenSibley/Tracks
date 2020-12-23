@@ -36,6 +36,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'meetup'        => 'meetup_profile',
 			'mixcloud'      => 'mixcloud_profile',
 			'ok-ru'         => 'ok_ru_profile',
+			'orcid'         => 'orcid_profile',
 			'patreon'       => 'patreon_profile',
 			'paypal'        => 'paypal_profile',
 			'podcast'       => 'podcast_profile',
@@ -43,6 +44,7 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'quora'         => 'quora_profile',
 			'ravelry'       => 'ravelry_profile',
 			'reddit'        => 'reddit_profile',
+			'researchgate'  => 'researchgate_profile',
 			'skype'         => 'skype_profile',
 			'slack'         => 'slack_profile',
 			'slideshare'    => 'slideshare_profile',
@@ -51,11 +53,13 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'snapchat'      => 'snapchat_profile',
 			'stack-overflow' => 'stack_overflow_profile',
 			'steam'         => 'steam_profile',
+			'strava'        => 'strava_profile',
 			'stumbleupon'   => 'stumbleupon_profile',
 			'telegram'      => 'telegram_profile',
 			'tencent-weibo' => 'tencent_weibo_profile',
 			'tumblr'        => 'tumblr_profile',
 			'twitch'        => 'twitch_profile',
+			'untappd'       => 'untappd_profile',
 			'vimeo'         => 'vimeo_profile',
 			'vine'          => 'vine_profile',
 			'vk'            => 'vk_profile',
@@ -94,6 +98,8 @@ function ct_tracks_add_social_profile_settings( $user ) {
 
 			if ( $key == 'google-plus' ) {
 				$label = __('Google Plus', 'tracks');
+			} elseif ( $key == 'researchgate' ) {
+				$label = __('ResearchGate', 'tracks');
 			} elseif ( $key == 'rss' ) {
 				$label = __('RSS', 'tracks');
 			} elseif ( $key == 'soundcloud' ) {

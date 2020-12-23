@@ -201,6 +201,8 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 
 			if ( $social_site == 'rss' ) {
 				$label = __('RSS', 'tracks');
+			} elseif ( $social_site == 'researchgate' ) {
+				$label = __('ResearchGate', 'tracks');
 			} elseif ( $social_site == 'soundcloud' ) {
 				$label = __('SoundCloud', 'tracks');
 			} elseif ( $social_site == 'slideshare' ) {
