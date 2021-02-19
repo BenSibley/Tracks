@@ -618,7 +618,10 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'xing',
 			'yahoo',
 			'yelp',
-			'500px'
+			'500px',
+			'social_icon_custom_1',
+			'social_icon_custom_2',
+			'social_icon_custom_3'
 		);
 
 		return apply_filters( 'ct_tracks_social_site_list_filter', $social_sites );

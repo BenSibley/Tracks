@@ -2375,6 +2375,13 @@ li.pingback article:after {
   color: white;
   opacity: 1;
 }
+.social-media-icons a.custom-icon img {
+  line-height: 0;
+  margin: 0;
+  width: 20px;
+  height: auto;
+  vertical-align: sub;
+}
 
 .site-header .social-media-icons {
   float: right;

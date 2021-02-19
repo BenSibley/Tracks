@@ -16,6 +16,13 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   margin-bottom: 24px;
   border-bottom: solid 1px #d5d5d5;
 }
+#sub-accordion-section-ct_tracks_social_icons #customize-control-social_icon_custom_1,
+#sub-accordion-section-ct_tracks_social_icons #customize-control-social_icon_custom_2,
+#sub-accordion-section-ct_tracks_social_icons #customize-control-social_icon_custom_3 {
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: solid 1px #d5d5d5;
+}
 
 #accordion-section-ct_tracks_pro .accordion-section-title {
   color: #fff;
