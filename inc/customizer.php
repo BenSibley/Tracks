@@ -237,6 +237,8 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 				$label = __('Contact Form', 'tracks');
 			} elseif ( $social_site == 'artstation' ) {
 				$label = __('ArtStation', 'tracks');
+			} elseif ( $social_site == 'diaspora' ) {
+				$label = __('diaspora*', 'tracks');
 			}
 
 			if ( $social_site == 'skype' ) {
