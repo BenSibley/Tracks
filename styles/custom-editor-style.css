@@ -306,7 +306,7 @@ img {
 }
 
 .wp-block-embed {
-  margin: 1.5em 0;
+  margin: 1.5em auto;
 }
 
 .wp-block-code textarea {
