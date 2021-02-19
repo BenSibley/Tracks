@@ -581,6 +581,7 @@ if ( ! function_exists( 'ct_tracks_social_site_list' ) ) {
 			'goodreads',
 			'google-wallet',
 			'hacker-news',
+			'imdb',
 			'mastodon',
 			'medium',
 			'meetup',

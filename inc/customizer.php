@@ -239,6 +239,8 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 				$label = __('ArtStation', 'tracks');
 			} elseif ( $social_site == 'diaspora' ) {
 				$label = __('diaspora*', 'tracks');
+			} elseif ( $social_site == 'imdb' ) {
+				$label = __('IMDB', 'tracks');
 			}
 
 			if ( $social_site == 'skype' ) {
