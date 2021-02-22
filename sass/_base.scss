@@ -269,6 +269,11 @@ img {
 .wp-block-group .alignfull {
   line-height: 1.5;
 }
+.wp-block-gallery figcaption {
+  margin: -8px auto 0;
+  text-align: center;
+  font-size: 14px;
+}
 
 /* Form styles */
 input[type="text"],
