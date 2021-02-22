@@ -176,6 +176,23 @@ function ct_tracks_add_customizer_content( $wp_customize ) {
 			'no'            => __( 'Do not display', 'tracks' )
 		),
 	) );
+	// setting - highlight
+	$wp_customize->add_setting( 'social_icons_highlight', array(
+		'default'           => 'yes',
+		'sanitize_callback' => 'ct_tracks_all_yes_no_setting_sanitization'
+	) );
+	// control - highlight
+	$wp_customize->add_control( 'social_icons_highlight', array(
+		'label'    => __( 'Highlight icons on hover?', 'tracks' ),
+		'section'  => 'ct_tracks_social_icons',
+		'setting'  => 'social_icons_highlight',
+		'priority' => 2,
+		'type'     => 'radio',
+		'choices'  => array(
+			'yes' => __( 'Yes', 'tracks' ),
+			'no'  => __( 'No', 'tracks' )
+		),
+	) );
 
 	// output social site setting/control pairs
 	foreach ( $social_sites as $social_site ) {

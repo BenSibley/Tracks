@@ -450,6 +450,9 @@ if ( ! function_exists( 'ct_tracks_body_class' ) ) {
 		if ( get_theme_mod( 'ct_tracks_texture_display_setting' ) == 'yes' ) {
 			$classes[] = 'background-texture-active';
 		}
+		if ( get_theme_mod('social_icons_highlight') == 'no' ) {
+			$classes[] = 'social-icons-highlight';
+		}
 
 		return $classes;
 	}

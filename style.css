@@ -2389,6 +2389,10 @@ li.pingback article:after {
   vertical-align: sub;
 }
 
+.social-icons-highlight .social-media-icons a {
+  opacity: 1;
+}
+
 .site-header .social-media-icons {
   float: right;
   height: 100%;
