@@ -1,32 +1,32 @@
 <?php
 
-function ct_tracks_register_theme_page() {
-	add_theme_page( 
-		sprintf( esc_html__( '%s Dashboard', 'tracks' ), wp_get_theme() ), 
-		sprintf( esc_html__( '%s Dashboard', 'tracks' ), wp_get_theme() ), 
-		'edit_theme_options', 
-		'tracks-options', 
-		'ct_tracks_options_content'
-	);
+function ct_tracks_register_theme_page()
+{
+    add_theme_page(
+        sprintf(esc_html__('%s Dashboard', 'tracks'), wp_get_theme()),
+        sprintf(esc_html__('%s Dashboard', 'tracks'), wp_get_theme()),
+        'edit_theme_options',
+        'tracks-options',
+        'ct_tracks_options_content'
+    );
 }
-add_action( 'admin_menu', 'ct_tracks_register_theme_page' );
+add_action('admin_menu', 'ct_tracks_register_theme_page');
 
-function ct_tracks_options_content() {
-
-	$pro_url = 'https://www.competethemes.com/tracks-pro/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Tracks%20Pro%20-%20Dashboard';
-	?>
+function ct_tracks_options_content()
+{
+    $pro_url = 'https://www.competethemes.com/tracks-pro/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Tracks%20Pro%20-%20Dashboard'; ?>
 	<div id="tracks-dashboard-wrap" class="wrap tracks-dashboard-wrap">
-		<h2><?php printf( esc_html__( '%s Dashboard', 'tracks' ), wp_get_theme() ); ?></h2>
-		<?php do_action( 'theme_options_before' ); ?>
-		<?php do_action( 'tracks_before_licenses' ); ?>
+		<h2><?php printf(esc_html__('%s Dashboard', 'tracks'), wp_get_theme()); ?></h2>
+		<?php do_action('theme_options_before'); ?>
+		<?php do_action('tracks_before_licenses'); ?>
 		<div class="main">
-			<?php if ( function_exists( 'ct_tracks_pro_init' ) ) : ?>
+			<?php if (function_exists('ct_tracks_pro_init')) : ?>
 			<div class="thanks-upgrading" style="background-image: url(<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/bg-texture.png'; ?>)">
 				<h3>Thanks for upgrading!</h3>
 				<p>You can find the new features in the Customizer</p>
 			</div>
 			<?php endif; ?>
-			<?php if ( !function_exists( 'ct_tracks_pro_init' ) ) : ?>
+			<?php if (!function_exists('ct_tracks_pro_init')) : ?>
 			<div class="getting-started">
 				<h3>Get Started with Tracks</h3>
 				<p>Follow this step-by-step guide to customize your website with Tracks:</p>
@@ -139,10 +139,46 @@ function ct_tracks_options_content() {
 					<li><a href="<?php echo $pro_url; ?>" target="_blank">Tracks Pro</a></li>
 				</ul>
 			</div>
+			<div class="ad iawp">
+				<div class="logo-container">
+					<img width="308px" height="46px" src="<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/iawp.svg'; ?>" alt="Independent Analytics logo" />
+				</div>
+				<div class="features">
+					<div class="title">Free WordPress Analytics Plugin</div>
+					<ul>
+						<li>Beautiful analytics dashboard</li>
+						<li>Views & traffic sources</li>
+						<li>Easy setup</li>
+						<li>GDPR compliant</li>
+						<li>Google Analytics alternative</li>
+					</ul>
+				</div>
+				<div class="button">
+					<a href="https://independentwp.com" target="_blank" data-product-name="Independent Analytics">Learn More</a>
+				</div>
+			</div>
+			<div class="ad strive">
+				<div class="logo-container">
+					<img width="308px" height="62px" src="<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/strive.svg'; ?>" alt="Strive logo" />
+				</div>
+				<div class="features">
+					<div class="title">Content Calendar for WordPress</div>
+					<ul>
+						<li>Plan your posts visually</li>
+						<li>Track progress with post statuses</li>
+						<li>Create custom post checklists</li>
+						<li>Republish posts with revisions</li>
+						<li>Monitor content using the Pipeline</li>
+					</ul>
+				</div>
+				<div class="button">
+					<a href="https://strivecalendar.com/?utm_source=competethemes&utm_medium=sidebar&utm_campaign=competethemes_sidebar_widget" target="_blank" data-product-name="Strive">Learn More</a>
+				</div>
+			</div>
 			<div class="dashboard-widget">
 				<h4>User Reviews</h4>
 				<img src="<?php echo trailingslashit(get_template_directory_uri()) . 'assets/images/reviews.png'; ?>" />
-				<p>Users are loving Tracks! <a href="https://wordpress.org/support/theme/tracks/reviews/?filter=5#new-post" target="_blank">Click here</a> to leave your own review</p>
+				<p>Users are loving Tracks! <a href="https://wordpress.org/support/theme/tracks/reviews/?filter=5#new-post" target="_blank">Click here</a> to leave your own review.</p>
 			</div>
 			<div class="dashboard-widget">
 				<h4>Reset Customizer Settings</h4>
@@ -150,12 +186,13 @@ function ct_tracks_options_content() {
 				<form method="post">
 					<input type="hidden" name="tracks_reset_customizer" value="tracks_reset_customizer_settings"/>
 					<p>
-						<?php wp_nonce_field( 'tracks_reset_customizer_nonce', 'tracks_reset_customizer_nonce' ); ?>
-						<?php submit_button( 'Reset Customizer Settings', 'delete', 'delete', false ); ?>
+						<?php wp_nonce_field('tracks_reset_customizer_nonce', 'tracks_reset_customizer_nonce'); ?>
+						<?php submit_button('Reset Customizer Settings', 'delete', 'delete', false); ?>
 					</p>
 				</form>
 			</div>
 		</div>
-		<?php do_action( 'theme_options_after' ); ?>
+		<?php do_action('theme_options_after'); ?>
 	</div>
-<?php }
+<?php
+}
