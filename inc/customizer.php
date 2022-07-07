@@ -277,6 +277,8 @@ function ct_tracks_add_customizer_content($wp_customize)
                 $label = __('diaspora*', 'tracks');
             } elseif ($social_site == 'imdb') {
                 $label = __('IMDB', 'tracks');
+            } elseif ($social_site == 'tiktok') {
+                $label = __('TikTok', 'tracks');
             }
 
             if ($social_site == 'skype') {
