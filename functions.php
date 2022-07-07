@@ -603,6 +603,7 @@ if (! function_exists('ct_tracks_social_site_list')) {
             'facebook',
             'instagram',
             'linkedin',
+            'tiktok',
             'pinterest',
             'youtube',
             'rss',
