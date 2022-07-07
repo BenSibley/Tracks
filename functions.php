@@ -35,7 +35,7 @@ function ct_tracks_register_required_plugins()
     );
     
     $config = array(
-        'id'           => 'tracks',
+        'id'           => 'ct-tracks',
         'default_path' => '',
         'menu'         => 'tgmpa-install-plugins',
         'has_notices'  => true,
