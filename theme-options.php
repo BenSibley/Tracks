@@ -172,7 +172,7 @@ function ct_tracks_options_content()
 					</ul>
 				</div>
 				<div class="button">
-					<a href="https://strivecalendar.com/?utm_source=competethemes&utm_medium=sidebar&utm_campaign=competethemes_sidebar_widget" target="_blank" data-product-name="Strive">Learn More</a>
+					<a href="https://strivecalendar.com/" target="_blank" data-product-name="Strive">Learn More</a>
 				</div>
 			</div>
 			<div class="dashboard-widget">
