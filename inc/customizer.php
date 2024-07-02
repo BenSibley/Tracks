@@ -279,6 +279,8 @@ function ct_tracks_add_customizer_content($wp_customize)
                 $label = __('IMDB', 'tracks');
             } elseif ($social_site == 'tiktok') {
                 $label = __('TikTok', 'tracks');
+            } elseif ($social_site == 'twitter') {
+                $label = __('X (Twitter)', 'tracks');
             }
 
             if ($social_site == 'skype') {

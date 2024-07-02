@@ -3,7 +3,6 @@
 $social_sites = ct_tracks_social_site_list();
 
 $square_icons = array(
-	'twitter',
 	'vimeo',
 	'youtube',
 	'pinterest',
@@ -45,6 +44,8 @@ if ( ! empty( $active_sites ) ) {
 				$class = 'fab fa-get-pocket';
 			} elseif ( $active_site == 'phone' ) {
 				$class = 'fas fa-phone';
+			} elseif ( $active_site == 'twitter' ) {
+				$class = 'fab fa-square-x-twitter';
 			} else {
 				$class = 'fab fa-' . $active_site;
 			}
