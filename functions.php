@@ -564,7 +564,7 @@ if (! function_exists('ct_tracks_odd_even_post_class')) {
             // if jetpack infinite scroll is active
             class_exists('Jetpack') && Jetpack::is_module_active('infinite-scroll')
             // and the current page is an even page (will be 1,3,5 b/c page starts with 0)
-            && get_query_var('paged') % 2 != 0
+            && intval(get_query_var('paged')) % 2 != 0
         ) {
             // flip the classes - start with even
             $classes[] = ($wp_query->current_post % 2 == 0) ? 'even' : 'odd';
