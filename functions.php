@@ -588,6 +588,7 @@ if (! function_exists('ct_tracks_social_site_list')) {
             'twitter',
             'facebook',
             'instagram',
+            'bluesky',
             'linkedin',
             'tiktok',
             'pinterest',
