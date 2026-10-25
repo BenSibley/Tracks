@@ -19,43 +19,23 @@ require_once(trailingslashit(get_template_directory()) . 'licenses/two-column-im
 require_once(trailingslashit(get_template_directory()) . 'licenses/two-column.php');
 // licenses/functions
 require_once(trailingslashit(get_template_directory()) . 'licenses/functions/video.php');
-// TGMP
-require_once(trailingslashit(get_template_directory()) . 'tgm/class-tgm-plugin-activation.php');
+// Recommended plugins notice
+require_once(trailingslashit(get_template_directory()) . 'inc/class-ct-recommended-plugins.php');
 
-function ct_tracks_register_required_plugins()
+function ct_tracks_register_recommended_plugins()
 {
-    $plugins = array(
-
-        array(
-            'name'      => 'Independent Analytics',
-            'slug'      => 'independent-analytics',
-            'required'  => false,
-        ),
-    );
-    
-    $config = array(
-        'id'           => 'ct-tracks',
-        'default_path' => '',
-        'menu'         => 'tgmpa-install-plugins',
-        'has_notices'  => true,
-        'dismissable'  => true,
-        'dismiss_msg'  => '',
-        'is_automatic' => false,
-        'message'      => '',
-        'strings'      => array(
-            'page_title'                      => __('Install Recommended Plugins', 'tracks'),
-            'menu_title'                      => __('Recommended Plugins', 'tracks'),
-            'notice_can_install_recommended'     => _n_noop(
-                'The makers of the Tracks theme now recommend installing Independent Analytics, their new plugin for visitor tracking: %1$s.',
-                'The makers of the Tracks theme now recommend installing Independent Analytics, their new plugin for visitor tracking: %1$s.',
-                'tracks'
+    new CT_Recommended_Plugins(array(
+        'id'      => 'ct-tracks',
+        'plugins' => array(
+            array(
+                'name' => 'Independent Analytics',
+                'slug' => 'independent-analytics',
             ),
-        )
-    );
-
-    tgmpa($plugins, $config);
+        ),
+        'message' => __('The makers of the Tracks theme now recommend installing Independent Analytics, their new plugin for visitor tracking.', 'tracks'),
+    ));
 }
-add_action('tgmpa_register', 'ct_tracks_register_required_plugins');
+add_action('admin_init', 'ct_tracks_register_recommended_plugins');
 
 if (! function_exists(('ct_tracks_set_content_width'))) {
     function ct_tracks_set_content_width()
