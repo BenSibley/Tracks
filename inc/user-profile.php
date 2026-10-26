@@ -10,6 +10,8 @@ if ( ! function_exists( 'ct_tracks_social_array' ) ) {
 			'linkedin'      => 'linkedin_profile',
 			'pinterest'     => 'pinterest_profile',
 			'youtube'       => 'youtube_profile',
+			'tiktok'        => 'tiktok_profile',
+			'threads'       => 'threads_profile',
 			'rss'           => 'rss_profile',
 			'email'         => 'email_profile',
 			'phone'         => 'phone_profile',
@@ -136,6 +138,8 @@ function ct_tracks_add_social_profile_settings( $user ) {
 				$label = __('Contact Form', 'tracks');
 			} elseif ( $key == 'artstation' ) {
 				$label = __('ArtStation', 'tracks');
+			} elseif ( $key == 'tiktok' ) {
+				$label = __('TikTok', 'tracks');
 			}
 			?>
 			<tr>

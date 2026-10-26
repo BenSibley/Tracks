@@ -578,6 +578,7 @@ if (! function_exists('ct_tracks_social_site_list')) {
             'tiktok',
             'pinterest',
             'youtube',
+            'threads',
             'rss',
             'email',
             'phone',
