@@ -36,7 +36,7 @@ function ct_tracks_register_recommended_plugins()
             array(
                 'name'        => 'Resolver',
                 'slug'        => 'resolver-ai-chatbot',
-                'description' => __('an AI-powered chatbot that trains on your website\'s content in seconds and answers visitor questions intelligently.', 'tracks'),
+                'description' => __('an AI-powered chatbot that trains on your website\'s content and answers visitor questions intelligently.', 'tracks'),
                 'url'         => 'https://resolverchatbot.com',
             ),
         ),
