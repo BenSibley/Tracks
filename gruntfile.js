@@ -32,7 +32,7 @@ module.exports = function(grunt) {
             },
             css: {
                 files: ['sass/*.scss', 'sass/templates/*.scss', 'licenses/css/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'cssmin'],
+                tasks: ['sass', 'postcss', 'cssmin'],
                 options: {
                     livereload: true,
                     spawn: false
@@ -40,6 +40,13 @@ module.exports = function(grunt) {
             }
         },
         sass: {
+            options: {
+                implementation: require('sass'),
+                outputStyle: 'expanded',
+                sourceMap: true,
+                // the partials still use @import and slash division, which Dart Sass 1.x warns about
+                silenceDeprecations: ['import', 'slash-div', 'global-builtin']
+            },
             dist: {
                 files: {
                     'style.css': 'sass/style.scss',
@@ -53,11 +60,15 @@ module.exports = function(grunt) {
                 }
             }
         },
-        autoprefixer: {
+        postcss: {
+            options: {
+                processors: [
+                    require('autoprefixer')({
+                        overrideBrowserslist: ['last 1 version', '> 1%', 'ie 8']
+                    })
+                ]
+            },
             dist: {
-                options: {
-                    browsers: ['last 1 version', '> 1%', 'ie 8']
-                },
                 files: {
                     'style.css': 'style.css',
                     'styles/custom-editor-style.css': 'styles/custom-editor-style.css',
@@ -137,7 +148,7 @@ module.exports = function(grunt) {
                     'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/tracks" || true',
                     'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/tracks.zip" || true',
                     // copy folder without any project/meta files
-                    'rsync -r "/Users/bensibley/Sites/Compete Themes/tracks/wp-content/themes/tracks" "/Users/bensibley/Dropbox/Compete Themes/Distribution/" <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Dropbox/Compete Themes/Development/tracks" "/Users/bensibley/Dropbox/Compete Themes/Distribution/" <%= excludeFiles %>',
                     // open dist folder
                     'cd "/Users/bensibley/Dropbox/Compete Themes/Distribution/"',
                     // zip the tracks folder
@@ -151,8 +162,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('@lodder/grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-csslint');
@@ -160,6 +171,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'autoprefixer', 'cssmin', 'compress', 'csslint', 'makepot', 'shell']);
+    grunt.registerTask('default', ['concat', 'uglify', 'watch', 'sass', 'postcss', 'cssmin', 'compress', 'csslint', 'makepot', 'shell']);
 
 };

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*===== Variables =====*/
 /* Theme Colors */
 /* Social Media Brand Colors */
@@ -27,8 +26,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 #accordion-section-ct_tracks_pro .accordion-section-title {
   color: #fff;
   background: #05B0E7;
-  -webkit-transition: background 0.2s;
-          transition: background 0.2s;
+  transition: background 0.2s;
 }
 #accordion-section-ct_tracks_pro .accordion-section-title:after {
   color: #fff;
@@ -77,11 +75,10 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   background: #FF7A05;
   color: #fff;
   text-decoration: none;
-  -webkit-transition: background 0.2s;
-          transition: background 0.2s;
+  transition: background 0.2s;
 }
 #customize-control-tracks_pro .tracks-pro-button:before {
-  content: "";
+  content: "\f06e";
   font-family: "FontAwesome";
   margin-right: 6px;
 }
@@ -105,8 +102,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   margin: 0 8px 10px 0;
   color: transparent;
   border: solid 1px transparent;
-  -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 #customize-control-ct_tracks_background_texture_setting label.no-margin {
   margin-right: 0;
@@ -260,9 +256,6 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   border-radius: 0;
   box-shadow: none;
   background: #fff url("multiple-select.png") no-repeat 100% -22px;
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
-  background: url("multiple-select.png") no-repeat 100% -22px, -webkit-linear-gradient(top, #ffffff 85%, #eeeeee 99%);
   background: url("multiple-select.png") no-repeat 100% -22px, linear-gradient(top, #ffffff 85%, #eeeeee 99%);
 }
 

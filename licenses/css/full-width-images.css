@@ -11,9 +11,6 @@ background-color: gray;
 background-image: linear-gradient(90deg, transparent 99%, rgba(255,255,255,.5) 0%);
 background-size: 11.1%; /* This is at 6-columns -> just change this # */
 /* Full-width Images layout styles */
-.full-width-images {
-  /* post page */
-}
 .full-width-images .excerpt,
 .full-width-images .entry {
   line-height: 0;
@@ -44,12 +41,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   margin: auto;
   padding: 0 11.11%;
   background: none;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .full-width-images .overlay-link {
   position: absolute;
@@ -69,8 +63,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
   opacity: 1;
 }
 .full-width-images .excerpt-header i {
-  font-size: 1.625em;
-  /* 26px / 16px */
+  font-size: 1.625em; /* 26px / 16px */
   line-height: 1.85;
   color: white;
   opacity: 0.6;
@@ -81,8 +74,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 .full-width-images .excerpt-title {
   color: white;
   opacity: 0.9;
-  font-size: 1.313em;
-  /* 21px / 16px */
+  font-size: 1.313em; /* 21px / 16px */
   line-height: 1.143;
 }
 .full-width-images .excerpt-title a {
@@ -103,6 +95,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 .full-width-images .loop-pagination {
   clear: both;
   padding-top: 4.5em;
+}
+.full-width-images {
+  /* post page */
 }
 .full-width-images .singular-post .featured-image {
   display: block;
@@ -163,10 +158,9 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     text-align: center;
   }
   .full-width-images .excerpt-container,
-.full-width-images .overlay {
+  .full-width-images .overlay {
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease;
-            transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
   }
   .full-width-images .overlay {
     background: rgba(17, 17, 17, 0.9);
@@ -182,8 +176,7 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
     line-height: 1.263;
   }
   .full-width-images .excerpt-header i {
-    font-size: 2.625em;
-    /* 42px / 16px */
+    font-size: 2.625em; /* 42px / 16px */
     line-height: 1.143;
     margin-top: 18px;
   }
