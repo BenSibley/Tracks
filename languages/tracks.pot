@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tracks 1.81\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tracks\n"
-"POT-Creation-Date: 2026-10-26 17:07:39+00:00\n"
+"POT-Creation-Date: 2026-10-27 12:36:31+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -112,15 +112,13 @@ msgid ""
 msgstr ""
 
 #: functions.php:33
-msgid ""
-"Simple, privacy-friendly visitor stats right in your WordPress dashboard. A "
-"Google Analytics alternative."
+msgid "a simple, privacy-friendly alternative to Google Analytics."
 msgstr ""
 
 #: functions.php:38
 msgid ""
-"An AI chatbot that answers your visitors' questions using your site's "
-"content."
+"an AI-powered chatbot that trains on your website's content and answers "
+"visitor questions intelligently."
 msgstr ""
 
 #: functions.php:75
@@ -227,11 +225,11 @@ msgstr ""
 msgid "Read the post"
 msgstr ""
 
-#: functions.php:902
+#: functions.php:903
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:1009
+#: functions.php:1010
 msgid "Last updated on"
 msgstr ""
 
@@ -239,50 +237,62 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:61
-#: inc/class-ct-recommended-plugins.php:62
-#: inc/class-ct-recommended-plugins.php:73
+#: inc/class-ct-recommended-plugins.php:78
+#: inc/class-ct-recommended-plugins.php:79
+#: inc/class-ct-recommended-plugins.php:91
 msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:77
+#: inc/class-ct-recommended-plugins.php:95
 #. translators: %s: theme name
 msgid "Free plugins from the makers of the %s theme."
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:83
+#: inc/class-ct-recommended-plugins.php:101
 msgid "Plugin"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:84
+#: inc/class-ct-recommended-plugins.php:102
 msgid "Description"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:119
-msgid "See all recommended plugins"
-msgstr ""
-
-#: inc/class-ct-recommended-plugins.php:126
+#: inc/class-ct-recommended-plugins.php:155
 #. translators: %s: theme name
 msgid "The makers of the %s theme recommend these free plugins:"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:177
+#: inc/class-ct-recommended-plugins.php:171
+msgid "New"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:183
+msgid "More Details"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:231
 msgid "Active"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:179
+#: inc/class-ct-recommended-plugins.php:234
 msgid "Coming soon"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:187
+#: inc/class-ct-recommended-plugins.php:243
 #. translators: %s: plugin name
 msgid "Activate %s"
 msgstr ""
 
-#: inc/class-ct-recommended-plugins.php:195
+#: inc/class-ct-recommended-plugins.php:245
 #. translators: %s: plugin name
 msgid "Install %s"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:258
+msgid "Activate Now"
+msgstr ""
+
+#: inc/class-ct-recommended-plugins.php:258
+msgid "Install Now"
 msgstr ""
 
 #: inc/customizer.php:70
@@ -379,83 +389,83 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:228 inc/user-profile.php:144
+#: inc/customizer.php:228 inc/user-profile.php:148
 msgid "Email Address"
 msgstr ""
 
-#: inc/customizer.php:239 inc/user-profile.php:104
+#: inc/customizer.php:239 inc/user-profile.php:106
 msgid "RSS"
 msgstr ""
 
-#: inc/customizer.php:241 inc/user-profile.php:102
+#: inc/customizer.php:241 inc/user-profile.php:104
 msgid "ResearchGate"
 msgstr ""
 
-#: inc/customizer.php:243 inc/user-profile.php:106
+#: inc/customizer.php:243 inc/user-profile.php:108
 msgid "SoundCloud"
 msgstr ""
 
-#: inc/customizer.php:245 inc/user-profile.php:108
+#: inc/customizer.php:245 inc/user-profile.php:110
 msgid "SlideShare"
 msgstr ""
 
-#: inc/customizer.php:247 inc/user-profile.php:110
+#: inc/customizer.php:247 inc/user-profile.php:112
 msgid "CodePen"
 msgstr ""
 
-#: inc/customizer.php:249 inc/user-profile.php:112
+#: inc/customizer.php:249 inc/user-profile.php:114
 msgid "StumbleUpon"
 msgstr ""
 
-#: inc/customizer.php:251 inc/user-profile.php:114
+#: inc/customizer.php:251 inc/user-profile.php:116
 msgid "DeviantArt"
 msgstr ""
 
-#: inc/customizer.php:253 inc/user-profile.php:116
+#: inc/customizer.php:253 inc/user-profile.php:118
 msgid "Google Wallet"
 msgstr ""
 
-#: inc/customizer.php:255 inc/user-profile.php:118
+#: inc/customizer.php:255 inc/user-profile.php:120
 msgid "Hacker News"
 msgstr ""
 
-#: inc/customizer.php:257 inc/user-profile.php:120
+#: inc/customizer.php:257 inc/user-profile.php:122
 msgid "WhatsApp"
 msgstr ""
 
-#: inc/customizer.php:259 inc/user-profile.php:122
+#: inc/customizer.php:259 inc/user-profile.php:124
 msgid "QQ"
 msgstr ""
 
-#: inc/customizer.php:261 inc/user-profile.php:124
+#: inc/customizer.php:261 inc/user-profile.php:126
 msgid "VK"
 msgstr ""
 
-#: inc/customizer.php:263 inc/user-profile.php:126
+#: inc/customizer.php:263 inc/user-profile.php:128
 msgid "OK.ru"
 msgstr ""
 
-#: inc/customizer.php:265 inc/user-profile.php:128
+#: inc/customizer.php:265 inc/user-profile.php:130
 msgid "WeChat"
 msgstr ""
 
-#: inc/customizer.php:267 inc/user-profile.php:130
+#: inc/customizer.php:267 inc/user-profile.php:132
 msgid "Tencent Weibo"
 msgstr ""
 
-#: inc/customizer.php:269 inc/user-profile.php:132
+#: inc/customizer.php:269 inc/user-profile.php:134
 msgid "PayPal"
 msgstr ""
 
-#: inc/customizer.php:271 inc/user-profile.php:134
+#: inc/customizer.php:271 inc/user-profile.php:136
 msgid "Stack Overflow"
 msgstr ""
 
-#: inc/customizer.php:273 inc/user-profile.php:136
+#: inc/customizer.php:273 inc/user-profile.php:138
 msgid "Contact Form"
 msgstr ""
 
-#: inc/customizer.php:275 inc/user-profile.php:138
+#: inc/customizer.php:275 inc/user-profile.php:140
 msgid "ArtStation"
 msgstr ""
 
@@ -467,7 +477,7 @@ msgstr ""
 msgid "IMDB"
 msgstr ""
 
-#: inc/customizer.php:281
+#: inc/customizer.php:281 inc/user-profile.php:142
 msgid "TikTok"
 msgstr ""
 
@@ -763,11 +773,11 @@ msgstr ""
 msgid "Don't show the date"
 msgstr ""
 
-#: inc/user-profile.php:92
+#: inc/user-profile.php:94
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/user-profile.php:100
+#: inc/user-profile.php:102
 msgid "Google Plus"
 msgstr ""
 
