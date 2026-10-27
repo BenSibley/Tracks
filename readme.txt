@@ -2,8 +2,8 @@
 Contributors: bensibley
 Tags: one-column, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
 Requires at least: 4.5
-Tested up to: 6.5
-Stable tag: 1.79
+Tested up to: 7.1
+Stable tag: 1.82
 
 Tracks is a bold, beautiful, and responsive theme.
 
