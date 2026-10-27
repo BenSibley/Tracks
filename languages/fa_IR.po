@@ -208,7 +208,7 @@ msgstr "رنگ سربرگ"
 
 msgid "Help others find tracks by leaving a review on wordpress.org."
 msgstr ""
-"با نوشتن یه نقد و بررسی از تجربه خود بر روی وبسایت Wordpress‪.‬org، در یافتن "
+"با نوشتن یه نقد و بررسی از تجربه خود بر روی وبسایت WordPress‪.‬org، در یافتن "
 "بهترین گزینه به سایر کاربران کمک کنید."
 
 msgid "Hide"
@@ -497,7 +497,7 @@ msgid "Word count in automatic excerpts"
 msgstr "شمارش لغات در excerpts های خودکار صورت گیرد"
 
 msgid "WordPress Resources"
-msgstr "منابع Wordpress"
+msgstr "منابع WordPress"
 
 msgid "Written by:"
 msgstr "نوشته شده توسط:"

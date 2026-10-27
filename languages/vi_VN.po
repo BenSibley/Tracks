@@ -708,7 +708,7 @@ msgstr "Để lại một Đánh giá"
 msgid "Help others find tracks by leaving a review on wordpress.org."
 msgstr ""
 "Giúp những người dùng khác tìm đến Tracks bằng cách để lại một đánh giá trên "
-"Wordpress.org."
+"WordPress.org."
 
 #: theme-options.php:63
 msgid "Premium Features"

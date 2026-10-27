@@ -1205,7 +1205,7 @@ msgstr "Zasoby WordPress"
 #: theme-options.php:44
 #@ tracks
 msgid "Save time and money searching for WordPress products by following our recommendations"
-msgstr "Oszczędź czas i pieniądze kierując się naszymi sugestiami w poszukiwaniu produktów dla Wordpress"
+msgstr "Oszczędź czas i pieniądze kierując się naszymi sugestiami w poszukiwaniu produktów dla WordPress"
 
 #: theme-options.php:46
 #@ tracks

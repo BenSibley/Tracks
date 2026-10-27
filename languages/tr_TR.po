@@ -663,7 +663,7 @@ msgid ""
 "Save time and money searching for WordPress products by following our "
 "recommendations"
 msgstr ""
-"Bizim önerilerimizi dinleyerek Wordpress ürünleri arayın zaman ve paradan "
+"Bizim önerilerimizi dinleyerek WordPress ürünleri arayın zaman ve paradan "
 "tasarruf edin."
 
 #: theme-options.php:54

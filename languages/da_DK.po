@@ -658,7 +658,7 @@ msgid ""
 "Save time and money searching for WordPress products by following our "
 "recommendations"
 msgstr ""
-"Spar tid og penge på Wordpress produkter ved at følge vores anbefalinger"
+"Spar tid og penge på WordPress produkter ved at følge vores anbefalinger"
 
 #: theme-options.php:54
 msgid "View Resources"
